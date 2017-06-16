@@ -1177,7 +1177,7 @@ header {
       position: relative;
       /* Style from 2nd <ul> only */ }
       header ul.top-nav > li > a {
-        color: #00492c;
+        color: #fff;
         font-weight: 500;
         padding: 16.5px 20px;
         display: block;
@@ -1204,7 +1204,7 @@ header {
             font-size: 1rem;
             padding: 18px 15px; } }
       header ul.top-nav > li.active > a, header ul.top-nav > li:hover > a {
-        background: #00aa66;
+        border-bottom: 5px solid #d0112b;
         color: #fff; }
       header ul.top-nav > li > ul {
         position: absolute;
@@ -1425,13 +1425,14 @@ header {
     -webkit-transition: all 0.3s;
     transition: all 0.3s; }
     header .logo img {
+      width: auto !important;
       -moz-transition: all 0.3s;
       -o-transition: all 0.3s;
       -webkit-transition: all 0.3s;
       transition: all 0.3s; }
     @media only screen and (max-width: 1024px) {
       header .logo img {
-        width: 141px !important;
+        width: 85px !important;
         height: 40px !important; }
       header .logo .slogan {
         display: none; } }
@@ -1449,13 +1450,13 @@ header {
     line-height: 150%; }
   @media only screen and (max-width: 1024px) {
     header img {
-      width: 141px !important;
+      width: 85px !important;
       height: 40px !important; }
     header .slogan {
       display: none; } }
   header ul.top-nav > li > a {
     padding-top: 52px;
-    padding-bottom: 52px;
+    padding-bottom: 47px;
     -moz-transition: all 0.3s;
     -o-transition: all 0.3s;
     -webkit-transition: all 0.3s;
@@ -2130,7 +2131,7 @@ footer {
   left: 0;
   width: 100%;
   height: 129px;
-  background: rgba(237, 241, 241, 0.85); }
+  background: #00263c; }
 
 .header-compressed #wrapper {
   padding-top: 58px; }
@@ -2152,7 +2153,7 @@ footer {
     -webkit-transition: all 0.3s;
     transition: all 0.3s; }
     .header-compressed header .logo img {
-      width: 141px !important;
+      width: 85px !important;
       height: 40px !important;
       -moz-transition: all 0.3s;
       -o-transition: all 0.3s;
@@ -2175,7 +2176,7 @@ footer {
     -webkit-transition: all 0.3s;
     transition: all 0.3s; }
   .header-compressed header ul.top-nav > li > a {
-    padding: 16.5px 20px;
+    padding: 14px 20px;
     -moz-transition: all 0.3s;
     -o-transition: all 0.3s;
     -webkit-transition: all 0.3s;
