@@ -3339,13 +3339,12 @@ footer {
 }
 
 .main-content {
-	padding-top:80px;
+	// padding-top:80px;
 	min-height:185px;
 	min-height:500px;
 	line-height:150%;
 	
 	.main {
-		
 		>.container-fluid {
 			padding-right:40px;
 		}
@@ -3356,6 +3355,9 @@ footer {
 			>[class*="col-"] {
 				padding: 0;
 			}
+		}
+		h2 {
+			margin-top: 20px;
 		}
 	}
 	
@@ -3463,9 +3465,9 @@ footer {
 	.row {	
 		text-align:center;
 		margin:0;
-		margin-top:20px;
+		// margin-top:20px;
 		position:relative;
-		
+		height: 180px;
 		>[class*="col-"]:nth-child(1) {
 			.num {
 				padding:0 10px;
@@ -3493,6 +3495,9 @@ footer {
 		>[class*="col-"] {
 			position:static;
 			padding:10px 0;
+		}
+		h3 {
+			color: $colorDarkBlue;
 		}
 	}
 	
@@ -3893,7 +3898,7 @@ footer {
 	&.dated {
 		.txt-content {
 			h3 {
-				color:$colorGreen;
+				color:$colorDarkBlue;
 			}
 		}
 	}
@@ -4382,7 +4387,7 @@ footer {
 	}
 	
 	h3 {
-		color:$colorDarkGreen;
+		color:$colorDarkBlue;
 		text-transform:inherit;
 		font-weight:400;
 		@include font-size(24px);
