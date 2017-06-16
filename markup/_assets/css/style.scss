@@ -1929,7 +1929,7 @@ footer {
 		background:$colorBrightRed1;
 		
 		&:hover {
-			background:$colorOrange;
+			// background:$colorOrange;
 			@include transition(background .3s);
 		}
 			
@@ -3033,8 +3033,8 @@ footer {
 			@include transition(all .5s);
 			
 			.copyright {
-				opacity:0;
-				visibility:hidden;
+				// opacity:0;
+				// visibility:hidden;
 				@include transition(all .3s);
 			}
 			

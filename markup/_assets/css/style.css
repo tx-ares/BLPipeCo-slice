@@ -1511,7 +1511,6 @@ footer {
     transition: background 0.3s;
     background: #d0202f; }
     footer .subscribe:hover {
-      background: #ff7441;
       -moz-transition: background 0.3s;
       -o-transition: background 0.3s;
       -webkit-transition: background 0.3s;
@@ -2200,8 +2199,6 @@ footer {
     -webkit-transition: all 0.5s;
     transition: all 0.5s; }
     .footer-sticky footer .copyright {
-      opacity: 0;
-      visibility: hidden;
       -moz-transition: all 0.3s;
       -o-transition: all 0.3s;
       -webkit-transition: all 0.3s;
