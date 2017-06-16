@@ -1911,7 +1911,7 @@ footer {
 	}
 	
 	.copyright {
-		background:$colorDarkGrey;
+		background:$colorDarkBlue;
 		
 		.content {
 			padding:12px $padding-lg;
@@ -1926,7 +1926,7 @@ footer {
 	
 	.subscribe {
 		@include transition(background .3s);
-		background:$colorDarkGrey;
+		background:$colorBrightRed1;
 		
 		&:hover {
 			background:$colorOrange;
