@@ -1204,16 +1204,16 @@ header {
             font-size: 1rem;
             padding: 18px 15px; } }
       header ul.top-nav > li.active > a, header ul.top-nav > li:hover > a {
-        border-bottom: 5px solid #d0112b;
         color: #fff; }
       header ul.top-nav > li > ul {
         position: absolute;
         left: 0;
         top: 100%;
-        background: #00aa66;
+        background: #00263c;
         width: 320px;
         min-height: 520px;
         padding-top: 15px;
+        border-bottom: 5px solid #d0112b;
         /* Style of <a> from here forward */
         /* End of 2nd <li> */ }
         header ul.top-nav > li > ul a {
@@ -1247,12 +1247,12 @@ header {
                 header ul.top-nav > li > ul > li > a:after {
                   right: 25px; } }
           header ul.top-nav > li > ul > li:hover > a {
-            background: #333; }
+            background: #8a9ca5; }
           header ul.top-nav > li > ul > li > ul {
             position: absolute;
             left: 100%;
             top: 0;
-            background: #333;
+            background: #8a9ca5;
             width: 320px;
             min-height: 520px;
             padding: 20px 0;
@@ -1272,8 +1272,6 @@ header {
                   background: #00aa66;
                   width: 3px;
                   height: 3px; }
-              header ul.top-nav > li > ul > li > ul > li:hover > a {
-                color: #00aa66; }
             @media only screen and (max-width: 1024px) {
               header ul.top-nav > li > ul > li > ul {
                 width: 280px; } }
@@ -1290,7 +1288,7 @@ header {
       top: 0;
       width: 320px;
       min-height: 520px;
-      background: #dbd8cf;
+      background: #8a9ca5;
       -moz-transition: all 0.3s;
       -o-transition: all 0.3s;
       -webkit-transition: all 0.3s;
@@ -2236,7 +2234,7 @@ footer {
       font-size: 13px;
       font-size: 0.8125rem; }
       .breadcrumbs ul li a:hover {
-        color: #00492c; }
+        color: #00263c; }
     .breadcrumbs ul li:after {
       content: '/';
       color: #fff;
