@@ -1114,7 +1114,7 @@ $padding-sm: 20px;
 	left:0;
 	width:100%;
 	height:100%;
-	background:$colorDarkGreen;
+	background:$colorDarkBlue;
 	z-index:1029;
 	@include transition(all .5s ease);
 	
@@ -1290,13 +1290,13 @@ $padding-sm: 20px;
 				a {
 					
 					>span {
-						background:$colorGreen;
+						background:$colorSlateBlue;
 						color:$colorWhite;
 					}
 					
 					&:hover {
 						>span {
-							background:$colorGreen;
+							background:$colorLightGrey6;
 							color:$colorWhite;
 						}
 						
@@ -1319,7 +1319,7 @@ $padding-sm: 20px;
 				&.open {
 					>a {
 						>span {
-							background:$colorGreen;
+							background:$colorSlateBlue;
 							color:$colorWhite;
 						}
 					}
@@ -1711,7 +1711,7 @@ header {
 			}
 			
 			.search-box {
-				background:$colorDarkGreen;
+				background:$colorSlateBlue;
 				position:absolute;
 				left:0;
 				top:-100%;
@@ -3439,7 +3439,7 @@ footer {
 .num {
 	font-family:$font-avenir;
 	@include font-size(30px);
-	color:$colorBlack;
+	color:$colorWhite;
 	font-weight:300;
 	display:block;
 
@@ -3453,9 +3453,12 @@ footer {
 	position:relative;
 	margin-bottom:40px;
 	z-index:2;
+	background-color: $colorSlateBlue;
 	@include transition(all .3s);
 	
-	
+	.sub-text {
+		color: $colorWhite;
+	}
 	
 	.row {	
 		text-align:center;
@@ -3494,14 +3497,14 @@ footer {
 	}
 	
 	.popdown-phonenum {
-		
+		background-color: $colorDarkBlue;
 		text-align:center;
 		cursor:pointer;
 		
 		.phone-opener {
 			@include font-size(14px);
 			text-transform:uppercase;
-			color:$colorOrange;
+			color:$colorWhite;
 			font-weight:700;
 			position:relative;
 			padding:0 20px;
