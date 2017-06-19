@@ -3560,13 +3560,24 @@ footer {
 		@include transition(all .3s);
 		
 		.more-phone-wrap {
-			padding:30px 45px;
+			// padding:30px 45px;
 			border:solid 2px $colorLightGrey3;
-			// .accordion.custom {
-			// 	li {
-			// 		margin-bottom: 0;
-			// 	}
-			// }
+			ul {
+				li {
+					background: $colorLightGrey1;
+					margin-bottom: 0;
+					padding: 10px 20px;
+					&:nth-child(n-3) {
+						border-bottom: 1px solid $colorWhite;
+					}
+
+					&:after {
+						content: '\f0da';
+						font-family: FontAwesome;
+						float: right;
+					}	
+				}
+			}
 			@include max-screen($xlg) {
 				padding-left:30px;
 				padding-right:30px;
