@@ -261,13 +261,13 @@ ul.list {
 		margin-bottom:15px;
 		
 		&:before {
-			content:'\f00c';
+			content:'\f0c8';
 			font-family:$font-icon;
 			position:absolute;
-			top:2px;
+			top:0;
 			left:0;
-			color:$colorGreen;
-			@include font-size(12px);
+			color:$colorBrightRed2;
+			@include font-size(6px);
 		}
 		
 		ul {
@@ -276,9 +276,9 @@ ul.list {
 			
 			li {
 				&:before {
-					content:'\f10c';
+					content:'\f0c8';
 					top:0;
-					@include font-size(10px);
+					@include font-size(6px);
 					color:$colorLightGrey5;
 				}
 			}
@@ -3926,6 +3926,7 @@ footer {
 			color:$colorWhite;
 			margin-bottom:0;
 			line-height:150%;
+
 		}
 	}
 	
@@ -4519,6 +4520,16 @@ footer {
 		
 		&:before {
 			background:$colorDarkGreen;
+		}
+
+		p {
+			&:after {
+					font-family: FontAwesome;
+					content: '\f0da';
+					position: absolute;
+				    right: 15px;
+				    bottom: 96px;
+				}
 		}
 		
 		a {
