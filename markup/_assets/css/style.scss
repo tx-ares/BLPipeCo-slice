@@ -539,7 +539,7 @@ figure {
 	&[class*="col-"] {
 		padding:0;
 		margin:0 40px;
-		margin-bottom:40px;
+		margin-bottom:20px;
 	}
 	
 	img {
@@ -551,10 +551,10 @@ figure {
 	figcaption {
 		position:absolute;
 		right:0;
-		bottom:20px;
+		bottom:0;
 		padding:5px 10px;
-		background:rgba($colorLightGrey3,.85);
-		color:$colorDarkGrey;
+		background:rgba($colorDarkBlue,.85);
+		color:$colorWhite;
 		font-weight:500;
 		@include font-size(11px);
 		
@@ -565,7 +565,7 @@ figure {
 			bottom:0;
 			width:2px;
 			height:100%;
-			background:$colorOrange;
+			// background:$colorOrange;
 			z-index:99;
 		}
 	}
@@ -3934,7 +3934,8 @@ footer {
 		background-color: $colorDarkBlue;
 		a {
 			color: $colorWhite;
-			line-height: 2;
+			line-height: 3;
+			font-size: .9rem;
 			&:after {
 				content: '\f0da';
 				font-family: FontAwesome;
