@@ -3952,16 +3952,24 @@ footer {
 	}
 
 	.txt-subcontent {
-		padding: 5px 20px;
+		padding: 5px 0;
 		text-align: right;
 		background-color: $colorDarkBlue;
 		a {
 			color: $colorWhite;
 			line-height: 3;
 			font-size: .9rem;
+			margin-right: 60px;
 			&:after {
 				content: '\f0da';
 				font-family: FontAwesome;
+				position: absolute;
+				right: 0;
+			    bottom: 0px;
+			    height: 52.9px;
+			    width: 40px;
+			    padding: 6px 17px;
+			    background: $colorBrightRed1;
 			}
 		}
 	}
@@ -4533,7 +4541,7 @@ footer {
 					content: '\f0da';
 					position: absolute;
 				    right: 15px;
-				    bottom: 96px;
+				    bottom: 45%;
 				}
 		}
 		
