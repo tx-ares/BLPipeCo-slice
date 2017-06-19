@@ -443,7 +443,7 @@ textarea:-ms-input-placeholder 						{ color: $colorDarkGrey; }*/
 
 /* Buttons */
 .btn {
-	background:$colorGreen;
+	background:$colorBrightRed1;
 	color:$colorWhite;
 	font-family: $font-avenir;
 	@include font-size(14px);
@@ -2007,7 +2007,6 @@ footer {
 	.signup {
 
 		line-height:120%;
-		
 		.content {
 			
 			a {
@@ -2055,15 +2054,17 @@ footer {
 		@include transition(all .3s);
 		
 		.collapsible-opener {
-			background:$colorGreen;
+			background: $colorBrightRed1;
 			display:block;
 			padding:18px 25px;
 			color:$colorWhite;
 			height:55px;
 			@include transition(all .5s);
-			
+			.fa {
+				float: right;
+			}
 			&:hover {
-				background:$colorLightGreen;
+				background:$colorBrightRed2;
 			}
 		}
 		
