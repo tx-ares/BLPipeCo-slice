@@ -460,7 +460,7 @@ textarea:-ms-input-placeholder 						{ color: $colorDarkGrey; }*/
 	&:hover,
 	&:focus {
 		text-decoration:none;
-		background:$colorLightGreen;
+		background: $colorBrightRed1;
 		color:$colorWhite;
 	}
 	
@@ -3589,6 +3589,9 @@ footer {
 						content: '\f0da';
 						font-family: FontAwesome;
 						float: right;
+					}
+					&:hover {
+						background: $colorLightGrey2;
 					}	
 				}
 			}

@@ -430,7 +430,7 @@ textarea:-ms-input-placeholder 						{ color: $colorDarkGrey; }*/
   text-decoration: none; }
   .btn:hover, .btn:focus {
     text-decoration: none;
-    background: #07bd74;
+    background: #d0202f;
     color: #fff; }
   .btn.orange {
     background: #ff7441; }
@@ -2550,6 +2550,8 @@ footer {
           content: '\f0da';
           font-family: FontAwesome;
           float: right; }
+        .send-request .more-phone .more-phone-wrap ul li:hover {
+          background: #e5e5e5; }
     .send-request .more-phone span {
       display: block;
       font-size: 18px;
