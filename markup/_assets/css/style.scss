@@ -26,7 +26,7 @@ $xxlg: 1440px;
 $colorWhite: #fff;
 $colorBlack: #000;
 
-$colorLightGrey1: #f4f4f4;
+// $colorLightGrey1: #f4f4f4;
 $colorLightGrey2: #e5e5e5;
 $colorLightGrey3: #dbd8cf;
 $colorLightGrey4: #878686;
@@ -183,7 +183,14 @@ blockquote {
 	border:none!important;
 	line-height:130%;
 	text-align:left;
-	padding:0 30px;
+	padding:0;
+
+	p {
+		padding: 20px 0;
+		border-top: 5px solid rgba($colorLightGrey3, .5);
+		border-bottom: 5px solid rgba($colorLightGrey3, .5);
+		text-align: center;
+	}
 	
 	&:before {
 		content:'';
@@ -192,7 +199,7 @@ blockquote {
 		left:0;
 		width:5px;
 		height:100%;
-		background:$colorGreen;
+		// background:$colorGreen;
 	}
 	
 	&.pull-left {

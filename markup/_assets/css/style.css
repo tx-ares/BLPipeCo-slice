@@ -150,15 +150,19 @@ blockquote {
   border: none !important;
   line-height: 130%;
   text-align: left;
-  padding: 0 30px; }
+  padding: 0; }
+  blockquote p {
+    padding: 20px 0;
+    border-top: 5px solid rgba(219, 216, 207, 0.5);
+    border-bottom: 5px solid rgba(219, 216, 207, 0.5);
+    text-align: center; }
   blockquote:before {
     content: '';
     position: absolute;
     top: 0;
     left: 0;
     width: 5px;
-    height: 100%;
-    background: #00aa66; }
+    height: 100%; }
   blockquote.pull-left {
     text-align: right;
     margin-right: 40px;
