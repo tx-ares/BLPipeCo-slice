@@ -3363,6 +3363,7 @@ footer {
 	
 	.aside {
 		>.container-fluid {
+			padding: 0;
 			padding-left:40px;
 		}
 	}
@@ -3470,7 +3471,7 @@ footer {
 		height: 180px;
 		>[class*="col-"]:nth-child(1) {
 			.num {
-				padding:0 10px;
+				// padding:0 10px;
 			}
 		}
 		
@@ -3494,7 +3495,7 @@ footer {
 		
 		>[class*="col-"] {
 			position:static;
-			padding:10px 0;
+			padding: 0;
 		}
 		h3 {
 			color: $colorDarkBlue;

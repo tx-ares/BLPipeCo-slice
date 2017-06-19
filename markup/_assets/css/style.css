@@ -2392,6 +2392,7 @@ footer {
   .main-content .main h2 {
     margin-top: 20px; }
   .main-content .aside > .container-fluid {
+    padding: 0;
     padding-left: 40px; }
   @media only screen and (max-width: 1024px) {
     .main-content {
@@ -2468,8 +2469,6 @@ footer {
     margin: 0;
     position: relative;
     height: 180px; }
-    .send-request .row > [class*="col-"]:nth-child(1) .num {
-      padding: 0 10px; }
     .send-request .row > [class*="col-"]:nth-child(2) {
       border-left: solid 2px #dbd8cf;
       border-right: solid 2px #fff; }
@@ -2484,7 +2483,7 @@ footer {
         z-index: 1; }
     .send-request .row > [class*="col-"] {
       position: static;
-      padding: 10px 0; }
+      padding: 0; }
     .send-request .row h3 {
       color: #00263c; }
   .send-request .popdown-phonenum {
