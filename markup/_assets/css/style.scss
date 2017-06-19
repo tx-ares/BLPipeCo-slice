@@ -3484,6 +3484,9 @@ footer {
 	
 	.sub-text {
 		color: $colorWhite;
+		@include max-screen($xmd) {
+			padding: 0 8px;
+		}
 	}
 	
 	.row {	
@@ -3959,7 +3962,7 @@ footer {
 			color: $colorWhite;
 			line-height: 3;
 			font-size: .9rem;
-			margin-right: 60px;
+			margin-right: 70px;
 			&:after {
 				content: '\f0da';
 				font-family: FontAwesome;
@@ -3967,8 +3970,8 @@ footer {
 				right: 0;
 			    bottom: 0px;
 			    height: 52.9px;
-			    width: 40px;
-			    padding: 6px 17px;
+			    width: 52px;
+			    padding: 6px 22px;
 			    background: $colorBrightRed1;
 			}
 		}
@@ -4049,7 +4052,7 @@ footer {
 	@include max-screen(420px) {
 		
 		.img-content {
-			padding-bottom: 90%;
+			// padding-bottom: 90%;
 		}
 	}
 	
