@@ -68,7 +68,7 @@ a {
   -o-transition: color 0.5s;
   -webkit-transition: color 0.5s;
   transition: color 0.5s;
-  color: #00aa66; }
+  color: #fff; }
   a:hover, a:focus {
     outline: none;
     border: none;
@@ -673,7 +673,7 @@ figure {
   cursor: pointer;
   height: 2px;
   width: 30px;
-  background: #00aa66;
+  background: #00263c;
   position: absolute; }
 
 .menu-opener {
@@ -964,7 +964,7 @@ figure {
       top: 20px;
       right: 65px; }
       .mobile-menu .content-wrapper form .search-btn:hover {
-        color: #ff7441; }
+        color: #d0112b; }
   .mobile-menu .menu-container {
     display: block;
     color: #fff;

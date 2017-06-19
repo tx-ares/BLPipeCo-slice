@@ -101,7 +101,7 @@ a {
 	border:none;
 	text-decoration:none;
 	@include transition(color .5s);
-	color:$colorGreen;
+	color:$colorWhite;
 	
 	&:hover,
 	&:focus {
@@ -815,7 +815,7 @@ $padding-sm: 20px;
 	cursor: pointer;
 	height: 2px;
 	width: 30px;
-	background:$colorGreen;
+	background:$colorDarkBlue;
 	position: absolute;
 }
 
@@ -1186,7 +1186,7 @@ $padding-sm: 20px;
 				right: 65px;
 				
 				&:hover {
-					color:$colorOrange;
+					color:$colorBrightRed2;
 				}
 
 			}
