@@ -81,6 +81,10 @@ a {
 strong, b {
   font-weight: 700; }
 
+.bold-red {
+  font-weight: 700;
+  color: #d0112b; }
+
 h1, h2, h3, h4, h5, p, hr {
   margin-top: 0;
   font-weight: normal; }
