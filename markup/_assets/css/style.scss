@@ -3859,6 +3859,10 @@ footer {
 		overflow: hidden;
 		height: 0;
 		padding-bottom: 55%;
+		.txt-content {
+			position: absolute;
+			bottom: 0;
+		}
 		
 		&:after {
 			content:'';
@@ -3961,8 +3965,11 @@ footer {
 		a {
 			color: $colorWhite;
 			line-height: 3;
-			font-size: .9rem;
+			font-size: .9rem;			
 			margin-right: 70px;
+			@include max-screen($xlg) {
+				margin-right:55px;
+			}
 			&:after {
 				content: '\f0da';
 				font-family: FontAwesome;
