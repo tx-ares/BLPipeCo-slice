@@ -3147,6 +3147,12 @@ footer {
 
 .banner {
 	position:relative;
+
+	img {
+		width: 100%;
+		max-width: 100%;
+		height: auto;
+	}
 	
 	.row {
 		margin:0;
@@ -3381,7 +3387,7 @@ footer {
 	}
 	
 	@include max-screen($lg) {
-		padding-top:60px;
+		// padding-top:60px;
 	}
 	
 	@include max-screen($xmd) {
@@ -3579,8 +3585,8 @@ footer {
 				}
 			}
 			@include max-screen($xlg) {
-				padding-left:30px;
-				padding-right:30px;
+				// padding-left:30px;
+				// padding-right:30px;
 			}
 		}
 		
@@ -3976,7 +3982,7 @@ footer {
 	@include max-screen($lg) {
 		
 		.img-content {
-			padding-bottom:85%;
+			// padding-bottom:85%;
 			
 			.date {
 				@include font-size(14px);
@@ -4427,7 +4433,7 @@ footer {
 	margin-bottom:40px;
 	
 	.txt-content {
-		min-height:345px;
+		min-height:215px;
 	}
 	
 	h3 {
@@ -4503,8 +4509,8 @@ footer {
 		background:$colorLightGrey3;
 	}
 	
-	&.green {
-		background:$colorGreen;
+	&.brightRed {
+		background:$colorBrightRed1;
 		color:$colorWhite;
 		
 		h3 {

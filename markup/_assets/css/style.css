@@ -2259,6 +2259,10 @@ footer {
 
 .banner {
   position: relative; }
+  .banner img {
+    width: 100%;
+    max-width: 100%;
+    height: auto; }
   .banner .row {
     margin: 0; }
     .banner .row > [class*="col-"] {
@@ -2401,9 +2405,6 @@ footer {
   .main-content .aside > .container-fluid {
     padding: 0;
     padding-left: 40px; }
-  @media only screen and (max-width: 1024px) {
-    .main-content {
-      padding-top: 60px; } }
   @media only screen and (max-width: 768px) {
     .main-content {
       padding-top: 40px; } }
@@ -2541,10 +2542,6 @@ footer {
           content: '\f0da';
           font-family: FontAwesome;
           float: right; }
-      @media only screen and (max-width: 1280px) {
-        .send-request .more-phone .more-phone-wrap {
-          padding-left: 30px;
-          padding-right: 30px; } }
     .send-request .more-phone span {
       display: block;
       font-size: 18px;
@@ -2818,15 +2815,13 @@ footer {
         font-size: 28px;
         font-size: 1.75rem; } }
   @media only screen and (max-width: 1024px) {
-    .image-cta .img-content {
-      padding-bottom: 85%; }
-      .image-cta .img-content .date {
-        font-size: 14px;
-        font-size: 0.875rem;
-        padding: 15px 20px; }
-        .image-cta .img-content .date .date-num {
-          font-size: 26px;
-          font-size: 1.625rem; }
+    .image-cta .img-content .date {
+      font-size: 14px;
+      font-size: 0.875rem;
+      padding: 15px 20px; }
+      .image-cta .img-content .date .date-num {
+        font-size: 26px;
+        font-size: 1.625rem; }
     .image-cta .txt-content {
       padding: 25px; }
       .image-cta .txt-content h3 {
@@ -3082,7 +3077,7 @@ footer {
   padding: 30px;
   margin-bottom: 40px; }
   .feature-box .txt-content {
-    min-height: 345px; }
+    min-height: 215px; }
   .feature-box h3 {
     color: #00263c;
     text-transform: inherit;
@@ -3128,21 +3123,21 @@ footer {
     background: #e5e5e5; }
   .feature-box.grey3 {
     background: #dbd8cf; }
-  .feature-box.green {
-    background: #00aa66;
+  .feature-box.brightRed {
+    background: #d0202f;
     color: #fff; }
-    .feature-box.green h3 {
+    .feature-box.brightRed h3 {
       color: #fff; }
-    .feature-box.green:before {
+    .feature-box.brightRed:before {
       background: #00492c; }
-    .feature-box.green a {
+    .feature-box.brightRed a {
       color: #fff;
       position: relative;
       display: inline-block;
       border-bottom: dotted 1px #fff; }
-    .feature-box.green.with-img {
+    .feature-box.brightRed.with-img {
       padding: 0; }
-      .feature-box.green.with-img .img-content:before {
+      .feature-box.brightRed.with-img .img-content:before {
         background: #00492c; }
   .feature-box.darkgrey {
     background: #333;
