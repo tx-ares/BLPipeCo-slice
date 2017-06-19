@@ -2486,7 +2486,6 @@ footer {
         left: 0;
         width: 100%;
         height: 15px;
-        background: #fff;
         z-index: 1; }
     .send-request .row > [class*="col-"] {
       position: static;
