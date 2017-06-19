@@ -107,7 +107,7 @@ h3 {
   font-size: 18px;
   font-size: 1.125rem;
   text-transform: uppercase;
-  color: #00492c;
+  color: #00263c;
   font-weight: 700;
   margin-bottom: 15px; }
 
@@ -3220,7 +3220,7 @@ footer {
   .photo-wrapper .photos .info-wrapper h3 {
     font-size: 24px;
     font-size: 1.5rem;
-    color: #00aa66;
+    color: #00263c;
     margin-bottom: 10px;
     text-transform: inherit;
     font-weight: 400; }
@@ -3296,7 +3296,7 @@ footer {
     font-size: 1.875rem;
     text-transform: none;
     font-weight: 400;
-    color: #333;
+    color: #00263c;
     margin-bottom: 30px; }
   @media only screen and (max-width: 575px) {
     .bottom-cta h3 {
