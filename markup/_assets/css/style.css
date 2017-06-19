@@ -2265,6 +2265,9 @@ footer {
     width: 100%;
     max-width: 100%;
     height: auto; }
+    @media only screen and (min-width: 768px) {
+      .banner img {
+        min-height: 370px; } }
   .banner .row {
     margin: 0; }
     .banner .row > [class*="col-"] {

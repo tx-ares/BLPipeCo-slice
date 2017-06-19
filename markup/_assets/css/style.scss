@@ -3153,6 +3153,10 @@ footer {
 		width: 100%;
 		max-width: 100%;
 		height: auto;
+		@include min-screen($xmd) {
+			min-height: 370px; // Might need to change
+		}
+
 	}
 	
 	.row {
