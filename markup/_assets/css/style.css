@@ -2726,8 +2726,7 @@ footer {
       right: 0;
       top: 0;
       width: 4px;
-      height: 100%;
-      background: #00aa66; }
+      height: 100%; }
     .image-cta .img-content img {
       position: absolute;
       margin: auto;
@@ -2775,7 +2774,7 @@ footer {
         font-size: 2.25rem; }
   .image-cta .txt-content {
     color: #fff;
-    background: #333;
+    background: rgba(0, 38, 60, 0.5);
     padding: 40px; }
     .image-cta .txt-content h3 {
       text-transform: none;
@@ -2792,6 +2791,16 @@ footer {
     color: #00263c; }
   .image-cta.noline .img-content:after {
     display: none; }
+  .image-cta .txt-subcontent {
+    padding: 5px 20px;
+    text-align: right;
+    background-color: #00263c; }
+    .image-cta .txt-subcontent a {
+      color: #fff;
+      line-height: 2; }
+      .image-cta .txt-subcontent a:after {
+        content: '\f0da';
+        font-family: FontAwesome; }
   @media only screen and (max-width: 1280px) {
     .image-cta .img-content .caption {
       padding: 10px 30px; }

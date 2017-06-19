@@ -3842,7 +3842,7 @@ footer {
 			top:0;
 			width:4px;
 			height:100%;
-			background:$colorGreen;
+			// background:$colorGreen;
 		}
 		
 		img {
@@ -3894,7 +3894,7 @@ footer {
 	
 	.txt-content {
 		color:$colorWhite;
-		background:$colorDarkGrey;
+		background: rgba($colorDarkBlue, .5);
 		padding:40px;
 		
 		h3 {
@@ -3924,6 +3924,20 @@ footer {
 		.img-content {
 			&:after {
 				display:none;
+			}
+		}
+	}
+
+	.txt-subcontent {
+		padding: 5px 20px;
+		text-align: right;
+		background-color: $colorDarkBlue;
+		a {
+			color: $colorWhite;
+			line-height: 2;
+			&:after {
+				content: '\f0da';
+				font-family: FontAwesome;
 			}
 		}
 	}
