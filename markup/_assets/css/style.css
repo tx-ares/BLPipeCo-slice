@@ -2441,7 +2441,8 @@ footer {
     .main-content .main > .container-fluid {
       padding-right: 20px; }
     .main-content .aside > .container-fluid {
-      padding-left: 20px; } }
+      padding-left: 20px;
+      padding-right: 20px; } }
 
 .articles {
   margin: 40px 0; }
@@ -2602,6 +2603,10 @@ footer {
           .send-request .popdown-phonenum .phone-opener .fa-caret-down {
             top: 60%;
             right: 22%; } }
+        @media only screen and (max-width: 575px) {
+          .send-request .popdown-phonenum .phone-opener .fa-caret-down {
+            top: 60%;
+            right: 11%; } }
   .send-request .more-phone {
     width: 100%;
     background: #fff;
@@ -3133,11 +3138,14 @@ footer {
   .pager a {
     display: inline-block;
     font-family: "Avenir Next LT Pro", sans-serif;
-    margin: 0 15px; }
+    color: #00263c;
+    margin: 0 15px;
+    font-weight: 700; }
     .pager a .fa {
-      font-weight: bold; }
+      font-weight: bold;
+      color: red; }
     .pager a:hover, .pager a.active {
-      color: #00492c; }
+      color: red; }
 
 .sub-headline {
   border-top: solid 2px #00492c;

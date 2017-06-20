@@ -3448,6 +3448,7 @@ footer {
 		.aside {
 			>.container-fluid {
 				padding-left:20px;
+				padding-right:20px;
 			}
 		}
 	}
@@ -3663,6 +3664,10 @@ footer {
 				@include max-screen($xmd){
 					top: 60%;
 					right: 22%
+				}
+				@include max-screen($sm){
+					top: 60%;
+					right: 11%
 				}
 			}
 			
@@ -4509,15 +4514,18 @@ footer {
 	a {
 		display:inline-block;
 		font-family:$font-avenir;
+		color: $colorDarkBlue;
 		margin:0 15px;
-		
+		font-weight: 700;
+		// border: 1px solid $color
 		.fa {
 			font-weight:bold;
+			color: red;
 		}
 		
 		&:hover,
 		&.active {
-			color:$colorDarkGreen;
+			color: red;
 		}
 	}
 }
