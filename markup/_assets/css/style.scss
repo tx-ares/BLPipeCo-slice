@@ -974,7 +974,8 @@ $padding-sm: 20px;
 		
 		.has-sub {
 			>a {
-				padding-right:41px;				
+				padding-right:41px;
+
 			}
 			&.open {
 				>a {
@@ -1543,10 +1544,26 @@ header {
 	/* Main Menu */
 	ul.top-nav {
 		display:table;
-		float:right;
+		float: left;
 		padding-right:110px;
 
 		/* Style for 1st <ul> only */
+		// li:first-child{
+		// 	&.has-sub {
+		// 		&:after {
+		// 			content: '\f0d7';
+		// 			font-family: FontAwesome;
+		// 			color: $colorBrightRed1;
+		// 			position: absolute;
+		// 			bottom: 44%;
+		// 			right: 0;
+		// 			&.after-menu-compressed {
+		// 				bottom: 22%;
+		// 			}
+		// 		}
+
+		// 	}
+		// }
 		>li {
 			display:table-cell;
 			position:relative;
@@ -1584,6 +1601,7 @@ header {
 				}
 			}
 			
+
 			
 			/* Style from 2nd <ul> only */
 			>ul {
@@ -3505,8 +3523,6 @@ footer {
 .latest-articles {
 	background: $colorLightGrey1;
 	padding: 40px;
-	border: $colorDarkBlue solid;
-	border-width: 0 0 0 2px;
 	h2 {
 		font-weight: 700;
 		letter-spacing: 2px;

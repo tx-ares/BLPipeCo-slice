@@ -1196,7 +1196,7 @@ header {
       transition: all 0.3s; }
   header ul.top-nav {
     display: table;
-    float: right;
+    float: left;
     padding-right: 110px;
     /* Style for 1st <ul> only */
     /* End of 1st <li> */
@@ -2477,9 +2477,7 @@ footer {
 
 .latest-articles {
   background: #edf1f1;
-  padding: 40px;
-  border: #00263c solid;
-  border-width: 0 0 0 2px; }
+  padding: 40px; }
   .latest-articles h2 {
     font-weight: 700;
     letter-spacing: 2px; }
