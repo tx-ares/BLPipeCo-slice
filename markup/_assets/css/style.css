@@ -2449,7 +2449,8 @@ footer {
   border: #00263c solid;
   border-width: 0 0 0 2px; }
   .latest-articles h2 {
-    font-weight: 700; }
+    font-weight: 700;
+    letter-spacing: 2px; }
   .latest-articles p, .latest-articles span {
     color: #00263c; }
   .latest-articles span.date {
@@ -2561,11 +2562,20 @@ footer {
       .send-request .popdown-phonenum .phone-opener .fa {
         font-size: 34px;
         font-size: 2.125rem; }
-      .send-request .popdown-phonenum .phone-opener .fa-angle-down {
+      .send-request .popdown-phonenum .phone-opener .fa-caret-down {
         font-size: 24px;
         font-size: 1.5rem;
-        position: relative;
-        top: -5px; }
+        position: absolute;
+        top: 43%;
+        right: 15%; }
+        @media only screen and (max-width: 1280px) {
+          .send-request .popdown-phonenum .phone-opener .fa-caret-down {
+            top: 57%;
+            right: 40%; } }
+        @media only screen and (max-width: 768px) {
+          .send-request .popdown-phonenum .phone-opener .fa-caret-down {
+            top: 44%;
+            right: 26%; } }
   .send-request .more-phone {
     width: 100%;
     background: #fff;
@@ -2607,8 +2617,8 @@ footer {
       display: none; }
     .send-request.active .row > [class*="col-"]:nth-child(2) .phone-opener .less {
       display: inline-block; }
-    .send-request.active .row > [class*="col-"]:nth-child(2) .phone-opener .fa-angle-down:before {
-      content: '\f106'; }
+    .send-request.active .row > [class*="col-"]:nth-child(2) .phone-opener .fa-caret-down:before {
+      content: '\f0d8'; }
     .send-request.active .row > [class*="col-"]:nth-child(2) .more-phone {
       display: block; }
   .send-request.active .more-phone {

@@ -3460,6 +3460,7 @@ footer {
 	border-width: 0 0 0 2px;
 	h2 {
 		font-weight: 700;
+		letter-spacing: 2px;
 	}
 	p, span {
 		color: $colorDarkBlue;
@@ -3614,10 +3615,21 @@ footer {
 				@include font-size(34px);
 			}
 			
-			.fa-angle-down {
+			.fa-caret-down {
 				@include font-size(24px);
-				position:relative;
-				top:-5px;
+				position: absolute;
+				top: 43%;
+				right: 15%;
+
+				@include max-screen($xlg){
+					top: 57%;
+					right: 40%
+				}
+
+				@include max-screen($xmd){
+					top: 44%;
+					right: 26%
+				}
 			}
 			
 		}
@@ -3692,9 +3704,9 @@ footer {
 						display:inline-block;
 					}
 					
-					.fa-angle-down {
+					.fa-caret-down {
 						&:before {
-							content:'\f106';
+							content:'\f0d8';
 						}
 					}
 				}
