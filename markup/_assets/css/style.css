@@ -2545,11 +2545,10 @@ footer {
     text-align: center;
     cursor: pointer; }
     .send-request .popdown-phonenum .phone-opener {
-      font-size: 14px;
-      font-size: 0.875rem;
+      font-size: 24px;
+      font-size: 1.5rem;
       text-transform: uppercase;
       color: #fff;
-      font-weight: 700;
       position: relative;
       padding: 0 20px; }
       .send-request .popdown-phonenum .phone-opener span {
@@ -2560,22 +2559,24 @@ footer {
         .send-request .popdown-phonenum .phone-opener span.less {
           display: none; }
       .send-request .popdown-phonenum .phone-opener .fa {
-        font-size: 34px;
-        font-size: 2.125rem; }
+        font-size: 54px;
+        font-size: 3.375rem;
+        display: block;
+        padding-bottom: 15px; }
       .send-request .popdown-phonenum .phone-opener .fa-caret-down {
         font-size: 24px;
         font-size: 1.5rem;
         position: absolute;
-        top: 43%;
-        right: 15%; }
+        top: 60%;
+        right: 22%; }
         @media only screen and (max-width: 1280px) {
           .send-request .popdown-phonenum .phone-opener .fa-caret-down {
-            top: 57%;
-            right: 40%; } }
+            top: 60%;
+            right: 11%; } }
         @media only screen and (max-width: 768px) {
           .send-request .popdown-phonenum .phone-opener .fa-caret-down {
-            top: 44%;
-            right: 26%; } }
+            top: 60%;
+            right: 22%; } }
   .send-request .more-phone {
     width: 100%;
     background: #fff;

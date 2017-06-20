@@ -3593,10 +3593,10 @@ footer {
 		cursor:pointer;
 		
 		.phone-opener {
-			@include font-size(14px);
+			@include font-size(24px);
 			text-transform:uppercase;
 			color:$colorWhite;
-			font-weight:700;
+			// font-weight:700;
 			position:relative;
 			padding:0 20px;
 			
@@ -3612,23 +3612,25 @@ footer {
 			}
 			
 			.fa {
-				@include font-size(34px);
+				@include font-size(54px);
+				display: block;
+				padding-bottom: 15px;
 			}
 			
 			.fa-caret-down {
 				@include font-size(24px);
 				position: absolute;
-				top: 43%;
-				right: 15%;
+				top: 60%;
+				right: 22%;
 
 				@include max-screen($xlg){
-					top: 57%;
-					right: 40%
+					top: 60%;
+					right: 11%
 				}
 
 				@include max-screen($xmd){
-					top: 44%;
-					right: 26%
+					top: 60%;
+					right: 22%
 				}
 			}
 			
