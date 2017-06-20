@@ -2513,11 +2513,29 @@ footer {
           margin-bottom: 0; } }
 
 .next-prev {
-  margin-bottom: 40px; }
+  margin-bottom: 40px;
+  border-top: 1px solid #dbd8cf;
+  padding-top: 10px; }
   .next-prev a {
     text-transform: uppercase;
     display: inline-block;
-    font-weight: 500; }
+    font-weight: 500;
+    font-family: "Avenir Next LT Pro", sans-serif;
+    color: #d0112b;
+    margin: 0 15px;
+    font-weight: 700; }
+    .next-prev a.previous {
+      float: left; }
+      .next-prev a.previous:before {
+        content: '\f0d9';
+        font-family: FontAwesome;
+        padding: 0 5px; }
+    .next-prev a.next {
+      float: right; }
+      .next-prev a.next:after {
+        content: '\f0da';
+        font-family: FontAwesome;
+        padding: 0 5px; }
 
 .num {
   font-family: "Avenir Next LT Pro", sans-serif;
@@ -2697,6 +2715,8 @@ footer {
   .topic-nav h2.topic-title {
     text-transform: uppercase;
     color: #fff; }
+  .topic-nav ul li {
+    padding: 5px 0; }
 
 .side-cta {
   position: relative;

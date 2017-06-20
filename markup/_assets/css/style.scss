@@ -3546,13 +3546,63 @@ footer {
 
 .next-prev {
 	margin-bottom:40px;
-	
+	border-top: 1px solid $colorLightGrey3;
+	padding-top: 10px;
 	a {
 		text-transform:uppercase;
 		display:inline-block;
 		font-weight:500;
+		font-family:$font-avenir;
+		color: $colorBrightRed2;
+		margin:0 15px;
+		font-weight: 700;
+		// border: 1px solid $color
+		&.previous {
+			float: left;
+			&:before {
+				content: '\f0d9';
+				font-family: FontAwesome;
+				padding: 0 5px;
+			}
+		}
+		&.next {
+			float: right;
+			&:after {
+				content: '\f0da';
+				font-family: FontAwesome;
+				padding: 0 5px;
+			}
+		}
 	}
 }
+
+// .pager {
+// 	margin-bottom:40px;
+// 	text-align:center;
+	
+// 	.page-items {
+// 		display:inline-block;
+// 	}
+	
+// 	a {
+// 		display:inline-block;
+// 		font-family:$font-avenir;
+// 		color: $colorDarkBlue;
+// 		margin:0 15px;
+// 		font-weight: 700;
+// 		// border: 1px solid $color
+// 		.fa {
+// 			font-weight:bold;
+// 			color: red;
+// 		}
+		
+// 		&:hover,
+// 		&.active {
+// 			color: red;
+// 		}
+// 	}
+// }
+
 
 .num {
 	font-family:$font-avenir;
@@ -3830,6 +3880,11 @@ footer {
 	h2.topic-title {
 		text-transform: uppercase;
 		color: $colorWhite;
+	}
+	ul {
+		li {
+			padding: 5px 0;
+		}
 	}
 }
 
