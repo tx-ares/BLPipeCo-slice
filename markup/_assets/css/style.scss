@@ -3453,7 +3453,7 @@ footer {
 	}
 }
 
-.articles {
+.latest-articles {
 	background: $colorLightGrey1;
 	padding: 40px;
 	border: $colorDarkBlue solid;
@@ -3470,7 +3470,6 @@ footer {
 		font-size: .9rem;
 		text-transform: uppercase;
 	}
-
 }
 
 .related-contents {
@@ -3716,7 +3715,6 @@ footer {
 .side-nav {
 	position:relative;
 	margin-bottom:40px;
-	
 	ul {
 		li {
 			padding:20px 0;
@@ -3731,11 +3729,11 @@ footer {
 				font-weight:500;
 				
 				&:after {
-					content:'\f104';
-					position:absolute;
-					left:10px;
-					top:1px;
-					font-family:$font-icon;
+					// content:'\f104';
+					// position:absolute;
+					// left:10px;
+					// top:1px;
+					// font-family:$font-icon;
 				}
 				
 				&:hover {
@@ -3772,6 +3770,15 @@ footer {
 	
 	@include max-screen($xmd) {
 		display:none;
+	}
+}
+
+.topic-nav {
+	background: $colorDarkBlue;
+	padding: 40px;
+	h2.topic-title {
+		text-transform: uppercase;
+		color: $colorWhite;
 	}
 }
 

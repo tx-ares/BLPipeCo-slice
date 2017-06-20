@@ -2443,16 +2443,16 @@ footer {
     .main-content .aside > .container-fluid {
       padding-left: 20px; } }
 
-.articles {
+.latest-articles {
   background: #edf1f1;
   padding: 40px;
   border: #00263c solid;
   border-width: 0 0 0 2px; }
-  .articles h2 {
+  .latest-articles h2 {
     font-weight: 700; }
-  .articles p, .articles span {
+  .latest-articles p, .latest-articles span {
     color: #00263c; }
-  .articles span.date {
+  .latest-articles span.date {
     display: block;
     font-size: .9rem;
     text-transform: uppercase; }
@@ -2632,12 +2632,6 @@ footer {
       font-size: 17px;
       font-size: 1.0625rem;
       font-weight: 500; }
-      .side-nav ul li a:after {
-        content: '\f104';
-        position: absolute;
-        left: 10px;
-        top: 1px;
-        font-family: "FontAwesome"; }
       .side-nav ul li a:hover {
         color: #c2c2c2; }
     .side-nav ul li.active a {
@@ -2655,6 +2649,13 @@ footer {
   @media only screen and (max-width: 768px) {
     .side-nav {
       display: none; } }
+
+.topic-nav {
+  background: #00263c;
+  padding: 40px; }
+  .topic-nav h2.topic-title {
+    text-transform: uppercase;
+    color: #fff; }
 
 .side-cta {
   position: relative;
