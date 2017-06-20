@@ -2443,6 +2443,31 @@ footer {
     .main-content .aside > .container-fluid {
       padding-left: 20px; } }
 
+.articles {
+  margin: 40px 0; }
+  .articles h2 {
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    margin: 0; }
+  .articles span.subtitle {
+    font-weight: initial;
+    display: block;
+    margin-bottom: 20px; }
+  .articles p, .articles a {
+    color: #00263c; }
+  .articles .txt-content {
+    border-bottom: 1px solid #dbd8cf;
+    padding-top: 20px; }
+    .articles .txt-content p {
+      color: #d0112b;
+      margin-bottom: 15px; }
+    .articles .txt-content span.date {
+      display: block;
+      font-size: .9rem;
+      text-transform: uppercase;
+      color: #00263c; }
+
 .latest-articles {
   background: #edf1f1;
   padding: 40px;

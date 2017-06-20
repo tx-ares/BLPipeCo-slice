@@ -3453,6 +3453,38 @@ footer {
 	}
 }
 
+.articles {
+	margin: 40px 0;
+	h2 {
+		font-weight: 700;
+		letter-spacing: 2px;
+		text-transform: uppercase;
+		margin: 0;
+	}
+	span.subtitle {
+		font-weight: initial;
+		display: block;
+		margin-bottom: 20px;
+	}
+	p, a {
+		color: $colorDarkBlue;
+	}
+	.txt-content {
+		border-bottom: 1px solid $colorLightGrey3;
+		padding-top: 20px;
+		p {
+			color: $colorBrightRed2;
+			margin-bottom: 15px;
+		}
+		span.date {
+			display: block;
+			font-size: .9rem;
+			text-transform: uppercase;
+			color: $colorDarkBlue;
+		}
+	}
+}
+
 .latest-articles {
 	background: $colorLightGrey1;
 	padding: 40px;
