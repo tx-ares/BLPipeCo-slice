@@ -1082,7 +1082,7 @@ figure {
             background: #333;
             color: #fff; }
           .mobile-menu .menu-container ul > li > ul > li.open > a > span {
-            background: #ff7441; }
+            background: #dbd8cf; }
           .mobile-menu .menu-container ul > li > ul > li > ul > li {
             /* 3rd level */ }
             .mobile-menu .menu-container ul > li > ul > li > ul > li > a {
@@ -1099,14 +1099,14 @@ figure {
                   position: absolute;
                   left: 31px;
                   top: 18px;
-                  background: #00aa66;
+                  background: #d0112b;
                   width: 3px;
                   height: 3px; }
                 .mobile-menu .menu-container ul > li > ul > li > ul > li > a > span:after {
                   display: none; }
               .mobile-menu .menu-container ul > li > ul > li > ul > li > a:hover > span {
                 background: #333;
-                color: #00aa66; }
+                color: #d0112b; }
             .mobile-menu .menu-container ul > li > ul > li > ul > li:last-child > a {
               margin-bottom: 1px; }
             .mobile-menu .menu-container ul > li > ul > li > ul > li > ul > li {

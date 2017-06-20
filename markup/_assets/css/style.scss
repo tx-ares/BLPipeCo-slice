@@ -1375,7 +1375,7 @@ $padding-sm: 20px;
 						&.open {
 							>a {
 								>span {
-									background:$colorOrange;
+									background:$colorLightGrey3;
 								}
 							}
 						}
@@ -1399,7 +1399,7 @@ $padding-sm: 20px;
 											position:absolute;
 											left:31px;
 											top:18px;
-											background:$colorGreen;
+											background:$colorBrightRed2;
 											width:3px;
 											height:3px;
 										}
@@ -1411,7 +1411,7 @@ $padding-sm: 20px;
 									&:hover {
 										>span {
 											background:$colorDarkGrey;
-											color:$colorGreen;
+											color:$colorBrightRed2;
 										}
 									}
 								}
