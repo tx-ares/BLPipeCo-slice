@@ -120,7 +120,7 @@ hr {
 
 /* Text settings */
 .text-upcase {
-  text-transform: uppercase; }
+  text-transform: uppercase !important; }
 
 .text-center {
   text-align: center; }
@@ -451,6 +451,9 @@ textarea:-ms-input-placeholder 						{ color: $colorDarkGrey; }*/
 
 .darkgrey .btn.whiteline:hover, .darkgrey .btn.whiteline:focus {
   color: #333; }
+
+.darkblue .btn.whiteline:hover, .darkblue .btn.whiteline:focus {
+  color: #00263c; }
 
 .orange .btn.whiteline:hover, .orange .btn.whiteline:focus {
   color: #ff7441; }
@@ -2439,6 +2442,20 @@ footer {
       padding-right: 20px; }
     .main-content .aside > .container-fluid {
       padding-left: 20px; } }
+
+.articles {
+  background: #edf1f1;
+  padding: 40px;
+  border: #00263c solid;
+  border-width: 0 0 0 2px; }
+  .articles h2 {
+    font-weight: 700; }
+  .articles p, .articles span {
+    color: #00263c; }
+  .articles span.date {
+    display: block;
+    font-size: .9rem;
+    text-transform: uppercase; }
 
 .related-contents {
   padding: 40px 0;

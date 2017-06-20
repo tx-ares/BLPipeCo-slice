@@ -165,7 +165,7 @@ hr {
 }
 
 /* Text settings */
-.text-upcase { text-transform:uppercase; }
+.text-upcase { text-transform:uppercase !important; }
 .text-center { text-align:center; }
 .text-left { text-align:left; }
 .text-right { text-align:right; }
@@ -514,6 +514,17 @@ textarea:-ms-input-placeholder 						{ color: $colorDarkGrey; }*/
 			&:hover,
 			&:focus {
 				color:$colorDarkGrey;
+			}
+		}
+	}
+}
+
+.darkblue {
+	.btn {
+		&.whiteline {
+			&:hover,
+			&:focus {
+				color:$colorDarkBlue;
 			}
 		}
 	}
@@ -3440,6 +3451,26 @@ footer {
 			}
 		}
 	}
+}
+
+.articles {
+	background: $colorLightGrey1;
+	padding: 40px;
+	border: $colorDarkBlue solid;
+	border-width: 0 0 0 2px;
+	h2 {
+		font-weight: 700;
+	}
+	p, span {
+		color: $colorDarkBlue;
+	}
+
+	span.date {
+		display: block;
+		font-size: .9rem;
+		text-transform: uppercase;
+	}
+
 }
 
 .related-contents {
