@@ -1130,6 +1130,27 @@ figure {
       font-size: 0.75rem;
       font-family: "Avenir Next LT Pro", sans-serif; }
 
+/* Social Media Icons */
+.social-media-icons {
+  background: #edf1f1;
+  position: fixed;
+  right: 0;
+  top: 30%;
+  z-index: 4; }
+  .social-media-icons ul {
+    color: #00263c; }
+    .social-media-icons ul li {
+      height: 40px;
+      width: 40px;
+      border: 2px solid #00263c;
+      text-align: center;
+      padding: 5px; }
+      .social-media-icons ul li:hover {
+        background: #dbd8cf; }
+      .social-media-icons ul li a {
+        color: #00263c;
+        font-size: 1.2rem; }
+
 /* Main wrapper of the page */
 #wrapper {
   -moz-transition: padding-top 0.3s;
