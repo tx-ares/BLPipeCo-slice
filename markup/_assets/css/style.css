@@ -1206,19 +1206,23 @@ header {
     header ul.top-nav > li {
       display: table-cell;
       position: relative;
+      width: 110px;
       /* Style from 2nd <ul> only */ }
       header ul.top-nav > li > a {
         color: #fff;
         font-weight: 500;
-        padding: 16.5px 20px;
+        padding: 16.5px 15px;
         display: block;
         text-transform: uppercase;
-        -moz-transition: background 0.2s;
-        -o-transition: background 0.2s;
-        -webkit-transition: background 0.2s;
-        transition: background 0.2s;
         font-size: 18px;
-        font-size: 1.125rem; }
+        font-size: 1.125rem;
+        text-decoration: none;
+        display: inline-block;
+        border-bottom: 3px solid transparent;
+        width: 0px;
+        transition: 0.5s ease;
+        white-space: nowrap;
+        height: 25px; }
         @media only screen and (max-width: 1280px) {
           header ul.top-nav > li > a {
             font-size: 16px;
@@ -1235,7 +1239,10 @@ header {
             font-size: 1rem;
             padding: 18px 15px; } }
       header ul.top-nav > li.active > a, header ul.top-nav > li:hover > a {
-        color: #fff; }
+        color: #fff;
+        text-decoration: none;
+        border-bottom: 3px solid #d0112b;
+        width: 105px; }
       header ul.top-nav > li > ul {
         position: absolute;
         left: 0;
@@ -1485,7 +1492,8 @@ header {
       display: none; } }
   header ul.top-nav > li > a {
     padding-top: 52px;
-    padding-bottom: 47px;
+    padding-bottom: 73px;
+    /*Was 47px*/
     -moz-transition: all 0.3s;
     -o-transition: all 0.3s;
     -webkit-transition: all 0.3s;
@@ -2206,7 +2214,7 @@ footer {
     -webkit-transition: all 0.3s;
     transition: all 0.3s; }
   .header-compressed header ul.top-nav > li > a {
-    padding: 14px 20px;
+    padding: 14px 20px 41px;
     -moz-transition: all 0.3s;
     -o-transition: all 0.3s;
     -webkit-transition: all 0.3s;

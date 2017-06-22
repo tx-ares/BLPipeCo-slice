@@ -1567,14 +1567,15 @@ header {
 		>li {
 			display:table-cell;
 			position:relative;
-			
+			width: 110px; // Transition Style
+					    
 			>a {
 				color:$colorWhite;
 				font-weight:500;
-				padding:16.5px 20px;
+				padding:16.5px 15px;
 				display:block;
 				text-transform:uppercase;
-				@include transition(background .2s);
+				// @include transition(background .2s);
 				@include font-size(18px);
 				
 				@include max-screen($xlg) {
@@ -1591,13 +1592,24 @@ header {
 					@include font-size(16px);
 					padding:18px 15px;
 				}
+				text-decoration: none; //Transition Start
+				display: inline-block;
+				border-bottom: 3px solid transparent;    
+				width: 0px;
+				transition: 0.5s ease;
+				white-space: nowrap;
+				height: 25px; // End
 			}
 			
 			&.active,
 			&:hover {
 				>a {
 					// border-bottom: 5px solid $colorBrightRed2;
-					color:$colorWhite;
+					color:$colorWhite; // Transition Style Start
+					text-decoration: none;
+					border-bottom: 3px solid $colorBrightRed2;
+    				width: 105px; // End
+					    
 				}
 			}
 			
@@ -1919,7 +1931,7 @@ header {
 		>li {
 			>a {
 				padding-top:52px;
-				padding-bottom:47px;
+				padding-bottom:73px; /*Was 47px*/
 				@include transition(all .3s);
 				
 				@include max-screen($xlg) {
@@ -3067,7 +3079,7 @@ footer {
 		ul.top-nav {
 			>li {
 				>a {
-					padding:14px 20px;
+					padding:14px 20px 41px;
 					@include transition(all .3s);
 				}
 			}
