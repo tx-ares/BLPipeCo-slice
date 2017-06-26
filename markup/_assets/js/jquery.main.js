@@ -1,7 +1,8 @@
-console.log("Check 1 2, KOALA WORKS for JS")
+console.log("Check 1 2 3, KOALA WORKS for JS")
 
 function showPage() {
 	"use strict";
+	$("body").addClass('header-compressed')
 	
 	(function defer() {
 		if ($('body').hasClass('cssloaded')) {
