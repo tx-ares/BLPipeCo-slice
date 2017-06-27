@@ -1485,14 +1485,29 @@ $padding-sm: 20px;
 	right: 0;
 	top: 30%;
 	z-index: 4;
+	@include max-screen ($sm) {
+		bottom: 0;
+		right: initial;
+		top: initial;
+		width: 100%;
+	}
 	ul {
 		color: $colorDarkBlue;
+		@include max-screen ($sm) {
+			text-align: center;
+		}
 		li {
 			height: 40px;
 			width: 40px;
 			border-bottom: 2px solid $colorWhite;
 			text-align: center;
 			padding: 5px;
+			@include max-screen ($sm) {
+				bottom: 0;
+				width: 19%;
+				display: inline-block;
+				border-bottom: 0;	
+			}
 			&:hover {
 					background: $colorLightGrey3;
 				}
@@ -1503,6 +1518,7 @@ $padding-sm: 20px;
 			}
 		}
 	}
+
 } 
 
 /* Main wrapper of the page */
