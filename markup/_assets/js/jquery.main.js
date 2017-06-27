@@ -385,9 +385,9 @@ $(window).load(function () {
 
 function initPopUpIcons() {
 	$(window).scroll(function(){
-        // if ($(this).scrollTop() == 0 || window.matchMedia('only screen and (max-width: 1024px)').matches) {
-	    console.log('Movement!');
-	  // }
+        if ($(this).scrollTop() == 0 || window.matchMedia('only screen and (max-width: 575px)').matches) {
+	    console.log('Movement!!!');
+	  }
 	});
 }
 
