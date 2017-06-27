@@ -1490,7 +1490,7 @@ $padding-sm: 20px;
 		li {
 			height: 40px;
 			width: 40px;
-			border: 2px solid $colorDarkBlue;
+			border-bottom: 2px solid $colorWhite;
 			text-align: center;
 			padding: 5px;
 			&:hover {
@@ -3782,7 +3782,7 @@ footer {
 		
 		.more-phone-wrap {
 			// padding:30px 45px;
-			border:solid 2px $colorLightGrey3;
+			// border:solid 2px $colorLightGrey3;
 			ul {
 				li {
 					background: $colorLightGrey1;

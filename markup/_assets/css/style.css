@@ -1370,7 +1370,7 @@ figure {
     .social-media-icons ul li {
       height: 40px;
       width: 40px;
-      border: 2px solid #00263c;
+      border-bottom: 2px solid #fff;
       text-align: center;
       padding: 5px; }
 @media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/ahuerta\/Source\/Workspaces\/BLPipeco\/BLPipeCo-Slice\/markup\/_assets\/css\/style\.scss}line{font-family:\000031496}}
@@ -3241,25 +3241,22 @@ footer {
     -o-transition: all 0.3s;
     -webkit-transition: all 0.3s;
     transition: all 0.3s; }
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/ahuerta\/Source\/Workspaces\/BLPipeco\/BLPipeCo-Slice\/markup\/_assets\/css\/style\.scss}line{font-family:\000033783}}
-    .send-request .more-phone .more-phone-wrap {
-      border: solid 2px #dbd8cf; }
 @media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/ahuerta\/Source\/Workspaces\/BLPipeco\/BLPipeCo-Slice\/markup\/_assets\/css\/style\.scss}line{font-family:\000033787}}
-      .send-request .more-phone .more-phone-wrap ul li {
-        background: #edf1f1;
-        margin-bottom: 0;
-        padding: 10px 20px; }
+    .send-request .more-phone .more-phone-wrap ul li {
+      background: #edf1f1;
+      margin-bottom: 0;
+      padding: 10px 20px; }
 @media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/ahuerta\/Source\/Workspaces\/BLPipeco\/BLPipeCo-Slice\/markup\/_assets\/css\/style\.scss}line{font-family:\000033791}}
-        .send-request .more-phone .more-phone-wrap ul li:nth-child(n-3) {
-          border-bottom: 1px solid #fff; }
+      .send-request .more-phone .more-phone-wrap ul li:nth-child(n-3) {
+        border-bottom: 1px solid #fff; }
 @media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/ahuerta\/Source\/Workspaces\/BLPipeco\/BLPipeCo-Slice\/markup\/_assets\/css\/style\.scss}line{font-family:\000033795}}
-        .send-request .more-phone .more-phone-wrap ul li:after {
-          content: '\f0da';
-          font-family: FontAwesome;
-          float: right; }
+      .send-request .more-phone .more-phone-wrap ul li:after {
+        content: '\f0da';
+        font-family: FontAwesome;
+        float: right; }
 @media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/ahuerta\/Source\/Workspaces\/BLPipeco\/BLPipeCo-Slice\/markup\/_assets\/css\/style\.scss}line{font-family:\000033800}}
-        .send-request .more-phone .more-phone-wrap ul li:hover {
-          background: #e5e5e5; }
+      .send-request .more-phone .more-phone-wrap ul li:hover {
+        background: #e5e5e5; }
 @media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/ahuerta\/Source\/Workspaces\/BLPipeco\/BLPipeCo-Slice\/markup\/_assets\/css\/style\.scss}line{font-family:\000033811}}
     .send-request .more-phone span {
       display: block;
