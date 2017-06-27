@@ -1799,7 +1799,7 @@ header {
 				right:-100%;
 				width:100%;
 				height:100%;
-				opacity: 0;
+				// opacity: 0;
 				@include transition(all .3s);
 				
 				&:after {
@@ -1807,7 +1807,7 @@ header {
 					position: absolute;
 					width: 10px;
 					height: 100%;
-					left: 100%;
+					// left: 100%;
 					top: 0;
 					background:$colorBrightRed2;
 				}
@@ -1845,7 +1845,8 @@ header {
 				&.active {
 					top:0;
 					right:0;
-					opacity: 1;
+					right: -10px;
+					// opacity: 1;
 				}
 			}
 		}
