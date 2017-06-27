@@ -1,4 +1,4 @@
-console.log("Check 1 2 3 4, KOALA WORKS for JS")
+console.log("Check 1 2 3 4 5 6 7, KOALA WORKS for JS")
 
 function showPage() {
 	"use strict";
@@ -383,6 +383,14 @@ $(window).load(function () {
 
 });
 
+// function initPopUpIcons() {
+// 	$(window).scroll(function(){
+//         if ($(this).scrollTop() == 0 || window.matchMedia('only screen and (max-width: 1024px)').matches) {
+// 	    console.log('#element hits top!');
+// 	  }
+// 	});
+// }
+
 // JavaScript Document
 jQuery(document).ready(function() {
 	"use strict";
@@ -393,7 +401,7 @@ jQuery(document).ready(function() {
 	initStickyHeader();
 	checkIfPageBottomEdge();
 	initToggleActiveClass();
-	
+	// initPopUpIcons();
 	initLazyLoadImage();
 	initAccordion();
 	initMatchHeight();
