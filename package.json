@@ -1,0 +1,30 @@
+{
+  "name": "blpipeco_slice",
+  "version": "1.0.0",
+  "description": "Markup slice for B&L Pipe Co.",
+  "main": "index.html",
+  "dependencies": {
+    "connect": "^3.6.2",
+    "livereload": "^0.6.2",
+    "serve-static": "^1.12.3",
+    "simple-autoreload-server": "^0.2.6"
+  },
+  "scripts": {
+    "test": "echo Waddup!",
+     "go": "npm run watch && npm run start",
+    "start": "autoreload-server -w '**/**.{html,css,js}'' ./markup 3000",
+    "watch": "npm run watch-js && npm run watch-css && echo '\n\n===== watching js and scss files in src/, writing changes to dist/ =====\n\n'&",
+    "watch-js": "./node_modules/.bin/watchify _assets/js/all.js",
+    "watch-css": "./node_modules/.bin/node-sass -w --output-style compressed markup/_assets/css/style.scss markup/_assets/css/style.css&"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/TxsAdamWest/BLPipeCo-slice.git"
+  },
+  "author": "Adan Huerta",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/TxsAdamWest/BLPipeCo-slice/issues"
+  },
+  "homepage": "https://github.com/TxsAdamWest/BLPipeCo-slice#readme"
+}
