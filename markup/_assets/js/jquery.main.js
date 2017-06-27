@@ -384,18 +384,16 @@ $(window).load(function () {
 });
 
 function initPopUpIcons() {
-	  // if ($(this).scrollTop() == 0 || window.matchMedia('only screen and (max-width: 575px)').matches) {
-	  //   $(".social-media-icons").css("bottom", 0);
-	  // }
-	  // else {
-	  //   	$(".social-media-icons").css("bottom", -40);
-	  //   }
+	  if ($(this).scrollTop() == 0 && window.matchMedia('only screen and (max-width: 575px)').matches) {
+	    	$(".social-media-icons").addClass("active");
+	    }
+	    else {
+	    	$(".social-media-icons").removeClass('active');
+	    }
 	$(window).scroll(function(){
         if ($(this).scrollTop() == 0 && window.matchMedia('only screen and (max-width: 575px)').matches) {
 	    	$(".social-media-icons").addClass("active");
-	    	console.log($(this).scrollTop(), "<< scrollTop()")
-	    	console.log(window.matchMedia('only screen and (max-width: 575px)').matches, "<< watchMedia matches")
-	    }
+	    	 }
 	    else {
 	    	$(".social-media-icons").removeClass('active');
 	    }

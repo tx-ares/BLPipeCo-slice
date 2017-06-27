@@ -1145,6 +1145,7 @@ figure {
       bottom: -40px !important;
       right: initial;
       top: initial;
+      min-width: 265px;
       width: 100%;
       background: rgba(0, 38, 60, 0.8);
       -moz-transition: all, 0.4s;

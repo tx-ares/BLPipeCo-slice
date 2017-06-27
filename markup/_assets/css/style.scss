@@ -1490,6 +1490,7 @@ $padding-sm: 20px;
 		bottom: -40px !important;
 		right: initial;
 		top: initial;
+		min-width: 265px;
 		width: 100%;
 		background: rgba($colorDarkBlue, .8);
 		@include transition(all, .4s);
