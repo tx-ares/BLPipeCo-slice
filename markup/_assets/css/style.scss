@@ -46,6 +46,7 @@ $colorSlateBlue: #8a9ca5; //Accents
 $colorLightGrey1: #edf1f1; //Side Tabs, Social Media Boxes
 $colorBrightRed1: #d0202f; //Logo, Minor Accents
 $colorBrightRed2: #d0112b; //Larger Divs, Main Color
+$colorLightGrey7: #E2EAED; //Menu Backgrounds
 
 
 /* Font Family */
@@ -1590,7 +1591,7 @@ header {
 			width: 110px; // Transition Style
 					    
 			>a {
-				color:$colorWhite;
+				color:$colorLightGrey7;
 				font-weight:500;
 				padding:16.5px 15px;
 				display:block;
@@ -1640,16 +1641,15 @@ header {
 				position:absolute;
 				left:0;
 				top:100%;
-				background:$colorDarkBlue;
+				background:$colorLightGrey7;
 				width:320px;
 				min-height:520px;
 				padding-top:15px;
-				border-bottom: 5px solid $colorBrightRed2;
 
 				/* Style of <a> from here forward */
 				a {
 					font-weight:500;
-					color:$colorWhite;
+					color:$colorDarkBlue;
 					display:block;
 				}
 				
@@ -1663,13 +1663,12 @@ header {
 						@include transition(background .2s);
 						
 						&:after {
-							content:'\f105';
-							font-family:$font-icon;
+							
 							@include font-size(14px);
 							position:absolute;
 							top:14px;
 							right:40px;
-							color:$colorWhite;
+							color: $colorBrightRed2;
 						}
 						
 						@include max-screen($lg) {
@@ -1683,8 +1682,9 @@ header {
 					
 					&:hover {
 						>a {
-							background:$colorSlateBlue;
+							background:$colorWhite;
 						}
+						
 					}
 					
 					/* Style from 3rd <ul> only */
@@ -1727,6 +1727,13 @@ header {
 						@include max-screen($lg) {
 							width:280px;
 						}
+					}
+				}
+
+				li a:first-child:nth-last-child(2)  {
+					&:after {
+						content:'\f0da';
+						font-family:$font-icon;
 					}
 				}
 				/* End of 2nd <li> */
