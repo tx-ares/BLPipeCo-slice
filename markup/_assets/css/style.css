@@ -3328,7 +3328,7 @@ footer {
     float: left;
     padding: 0 20px;
     margin-bottom: 35px;
-    width: 20%; }
+    width: 50%; }
     .photo-wrapper .photos .photo-item .img-wrapper {
       margin-bottom: 20px;
       position: relative;
@@ -3345,13 +3345,13 @@ footer {
         left: 0;
         height: 5px;
         width: 100%;
-        background: #00aa66;
+        background: #d0112b;
         z-index: 2; }
       .photo-wrapper .photos .photo-item .img-wrapper .overlay {
         position: absolute;
         width: 100%;
         height: 100%;
-        background: rgba(0, 170, 102, 0.85);
+        background: rgba(208, 17, 43, 0.85);
         font-size: 24px;
         font-size: 1.5rem;
         color: #fff;
@@ -3384,10 +3384,10 @@ footer {
   .photo-wrapper .photos .info-wrapper h3 {
     font-size: 24px;
     font-size: 1.5rem;
-    color: #00263c;
+    color: #d0112b;
     margin-bottom: 10px;
-    text-transform: inherit;
-    font-weight: 400; }
+    text-transform: uppercase;
+    font-weight: 500; }
   .photo-wrapper .photos .info-wrapper h4 {
     color: #333;
     font-size: 18px;
