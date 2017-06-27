@@ -1487,11 +1487,15 @@ $padding-sm: 20px;
 	top: 30%;
 	z-index: 4;
 	@include max-screen ($sm) {
-		bottom: 0;
+		bottom: -40px !important;
 		right: initial;
 		top: initial;
 		width: 100%;
 		background: rgba($colorDarkBlue, .8);
+		@include transition(all, .4s);
+		&.active {
+			bottom: 0 !important;
+		}
 	}
 	ul {
 		color: $colorDarkBlue;
