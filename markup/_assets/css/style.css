@@ -3374,7 +3374,8 @@ footer {
       font-family: "FontAwesome";
       color: #00263b; }
   .feature-slide-box .txt-content {
-    min-height: 215px; }
+    min-height: 215px;
+    margin: 10%; }
   .feature-slide-box h3 {
     color: #00263b;
     text-transform: inherit;
