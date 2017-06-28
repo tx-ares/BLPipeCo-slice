@@ -3233,7 +3233,18 @@ footer {
 		}
 	}
 	
+
+
 }
+
+.secondary {
+	.row {
+		>[class*="col-"] {
+			margin: 0 -40px;
+		}
+	}
+}
+
 
 /* ==========================================================================
 
@@ -3631,6 +3642,9 @@ footer {
 		padding: 5px 0;
 		text-align: right;
 		background-color: $colorDarkBlue;
+		position: absolute;
+		bottom:	0;
+		width: 100%;
 		a {
 			color: $colorWhite;
 			line-height: 3;

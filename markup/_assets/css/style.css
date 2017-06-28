@@ -2299,6 +2299,9 @@ footer {
     .main-content-fullpage .main-content {
       padding-bottom: 0; } }
 
+.secondary .row > [class*="col-"] {
+  margin: 0 -40px; }
+
 /* ==========================================================================
 
 	5. CUSTOM STYLES
@@ -2542,7 +2545,10 @@ footer {
   .latest-articles .txt-subcontent {
     padding: 5px 0;
     text-align: right;
-    background-color: #00263b; }
+    background-color: #00263b;
+    position: absolute;
+    bottom: 0;
+    width: 100%; }
     .latest-articles .txt-subcontent a {
       color: #fff;
       line-height: 3;
