@@ -2351,7 +2351,7 @@ footer {
         padding-top: 30px;
         padding-bottom: 30px; }
     .banner .row > [class*="col-"]:nth-child(1) .overlay-band {
-      background: rgba(0, 73, 44, 0.5); }
+      background: rgba(0, 38, 59, 0.5); }
       .banner .row > [class*="col-"]:nth-child(1) .overlay-band:after {
         content: '';
         width: 5px;
@@ -2359,9 +2359,9 @@ footer {
         position: absolute;
         right: 0;
         top: 0;
-        background: #00aa66; }
+        background: #d0202f; }
   .banner .overlay-band {
-    background: #00492c;
+    background: rgba(0, 38, 59, 0.85);
     position: absolute;
     left: 0;
     bottom: 0;
@@ -2369,7 +2369,7 @@ footer {
     height: 80px; }
   .banner .sub-cat-title {
     text-transform: uppercase;
-    color: #00aa66;
+    color: #fff;
     font-weight: 500;
     font-size: 16px;
     font-size: 1rem; }
@@ -2392,7 +2392,7 @@ footer {
       content: '';
       width: 5px;
       height: 5px;
-      background: #00aa66;
+      background: #d0202f;
       position: absolute;
       left: 0;
       bottom: 4px; }
@@ -2460,12 +2460,12 @@ footer {
   .banner .social {
     font-size: 18px;
     font-size: 1.125rem;
-    color: #00aa66;
+    color: #e2eaed;
     margin-bottom: 0; }
     .banner .social a {
       margin: 0 7px; }
       .banner .social a:hover {
-        color: #fff; }
+        color: #c2c2c2; }
 
 .main-content {
   min-height: 185px;

@@ -3318,7 +3318,7 @@ footer {
 		
 		>[class*="col-"]:nth-child(1) {
 			.overlay-band {
-				background:rgba($colorDarkGreen,.5);
+				background:rgba($colorDarkBlue,.5);
 				
 				&:after {
 					content:'';
@@ -3327,14 +3327,14 @@ footer {
 					position:absolute;
 					right:0;
 					top:0;
-					background:$colorGreen;
+					background:$colorBrightRed1;
 				}
 			}
 		}
 	}
 	
 	.overlay-band {
-		background:$colorDarkGreen;
+		background:rgba($colorDarkBlue, .85);
 		position:absolute;
 		left:0;
 		bottom:0;
@@ -3344,7 +3344,7 @@ footer {
 	
 	.sub-cat-title {
 		text-transform:uppercase;
-		color:$colorGreen;
+		color:$colorWhite;
 		font-weight:500;
 		@include font-size(16px);
 	}
@@ -3369,7 +3369,7 @@ footer {
 			content:'';
 			width:5px;
 			height:5px;
-			background:$colorGreen;
+			background:$colorBrightRed1;
 			position:absolute;
 			left:0;
 			bottom:4px;
@@ -3486,14 +3486,14 @@ footer {
 	
 	.social {
 		@include font-size(18px);
-		color:$colorGreen;
+		color:$colorLightGrey7;
 		margin-bottom:0;
 		
 		a {
 			margin:0 7px;
 			
 			&:hover {
-				color:$colorWhite;
+				color:$colorLightGrey6;
 			}
 		}
 	}
