@@ -4739,7 +4739,170 @@ footer {
 	position:relative;
 	padding:30px;
 	margin-bottom:40px;
+	
+	.txt-content {
+		min-height:215px;
+	}
+	
+	h3 {
+		color:$colorDarkBlue;
+		text-transform:inherit;
+		font-weight:400;
+		@include font-size(24px);
+	}
+	
+	p {
+		&:last-child {
+			margin-bottom:0;
+		}
+	}
+	
+	img { width:100%; }
+	
+	&.with-img {
+		padding:0;
+		
+		&:before {
+			display:none;
+		}
+		
+		.img-content {
+			position:relative;
+			
+			img {
+				display:none;
+			}
+			
+			&:before {
+				content:'';
+				position:absolute;
+				left:0;
+				top:0;
+				width:5px;
+				height:100%;
+				// background:$colorGreen;
+				z-index:2;
+			}
+		}
+		
+		.txt-content {
+			padding:30px;
+		}
+		
+		@include max-screen($lg) {
+			.img-content {
+				img {
+					display:block;
+				}
+			}
+		}
+	}
+	
+	&:before {
+		content:'';
+		position:absolute;
+		left:0;
+		top:0;
+		width:5px;
+		height:100%;
+		// background:$colorGreen;
+		z-index:2;
+	}
+	
+	&.grey2 {
+		background:$colorLightGrey2;
+	}
+	
+	&.grey3 {
+		background:$colorLightGrey3;
+	}
+
+	&.grey7 {
+		background:$colorLightGrey7;
+	}
+
+	&.white {
+		background:$colorWhite;
+	}
+	
+	&.brightRed {
+		background:$colorBrightRed1;
+		color:$colorWhite;
+		
+		h3 {
+			color:$colorWhite;
+		}
+		
+		&:before {
+			// background:$colorDarkGreen;
+		}
+
+		p {
+			&:after {
+					font-family: FontAwesome;
+					content: '\f0da';
+					position: absolute;
+				    right: 15px;
+				    bottom: 45%;
+				}
+		}
+		
+		a {
+			color:$colorWhite;
+			position:relative;
+			display:inline-block;
+			border-bottom:dotted 1px $colorWhite;
+		}
+		
+		&.with-img {
+			padding:0;
+			
+			.img-content {
+				&:before {
+					// background:$colorDarkGreen;
+				}
+			}
+		}
+	}
+	
+	&.darkgrey {
+		background:$colorDarkGrey;
+		color:$colorWhite;
+		
+		h3 {
+			color:$colorWhite;
+		}
+	}
+	
+	@include max-screen($lg) {
+		.txt-content {
+			min-height:auto;
+		}
+	}
+	
+	@include max-screen($xmd) {
+		padding:25px;
+		
+		&.with-img {
+			.txt-content {
+				padding:25px;
+			}
+		}
+	}
+	
+}
+
+.feature-slide-box {
+	position:relative;
+	// padding:30px;
+	margin-bottom:40px;
 	.slide-over-right {
+		padding:30px !important;
+		background: $colorBrightRed2;
+		color: $colorWhite;
+		h3 {
+			color: $colorWhite;
+		}
 		p {
 
 			&:before {
@@ -4749,7 +4912,16 @@ footer {
 		}
 	}
 	.slide-over-left {
-		
+		padding:30px !important;
+		background: $colorLightGrey7;
+			p {
+
+			&:after {
+				content: '\f0da';
+				font-family: $font-icon;
+				color: $colorDarkBlue;
+			}
+		}
 	}
 	.txt-content {
 		min-height:215px;
