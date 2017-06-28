@@ -179,6 +179,9 @@ hr {
 	margin-bottom: 0;
 }
 
+/* Font Weights */
+.f500 {font-weight: 500;}
+
 /* Display settings */
 .disp-ib { display: inline-block; }
 .disp-il { display: inline; }
@@ -4736,7 +4739,18 @@ footer {
 	position:relative;
 	padding:30px;
 	margin-bottom:40px;
-	
+	.slide-over-right {
+		p {
+
+			&:before {
+				content: '\f0d9';
+				font-family: $font-icon;
+			}
+		}
+	}
+	.slide-over-left {
+		
+	}
 	.txt-content {
 		min-height:215px;
 	}

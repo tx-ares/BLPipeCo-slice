@@ -138,6 +138,10 @@ hr {
 .no-margin-bot {
   margin-bottom: 0; }
 
+/* Font Weights */
+.f500 {
+  font-weight: 500; }
+
 /* Display settings */
 .disp-ib {
   display: inline-block; }
@@ -3244,6 +3248,9 @@ footer {
   position: relative;
   padding: 30px;
   margin-bottom: 40px; }
+  .feature-box .slide-over-right p:before {
+    content: '\f0d9';
+    font-family: "FontAwesome"; }
   .feature-box .txt-content {
     min-height: 215px; }
   .feature-box h3 {
