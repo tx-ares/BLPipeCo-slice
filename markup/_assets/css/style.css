@@ -581,7 +581,7 @@ figure {
       padding: 0 20px; } }
 
 .no-padding {
-  padding: 0; }
+  padding: 0 !important; }
 
 .is-table-row {
   display: table; }
@@ -2532,6 +2532,28 @@ footer {
     display: block;
     font-size: .9rem;
     text-transform: uppercase; }
+  .latest-articles .txt-subcontent {
+    padding: 5px 0;
+    text-align: right;
+    background-color: #00263c; }
+    .latest-articles .txt-subcontent a {
+      color: #fff;
+      line-height: 3;
+      font-size: .9rem;
+      margin-right: 70px; }
+      @media only screen and (max-width: 1280px) {
+        .latest-articles .txt-subcontent a {
+          margin-right: 55px; } }
+      .latest-articles .txt-subcontent a:after {
+        content: '\f0da';
+        font-family: FontAwesome;
+        position: absolute;
+        right: 0;
+        bottom: 0px;
+        height: 52.9px;
+        width: 52px;
+        padding: 6px 22px;
+        background: #d0202f; }
 
 .related-contents {
   padding: 40px 0;
@@ -3330,8 +3352,7 @@ footer {
         padding: 25px; } }
 
 .feature-slide-box {
-  position: relative;
-  margin-bottom: 40px; }
+  position: relative; }
   .feature-slide-box .slide-over-right {
     padding: 30px !important;
     background: #d0112b;
