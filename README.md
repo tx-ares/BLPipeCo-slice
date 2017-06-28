@@ -1,22 +1,28 @@
 # BLPipeCo-slice
 Static HTML Slice w/ Node Simple-Autoreload-Server
 
-B&L Piping Co.
+B&L Pipeco.
+
 
 Server instructions -  Node.js  w/ simple-autoreload-server
 
-Install simple-autoreload-server 
+	Make sure NPM and Node are installed via command line.
 
-npm install simple-autoreload-server
+Install Packages and Dependencies -
+
+	 npm install
 
 Launch Server with command line -
 
-     autoreload-server -w "**/**.{html,css,js}" ./markup 3000
+     npm start
 
 Checkout https://www.npmjs.com/package/simple-autoreload-server for more details on server options
 
 
 Additional Info -
 
-	* App use Koala Complier
+	* App currently uses Koala Complier for build/compile  
+	Download this app at koala-app.com 
+
+		Set folder paths to css and js separately
 
