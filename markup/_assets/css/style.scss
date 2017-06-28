@@ -4939,10 +4939,19 @@ footer {
 	position:relative;
 	// padding:30px;
 	// margin-bottom:40px;
+	@include transition(all .3s);
 	.slide-over-right {
+		display:inline-block;
+		width:49.9%;
 		padding:30px !important;
 		background: $colorBrightRed2;
 		color: $colorWhite;
+		&.active {
+			width: 90%;
+		}
+		&.compressed {
+			width: 10%;
+		}
 		h3 {
 			color: $colorWhite;
 		}
@@ -4955,8 +4964,16 @@ footer {
 		}
 	}
 	.slide-over-left {
+		display:inline-block;
+		width:49.9%;
 		padding:30px !important;
 		background: $colorLightGrey7;
+		&.active {
+			width: 90%;
+		}
+		&.compressed {
+			width: 10%;
+		}
 			p {
 
 			&:after {
