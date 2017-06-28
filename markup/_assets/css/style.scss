@@ -41,12 +41,15 @@ $colorOrange: #ff7441;
 $colorLightOrange: #ff6927;
 $colorRedOrange: #d55441;
 
-$colorDarkBlue: #00263c; //Main Color
-$colorSlateBlue: #8a9ca5; //Accents
+
+
+$colorDarkBlue: #00263b; //Main Color
+$colorDarkBlue2: #011e2e; //Accents, Footer
+$colorSlateBlue: #8a9ca5; //Accents 
 $colorLightGrey1: #edf1f1; //Side Tabs, Social Media Boxes
 $colorBrightRed1: #d0202f; //Logo, Minor Accents
 $colorBrightRed2: #d0112b; //Larger Divs, Main Color
-$colorLightGrey7: #E2EAED; //Menu Backgrounds
+$colorLightGrey7: #e2eaed; //Menu Backgrounds
 
 
 /* Font Family */
@@ -2055,7 +2058,7 @@ footer {
 	}
 	
 	.copyright {
-		background:$colorDarkBlue;
+		background:$colorDarkBlue2;
 		
 		.content {
 			padding:12px $padding-lg;
@@ -3608,6 +3611,12 @@ footer {
 		display: block;
 		font-size: .9rem;
 		text-transform: uppercase;
+	}
+	&.darkblue-theme {
+		background: $colorDarkBlue;
+		h2, p, span {
+			color: $colorWhite;
+		}
 	}
 	.txt-subcontent {
 		padding: 5px 0;
