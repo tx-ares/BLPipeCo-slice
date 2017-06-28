@@ -520,7 +520,6 @@ figure {
    ========================================================================== */
 /* Bootstrap Reset */
 .row {
-  margin: 0 -40px;
   /* Full height column */
   /* Half height column */ }
   .row.compressed {
@@ -2920,7 +2919,6 @@ footer {
       height: 100%; }
     .image-cta .img-content img {
       position: absolute;
-      margin: auto;
       display: block;
       left: 49.9%;
       right: 0;
@@ -3449,10 +3447,8 @@ footer {
     .feature-slide-box .txt-content {
       min-height: auto; } }
   @media only screen and (max-width: 768px) {
-    .feature-slide-box {
-      padding: 25px; }
-      .feature-slide-box.with-img .txt-content {
-        padding: 25px; } }
+    .feature-slide-box.with-img .txt-content {
+      padding: 25px; } }
 
 .photo-wrapper .title {
   font-size: 18px;

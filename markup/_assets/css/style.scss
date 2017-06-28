@@ -634,7 +634,7 @@ $padding-md: 40px;
 $padding-sm: 20px;
 
 .row {
-	margin: 0 -40px;
+	// margin: 0 -40px;
 	
 	&.compressed {
 		margin:0;
@@ -4191,7 +4191,7 @@ footer {
 		
 		img {
 			position: absolute;
-			margin: auto;
+			// margin: auto;
 			display: block;
 			left: 49.9%;
 			right: 0;
@@ -5098,7 +5098,7 @@ footer {
 	}
 	
 	@include max-screen($xmd) {
-		padding:25px;
+		// padding:25px;
 		
 		&.with-img {
 			.txt-content {
