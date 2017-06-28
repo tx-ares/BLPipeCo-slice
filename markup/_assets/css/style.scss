@@ -634,7 +634,7 @@ $padding-md: 40px;
 $padding-sm: 20px;
 
 .row {
-	// margin: 0 -40px;
+	margin: 0 -40px;
 	
 	&.compressed {
 		margin:0;
@@ -4147,7 +4147,7 @@ footer {
 }
 
 .image-cta {
-	margin-bottom:40px;
+	// margin-bottom:40px;
 	
 	a {
 		display:block;
