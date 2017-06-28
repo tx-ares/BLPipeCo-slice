@@ -247,32 +247,34 @@ function initClampText() {
 
 function initSlider() {
 	"use strict";
+	console.log("Slider init!")
 	
-	$('.slider').each(function() {
-    	var parentWidth = $(this).parent().find('.slider-width-hack').width();
+	// $('.slider').each(function() {
+ //    	var parentWidth = $(this).parent().find('.slider-width-hack').width();
 		
-		if(window.matchMedia('only screen and (max-width: 1024px)').matches) {
-			parentWidth = $('body').prop('clientWidth');
-		}
+	// 	if(window.matchMedia('only screen and (max-width: 1024px)').matches) {
+	// 		parentWidth = $('body').prop('clientWidth');
+	// 	}
 		
-		$(this)
-			.on('init', function() {
-				$(this).width(parentWidth);
-			})
-			.slick({
-				lazyLoad: 'ondemand',
-				autoplaySpeed: 1000,
-				pauseOnHover: false,
-				dots:true,
-				responsive: [{
-				  breakpoint: 1024,
-				  settings: {
-					adaptiveHeight: true
-				  }
-				}]
-			});	
-    });
+	// 	$(this)
+	// 		.on('init', function() {
+	// 			$(this).width(parentWidth);
+	// 		})
+	// 		.slick({
+	// 			lazyLoad: 'ondemand',
+	// 			autoplaySpeed: 1000,
+	// 			pauseOnHover: false,
+	// 			dots:true,
+	// 			responsive: [{
+	// 			  breakpoint: 1024,
+	// 			  settings: {
+	// 				adaptiveHeight: true
+	// 			  }
+	// 			}]
+	// 		});	
+ //    });
 	
+	$(".slider").slick();
 	
 	$(window).trigger('resize');
 	

@@ -24,5 +24,5 @@ Additional Info -
 	* App currently uses Koala Complier for build/compile  
 	Download this app at koala-app.com 
 
-		Set folder paths to css and js separately
+	Set folder paths to css and js separately using Koala
 

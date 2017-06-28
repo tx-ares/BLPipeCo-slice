@@ -3289,6 +3289,10 @@ footer {
     background: #e5e5e5; }
   .feature-box.grey3 {
     background: #dbd8cf; }
+  .feature-box.grey7 {
+    background: #E2EAED; }
+  .feature-box.white {
+    background: #fff; }
   .feature-box.brightRed {
     background: #d0202f;
     color: #fff; }
