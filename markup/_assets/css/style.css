@@ -131,6 +131,13 @@ hr {
 .text-right {
   text-align: right; }
 
+.big-text {
+  font-weight: 400;
+  font-size: 1.3rem; }
+
+.no-margin-bot {
+  margin-bottom: 0; }
+
 /* Display settings */
 .disp-ib {
   display: inline-block; }
