@@ -731,6 +731,10 @@ $padding-sm: 20px;
 	padding:0 !important;
 }
 
+.no-margin {
+	margin:0 !important;
+}
+
 .is-table-row {
 	display: table;
 	
@@ -3523,6 +3527,11 @@ footer {
 			padding: 0;
 			padding-left:40px;
 		}
+		// @include max-screen($sm){
+		// 	.row {
+		// 		margin:0;
+		// 	}
+		// }
 	}
 	
 	@include max-screen($lg) {

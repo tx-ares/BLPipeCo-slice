@@ -583,6 +583,9 @@ figure {
 .no-padding {
   padding: 0 !important; }
 
+.no-margin {
+  margin: 0 !important; }
+
 .is-table-row {
   display: table; }
   .is-table-row > [class*="col-"] {
