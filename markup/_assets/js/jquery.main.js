@@ -377,7 +377,7 @@ $(window).resize(function() {
     resizeId = setTimeout(doneResizing, 500);
 	
 	resizeSlider();
-	removeMatchHeight();
+	// removeMatchHeight();
 });
 
 $(window).load(function () {

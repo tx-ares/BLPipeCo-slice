@@ -1522,26 +1522,33 @@ $padding-sm: 20px;
 
 		}
 		li {
+			@include transition(all, .3s);
 			height: 40px;
 			width: 40px;
-			border-bottom: 2px solid $colorWhite;
 			text-align: center;
 			padding: 5px;
+			&:not(:last-child) {
+				border-bottom: 2px solid $colorWhite;
+			}
 			@include max-screen ($sm) {
 				bottom: 0;
 				width: 19.1%;
 				display: inline-block;
-				border-bottom: 0;	
+				border-bottom: 0 !important;	
 			}
-			&:hover {
-					background: $colorLightGrey3;
-				}
+			
 			a {
 				color: $colorDarkBlue;
 				font-size: 1.2rem;
 				@include max-screen ($sm) {
 					color: $colorWhite;	
 				}
+			}
+			&:hover {
+					background: $colorBrightRed1;
+			    >a {
+			    	color: $colorWhite;
+			    }
 			}
 		}
 	}
@@ -4958,7 +4965,7 @@ footer {
 	@include transition(all .3s);
 	.slide-over-right {
 		display:inline-block;
-		width:49.9%;
+		width:49.8%;
 		padding:30px !important;
 		background: $colorBrightRed2;
 		color: $colorWhite;
@@ -4981,7 +4988,7 @@ footer {
 	}
 	.slide-over-left {
 		display:inline-block;
-		width:49.9%;
+		width:49.8%;
 		padding:30px !important;
 		background: $colorLightGrey7;
 		&.active {
