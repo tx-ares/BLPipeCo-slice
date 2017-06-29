@@ -4962,6 +4962,7 @@ footer {
 	position:relative;
 	// padding:30px;
 	// margin-bottom:40px;
+	min-height: 300px;
 	@include transition(all .3s);
 	.slide-over-right {
 		display:inline-block;
@@ -4979,6 +4980,7 @@ footer {
 		.txt-content {
 			position: absolute;
 			left: 0;
+			padding-left:50px;
 		}
 		h3 {
 			color: $colorWhite;
@@ -4988,6 +4990,9 @@ footer {
 			&:before {
 				content: '\f0d9';
 				font-family: $font-icon;
+				position: absolute;
+				left:10px;
+				top:60%;
 			}
 		}
 	}
@@ -5006,19 +5011,23 @@ footer {
 		.txt-content {
 			position: absolute;
 			right: 0;
+			padding-right: 50px;
 		}
 		p {
 			&:after {
 				content: '\f0da';
 				font-family: $font-icon;
 				color: $colorDarkBlue;
+				position: absolute;
+				right: 10px;
+				top: 55%;
 			}
 		}
 	}
 	.txt-content {
-		// min-height:215px;
+		min-height:215px;
 		width: 240px;
-		padding: 20px;
+		
 	}
 	
 	h3 {
