@@ -1217,6 +1217,10 @@ html, body {
 body {
   color: #333; }
 
+body.homepage .banner img {
+  height: 100vh;
+  margin-top: -140px; }
+
 header {
   position: relative;
   z-index: 9999;
@@ -2473,9 +2477,6 @@ footer {
       margin: 0 7px; }
       .banner .social a:hover {
         color: #c2c2c2; }
-  .banner.homepage {
-    height: 100vh;
-    background: lime; }
 
 .main-content {
   min-height: 185px;

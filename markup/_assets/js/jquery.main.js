@@ -404,13 +404,26 @@ function initHideFooterIfHomepage() {
 		}
 }
 
+function initMakeHeaderOpaqueIfHomePage() {
+	console.log("initMakeHeaderOpaqueIfHomePage - Fired.")
+	if ($("body").hasClass('homepage') && $(this).scrollTop() == 0 ) {
+		console.log("Header condition passed!")
+		$("header").css("background", "rgba(0,38,60,0)");
+	}
+	else {
+		$("header").css("background", "rgba(0,38,60,1)");
+	}
+}
+
+// Contingencies on Scroll
 $(window).scroll(function(){ 
 	initHideFooterIfHomepage();
-	initPopUpIcons(); 
+	initPopUpIcons();
+	initMakeHeaderOpaqueIfHomePage(); 
 });
 
 
-// JavaScript Document
+// JavaScript Document - Initial Fire
 jQuery(document).ready(function() {
 	"use strict";
 	

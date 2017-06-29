@@ -1575,6 +1575,15 @@ body {
 	color:$colorDarkGrey;	
 }
 
+body.homepage {
+	.banner {
+		img {
+			height: 100vh;
+			margin-top: -140px;
+		}
+	}
+}
+
 header {
 	position:relative;
 	z-index:9999;
@@ -3518,10 +3527,6 @@ footer {
 		}
 	}
 
-	&.homepage {
-		height: 100vh;
-		background:lime;
-	}
 }
 
 .main-content {
