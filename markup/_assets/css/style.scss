@@ -1584,6 +1584,11 @@ body.homepage {
 			}
 		}
 	}
+	@include max-screen($smd){
+		.main-content {
+			padding-top: 0;
+		}
+	}
 }
 
 header {
@@ -4874,6 +4879,11 @@ footer {
 				}
 			}
 		}
+	}
+
+	&.fullpage-centered {
+		width: 60%;
+		margin: auto;
 	}
 	
 	&:before {

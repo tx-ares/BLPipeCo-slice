@@ -1221,6 +1221,9 @@ body {
   body.homepage .banner img {
     height: 100vh;
     margin-top: -140px; } }
+@media only screen and (max-width: 865px) {
+  body.homepage .main-content {
+    padding-top: 0; } }
 
 header {
   position: relative;
@@ -3322,6 +3325,9 @@ footer {
     @media only screen and (max-width: 1024px) {
       .feature-box.with-img .img-content img {
         display: block; } }
+  .feature-box.fullpage-centered {
+    width: 60%;
+    margin: auto; }
   .feature-box:before {
     content: '';
     position: absolute;
