@@ -420,9 +420,14 @@ function initSlidePanels() {
 	console.log("initSlidePanels Fired!")
 	$(".slide-over-left").on("click", function(e){
 		e.stopPropagation();
+		console.log("Left slide clicked!")
 		$(this).hasClass("compressed") ? $(this).toggleClass("compressed") : ""
+		$(this).hasClass("vertical-text") ? $(this).toggleClass("vertical-text") : ""
+
 		$(this).addClass("active");
 		$(".slide-over-right").addClass("compressed");
+		$("h3.text-flip").addClass("vertical-text");
+		initPanelSlider();
 	});
 
 	$(".slide-over-right").on("click", function(e){
@@ -444,7 +449,7 @@ function initPanelSlider(){
 			infinite: true,
 			slidesToShow: 3,
 			slidesToScroll: 3
-		});
+	});
 }
 
 

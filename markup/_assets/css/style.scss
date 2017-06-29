@@ -5043,6 +5043,7 @@ footer {
 			display: block;
 			width: 100%;
 		}
+
 		&.active {
 			width: 90.5%;
 			.panel-slider {
@@ -5050,7 +5051,7 @@ footer {
 				display: inline-block;
 			}
 			.txt-content {
-				display: none;
+				// display: none;
 			}
 		}
 		&.compressed {
@@ -5095,6 +5096,12 @@ footer {
 		text-transform:inherit;
 		font-weight:500;
 		@include font-size(24px);
+		@include transition( all .3s);
+		&.vertical-text {
+			position: absolute;
+			right:0;
+			@include transform(rotate(-90deg));
+		}
 	}
 	
 	p {
