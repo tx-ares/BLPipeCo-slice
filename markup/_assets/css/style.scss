@@ -4991,21 +4991,24 @@ footer {
 				margin: auto;
 				position: static;
 				padding:0;
+				width: 65%;
 			}
 		}
 		h3 {
 			color: $colorWhite;
 		}
-		p {
-
-			&:before {
-				content: '\f0d9';
-				font-family: $font-icon;
-				position: absolute;
-				left:10px;
-				top:60%;
+	
+		&:before {
+			content: '\f0d9';
+			font-family: $font-icon;
+			position: absolute;
+			left:10px;
+			top:50%;
+			@include max-screen($smd){
+				left: 50px;
 			}
 		}
+		
 	}
 	.slide-over-left {
 		min-height: 350px;
@@ -5036,18 +5039,22 @@ footer {
 				margin: auto;
 				position: static;
 				padding: 0;
+				width: 65%;
 			}
+
 		}
-		p {
-			&:after {
-				content: '\f0da';
-				font-family: $font-icon;
-				color: $colorDarkBlue;
-				position: absolute;
-				right: 10px;
-				top: 60%;
+
+		&:after {
+			content: '\f0da';
+			font-family: $font-icon;
+			color: $colorDarkBlue;
+			position: absolute;
+			right: 10px;
+			top: 50%;
+			@include max-screen($smd){
+				right: 50px;
 			}
-		}
+		}	
 	}
 	
 	h3 {
@@ -5074,7 +5081,7 @@ footer {
 	.txt-content {
 		text-align: center;
 		min-height:215px;
-		width: 400px;	
+		width: 350px;	
 	}
 	
 	&.with-img {
