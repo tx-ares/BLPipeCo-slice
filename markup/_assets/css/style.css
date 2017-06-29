@@ -3327,7 +3327,8 @@ footer {
         display: block; } }
   .feature-box.fullpage-centered {
     width: 60%;
-    margin: auto; }
+    margin: auto;
+    min-height: 215px; }
   .feature-box:before {
     content: '';
     position: absolute;
