@@ -3517,6 +3517,11 @@ footer {
 			}
 		}
 	}
+
+	&.homepage {
+		height: 100vh;
+		background:lime;
+	}
 }
 
 .main-content {

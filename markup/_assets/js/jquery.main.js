@@ -386,21 +386,29 @@ $(window).load(function () {
 });
 
 function initPopUpIcons() {
-	  if ($(this).scrollTop() == 0 && window.matchMedia('only screen and (max-width: 575px)').matches) {
-	    	$(".social-media-icons").addClass("active");
-	    }
-	    else {
-	    	$(".social-media-icons").removeClass('active');
-	    }
-	$(window).scroll(function(){
+
         if ($(this).scrollTop() == 0 && window.matchMedia('only screen and (max-width: 575px)').matches) {
 	    	$(".social-media-icons").addClass("active");
 	    	 }
 	    else {
 	    	$(".social-media-icons").removeClass('active');
 	    }
-	});
 }
+
+function initHideFooterIfHomepage() {
+		if ($(this).scrollTop() == 0 ) {
+			$("footer").css("bottom", -55);
+		}
+		else {
+			$("footer").css("bottom", 0);
+		}
+}
+
+$(window).scroll(function(){ 
+	initHideFooterIfHomepage();
+	initPopUpIcons(); 
+});
+
 
 // JavaScript Document
 jQuery(document).ready(function() {
@@ -412,6 +420,7 @@ jQuery(document).ready(function() {
 	initStickyHeader();
 	checkIfPageBottomEdge();
 	initToggleActiveClass();
+	initHideFooterIfHomepage();
 	initPopUpIcons();
 	initLazyLoadImage();
 	initAccordion();
