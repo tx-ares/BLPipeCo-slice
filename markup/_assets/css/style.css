@@ -3383,18 +3383,24 @@ footer {
   -o-transition: all 0.3s;
   -webkit-transition: all 0.3s;
   transition: all 0.3s; }
-  .feature-slide-box .slide-over-right {
+  .feature-slide-box .panel {
     min-height: 360px;
     display: inline-block;
+    position: relative;
     width: 49.8%;
-    padding: 30px !important;
+    padding: 25px !important;
+    -moz-transition: all 0.3s;
+    -o-transition: all 0.3s;
+    -webkit-transition: all 0.3s;
+    transition: all 0.3s; }
+  .feature-slide-box .slide-over-right {
     background: #d0112b;
     color: #fff;
     position: relative; }
     .feature-slide-box .slide-over-right.active {
-      width: 90%; }
+      width: 94.5%; }
     .feature-slide-box .slide-over-right.compressed {
-      width: 10%; }
+      width: 4%; }
     .feature-slide-box .slide-over-right .txt-content {
       position: absolute;
       left: 0;
@@ -3420,20 +3426,20 @@ footer {
         .feature-slide-box .slide-over-right:before {
           left: 50px; } }
   .feature-slide-box .slide-over-left {
-    min-height: 360px;
-    display: inline-block;
-    position: relative;
-    width: 49.8%;
-    padding: 30px !important;
     background: #e2eaed; }
     @media only screen and (max-width: 865px) {
       .feature-slide-box .slide-over-left {
         display: block;
         width: 100%; } }
     .feature-slide-box .slide-over-left.active {
-      width: 90%; }
+      width: 94.5%; }
+      .feature-slide-box .slide-over-left.active .panel-slider {
+        width: 100%;
+        display: inline-block; }
+      .feature-slide-box .slide-over-left.active .txt-content {
+        display: none; }
     .feature-slide-box .slide-over-left.compressed {
-      width: 10%; }
+      width: 4.5%; }
     .feature-slide-box .slide-over-left .txt-content {
       position: absolute;
       right: 0;
@@ -3457,6 +3463,8 @@ footer {
       @media only screen and (max-width: 865px) {
         .feature-slide-box .slide-over-left:after {
           right: 50px; } }
+    .feature-slide-box .slide-over-left .slider {
+      width: 60%; }
   .feature-slide-box h3 {
     color: #00263b;
     text-transform: inherit;
@@ -3473,7 +3481,8 @@ footer {
   .feature-slide-box .txt-content {
     text-align: center;
     min-height: 215px;
-    width: 350px; }
+    width: 350px;
+    display: inline-block; }
   .feature-slide-box.with-img {
     padding: 0; }
     .feature-slide-box.with-img:before {

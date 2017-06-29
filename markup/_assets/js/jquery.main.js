@@ -413,18 +413,63 @@ function initMakeHeaderOpaqueIfHomePage() {
 	}
 }
 
+function resetPanels() {
+	$(".panel").each(function(){
+		$(this).removeClass("active compressed");
+	})
+	$(".panel-slider").each(function(){
+		$(this).hide();
+	})
+}
+
+function initSlidePanels() {
+	console.log("initSlidePanels Fired!")
+	$(".slide-over-left").on("click", function(){
+		console.log("Left panel clicked!")
+		if($(this).hasClass("compressed")) {$(this).toggleClass("compressed")}
+		$(this).addClass("active");
+		$(".slide-over-right").addClass("compressed");
+	});
+
+	$(".slide-over-right").on("click", function(){
+		console.log("Right panel clicked!")
+		if($(this).hasClass("compressed")) {$(this).toggleClass("compressed")}
+		$(this).addClass("active");
+		$(".slide-over-left").addClass("compressed");
+	});
+
+	$(window).scroll(function(){
+		resetPanels();
+	});
+
+}
+
+function initPanelSlider(){
+	console.log("initPanelCarousel")
+	$(".panel-slider")
+		.slick({
+			infinite: true,
+			slidesToShow: 3,
+			slidesToScroll: 3
+		});
+}
+
+
+
+
 // Contingencies 
 	//on Scroll
 $(window).scroll(function(){ 
 	initHideFooterIfHomepage();
 	initPopUpIcons();
-	initMakeHeaderOpaqueIfHomePage(); 
+	initMakeHeaderOpaqueIfHomePage();  
 });
 
 	//on Resize
 $(window).resize(function(){
-	initMakeHeaderOpaqueIfHomePage(); 
-})
+	initMakeHeaderOpaqueIfHomePage();
+	resetPanels(); 
+});
 //
 
 // JavaScript Document - Initial Fire
@@ -447,6 +492,8 @@ jQuery(document).ready(function() {
 	initClampText();
 	initAccordion();
 
+	initPanelSlider();
+	initSlidePanels();
 	initHideFooterIfHomepage();
 	initMakeHeaderOpaqueIfHomePage();
  	initPopUpIcons();

@@ -4987,20 +4987,24 @@ footer {
 	// margin-bottom:40px;
 	// min-height: 300px;
 	@include transition(all .3s);
-	.slide-over-right {
+	.panel {
 		min-height: 360px;
 		display:inline-block;
+		position: relative;
 		width:49.8%;
-		padding:30px !important;
+		padding:25px !important;
+		@include transition(all .3s);
+	}
+	.slide-over-right {
 		background: $colorBrightRed2;
 		color: $colorWhite;
 		position: relative;
 		
 		&.active {
-			width: 90%;
+			width: 94.5%;
 		}
 		&.compressed {
-			width: 10%;
+			width: 4%;
 		}
 		.txt-content {
 			position: absolute;
@@ -5033,22 +5037,24 @@ footer {
 		}
 		
 	}
-	.slide-over-left {
-		min-height: 360px;
-		display:inline-block;
-		position: relative;
-		width:49.8%;
-		padding:30px !important;
+	.slide-over-left {	
 		background: $colorLightGrey7;
 		@include max-screen($smd) {
 			display: block;
 			width: 100%;
 		}
 		&.active {
-			width: 90%;
+			width: 94.5%;
+			.panel-slider {
+				width: 100%;
+				display: inline-block;
+			}
+			.txt-content {
+				display: none;
+			}
 		}
 		&.compressed {
-			width: 10%;
+			width: 4.5%;
 		}
 		.txt-content {
 			position: absolute;
@@ -5077,6 +5083,10 @@ footer {
 			@include max-screen($smd){
 				right: 50px;
 			}
+		}
+
+		.slider {
+			width: 60%;
 		}	
 	}
 	
@@ -5105,6 +5115,7 @@ footer {
 		text-align: center;
 		min-height:215px;
 		width: 350px;	
+		display: inline-block;
 	}
 	
 	&.with-img {
