@@ -4962,15 +4962,17 @@ footer {
 	position:relative;
 	// padding:30px;
 	// margin-bottom:40px;
-	min-height: 300px;
+	// min-height: 300px;
 	@include transition(all .3s);
 	.slide-over-right {
+		min-height: 350px;
 		display:inline-block;
 		width:49.8%;
 		padding:30px !important;
 		background: $colorBrightRed2;
 		color: $colorWhite;
 		position: relative;
+		
 		&.active {
 			width: 90%;
 		}
@@ -4981,6 +4983,15 @@ footer {
 			position: absolute;
 			left: 0;
 			padding-left:50px;
+		}
+		@include max-screen($smd) {
+			display: block;
+			width: 100%;
+			.txt-content {
+				margin: auto;
+				position: static;
+				padding:0;
+			}
 		}
 		h3 {
 			color: $colorWhite;
@@ -4997,11 +5008,16 @@ footer {
 		}
 	}
 	.slide-over-left {
+		min-height: 350px;
 		display:inline-block;
 		position: relative;
 		width:49.8%;
 		padding:30px !important;
 		background: $colorLightGrey7;
+		@include max-screen($smd) {
+			display: block;
+			width: 100%;
+		}
 		&.active {
 			width: 90%;
 		}
@@ -5013,6 +5029,15 @@ footer {
 			right: 0;
 			padding-right: 50px;
 		}
+		@include max-screen($smd) {
+			display: block;
+			width: 100%;
+			.txt-content {
+				margin: auto;
+				position: static;
+				padding: 0;
+			}
+		}
 		p {
 			&:after {
 				content: '\f0da';
@@ -5020,20 +5045,15 @@ footer {
 				color: $colorDarkBlue;
 				position: absolute;
 				right: 10px;
-				top: 55%;
+				top: 60%;
 			}
 		}
-	}
-	.txt-content {
-		min-height:215px;
-		width: 240px;
-		
 	}
 	
 	h3 {
 		color:$colorDarkBlue;
 		text-transform:inherit;
-		font-weight:400;
+		font-weight:500;
 		@include font-size(24px);
 	}
 	
@@ -5049,6 +5069,12 @@ footer {
 			height: 110px;
 			width: 170px;
 		} 
+	}
+
+	.txt-content {
+		text-align: center;
+		min-height:215px;
+		width: 400px;	
 	}
 	
 	&.with-img {
