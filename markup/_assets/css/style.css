@@ -1217,9 +1217,10 @@ html, body {
 body {
   color: #333; }
 
-body.homepage .banner img {
-  height: 100vh;
-  margin-top: -140px; }
+@media only screen and (min-width: 865px) {
+  body.homepage .banner img {
+    height: 100vh;
+    margin-top: -140px; } }
 
 header {
   position: relative;
@@ -3376,7 +3377,7 @@ footer {
   -webkit-transition: all 0.3s;
   transition: all 0.3s; }
   .feature-slide-box .slide-over-right {
-    min-height: 350px;
+    min-height: 360px;
     display: inline-block;
     width: 49.8%;
     padding: 30px !important;
@@ -3412,7 +3413,7 @@ footer {
         .feature-slide-box .slide-over-right:before {
           left: 50px; } }
   .feature-slide-box .slide-over-left {
-    min-height: 350px;
+    min-height: 360px;
     display: inline-block;
     position: relative;
     width: 49.8%;

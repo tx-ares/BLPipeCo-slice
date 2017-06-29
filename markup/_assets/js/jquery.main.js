@@ -405,9 +405,7 @@ function initHideFooterIfHomepage() {
 }
 
 function initMakeHeaderOpaqueIfHomePage() {
-	console.log("initMakeHeaderOpaqueIfHomePage - Fired.")
-	if ($("body").hasClass('homepage') && $(this).scrollTop() == 0 ) {
-		console.log("Header condition passed!")
+	if ($("body").hasClass('homepage') && $(this).scrollTop() == 0 && !window.matchMedia('only screen and (max-width: 1125px)').matches) {
 		$("header").css("background", "rgba(0,38,60,0)");
 	}
 	else {
@@ -415,13 +413,19 @@ function initMakeHeaderOpaqueIfHomePage() {
 	}
 }
 
-// Contingencies on Scroll
+// Contingencies 
+	//on Scroll
 $(window).scroll(function(){ 
 	initHideFooterIfHomepage();
 	initPopUpIcons();
 	initMakeHeaderOpaqueIfHomePage(); 
 });
 
+	//on Resize
+$(window).resize(function(){
+	initMakeHeaderOpaqueIfHomePage(); 
+})
+//
 
 // JavaScript Document - Initial Fire
 jQuery(document).ready(function() {
@@ -433,8 +437,6 @@ jQuery(document).ready(function() {
 	initStickyHeader();
 	checkIfPageBottomEdge();
 	initToggleActiveClass();
-	initHideFooterIfHomepage();
-	initPopUpIcons();
 	initLazyLoadImage();
 	initAccordion();
 	initMatchHeight();
@@ -444,6 +446,11 @@ jQuery(document).ready(function() {
 	initSlider();
 	initClampText();
 	initAccordion();
+
+	initHideFooterIfHomepage();
+	initMakeHeaderOpaqueIfHomePage();
+ 	initPopUpIcons();
+
 	RESPONSIVEUI.responsiveTabs();
 });
 
