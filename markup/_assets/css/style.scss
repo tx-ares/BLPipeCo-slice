@@ -4969,11 +4969,16 @@ footer {
 		padding:30px !important;
 		background: $colorBrightRed2;
 		color: $colorWhite;
+		position: relative;
 		&.active {
 			width: 90%;
 		}
 		&.compressed {
 			width: 10%;
+		}
+		.txt-content {
+			position: absolute;
+			left: 0;
 		}
 		h3 {
 			color: $colorWhite;
@@ -4988,6 +4993,7 @@ footer {
 	}
 	.slide-over-left {
 		display:inline-block;
+		position: relative;
 		width:49.8%;
 		padding:30px !important;
 		background: $colorLightGrey7;
@@ -4997,8 +5003,11 @@ footer {
 		&.compressed {
 			width: 10%;
 		}
-			p {
-
+		.txt-content {
+			position: absolute;
+			right: 0;
+		}
+		p {
 			&:after {
 				content: '\f0da';
 				font-family: $font-icon;
@@ -5007,8 +5016,9 @@ footer {
 		}
 	}
 	.txt-content {
-		min-height:215px;
-		margin: 10%;
+		// min-height:215px;
+		width: 240px;
+		padding: 20px;
 	}
 	
 	h3 {
@@ -5024,7 +5034,13 @@ footer {
 		}
 	}
 	
-	img { width:100%; }
+	img { 
+		width:100%;
+		&.icon {
+			height: 110px;
+			width: 170px;
+		} 
+	}
 	
 	&.with-img {
 		padding:0;
