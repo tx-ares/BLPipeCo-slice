@@ -2664,7 +2664,6 @@ footer {
 
 .send-request {
   position: relative;
-  margin-bottom: 40px;
   z-index: 2;
   background-color: #8a9ca5;
   -moz-transition: all 0.3s;
@@ -2792,23 +2791,19 @@ footer {
   position: relative;
   margin-bottom: 40px; }
   .side-nav ul li {
-    padding: 20px 0;
-    border-bottom: solid 1px #dbd8cf; }
+    background: #edf1f1;
+    margin-bottom: 0;
+    padding: 10px 20px; }
+    .side-nav ul li:nth-child(n-3) {
+      border-bottom: 1px solid #fff; }
+    .side-nav ul li:after {
+      content: '\f0da';
+      font-family: FontAwesome;
+      float: right; }
+    .side-nav ul li:hover {
+      background: #e5e5e5; }
     .side-nav ul li a {
-      display: inline-block;
-      padding-left: 35px;
-      padding-right: 20px;
-      position: relative;
-      font-size: 17px;
-      font-size: 1.0625rem;
-      font-weight: 500; }
-      .side-nav ul li a:hover {
-        color: #c2c2c2; }
-    .side-nav ul li.active a {
-      color: #00492c;
-      font-weight: 700; }
-    .side-nav ul li:last-child {
-      border-bottom: none; }
+      color: #00263b; }
   @media only screen and (max-width: 1280px) {
     .side-nav ul li {
       padding: 15px 0; }
