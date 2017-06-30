@@ -744,6 +744,13 @@ $padding-sm: 20px;
 	}
 }
 
+.row-no-padding {
+  [class*="col-"] {
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+  }
+}
+
 /*  Utilities Sizes (Height and Width) */
 .fullpage {
 	height:100vh;
@@ -3687,6 +3694,7 @@ footer {
 		background-color: $colorDarkBlue;
 		position: absolute;
 		bottom:	0;
+		left: 0;
 		width: 100%;
 		a {
 			color: $colorWhite;
