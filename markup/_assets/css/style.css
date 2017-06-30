@@ -118,6 +118,12 @@ hr {
   border-top: 3px solid #e5e5e5;
   margin: 2.4em 0; }
 
+.grey4 {
+  color: #878686; }
+
+.slateBlue {
+  color: #8a9ca5; }
+
 /* Text settings */
 .text-upcase {
   text-transform: uppercase !important; }
@@ -140,7 +146,7 @@ hr {
 
 /* Font Weights */
 .f500 {
-  font-weight: 500; }
+  font-weight: 500 !important; }
 
 /* Display settings */
 .disp-ib {
@@ -1656,7 +1662,7 @@ footer {
   footer .signup {
     line-height: 120%; }
     footer .signup .content a {
-      font-weight: 700;
+      font-weight: 500;
       text-transform: uppercase;
       font-size: 14px;
       font-size: 0.875rem; }
@@ -2434,7 +2440,7 @@ footer {
       font-size: 18px;
       font-size: 1.125rem; }
   .banner .bg-content img {
-    opacity: 0;
+    opacity: 1;
     width: 100%;
     height: auto; }
   @media only screen and (max-width: 1024px) {
@@ -2680,6 +2686,9 @@ footer {
   -o-transition: all 0.3s;
   -webkit-transition: all 0.3s;
   transition: all 0.3s; }
+  .send-request .call-us {
+    text-align: left;
+    padding-left: 30px; }
   .send-request .sub-text {
     color: #fff; }
     @media only screen and (max-width: 768px) {
@@ -2689,7 +2698,7 @@ footer {
     text-align: center;
     margin: 0;
     position: relative;
-    height: 180px; }
+    height: 210px; }
     .send-request .row > [class*="col-"]:nth-child(2) {
       border-left: solid 2px #dbd8cf;
       border-right: solid 2px #fff; }
@@ -2705,7 +2714,11 @@ footer {
       position: static;
       padding: 0; }
     .send-request .row h3 {
-      color: #00263b; }
+      color: #00263b;
+      font-size: 30px;
+      font-size: 1.875rem;
+      letter-spacing: 2px;
+      font-weight: 500; }
   .send-request .popdown-phonenum {
     background-color: #00263b;
     text-align: center;
@@ -2818,7 +2831,7 @@ footer {
   .side-nav ul li {
     background: #edf1f1;
     margin-bottom: 0;
-    padding: 10px 20px; }
+    padding: 20px 30px; }
     .side-nav ul li:nth-child(n-3) {
       border-bottom: 1px solid #fff; }
     .side-nav ul li:after {
@@ -2828,7 +2841,9 @@ footer {
     .side-nav ul li:hover {
       background: #e5e5e5; }
     .side-nav ul li a {
-      color: #00263b; }
+      color: #00263b;
+      font-size: 1.175rem;
+      font-weight: 500; }
   @media only screen and (max-width: 1280px) {
     .side-nav ul li a {
       font-size: 16px;
@@ -3023,10 +3038,10 @@ footer {
     background: rgba(0, 38, 59, 0.5);
     padding: 40px; }
     .image-cta .txt-content h3 {
-      text-transform: none;
-      font-weight: 400;
-      font-size: 30px;
-      font-size: 1.875rem;
+      text-transform: uppercase;
+      font-weight: 500;
+      font-size: 24px;
+      font-size: 1.5rem;
       margin-bottom: 15px;
       color: #fff; }
     .image-cta .txt-content p {
