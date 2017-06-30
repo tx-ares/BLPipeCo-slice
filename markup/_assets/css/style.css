@@ -2779,10 +2779,6 @@ footer {
         transition: all 0.3s; }
         .send-request .more-phone .more-phone-wrap ul li a.num:hover {
           color: #c2c2c2; }
-    @media only screen and (max-width: 1280px) {
-      .send-request .more-phone .more-phone-wrap {
-        padding-left: 30px;
-        padding-right: 30px; } }
     .send-request .more-phone span {
       display: block;
       font-size: 18px;
@@ -2828,12 +2824,10 @@ footer {
     .side-nav ul li a {
       color: #00263b; }
   @media only screen and (max-width: 1280px) {
-    .side-nav ul li {
-      padding: 15px 0; }
-      .side-nav ul li a {
-        font-size: 16px;
-        font-size: 1rem;
-        padding-right: 10px; } }
+    .side-nav ul li a {
+      font-size: 16px;
+      font-size: 1rem;
+      padding-right: 10px; } }
   @media only screen and (max-width: 768px) {
     .side-nav {
       display: none; } }
