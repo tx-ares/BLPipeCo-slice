@@ -2529,7 +2529,7 @@ footer {
     .main-content .main > .container-fluid {
       padding-right: 20px; }
     .main-content .aside > .container-fluid,
-    .main-content .sendonary > .container-fluid {
+    .main-content .secondary > .container-fluid {
       padding-right: 40px;
       padding-left: 40px; } }
   @media only screen and (max-width: 575px) {

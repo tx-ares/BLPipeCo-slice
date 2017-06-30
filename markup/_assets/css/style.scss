@@ -3615,6 +3615,7 @@ footer {
 	}
 	
 	@include max-screen($xmd) {
+
 		padding-top:40px;
 	}
 
@@ -3626,8 +3627,9 @@ footer {
 		}
 		
 		.aside,
-		.sendonary {
-			>.container-fluid {padding-right:40px;
+		.secondary {
+			>.container-fluid {
+				padding-right:40px;
 				padding-left:40px;
 				
 			}
