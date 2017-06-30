@@ -1,5 +1,6 @@
 ﻿<!doctype html>
 <html>
+
 <head>
     <!-- set the encoding of your site -->
     <meta charset="utf-8">
@@ -8,54 +9,67 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>B&L Pipe Company</title>
     <style>
-        html, body {opacity:0; overflow:hidden;}
+    html,
+    body {
+        opacity: 0;
+        overflow: hidden;
+    }
     </style>
-    
     <!--[if lt IE 9]>
         <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.6.2/html5shiv.js"></script>
         <script src="//s3.amazonaws.com/nwapi/nwmatcher/nwmatcher-1.2.5-min.js"></script>
         <script src="//html5base.googlecode.com/svn-history/r38/trunk/js/selectivizr-1.0.3b.js"></script>
         <script src="//cdnjs.cloudflare.com/ajax/libs/respond.js/1.1.0/respond.min.js"></script>
     <![endif]-->
-    
     <script type="text/javascript">
-        if (navigator.userAgent.match(/IEMobile\/10\.0/)) {
-            var msViewportStyle = document.createElement('style')
-            msViewportStyle.appendChild(
-                document.createTextNode(
-                    '@-ms-viewport{width:auto!important}'
-                )
+    if (navigator.userAgent.match(/IEMobile\/10\.0/)) {
+        var msViewportStyle = document.createElement('style')
+        msViewportStyle.appendChild(
+            document.createTextNode(
+                '@-ms-viewport{width:auto!important}'
             )
-            document.querySelector('head').appendChild(msViewportStyle)
-        }
+        )
+        document.querySelector('head').appendChild(msViewportStyle)
+    }
     </script>
-	
     <!-- Pagespeed compliant - Avoid render blocking load of CSS -->
     <script type="text/javascript">
-        function loadStyleSheet(a, b, c) { var d = document.getElementsByTagName("head")[0], e = document.createElement("link"); e.setAttribute("href", a), e.setAttribute("rel", "stylesheet"), e.setAttribute("type", "text/css"); var f, g; "sheet" in e ? (f = "sheet", g = "cssRules") : (f = "styleSheet", g = "rules"); var h = setInterval(function () { try { e[f] && e[f][g].length && (clearInterval(h), clearTimeout(i), b.call(c || window, !0, e)) } catch (a) { } finally { } }, 10), i = setTimeout(function () { clearInterval(h), clearTimeout(i), d.removeChild(e), b.call(c || window, !1, e) }, 15e3); return d.appendChild(e), e }
+    function loadStyleSheet(a, b, c) {
+        var d = document.getElementsByTagName("head")[0],
+            e = document.createElement("link");
+        e.setAttribute("href", a), e.setAttribute("rel", "stylesheet"), e.setAttribute("type", "text/css");
+        var f, g;
+        "sheet" in e ? (f = "sheet", g = "cssRules") : (f = "styleSheet", g = "rules");
+        var h = setInterval(function() {
+                try {
+                    e[f] && e[f][g].length && (clearInterval(h), clearTimeout(i), b.call(c || window, !0, e))
+                } catch (a) {} finally {}
+            }, 10),
+            i = setTimeout(function() {
+                clearInterval(h), clearTimeout(i), d.removeChild(e), b.call(c || window, !1, e)
+            }, 15e3);
+        return d.appendChild(e), e
+    }
 
-        loadStyleSheet('_assets/css/all.min.css', function (success, link) {
-            if (success) {
-                document.body.className += " cssloaded";
-            }
-        });
-
+    loadStyleSheet('_assets/css/all.min.css', function(success, link) {
+        if (success) {
+            document.body.className += " cssloaded";
+        }
+    });
     </script>
-    
     <!-- In case javascript is disabled -->
     <noscript>
         <link href="_assets/css/all.min.css" rel="stylesheet">
     </noscript>
-    
-    
 </head>
+
 <body class="inner header-sticky footer-sticky">
-    <noscript><div>Javascript must be enabled for the correct page display</div></noscript>
+    <noscript>
+        <div>Javascript must be enabled for the correct page display</div>
+    </noscript>
     <a class="accessibility" href="#main-content" accesskey="S">Skip to Content</a>
-	
     <div id="wrapper">
-    
-    	<!-- ******************************************************* -->
+        <!-- ******************************************************* -->
         <!-- Header
         <!-- ******************************************************* -->
         <header>
@@ -73,16 +87,16 @@
                         </div>
                     </div>
                     <div class="col-xs-8 no-padding">
-                       <ul class="top-nav">
+                        <ul class="top-nav">
                             <li>
                                 <a href="#">Casing &amp; Tubing Products</a>
                                 <section class="feature" eq-height>
                                     <a href="#">
-                                            <img src="http://placehold.it/100x100/d55441/ffffff">
-                                        </a>
+                                        <img src="http://placehold.it/100x100/d55441/ffffff">
+                                    </a>
                                     <div class="content">
                                         <h3>Header for Special Feature</h3>
-                                        <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy.  </p>
+                                        <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy. </p>
                                     </div>
                                 </section>
                                 <ul eq-height>
@@ -93,19 +107,8 @@
                                             <li><a href="#">Product</a></li>
                                             <li><a href="#">Product</a></li>
                                             <li><a href="#">Product</a></li>
-                                            
                                         </ul>
                                     </li>
-                                     <li><a href="#">Product Category</a>
-                                        <ul>
-                                            <li><a href="#">Product</a></li>
-                                            <li><a href="#">Product</a></li>
-                                            <li><a href="#">Product</a></li>
-                                            <li><a href="#">Product</a></li>
-                                            <li><a href="#">Product</a></li>
-                                            
-                                        </ul>
-                                    </li> 
                                     <li><a href="#">Product Category</a>
                                         <ul>
                                             <li><a href="#">Product</a></li>
@@ -113,21 +116,28 @@
                                             <li><a href="#">Product</a></li>
                                             <li><a href="#">Product</a></li>
                                             <li><a href="#">Product</a></li>
-                                            
+                                        </ul>
+                                    </li>
+                                    <li><a href="#">Product Category</a>
+                                        <ul>
+                                            <li><a href="#">Product</a></li>
+                                            <li><a href="#">Product</a></li>
+                                            <li><a href="#">Product</a></li>
+                                            <li><a href="#">Product</a></li>
+                                            <li><a href="#">Product</a></li>
                                         </ul>
                                     </li>
                                     <li><a href="#">Product Info</a></li>
-
                                 </ul>
                             </li>
                             <li><a href="#">Upstream Products</a>
-                            <section class="feature" eq-height>
+                                <section class="feature" eq-height>
                                     <a href="#">
-                                            <img src="http://placehold.it/100x100/d55441/ffffff">
-                                        </a>
+                                        <img src="http://placehold.it/100x100/d55441/ffffff">
+                                    </a>
                                     <div class="content">
                                         <h3>Header for Special Feature</h3>
-                                        <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy.  </p>
+                                        <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy. </p>
                                     </div>
                                 </section>
                                 <ul eq-height>
@@ -138,19 +148,8 @@
                                             <li><a href="#">Product</a></li>
                                             <li><a href="#">Product</a></li>
                                             <li><a href="#">Product</a></li>
-                                            
                                         </ul>
                                     </li>
-                                     <li><a href="#">Product Category</a>
-                                        <ul>
-                                            <li><a href="#">Product</a></li>
-                                            <li><a href="#">Product</a></li>
-                                            <li><a href="#">Product</a></li>
-                                            <li><a href="#">Product</a></li>
-                                            <li><a href="#">Product</a></li>
-                                            
-                                        </ul>
-                                    </li> 
                                     <li><a href="#">Product Category</a>
                                         <ul>
                                             <li><a href="#">Product</a></li>
@@ -158,12 +157,20 @@
                                             <li><a href="#">Product</a></li>
                                             <li><a href="#">Product</a></li>
                                             <li><a href="#">Product</a></li>
-                                           
+                                        </ul>
+                                    </li>
+                                    <li><a href="#">Product Category</a>
+                                        <ul>
+                                            <li><a href="#">Product</a></li>
+                                            <li><a href="#">Product</a></li>
+                                            <li><a href="#">Product</a></li>
+                                            <li><a href="#">Product</a></li>
+                                            <li><a href="#">Product</a></li>
                                         </ul>
                                     </li>
                                     <li><a href="#">Product Info</a></li>
-
-                                </ul></li>
+                                </ul>
+                            </li>
                             <li><a href="#">Services</a></li>
                             <li><a href="#">Insights</a></li>
                             <li><a href="#">About Us</a></li>
@@ -213,15 +220,14 @@
                     </div>
                 </div>
             </div>
-        </header>	
-        
+        </header>
         <!-- ******************************************************* -->
         <!-- Breadcrumbs
         <!-- ******************************************************* -->
-       <!--  <section class="breadcrumbs">
-        	<div class="container-fluid">
-            	<div class="row">
-                	<div class="col-xs-12">
+        <!--  <section class="breadcrumbs">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-xs-12">
                         <ul>
                             <li><a href="#">Home</a></li>
                             <li><a href="#">Services</a></li>
@@ -232,38 +238,35 @@
                 </div>
             </div>
         </section> -->
-        
         <!-- ******************************************************* -->
         <!-- Banner
         <!-- ******************************************************* -->
         <section class="banner">
             <div class="row" eq-height>
-            	<!-- <div class="col-md-4 col-sm-5 col-xs-12 bg-content pull-right" eq-col data-img="http://placehold.it/640x310/d55441/ffffff">
+                <!-- <div class="col-md-4 col-sm-5 col-xs-12 bg-content pull-right" eq-col data-img="http://placehold.it/640x310/d55441/ffffff">
                     <img alt="B&L Pipe Co"
-                    	data-src="<575:http://placehold.it/575x370/d55441/ffffff,
-                        		<768:http://placehold.it/768x370/d55441/ffffff,
-                    			>768:http://placehold.it/640x310/d55441/ffffff" />
+                        data-src="<575:http://placehold.it/575x370/d55441/ffffff,
+                                <768:http://placehold.it/768x370/d55441/ffffff,
+                                >768:http://placehold.it/640x310/d55441/ffffff" />
                         
                     <div class="overlay-band"></div>
                 </div> -->
                 <div class="col-md-12 col-sm-12 col-xs-12 title-content" data-img="http://placehold.it/1960x466/d55441/ffffff eq-col>
-                	<div class="tframe fh fw">
-                    	<div class="tcell valign-mid">
-                        	<div class="container-fluid no-padding">
-                            <img alt="BL Pipeco"
-                        data-src="<575:http://placehold.it/768x370/d55441/ffffff,
-                                <768:http://placehold.it/1260x370/d55441/ffffff,
-                                >768:http://placehold.it/1960x370/d55441/ffffff" />
-                              <!--   <span class="sub-cat-title">One of the largest</span>
+                    <div class=" tframe fh fw ">
+                        <div class="tcell valign-mid ">
+                            <div class="container-fluid no-padding ">
+                            <img alt="BL Pipeco "
+                        data-src="<575:http://placehold.it/768x370/d55441/ffffff, <768:http://placehold.it/1260x370/d55441/ffffff,>768:http://placehold.it/1960x370/d55441/ffffff" />
+                    <!--   <span class="sub-cat-title">One of the largest</span>
                                 <h1>Oil Country Tubular Goods</h1> -->
-                            </div>
-                        </div>
-                    </div>
-                   <!--  <div class="overlay-band">
-                    	<div class="tframe fh fw">
-                        	<div class="tcell valign-mid">
-                            	<div class="container-fluid">
-                            		<h3>Houston, TX, <span class="date">October 26, 2016</span></h3>
+                </div>
+            </div>
+    </div>
+    <!--  <div class="overlay-band">
+                        <div class="tframe fh fw">
+                            <div class="tcell valign-mid">
+                                <div class="container-fluid">
+                                    <h3>Houston, TX, <span class="date">October 26, 2016</span></h3>
                                     <span class="pull-right social">Share 
                                     <a href="#" title="Facebook"><i class="fa fa-facebook" aria-hidden="true"></i></a>
                                     <a href="#" title="Twitter"><i class="fa fa-twitter" aria-hidden="true"></i></a>
@@ -274,258 +277,225 @@
                             </div>
                         </div>
                     </div> -->
-                </div>
-            </div>
-        </section>
-
+    </div>
+    </div>
+    </section>
+    <!-- ******************************************************* -->
+    <!-- Social Media Icons
         <!-- ******************************************************* -->
-        <!-- Social Media Icons
+    <div class="social-media-icons">
+        <ul>
+            <li>
+                <a href="#">
+                    <i class="fa fa-facebook" aria-hidden="true"></i>
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <i class="fa fa-twitter" aria-hidden="true"></i>
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <i class="fa fa-linkedin" aria-hidden="true"></i>
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <i class="fa fa-commenting" aria-hidden="true"></i>
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <i class="fa fa-envelope" aria-hidden="true"></i>
+                </a>
+            </li>
+        </ul>
+    </div>
+    <!-- ******************************************************* -->
+    <!-- Main Content
         <!-- ******************************************************* -->
-        <div class="social-media-icons">
-            <ul>
-                <li>
-                    <a href="#">
-                        <i class="fa fa-facebook" aria-hidden="true"></i>
-                    </a>
-                </li>
-                <li>
-                    <a href="#">
-                        <i class="fa fa-twitter" aria-hidden="true"></i>
-                    </a>
-                </li>
-                <li>
-                    <a href="#">
-                        <i class="fa fa-linkedin" aria-hidden="true"></i>
-                    </a>
-                </li>
-                <li>
-                    <a href="#">
-                        <i class="fa fa-commenting" aria-hidden="true"></i>
-                    </a>
-                </li>
-                <li>
-                    <a href="#">
-                        <i class="fa fa-envelope" aria-hidden="true"></i>
-                    </a>
-                </li>
-            </ul>
-        </div>
-        
-        
-        <!-- ******************************************************* -->
-        <!-- Main Content
-        <!-- ******************************************************* -->
-        <section class="main-content">
-        	
-        		
-        	
-        		<div class="row compressed">
-            
-					<!-- ******************************************************* -->
-					<!-- Main Content
-					<!-- ******************************************************* -->
-					<div class="col-md-8 col-sm-7 col-xs-12 main">
-						<div class="row">
-							<div class="col-md-offset-3 col-md-9">
-								<div class="container-fluid">
-									<h2 class="text-upcase">OCTG Products</h2>
-									<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-                                    tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-                                    quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-                                    consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-                                    cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-                                    proident, sunt in culpa qui officia deserunt mollit anim id est laborum occaecat cupidatat non occaecat cupidatat non.</p>
-
-									<figure class="pull-left col-lg-4 col-md-5 col-sm-6 col-xs-12">
-										<img alt="B&L Pipe Co"
-												data-src=">0:http://placehold.it/390x280/d55441/ffffff" />
-										<figcaption>Caption would go here</figcaption>
-									</figure>
-
-									<h3>H3 Header Bobby .</h3>
-
-									<p>Nam liber tempor cum soluta nobis eleifend option congue nihil imperdiet doming id quod mazim placerat facer possim assum.</p> <p> Mirum est notare quam littera gothica, quam nunc putamus parum claram, <span class="bold-red">anteposuerit litterarum formas humanitatis per seacula quarta decima</span> et quinta decima. Eodem modo typi, qui nunc nobis videntur parum clari, fiant sollemnes in futurum. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi.</p>
-
-                                    <blockquote>
-                                        <p>
-                                        Duis aute irure dolor in te velit esse
-                                        cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-                                        proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-                                        </p>
-                                    </blockquote>
-                                    
-									<h3>H3 Style for paragraph headers</h3>
-
-									<ul class="list">
-										<li>A comprehensive software product offering including:
-											<ul>
-												<li>Specialized industry insight and experience to help companies identify threats, mitigate risk and create operational priorities
-												</li>
-												<li>Assistance in the development of comprehensive risk mitigation management plans from process through closure</li>
-											
-											</ul>
-										</li>
-                                        <li>Implementation and tracking of risk management solutions to secure expected outcomes</li>
-									</ul>
-									<div class="feature-box brightRed with-img">
-										<div class="row compressed fh-col" eq-height>
-											<div class="col-lg-6 col-md-12 img-content" eq-col data-img="http://placehold.it/430x215/d55441/ffffff">
-												<img alt="B&L Pipe Co"
-													src="http://placehold.it/430x345/d55441/ffffff" />
-											</div>
-											<div class="col-lg-6 col-md-12 txt-content" eq-col>
-												<h3 class="text-upcase">Resource Center</h3>
-												<p> Nam liber tempor cum soluta nobis eleifend option congue nihil imperdiet doming id quod mazim placerat facer possim assum.</p>
-											<!-- 	<a href="#" class="btn whiteline">CTA Button Text</a> -->
-											</div>
-										</div>
-									</div>
-									<br>
-									<br>
-								</div>
-							</div>
-						</div>
-					</div>
-
-					<!-- ******************************************************* -->
-					<!-- Aside Content
-					<!-- ******************************************************* -->
-					<div class="col-md-4 col-sm-5 col-xs-12 aside">
-						<div class="container-fluid">
-
-							<!-- Send Request -->
-							<div class="send-request" toggle-active-parent>
-								<!-- <a href="#" class="btn orange fw">Send Us a Request</a> -->
-								<div class="row">
-									<div class="col-sm-7 col-xs-7 fh">
-										<a href="#" class="tframe fh fw">
-											<div class="tcell valign-mid">
-                                                <h3>Get in Touch</h3>
-                                                <p class="sub-text">Please, use our customer line to constact us</span>
-												<span class="num">+1 555 123 4567</span>
-											</div>
-										</a>
-									</div>
-									<div class="col-sm-5 col-xs-5 fh">
-										<div class="tframe fw fh popdown-phonenum">
-											<div class="tcell valign-mid phone-opener" toggle-active-opener><i class="fa fa-mobile" aria-hidden="true"></i> <span class="more">More</span><span class="less">Less</span> <i class="fa fa-angle-down" aria-hidden="true"></i></div>
-										</div>
-									</div>
-								</div>
-								<div class="more-phone">
-									<div class="more-phone-wrap">
-                                        <ul>
-                                            <li>
-                                                <span>Concord, CA</span>
-                                                <a href="#" class="num">+1 925 478 8058</a>
-                                            </li>
-                                            <li>
-                                                <span>Angleton, TX</span>
-                                                <a href="#" class="num">+1 713 260 4050</a>
-                                            </li>
-                                            <li>
-                                                <span>Denver, CO</span>
-                                                <a href="#" class="num">+1 720 789 7570</a>
-                                            </li>
-                                            <li>
-                                                <span>Denver, CO</span>
-                                                <a href="#" class="num">+1 720 789 7570</a>
-                                            </li>
-                                        </ul>
-									</div>
-								</div>                                                            
-							</div>
-
-                            <div class="side-nav">
-                                <ul>
-                                    <li><a href="#">Systems Architecture Design and Deployment</a></li>
-                                    <li><a href="#">Database Structure and Modeling</a></li>
-                                    <li><a href="#">Business Process Management</a></li>
-                                    <li><a href="#">Data Conversion, Migration and Ongoing Maintenance</a></li>                                   
-                                </ul>
-                            </div>
-
-                            <div class="image-cta">
-                                <div class="img-content">
-                                    <img alt="B&L Pipe Co"
-                                        data-src=">0:http://placehold.it/570x300" />    
-                                   <!--  <span class="caption">Call To Action  <i class="fa fa-angle-right" aria-hidden="true"></i></span> -->
-                                        <div class="txt-content">
-                                        <h3>Lorem ipsum dolor sit amet, consectetuer adipiscing elit</h3>
-                                        <p>Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat.</p>
+    <section class="main-content">
+        <div class="row compressed">
+            <!-- ******************************************************* -->
+            <!-- Main Content
+                    <!-- ******************************************************* -->
+            <div class="col-md-8 col-sm-7 col-xs-12 main">
+                <div class="row">
+                    <div class="col-md-offset-3 col-md-9">
+                        <div class="container-fluid">
+                            <h2 class="text-upcase">OCTG Products</h2>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum occaecat cupidatat non occaecat cupidatat non.</p>
+                            <figure class="pull-left col-lg-4 col-md-5 col-sm-6 col-xs-12">
+                                <img alt="B&L Pipe Co" data-src=">0:http://placehold.it/390x280/d55441/ffffff" />
+                                <figcaption>Caption would go here</figcaption>
+                            </figure>
+                            <h3>H3 Header Bobby .</h3>
+                            <p>Nam liber tempor cum soluta nobis eleifend option congue nihil imperdiet doming id quod mazim placerat facer possim assum.</p>
+                            <p> Mirum est notare quam littera gothica, quam nunc putamus parum claram, <span class="bold-red">anteposuerit litterarum formas humanitatis per seacula quarta decima</span> et quinta decima. Eodem modo typi, qui nunc nobis videntur parum clari, fiant sollemnes in futurum. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi.</p>
+                            <blockquote>
+                                <p>
+                                    Duis aute irure dolor in te velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                                </p>
+                            </blockquote>
+                            <h3>H3 Style for paragraph headers</h3>
+                            <ul class="list">
+                                <li>A comprehensive software product offering including:
+                                    <ul>
+                                        <li>Specialized industry insight and experience to help companies identify threats, mitigate risk and create operational priorities
+                                        </li>
+                                        <li>Assistance in the development of comprehensive risk mitigation management plans from process through closure</li>
+                                    </ul>
+                                </li>
+                                <li>Implementation and tracking of risk management solutions to secure expected outcomes</li>
+                            </ul>
+                            <div class="feature-box brightRed with-img">
+                                <div class="row compressed fh-col" eq-height>
+                                    <div class="col-lg-6 col-md-12 img-content" eq-col data-img="http://placehold.it/430x215/d55441/ffffff">
+                                        <img alt="B&L Pipe Co" src="http://placehold.it/430x345/d55441/ffffff" />
+                                    </div>
+                                    <div class="col-lg-6 col-md-12 txt-content" eq-col>
+                                        <h3 class="text-upcase">Resource Center</h3>
+                                        <p> Nam liber tempor cum soluta nobis eleifend option congue nihil imperdiet doming id quod mazim placerat facer possim assum.</p>
+                                        <!--    <a href="#" class="btn whiteline">CTA Button Text</a> -->
                                     </div>
                                 </div>
-                               
-                                <div class="txt-subcontent">
-                                    <a href="#">
-                                        <span class="text-upcase">See how the we make the world better</span>
-                                    </a>
-                                </div>                             
                             </div>
-
-
-
-						</div>
-					</div>
-				</div>          
-        	
-        </section>
-        
-        
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- ******************************************************* -->
+            <!-- Aside Content
+                    <!-- ******************************************************* -->
+            <div class="col-md-4 col-sm-5 col-xs-12 aside">
+                <div class="container-fluid">
+                    <!-- Send Request -->
+                    <div class="send-request" toggle-active-parent>
+                        <!-- <a href="#" class="btn orange fw">Send Us a Request</a> -->
+                        <div class="row">
+                            <div class="col-sm-7 col-xs-7 fh">
+                                <a href="#" class="tframe fh fw">
+                                    <div class="tcell valign-mid">
+                                        <h3>Get in Touch</h3>
+                                        <p class="sub-text">Please, use our customer line to constact us</span>
+                                            <span class="num">+1 555 123 4567</span>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="col-sm-5 col-xs-5 fh">
+                                <div class="tframe fw fh popdown-phonenum">
+                                    <div class="tcell valign-mid phone-opener" toggle-active-opener><i class="fa fa-mobile" aria-hidden="true"></i> <span class="more">More</span><span class="less">Less</span> <i class="fa fa-angle-down" aria-hidden="true"></i></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="more-phone">
+                            <div class="more-phone-wrap">
+                                <ul>
+                                    <li>
+                                        <span>Concord, CA</span>
+                                        <a href="#" class="num">+1 925 478 8058</a>
+                                    </li>
+                                    <li>
+                                        <span>Angleton, TX</span>
+                                        <a href="#" class="num">+1 713 260 4050</a>
+                                    </li>
+                                    <li>
+                                        <span>Denver, CO</span>
+                                        <a href="#" class="num">+1 720 789 7570</a>
+                                    </li>
+                                    <li>
+                                        <span>Denver, CO</span>
+                                        <a href="#" class="num">+1 720 789 7570</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="side-nav">
+                        <ul>
+                            <li><a href="#">Systems Architecture Design and Deployment</a></li>
+                            <li><a href="#">Database Structure and Modeling</a></li>
+                            <li><a href="#">Business Process Management</a></li>
+                            <li><a href="#">Data Conversion, Migration and Ongoing Maintenance</a></li>
+                        </ul>
+                    </div>
+                    <div class="image-cta">
+                        <div class="img-content">
+                            <img alt="B&L Pipe Co" data-src=">0:http://placehold.it/570x300" />
+                            <!--  <span class="caption">Call To Action  <i class="fa fa-angle-right" aria-hidden="true"></i></span> -->
+                            <div class="txt-content">
+                                <h3>Lorem ipsum dolor sit amet, consectetuer adipiscing elit</h3>
+                                <p>Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat.</p>
+                            </div>
+                        </div>
+                        <div class="txt-subcontent">
+                            <a href="#">
+                                <span class="text-upcase">See how the we make the world better</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- ******************************************************* -->
+    <!-- Footer
         <!-- ******************************************************* -->
-        <!-- Footer
-        <!-- ******************************************************* -->
-        <footer>
-        	<div class="container-fluid">
-            	<div class="row">
-                    <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12 signup">
-                    	<div class="content tframe fw fh">
-                        	<div class="tcell valign-mid">
-                                <div class="collapsible-data">
-                                	<a href="#" class="collapsible-opener">Subscribe to our Updates <i class="fa fa-angle-up" aria-hidden="true"></i></a>
-                                    <div class="collapsible-content">
-                                    	<div class="row" eq-height>
-                                            <div class="col-lg-6 col-md-12 pull-right img-info" eq-col data-img="http://placehold.it/360x370/d55441/ffffff">
-                                            	<img alt="B&L Pipe Co"
-                                                	data-src="<575:http://placehold.it/575x270/d55441/ffffff,
-                                                			<768:http://placehold.it/768x200/d55441/ffffff,
-                                                			<1440:http://placehold.it/360x200/d55441/ffffff,
-                                                          	>1440:http://placehold.it/360x370/d55441/ffffff"
-                                                    src="http://placehold.it/360x370/d55441/ffffff" />
-                                            </div>
-                                            <div class="col-lg-6 col-md-12 pull-left" eq-col>
-                                            	<div class="info">
-                                                	<h3>Ut wisi enim ad minim veniam, quis nostrud exerci ullamcorper </h3>
-                                                    <p>Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros.</p>
-                                                    <a href="#" class="btn">Signup</a>
-                                                </div>
+    <footer>
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12 signup">
+                    <div class="content tframe fw fh">
+                        <div class="tcell valign-mid">
+                            <div class="collapsible-data">
+                                <a href="#" class="collapsible-opener">Subscribe to our Updates <i class="fa fa-angle-up" aria-hidden="true"></i></a>
+                                <div class="collapsible-content">
+                                    <div class="row" eq-height>
+                                        <div class="col-lg-6 col-md-12 pull-right img-info" eq-col data-img="http://placehold.it/360x370/d55441/ffffff">
+                                            <img alt="B&L Pipe Co" data-src="<575:http://placehold.it/575x270/d55441/ffffff,
+                                                            <768:http://placehold.it/768x200/d55441/ffffff,
+                                                            <1440:http://placehold.it/360x200/d55441/ffffff,
+                                                            >1440:http://placehold.it/360x370/d55441/ffffff" src="http://placehold.it/360x370/d55441/ffffff" />
+                                        </div>
+                                        <div class="col-lg-6 col-md-12 pull-left" eq-col>
+                                            <div class="info">
+                                                <h3>Ut wisi enim ad minim veniam, quis nostrud exerci ullamcorper </h3>
+                                                <p>Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros.</p>
+                                                <a href="#" class="btn">Signup</a>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
-                        	</div>
-                        </div>
-                    </div>
-                     <div class="col-lg-8 visible-lg copyright text-right">
-                        <div class="content tframe fw fh">
-                            <div class="tcell valign-mid">
-                                © 2017 B&L Pipeco. All rights reserved. | <a href="#">Privacy Policy</a>  
                             </div>
                         </div>
                     </div>
                 </div>
+                <div class="col-lg-8 visible-lg copyright text-right">
+                    <div class="content tframe fw fh">
+                        <div class="tcell valign-mid">
+                            © 2017 B&L Pipeco. All rights reserved. | <a href="#">Privacy Policy</a>
+                        </div>
+                    </div>
+                </div>
             </div>
-        </footer>
+        </div>
+    </footer>
     </div>
-
     <!-- Pagespeed compliant - Avoid render blocking load of JS -->
     <script type="text/javascript">
-        function loadJS(e) { var t = document.createElement("script"); t.type = "text/javascript", t.async = !0, t.src = e; var n = document.getElementsByTagName("head")[0]; n.appendChild(t) };
-        loadJS('_assets/js/all.min.js');
+    function loadJS(e) {
+        var t = document.createElement("script");
+        t.type = "text/javascript", t.async = !0, t.src = e;
+        var n = document.getElementsByTagName("head")[0];
+        n.appendChild(t)
+    };
+    loadJS('_assets/js/all.min.js');
     </script>
     <!-- In case javascript is disabled -->
     <noscript>
         <script type="text/javascript" src="_assets/css/all.min.js"></script>
     </noscript>
 </body>
+
 </html>

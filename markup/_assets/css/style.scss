@@ -3611,9 +3611,9 @@ footer {
 		}
 		
 		.aside {
-			>.container-fluid {
+			>.container-fluid {padding-right:40px;
 				padding-left:40px;
-				padding-right:40px;
+				
 			}
 		}
 	}
@@ -4275,7 +4275,7 @@ footer {
 
 .image-cta {
 	// margin-bottom:40px;
-	
+	position: relative;
 	a {
 		display:block;
 		@include transition(all .5s);
@@ -4404,6 +4404,10 @@ footer {
 		padding: 5px 0;
 		text-align: right;
 		background-color: $colorDarkBlue;
+		position: absolute;
+		bottom:	0;
+		left: 0;
+		width: 100%;
 		a {
 			color: $colorWhite;
 			line-height: 3;
