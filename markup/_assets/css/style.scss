@@ -3583,7 +3583,8 @@ footer {
 		}
 	}
 	
-	.aside {
+	.aside,
+	.secondary {
 		>.container-fluid {
 			padding: 0;
 			padding-left:40px;
@@ -3610,7 +3611,8 @@ footer {
 			}
 		}
 		
-		.aside {
+		.aside,
+		.sendonary {
 			>.container-fluid {padding-right:40px;
 				padding-left:40px;
 				
@@ -3625,7 +3627,8 @@ footer {
 			}
 		}
 		
-		.aside {
+		.aside,
+		.secondary {
 			>.container-fluid {
 				padding-left:20px;
 				padding-right:20px;
@@ -3669,6 +3672,7 @@ footer {
 .latest-articles {
 	background: $colorLightGrey1;
 	padding: 40px;
+	position: relative;
 	h2 {
 		font-weight: 700;
 		letter-spacing: 2px;
