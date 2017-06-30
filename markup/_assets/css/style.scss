@@ -3595,6 +3595,10 @@ footer {
 		// 	}
 		// }
 	}
+
+	.secondary {
+		margin-top: -7px;
+	}
 	
 	@include max-screen($lg) {
 		// padding-top:60px;
@@ -5080,6 +5084,9 @@ footer {
 		width:49.8%;
 		padding:25px !important;
 		@include transition(all .3s);
+		@include max-screen($md) {
+			padding: 0 !important;
+		}
 	}
 	.slide-over-right {
 		background: $colorBrightRed2;
