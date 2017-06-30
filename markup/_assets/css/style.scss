@@ -3861,7 +3861,10 @@ footer {
 	@include transition(all .3s);
 	.call-us {
 		text-align: left;
-		padding-left: 30px;
+		padding: 30px 45px;
+		@include max-screen($lg) {
+			padding: 0 25px;
+		}
 	}
 
 	.sub-text {
