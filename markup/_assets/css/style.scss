@@ -3819,15 +3819,18 @@ footer {
 
 .num {
 	font-family:$font-avenir;
-	@include font-size(30px);
+	@include font-size(24px);
 	color:$colorWhite;
 	font-weight:300;
 	display:block;
 
 	@include max-screen($xlg) {
-		@include font-size(25px);
+		@include font-size(20px);
 	}
-	
+
+	@include max-screen($sm) {
+		@include font-size(24px);
+	}
 }
 
 .send-request {
@@ -3939,7 +3942,7 @@ footer {
 	
 	.more-phone {
 		width:100%;
-		background:$colorWhite;
+		background:$colorDarkBlue;
 		text-align:left;
 		max-height:0;
 		overflow:hidden;
@@ -3950,26 +3953,48 @@ footer {
 			// border:solid 2px $colorLightGrey3;
 			ul {
 				li {
-					background: $colorLightGrey1;
+					background: $colorDarkBlue;
 					margin-bottom: 0;
-					padding: 10px 20px;
-					&:nth-child(n-3) {
-						border-bottom: 1px solid $colorWhite;
+					padding: 10px 0 10px 20px;
+					color: $colorWhite;
+					display: inline-table;
+					width: 49.5%;
+					@include max-screen($xxlg) {
+						display:block;
+						width: 100%;
 					}
+					@include max-screen ($xmd) {
+						display: inline-table;
+						width: 49.5%;
+					}
+					@include max-screen ($sm) {
+						display:block;
+						width: 100%;
+						padding: 15px 0 15px 120px;
+					}
+					// &:nth-child(n-3) {
+					// 	border-bottom: 1px solid $colorWhite;
+					// }
 
-					&:after {
-						content: '\f0da';
-						font-family: FontAwesome;
-						float: right;
-					}
-					&:hover {
-						background: $colorLightGrey2;
+					// &:after {
+					// 	content: '\f0da';
+					// 	font-family: FontAwesome;
+					// 	float: right;
+					// }
+					
+
+					a.num {
+						color: $colorWhite;
+						@include transition(all .3s);
+						&:hover {
+							color: $colorLightGrey6;
+						}
 					}	
 				}
 			}
 			@include max-screen($xlg) {
-				// padding-left:30px;
-				// padding-right:30px;
+				padding-left:30px;
+				padding-right:30px;
 			}
 		}
 		
@@ -4028,7 +4053,7 @@ footer {
 
 .side-nav {
 	position:relative;
-	margin-bottom:40px;
+	// margin-bottom:40px;
 
 	// ul {
 	// 	li {
