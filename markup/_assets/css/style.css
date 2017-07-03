@@ -2618,6 +2618,11 @@ footer {
     background: #00263b; }
     .latest-articles.darkblue-theme h2, .latest-articles.darkblue-theme p, .latest-articles.darkblue-theme span {
       color: #fff; }
+  @media only screen and (max-width: 768px) {
+    .latest-articles {
+      background: #bcc7cd !important; }
+      .latest-articles h2, .latest-articles p, .latest-articles span {
+        color: #00263b !important; } }
   .latest-articles .txt-subcontent {
     padding: 5px 0;
     text-align: right;
@@ -2631,9 +2636,11 @@ footer {
       line-height: 3;
       font-size: .9rem;
       margin-right: 70px; }
+      .latest-articles .txt-subcontent a span {
+        color: #fff !important; }
       @media only screen and (max-width: 1280px) {
         .latest-articles .txt-subcontent a {
-          margin-right: 55px; } }
+          margin-right: 60px; } }
       .latest-articles .txt-subcontent a:after {
         content: '\f0da';
         font-family: FontAwesome;
@@ -3106,7 +3113,7 @@ footer {
       margin-right: 70px; }
       @media only screen and (max-width: 1280px) {
         .image-cta .txt-subcontent a {
-          margin-right: 55px; } }
+          margin-right: 60px; } }
       .image-cta .txt-subcontent a:after {
         content: '\f0da';
         font-family: FontAwesome;
