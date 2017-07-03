@@ -4535,6 +4535,7 @@ footer {
 				width: 85%;
 				margin: 0 auto;
 			}
+			
 			&:after {
 				content: '\f0da';
 				font-family: FontAwesome;
@@ -4545,6 +4546,7 @@ footer {
 			    width: 52px;
 			    padding: 6px 22px;
 			    background: $colorBrightRed1;
+
 			    @include max-screen($xmd) {
 			    	display: none;
 			    }

@@ -414,6 +414,8 @@ function resetPanels() {
 	$(".panel-slider").each(function(){
 		$(this).hide();
 	})
+	$("h3.text-flip").removeClass("vertical-text");
+
 }
 
 function initSlidePanels() {
@@ -433,8 +435,12 @@ function initSlidePanels() {
 	$(".slide-over-right").on("click", function(e){
 		e.stopPropagation();
 		$(this).hasClass("compressed") ? $(this).toggleClass("compressed") : ""
+		$(this).hasClass("vertical-text") ? $(this).toggleClass("vertical-text") : ""
+		
 		$(this).addClass("active");
 		$(".slide-over-left").addClass("compressed");
+		$("h3.text-flip").addClass("vertical-text");
+		initPanelSlider();
 	});
 
 	$(document).click(function() {
