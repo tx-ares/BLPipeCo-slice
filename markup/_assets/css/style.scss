@@ -2135,7 +2135,6 @@ footer {
 		>.row {
 		
 			>[class*="col-"] {
-				border-right:solid 1px $colorWhite;
 				height:55px;
 				line-height: 110%;
 				@include max-screen($sm){
@@ -4350,6 +4349,7 @@ footer {
 
 .image-cta {
 	// margin-bottom:40px;
+	height: 100%;
 	position: relative;
 	a {
 		display:block;
@@ -4373,7 +4373,8 @@ footer {
 	.img-content {
 		position: relative;
 		overflow: hidden;
-		height: 0;
+		// height: 0;
+		height: 100%;
 		padding-bottom: 55%;
 		.txt-content {
 			position: absolute;

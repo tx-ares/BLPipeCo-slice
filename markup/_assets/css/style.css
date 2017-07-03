@@ -1635,7 +1635,6 @@ footer {
   footer .container-fluid {
     padding: 0; }
     footer .container-fluid > .row > [class*="col-"] {
-      border-right: solid 1px #fff;
       height: 55px;
       line-height: 110%; }
       @media only screen and (max-width: 575px) {
@@ -3001,6 +3000,7 @@ footer {
       font-size: 1rem; } }
 
 .image-cta {
+  height: 100%;
   position: relative; }
   .image-cta a {
     display: block;
@@ -3022,7 +3022,7 @@ footer {
   .image-cta .img-content {
     position: relative;
     overflow: hidden;
-    height: 0;
+    height: 100%;
     padding-bottom: 55%; }
     .image-cta .img-content .txt-content {
       position: absolute;
