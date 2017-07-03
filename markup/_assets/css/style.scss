@@ -1174,7 +1174,7 @@ $padding-sm: 20px;
 	left:0;
 	width:100%;
 	height:100%;
-	background:$colorDarkBlue;
+	background:$colorWhite;
 	z-index:1029;
 	@include transition(all .5s ease);
 	
@@ -1203,11 +1203,20 @@ $padding-sm: 20px;
 	}
 	
 	.content-wrapper {
-		
+
+		.logo {
+			background: $colorDarkBlue;
+			width: 100%;
+			height: 59px;
+			img[src] {
+				margin: 8px 22px;
+			}
+		}
 		form {
 			margin:0;
 			padding:0;
-			
+			background: $colorBrightRed1;
+			margin-bottom: 1px;
 			input[type="text"] {
 				background:none;
 				color:$colorWhite;
@@ -1230,8 +1239,8 @@ $padding-sm: 20px;
 			.search-btn {
 				display: block;
 				position: absolute;
-				top: 20px;
-				right: 65px;
+				top: 78px;
+				right: 17px;
 				
 				&:hover {
 					color:$colorBrightRed2;
@@ -1345,7 +1354,6 @@ $padding-sm: 20px;
 			
 			>li {
 				position:relative;
-				
 				/* 1st level */
 				a {
 					
@@ -1379,7 +1387,7 @@ $padding-sm: 20px;
 				&.open {
 					>a {
 						>span {
-							background:$colorSlateBlue;
+							background:$colorBrightRed1;
 							color:$colorWhite;
 						}
 					}
@@ -1399,7 +1407,7 @@ $padding-sm: 20px;
 						
 						>a {
 							>span {
-								background:$colorDarkGrey;
+								background:$colorDarkBlue;
 								color:$colorWhite;
 							}
 							>.holder {
@@ -1446,7 +1454,7 @@ $padding-sm: 20px;
 									}
 									&:hover {
 										>span {
-											background:$colorDarkGrey;
+											background:$colorDarkBlue;
 											color:$colorBrightRed2;
 										}
 									}
@@ -1614,6 +1622,9 @@ header {
 	background:$colorDarkBlue;
 	min-height:50px;
 	@include transition(all .3s);
+	.logo-container {
+		text-align: right;
+	}
 	
 	.logo {
 		display:inline-block;
@@ -3182,6 +3193,7 @@ footer {
 			img {
 				width:85px!important;
 				height:40px!important;
+				margin-top: 8px;
 				@include transition(all .3s);
 			}
 		}
