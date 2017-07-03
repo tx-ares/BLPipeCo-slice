@@ -2663,9 +2663,11 @@ footer {
 
 .related-contents {
   padding: 40px 0;
-  border-top: 3px solid #00492c;
+  border-top: 3px solid #00263b;
   border-bottom: 3px solid #e5e5e5;
   margin-bottom: 30px; }
+  .related-contents a {
+    color: #8a9ca5; }
   .related-contents .title {
     font-weight: 400;
     font-size: 24px;
@@ -3896,13 +3898,13 @@ footer {
 .accordion.custom {
   margin-bottom: 40px; }
   .accordion.custom li {
-    border: solid 2px #00aa66;
+    border: solid 2px #00263b;
     padding: 15px 20px;
     margin-bottom: 20px; }
     .accordion.custom li .opener {
       position: relative;
       display: block;
-      color: #00aa66;
+      color: #00263b;
       text-decoration: none;
       font-size: 14px;
       font-size: 0.875rem;
@@ -3912,7 +3914,7 @@ footer {
       line-height: 140%; }
       .accordion.custom li .opener:after {
         content: '+';
-        color: #00aa66;
+        color: #00263b;
         position: absolute;
         right: 0;
         font-size: 32px;

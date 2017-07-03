@@ -3805,9 +3805,13 @@ footer {
 
 .related-contents {
 	padding:40px 0;
-	border-top:3px solid $colorDarkGreen;
+	border-top:3px solid $colorDarkBlue;
 	border-bottom:3px solid $colorLightGrey2;
 	margin-bottom:30px;
+
+	a {
+		color: $colorSlateBlue;
+	}
 	
 	.title {
 		font-weight:400;
@@ -5755,14 +5759,14 @@ footer {
 		margin-bottom: 40px;
 		
 		li {
-			border:solid 2px $colorGreen;
+			border:solid 2px $colorDarkBlue;
 			padding:15px 20px;
 			margin-bottom: 20px;
 			
 			.opener {
 				position:relative;
 				display:block;
-				color:$colorGreen;
+				color:$colorDarkBlue;
 				text-decoration:none;
 				@include font-size(14px);
 				text-transform:uppercase;
@@ -5772,7 +5776,7 @@ footer {
 				
 				&:after {
 					content:'+';
-					color: $colorGreen;
+					color: $colorDarkBlue;
 					position:absolute;
 					right: 0;
 					@include font-size(32px);
