@@ -3637,7 +3637,7 @@ footer {
 	.aside,
 	.secondary {
 		>.container-fluid {
-			padding: 0;
+			padding: 0 !important;
 			padding-left:40px;
 		}
 		// @include max-screen($sm){

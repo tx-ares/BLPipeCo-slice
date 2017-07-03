@@ -2556,7 +2556,7 @@ footer {
     margin-top: 20px; }
   .main-content .aside > .container-fluid,
   .main-content .secondary > .container-fluid {
-    padding: 0;
+    padding: 0 !important;
     padding-left: 40px; }
   .main-content .secondary {
     margin-top: -7px; }
