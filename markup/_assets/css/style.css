@@ -3461,7 +3461,7 @@ footer {
       .feature-box.with-img .img-content img {
         display: block; } }
   .feature-box.fullpage-centered {
-    width: 60%;
+    width: 75%;
     margin: auto;
     min-height: 215px; }
   .feature-box:before {
