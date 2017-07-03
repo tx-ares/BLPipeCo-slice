@@ -415,7 +415,10 @@ function resetPanels() {
 		$(this).hide();
 	})
 	$("h3.text-flip").removeClass("vertical-text");
-
+	$(".txt-content").each(function(){ 
+		$(this).removeClass("animated bounceOutDown");
+		$(this).show();
+	});
 }
 
 function initSlidePanels() {
@@ -425,10 +428,14 @@ function initSlidePanels() {
 		console.log("Left slide clicked!")
 		$(this).hasClass("compressed") ? $(this).toggleClass("compressed") : ""
 		$(this).hasClass("vertical-text") ? $(this).toggleClass("vertical-text") : ""
+		$(".txt-content").each(function(){ $(this).removeClass("animated bounceOutDown")});
+		$(this).find(".txt-content").show();
 
 		$(this).addClass("active");
 		$(".slide-over-right").addClass("compressed");
 		$("h3.text-flip").addClass("vertical-text");
+		$(this).find(".txt-content").addClass('animated bounceOutDown');
+		setTimeout(function(){$(this).find(".txt-content").hide()}, 1000);
 		initPanelSlider();
 	});
 
@@ -436,10 +443,14 @@ function initSlidePanels() {
 		e.stopPropagation();
 		$(this).hasClass("compressed") ? $(this).toggleClass("compressed") : ""
 		$(this).hasClass("vertical-text") ? $(this).toggleClass("vertical-text") : ""
-		
+		$(".txt-content").each(function(){ $(this).removeClass("animated bounceOutDown")});
+		$(this).find(".txt-content").show();
+
 		$(this).addClass("active");
 		$(".slide-over-left").addClass("compressed");
 		$("h3.text-flip").addClass("vertical-text");
+		$(this).find(".txt-content").addClass('animated bounceOutDown');
+		setTimeout(function(){$(this).find(".txt-content").hide()}, 1000);
 		initPanelSlider();
 	});
 
@@ -450,12 +461,50 @@ function initSlidePanels() {
 
 function initPanelSlider(){
 	console.log("initPanelCarousel")
-	$(".panel-slider")
-		.slick({
-			infinite: true,
-			slidesToShow: 3,
-			slidesToScroll: 3
+
+	// $(".panel-slider")
+	// 	.slick({
+	// 		infinite: true,
+	// 		slidesToShow: 5,
+	// 		slidesToScroll: 1
+	// });
+
+	$(".panel-slider").slick({
+	  dots: true,
+	  infinite: false,
+	  speed: 300,
+	  slidesToShow: 5,
+	  slidesToScroll: 1,
+	  responsive: [
+	    {
+	      breakpoint: 1024,
+	      settings: {
+	        slidesToShow: 3,
+	        slidesToScroll: 3,
+	        infinite: true,
+	        dots: true
+	      }
+	    },
+	    {
+	      breakpoint: 600,
+	      settings: {
+	        slidesToShow: 2,
+	        slidesToScroll: 2
+	      }
+	    },
+	    {
+	      breakpoint: 480,
+	      settings: {
+	        slidesToShow: 1,
+	        slidesToScroll: 1
+	      }
+	    }
+	    // You can unslick at a given breakpoint now by adding:
+	    // settings: "unslick"
+	    // instead of a settings object
+	  ]
 	});
+
 }
 
 
@@ -496,7 +545,7 @@ jQuery(document).ready(function() {
 	initClampText();
 	initAccordion();
 
-	initPanelSlider();
+	// initPanelSlider();
 	initSlidePanels();
 	initHideFooterIfHomepage();
 	initMakeHeaderOpaqueIfHomePage();

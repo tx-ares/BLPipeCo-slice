@@ -5193,16 +5193,35 @@ footer {
 	// padding:30px;
 	// margin-bottom:40px;
 	// min-height: 300px;
+	
 	@include transition(all .3s);
 	.panel {
 		min-height: 360px;
 		display:inline-block;
 		position: relative;
+		vertical-align: top;
 		width:49.8%;
 		padding:25px !important;
 		@include transition(all .3s);
 		@include max-screen($md) {
 			padding: 0 !important;
+		}
+		.slider-container {
+			height: auto;
+			width: 90%;
+			display:inline-block;
+			.slick-slider {
+				// display: block !important;
+				// height: 0;
+				.slick-slide {
+					margin: 0 20px;
+					&:hover {
+						background: $colorLightGrey7;
+					}
+				}
+
+			}
+
 		}
 	}
 	.slide-over-right {
@@ -5219,7 +5238,11 @@ footer {
 		.txt-content {
 			position: absolute;
 			left: 0;
+			top: 40px;
 			padding-left:50px;
+			img[src] {
+				margin-bottom: 35px;
+			}
 		}
 		@include max-screen($smd) {
 			display: block;
@@ -5235,13 +5258,23 @@ footer {
 			color: $colorWhite;
 			text-transform:inherit;
 			font-weight:500;
+			position: absolute;
+			left: 95px;
+			top: 145px;
 			@include font-size(24px);
 			@include transition( all .3s);
 			&.vertical-text {
 				position: absolute;
-				left: -320px;
+				left: -95px;
+				top: 95px;
+				width: 255px;
 				margin: 30px 5px;		
 				@include transform(rotate(-90deg));
+				// &:before {
+				// 	content: "\f0d8";
+				// 	padding: 0 15px;
+				// 	font-family: $font-icon; 
+				// }
 			}
 		}
 	
@@ -5280,7 +5313,11 @@ footer {
 		.txt-content {
 			position: absolute;
 			right: 0;
+			top: 40px;
 			padding-right: 50px;
+			img[src] {
+				margin-bottom: 35px;
+			}
 		}
 		@include max-screen($smd) {
 			display: block;
@@ -5315,11 +5352,16 @@ footer {
 		color:$colorDarkBlue;
 		text-transform:inherit;
 		font-weight:500;
+		position: absolute;
+	    right: 80px;
+	    top: 145px;
 		@include font-size(24px);
 		@include transition( all .3s);
 		&.vertical-text {
 			position: absolute;
-			right: -75px;
+			right: -110px;
+			top: 127px;
+			width: 280px;
 			margin: 30px 5px;		
 			@include transform(rotate(-90deg));
 		}
