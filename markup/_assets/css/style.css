@@ -1625,11 +1625,15 @@ footer {
     font-size: 0.75rem;
     color: #fff; }
     footer a:hover {
-      color: #00aa66; }
+      color: #d0112b; }
   footer img {
     width: 100%;
     max-width: 100%;
     height: auto; }
+  @media only screen and (max-width: 575px) {
+    footer .content {
+      text-align: center;
+      padding: 0 !important; } }
   footer .container-fluid {
     padding: 0; }
     footer .container-fluid > .row > [class*="col-"] {
