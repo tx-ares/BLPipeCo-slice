@@ -3771,7 +3771,7 @@ footer {
 			line-height: 3;
 			font-size: .9rem;			
 			margin-right: 70px;
-			
+
 			span {
 				color: $colorWhite !important;
 			}
@@ -4426,7 +4426,7 @@ footer {
 			right: 0;
 			top: 0;
 			bottom: 0;
-			height: auto;
+			height: 100%;
 			width: 100%;
 			@include transform(translate(-50.1%,0));
 		}
@@ -4469,7 +4469,7 @@ footer {
 		color:$colorWhite;
 		background: rgba($colorDarkBlue, .5);
 		padding:40px;
-		@include max-screen($sm){
+		@include max-screen($xmd){
 			background: rgba($colorSlateBlue2, 1);
 		}
 		h3 {
@@ -4603,6 +4603,7 @@ footer {
 			
 			img {
 				height:auto;
+				min-height: 300px;
 				width:100%;
 				left: 49.9%;
 				@include transform(translate(-50.1%,0));

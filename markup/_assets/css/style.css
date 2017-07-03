@@ -3056,7 +3056,7 @@ footer {
       right: 0;
       top: 0;
       bottom: 0;
-      height: auto;
+      height: 100%;
       width: 100%;
       -moz-transform: translate(-50.1%, 0);
       -o-transform: translate(-50.1%, 0);
@@ -3097,7 +3097,7 @@ footer {
     color: #fff;
     background: rgba(0, 38, 59, 0.5);
     padding: 40px; }
-    @media only screen and (max-width: 575px) {
+    @media only screen and (max-width: 768px) {
       .image-cta .txt-content {
         background: #bcc7cd; } }
     .image-cta .txt-content h3 {
@@ -3184,6 +3184,7 @@ footer {
       padding-bottom: 55%; }
       .image-cta .img-content img {
         height: auto;
+        min-height: 300px;
         width: 100%;
         left: 49.9%;
         -moz-transform: translate(-50.1%, 0);
