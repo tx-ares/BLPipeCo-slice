@@ -1355,6 +1355,7 @@ header {
         position: absolute;
         left: 0;
         top: 100%;
+        left: 18% !important;
         background: #e2eaed;
         width: 320px;
         /* Style of <a> from here forward */
@@ -1424,13 +1425,10 @@ header {
             width: 280px; } }
     header ul.top-nav .feature {
       position: absolute;
-      right: 100%;
+      right: 115px;
       width: 360px;
       border-right: 1px solid #fff;
       background: #e2eaed; }
-      @media only screen and (max-width: 1280px) {
-        header ul.top-nav .feature {
-          right: 280px; } }
       header ul.top-nav .feature img[src] {
         padding: 30px 20px;
         vertical-align: top; }
