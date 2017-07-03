@@ -434,7 +434,6 @@ function initSlidePanels() {
 		$(this).addClass("active");
 		$(".slide-over-right").addClass("compressed");
 		$("h3.text-flip").addClass("vertical-text");
-		$(this).hasClass("animated") ? 
 		$(this).find(".txt-content").addClass('animated bounceOutDown');
 		setTimeout(function(){$(this).find(".txt-content").hide()}, 1000);
 		initPanelSlider();
