@@ -3741,12 +3741,12 @@ footer {
 			color: $colorWhite;
 		}
 	}
-	@include max-screen($xmd){
-		background: $colorSlateBlue2 !important;
-		h2, p, span {
-			color: $colorDarkBlue !important; 
-		}
-	}
+	// @include max-screen($xmd){
+	// 	background: $colorSlateBlue2 !important;
+	// 	h2, p, span {
+	// 		color: $colorDarkBlue !important; 
+	// 	}
+	// }
 	.txt-subcontent {
 		padding: 5px 0;
 		text-align: right;
@@ -3755,16 +3755,27 @@ footer {
 		bottom:	0;
 		left: 0;
 		width: 100%;
+		@include max-screen($sm) {
+			text-align: center;
+		}	
 		a {
 			color: $colorWhite;
 			line-height: 3;
 			font-size: .9rem;			
 			margin-right: 70px;
+			
 			span {
 				color: $colorWhite !important;
 			}
 			@include max-screen($xlg) {
 				margin-right:60px;
+			}
+			@include max-screen($sm){
+				padding: 8px 15px;
+				margin-right: 0;
+				border: 1px solid $colorWhite;
+				width: 85%;
+				margin: 0 auto;
 			}
 			&:after {
 				content: '\f0da';
@@ -3776,6 +3787,9 @@ footer {
 			    width: 52px;
 			    padding: 6px 22px;
 			    background: $colorBrightRed1;
+			    @include max-screen($sm) {
+			    	display: none;
+			    }
 			}
 		}
 	}
@@ -4380,6 +4394,10 @@ footer {
 			position: absolute;
 			bottom: 0;
 			width: 100%;
+			margin-bottom:53px;
+			@include max-screen($sm) {
+				text-align: center;
+			}
 		}
 		
 		&:after {
@@ -4443,7 +4461,9 @@ footer {
 		color:$colorWhite;
 		background: rgba($colorDarkBlue, .5);
 		padding:40px;
-		
+		@include max-screen($sm){
+			background: rgba($colorSlateBlue2, 1);
+		}
 		h3 {
 			text-transform:uppercase;
 			font-weight:500;
@@ -4484,13 +4504,28 @@ footer {
 		bottom:	0;
 		left: 0;
 		width: 100%;
+		@include max-screen($sm) {
+			text-align: center;
+			background: $colorSlateBlue2;
+		}	
 		a {
 			color: $colorWhite;
 			line-height: 3;
 			font-size: .9rem;			
 			margin-right: 70px;
+			
+			span {
+				color: $colorWhite !important;
+			}
 			@include max-screen($xlg) {
 				margin-right:60px;
+			}
+			@include max-screen($sm){
+				padding: 8px 15px;
+				margin-right: 0;
+				border: 1px solid $colorWhite;
+				width: 85%;
+				margin: 0 auto;
 			}
 			&:after {
 				content: '\f0da';
@@ -4502,6 +4537,9 @@ footer {
 			    width: 52px;
 			    padding: 6px 22px;
 			    background: $colorBrightRed1;
+			    @include max-screen($sm) {
+			    	display: none;
+			    }
 			}
 		}
 	}

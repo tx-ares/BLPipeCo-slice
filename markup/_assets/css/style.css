@@ -2617,11 +2617,6 @@ footer {
     background: #00263b; }
     .latest-articles.darkblue-theme h2, .latest-articles.darkblue-theme p, .latest-articles.darkblue-theme span {
       color: #fff; }
-  @media only screen and (max-width: 768px) {
-    .latest-articles {
-      background: #bcc7cd !important; }
-      .latest-articles h2, .latest-articles p, .latest-articles span {
-        color: #00263b !important; } }
   .latest-articles .txt-subcontent {
     padding: 5px 0;
     text-align: right;
@@ -2630,6 +2625,9 @@ footer {
     bottom: 0;
     left: 0;
     width: 100%; }
+    @media only screen and (max-width: 575px) {
+      .latest-articles .txt-subcontent {
+        text-align: center; } }
     .latest-articles .txt-subcontent a {
       color: #fff;
       line-height: 3;
@@ -2640,6 +2638,13 @@ footer {
       @media only screen and (max-width: 1280px) {
         .latest-articles .txt-subcontent a {
           margin-right: 60px; } }
+      @media only screen and (max-width: 575px) {
+        .latest-articles .txt-subcontent a {
+          padding: 8px 15px;
+          margin-right: 0;
+          border: 1px solid #fff;
+          width: 85%;
+          margin: 0 auto; } }
       .latest-articles .txt-subcontent a:after {
         content: '\f0da';
         font-family: FontAwesome;
@@ -2650,6 +2655,9 @@ footer {
         width: 52px;
         padding: 6px 22px;
         background: #d0202f; }
+        @media only screen and (max-width: 575px) {
+          .latest-articles .txt-subcontent a:after {
+            display: none; } }
 
 .related-contents {
   padding: 40px 0;
@@ -3027,7 +3035,11 @@ footer {
     .image-cta .img-content .txt-content {
       position: absolute;
       bottom: 0;
-      width: 100%; }
+      width: 100%;
+      margin-bottom: 53px; }
+      @media only screen and (max-width: 575px) {
+        .image-cta .img-content .txt-content {
+          text-align: center; } }
     .image-cta .img-content:after {
       content: '';
       position: absolute;
@@ -3083,6 +3095,9 @@ footer {
     color: #fff;
     background: rgba(0, 38, 59, 0.5);
     padding: 40px; }
+    @media only screen and (max-width: 575px) {
+      .image-cta .txt-content {
+        background: #bcc7cd; } }
     .image-cta .txt-content h3 {
       text-transform: uppercase;
       font-weight: 500;
@@ -3106,14 +3121,27 @@ footer {
     bottom: 0;
     left: 0;
     width: 100%; }
+    @media only screen and (max-width: 575px) {
+      .image-cta .txt-subcontent {
+        text-align: center;
+        background: #bcc7cd; } }
     .image-cta .txt-subcontent a {
       color: #fff;
       line-height: 3;
       font-size: .9rem;
       margin-right: 70px; }
+      .image-cta .txt-subcontent a span {
+        color: #fff !important; }
       @media only screen and (max-width: 1280px) {
         .image-cta .txt-subcontent a {
           margin-right: 60px; } }
+      @media only screen and (max-width: 575px) {
+        .image-cta .txt-subcontent a {
+          padding: 8px 15px;
+          margin-right: 0;
+          border: 1px solid #fff;
+          width: 85%;
+          margin: 0 auto; } }
       .image-cta .txt-subcontent a:after {
         content: '\f0da';
         font-family: FontAwesome;
@@ -3124,6 +3152,9 @@ footer {
         width: 52px;
         padding: 6px 22px;
         background: #d0202f; }
+        @media only screen and (max-width: 575px) {
+          .image-cta .txt-subcontent a:after {
+            display: none; } }
   @media only screen and (max-width: 1280px) {
     .image-cta .img-content .caption {
       padding: 10px 30px; }
