@@ -3763,7 +3763,7 @@ footer {
 		bottom:	0;
 		left: 0;
 		width: 100%;
-		@include max-screen($sm) {
+		@include max-screen($xmd) {
 			text-align: center;
 		}	
 		a {
@@ -3778,7 +3778,7 @@ footer {
 			@include max-screen($xlg) {
 				margin-right:60px;
 			}
-			@include max-screen($sm){
+			@include max-screen($xmd){
 				padding: 8px 15px;
 				margin-right: 0;
 				border: 1px solid $colorWhite;
@@ -3795,7 +3795,7 @@ footer {
 			    width: 52px;
 			    padding: 6px 22px;
 			    background: $colorBrightRed1;
-			    @include max-screen($sm) {
+			    @include max-screen($xmd) {
 			    	display: none;
 			    }
 			}
@@ -4512,7 +4512,7 @@ footer {
 		bottom:	0;
 		left: 0;
 		width: 100%;
-		@include max-screen($sm) {
+		@include max-screen($xmd) {
 			text-align: center;
 			background: $colorSlateBlue2;
 		}	
@@ -4528,7 +4528,7 @@ footer {
 			@include max-screen($xlg) {
 				margin-right:60px;
 			}
-			@include max-screen($sm){
+			@include max-screen($xmd){
 				padding: 8px 15px;
 				margin-right: 0;
 				border: 1px solid $colorWhite;
@@ -4545,7 +4545,7 @@ footer {
 			    width: 52px;
 			    padding: 6px 22px;
 			    background: $colorBrightRed1;
-			    @include max-screen($sm) {
+			    @include max-screen($xmd) {
 			    	display: none;
 			    }
 			}

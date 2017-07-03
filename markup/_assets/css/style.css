@@ -2627,7 +2627,7 @@ footer {
     bottom: 0;
     left: 0;
     width: 100%; }
-    @media only screen and (max-width: 575px) {
+    @media only screen and (max-width: 768px) {
       .latest-articles .txt-subcontent {
         text-align: center; } }
     .latest-articles .txt-subcontent a {
@@ -2640,7 +2640,7 @@ footer {
       @media only screen and (max-width: 1280px) {
         .latest-articles .txt-subcontent a {
           margin-right: 60px; } }
-      @media only screen and (max-width: 575px) {
+      @media only screen and (max-width: 768px) {
         .latest-articles .txt-subcontent a {
           padding: 8px 15px;
           margin-right: 0;
@@ -2657,7 +2657,7 @@ footer {
         width: 52px;
         padding: 6px 22px;
         background: #d0202f; }
-        @media only screen and (max-width: 575px) {
+        @media only screen and (max-width: 768px) {
           .latest-articles .txt-subcontent a:after {
             display: none; } }
 
@@ -3123,7 +3123,7 @@ footer {
     bottom: 0;
     left: 0;
     width: 100%; }
-    @media only screen and (max-width: 575px) {
+    @media only screen and (max-width: 768px) {
       .image-cta .txt-subcontent {
         text-align: center;
         background: #bcc7cd; } }
@@ -3137,7 +3137,7 @@ footer {
       @media only screen and (max-width: 1280px) {
         .image-cta .txt-subcontent a {
           margin-right: 60px; } }
-      @media only screen and (max-width: 575px) {
+      @media only screen and (max-width: 768px) {
         .image-cta .txt-subcontent a {
           padding: 8px 15px;
           margin-right: 0;
@@ -3154,7 +3154,7 @@ footer {
         width: 52px;
         padding: 6px 22px;
         background: #d0202f; }
-        @media only screen and (max-width: 575px) {
+        @media only screen and (max-width: 768px) {
           .image-cta .txt-subcontent a:after {
             display: none; } }
   @media only screen and (max-width: 1280px) {
