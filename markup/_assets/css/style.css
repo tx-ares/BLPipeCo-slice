@@ -598,9 +598,13 @@ figure {
     float: none;
     display: table-cell; }
 
-.row-no-padding [class*="col-"] {
-  padding-left: 0 !important;
-  padding-right: 0 !important; }
+.row.no-gutters {
+  margin-right: 0;
+  margin-left: 0; }
+  .row.no-gutters > [class^="col-"],
+  .row.no-gutters > [class*=" col-"] {
+    padding-right: 0 !important;
+    padding-left: 0 !important; }
 
 /*  Utilities Sizes (Height and Width) */
 .fullpage {
@@ -1634,6 +1638,9 @@ footer {
       border-right: solid 1px #fff;
       height: 55px;
       line-height: 110%; }
+      @media only screen and (max-width: 575px) {
+        footer .container-fluid > .row > [class*="col-"] {
+          border: none; } }
       footer .container-fluid > .row > [class*="col-"]:last-child {
         border-right: none; }
   footer .copyright {
@@ -2560,15 +2567,14 @@ footer {
       padding-right: 20px; }
     .main-content .aside > .container-fluid,
     .main-content .secondary > .container-fluid {
-      padding-right: 40px;
       padding-left: 40px; } }
   @media only screen and (max-width: 575px) {
     .main-content .main > .container-fluid {
       padding-right: 20px; }
     .main-content .aside > .container-fluid,
     .main-content .secondary > .container-fluid {
-      padding-left: 20px;
-      padding-right: 20px; } }
+      padding-left: 0;
+      padding-right: 0; } }
 
 .articles {
   margin: 40px 0; }

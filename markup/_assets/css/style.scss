@@ -754,11 +754,15 @@ $padding-sm: 20px;
 	}
 }
 
-.row-no-padding {
-  [class*="col-"] {
-    padding-left: 0 !important;
-    padding-right: 0 !important;
-  }
+.row.no-gutters {
+  margin-right: 0;
+  margin-left: 0;
+
+	> [class^="col-"],
+	> [class*=" col-"] {
+	    padding-right: 0 !important;
+	    padding-left: 0 !important;
+	  }
 }
 
 /*  Utilities Sizes (Height and Width) */
@@ -2133,7 +2137,9 @@ footer {
 				border-right:solid 1px $colorWhite;
 				height:55px;
 				line-height: 110%;
-				
+				@include max-screen($sm){
+					border: none;
+				}
 				&:last-child {
 					border-right:none;
 				}
@@ -3656,7 +3662,7 @@ footer {
 		.aside,
 		.secondary {
 			>.container-fluid {
-				padding-right:40px;
+				// padding-right:40px;
 				padding-left:40px;
 				
 			}
@@ -3673,8 +3679,8 @@ footer {
 		.aside,
 		.secondary {
 			>.container-fluid {
-				padding-left:20px;
-				padding-right:20px;
+				padding-left:0;
+				padding-right:0;
 			}
 		}
 	}
