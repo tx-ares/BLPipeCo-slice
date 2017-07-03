@@ -5233,6 +5233,16 @@ footer {
 		}
 		h3 {
 			color: $colorWhite;
+			text-transform:inherit;
+			font-weight:500;
+			@include font-size(24px);
+			@include transition( all .3s);
+			&.vertical-text {
+				position: absolute;
+				left: -320px;
+				margin: 30px 5px;		
+				@include transform(rotate(-90deg));
+			}
 		}
 	
 		&:before {
@@ -5309,7 +5319,8 @@ footer {
 		@include transition( all .3s);
 		&.vertical-text {
 			position: absolute;
-			right:0;
+			right: -75px;
+			margin: 30px 5px;		
 			@include transform(rotate(-90deg));
 		}
 	}
