@@ -879,10 +879,12 @@ $padding-sm: 20px;
     top: 18px;
 	
 	span {
+		background: #fff;
 		@extend .menu-line-style;
 		&:before,
 		&:after {
 			content:'';
+			background: #fff;
 			@extend .menu-line-style;
 			@include transition(all 0.6s);
 		}
@@ -1210,6 +1212,12 @@ $padding-sm: 20px;
 			height: 59px;
 			img[src] {
 				margin: 8px 22px;
+				@include max-screen($lg) {
+					visibility: hidden;
+				}
+				@include max-screen($xmd) {
+					visibility: visible;
+				}
 			}
 		}
 		form {
@@ -1272,7 +1280,7 @@ $padding-sm: 20px;
 			@include font-size(14px);
 			font-weight:500;
 			text-transform:uppercase;
-		
+
 			>span:not(.holder) {
 				display:inline-block;
 				padding: 15px 30px;
@@ -1360,8 +1368,8 @@ $padding-sm: 20px;
 				a {
 					
 					>span {
-						background:$colorSlateBlue;
-						color:$colorWhite;
+						background:$colorLightGrey7;
+						color:$colorDarkBlue;
 					}
 					
 					&:hover {
@@ -2005,7 +2013,7 @@ header {
 		position:absolute;
 		right:0;
 		top:0;
-		background:$colorWhite;
+		background:$colorDarkBlue;
 		height:58px;
 		width:49px;
 		z-index:9999;
@@ -3196,7 +3204,10 @@ footer {
 			img {
 				width:85px!important;
 				height:40px!important;
-				margin-top: 8px;
+				@include max-screen($lg){
+					margin-top: 8px;
+				}
+				
 				@include transition(all .3s);
 			}
 		}

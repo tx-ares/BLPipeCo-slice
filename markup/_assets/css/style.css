@@ -714,16 +714,19 @@ figure {
   position: absolute;
   right: 10px;
   top: 18px; }
-  .menu-opener span:before, .menu-opener span:after {
-    content: '';
-    -moz-transition: all 0.6s;
-    -o-transition: all 0.6s;
-    -webkit-transition: all 0.6s;
-    transition: all 0.6s; }
-  .menu-opener span:before {
-    top: -7px; }
-  .menu-opener span:after {
-    bottom: -7px; }
+  .menu-opener span {
+    background: #fff; }
+    .menu-opener span:before, .menu-opener span:after {
+      content: '';
+      background: #fff;
+      -moz-transition: all 0.6s;
+      -o-transition: all 0.6s;
+      -webkit-transition: all 0.6s;
+      transition: all 0.6s; }
+    .menu-opener span:before {
+      top: -7px; }
+    .menu-opener span:after {
+      bottom: -7px; }
   .menu-opener.active span {
     background-color: transparent; }
     .menu-opener.active span:before, .menu-opener.active span:after {
@@ -953,6 +956,12 @@ figure {
     height: 59px; }
     .mobile-menu .content-wrapper .logo img[src] {
       margin: 8px 22px; }
+      @media only screen and (max-width: 1024px) {
+        .mobile-menu .content-wrapper .logo img[src] {
+          visibility: hidden; } }
+      @media only screen and (max-width: 768px) {
+        .mobile-menu .content-wrapper .logo img[src] {
+          visibility: visible; } }
   .mobile-menu .content-wrapper form {
     margin: 0;
     padding: 0;
@@ -1094,8 +1103,8 @@ figure {
       position: relative;
       /* 1st level */ }
       .mobile-menu .menu-container ul > li a > span {
-        background: #8a9ca5;
-        color: #fff; }
+        background: #e2eaed;
+        color: #00263b; }
       .mobile-menu .menu-container ul > li a:hover > span {
         background: #c2c2c2;
         color: #fff; }
@@ -1534,7 +1543,7 @@ header {
     position: absolute;
     right: 0;
     top: 0;
-    background: #fff;
+    background: #00263b;
     height: 58px;
     width: 49px;
     z-index: 9999; }
@@ -2286,11 +2295,13 @@ footer {
     .header-compressed header .logo img {
       width: 85px !important;
       height: 40px !important;
-      margin-top: 8px;
       -moz-transition: all 0.3s;
       -o-transition: all 0.3s;
       -webkit-transition: all 0.3s;
       transition: all 0.3s; }
+      @media only screen and (max-width: 1024px) {
+        .header-compressed header .logo img {
+          margin-top: 8px; } }
   .header-compressed header .slogan {
     display: inline-block;
     float: left;
