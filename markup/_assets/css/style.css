@@ -1125,17 +1125,19 @@ figure {
           /* 2nd level */ }
           .mobile-menu .menu-container ul > li > ul > li a span:not(.holder):after {
             content: ""; }
-          .mobile-menu .menu-container ul > li > ul > li > a > span {
-            background: #00263b;
-            color: #fff; }
+          .mobile-menu .menu-container ul > li > ul > li > a {
+            font-weight: 400; }
+            .mobile-menu .menu-container ul > li > ul > li > a > span {
+              background: #00263b;
+              color: #fff; }
           .mobile-menu .menu-container ul > li > ul > li.open > a > span {
             background: #dbd8cf; }
           .mobile-menu .menu-container ul > li > ul > li > ul > li {
             /* 3rd level */ }
             .mobile-menu .menu-container ul > li > ul > li > ul > li > a {
               margin-bottom: 0;
-              font-size: 13px;
-              font-size: 0.8125rem; }
+              font-size: 14px;
+              font-size: 0.875rem; }
               .mobile-menu .menu-container ul > li > ul > li > ul > li > a > span {
                 position: relative;
                 text-transform: none;

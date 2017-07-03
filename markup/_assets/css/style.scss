@@ -1417,6 +1417,7 @@ $padding-sm: 20px;
 						}
 						
 						>a {
+							font-weight: 400;
 							>span {
 								background:$colorDarkBlue;
 								color:$colorWhite;
@@ -1440,7 +1441,7 @@ $padding-sm: 20px;
 								/* 3rd level */
 								>a {
 									margin-bottom:0;
-									@include font-size(13px);
+									@include font-size(14px);
 									
 									>span {
 										
