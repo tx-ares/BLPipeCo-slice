@@ -1272,7 +1272,7 @@ $padding-sm: 20px;
 			@include font-size(14px);
 			font-weight:500;
 			text-transform:uppercase;
-			
+		
 			>span:not(.holder) {
 				display:inline-block;
 				padding: 15px 30px;
@@ -1282,8 +1282,9 @@ $padding-sm: 20px;
 				position:relative;
 				
 				&:after {
-					content:'\f105';
+					content:'\f0da';
 					font-family:$font-icon;
+					color: $colorBrightRed2;
 					@include font-size(17px);
 					width:10px;
 					height:20px;
@@ -1308,7 +1309,7 @@ $padding-sm: 20px;
 			text-align:center;
 			font-weight:300!important;
 			font-size:26px;
-			
+			color: $colorBrightRed1;
 			&:after {
 				content:'+';
 				position:absolute;
@@ -1335,6 +1336,7 @@ $padding-sm: 20px;
 					}
 					>span:not(.holder) {
 						&:after {
+							color: $colorWhite;
 						}
 					}
 				}
@@ -1401,6 +1403,7 @@ $padding-sm: 20px;
 						a {
 							span:not(.holder) {
 								&:after {
+									content: "";
 								}
 							}
 						}

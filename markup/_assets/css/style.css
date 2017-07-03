@@ -1031,8 +1031,9 @@ figure {
         height: 100%;
         position: relative; }
         .mobile-menu .menu-container a > span:not(.holder):after {
-          content: '\f105';
+          content: '\f0da';
           font-family: "FontAwesome";
+          color: #d0112b;
           font-size: 17px;
           font-size: 1.0625rem;
           width: 10px;
@@ -1057,7 +1058,8 @@ figure {
       margin-left: 1px;
       text-align: center;
       font-weight: 300 !important;
-      font-size: 26px; }
+      font-size: 26px;
+      color: #d0202f; }
       .mobile-menu .menu-container .holder:after {
         content: '+';
         position: absolute;
@@ -1075,6 +1077,8 @@ figure {
       padding-right: 50px; }
     .mobile-menu .menu-container .has-sub.open > a .holder:after {
       content: '-'; }
+    .mobile-menu .menu-container .has-sub.open > a > span:not(.holder):after {
+      color: #fff; }
     .mobile-menu .menu-container > ul {
       display: block; }
     .mobile-menu .menu-container ul a {
@@ -1110,6 +1114,8 @@ figure {
         display: none; }
         .mobile-menu .menu-container ul > li > ul > li {
           /* 2nd level */ }
+          .mobile-menu .menu-container ul > li > ul > li a span:not(.holder):after {
+            content: ""; }
           .mobile-menu .menu-container ul > li > ul > li > a > span {
             background: #00263b;
             color: #fff; }
