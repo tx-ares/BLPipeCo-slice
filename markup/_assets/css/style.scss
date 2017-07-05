@@ -5237,8 +5237,19 @@ footer {
 				display: block !important;
 				height: 0;
 				opacity: 0;
+				.slick-next, 
+				.slick-prev {
+					top: 150px;
+				}
+				.slick-dots {
+					bottom: initial;
+					margin-top: 10px;
+				}
 				.slick-track {
 					width: 100%;
+				}
+				.slick-list {
+					margin: 0 85px;
 				}
 				@include transition(all .3s);
 				.slick-slide {
