@@ -5304,8 +5304,8 @@ footer {
 			content: '\f0d9';
 			font-family: $font-icon;
 			position: absolute;
-			left:10px;
-			top:50%;
+			left: 10px;
+			top: 45%;
 			@include max-screen($smd){
 				left: 50px;
 			}
@@ -5363,7 +5363,7 @@ footer {
 			color: $colorDarkBlue;
 			position: absolute;
 			right: 10px;
-			top: 50%;
+			top: 45%;
 			@include max-screen($smd){
 				right: 50px;
 			}

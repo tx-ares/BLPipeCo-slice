@@ -3610,7 +3610,7 @@ footer {
       font-family: "FontAwesome";
       position: absolute;
       left: 10px;
-      top: 50%; }
+      top: 45%; }
       @media only screen and (max-width: 865px) {
         .feature-slide-box .slide-over-right:before {
           left: 50px; } }
@@ -3649,7 +3649,7 @@ footer {
       color: #00263b;
       position: absolute;
       right: 10px;
-      top: 50%; }
+      top: 45%; }
       @media only screen and (max-width: 865px) {
         .feature-slide-box .slide-over-left:after {
           right: 50px; } }
