@@ -668,6 +668,9 @@ $padding-sm: 20px;
 		    position: absolute;
 		    right: 0;
 		    top: 0;
+		    @include max-screen($smd) {
+		    	width: 0;
+		    }
 		}	
 	}
 	

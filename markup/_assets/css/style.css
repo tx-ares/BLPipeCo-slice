@@ -544,6 +544,9 @@ figure {
       position: absolute;
       right: 0;
       top: 0; }
+      @media only screen and (max-width: 865px) {
+        .row.slider-row:after {
+          width: 0; } }
   .row.fh-col {
     height: 100%; }
     .row.fh-col > [class*="col-"] {
