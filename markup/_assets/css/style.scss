@@ -5835,7 +5835,6 @@ footer {
 		display:table;
 		table-layout:fixed;
 		width:100%;
-		
 		li {
 			display:table-cell;
 			color:$colorWhite;
@@ -5844,7 +5843,7 @@ footer {
 			position:relative;
 			
 			span {
-				background:$colorGreen;
+				background:$colorSlateBlue;
 				color:$colorWhite;
 				text-align:center;
 				text-transform:uppercase;
@@ -5853,7 +5852,7 @@ footer {
 				display:block;
 				width:100%;
 				height:100%;
-				border:solid 2px $colorGreen;
+				border:solid 2px $colorDarkBlue;
 				border-bottom:none;
 				padding:20px 0;
 				
@@ -5864,7 +5863,7 @@ footer {
 					bottom:0;
 					height:2px;
 					width:100%;
-					background:$colorGreen;
+					background:$colorDarkBlue;
 					z-index:-1;
 				}
 				
@@ -5881,7 +5880,7 @@ footer {
 			&.responsive-tabs__list__item--active {
 				span {
 					background:$colorWhite;
-					color:$colorGreen;
+					color:$colorDarkBlue;
 					border-bottom:none;
 
 				}
@@ -5892,7 +5891,7 @@ footer {
 	
 	.responsive-tabs__panel {
 		padding: 35px;
-		border: solid 2px $colorGreen;
+		border: solid 2px $colorDarkBlue;
 		position: relative;
 		border-top: none;
 	}

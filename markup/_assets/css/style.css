@@ -3958,7 +3958,7 @@ footer {
       outline: none;
       position: relative; }
       .responsive-tabs-wrapper ul.responsive-tabs__list li span {
-        background: #00aa66;
+        background: #8a9ca5;
         color: #fff;
         text-align: center;
         text-transform: uppercase;
@@ -3968,7 +3968,7 @@ footer {
         display: block;
         width: 100%;
         height: 100%;
-        border: solid 2px #00aa66;
+        border: solid 2px #00263b;
         border-bottom: none;
         padding: 20px 0; }
         .responsive-tabs-wrapper ul.responsive-tabs__list li span:before {
@@ -3978,7 +3978,7 @@ footer {
           bottom: 0;
           height: 2px;
           width: 100%;
-          background: #00aa66;
+          background: #00263b;
           z-index: -1; }
       .responsive-tabs-wrapper ul.responsive-tabs__list li:first-child {
         padding-left: 0; }
@@ -3986,11 +3986,11 @@ footer {
         padding-right: 0; }
       .responsive-tabs-wrapper ul.responsive-tabs__list li.responsive-tabs__list__item--active span {
         background: #fff;
-        color: #00aa66;
+        color: #00263b;
         border-bottom: none; }
   .responsive-tabs-wrapper .responsive-tabs__panel {
     padding: 35px;
-    border: solid 2px #00aa66;
+    border: solid 2px #00263b;
     position: relative;
     border-top: none; }
   @media only screen and (max-width: 768px) {
