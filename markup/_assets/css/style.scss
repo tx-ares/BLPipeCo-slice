@@ -658,6 +658,10 @@ $padding-sm: 20px;
 	&.row-compressed {
 		margin:0;
 	}
+
+	&.half-compressed {
+		margin: 0 -20px;
+	}
 	
 	/* Full height column */
 	&.fh-col {
@@ -5215,8 +5219,8 @@ footer {
 			width: 90%;
 			display:inline-block;
 			.slick-slider {
-				display: block !important;
-				height: 0;
+				// display: block !important;
+				// height: 0;
 				.slick-slide {
 					margin: 0 20px;
 					&:hover {
@@ -5234,10 +5238,10 @@ footer {
 		position: relative;
 		
 		&.active {
-			width: 90.5%;
+			width: 91%;
 		}
 		&.compressed {
-			width: 8.5%;
+			width: 8%;
 		}
 		.txt-content {
 			position: absolute;
@@ -5302,7 +5306,7 @@ footer {
 		}
 
 		&.active {
-			width: 90.5%;
+			width: 91%;
 			.panel-slider {
 				width: 100%;
 				min-width: 715px;
@@ -5313,7 +5317,7 @@ footer {
 			}
 		}
 		&.compressed {
-			width: 8.5%;
+			width: 8%;
 		}
 		.txt-content {
 			position: absolute;

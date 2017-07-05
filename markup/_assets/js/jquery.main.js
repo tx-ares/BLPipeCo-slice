@@ -500,8 +500,10 @@ function initPanelSlider(){
 	    // instead of a settings object
 	  ]
 	});
-
-	$(".slider-container").addClass("animate fadeInLeft");
+	
+	$(".panel-slider").show(); 
+	$(".panel-slider").addClass("animate fadeInLeft");
+    $(".panel-slider").get(0).slick.setPosition()
 }
 
 function calculatePanelDimensions() {
