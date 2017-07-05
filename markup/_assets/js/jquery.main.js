@@ -435,8 +435,9 @@ function initSlidePanels() {
 		$("h3.text-flip").addClass("vertical-text");
 		$(this).find(".txt-content").addClass('animated fadeOut');
 		setTimeout(function(){$(this).find(".txt-content").hide()}, 1000);
+
 		initPanelSlider();
-		setTimeout(calculatePanelDimensions(),1000);
+		setTimeout(calculatePanelDimensions(),1500);
 
 	});
 
@@ -452,8 +453,9 @@ function initSlidePanels() {
 		$("h3.text-flip").addClass("vertical-text");
 		$(this).find(".txt-content").addClass('animated fadeOut');
 		setTimeout(function(){$(this).find(".txt-content").hide()}, 1000);
+		
 		initPanelSlider();
-		setTimeout(calculatePanelDimensions(),1000);
+		setTimeout(calculatePanelDimensions(),1500);
 
 	});
 
@@ -502,15 +504,14 @@ function initPanelSlider(){
 	  ]
 	});
 
-	$(".slick-slider").css("display" , "block"); 
-	$(".slick-slider").addClass("animate fadeInDown");
-    $(".slick-slider").get(0).slick.setPosition()
 }
 
 function calculatePanelDimensions() {
-	var panelWidth = $(".panel .active").width();
+	var activePanel = $("*.panel.active .slider-container");
+	var panelWidth = activePanel.width();
 	console.log(panelWidth, "<< Calc panelWidth")
-	$(".panel-slider").css("width", panelWidth).css("display", "block");
+	activePanel.css("width", panelWidth);
+	activePanel.css("display", "block");
 }
 
 
