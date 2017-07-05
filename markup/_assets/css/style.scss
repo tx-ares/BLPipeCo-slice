@@ -5233,8 +5233,10 @@ footer {
 				margin: 50px 0;
 			}
 			.slick-slider {
-				// display: block !important;
-				// height: 0;
+				display: block !important;
+				height: 0;
+				opacity: 0;
+				@include transition(all .3s);
 				.slick-slide {
 					margin: 0 20px;
 					&:hover {
@@ -5252,6 +5254,15 @@ footer {
 		
 		&.active {
 			width: 91%;
+			.slick-slider {
+				width: 100%;
+				min-width: auto;
+				display: inline-block;
+				opacity: 1;
+			}
+			.txt-content {
+				opacity: 0;
+			}
 		}
 		&.compressed {
 			width: 8%;
@@ -5261,6 +5272,7 @@ footer {
 			left: 0;
 			top: 40px;
 			padding-left:50px;
+			@include transition(all .3s);
 			img[src] {
 				margin-bottom: 35px;
 			}
@@ -5309,7 +5321,7 @@ footer {
 			position: absolute;
 			left: 10px;
 			top: 45%;
-			@include max-screen($smd){
+			@include max-screen($smd) {
 				left: 50px;
 			}
 		}
@@ -5324,13 +5336,14 @@ footer {
 
 		&.active {
 			width: 91%;
-			.panel-slider {
+			.slick-slider {
 				width: 100%;
-				min-width: 715px;
+				min-width: auto;
 				display: inline-block;
+				opacity: 1;
 			}
 			.txt-content {
-				// display: none;
+				opacity: 0;
 			}
 		}
 		&.compressed {
@@ -5341,6 +5354,7 @@ footer {
 			right: 0;
 			top: 40px;
 			padding-right: 50px;
+			@include transition(all .3s);
 			img[src] {
 				margin-bottom: 35px;
 			}

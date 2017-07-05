@@ -415,10 +415,7 @@ function resetPanels() {
 		$(this).hide();
 	})
 	$("h3.text-flip").removeClass("vertical-text");
-	$(".txt-content").each(function(){ 
-		$(this).removeClass("fadeOut");
-		$(this).show();
-	});
+
 }
 
 function initSlidePanels() {
@@ -428,15 +425,13 @@ function initSlidePanels() {
 		$(this).hasClass("compressed") ? $(this).toggleClass("compressed") : ""
 		$(this).hasClass("vertical-text") ? $(this).toggleClass("vertical-text") : ""
 		$(this).find($(".txt-content")).each(function(){ $(this).removeClass("animated fadeOut")});
-		$(this).find(".txt-content").show();
 
 		$(this).addClass("active");
 		$(".slide-over-right").addClass("compressed");
 		$(this).find($("h3.text-flip")).addClass("vertical-text");
-		$(this).find(".txt-content").addClass('animated fadeOut');
 		setTimeout(function(){$(this).find(".txt-content").hide()}, 1000);
 
-		initPanelSlider();
+		setTimeout(initPanelSlider(), 1000);
 		setTimeout(calculatePanelDimensions(),1500);
 
 	});
@@ -446,12 +441,10 @@ function initSlidePanels() {
 		$(this).hasClass("compressed") ? $(this).toggleClass("compressed") : ""
 		$(this).hasClass("vertical-text") ? $(this).toggleClass("vertical-text") : ""
 		$(this).find($(".txt-content")).each(function(){ $(this).removeClass("animated fadeOut")});
-		$(this).find(".txt-content").show();
 
 		$(this).addClass("active");
 		$(".slide-over-left").addClass("compressed");
 		$(this).find($("h3.text-flip")).addClass("vertical-text");
-		$(this).find(".txt-content").addClass('animated fadeOut');
 		setTimeout(function(){$(this).find(".txt-content").hide()}, 1000);
 
 		initPanelSlider();
@@ -475,6 +468,15 @@ function initPanelSlider(){
 	  slidesToScroll: 1,
 	  easing: 'linear',
 	  responsive: [
+	  	{
+	      breakpoint: 1440,
+	      settings: {
+	        slidesToShow: 3,
+	        slidesToScroll: 3,
+	        infinite: true,
+	        dots: true
+	      }
+	    },
 	    {
 	      breakpoint: 1024,
 	      settings: {
