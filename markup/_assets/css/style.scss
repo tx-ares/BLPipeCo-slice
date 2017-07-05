@@ -5212,7 +5212,7 @@ footer {
 	// padding:30px;
 	// margin-bottom:40px;
 	// min-height: 300px;
-	
+
 	@include transition(all .3s);
 	.panel {
 		min-height: 360px;
@@ -5260,12 +5260,18 @@ footer {
 				display: inline-block;
 				opacity: 1;
 			}
-			.txt-content {
+
+			.txt-content,
+			h3.text-upcase.text-flip.vertical-text {
 				opacity: 0;
 			}
+
 		}
 		&.compressed {
 			width: 8%;
+			.txt-content {
+				opacity: 0;
+			}
 		}
 		.txt-content {
 			position: absolute;
@@ -5342,12 +5348,16 @@ footer {
 				display: inline-block;
 				opacity: 1;
 			}
-			.txt-content {
+			.txt-content,
+			h3.text-upcase.text-flip.vertical-text {
 				opacity: 0;
 			}
 		}
 		&.compressed {
 			width: 8%;
+			.txt-content {
+				opacity: 0;
+			}
 		}
 		.txt-content {
 			position: absolute;

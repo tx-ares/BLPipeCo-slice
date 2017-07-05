@@ -427,8 +427,8 @@ function initSlidePanels() {
 		$(this).find($(".txt-content")).each(function(){ $(this).removeClass("animated fadeOut")});
 
 		$(this).addClass("active");
-		$(".slide-over-right").addClass("compressed");
-		$(this).find($("h3.text-flip")).addClass("vertical-text");
+		$(".slide-over-right").addClass("compressed").removeClass("active");
+		$("h3.text-flip").addClass("vertical-text");
 		setTimeout(function(){$(this).find(".txt-content").hide()}, 1000);
 
 		setTimeout(initPanelSlider(), 1000);
@@ -438,13 +438,14 @@ function initSlidePanels() {
 
 	$(".slide-over-right").on("click", function(e){
 		e.stopPropagation();
+
 		$(this).hasClass("compressed") ? $(this).toggleClass("compressed") : ""
 		$(this).hasClass("vertical-text") ? $(this).toggleClass("vertical-text") : ""
 		$(this).find($(".txt-content")).each(function(){ $(this).removeClass("animated fadeOut")});
 
 		$(this).addClass("active");
-		$(".slide-over-left").addClass("compressed");
-		$(this).find($("h3.text-flip")).addClass("vertical-text");
+		$(".slide-over-left").addClass("compressed").removeClass("active");
+		$("h3.text-flip").addClass("vertical-text");
 		setTimeout(function(){$(this).find(".txt-content").hide()}, 1000);
 
 		initPanelSlider();
