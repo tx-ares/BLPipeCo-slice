@@ -535,8 +535,15 @@ figure {
       padding: 0; }
   .row.row-compressed {
     margin: 0; }
-  .row.half-compressed {
-    margin: 0 -20px; }
+  .row.slider-row {
+    margin: 0; }
+    .row.slider-row:after {
+      background: #d0112b;
+      height: 360px;
+      width: 15px;
+      position: absolute;
+      right: 0;
+      top: 0; }
   .row.fh-col {
     height: 100%; }
     .row.fh-col > [class*="col-"] {
@@ -3550,8 +3557,7 @@ footer {
           background: #e2eaed; }
   .feature-slide-box .slide-over-right {
     background: #d0112b;
-    color: #fff;
-    position: relative; }
+    color: #fff; }
     .feature-slide-box .slide-over-right.active {
       width: 91%; }
     .feature-slide-box .slide-over-right.compressed {
@@ -3566,12 +3572,15 @@ footer {
     @media only screen and (max-width: 865px) {
       .feature-slide-box .slide-over-right {
         display: block;
+        width: 100%; } }
+    @media only screen and (max-width: 865px) {
+      .feature-slide-box .slide-over-right {
+        display: block;
         width: 100%; }
         .feature-slide-box .slide-over-right .txt-content {
-          margin: auto;
-          position: static;
-          padding: 0;
-          width: 65%; } }
+          right: 15%; }
+        .feature-slide-box .slide-over-right h3.text-flip {
+          right: 25%; } }
     .feature-slide-box .slide-over-right h3.text-flip {
       color: #fff;
       text-transform: inherit;
@@ -3631,10 +3640,9 @@ footer {
         display: block;
         width: 100%; }
         .feature-slide-box .slide-over-left .txt-content {
-          margin: auto;
-          position: static;
-          padding: 0;
-          width: 65%; } }
+          right: 15%; }
+        .feature-slide-box .slide-over-left h3.text-flip {
+          right: 25%; } }
     .feature-slide-box .slide-over-left:after {
       content: '\f0da';
       font-family: "FontAwesome";
@@ -3930,12 +3938,12 @@ footer {
     .accordion.custom li .slide {
       padding-top: 20px; }
     .accordion.custom li.active {
-      border: solid 2px #ff7441; }
+      border: solid 2px #d0202f; }
       .accordion.custom li.active .opener {
-        color: #ff7441; }
+        color: #d0202f; }
         .accordion.custom li.active .opener:after {
           content: '-';
-          color: #ff7441; }
+          color: #d0202f; }
 
 .responsive-tabs-wrapper {
   margin-bottom: 40px; }

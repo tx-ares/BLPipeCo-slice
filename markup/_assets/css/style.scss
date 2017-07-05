@@ -659,8 +659,16 @@ $padding-sm: 20px;
 		margin:0;
 	}
 
-	&.half-compressed {
-		margin: 0 -20px;
+	&.slider-row {
+		margin: 0;
+		&:after {
+		    background: $colorBrightRed2;
+		    height: 360px;
+		    width: 15px;
+		    position: absolute;
+		    right: 0;
+		    top: 0;
+		}	
 	}
 	
 	/* Full height column */
@@ -5238,7 +5246,6 @@ footer {
 	.slide-over-right {
 		background: $colorBrightRed2;
 		color: $colorWhite;
-		position: relative;
 		
 		&.active {
 			width: 91%;
@@ -5257,12 +5264,16 @@ footer {
 		}
 		@include max-screen($smd) {
 			display: block;
+			width: 100%;		
+		}
+		@include max-screen($smd) {
+			display: block;
 			width: 100%;
 			.txt-content {
-				margin: auto;
-				position: static;
-				padding:0;
-				width: 65%;
+				right: 15%
+			}
+			h3.text-flip {
+				right: 25%;
 			}
 		}
 		h3.text-flip {
@@ -5335,11 +5346,14 @@ footer {
 			display: block;
 			width: 100%;
 			.txt-content {
-				margin: auto;
-				position: static;
-				padding: 0;
-				width: 65%;
+				right: 15%
 			}
+			h3.text-flip {
+				right: 25%;
+			}
+		}
+
+		@include max-screen($xmd) {
 
 		}
 
@@ -5799,14 +5813,14 @@ footer {
 			}
 			
 			&.active {
-				border:solid 2px $colorOrange;
+				border:solid 2px $colorBrightRed1;
 				
 				.opener {
-					color:$colorOrange;
+					color:$colorBrightRed1;
 					
 					&:after {
 						content:'-';
-						color:$colorOrange;
+						color:$colorBrightRed1;
 					}
 				}
 			}
