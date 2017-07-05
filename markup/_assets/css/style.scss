@@ -5215,8 +5215,8 @@ footer {
 			width: 90%;
 			display:inline-block;
 			.slick-slider {
-				// display: block !important;
-				// height: 0;
+				display: block !important;
+				height: 0;
 				.slick-slide {
 					margin: 0 20px;
 					&:hover {
@@ -5258,7 +5258,7 @@ footer {
 				width: 65%;
 			}
 		}
-		h3 {
+		h3.text-flip {
 			color: $colorWhite;
 			text-transform:inherit;
 			font-weight:500;
@@ -5305,6 +5305,7 @@ footer {
 			width: 90.5%;
 			.panel-slider {
 				width: 100%;
+				min-width: 715px;
 				display: inline-block;
 			}
 			.txt-content {
@@ -5352,7 +5353,7 @@ footer {
 		}	
 	}
 	
-	h3 {
+	h3.text-flip {
 		color:$colorDarkBlue;
 		text-transform:inherit;
 		font-weight:500;

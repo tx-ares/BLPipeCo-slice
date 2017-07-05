@@ -3539,10 +3539,13 @@ footer {
       height: auto;
       width: 90%;
       display: inline-block; }
-      .feature-slide-box .panel .slider-container .slick-slider .slick-slide {
-        margin: 0 20px; }
-        .feature-slide-box .panel .slider-container .slick-slider .slick-slide:hover {
-          background: #e2eaed; }
+      .feature-slide-box .panel .slider-container .slick-slider {
+        display: block !important;
+        height: 0; }
+        .feature-slide-box .panel .slider-container .slick-slider .slick-slide {
+          margin: 0 20px; }
+          .feature-slide-box .panel .slider-container .slick-slider .slick-slide:hover {
+            background: #e2eaed; }
   .feature-slide-box .slide-over-right {
     background: #d0112b;
     color: #fff;
@@ -3567,7 +3570,7 @@ footer {
           position: static;
           padding: 0;
           width: 65%; } }
-    .feature-slide-box .slide-over-right h3 {
+    .feature-slide-box .slide-over-right h3.text-flip {
       color: #fff;
       text-transform: inherit;
       font-weight: 500;
@@ -3580,7 +3583,7 @@ footer {
       -o-transition: all 0.3s;
       -webkit-transition: all 0.3s;
       transition: all 0.3s; }
-      .feature-slide-box .slide-over-right h3.vertical-text {
+      .feature-slide-box .slide-over-right h3.text-flip.vertical-text {
         position: absolute;
         left: -95px;
         top: 95px;
@@ -3610,6 +3613,7 @@ footer {
       width: 90.5%; }
       .feature-slide-box .slide-over-left.active .panel-slider {
         width: 100%;
+        min-width: 715px;
         display: inline-block; }
     .feature-slide-box .slide-over-left.compressed {
       width: 8.5%; }
@@ -3641,7 +3645,7 @@ footer {
           right: 50px; } }
     .feature-slide-box .slide-over-left .slider {
       width: 60%; }
-  .feature-slide-box h3 {
+  .feature-slide-box h3.text-flip {
     color: #00263b;
     text-transform: inherit;
     font-weight: 500;
@@ -3654,7 +3658,7 @@ footer {
     -o-transition: all 0.3s;
     -webkit-transition: all 0.3s;
     transition: all 0.3s; }
-    .feature-slide-box h3.vertical-text {
+    .feature-slide-box h3.text-flip.vertical-text {
       position: absolute;
       right: -110px;
       top: 127px;
