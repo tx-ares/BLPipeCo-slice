@@ -462,7 +462,7 @@ function initPanelSlider(){
 	console.log("initPanelCarousel")
 
 	$(".panel-slider").slick({
-	  dots: true,
+	  dots: false,
 	  arrows: true,
 	  prevArrow:"<img class='a-left control-c prev slick-prev' src='_assets/images/ui/chevron-white-left.png'>",
       nextArrow:"<img class='a-right control-c next slick-next' src='_assets/images/ui/chevron-white-right.png'>",
