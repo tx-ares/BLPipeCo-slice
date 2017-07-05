@@ -3568,6 +3568,8 @@ footer {
           margin: 0 20px; }
           .feature-slide-box .panel .slider-container .slick-slider .slick-slide:hover {
             background: #e2eaed; }
+          .feature-slide-box .panel .slider-container .slick-slider .slick-slide h3 {
+            color: inherit; }
   .feature-slide-box .slide-over-right {
     background: #d0112b;
     color: #fff; }

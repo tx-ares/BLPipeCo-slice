@@ -5243,6 +5243,9 @@ footer {
 					&:hover {
 						background: $colorLightGrey7;
 					}
+					h3 {
+						color: inherit;
+					}
 				}
 
 			}

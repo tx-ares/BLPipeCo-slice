@@ -432,7 +432,7 @@ function initSlidePanels() {
 		setTimeout(function(){$(this).find(".txt-content").hide()}, 1000);
 
 		setTimeout(initPanelSlider(), 1000);
-		setTimeout(calculatePanelDimensions(),1500);
+		setTimeout(calculatePanelDimensions(),2500);
 
 	});
 
@@ -449,7 +449,7 @@ function initSlidePanels() {
 		setTimeout(function(){$(this).find(".txt-content").hide()}, 1000);
 
 		initPanelSlider();
-		setTimeout(calculatePanelDimensions(),1500);
+		setTimeout(calculatePanelDimensions(),2500);
 
 	});
 
@@ -470,10 +470,10 @@ function initPanelSlider(){
 	  easing: 'linear',
 	  responsive: [
 	  	{
-	      breakpoint: 1440,
+	      breakpoint: 1960,
 	      settings: {
-	        slidesToShow: 3,
-	        slidesToScroll: 3,
+	        slidesToShow: 5,
+	        slidesToScroll: 1,
 	        infinite: true,
 	        dots: true
 	      }
@@ -481,8 +481,8 @@ function initPanelSlider(){
 	    {
 	      breakpoint: 1024,
 	      settings: {
-	        slidesToShow: 3,
-	        slidesToScroll: 3,
+	        slidesToShow: 5,
+	        slidesToScroll: 1,
 	        infinite: true,
 	        dots: true
 	      }
@@ -490,8 +490,8 @@ function initPanelSlider(){
 	    {
 	      breakpoint: 600,
 	      settings: {
-	        slidesToShow: 2,
-	        slidesToScroll: 2
+	        slidesToShow: 1,
+	        slidesToScroll: 1
 	      }
 	    },
 	    {
