@@ -3789,6 +3789,7 @@ footer {
 
 			span {
 				color: $colorWhite !important;
+				text-transform: uppercase;
 			}
 			@include max-screen($xlg) {
 				margin-right:60px;
@@ -4540,9 +4541,9 @@ footer {
 			line-height: 3;
 			font-size: .9rem;			
 			margin-right: 70px;
-			
 			span {
 				color: $colorWhite !important;
+				text-transform: uppercase;
 			}
 			@include max-screen($xlg) {
 				margin-right:60px;

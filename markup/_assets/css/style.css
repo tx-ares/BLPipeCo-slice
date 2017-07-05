@@ -2648,7 +2648,8 @@ footer {
       font-size: .9rem;
       margin-right: 70px; }
       .latest-articles .txt-subcontent a span {
-        color: #fff !important; }
+        color: #fff !important;
+        text-transform: uppercase; }
       @media only screen and (max-width: 1280px) {
         .latest-articles .txt-subcontent a {
           margin-right: 60px; } }
@@ -3147,7 +3148,8 @@ footer {
       font-size: .9rem;
       margin-right: 70px; }
       .image-cta .txt-subcontent a span {
-        color: #fff !important; }
+        color: #fff !important;
+        text-transform: uppercase; }
       @media only screen and (max-width: 1280px) {
         .image-cta .txt-subcontent a {
           margin-right: 60px; } }
