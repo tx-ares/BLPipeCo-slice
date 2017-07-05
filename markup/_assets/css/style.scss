@@ -5237,12 +5237,13 @@ footer {
 				display: block !important;
 				height: 0;
 				opacity: 0;
+				.slick-track {
+					width: 100%;
+				}
 				@include transition(all .3s);
 				.slick-slide {
 					margin: 0 20px;
-					&:hover {
-						background: $colorLightGrey7;
-					}
+					max-width: 180px;
 					h3 {
 						color: inherit;
 					}
@@ -5268,6 +5269,7 @@ footer {
 			.txt-content,
 			h3.text-upcase.text-flip.vertical-text {
 				opacity: 0;
+				width: 0;
 			}
 
 		}
@@ -5355,6 +5357,7 @@ footer {
 			.txt-content,
 			h3.text-upcase.text-flip.vertical-text {
 				opacity: 0;
+				width: 0;
 			}
 		}
 		&.compressed {

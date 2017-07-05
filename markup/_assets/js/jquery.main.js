@@ -468,6 +468,7 @@ function initPanelSlider(){
 	  slidesToShow: 5,
 	  slidesToScroll: 1,
 	  easing: 'linear',
+	  variableWidth: true,
 	  responsive: [
 	  	{
 	      breakpoint: 1960,
@@ -513,7 +514,7 @@ function calculatePanelDimensions() {
 	var activePanel = $("*.panel.active .slider-container");
 	var panelWidth = activePanel.width();
 	console.log(panelWidth, "<< Calc panelWidth")
-	activePanel.css("width", panelWidth);
+	// activePanel.css("width", panelWidth);
 	activePanel.css("display", "block");
 }
 
