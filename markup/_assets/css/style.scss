@@ -5221,7 +5221,7 @@ footer {
 		position: relative;
 		vertical-align: top;
 		width:49.8%;
-		padding:25px !important;
+		padding:0 25px !important;
 		@include transition(all .3s);
 		@include max-screen($md) {
 			padding: 0 !important;
@@ -5239,7 +5239,11 @@ footer {
 				opacity: 0;
 				.slick-next, 
 				.slick-prev {
-					top: 150px;
+					top: 175px;
+				}
+				.slick-arrow {
+					height: 30px;
+					color: $colorSlateBlue;
 				}
 				.slick-dots {
 					bottom: initial;
@@ -5253,8 +5257,12 @@ footer {
 				}
 				@include transition(all .3s);
 				.slick-slide {
-					margin: 0 20px;
-					max-width: 180px;
+					padding: 30px 15px;
+					width: 210px;
+					height: 360px;
+					// &:hover {
+					// 	background: lime;
+					// }
 					h3 {
 						color: inherit;
 					}
@@ -5452,7 +5460,6 @@ footer {
 	}
 	
 	img { 
-		width:100%;
 		&.icon {
 			height: 110px;
 			max-width: 170px;
