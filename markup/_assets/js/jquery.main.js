@@ -427,12 +427,12 @@ function initSlidePanels() {
 		e.stopPropagation();
 		$(this).hasClass("compressed") ? $(this).toggleClass("compressed") : ""
 		$(this).hasClass("vertical-text") ? $(this).toggleClass("vertical-text") : ""
-		$(".txt-content").each(function(){ $(this).removeClass("animated fadeOut")});
+		$(this).find($(".txt-content")).each(function(){ $(this).removeClass("animated fadeOut")});
 		$(this).find(".txt-content").show();
 
 		$(this).addClass("active");
 		$(".slide-over-right").addClass("compressed");
-		$("h3.text-flip").addClass("vertical-text");
+		$(this).find($("h3.text-flip")).addClass("vertical-text");
 		$(this).find(".txt-content").addClass('animated fadeOut');
 		setTimeout(function(){$(this).find(".txt-content").hide()}, 1000);
 
@@ -445,15 +445,15 @@ function initSlidePanels() {
 		e.stopPropagation();
 		$(this).hasClass("compressed") ? $(this).toggleClass("compressed") : ""
 		$(this).hasClass("vertical-text") ? $(this).toggleClass("vertical-text") : ""
-		$(".txt-content").each(function(){ $(this).removeClass("animated fadeOut")});
+		$(this).find($(".txt-content")).each(function(){ $(this).removeClass("animated fadeOut")});
 		$(this).find(".txt-content").show();
 
 		$(this).addClass("active");
 		$(".slide-over-left").addClass("compressed");
-		$("h3.text-flip").addClass("vertical-text");
+		$(this).find($("h3.text-flip")).addClass("vertical-text");
 		$(this).find(".txt-content").addClass('animated fadeOut');
 		setTimeout(function(){$(this).find(".txt-content").hide()}, 1000);
-		
+
 		initPanelSlider();
 		setTimeout(calculatePanelDimensions(),1500);
 
