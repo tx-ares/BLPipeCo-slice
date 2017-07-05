@@ -5247,6 +5247,9 @@ footer {
 					h3 {
 						color: inherit;
 					}
+					&:focus {
+						outline:none;
+					}
 				}
 
 			}
@@ -5270,6 +5273,7 @@ footer {
 			h3.text-upcase.text-flip.vertical-text {
 				opacity: 0;
 				width: 0;
+				margin: 0;
 			}
 
 		}
@@ -5277,6 +5281,7 @@ footer {
 			width: 8%;
 			.txt-content {
 				opacity: 0;
+				width: 0;
 			}
 		}
 		.txt-content {
@@ -5358,12 +5363,14 @@ footer {
 			h3.text-upcase.text-flip.vertical-text {
 				opacity: 0;
 				width: 0;
+				margin: 0;
 			}
 		}
 		&.compressed {
 			width: 8%;
 			.txt-content {
 				opacity: 0;
+				width: 0;
 			}
 		}
 		.txt-content {
@@ -5373,7 +5380,7 @@ footer {
 			padding-right: 50px;
 			@include transition(all .3s);
 			img[src] {
-				margin-bottom: 35px;
+				margin-bottom: 35px;		
 			}
 		}
 		@include max-screen($smd) {
@@ -5437,7 +5444,8 @@ footer {
 		width:100%;
 		&.icon {
 			height: 110px;
-			width: 170px;
+			max-width: 170px;
+			width: 100%;
 		} 
 	}
 

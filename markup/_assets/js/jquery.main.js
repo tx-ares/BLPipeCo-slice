@@ -432,7 +432,7 @@ function initSlidePanels() {
 		setTimeout(function(){$(this).find(".txt-content").hide()}, 1000);
 
 		setTimeout(initPanelSlider(), 1000);
-		setTimeout(calculatePanelDimensions(),2500);
+		// setTimeout(calculatePanelDimensions(),2500);
 
 	});
 
@@ -449,7 +449,7 @@ function initSlidePanels() {
 		setTimeout(function(){$(this).find(".txt-content").hide()}, 1000);
 
 		initPanelSlider();
-		setTimeout(calculatePanelDimensions(),2500);
+		// setTimeout(calculatePanelDimensions(),2500);
 
 	});
 
