@@ -3541,6 +3541,9 @@ footer {
       height: auto;
       width: 90%;
       display: inline-block; }
+      @media only screen and (max-width: 865px) {
+        .feature-slide-box .panel .slider-container {
+          margin: 50px 0; } }
       .feature-slide-box .panel .slider-container .slick-slider .slick-slide {
         margin: 0 20px; }
         .feature-slide-box .panel .slider-container .slick-slider .slick-slide:hover {

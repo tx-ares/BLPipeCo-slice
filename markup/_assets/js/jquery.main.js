@@ -416,7 +416,7 @@ function resetPanels() {
 	})
 	$("h3.text-flip").removeClass("vertical-text");
 	$(".txt-content").each(function(){ 
-		$(this).removeClass("animated bounceOutDown");
+		$(this).removeClass("fadeOut");
 		$(this).show();
 	});
 }
@@ -425,6 +425,7 @@ function initSlidePanels() {
 	console.log("initSlidePanels Fired!")
 	$(".slide-over-left").on("click", function(e){
 		e.stopPropagation();
+		resetPanels();
 		console.log("Left slide clicked!")
 		$(this).hasClass("compressed") ? $(this).toggleClass("compressed") : ""
 		$(this).hasClass("vertical-text") ? $(this).toggleClass("vertical-text") : ""
@@ -434,8 +435,8 @@ function initSlidePanels() {
 		$(this).addClass("active");
 		$(".slide-over-right").addClass("compressed");
 		$("h3.text-flip").addClass("vertical-text");
-		$(this).find(".txt-content").addClass('animated bounceOutDown');
-		setTimeout(function(){$(this).find(".txt-content").hide()}, 1000);
+		$(this).find(".txt-content").addClass('animated fadeOut');
+		// setTimeout(function(){$(this).find(".txt-content").hide()}, 1000);
 		initPanelSlider();
 		setTimeout(calculatePanelDimensions(),1000);
 
@@ -443,6 +444,7 @@ function initSlidePanels() {
 
 	$(".slide-over-right").on("click", function(e){
 		e.stopPropagation();
+		resetPanels();
 		$(this).hasClass("compressed") ? $(this).toggleClass("compressed") : ""
 		$(this).hasClass("vertical-text") ? $(this).toggleClass("vertical-text") : ""
 		$(".txt-content").each(function(){ $(this).removeClass("animated bounceOutDown")});
@@ -451,8 +453,8 @@ function initSlidePanels() {
 		$(this).addClass("active");
 		$(".slide-over-left").addClass("compressed");
 		$("h3.text-flip").addClass("vertical-text");
-		$(this).find(".txt-content").addClass('animated bounceOutDown');
-		setTimeout(function(){$(this).find(".txt-content").hide()}, 1000);
+		$(this).find(".txt-content").addClass('animated fadeOut');
+		// setTimeout(function(){$(this).find(".txt-content").hide()}, 1000);
 		initPanelSlider();
 	});
 
@@ -500,10 +502,10 @@ function initPanelSlider(){
 	    // instead of a settings object
 	  ]
 	});
-	
-	$(".panel-slider").show(); 
-	$(".panel-slider").addClass("animate fadeInLeft");
-    $(".panel-slider").get(0).slick.setPosition()
+
+	$(".slick-slider").css("display" , "block"); 
+	$(".slick-slider").addClass("animate fadeInDown");
+    $(".slick-slider").get(0).slick.setPosition()
 }
 
 function calculatePanelDimensions() {
