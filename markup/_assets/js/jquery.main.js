@@ -471,6 +471,8 @@ function initPanelSlider(){
 	  slidesToShow: 5,
 	  slidesToScroll: 1,
 	  easing: 'linear',
+	  mobileFirst: true,
+	  
 	  variableWidth: true,
 	  responsive: [
 	  	{

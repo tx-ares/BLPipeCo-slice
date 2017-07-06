@@ -5375,9 +5375,23 @@ footer {
 				left: 50px;
 			}
 		}
+
+		img.a-left.control-c.prev.slick-prev.slick-arrow.slick-disabled {
+			@include max-screen($lg) {
+				left: 30px;
+			}
+		}
 		
 		img.a-right.control-c.next.slick-next.slick-arrow {
 			right: -135px;
+			
+			@include max-screen($xlg) {
+				right: -120px;
+			}
+
+			@include max-screen($smd) {
+				right: -75px;
+			}
 		}
 	}
 	.slide-over-left {	
@@ -5463,6 +5477,9 @@ footer {
 			right: -135px;
 			@include max-screen($smd) {
 				right: -75px;
+			}
+			@include max-screen($xlg) {
+				right: -120px;
 			}
 		}	
 	}
