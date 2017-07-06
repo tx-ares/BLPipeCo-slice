@@ -5257,11 +5257,13 @@ footer {
 				}
 				.slick-list {
 					margin: 0 85px;
+					width: 100%;
 				}
 				@include transition(all .3s);
 				.slick-slide {
-					padding: 30px 15px;
-					width: 210px;
+					@include transition(all .3s);
+					padding: 30px 25px;
+					width: 255px;
 					height: 360px;
 					// &:hover {
 					// 	background: lime;
@@ -5374,6 +5376,9 @@ footer {
 			}
 		}
 		
+		img.a-right.control-c.next.slick-next.slick-arrow {
+			right: -135px;
+		}
 	}
 	.slide-over-left {	
 		background: $colorLightGrey7;
@@ -5452,6 +5457,13 @@ footer {
 
 		.slider {
 			width: 60%;
+		}
+
+		img.a-right.control-c.next.slick-next.slick-arrow {
+			right: -135px;
+			@include max-screen($smd) {
+				right: -75px;
+			}
 		}	
 	}
 	
