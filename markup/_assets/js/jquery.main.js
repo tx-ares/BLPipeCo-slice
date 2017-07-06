@@ -466,7 +466,7 @@ function initPanelSlider(){
 	  arrows: true,
 	  prevArrow:"<img class='a-left control-c prev slick-prev' src='_assets/images/ui/chevron-white-left.png'>",
       nextArrow:"<img class='a-right control-c next slick-next' src='_assets/images/ui/chevron-white-right.png'>",
-       infinite: false,
+      infinite: false,
 	  speed: 300,
 	  slidesToShow: 5,
 	  slidesToScroll: 1,

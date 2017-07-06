@@ -1626,6 +1626,9 @@ html,body {
 	font-family:$font-avenir;
 	@include font-size(16px);
 	height:100%;
+	@include max-screen($sm) {
+		overflow-x: hidden;
+	}
 }
 
 body {
@@ -5281,6 +5284,9 @@ footer {
 		
 		&.active {
 			width: 91%;
+			@include max-screen($sm) {
+				width: 100%;
+			}
 			.slick-slider {
 				width: 100%;
 				min-width: auto;
@@ -5295,9 +5301,15 @@ footer {
 				margin: 0;
 			}
 
+			&:before {
+				content: "";
+			}	
 		}
 		&.compressed {
 			width: 8%;
+			@include max-screen($sm) {
+				width: 100%;
+			}
 			.txt-content {
 				opacity: 0;
 				width: 0;
@@ -5372,6 +5384,9 @@ footer {
 
 		&.active {
 			width: 91%;
+			@include max-screen($sm) {
+				width: 100%;
+			}
 			.slick-slider {
 				width: 100%;
 				min-width: auto;
@@ -5384,9 +5399,15 @@ footer {
 				width: 0;
 				margin: 0;
 			}
+			&:after {
+				content: "";
+			}
 		}
 		&.compressed {
 			width: 8%;
+			@include max-screen($sm) {
+				width: 100%;
+			}
 			.txt-content {
 				opacity: 0;
 				width: 0;
