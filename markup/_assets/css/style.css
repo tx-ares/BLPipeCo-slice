@@ -3540,6 +3540,9 @@ footer {
   -o-transition: all 0.3s;
   -webkit-transition: all 0.3s;
   transition: all 0.3s; }
+  .feature-slide-box .panel-label {
+    overflow: hidden;
+    display: inline-block; }
   .feature-slide-box .panel {
     min-height: 360px;
     display: inline-block;
@@ -3558,9 +3561,6 @@ footer {
       height: auto;
       width: 90%;
       display: inline-block; }
-      @media only screen and (max-width: 865px) {
-        .feature-slide-box .panel .slider-container {
-          margin: 50px 0; } }
       .feature-slide-box .panel .slider-container .slick-slider {
         display: block !important;
         height: 0;

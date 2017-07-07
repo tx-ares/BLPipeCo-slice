@@ -399,7 +399,7 @@ function initHideFooterIfHomepage() {
 	$(this).scrollTop() == 0 ? $("footer").css("bottom", -55) : $("footer").css("bottom", 0);
 }
 
-function initMakeHeaderOpaqueIfHomePage() {
+function initHideElementsIfHomePageTop() {
 	if ($("body").hasClass('homepage') && $(this).scrollTop() == 0 && !window.matchMedia('only screen and (max-width: 1024px)').matches) {
 		$("header").css("background", "rgba(0,38,60,0)");
 		$(".social-media-icons").addClass("hidden");
@@ -432,11 +432,12 @@ function initSlidePanels() {
 
 		$(this).addClass("active");
 		$(".slide-over-right").addClass("compressed").removeClass("active");
+
 		$("h3.text-flip").addClass("vertical-text");
 		setTimeout(function(){$(this).find(".txt-content").hide()}, 1000);
 
 		$(".social-media-icons").addClass("hidden");
-		setTimeout(initPanelSlider(), 1000);
+		initPanelSlider();
 
 	});
 
@@ -449,6 +450,7 @@ function initSlidePanels() {
 
 		$(this).addClass("active");
 		$(".slide-over-left").addClass("compressed").removeClass("active");
+		
 		$("h3.text-flip").addClass("vertical-text");
 		setTimeout(function(){$(this).find(".txt-content").hide()}, 1000);
 
@@ -485,7 +487,7 @@ function initPanelSlider(){
 	        slidesToShow: 5,
 	        slidesToScroll: 1,
 	        infinite: true,
-	        dots: true
+	        dots: false
 	      }
 	    },
 	    {
@@ -494,7 +496,7 @@ function initPanelSlider(){
 	        slidesToShow: 4,
 	        slidesToScroll: 1,
 	        infinite: true,
-	        dots: true
+	        dots: false
 	      }
 	    },
 	    {
@@ -503,21 +505,23 @@ function initPanelSlider(){
 	        slidesToShow: 3,
 	        slidesToScroll: 1,
 	        infinite: true,
-	        dots: true
+	        dots: false
 	      }
 	    },
 	    {
 	      breakpoint: 600,
 	      settings: {
 	        slidesToShow: 1,
-	        slidesToScroll: 1
+	        slidesToScroll: 1,
+	        dots: false
 	      }
 	    },
 	    {
 	      breakpoint: 480,
 	      settings: {
 	        slidesToShow: 1,
-	        slidesToScroll: 1
+	        slidesToScroll: 1,
+	        dots: false
 	      }
 	    }
 	    // You can unslick at a given breakpoint now by adding:
@@ -526,6 +530,7 @@ function initPanelSlider(){
 	  ]
 	});
 
+	initMatchHeight();
 }
 
 function calculatePanelDimensions() {
@@ -545,12 +550,13 @@ function hideSocialMediaIconsIfPanelActive() {
 $(window).scroll(function(){ 
 	initHideFooterIfHomepage();
 	initPopUpIcons();
-	initMakeHeaderOpaqueIfHomePage();  
+	initHideElementsIfHomePageTop();
+	hideSocialMediaIconsIfPanelActive();  
 });
 
 	//on Resize
 $(window).resize(function(){
-	initMakeHeaderOpaqueIfHomePage();
+	initHideElementsIfHomePageTop();
 	resetPanels(); 
 });
 //
@@ -558,7 +564,7 @@ $(window).resize(function(){
 // JavaScript Document - Initial Fire
 jQuery(document).ready(function() {
 	"use strict";
-	console.log("Autocompile - SUCCESS");
+	console.log("MANUAL Compile - SUCCESS - 9");
 	showPage();
 	initDesktopMenu();
 	initMobileMenu();
@@ -578,7 +584,7 @@ jQuery(document).ready(function() {
 	// initPanelSlider();
 	initSlidePanels();
 	initHideFooterIfHomepage();
-	initMakeHeaderOpaqueIfHomePage();
+	initHideElementsIfHomePageTop();
  	initPopUpIcons();
  	hideSocialMediaIconsIfPanelActive();
 
