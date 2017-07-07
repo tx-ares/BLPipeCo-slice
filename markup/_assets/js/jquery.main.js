@@ -387,12 +387,23 @@ $(window).load(function () {
 
 function initPopUpIcons() {
     if ( document.getElementsByTagName("body")[0].classList.contains("homepage") && $(this).scrollTop() == 0 ) {
-    	$(".social-media-icons").css("right", -40);	
+		$(".social-media-icons").css("right" , -40);
     }
 
     else {
-    	$(".social-media-icons").css("right" , 0);	
+		$(".social-media-icons").css("right" , 0);
     }
+}
+
+function initMobileSocialMediaMenu() {
+	if ($(this).scrollTop() != 0 && window.matchMedia('only screen and (max-width: 575px)').matches) {
+		$(".social-media-icons").addClass("active");
+	}
+
+	else {
+		$(".social-media-icons").removeClass("active");
+	}
+
 }
 
 function initHideFooterIfHomepage() {
@@ -402,10 +413,11 @@ function initHideFooterIfHomepage() {
 function initHideElementsIfHomePageTop() {
 	if ($("body").hasClass('homepage') && $(this).scrollTop() == 0 && !window.matchMedia('only screen and (max-width: 1024px)').matches) {
 		$("header").css("background", "rgba(0,38,60,0)");
-		$(".social-media-icons").addClass("hidden");
+		$(".social-media-icons").css("right" , -40);
 	}
 	else {
 		$("header").css("background", "rgba(0,38,60,1)");
+		$(".social-media-icons").css("right" , 0);
 	}
 }
 
@@ -478,7 +490,7 @@ function initPanelSlider(){
 	  slidesToShow: 5,
 	  slidesToScroll: 1,
 	  // variableWidth: true,
-	  // mobileFirst: true,
+	  mobileFirst: true,
   
 	  responsive: [
 	  	{
@@ -545,7 +557,7 @@ function initPanelSlider(){
 	  ]
 	});
 
-	// calculatePanelDimensions();
+
 }
 
 function calculatePanelDimensions() {
@@ -566,7 +578,8 @@ $(window).scroll(function(){
 	initHideFooterIfHomepage();
 	initPopUpIcons();
 	initHideElementsIfHomePageTop();
-	hideSocialMediaIconsIfPanelActive();  
+	hideSocialMediaIconsIfPanelActive();
+	initMobileSocialMediaMenu();  
 });
 
 	//on Resize
@@ -579,7 +592,7 @@ $(window).resize(function(){
 // JavaScript Document - Initial Fire
 jQuery(document).ready(function() {
 	"use strict";
-	console.log("MANUAL Compile - SUCCESS - 9");
+	console.log("MANUAL Compile - SUCCESS - 10");
 	showPage();
 	initDesktopMenu();
 	initMobileMenu();
@@ -601,6 +614,7 @@ jQuery(document).ready(function() {
 	initHideFooterIfHomepage();
 	initHideElementsIfHomePageTop();
  	initPopUpIcons();
+ 	initMobileSocialMediaMenu();
  	hideSocialMediaIconsIfPanelActive();
 
 	RESPONSIVEUI.responsiveTabs();
