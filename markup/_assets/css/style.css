@@ -1264,21 +1264,19 @@ html, body {
   font-size: 16px;
   font-size: 1rem;
   height: 100%; }
-  @media only screen and (max-width: 865px) {
-    html, body {
-      max-width: 100% !important;
-      overflow-x: hidden !important; } }
 
 body {
   color: #333; }
-
-@media only screen and (min-width: 865px) {
-  body.homepage .banner img {
-    height: 100vh;
-    margin-top: -140px; } }
-@media only screen and (max-width: 865px) {
-  body.homepage .main-content {
-    padding-top: 0; } }
+  body.no-scroll-x {
+    max-width: 100% !important;
+    overflow-x: hidden !important; }
+  @media only screen and (min-width: 865px) {
+    body.homepage .banner img {
+      height: 100vh;
+      margin-top: -140px; } }
+  @media only screen and (max-width: 865px) {
+    body.homepage .main-content {
+      padding-top: 0; } }
 
 header {
   position: relative;
@@ -3722,6 +3720,10 @@ footer {
       .feature-slide-box .slide-over-left {
         display: block;
         width: 100%; } }
+    .feature-slide-box .slide-over-left .fa-spin {
+      position: absolute;
+      top: 40%;
+      right: 45%; }
     .feature-slide-box .slide-over-left.active {
       width: 91%; }
       @media only screen and (max-width: 865px) {

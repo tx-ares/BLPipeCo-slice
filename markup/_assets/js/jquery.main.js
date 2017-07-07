@@ -411,6 +411,8 @@ function initHideFooterIfHomepage() {
 }
 
 function initHideElementsIfHomePageTop() {
+	resetBodyScrollX();
+
 	if ($("body").hasClass('homepage') && $(this).scrollTop() == 0 && !window.matchMedia('only screen and (max-width: 1024px)').matches) {
 		$("header").css("background", "rgba(0,38,60,0)");
 		$(".social-media-icons").css("right" , -40);
@@ -429,12 +431,14 @@ function resetPanels() {
 		$(this).hide();
 	})
 	$("h3.text-flip").removeClass("vertical-text"); 
-
+	
 	hideSocialMediaIconsIfPanelActive();
+
 }
 
 function initSlidePanels() {
-	console.log("initSlidePanels Fired!")
+	console.log("initSlidePanels Fired 2!")
+
 	$(".slide-over-left").on("click", function(e){
 		e.stopPropagation();
 
@@ -448,8 +452,10 @@ function initSlidePanels() {
 		$("h3.text-flip").addClass("vertical-text");
 		setTimeout(function(){$(this).find(".txt-content").hide()}, 1000);
 
-		$(".social-media-icons").addClass("hidden");
+		$(".social-media-icons").css("right" , -40);
 		initPanelSlider();
+
+		setTimeout($(this).find("img.a-right.control-c.next.slick-next.slick-arrow").trigger("click"), 400);	
 
 	});
 
@@ -466,10 +472,21 @@ function initSlidePanels() {
 		$("h3.text-flip").addClass("vertical-text");
 		setTimeout(function(){$(this).find(".txt-content").hide()}, 1000);
 
-		$(".social-media-icons").addClass("hidden");
+		$(".social-media-icons").css("right" , -40);
 		initPanelSlider();
 
+		setTimeout($(this).find("img.a-right.control-c.next.slick-next.slick-arrow").trigger("click"), 400);	
+		
 	});
+
+
+
+	// setTimeout(function(){
+	// 	$(".panel .active < img.a-right.control-c.next.slick-next.slick-arrow")
+	// 		.each(function(){
+	// 			$(this).trigger("click")
+	// 			}
+	// 		)}, 500);
 
 	$(document).click(function() {
 	    resetPanels();
@@ -477,8 +494,9 @@ function initSlidePanels() {
 }
 
 function initPanelSlider(){
-	console.log("initPanelCarousel");
-
+	console.log("initPanelCarousel 2");
+	$("body").addClass("no-scroll-x");
+	// $(".fa-spin").css("opacity" , 1);
 	$(".panel-slider").slick({
 	  dots: false,
 	  arrows: true,
@@ -557,7 +575,6 @@ function initPanelSlider(){
 	  ]
 	});
 
-
 }
 
 function calculatePanelDimensions() {
@@ -570,6 +587,10 @@ function calculatePanelDimensions() {
 
 function hideSocialMediaIconsIfPanelActive() {
 	$(".panel").hasClass("active") ? $(".social-media-icons").addClass("hidden") : $(".social-media-icons").removeClass("hidden");
+}
+
+function resetBodyScrollX() {
+	$("body").removeClass("no-scroll-x");
 }
 
 // Contingencies 

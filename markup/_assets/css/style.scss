@@ -1631,32 +1631,31 @@ html,body {
 	font-family:$font-avenir;
 	@include font-size(16px);
 	height:100%;
-	@include max-screen($smd) {
-		max-width: 100% !important;
-		overflow-x: hidden !important;
-	}
-
 }
 
 body {
-	color:$colorDarkGrey;	
-}
-
-body.homepage {
-	.banner {
-		@include min-screen ($smd) {
-			img {
-				height: 100vh;
-				margin-top: -140px;
+	color:$colorDarkGrey;
+	&.no-scroll-x {
+		max-width: 100% !important;
+		overflow-x: hidden !important;
+	}	
+	&.homepage {
+		.banner {
+			@include min-screen ($smd) {
+				img {
+					height: 100vh;
+					margin-top: -140px;
+				}
 			}
 		}
-	}
-	@include max-screen($smd) {
-		.main-content {
-			padding-top: 0;
-		}
-	}
+		@include max-screen($smd) {
+			.main-content {
+				padding-top: 0;
+			}
+		}	
+	}	
 }
+
 
 header {
 	position:relative;
@@ -5290,6 +5289,7 @@ footer {
 						margin: 0 25px;
 					}
 					width: 100%;
+					// opacity: 0;
 				}
 				@include transition(all .3s);
 				.slick-slide {
@@ -5443,6 +5443,12 @@ footer {
 		@include max-screen($smd) {
 			display: block;
 			width: 100%;
+		}
+
+		.fa-spin {
+			position: absolute;
+			top: 40%;
+			right: 45%;
 		}
 
 		&.active {
