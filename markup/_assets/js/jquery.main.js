@@ -386,16 +386,7 @@ $(window).load(function () {
 });
 
 function initPopUpIcons() {
-    if ($(this).scrollTop() == 0 && window.matchMedia('only screen and (max-width: 575px)').matches) {
-    	$(".social-media-icons").addClass("active");
-    	 }
-    else {
-    	$(".social-media-icons").removeClass('active');
-    }
-
     if ( document.getElementsByTagName("body")[0].classList.contains("homepage") && $(this).scrollTop() == 0 ) {
-    	console.log("condition 1 pass")
-    	console.log($(this).scrollTop())
     	$(".social-media-icons").css("right", -40);	
     }
 
@@ -427,7 +418,7 @@ function resetPanels() {
 	$("h3.text-flip").removeClass("vertical-text");
 
 	hideSocialMediaIfPanelActive();
-
+	setTimeout($(".panel-slider").unslick() , 500);
 }
 
 function initSlidePanels() {
@@ -436,8 +427,8 @@ function initSlidePanels() {
 		e.stopPropagation();
 		hideSocialMediaIfPanelActive();
 
-		$(this).hasClass("compressed") ? $(this).toggleClass("compressed") : ""
-		$(this).hasClass("vertical-text") ? $(this).toggleClass("vertical-text") : ""
+		$(this).hasClass("compressed") ? $(this).toggleClass("compressed") : "";
+		$(this).hasClass("vertical-text") ? $(this).toggleClass("vertical-text") : "";
 		$(this).find($(".txt-content")).each(function(){ $(this).removeClass("animated fadeOut")});
 
 		$(this).addClass("active");
@@ -446,7 +437,6 @@ function initSlidePanels() {
 		setTimeout(function(){$(this).find(".txt-content").hide()}, 1000);
 
 		setTimeout(initPanelSlider(), 1000);
-		// setTimeout(calculatePanelDimensions(),2500);
 
 	});
 
@@ -454,9 +444,8 @@ function initSlidePanels() {
 		e.stopPropagation();
 		hideSocialMediaIfPanelActive();
 
-
-		$(this).hasClass("compressed") ? $(this).toggleClass("compressed") : ""
-		$(this).hasClass("vertical-text") ? $(this).toggleClass("vertical-text") : ""
+		$(this).hasClass("compressed") ? $(this).toggleClass("compressed") : "";
+		$(this).hasClass("vertical-text") ? $(this).toggleClass("vertical-text") : "";
 		$(this).find($(".txt-content")).each(function(){ $(this).removeClass("animated fadeOut")});
 
 		$(this).addClass("active");
@@ -465,7 +454,6 @@ function initSlidePanels() {
 		setTimeout(function(){$(this).find(".txt-content").hide()}, 1000);
 
 		initPanelSlider();
-		// setTimeout(calculatePanelDimensions(),2500);
 
 	});
 
@@ -495,6 +483,15 @@ function initPanelSlider(){
 	      breakpoint: 1960,
 	      settings: {
 	        slidesToShow: 5,
+	        slidesToScroll: 1,
+	        infinite: true,
+	        dots: true
+	      }
+	    },
+	    {
+	      breakpoint: 1440,
+	      settings: {
+	        slidesToShow: 4,
 	        slidesToScroll: 1,
 	        infinite: true,
 	        dots: true

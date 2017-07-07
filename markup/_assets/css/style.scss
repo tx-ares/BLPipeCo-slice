@@ -5308,6 +5308,24 @@ footer {
 
 			&:before {
 				content: "";
+			}
+
+			img.a-left.control-c.prev.slick-prev.slick-arrow.slick-disabled {
+				@include max-screen($lg) {
+					left: 30px;
+				}
+			}
+			
+			img.a-right.control-c.next.slick-next.slick-arrow {
+				right: -135px;
+				
+				@include max-screen($xlg) {
+					right: -120px;
+				}
+
+				@include max-screen($smd) {
+					right: -75px;
+				}
 			}	
 		}
 		&.compressed {
@@ -5379,23 +5397,7 @@ footer {
 			}
 		}
 
-		img.a-left.control-c.prev.slick-prev.slick-arrow.slick-disabled {
-			@include max-screen($lg) {
-				left: 30px;
-			}
-		}
 		
-		img.a-right.control-c.next.slick-next.slick-arrow {
-			right: -135px;
-			
-			@include max-screen($xlg) {
-				right: -120px;
-			}
-
-			@include max-screen($smd) {
-				right: -75px;
-			}
-		}
 	}
 	.slide-over-left {	
 		background: $colorLightGrey7;
@@ -5429,6 +5431,15 @@ footer {
 			&:after {
 				content: "";
 			}
+			img.a-right.control-c.next.slick-next.slick-arrow {
+				right: -135px;
+				@include max-screen($smd) {
+					right: -75px;
+				}
+				@include max-screen($xlg) {
+					right: -120px;
+				}
+			}	
 		}
 		&.compressed {
 			width: 8%;
@@ -5481,15 +5492,7 @@ footer {
 			width: 60%;
 		}
 
-		img.a-right.control-c.next.slick-next.slick-arrow {
-			right: -135px;
-			@include max-screen($smd) {
-				right: -75px;
-			}
-			@include max-screen($xlg) {
-				right: -120px;
-			}
-		}	
+		
 	}
 	
 	h3.text-flip {
