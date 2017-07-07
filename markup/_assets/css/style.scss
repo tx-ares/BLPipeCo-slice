@@ -1561,6 +1561,9 @@ $padding-sm: 20px;
 	right: 0;
 	top: 30%;
 	z-index: 4;
+	&.hidden {
+		right: -40;
+	}
 	@include transition(all, .4s);
 	@include max-screen ($sm) {
 		bottom: -40px !important;
@@ -5284,7 +5287,7 @@ footer {
 		
 		&.active {
 			width: 91%;
-			@include max-screen($md) {
+			@include max-screen($smd) {
 				width: 100%;
 			}
 			.slick-slider {
@@ -5330,7 +5333,7 @@ footer {
 		}
 		&.compressed {
 			width: 8%;
-			@include max-screen($md) {
+			@include max-screen($smd) {
 				width: 100%;
 			}
 			.txt-content {
@@ -5408,7 +5411,7 @@ footer {
 
 		&.active {
 			width: 91%;
-			@include max-screen($md) {
+			@include max-screen($smd) {
 				width: 100%;
 			}
 			.slick-slider {
@@ -5443,7 +5446,7 @@ footer {
 		}
 		&.compressed {
 			width: 8%;
-			@include max-screen($md) {
+			@include max-screen($smd) {
 				width: 100%;
 			}
 			.txt-content {

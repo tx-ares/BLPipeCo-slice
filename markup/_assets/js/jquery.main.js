@@ -402,6 +402,7 @@ function initHideFooterIfHomepage() {
 function initMakeHeaderOpaqueIfHomePage() {
 	if ($("body").hasClass('homepage') && $(this).scrollTop() == 0 && !window.matchMedia('only screen and (max-width: 1024px)').matches) {
 		$("header").css("background", "rgba(0,38,60,0)");
+		$(".social-media-icons").addClass("hidden");
 	}
 	else {
 		$("header").css("background", "rgba(0,38,60,1)");
@@ -415,7 +416,7 @@ function resetPanels() {
 	$(".panel-slider").each(function(){
 		$(this).hide();
 	})
-	$("h3.text-flip").removeClass("vertical-text");
+	$("h3.text-flip").removeClass("vertical-text"); 
 
 	hideSocialMediaIconsIfPanelActive();
 }
@@ -424,7 +425,6 @@ function initSlidePanels() {
 	console.log("initSlidePanels Fired!")
 	$(".slide-over-left").on("click", function(e){
 		e.stopPropagation();
-		hideSocialMediaIconsIfPanelActive();
 
 		$(this).hasClass("compressed") ? $(this).toggleClass("compressed") : "";
 		$(this).hasClass("vertical-text") ? $(this).toggleClass("vertical-text") : "";
@@ -435,13 +435,13 @@ function initSlidePanels() {
 		$("h3.text-flip").addClass("vertical-text");
 		setTimeout(function(){$(this).find(".txt-content").hide()}, 1000);
 
+		$(".social-media-icons").addClass("hidden");
 		setTimeout(initPanelSlider(), 1000);
 
 	});
 
 	$(".slide-over-right").on("click", function(e){
 		e.stopPropagation();
-		hideSocialMediaIconsIfPanelActive();
 
 		$(this).hasClass("compressed") ? $(this).toggleClass("compressed") : "";
 		$(this).hasClass("vertical-text") ? $(this).toggleClass("vertical-text") : "";
@@ -452,6 +452,7 @@ function initSlidePanels() {
 		$("h3.text-flip").addClass("vertical-text");
 		setTimeout(function(){$(this).find(".txt-content").hide()}, 1000);
 
+		$(".social-media-icons").addClass("hidden");
 		initPanelSlider();
 
 	});
@@ -462,7 +463,7 @@ function initSlidePanels() {
 }
 
 function initPanelSlider(){
-	console.log("initPanelCarousel")
+	console.log("initPanelCarousel");
 
 	$(".panel-slider").slick({
 	  dots: false,
@@ -536,7 +537,7 @@ function calculatePanelDimensions() {
 }
 
 function hideSocialMediaIconsIfPanelActive() {
-	$(".panel").hasClass("active") ? $(".social-media-icons").css("right", -40) : $(".social-media-icons").css("right", 0);
+	$(".panel").hasClass("active") ? $(".social-media-icons").addClass("hidden") : $(".social-media-icons").removeClass("hidden");
 }
 
 // Contingencies 
@@ -557,7 +558,7 @@ $(window).resize(function(){
 // JavaScript Document - Initial Fire
 jQuery(document).ready(function() {
 	"use strict";
-	
+	console.log("Autocompile - SUCCESS");
 	showPage();
 	initDesktopMenu();
 	initMobileMenu();
