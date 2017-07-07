@@ -474,13 +474,12 @@ function initPanelSlider(){
       nextArrow:"<img class='a-right control-c next slick-next' src='_assets/images/ui/chevron-white-right.png'>",
       infinite: true,
 	  speed: 300,
-	  // easing: 'linear',
+	  easing: 'linear',
 	  slidesToShow: 5,
 	  slidesToScroll: 1,
 	  // variableWidth: true,
 	  // mobileFirst: true,
-
-	  
+  
 	  responsive: [
 	  	{
 	      breakpoint: 1960,
@@ -515,7 +514,7 @@ function initPanelSlider(){
 	        slidesToShow: 1,
 	        slidesToScroll: 1,
 	        centerMode: true,
-        	// centerPadding: '40px',
+        	centerPadding: '40px',
 	        infinite: true,
 	        dots: false
 	      }
@@ -526,7 +525,7 @@ function initPanelSlider(){
 	        slidesToShow: 1,
 	        slidesToScroll: 1,
 	        centerMode: true,
-        	// centerPadding: '40px',
+        	centerPadding: '40px',
 	        dots: false
 	      }
 	    },
@@ -536,7 +535,7 @@ function initPanelSlider(){
 	        slidesToShow: 1,
 	        slidesToScroll: 1,
 	        centerMode: true,
-        	// centerPadding: '40px',
+        	centerPadding: '40px',
 	        dots: false
 	      }
 	    }
@@ -546,13 +545,14 @@ function initPanelSlider(){
 	  ]
 	});
 
+	// calculatePanelDimensions();
 }
 
 function calculatePanelDimensions() {
 	var activePanel = $("*.panel.active .slider-container");
 	var panelWidth = activePanel.width();
 	console.log(panelWidth, "<< Calc panelWidth")
-	// activePanel.css("width", panelWidth);
+	activePanel.css("width", panelWidth);
 	activePanel.css("display", "block");
 }
 
