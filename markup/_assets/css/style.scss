@@ -50,6 +50,7 @@ $colorSlateBlue2: #bcc7cd; //Latest Articles - Tablet
 $colorLightGrey1: #edf1f1; //Side Tabs, Social Media Boxes
 $colorBrightRed1: #d0202f; //Logo, Minor Accents
 $colorBrightRed2: #d0112b; //Larger Divs, Main Color
+$colorBrightRed3: #aa0b21; //Red Carousel Panel - Hover
 $colorLightGrey7: #e2eaed; //Menu Backgrounds
 
 
@@ -5262,12 +5263,9 @@ footer {
 				@include transition(all .3s);
 				.slick-slide {
 					@include transition(all .3s);
-					padding: 30px 25px;
+					padding: 45px 25px;
 					width: 255px;
-					height: 360px;
-					// &:hover {
-					// 	background: lime;
-					// }
+					height: 360px;				
 					h3 {
 						color: inherit;
 					}
@@ -5294,6 +5292,11 @@ footer {
 				min-width: auto;
 				display: inline-block;
 				opacity: 1;
+				.slick-slide {
+					&:hover {
+						background: $colorBrightRed3;					
+					}
+				}
 			}
 
 			.txt-content,
@@ -5411,6 +5414,11 @@ footer {
 				min-width: auto;
 				display: inline-block;
 				opacity: 1;
+				.slick-slide {
+					&:hover {
+							background: $colorSlateBlue2;					
+						}
+				}
 			}
 			.txt-content,
 			h3.text-upcase.text-flip.vertical-text {
