@@ -1630,9 +1630,8 @@ html,body {
 	font-family:$font-avenir;
 	@include font-size(16px);
 	height:100%;
-	@include max-screen($sm) {
-		overflow-x: hidden;
-	}
+	max-width: 100% !important;
+    overflow-x: hidden !important;
 }
 
 body {

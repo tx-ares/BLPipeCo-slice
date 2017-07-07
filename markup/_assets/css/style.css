@@ -1265,10 +1265,9 @@ html, body {
   font-family: "Avenir Next LT Pro", sans-serif;
   font-size: 16px;
   font-size: 1rem;
-  height: 100%; }
-  @media only screen and (max-width: 575px) {
-    html, body {
-      overflow-x: hidden; } }
+  height: 100%;
+  max-width: 100% !important;
+  overflow-x: hidden !important; }
 
 body {
   color: #333; }
