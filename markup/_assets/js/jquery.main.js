@@ -392,6 +392,16 @@ function initPopUpIcons() {
     else {
     	$(".social-media-icons").removeClass('active');
     }
+
+    if ( document.getElementsByTagName("body")[0].classList.contains("homepage") && $(this).scrollTop() == 0 ) {
+    	console.log("condition 1 pass")
+    	console.log($(this).scrollTop())
+    	$(".social-media-icons").css("right", -40);	
+    }
+
+    else {
+    	$(".social-media-icons").css("right" , 0);	
+    }
 }
 
 function initHideFooterIfHomepage() {
