@@ -5265,7 +5265,7 @@ footer {
 					width: 100%;
 				}
 				.slick-list {
-					margin: 0 85px;
+					margin: 0 50px;
 					@include max-screen($smd) {
 						margin: 0 25px;
 					}
@@ -5335,7 +5335,7 @@ footer {
 					right: -120px;
 				}
 				@include max-screen($md) {
-					right: -90px;
+					right: -85px;
 				}
 				@include max-screen($smd) {
 					right: -75px;
@@ -5453,9 +5453,12 @@ footer {
 				@include max-screen($xlg) {
 					right: -120px;
 				}
-				@include max-screen($smd) {
+				@include max-screen($md) {
 					right: -75px;
 				}
+				// @include max-screen($smd) {
+				// 	right: -75px;
+				// }
 				@include max-screen($sm) {
 					right: -45px;
 				}

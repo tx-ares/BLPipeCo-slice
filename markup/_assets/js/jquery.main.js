@@ -494,7 +494,7 @@ function initPanelSlider(){
 	    {
 	      breakpoint: 1440,
 	      settings: {
-	        slidesToShow: 4,
+	        slidesToShow: 3,
 	        slidesToScroll: 1,
 	        infinite: true,
 	        dots: false
@@ -515,7 +515,7 @@ function initPanelSlider(){
 	        slidesToShow: 1,
 	        slidesToScroll: 1,
 	        centerMode: true,
-        	centerPadding: '40px',
+        	// centerPadding: '40px',
 	        infinite: true,
 	        dots: false
 	      }
@@ -526,7 +526,7 @@ function initPanelSlider(){
 	        slidesToShow: 1,
 	        slidesToScroll: 1,
 	        centerMode: true,
-        	centerPadding: '40px',
+        	// centerPadding: '40px',
 	        dots: false
 	      }
 	    },
@@ -536,7 +536,7 @@ function initPanelSlider(){
 	        slidesToShow: 1,
 	        slidesToScroll: 1,
 	        centerMode: true,
-        	centerPadding: '40px',
+        	// centerPadding: '40px',
 	        dots: false
 	      }
 	    }
