@@ -5284,7 +5284,7 @@ footer {
 		
 		&.active {
 			width: 91%;
-			@include max-screen($sm) {
+			@include max-screen($md) {
 				width: 100%;
 			}
 			.slick-slider {
@@ -5330,7 +5330,7 @@ footer {
 		}
 		&.compressed {
 			width: 8%;
-			@include max-screen($sm) {
+			@include max-screen($md) {
 				width: 100%;
 			}
 			.txt-content {
@@ -5408,7 +5408,7 @@ footer {
 
 		&.active {
 			width: 91%;
-			@include max-screen($sm) {
+			@include max-screen($md) {
 				width: 100%;
 			}
 			.slick-slider {
@@ -5443,7 +5443,7 @@ footer {
 		}
 		&.compressed {
 			width: 8%;
-			@include max-screen($sm) {
+			@include max-screen($md) {
 				width: 100%;
 			}
 			.txt-content {

@@ -417,15 +417,14 @@ function resetPanels() {
 	})
 	$("h3.text-flip").removeClass("vertical-text");
 
-	hideSocialMediaIfPanelActive();
-	setTimeout($(".panel-slider").unslick() , 500);
+	hideSocialMediaIconsIfPanelActive();
 }
 
 function initSlidePanels() {
 	console.log("initSlidePanels Fired!")
 	$(".slide-over-left").on("click", function(e){
 		e.stopPropagation();
-		hideSocialMediaIfPanelActive();
+		hideSocialMediaIconsIfPanelActive();
 
 		$(this).hasClass("compressed") ? $(this).toggleClass("compressed") : "";
 		$(this).hasClass("vertical-text") ? $(this).toggleClass("vertical-text") : "";
@@ -442,7 +441,7 @@ function initSlidePanels() {
 
 	$(".slide-over-right").on("click", function(e){
 		e.stopPropagation();
-		hideSocialMediaIfPanelActive();
+		hideSocialMediaIconsIfPanelActive();
 
 		$(this).hasClass("compressed") ? $(this).toggleClass("compressed") : "";
 		$(this).hasClass("vertical-text") ? $(this).toggleClass("vertical-text") : "";
@@ -536,7 +535,7 @@ function calculatePanelDimensions() {
 	activePanel.css("display", "block");
 }
 
-function hideSocialMediaIfPanelActive() {
+function hideSocialMediaIconsIfPanelActive() {
 	$(".panel").hasClass("active") ? $(".social-media-icons").css("right", -40) : $(".social-media-icons").css("right", 0);
 }
 
@@ -580,7 +579,7 @@ jQuery(document).ready(function() {
 	initHideFooterIfHomepage();
 	initMakeHeaderOpaqueIfHomePage();
  	initPopUpIcons();
- 	hideSocialMediaIfPanelActive();
+ 	hideSocialMediaIconsIfPanelActive();
 
 	RESPONSIVEUI.responsiveTabs();
 });
