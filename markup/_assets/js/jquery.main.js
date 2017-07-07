@@ -431,7 +431,7 @@ function resetPanels() {
 		$(this).hide();
 	})
 	$("h3.text-flip").removeClass("vertical-text"); 
-	
+
 	hideSocialMediaIconsIfPanelActive();
 
 }
@@ -452,7 +452,7 @@ function initSlidePanels() {
 		$("h3.text-flip").addClass("vertical-text");
 		setTimeout(function(){$(this).find(".txt-content").hide()}, 1000);
 
-		$(".social-media-icons").css("right" , -40);
+		$(".social-media-icons").addClass("hidden");
 		initPanelSlider();
 
 		setTimeout($(this).find("img.a-right.control-c.next.slick-next.slick-arrow").trigger("click"), 400);	
@@ -472,7 +472,7 @@ function initSlidePanels() {
 		$("h3.text-flip").addClass("vertical-text");
 		setTimeout(function(){$(this).find(".txt-content").hide()}, 1000);
 
-		$(".social-media-icons").css("right" , -40);
+		$(".social-media-icons").addClass("hidden");
 		initPanelSlider();
 
 		setTimeout($(this).find("img.a-right.control-c.next.slick-next.slick-arrow").trigger("click"), 400);	
