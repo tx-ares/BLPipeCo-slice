@@ -472,14 +472,15 @@ function initPanelSlider(){
 	  arrows: true,
 	  prevArrow:"<img class='a-left control-c prev slick-prev' src='_assets/images/ui/chevron-white-left.png'>",
       nextArrow:"<img class='a-right control-c next slick-next' src='_assets/images/ui/chevron-white-right.png'>",
-      infinite: false,
+      infinite: true,
 	  speed: 300,
+	  // easing: 'linear',
 	  slidesToShow: 5,
 	  slidesToScroll: 1,
-	  easing: 'linear',
-	  mobileFirst: true,
+	  // variableWidth: true,
+	  // mobileFirst: true,
+
 	  
-	  variableWidth: true,
 	  responsive: [
 	  	{
 	      breakpoint: 1960,
@@ -508,11 +509,24 @@ function initPanelSlider(){
 	        dots: false
 	      }
 	    },
+	     {
+	      breakpoint: 865,
+	      settings: {
+	        slidesToShow: 1,
+	        slidesToScroll: 1,
+	        centerMode: true,
+        	centerPadding: '40px',
+	        infinite: true,
+	        dots: false
+	      }
+	    },
 	    {
 	      breakpoint: 600,
 	      settings: {
 	        slidesToShow: 1,
 	        slidesToScroll: 1,
+	        centerMode: true,
+        	centerPadding: '40px',
 	        dots: false
 	      }
 	    },
@@ -521,6 +535,8 @@ function initPanelSlider(){
 	      settings: {
 	        slidesToShow: 1,
 	        slidesToScroll: 1,
+	        centerMode: true,
+        	centerPadding: '40px',
 	        dots: false
 	      }
 	    }
@@ -530,7 +546,6 @@ function initPanelSlider(){
 	  ]
 	});
 
-	initMatchHeight();
 }
 
 function calculatePanelDimensions() {

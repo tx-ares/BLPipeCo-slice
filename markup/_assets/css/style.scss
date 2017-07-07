@@ -5227,6 +5227,7 @@ footer {
 	@include transition(all .3s);
 	.panel {
 		min-height: 360px;
+		height: 360px !important;
 		display:inline-block;
 		position: relative;
 		vertical-align: top;
@@ -5258,19 +5259,24 @@ footer {
 				.slick-dots {
 					bottom: initial;
 					margin-top: 10px;
+					margin-left: 0;
 				}
 				.slick-track {
 					width: 100%;
 				}
 				.slick-list {
 					margin: 0 85px;
+					@include max-screen($smd) {
+						margin: 0 25px;
+					}
 					width: 100%;
 				}
 				@include transition(all .3s);
 				.slick-slide {
 					@include transition(all .3s);
 					padding: 45px 25px;
-					width: 255px;
+					text-align: center;
+					width: 250px;
 					height: 360px;				
 					h3 {
 						color: inherit;
@@ -5328,9 +5334,14 @@ footer {
 				@include max-screen($xlg) {
 					right: -120px;
 				}
-
+				@include max-screen($md) {
+					right: -90px;
+				}
 				@include max-screen($smd) {
 					right: -75px;
+				}
+				@include max-screen($sm) {
+					right: -45px;
 				}
 			}	
 		}
@@ -5439,12 +5450,16 @@ footer {
 			}
 			img.a-right.control-c.next.slick-next.slick-arrow {
 				right: -135px;
-				@include max-screen($smd) {
-					right: -75px;
-				}
 				@include max-screen($xlg) {
 					right: -120px;
 				}
+				@include max-screen($smd) {
+					right: -75px;
+				}
+				@include max-screen($sm) {
+					right: -45px;
+				}
+
 			}	
 		}
 		&.compressed {
@@ -5531,6 +5546,7 @@ footer {
 			height: 110px;
 			max-width: 170px;
 			width: 100%;
+			margin: 0 auto;
 		} 
 	}
 
