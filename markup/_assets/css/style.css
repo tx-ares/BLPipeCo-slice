@@ -1204,7 +1204,11 @@ figure {
   position: fixed;
   right: 0;
   top: 30%;
-  z-index: 4; }
+  z-index: 4;
+  -moz-transition: all, 0.4s;
+  -o-transition: all, 0.4s;
+  -webkit-transition: all, 0.4s;
+  transition: all, 0.4s; }
   @media only screen and (max-width: 575px) {
     .social-media-icons {
       bottom: -40px !important;
@@ -1212,11 +1216,7 @@ figure {
       top: initial;
       min-width: 265px;
       width: 100%;
-      background: rgba(0, 38, 59, 0.8);
-      -moz-transition: all, 0.4s;
-      -o-transition: all, 0.4s;
-      -webkit-transition: all, 0.4s;
-      transition: all, 0.4s; }
+      background: rgba(0, 38, 59, 0.8); }
       .social-media-icons.active {
         bottom: 0 !important; } }
   .social-media-icons ul {

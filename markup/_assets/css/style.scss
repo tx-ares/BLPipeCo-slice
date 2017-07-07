@@ -1560,6 +1560,7 @@ $padding-sm: 20px;
 	right: 0;
 	top: 30%;
 	z-index: 4;
+	@include transition(all, .4s);
 	@include max-screen ($sm) {
 		bottom: -40px !important;
 		right: initial;
@@ -1567,7 +1568,6 @@ $padding-sm: 20px;
 		min-width: 265px;
 		width: 100%;
 		background: rgba($colorDarkBlue, .8);
-		@include transition(all, .4s);
 		&.active {
 			bottom: 0 !important;
 		}

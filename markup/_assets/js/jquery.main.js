@@ -416,12 +416,16 @@ function resetPanels() {
 	})
 	$("h3.text-flip").removeClass("vertical-text");
 
+	hideSocialMediaIfPanelActive();
+
 }
 
 function initSlidePanels() {
 	console.log("initSlidePanels Fired!")
 	$(".slide-over-left").on("click", function(e){
 		e.stopPropagation();
+		hideSocialMediaIfPanelActive();
+
 		$(this).hasClass("compressed") ? $(this).toggleClass("compressed") : ""
 		$(this).hasClass("vertical-text") ? $(this).toggleClass("vertical-text") : ""
 		$(this).find($(".txt-content")).each(function(){ $(this).removeClass("animated fadeOut")});
@@ -438,6 +442,8 @@ function initSlidePanels() {
 
 	$(".slide-over-right").on("click", function(e){
 		e.stopPropagation();
+		hideSocialMediaIfPanelActive();
+
 
 		$(this).hasClass("compressed") ? $(this).toggleClass("compressed") : ""
 		$(this).hasClass("vertical-text") ? $(this).toggleClass("vertical-text") : ""
@@ -523,7 +529,9 @@ function calculatePanelDimensions() {
 	activePanel.css("display", "block");
 }
 
-
+function hideSocialMediaIfPanelActive() {
+	$(".panel").hasClass("active") ? $(".social-media-icons").css("right", -40) : $(".social-media-icons").css("right", 0);
+}
 
 // Contingencies 
 	//on Scroll
@@ -565,6 +573,7 @@ jQuery(document).ready(function() {
 	initHideFooterIfHomepage();
 	initMakeHeaderOpaqueIfHomePage();
  	initPopUpIcons();
+ 	hideSocialMediaIfPanelActive();
 
 	RESPONSIVEUI.responsiveTabs();
 });
