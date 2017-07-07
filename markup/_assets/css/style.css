@@ -1264,6 +1264,10 @@ html, body {
   font-size: 16px;
   font-size: 1rem;
   height: 100%; }
+  @media only screen and (max-width: 865px) {
+    html, body {
+      max-width: 100% !important;
+      overflow-x: hidden !important; } }
 
 body {
   color: #333; }
@@ -3583,7 +3587,8 @@ footer {
           top: 175px; }
         .feature-slide-box .panel .slider-container .slick-slider .slick-arrow {
           height: 30px;
-          color: #8a9ca5; }
+          color: #8a9ca5;
+          margin: 0 15px; }
         .feature-slide-box .panel .slider-container .slick-slider .slick-dots {
           bottom: initial;
           margin-top: 10px;
@@ -3643,7 +3648,7 @@ footer {
             right: -85px; } }
         @media only screen and (max-width: 865px) {
           .feature-slide-box .slide-over-right.active img.a-right.control-c.next.slick-next.slick-arrow {
-            right: -75px; } }
+            right: -60px; } }
         @media only screen and (max-width: 575px) {
           .feature-slide-box .slide-over-right.active img.a-right.control-c.next.slick-next.slick-arrow {
             right: -45px; } }
