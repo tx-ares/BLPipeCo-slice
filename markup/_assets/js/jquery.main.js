@@ -593,14 +593,29 @@ function resetBodyScrollX() {
 	$("body").removeClass("no-scroll-x");
 }
 
-function initAnimateIntoScroll() {
-	console.log("init Animate")
-	var waypoint = new Waypoint({
-	  element: document.getElementsByClassName(".static-slides"),
-	  handler: function(direction) {
-	    console.log('You have scrolled to a thing');
-	  }
-	});
+function isScrolledIntoView(elem)
+{
+    var docViewTop = $(window).scrollTop();
+    var docViewBottom = docViewTop + $(window).height();
+
+    var elemTop = $(elem).offset().top;
+    var elemBottom = elemTop + $(elem).height();
+
+    return ((elemBottom <= docViewBottom) && (elemTop >= docViewTop));
+}
+
+function initAnimateWhenInView() {
+	console.log("initAnimate - FIRED")
+	var logoRow = $(".logo-row");
+
+	$(window).scroll(function(){
+		console.log("TESTING...")
+		if(isScrolledIntoView(logoRow) == true) {
+			console.log("CONDITION PASSED!")
+			logoRow.find("div[class*=' col-']").each(function(){$(this).addClass("animated slideInUp")});
+		}
+
+	})
 }
 
 // Contingencies 
@@ -610,7 +625,7 @@ $(window).scroll(function(){
 	initPopUpIcons();
 	initHideElementsIfHomePageTop();
 	hideSocialMediaIconsIfPanelActive();
-	initMobileSocialMediaMenu();  
+	initMobileSocialMediaMenu();
 });
 
 	//on Resize
@@ -623,7 +638,7 @@ $(window).resize(function(){
 // JavaScript Document - Initial Fire
 jQuery(document).ready(function() {
 	"use strict";
-	console.log("MANUAL Compile - SUCCESS - 10");
+	console.log("MANUAL Compile - SUCCESS - 12");
 	showPage();
 	initDesktopMenu();
 	initMobileMenu();
@@ -647,7 +662,7 @@ jQuery(document).ready(function() {
  	initPopUpIcons();
  	initMobileSocialMediaMenu();
  	hideSocialMediaIconsIfPanelActive();
- 	initAnimateIntoScroll();
+ 	initAnimateWhenInView();
 
 	RESPONSIVEUI.responsiveTabs();
 });
