@@ -5733,7 +5733,7 @@ footer {
 
 .static-slides {	
 	background: $colorLightGrey7;
-	max-height: 360px;
+	margin-top: 6px;
 	@include max-screen($smd) {
 		display: block;
 		width: 100%;

@@ -3906,7 +3906,7 @@ footer {
 
 .static-slides {
   background: #e2eaed;
-  max-height: 360px; }
+  margin-top: 6px; }
   @media only screen and (max-width: 865px) {
     .static-slides {
       display: block;
