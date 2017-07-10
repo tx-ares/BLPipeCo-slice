@@ -2574,11 +2574,21 @@ footer {
     padding-left: 40px; }
   .main-content .secondary {
     margin-top: -7px; }
-  .main-content .tertiary .image-cta:nth-child(3) .txt-content:last-child {
+  .main-content .tertiary .image-cta.resource-center .txt-content {
     position: absolute;
-    bottom: 20px;
+    background: #d0112b;
+    bottom: 105px;
     left: 0;
     width: 80%; }
+    .main-content .tertiary .image-cta.resource-center .txt-content:after {
+      content: '\f0da';
+      font-family: FontAwesome;
+      position: absolute;
+      right: 0;
+      bottom: 50px;
+      height: 52.9px;
+      width: 52px;
+      padding: 6px 22px; }
   @media only screen and (max-width: 768px) {
     .main-content {
       padding-top: 40px; } }
