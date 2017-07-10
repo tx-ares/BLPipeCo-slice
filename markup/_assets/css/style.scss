@@ -3683,8 +3683,15 @@ footer {
 				bottom: 105px;
 				left: 0;
 				width: 80%;
+				@include max-screen($sm) {
+					position: relative;
+					background: $colorBrightRed2;
+					bottom: initial;
+					left: initial;
+					width: initial;	
+				}
 				&:after {
-					content: '\f0da';
+					content: "\f0da";
 					font-family: FontAwesome;
 					position: absolute;
 					right: 0;
@@ -3692,6 +3699,10 @@ footer {
 				    height: 52.9px;
 				    width: 52px;
 				    padding: 6px 22px;
+				    @include max-screen($sm) {
+				    	content: "";
+				    }
+
 				}
 			}
 		}

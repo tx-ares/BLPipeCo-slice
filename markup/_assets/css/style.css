@@ -2580,8 +2580,15 @@ footer {
     bottom: 105px;
     left: 0;
     width: 80%; }
+    @media only screen and (max-width: 575px) {
+      .main-content .tertiary .image-cta.resource-center .txt-content {
+        position: relative;
+        background: #d0112b;
+        bottom: initial;
+        left: initial;
+        width: initial; } }
     .main-content .tertiary .image-cta.resource-center .txt-content:after {
-      content: '\f0da';
+      content: "\f0da";
       font-family: FontAwesome;
       position: absolute;
       right: 0;
@@ -2589,6 +2596,9 @@ footer {
       height: 52.9px;
       width: 52px;
       padding: 6px 22px; }
+      @media only screen and (max-width: 575px) {
+        .main-content .tertiary .image-cta.resource-center .txt-content:after {
+          content: ""; } }
   @media only screen and (max-width: 768px) {
     .main-content {
       padding-top: 40px; } }
