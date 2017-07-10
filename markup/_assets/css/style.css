@@ -4021,13 +4021,37 @@ footer {
       width: 100%; } }
   .logo-row .slide-content {
     text-align: center;
-    padding: 20px;
+    padding: 60px 5px;
     max-width: 360px;
-    margin: auto; }
+    margin: auto;
+    display: inline-block;
+    vertical-align: top; }
+    @media only screen and (max-width: 992px) {
+      .logo-row .slide-content {
+        padding: 0;
+        padding-top: 60px;
+        height: 200px; } }
+    .logo-row .slide-content:last-child {
+      width: 95%;
+      text-align: center; }
     .logo-row .slide-content img[src] {
       width: 100%;
       height: auto;
       max-width: 170px; }
+      @media only screen and (max-width: 992px) {
+        .logo-row .slide-content img[src] {
+          max-width: 250px; } }
+      .logo-row .slide-content img[src].sm {
+        width: 50%; }
+  .logo-row .bar {
+    width: 2px;
+    background: #333;
+    height: 135px;
+    margin-top: 45px;
+    display: inline-block; }
+    @media only screen and (max-width: 992px) {
+      .logo-row .bar {
+        display: none; } }
   .logo-row .fa-spin {
     position: absolute;
     top: 40%;

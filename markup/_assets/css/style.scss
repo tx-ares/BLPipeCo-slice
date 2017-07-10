@@ -5899,14 +5899,40 @@ footer {
 
 	.slide-content {
 		text-align: center;
-		padding: 20px;
+		padding: 60px 5px;
 		max-width: 360px;
 		margin: auto;
+		display: inline-block;
+		vertical-align: top;
+		@include max-screen($md) {
+			padding: 0;
+			padding-top: 60px;
+			height: 200px;
+		}
+		&:last-child {
+			width: 95%;
+			text-align: center;
+		}
 		img[src] {
 			width: 100%;
 			height: auto;
 			max-width: 170px;
-
+			@include max-screen($md) {
+				max-width: 250px;
+			}
+			&.sm {
+				width: 50%;
+			}
+		}
+	}
+	.bar {
+		width: 2px;
+		background: $colorDarkGrey;
+		height: 135px;
+		margin-top: 45px;
+		display: inline-block;
+		@include max-screen($md) {
+			display: none;
 		}
 	}
 
