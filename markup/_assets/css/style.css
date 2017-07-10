@@ -4013,6 +4013,89 @@ footer {
   .static-slides .slider {
     width: 60%; }
 
+.logo-row {
+  background: #e2eaed; }
+  @media only screen and (max-width: 865px) {
+    .logo-row {
+      display: block;
+      width: 100%; } }
+  .logo-row .slide-content {
+    text-align: center;
+    padding: 20px;
+    max-width: 360px;
+    margin: auto; }
+    .logo-row .slide-content img[src] {
+      width: 100%;
+      height: auto;
+      max-width: 170px; }
+  .logo-row .fa-spin {
+    position: absolute;
+    top: 40%;
+    right: 45%; }
+  .logo-row.active {
+    width: 91%; }
+    @media only screen and (max-width: 865px) {
+      .logo-row.active {
+        width: 100%; } }
+    .logo-row.active .slick-slider {
+      width: 100%;
+      min-width: auto;
+      display: inline-block;
+      opacity: 1; }
+      .logo-row.active .slick-slider .slick-slide:hover {
+        background: #bcc7cd; }
+    .logo-row.active .txt-content,
+    .logo-row.active h3.text-upcase.text-flip.vertical-text {
+      opacity: 0;
+      width: 0;
+      margin: 0; }
+    .logo-row.active:after {
+      content: ""; }
+    .logo-row.active img.a-right.control-c.next.slick-next.slick-arrow {
+      right: -135px; }
+      @media only screen and (max-width: 1280px) {
+        .logo-row.active img.a-right.control-c.next.slick-next.slick-arrow {
+          right: -120px; } }
+      @media only screen and (max-width: 992px) {
+        .logo-row.active img.a-right.control-c.next.slick-next.slick-arrow {
+          right: -75px; } }
+      @media only screen and (max-width: 575px) {
+        .logo-row.active img.a-right.control-c.next.slick-next.slick-arrow {
+          right: -45px; } }
+  .logo-row.compressed {
+    width: 8%; }
+    @media only screen and (max-width: 865px) {
+      .logo-row.compressed {
+        width: 100%; } }
+    .logo-row.compressed .txt-content {
+      opacity: 0;
+      width: 0; }
+  .logo-row .txt-content {
+    position: absolute;
+    right: 0;
+    top: 40px;
+    padding-right: 50px;
+    -moz-transition: all 0.3s;
+    -o-transition: all 0.3s;
+    -webkit-transition: all 0.3s;
+    transition: all 0.3s; }
+    .logo-row .txt-content img[src] {
+      margin-bottom: 35px; }
+    @media only screen and (max-width: 865px) {
+      .logo-row .txt-content {
+        margin: 0 auto; } }
+  @media only screen and (max-width: 865px) {
+    .logo-row {
+      display: block;
+      width: 100%; }
+      .logo-row .txt-content {
+        right: 15%; }
+      .logo-row h3.text-flip {
+        right: 25%;
+        text-align: center; } }
+  .logo-row .slider {
+    width: 60%; }
+
 .photo-wrapper .title {
   font-size: 18px;
   font-size: 1.125rem;
