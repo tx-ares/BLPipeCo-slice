@@ -4019,6 +4019,8 @@ footer {
     .logo-row {
       display: block;
       width: 100%; } }
+  .logo-row [class*=' col-'] {
+    text-align: center; }
   .logo-row .slide-content[eq-col] {
     text-align: center;
     padding: 60px 5px;

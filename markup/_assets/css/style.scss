@@ -4467,6 +4467,7 @@ footer {
 		// height: 0;
 		height: 100%;
 		padding-bottom: 55%;
+
 		.txt-content {
 			position: absolute;
 			bottom: 0;
@@ -5895,6 +5896,10 @@ footer {
 	@include max-screen($smd) {
 		display: block;
 		width: 100%;
+	}
+
+	[class*=' col-'] {
+		text-align: center;
 	}
 
 	.slide-content[eq-col] {
