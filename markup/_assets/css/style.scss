@@ -5733,9 +5733,21 @@ footer {
 
 .static-slides {	
 	background: $colorLightGrey7;
+	max-height: 360px;
 	@include max-screen($smd) {
 		display: block;
 		width: 100%;
+	}
+
+	.slide-content {
+		text-align: center;
+		padding: 20px;
+		img[src] {
+			width: 100%;
+			height: auto;
+			max-width: 170px;
+
+		}
 	}
 
 	.fa-spin {
@@ -5826,17 +5838,17 @@ footer {
 
 	}
 
-	&:after {
-		content: '\f0da';
-		font-family: $font-icon;
-		color: $colorDarkBlue;
-		position: absolute;
-		right: 10px;
-		top: 45%;
-		@include max-screen($smd){
-			right: 50px;
-		}
-	}
+	// &:after {
+	// 	content: '\f0da';
+	// 	font-family: $font-icon;
+	// 	color: $colorDarkBlue;
+	// 	position: absolute;
+	// 	right: 10px;
+	// 	top: 45%;
+	// 	@include max-screen($smd){
+	// 		right: 50px;
+	// 	}
+	// }
 
 	.slider {
 		width: 60%;
