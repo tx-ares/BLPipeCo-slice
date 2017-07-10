@@ -342,6 +342,12 @@ function initToggleActiveClass() {
 	});
 }
 
+function initMorePhoneFullScreenDropDown() {
+	$(".tcell.valign-mid.phone-opener").on("click", function(){
+		$(".more-phone-full-scr").toggleClass("active");
+	})
+}
+
 function doneResizing() {
 	"use strict";
 	
@@ -614,7 +620,7 @@ function initAnimateWhenInView() {
 			console.log("CONDITION PASSED!")
 			logoRow.find("div[class*=' col-']").each(
 				function(){
-					$(this).addClass("animated bounce")
+					$(this).addClass("animated pulse")
 				});
 		}
 
@@ -666,41 +672,7 @@ jQuery(document).ready(function() {
  	initMobileSocialMediaMenu();
  	hideSocialMediaIconsIfPanelActive();
  	initAnimateWhenInView();
+ 	initMorePhoneFullScreenDropDown();
 
 	RESPONSIVEUI.responsiveTabs();
 });
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
