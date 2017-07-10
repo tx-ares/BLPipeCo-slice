@@ -5897,7 +5897,7 @@ footer {
 		width: 100%;
 	}
 
-	.slide-content {
+	.slide-content[eq-col] {
 		text-align: center;
 		padding: 60px 5px;
 		max-width: 360px;
@@ -5931,6 +5931,8 @@ footer {
 		height: 135px;
 		margin-top: 45px;
 		display: inline-block;
+		margin-right: 15px;
+		margin-left: -20px;
 		@include max-screen($md) {
 			display: none;
 		}
