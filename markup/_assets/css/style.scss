@@ -5731,6 +5731,121 @@ footer {
 	
 }
 
+.static-slides {	
+	background: $colorLightGrey7;
+	@include max-screen($smd) {
+		display: block;
+		width: 100%;
+	}
+
+	.fa-spin {
+		position: absolute;
+		top: 40%;
+		right: 45%;
+	}
+
+	&.active {
+		width: 91%;
+		@include max-screen($smd) {
+			width: 100%;
+		}
+		.slick-slider {
+			width: 100%;
+			min-width: auto;
+			display: inline-block;
+			opacity: 1;
+			.slick-slide {
+				&:hover {
+						background: $colorSlateBlue2;					
+					}
+			}
+		}
+		.txt-content,
+		h3.text-upcase.text-flip.vertical-text {
+			opacity: 0;
+			width: 0;
+			margin: 0;
+		}
+		&:after {
+			content: "";
+		}
+		img.a-right.control-c.next.slick-next.slick-arrow {
+			right: -135px;
+			@include max-screen($xlg) {
+				right: -120px;
+			}
+			@include max-screen($md) {
+				right: -75px;
+			}
+			// @include max-screen($smd) {
+			// 	right: -75px;
+			// }
+			@include max-screen($sm) {
+				right: -45px;
+			}
+
+		}	
+	}
+	&.compressed {
+		width: 8%;
+		@include max-screen($smd) {
+			width: 100%;
+		}
+		.txt-content {
+			opacity: 0;
+			width: 0;
+		}
+	}
+	.txt-content {
+		position: absolute;
+		right: 0;
+		top: 40px;
+		padding-right: 50px;
+		@include transition(all .3s);
+		img[src] {
+			margin-bottom: 35px;		
+		}
+		@include max-screen($smd) {
+			margin: 0 auto;
+		}
+
+	}
+	@include max-screen($smd) {
+		display: block;
+		width: 100%;
+		.txt-content {
+			right: 15%
+		}
+		h3.text-flip {
+			right: 25%;
+			text-align: center;
+		}
+	}
+
+	@include max-screen($xmd) {
+
+	}
+
+	&:after {
+		content: '\f0da';
+		font-family: $font-icon;
+		color: $colorDarkBlue;
+		position: absolute;
+		right: 10px;
+		top: 45%;
+		@include max-screen($smd){
+			right: 50px;
+		}
+	}
+
+	.slider {
+		width: 60%;
+	}
+
+}
+	
+
+
 .photo-wrapper {
 	.title {
 		@include font-size(18px);
