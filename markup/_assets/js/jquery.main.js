@@ -338,7 +338,7 @@ function initToggleActiveClass() {
 			$('.'+$(this).closest('[toggle-active-parent]').attr('toggle-add-active-to-ref')).addClass('active');
 		}
 		
-		console.log('test 8');
+		// console.log('test 8');
 	});
 }
 
@@ -593,6 +593,16 @@ function resetBodyScrollX() {
 	$("body").removeClass("no-scroll-x");
 }
 
+function initAnimateIntoScroll() {
+	console.log("init Animate")
+	var waypoint = new Waypoint({
+	  element: document.getElementsByClassName(".static-slides"),
+	  handler: function(direction) {
+	    console.log('You have scrolled to a thing');
+	  }
+	});
+}
+
 // Contingencies 
 	//on Scroll
 $(window).scroll(function(){ 
@@ -637,6 +647,7 @@ jQuery(document).ready(function() {
  	initPopUpIcons();
  	initMobileSocialMediaMenu();
  	hideSocialMediaIconsIfPanelActive();
+ 	initAnimateIntoScroll();
 
 	RESPONSIVEUI.responsiveTabs();
 });
