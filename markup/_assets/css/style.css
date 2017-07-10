@@ -4021,6 +4021,12 @@ footer {
       width: 100%; } }
   .logo-row [class*=' col-'] {
     text-align: center; }
+    .logo-row [class*=' col-']:nth-child(4) h3:after,
+    .logo-row [class*=' col-'] :last-child h3:after {
+      font-family: FontAwesome;
+      content: "\f0d7";
+      color: #d0112b;
+      margin: 0 5px; }
   .logo-row .slide-content[eq-col] {
     text-align: center;
     padding: 60px 5px;
