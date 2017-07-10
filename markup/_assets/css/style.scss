@@ -5742,6 +5742,8 @@ footer {
 	.slide-content {
 		text-align: center;
 		padding: 20px;
+		max-width: 360px;
+		margin: auto;
 		img[src] {
 			width: 100%;
 			height: auto;
