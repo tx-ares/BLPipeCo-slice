@@ -612,7 +612,10 @@ function initAnimateWhenInView() {
 		console.log("TESTING...")
 		if(isScrolledIntoView(logoRow) == true) {
 			console.log("CONDITION PASSED!")
-			logoRow.find("div[class*=' col-']").each(function(){$(this).addClass("animated slideInUp")});
+			logoRow.find("div[class*=' col-']").each(
+				function(){
+					$(this).addClass("animated bounce")
+				});
 		}
 
 	})
