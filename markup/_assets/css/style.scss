@@ -666,7 +666,7 @@ $padding-sm: 20px;
 		&:after {
 		    background: $colorBrightRed2;
 		    height: 360px;
-		    width: 15px;
+		    width: 20px;
 		    position: absolute;
 		    right: 0;
 		    top: 0;
@@ -5339,9 +5339,9 @@ footer {
 					@include transition(all .3s);
 					padding: 45px 25px;
 					text-align: center;
-					// @include max-screen($dktp) {
-					// 	width: 290px;
-					// }
+					@include max-screen($md) {
+						padding: 45px 100px;
+					}
 					height: 360px;				
 					h3 {
 						color: inherit;

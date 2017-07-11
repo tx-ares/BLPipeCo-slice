@@ -540,7 +540,7 @@ figure {
     .row.slider-row:after {
       background: #d0112b;
       height: 360px;
-      width: 15px;
+      width: 20px;
       position: absolute;
       right: 0;
       top: 0; }
@@ -3639,6 +3639,9 @@ footer {
           padding: 45px 25px;
           text-align: center;
           height: 360px; }
+          @media only screen and (max-width: 992px) {
+            .feature-slide-box .panel .slider-container .slick-slider .slick-slide {
+              padding: 45px 100px; } }
           .feature-slide-box .panel .slider-container .slick-slider .slick-slide h3 {
             color: inherit; }
           .feature-slide-box .panel .slider-container .slick-slider .slick-slide:focus {

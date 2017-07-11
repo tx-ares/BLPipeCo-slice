@@ -449,6 +449,8 @@ function initSlidePanels() {
 
 	$(".slide-over-left").on("click", function(e){
 		e.stopPropagation();
+		var activeSlider = $(".panel.active").find(".panel-slider");
+		$(activeSlider).show();
 
 		$(this).hasClass("compressed") ? $(this).toggleClass("compressed") : "";
 		$(this).hasClass("vertical-text") ? $(this).toggleClass("vertical-text") : "";
@@ -461,14 +463,15 @@ function initSlidePanels() {
 		setTimeout(function(){$(this).find(".txt-content").hide()}, 1000);
 
 		$(".social-media-icons").addClass("hidden");
-		initPanelSlider();
-
-		// setTimeout($(this).find("img.a-right.control-c.next.slick-next.slick-arrow").trigger("click"), 1000);	
-
+		// initPanelSlider(activeSlider);
+		delayedTriggerNextSlide();
 	});
 
 	$(".slide-over-right").on("click", function(e){
 		e.stopPropagation();
+		var activeSlider = $(".panel.active").find(".panel-slider");
+		console.log(activeSlider, "<< 1. activeSlider on Click")
+		$(activeSlider).show();
 
 		$(this).hasClass("compressed") ? $(this).toggleClass("compressed") : "";
 		$(this).hasClass("vertical-text") ? $(this).toggleClass("vertical-text") : "";
@@ -481,117 +484,77 @@ function initSlidePanels() {
 		setTimeout(function(){$(this).find(".txt-content").hide()}, 1000);
 
 		$(".social-media-icons").addClass("hidden");
-		initPanelSlider();
-
-		// setTimeout($(this).find("img.a-right.control-c.next.slick-next.slick-arrow").trigger("click"), 1000);	
-		
-		console.log($(this) , " << slide-over-right" )
+		// initPanelSlider(activeSlider);
+		delayedTriggerNextSlide();
 	});
-
-
-
-	// setTimeout(function(){
-	// 	$(".panel .active < img.a-right.control-c.next.slick-next.slick-arrow")
-	// 		.each(function(){
-	// 			$(this).trigger("click")
-	// 			}
-	// 		)}, 500);
 
 	$(document).click(function() {
 	    resetPanels();
 	});
 }
 
-function initPanelSlider(){
-	console.log("initPanelCarousel 3");
+function delayedTriggerNextSlide(activeSlider) {
 	$("body").addClass("no-scroll-x");
+	$(".fa-spin").css("opacity" , 1);
+	$(activeSlider).css("opacity", 0);
+	setTimeout(function(){
+		$(".fa-spin").fadeOut();
+		$(activeSlider).fadeIn();
+	} , 1000);
+	var activeSlider = $(".panel.active").find(".panel-slider");
+	$(activeSlider).slick("slickNext");
+}
 
- 	var activeSlider = $(".panel.active").find(".panel-slider");
+function initPanelSlider(activeSlider){
+	console.log("1. initializing Slider");
 
- 	$(activeSlider).on('reInit', function() {
-				console.log($(this), "<< the slider ")
-				$(this).slick('slickGoTo');	
-			});
- 	// console.log(activeSlider, "<< active slider")
-	$(activeSlider).slick({
-	  dots: false,
-	  arrows: true,
-	  prevArrow:"<img class='a-left control-c prev slick-prev' src='_assets/images/ui/chevron-white-left.png'>",
-      nextArrow:"<img class='a-right control-c next slick-next' src='_assets/images/ui/chevron-white-right.png'>",
-      infinite: true,
-	  speed: 300,
-	  easing: 'linear',
-	  slidesToShow: 5,
-	  slidesToScroll: 1,
-	  // variableWidth: true,
-	  mobileFirst: true,
-  
-	  responsive: [
-	  	{
-	      breakpoint: 1960,
-	      settings: {
-	        slidesToShow: 5,
-	        slidesToScroll: 1,
-	        infinite: true,
-	        dots: false
-	      }
-	    },
-	    {
-	      breakpoint: 1440,
-	      settings: {
-	        slidesToShow: 3,
-	        slidesToScroll: 1,
-	        infinite: true,
-	        dots: false
-	      }
-	    },
-	    {
-	      breakpoint: 1024,
-	      settings: {
-	        slidesToShow: 3,
-	        slidesToScroll: 1,
-	        infinite: true,
-	        dots: false
-	      }
-	    },
-	     {
-	      breakpoint: 865,
-	      settings: {
-	        slidesToShow: 1,
-	        slidesToScroll: 1,
-	        centerMode: true,
-        	centerPadding: '40px',
-	        infinite: true,
-	        dots: false
-	      }
-	    },
-	    {
-	      breakpoint: 600,
-	      settings: {
-	        slidesToShow: 1,
-	        slidesToScroll: 1,
-	        centerMode: true,
-        	centerPadding: '40px',
-	        dots: false
-	      }
-	    },
-	    {
-	      breakpoint: 480,
-	      settings: {
-	        slidesToShow: 1,
-	        slidesToScroll: 1,
-	        centerMode: true,
-        	centerPadding: '40px',
-	        dots: false
-	      }
-	    }
-	    // You can unslick at a given breakpoint now by adding:
-	    // settings: "unslick"
-	    // instead of a settings object
-	  ]
+	$(".panel-slider").each(function(){
+		$(this).slick({
+		  dots: false,
+		  arrows: true,
+		  prevArrow:"<img class='a-left control-c prev slick-prev' src='_assets/images/ui/chevron-white-left.png'>",
+	      nextArrow:"<img class='a-right control-c next slick-next' src='_assets/images/ui/chevron-white-right.png'>",
+	      infinite: true,
+		  speed: 300,
+		  waitForAnimate: false,
+		  easing: 'linear',
+		  slidesToShow: 5,
+		  slidesToScroll: 1,
+		  // variableWidth: true,
+		  mobileFirst: true,
+	  
+		  responsive: [
+		  	{
+		      breakpoint: 1960,
+		      settings: {
+		        slidesToShow: 5,
+		        slidesToScroll: 1,
+		      }
+		    },
+		    {
+		      breakpoint: 1024,
+		      settings: {
+		        slidesToShow: 3,
+		        slidesToScroll: 1,
+
+		      }
+		    },
+		    {
+		      breakpoint: 865,
+		      settings: {
+		        slidesToShow: 1,
+		        slidesToScroll: 1,
+		        centerMode: true,
+	        	centerPadding: '40px',
+		      }
+		    }
+		    // You can unslick at a given breakpoint now by adding:
+		    // settings: "unslick"
+		    // instead of a settings object
+		  ]
+		})
 	});
 
-	$(activePanel).slick();
 }
 
 function calculatePanelDimensions() {
@@ -676,7 +639,7 @@ jQuery(document).ready(function() {
 	initClampText();
 	initAccordion();
 
-	// initPanelSlider();
+	initPanelSlider();
 	initSlidePanels();
 	initHideFooterIfHomepage();
 	initHideElementsIfHomePageTop();

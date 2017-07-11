@@ -14,7 +14,7 @@
      "go": "npm run watch && npm run start",
     "start": "autoreload-server -w \"**/**.{html,css,js}\" ./markup 3000",
     "watch": "npm run watch-js && npm run watch-css && echo '\n\n===== watching js and scss files in src/, writing changes to dist/ =====\n\n'&",
-    "watch-js": "./node_modules/.bin/watchify _assets/js/all.js",
+    "watch-js": "./node_modules/.bin/watchify _assets/js/",
     "watch-css": "./node_modules/.bin/node-sass -w --output-style compressed markup/_assets/css/style.scss markup/_assets/css/style.css&"
   },
   "repository": {
