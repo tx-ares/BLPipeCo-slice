@@ -493,7 +493,7 @@ function initSlidePanels() {
 }
 
 function delayedTriggerNextSlide(activeSlider) {
-	$("body").addClass("no-scroll-x");
+	$("body").addClass("no-scroll-x");  //Pick up HERE, Check CSS for .slick-slider
 	$(".fa-spin").css("opacity" , 1);
 	$(activeSlider).css("opacity", 0);
 	setTimeout(function(){
