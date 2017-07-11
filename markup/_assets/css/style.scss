@@ -4006,13 +4006,17 @@ footer {
 			padding: 0 8px;
 		}
 	}
-	
+
 	.row {	
 		text-align:center;
 		margin:0;
 		// margin-top:20px;
 		position:relative;
 		height: 160px;
+		&.full-scr {
+			height: 210px;
+		}
+	
 		>[class*="col-"]:nth-child(1) {
 			.num {
 				// padding:0 10px;
@@ -5275,6 +5279,12 @@ footer {
 		overflow: hidden;
 		display: inline-block;
 	}
+	.fa-spin {
+		position: absolute;
+		top: 40%;
+		right: 45%;
+		opacity: 0;
+	}
 	@include transition(all .3s);
 	.panel {
 		min-height: 360px;
@@ -5340,9 +5350,7 @@ footer {
 						outline:none;
 					}
 				}
-
 			}
-
 		}
 	}
 	.slide-over-right {
@@ -5483,12 +5491,6 @@ footer {
 			width: 100%;
 		}
 
-		.fa-spin {
-			position: absolute;
-			top: 40%;
-			right: 45%;
-		}
-
 		&.active {
 			width: 91%;
 			@include max-screen($smd) {
@@ -5499,6 +5501,7 @@ footer {
 				min-width: auto;
 				display: inline-block;
 				opacity: 1;
+				// @include transition (opacity 2s);
 				.slick-slide {
 					&:hover {
 							background: $colorSlateBlue2;					
@@ -5785,11 +5788,11 @@ footer {
 		}
 	}
 
-	.fa-spin {
-		position: absolute;
-		top: 40%;
-		right: 45%;
-	}
+	// .fa-spin {
+	// 	position: absolute;
+	// 	top: 40%;
+	// 	right: 45%;
+	// }
 
 	&.active {
 		width: 91%;
@@ -6039,11 +6042,11 @@ footer {
 		}
 	}
 
-	.fa-spin {
-		position: absolute;
-		top: 40%;
-		right: 45%;
-	}
+	// .fa-spin {
+	// 	position: absolute;
+	// 	top: 40%;
+	// 	right: 45%;
+	// }
 
 	&.active {
 		width: 91%;

@@ -274,15 +274,14 @@ function initSlider() {
 	// 		});	
  //    });
 	
-	$(".slider").slick();
+	// $(".slider").slick();
 	
-	$(window).trigger('resize');
+	// $(window).trigger('resize');
 	
 }
 
 function resizeSlider() {
 	"use strict";
-	
 	
 	$('.slider').each(function() {
     	var parentWidth = $(this).parent().find('.slider-width-hack').width();
@@ -434,16 +433,19 @@ function resetPanels() {
 		$(this).removeClass("active compressed");
 	})
 	$(".panel-slider").each(function(){
+		// $(this).css("opacity",0);
 		$(this).hide();
 	})
-	$("h3.text-flip").removeClass("vertical-text"); 
+	$("h3.text-flip").removeClass("vertical-text");
+
+	$(".fa-spin").css("opacity" , 0);
 
 	hideSocialMediaIconsIfPanelActive();
 
 }
 
 function initSlidePanels() {
-	console.log("initSlidePanels Fired 2!")
+	console.log("initSlidePanels Fired 5!")
 
 	$(".slide-over-left").on("click", function(e){
 		e.stopPropagation();
@@ -461,7 +463,7 @@ function initSlidePanels() {
 		$(".social-media-icons").addClass("hidden");
 		initPanelSlider();
 
-		setTimeout($(this).find("img.a-right.control-c.next.slick-next.slick-arrow").trigger("click"), 400);	
+		// setTimeout($(this).find("img.a-right.control-c.next.slick-next.slick-arrow").trigger("click"), 1000);	
 
 	});
 
@@ -481,8 +483,9 @@ function initSlidePanels() {
 		$(".social-media-icons").addClass("hidden");
 		initPanelSlider();
 
-		setTimeout($(this).find("img.a-right.control-c.next.slick-next.slick-arrow").trigger("click"), 400);	
+		// setTimeout($(this).find("img.a-right.control-c.next.slick-next.slick-arrow").trigger("click"), 1000);	
 		
+		console.log($(this) , " << slide-over-right" )
 	});
 
 
@@ -500,10 +503,17 @@ function initSlidePanels() {
 }
 
 function initPanelSlider(){
-	console.log("initPanelCarousel 2");
+	console.log("initPanelCarousel 3");
 	$("body").addClass("no-scroll-x");
-	// $(".fa-spin").css("opacity" , 1);
-	$(".panel-slider").slick({
+
+ 	var activeSlider = $(".panel.active").find(".panel-slider");
+
+ 	$(activeSlider).on('reInit', function() {
+				console.log($(this), "<< the slider ")
+				$(this).slick('slickGoTo');	
+			});
+ 	// console.log(activeSlider, "<< active slider")
+	$(activeSlider).slick({
 	  dots: false,
 	  arrows: true,
 	  prevArrow:"<img class='a-left control-c prev slick-prev' src='_assets/images/ui/chevron-white-left.png'>",
@@ -581,12 +591,13 @@ function initPanelSlider(){
 	  ]
 	});
 
+	$(activePanel).slick();
 }
 
 function calculatePanelDimensions() {
 	var activePanel = $("*.panel.active .slider-container");
 	var panelWidth = activePanel.width();
-	console.log(panelWidth, "<< Calc panelWidth")
+	// console.log(panelWidth, "<< Calc panelWidth")
 	activePanel.css("width", panelWidth);
 	activePanel.css("display", "block");
 }
@@ -614,17 +625,18 @@ function initAnimateWhenInView() {
 	console.log("initAnimate - FIRED")
 	var logoRow = $(".logo-row");
 
-	$(window).scroll(function(){
-		console.log("TESTING...")
-		if(isScrolledIntoView(logoRow) == true) {
-			console.log("CONDITION PASSED!")
-			logoRow.find("div[class*=' col-']").each(
-				function(){
-					$(this).addClass("animated pulse")
-				});
-		}
-
-	})
+	if($(".body").hasClass("landing")) {
+		$(window).scroll(function(){
+			console.log("TESTING...")
+			if(isScrolledIntoView(logoRow) == true) {
+				console.log("CONDITION PASSED!")
+				logoRow.find("div[class*=' col-']").each(
+					function(){
+						$(this).addClass("animated pulse")
+					})
+			}
+		});
+	}
 }
 
 // Contingencies 
@@ -647,7 +659,7 @@ $(window).resize(function(){
 // JavaScript Document - Initial Fire
 jQuery(document).ready(function() {
 	"use strict";
-	console.log("MANUAL Compile - SUCCESS - 12");
+	console.log("MANUAL Compile - SUCCESS x1");
 	showPage();
 	initDesktopMenu();
 	initMobileMenu();
