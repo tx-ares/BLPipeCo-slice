@@ -5366,7 +5366,7 @@ footer {
 				width: 100%;
 				min-width: auto;
 				display: inline-block;
-				opacity: 1;
+				// opacity: 1;
 				.slick-slide {
 					&:hover {
 						background: $colorBrightRed3;					
@@ -5500,8 +5500,8 @@ footer {
 				width: 100%;
 				min-width: auto;
 				display: inline-block;
-				opacity: 1;
-				// @include transition (opacity 2s);
+				// opacity: 1;
+				@include transition (opacity 1s);
 				.slick-slide {
 					&:hover {
 							background: $colorSlateBlue2;					

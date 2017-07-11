@@ -3657,8 +3657,7 @@ footer {
       .feature-slide-box .slide-over-right.active .slick-slider {
         width: 100%;
         min-width: auto;
-        display: inline-block;
-        opacity: 1; }
+        display: inline-block; }
         .feature-slide-box .slide-over-right.active .slick-slider .slick-slide:hover {
           background: #aa0b21; }
       .feature-slide-box .slide-over-right.active .txt-content,
@@ -3768,7 +3767,10 @@ footer {
         width: 100%;
         min-width: auto;
         display: inline-block;
-        opacity: 1; }
+        -moz-transition: opacity 1s;
+        -o-transition: opacity 1s;
+        -webkit-transition: opacity 1s;
+        transition: opacity 1s; }
         .feature-slide-box .slide-over-left.active .slick-slider .slick-slide:hover {
           background: #bcc7cd; }
       .feature-slide-box .slide-over-left.active .txt-content,
