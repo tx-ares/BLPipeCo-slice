@@ -3608,6 +3608,12 @@ footer {
       height: auto;
       width: 90%;
       display: inline-block; }
+      @media only screen and (max-width: 375px) {
+        .feature-slide-box .panel .slider-container {
+          width: 85%; } }
+      @media only screen and (max-width: 320px) {
+        .feature-slide-box .panel .slider-container {
+          width: 85%; } }
       .feature-slide-box .panel .slider-container .slick-slider {
         display: block !important;
         height: 0;
@@ -3636,22 +3642,22 @@ footer {
             .feature-slide-box .panel .slider-container .slick-slider .slick-list {
               margin: 0 25px; } }
         .feature-slide-box .panel .slider-container .slick-slider .slick-slide {
+          height: 360px;
+          padding: 30px 20px;
+          text-align: center;
           -moz-transition: all 0.3s;
           -o-transition: all 0.3s;
           -webkit-transition: all 0.3s;
-          transition: all 0.3s;
-          padding: 30px 20px;
-          text-align: center;
-          height: 360px; }
+          transition: all 0.3s; }
           @media only screen and (max-width: 992px) {
             .feature-slide-box .panel .slider-container .slick-slider .slick-slide {
               padding: 45px 100px; } }
           @media only screen and (max-width: 575px) {
             .feature-slide-box .panel .slider-container .slick-slider .slick-slide {
-              padding: 45px 40px; } }
+              padding: 35px 40px; } }
           @media only screen and (max-width: 320px) {
             .feature-slide-box .panel .slider-container .slick-slider .slick-slide {
-              padding: 25px 40px; } }
+              padding: 35px 20px; } }
           .feature-slide-box .panel .slider-container .slick-slider .slick-slide h3 {
             color: inherit; }
           .feature-slide-box .panel .slider-container .slick-slider .slick-slide:focus {
@@ -3720,7 +3726,7 @@ footer {
           margin: 0 auto; } }
       @media only screen and (max-width: 320px) {
         .feature-slide-box .slide-over-right .txt-content {
-          left: -40px;
+          left: -5%;
           max-width: 320px; } }
     @media only screen and (max-width: 865px) {
       .feature-slide-box .slide-over-right {
@@ -3751,7 +3757,7 @@ footer {
       transition: all 0.3s; }
       @media only screen and (max-width: 320px) {
         .feature-slide-box .slide-over-right h3.text-flip {
-          left: 45px; } }
+          left: 20%; } }
       .feature-slide-box .slide-over-right h3.text-flip.vertical-text {
         position: absolute;
         left: -95px;
@@ -3864,14 +3870,21 @@ footer {
       .feature-slide-box .slide-over-left h3.text-flip {
         left: 15%;
         text-align: center; } }
+    @media only screen and (max-width: 375px) {
+      .feature-slide-box .slide-over-left .txt-content {
+        right: intial;
+        left: 10%; }
+      .feature-slide-box .slide-over-left h3.text-flip {
+        left: 10%;
+        text-align: center; } }
     @media only screen and (max-width: 320px) {
       .feature-slide-box .slide-over-left .txt-content {
         right: intial;
-        left: 5%;
+        left: 10%;
         max-width: 320px; }
       .feature-slide-box .slide-over-left h3.text-flip {
         right: intial;
-        left: 20%;
+        left: 25%;
         text-align: center;
         min-width: 165px; } }
     .feature-slide-box .slide-over-left:after {

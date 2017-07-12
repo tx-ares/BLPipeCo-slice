@@ -15,6 +15,7 @@
 
 /* Media Queries Sizes */
 $xsm: 320px;
+$ssm: 375px;
 $sm: 575px;
 $xmd: 768px;
 $smd: 865px;
@@ -5307,9 +5308,12 @@ footer {
 			height: auto;
 			width: 90%;
 			display:inline-block;
-			// @include max-screen($xsm) {
-			// 	width: initial;
-			// }
+			@include max-screen($ssm) {
+				width: 85%;
+			}
+			@include max-screen($xsm) {
+				width: 85%;
+			}
 
 			.slick-slider {
 				display: block !important;
@@ -5342,20 +5346,20 @@ footer {
 				}
 				@include transition(all .3s);
 				.slick-slide {
-					@include transition(all .3s);
+					height: 360px;				
 					padding: 30px 20px;
 					text-align: center;
-				
+					@include transition(all .3s);
+
 					@include max-screen($md) {
 						padding: 45px 100px;
 					}
 					@include max-screen($sm) {
-						padding: 45px 40px;
+						padding: 35px 40px;
 					}
 					@include max-screen($xsm) {
-						padding: 25px 40px;
+						padding: 35px 20px;
 					}
-					height: 360px;				
 					h3 {
 						color: inherit;
 					}
@@ -5447,7 +5451,7 @@ footer {
 				margin: 0 auto;
 			}
 			@include max-screen($xsm) {
-				left: -40px;
+				left: -5%;
 				max-width: 320px;
 			}
 
@@ -5478,7 +5482,7 @@ footer {
 			@include font-size(24px);
 			@include transition( all .3s);
 			@include max-screen($xsm) {
-				left: 45px;
+				left: 20%;
 			}
 			&.vertical-text {
 				position: absolute;
@@ -5629,15 +5633,26 @@ footer {
 			}
 		}
 
+		@include max-screen($ssm) {
+			.txt-content {
+				right: intial;
+				left: 10%;
+			}
+			h3.text-flip {
+				left: 10%;
+				text-align: center;
+			}
+		}
+
 		@include max-screen($xsm) {
 			.txt-content {
 				right: intial;
-				left: 5%;
+				left: 10%;
 				max-width: 320px;
 			}
 			h3.text-flip {
 				right: intial;
-				left: 20%;
+				left: 25%;
 				text-align: center;
 				min-width: 165px;
 			}
@@ -5658,9 +5673,12 @@ footer {
 				right: 0;
 				padding-right: 15px;
 			}
-			@include max-screen($xsm) {
-				// padding-right: 0;
-			}
+			// @include max-screen($ssm) {
+			// 	padding-right: 15px;
+			// }
+			// @include max-screen($xsm) {
+			//  padding-right: 0;
+			// }
 		}
 
 		.slider {
