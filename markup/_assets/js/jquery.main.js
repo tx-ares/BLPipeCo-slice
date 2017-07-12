@@ -463,7 +463,7 @@ function initSlidePanels() {
 		setTimeout(function(){$(this).find(".txt-content").hide()}, 1000);
 
 		$(".social-media-icons").addClass("hidden");
-		// initPanelSlider(activeSlider);
+
 		delayedTriggerNextSlide(activeSlider);
 	});
 
@@ -494,6 +494,7 @@ function initSlidePanels() {
 
 function delayedTriggerNextSlide(activeSlider) {
 	$("body").addClass("no-scroll-x");  //Pick up HERE, Check CSS for .slick-slider
+	
 	$(".fa-spin").css("opacity" , 1);
 	$(activeSlider).css("opacity", 0);
 	setTimeout(function(){
@@ -527,6 +528,8 @@ function initPanelSlider(){
 		      settings: {
 		        slidesToShow: 5,
 		        slidesToScroll: 1,
+		        infinite: true
+
 		      }
 		    },
 		    {
@@ -534,7 +537,7 @@ function initPanelSlider(){
 		      settings: {
 		        slidesToShow: 3,
 		        slidesToScroll: 1,
-
+	      		infinite: true
 		      }
 		    },
 		    {
@@ -544,6 +547,27 @@ function initPanelSlider(){
 		        slidesToScroll: 1,
 		        centerMode: true,
 	        	centerPadding: '40px',
+	        	infinite: true
+		      }
+		    },
+		    {
+		      breakpoint: 575,
+		      settings: {
+		        slidesToShow: 1,
+		        slidesToScroll: 1,
+		        centerMode: true,
+	        	centerPadding: '40px',
+	        	infinite: true
+		      }
+		    },
+		    {
+		      breakpoint: 320,
+		      settings: {
+		        slidesToShow: 1,
+		        slidesToScroll: 1,
+		        centerMode: true,
+	        	centerPadding: '40px',
+	        	infinite: true
 		      }
 		    }
 		    // You can unslick at a given breakpoint now by adding:
