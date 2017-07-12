@@ -5337,13 +5337,16 @@ footer {
 				@include transition(all .3s);
 				.slick-slide {
 					@include transition(all .3s);
-					padding: 45px 25px;
+					padding: 45px 35px;
 					text-align: center;
 					@include max-screen($md) {
 						padding: 45px 100px;
 					}
 					@include max-screen($sm) {
 						padding: 45px 35px;
+					}
+					@include max-screen($xsm) {
+						padding: 25px 35px;
 					}
 					height: 360px;				
 					h3 {
@@ -5436,6 +5439,9 @@ footer {
 			@include max-screen($smd) {
 				margin: 0 auto;
 			}
+			@include max-screen($xsm) {
+				left: -40px;
+			}
 
 		}
 		@include max-screen($smd) {
@@ -5458,10 +5464,14 @@ footer {
 			text-transform:inherit;
 			font-weight:500;
 			position: absolute;
+			min-width: 205px;
 			left: 95px;
 			top: 145px;
 			@include font-size(24px);
 			@include transition( all .3s);
+			@include max-screen($xsm) {
+				left: 45px;
+			}
 			&.vertical-text {
 				position: absolute;
 				left: -95px;
@@ -5574,16 +5584,44 @@ footer {
 			display: block;
 			width: 100%;
 			.txt-content {
-				right: 15%
+				right: 30%;
 			}
 			h3.text-flip {
-				right: 25%;
+				right: 35%;
 				text-align: center;
 			}
 		}
 
 		@include max-screen($xmd) {
+			.txt-content {
+				right: 20%;
+			}
+			h3.text-flip {
+				right: 30%;
+				text-align: center;
+			}
+		}
 
+		@include max-screen($sm) {
+			.txt-content {
+				right: intial;
+				left: 5%;
+			}
+			h3.text-flip {
+				right: 20%;
+				text-align: center;
+			}
+		}
+
+		@include max-screen($xsm) {
+			.txt-content {
+				right: intial;
+				left: 5%;
+			}
+			h3.text-flip {
+				right: 5%;
+				text-align: center;
+			}
 		}
 
 		&:after {
@@ -5595,6 +5633,9 @@ footer {
 			top: 45%;
 			@include max-screen($smd){
 				right: 50px;
+			}
+			@include max-screen($xsm){
+				right: inherit;
 			}
 		}
 
@@ -5612,6 +5653,7 @@ footer {
 		position: absolute;
 	    right: 80px;
 	    top: 145px;
+	    min-width: 265px;
 		@include font-size(24px);
 		@include transition( all .3s);
 		&.vertical-text {
