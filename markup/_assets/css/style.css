@@ -3773,13 +3773,12 @@ footer {
         .feature-slide-box .slide-over-right:before {
           left: initial;
           right: 50px;
-          content: '\f0da'; } }
-      @media only screen and (max-width: 320px) {
+          content: '\f0da';
+          top: 40%; } }
+      @media only screen and (max-width: 575px) {
         .feature-slide-box .slide-over-right:before {
-          left: initial;
-          right: 5%;
-          top: 40%;
-          content: '\f0da'; } }
+          right: 0;
+          padding-right: 15px; } }
   .feature-slide-box .slide-over-left {
     background: #e2eaed; }
     @media only screen and (max-width: 865px) {
@@ -3872,8 +3871,9 @@ footer {
         max-width: 320px; }
       .feature-slide-box .slide-over-left h3.text-flip {
         right: intial;
-        left: 5%;
-        text-align: center; } }
+        left: 20%;
+        text-align: center;
+        min-width: 165px; } }
     .feature-slide-box .slide-over-left:after {
       content: '\f0da';
       font-family: "FontAwesome";
@@ -3884,10 +3884,11 @@ footer {
       @media only screen and (max-width: 865px) {
         .feature-slide-box .slide-over-left:after {
           right: 50px; } }
-      @media only screen and (max-width: 320px) {
+      @media only screen and (max-width: 575px) {
         .feature-slide-box .slide-over-left:after {
-          right: 5%;
-          top: 40%; } }
+          top: 40%;
+          right: 0;
+          padding-right: 15px; } }
     .feature-slide-box .slide-over-left .slider {
       width: 60%; }
   .feature-slide-box h3.text-flip {

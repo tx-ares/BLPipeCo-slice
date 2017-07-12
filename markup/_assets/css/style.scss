@@ -5505,12 +5505,14 @@ footer {
 				left: initial;
 				right: 50px;
 				content: '\f0da';
+				top: 40%;
+			}
+			@include max-screen($sm) {
+				right: 0;
+				padding-right: 15px;
 			}
 			@include max-screen($xsm) {
-				left: initial;
-				right: 5%;
-				top: 40%;
-				content: '\f0da';
+				// padding-right: 0;
 			}
 		}
 
@@ -5635,8 +5637,9 @@ footer {
 			}
 			h3.text-flip {
 				right: intial;
-				left: 5%;
+				left: 20%;
 				text-align: center;
+				min-width: 165px;
 			}
 		}
 
@@ -5650,9 +5653,13 @@ footer {
 			@include max-screen($smd) {
 				right: 50px;
 			}
-			@include max-screen($xsm) {
-				right: 5%;
+			@include max-screen($sm) {
 				top: 40%;
+				right: 0;
+				padding-right: 15px;
+			}
+			@include max-screen($xsm) {
+				// padding-right: 0;
 			}
 		}
 
