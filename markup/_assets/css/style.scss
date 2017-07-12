@@ -5337,16 +5337,16 @@ footer {
 				@include transition(all .3s);
 				.slick-slide {
 					@include transition(all .3s);
-					padding: 45px 35px;
+					padding: 45px 40px;
 					text-align: center;
 					@include max-screen($md) {
 						padding: 45px 100px;
 					}
 					@include max-screen($sm) {
-						padding: 45px 35px;
+						padding: 45px 40px;
 					}
 					@include max-screen($xsm) {
-						padding: 25px 35px;
+						padding: 25px 40px;
 					}
 					height: 360px;				
 					h3 {
@@ -5605,10 +5605,10 @@ footer {
 		@include max-screen($sm) {
 			.txt-content {
 				right: intial;
-				left: 5%;
+				left: 15%;
 			}
 			h3.text-flip {
-				right: 20%;
+				left: 15%;
 				text-align: center;
 			}
 		}
