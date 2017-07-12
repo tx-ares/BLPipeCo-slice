@@ -1277,6 +1277,10 @@ body {
   @media only screen and (max-width: 865px) {
     body.homepage .main-content {
       padding-top: 0; } }
+  @media only screen and (max-width: 320px) {
+    body {
+      max-width: 100% !important;
+      overflow-x: hidden !important; } }
 
 header {
   position: relative;
@@ -3716,7 +3720,8 @@ footer {
           margin: 0 auto; } }
       @media only screen and (max-width: 320px) {
         .feature-slide-box .slide-over-right .txt-content {
-          left: -40px; } }
+          left: -40px;
+          max-width: 320px; } }
     @media only screen and (max-width: 865px) {
       .feature-slide-box .slide-over-right {
         display: block;
@@ -3768,6 +3773,12 @@ footer {
         .feature-slide-box .slide-over-right:before {
           left: initial;
           right: 50px;
+          content: '\f0da'; } }
+      @media only screen and (max-width: 320px) {
+        .feature-slide-box .slide-over-right:before {
+          left: initial;
+          right: 5%;
+          top: 40%;
           content: '\f0da'; } }
   .feature-slide-box .slide-over-left {
     background: #e2eaed; }
@@ -3857,9 +3868,11 @@ footer {
     @media only screen and (max-width: 320px) {
       .feature-slide-box .slide-over-left .txt-content {
         right: intial;
-        left: 5%; }
+        left: 5%;
+        max-width: 320px; }
       .feature-slide-box .slide-over-left h3.text-flip {
-        right: 5%;
+        right: intial;
+        left: 5%;
         text-align: center; } }
     .feature-slide-box .slide-over-left:after {
       content: '\f0da';
@@ -3873,7 +3886,8 @@ footer {
           right: 50px; } }
       @media only screen and (max-width: 320px) {
         .feature-slide-box .slide-over-left:after {
-          right: inherit; } }
+          right: 5%;
+          top: 40%; } }
     .feature-slide-box .slide-over-left .slider {
       width: 60%; }
   .feature-slide-box h3.text-flip {
@@ -3903,6 +3917,9 @@ footer {
       transform: rotate(-90deg); }
   .feature-slide-box p:last-child {
     margin-bottom: 0; }
+    @media only screen and (max-width: 575px) {
+      .feature-slide-box p:last-child {
+        margin-top: 15px; } }
   .feature-slide-box img.icon {
     height: 110px;
     max-width: 170px;

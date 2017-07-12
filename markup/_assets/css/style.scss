@@ -1653,6 +1653,11 @@ body {
 				padding-top: 0;
 			}
 		}	
+	}
+
+	@include max-screen($xsm) {
+		max-width: 100% !important;
+		overflow-x: hidden !important;
 	}	
 }
 
@@ -5305,6 +5310,7 @@ footer {
 			@include max-screen($smd) {
 				// margin: 50px 0;
 			}
+
 			.slick-slider {
 				display: block !important;
 				height: 0;
@@ -5441,6 +5447,7 @@ footer {
 			}
 			@include max-screen($xsm) {
 				left: -40px;
+				max-width: 320px;
 			}
 
 		}
@@ -5496,6 +5503,12 @@ footer {
 			@include max-screen($smd) {
 				left: initial;
 				right: 50px;
+				content: '\f0da';
+			}
+			@include max-screen($xsm) {
+				left: initial;
+				right: 5%;
+				top: 40%;
 				content: '\f0da';
 			}
 		}
@@ -5617,9 +5630,11 @@ footer {
 			.txt-content {
 				right: intial;
 				left: 5%;
+				max-width: 320px;
 			}
 			h3.text-flip {
-				right: 5%;
+				right: intial;
+				left: 5%;
 				text-align: center;
 			}
 		}
@@ -5631,11 +5646,12 @@ footer {
 			position: absolute;
 			right: 10px;
 			top: 45%;
-			@include max-screen($smd){
+			@include max-screen($smd) {
 				right: 50px;
 			}
-			@include max-screen($xsm){
-				right: inherit;
+			@include max-screen($xsm) {
+				right: 5%;
+				top: 40%;
 			}
 		}
 
@@ -5669,6 +5685,9 @@ footer {
 	p {
 		&:last-child {
 			margin-bottom:0;
+			@include max-screen($sm) {
+				margin-top: 15px;
+			}
 		}
 	}
 	
