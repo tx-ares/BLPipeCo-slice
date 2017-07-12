@@ -5307,9 +5307,9 @@ footer {
 			height: auto;
 			width: 90%;
 			display:inline-block;
-			@include max-screen($smd) {
-				// margin: 50px 0;
-			}
+			// @include max-screen($xsm) {
+			// 	width: initial;
+			// }
 
 			.slick-slider {
 				display: block !important;
