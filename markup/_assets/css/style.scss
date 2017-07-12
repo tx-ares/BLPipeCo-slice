@@ -5342,6 +5342,9 @@ footer {
 					@include max-screen($md) {
 						padding: 45px 100px;
 					}
+					@include max-screen($sm) {
+						padding: 45px 35px;
+					}
 					height: 360px;				
 					h3 {
 						color: inherit;
@@ -5478,7 +5481,9 @@ footer {
 			left: 10px;
 			top: 45%;
 			@include max-screen($smd) {
-				left: 50px;
+				left: initial;
+				right: 50px;
+				content: '\f0da';
 			}
 		}
 

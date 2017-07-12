@@ -456,7 +456,7 @@ function initSlidePanels() {
 
 		$(this).hasClass("compressed") ? $(this).toggleClass("compressed") : "";
 		$(this).hasClass("vertical-text") ? $(this).toggleClass("vertical-text") : "";
-		$(this).find($(".txt-content")).each(function(){ $(this).removeClass("animated fadeOut")});
+		// $(this).find($(".txt-content")).each(function(){ $(this).removeClass("animated fadeOut")});
 
 		$(this).addClass("active");
 		var activePanel = $(this);
@@ -470,7 +470,7 @@ function initSlidePanels() {
 
 		$(".social-media-icons").addClass("hidden");
 
-		delayedTriggerNextSlide(activePanel);
+		delayedLoad(activePanel);
 	});
 
 	$(".slide-over-right").on("click", function(e){
@@ -482,7 +482,7 @@ function initSlidePanels() {
 
 		$(this).hasClass("compressed") ? $(this).toggleClass("compressed") : "";
 		$(this).hasClass("vertical-text") ? $(this).toggleClass("vertical-text") : "";
-		$(this).find($(".txt-content")).each(function(){ $(this).removeClass("animated fadeOut")});
+		// $(this).find($(".txt-content")).each(function(){ $(this).removeClass("animated fadeOut")});
 
 		$(this).addClass("active");
 		var activePanel = $(this);
@@ -496,7 +496,7 @@ function initSlidePanels() {
 
 		$(".social-media-icons").addClass("hidden");
 
-		delayedTriggerNextSlide(activePanel);
+		delayedLoad(activePanel);
 	});
 
 	$(document).click(function() {
@@ -504,7 +504,7 @@ function initSlidePanels() {
 	});
 }
 
-function delayedTriggerNextSlide(activePanel) {
+function delayedLoad(activePanel) {
 	var activeSlider = $(".panel.active").find(".panel-slider");
 
 	if(!$(activeSlider).hasClass("loaded")) {
