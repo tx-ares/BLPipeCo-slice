@@ -2078,8 +2078,8 @@ header {
 		
 		@include max-screen($lg) {
 			img {
-				width:85px!important;
-				height:40px!important;
+				// width:85px!important;
+				height:50px!important;
 			}
 			
 			.slogan { display:none; }
@@ -2102,7 +2102,7 @@ header {
 	
 	@include max-screen($lg) {
 		img {
-			width:85px!important;
+			// width:85px!important;
 			height:40px!important;
 		}
 		
@@ -3247,8 +3247,8 @@ footer {
 			@include transition(all .3s);
 			
 			img {
-				width:85px!important;
-				height:40px!important;
+				// width:85px!important;
+				height:50px!important;
 				@include max-screen($lg){
 					margin-top: 8px;
 				}

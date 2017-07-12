@@ -301,9 +301,13 @@ function initStickyHeader() {
     $(window).scroll(function () {
         if ($(this).scrollTop() > 32 || window.matchMedia('only screen and (max-width: 1024px)').matches) {
             $('body').addClass("header-compressed");
+            $(".logo > img").each(function(){
+            	$(this).attr("src" , "_assets/images/BLPipeco_Logo-Horizontal.png")});
         }
         else {
 			$('body').removeClass("header-compressed");
+			$(".logo > img").each(function() {
+				$(this).attr("src" , "_assets/images/BLPipeco_Logo-md4.png")});
         }
     });
 }
@@ -359,8 +363,12 @@ function doneResizing() {
 	
 	if(window.matchMedia('only screen and (max-width: 1024px)').matches && $(document).scrollTop() < 1) {
 		$('body').addClass("header-compressed");
+		$(".logo > img").each(function() {
+				$(this).attr("src" , "_assets/images/BLPipeco_Logo-Horizontal.png")});
 	} else {
 		$('body').removeClass("header-compressed");
+		$(".logo > img").each(function() {
+				$(this).attr("src" , "_assets/images/BLPipeco_Logo-md4.png")});
 	}
 	
 	/* Check if body has scrollbar */
