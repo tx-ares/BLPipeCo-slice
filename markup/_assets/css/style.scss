@@ -5343,8 +5343,9 @@ footer {
 				@include transition(all .3s);
 				.slick-slide {
 					@include transition(all .3s);
-					padding: 45px 40px;
+					padding: 30px 20px;
 					text-align: center;
+				
 					@include max-screen($md) {
 						padding: 45px 100px;
 					}
