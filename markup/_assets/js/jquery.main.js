@@ -459,6 +459,7 @@ function initSlidePanels() {
 		$(this).find($(".txt-content")).each(function(){ $(this).removeClass("animated fadeOut")});
 
 		$(this).addClass("active");
+		var activePanel = $(this);
 
 		$(".slide-over-right").addClass("compressed").removeClass("active");
 		var deactivatedSlider = $(".panel:not(.active)").find(".panel-slider");
@@ -469,12 +470,13 @@ function initSlidePanels() {
 
 		$(".social-media-icons").addClass("hidden");
 
-		delayedTriggerNextSlide();
+		delayedTriggerNextSlide(activePanel);
 	});
 
 	$(".slide-over-right").on("click", function(e){
 		e.stopPropagation();
 		var activeSlider = $(".panel.active").find(".panel-slider");
+
 		$(activeSlider).show();
 		$(activeSlider).css("opacity" , 1);
 
@@ -483,6 +485,7 @@ function initSlidePanels() {
 		$(this).find($(".txt-content")).each(function(){ $(this).removeClass("animated fadeOut")});
 
 		$(this).addClass("active");
+		var activePanel = $(this);
 
 		$(".slide-over-left").addClass("compressed").removeClass("active");
 		var deactivatedSlider = $(".panel:not(.active)").find(".panel-slider");
@@ -493,7 +496,7 @@ function initSlidePanels() {
 
 		$(".social-media-icons").addClass("hidden");
 
-		delayedTriggerNextSlide();
+		delayedTriggerNextSlide(activePanel);
 	});
 
 	$(document).click(function() {
@@ -501,16 +504,16 @@ function initSlidePanels() {
 	});
 }
 
-function delayedTriggerNextSlide() {
+function delayedTriggerNextSlide(activePanel) {
 	var activeSlider = $(".panel.active").find(".panel-slider");
 
 	if(!$(activeSlider).hasClass("loaded")) {
 		$("body").addClass("no-scroll-x");  //Pick up HERE, Check CSS for .slick-slider
 		
-		$(".fa-spin").css("opacity" , 1);
+		$(activePanel).find(".fa-spin").css("opacity" , 1);
 		$(activeSlider).css("opacity", 0);
 		setTimeout(function(){
-			$(".fa-spin").css("opacity", 0);
+			$(activePanel).find(".fa-spin").css("opacity" , 0);
 			$(activeSlider).css("opacity", 1);
 		} , 500);
 		$(activeSlider).slick("slickNext");
