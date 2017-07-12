@@ -416,11 +416,11 @@ function initHideFooterIfHomepage() {
 }
 
 function initHideElementsIfHomePageTop() {
-	resetBodyScrollX();
 
 	if ($("body").hasClass('homepage') && $(this).scrollTop() == 0 && !window.matchMedia('only screen and (max-width: 1024px)').matches) {
 		$("header").css("background", "rgba(0,38,60,0)");
 		$(".social-media-icons").css("right" , -40);
+		resetBodyScrollX();
 	}
 	else {
 		$("header").css("background", "rgba(0,38,60,1)");
@@ -454,19 +454,20 @@ function initSlidePanels() {
 		$(activeSlider).show();
 		$(activeSlider).css("opacity" , 1);
 
-		$(this).hasClass("compressed") ? $(this).toggleClass("compressed") : "";
-		$(this).hasClass("vertical-text") ? $(this).toggleClass("vertical-text") : "";
-		// $(this).find($(".txt-content")).each(function(){ $(this).removeClass("animated fadeOut")});
-
+		if (!window.matchMedia('only screen and (max-width: 865px)').matches) {
+			$(this).hasClass("compressed") ? $(this).toggleClass("compressed") : "";
+			$(this).hasClass("vertical-text") ? $(this).toggleClass("vertical-text") : "";
+			$("h3.text-flip").addClass("vertical-text");
+			setTimeout(function(){$(this).find(".txt-content").hide()}, 1000);
+			$(".slide-over-right").addClass("compressed");
+			// $(this).find($(".txt-content")).each(function(){ $(this).removeClass("animated fadeOut")});
+		}
 		$(this).addClass("active");
 		var activePanel = $(this);
 
-		$(".slide-over-right").addClass("compressed").removeClass("active");
+		$(".slide-over-right").removeClass("active");
 		var deactivatedSlider = $(".panel:not(.active)").find(".panel-slider");
 		$(deactivatedSlider).css("opacity" , 0).removeClass("loaded");
-
-		$("h3.text-flip").addClass("vertical-text");
-		setTimeout(function(){$(this).find(".txt-content").hide()}, 1000);
 
 		$(".social-media-icons").addClass("hidden");
 
@@ -480,19 +481,20 @@ function initSlidePanels() {
 		$(activeSlider).show();
 		$(activeSlider).css("opacity" , 1);
 
-		$(this).hasClass("compressed") ? $(this).toggleClass("compressed") : "";
-		$(this).hasClass("vertical-text") ? $(this).toggleClass("vertical-text") : "";
-		// $(this).find($(".txt-content")).each(function(){ $(this).removeClass("animated fadeOut")});
-
+		if (!window.matchMedia('only screen and (max-width: 865px)').matches) {
+			$(this).hasClass("compressed") ? $(this).toggleClass("compressed") : "";
+			$(this).hasClass("vertical-text") ? $(this).toggleClass("vertical-text") : "";
+			$("h3.text-flip").addClass("vertical-text");
+			setTimeout(function(){$(this).find(".txt-content").hide()}, 1000);
+			$(".slide-over-left").addClass("compressed");
+			// $(this).find($(".txt-content")).each(function(){ $(this).removeClass("animated fadeOut")});
+		}
 		$(this).addClass("active");
 		var activePanel = $(this);
 
-		$(".slide-over-left").addClass("compressed").removeClass("active");
+		$(".slide-over-left").removeClass("active");
 		var deactivatedSlider = $(".panel:not(.active)").find(".panel-slider");
 		$(deactivatedSlider).css("opacity" , 0).removeClass("loaded");
-
-		$("h3.text-flip").addClass("vertical-text");
-		setTimeout(function(){$(this).find(".txt-content").hide()}, 1000);
 
 		$(".social-media-icons").addClass("hidden");
 
@@ -506,10 +508,9 @@ function initSlidePanels() {
 
 function delayedLoad(activePanel) {
 	var activeSlider = $(".panel.active").find(".panel-slider");
+	$("body").addClass("no-scroll-x");  
 
-	if(!$(activeSlider).hasClass("loaded")) {
-		$("body").addClass("no-scroll-x");  //Pick up HERE, Check CSS for .slick-slider
-		
+	if(!$(activeSlider).hasClass("loaded")) {	
 		$(activePanel).find(".fa-spin").css("opacity" , 1);
 		$(activeSlider).css("opacity", 0);
 		setTimeout(function(){

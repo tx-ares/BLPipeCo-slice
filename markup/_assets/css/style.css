@@ -3657,6 +3657,8 @@ footer {
       @media only screen and (max-width: 865px) {
         .feature-slide-box .slide-over-right.active {
           width: 100%; } }
+      .feature-slide-box .slide-over-right.active h3.text-upcase.text-flip {
+        opacity: 0; }
       .feature-slide-box .slide-over-right.active .slick-slider {
         width: 100%;
         min-width: auto;
@@ -3767,7 +3769,9 @@ footer {
       width: 91%; }
       @media only screen and (max-width: 865px) {
         .feature-slide-box .slide-over-left.active {
-          width: 100%; } }
+          width: 100%; }
+          .feature-slide-box .slide-over-left.active h3.text-upcase.text-flip {
+            opacity: 0; } }
       .feature-slide-box .slide-over-left.active .slick-slider {
         width: 100%;
         min-width: auto;

@@ -5365,6 +5365,9 @@ footer {
 			@include max-screen($smd) {
 				width: 100%;
 			}
+			h3.text-upcase.text-flip {
+					opacity: 0;
+				}
 			.slick-slider {
 				width: 100%;
 				min-width: auto;
@@ -5500,6 +5503,9 @@ footer {
 			width: 91%;
 			@include max-screen($smd) {
 				width: 100%;
+				h3.text-upcase.text-flip {
+					opacity: 0;
+				}
 			}
 			.slick-slider {
 				width: 100%;
@@ -5512,6 +5518,7 @@ footer {
 							background: $colorSlateBlue2;					
 						}
 				}
+
 			}
 			.txt-content,
 			h3.text-upcase.text-flip.vertical-text {
