@@ -658,19 +658,19 @@ function initBioBoxes() {
 			var $photoItem = $(this);
 			var photoItemId = index;
 			var bioExpander = $photoItem.find(".info-wrapper");
-			console.log($photoItem)
+			// console.log($photoItem)
 			bioExpander.on("click" , function(e) {
 				e.stopPropagation();
-				$photoItem.addClass("no-hover");
+				$photoItem.addClass("active no-hover");
 
 				$("<div/>", 
 					{
 						class: "bioBox",
 					    id: photoItemId,
-					    href: "http://google.com",
 					    title: "biography",
 					    text: "Beef ribs jowl cupim, beef jerky ball tip sirloin pig fatback. Pancetta venison swine pork chop short ribs. Alcatra tri-tip chuck, meatball t-bone doner porchetta cupim landjaeger. Pork chop doner capicola pastrami pork loin shank burgdoggen."
-					}).on("click", function() {
+					}).on("click", function(e) {
+						e.stopPropagation();
 						$(this).css("background" , "lime");
 					}).appendTo($photoItem).animate({
 						height: "360px"
@@ -690,7 +690,7 @@ function resetBios($photoItem){
 
 	$(".bioBox").each(function() {
 		var $self = $(this);
-		$photoItem.removeClass("no-hover");
+		$photoItem.removeClass("active no-hover");
 
 		$self.animate(
 		{
@@ -698,7 +698,6 @@ function resetBios($photoItem){
 		}, 300);
 		
 		setTimeout(function() {
-			console.log($self, "<< the bioBox")
 			$self.remove();
 		}, 400);
 		

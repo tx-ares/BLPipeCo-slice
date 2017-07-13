@@ -6288,7 +6288,8 @@ footer {
 			padding:0 20px;
 			margin-bottom:35px;
 			width:50%; 
-			
+			position: relative;
+
 			.img-wrapper {
 				// margin-bottom:20px;
 				position:relative;
@@ -6302,6 +6303,7 @@ footer {
 				}
 				
 				&:after {
+					@include transition(all .3s);
 					content:'';
 					position:absolute;
 					bottom: 0;
@@ -6324,6 +6326,26 @@ footer {
 					left:0;
 					z-index:1;
 					@include transition(all .3s);
+				}
+			}
+
+			&.active {
+				.img-wrapper {
+					&:after {
+						@include transition(all .3s);
+					    bottom: -2px;
+					    border: solid transparent;
+					    content: " ";
+					    height: 0;
+					    width: 0;
+					    position: absolute;
+					    pointer-events: none;
+					    border-bottom-color: $colorBrightRed2;
+					    border-width: 15px;
+					    left: 50%;
+					    margin: -28px 0 0 -15px;
+					    background: transparent;
+					}
 				}
 			}
 			
@@ -6360,19 +6382,7 @@ footer {
 				background: $colorBrightRed2;
 				height: 0;
 				position: relative;
-				&:after {
-				    top: -5px;
-				    border: solid transparent;
-				    content: " ";
-				    height: 0;
-				    width: 0;
-				    position: absolute;
-				    pointer-events: none;
-				    border-bottom-color: $colorBrightRed2;
-				    border-width: 15px;
-				    left: 50%;
-				    margin: -28px 0 0 -15px;
-				}
+				
 			}
 		}
 		
@@ -6392,6 +6402,7 @@ footer {
 				color:$colorWhite;
 				@include font-size(18px);
 			}
+
 		}
 		
 		@include max-screen($xxlg) {
