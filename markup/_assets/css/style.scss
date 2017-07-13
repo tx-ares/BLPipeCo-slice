@@ -6382,7 +6382,32 @@ footer {
 				background: $colorBrightRed2;
 				height: 0;
 				position: relative;
+				width: 210.5%;
+				@include max-screen($sm) {
+					width: 100%;
+				}
+			}
+
+			&:nth-child(even) {
+				.bioBox { 
+					margin-left:  -110.5%;
+					margin-right: 0;
+				}
+			}
+
+			&:nth-child(odd) {
+				.bioBox { 
+					margin-left:  0;
+					margin-right: 0;
+				}
+			}
 				
+			
+			&:first-child {
+				.bioBox { 
+					margin-left:  0;
+					margin-right: 0;
+				}
 			}
 		}
 		
