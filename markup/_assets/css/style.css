@@ -2788,15 +2788,13 @@ footer {
   transition: all 0.3s; }
   .send-request .call-us {
     text-align: left;
-    padding: 0 25px;
     font-size: 1.285em; }
   .send-request .sub-text {
     color: #fff;
     font-size: 1.285rem; }
-    @media only screen and (max-width: 992px) {
+    @media only screen and (max-width: 1024px) {
       .send-request .sub-text {
-        padding: 0 8px;
-        font-size: 1.285rem; } }
+        font-size: 1.085rem; } }
   .send-request .row {
     text-align: center;
     margin: 0;
@@ -2805,7 +2803,7 @@ footer {
     .send-request .row.full-scr {
       height: 210px; }
     .send-request .row > [class*="col-"]:nth-child(1) {
-      padding: 0 10px; }
+      padding: 0 25px; }
       .send-request .row > [class*="col-"]:nth-child(1) .num {
         padding-top: 5px;
         font-size: 1.485rem; }

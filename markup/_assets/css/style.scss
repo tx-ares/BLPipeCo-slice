@@ -4005,17 +4005,19 @@ footer {
 	@include transition(all .3s);
 	.call-us {
 		text-align: left;
-		padding: 0 25px;
+		// padding: 0 25px;
 		font-size: 1.285em;
-		
+		@include max-screen($md) {
+			// padding: 0 15px;
+		}
 	}
 
 	.sub-text {
 		color: $colorWhite;
 		font-size: 1.285rem;
-		@include max-screen($md) {
-			padding: 0 8px;
-			font-size: 1.285rem;
+		@include max-screen($lg) {
+			// padding: 0 8px;
+			font-size: 1.085rem;
 
 		}
 	}
@@ -4031,7 +4033,7 @@ footer {
 		}
 	
 		>[class*="col-"]:nth-child(1) {
-			padding: 0 10px;
+			padding: 0 25px;
 			.num {
 				padding-top: 5px;
 				font-size: 1.485rem;
