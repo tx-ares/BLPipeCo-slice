@@ -4377,6 +4377,9 @@ footer {
     .photo-wrapper .photos .photo-item:nth-child(even) .bioBox {
       margin-left: -110.5%;
       margin-right: 0; }
+      @media only screen and (max-width: 575px) {
+        .photo-wrapper .photos .photo-item:nth-child(even) .bioBox {
+          margin-left: 0; } }
     .photo-wrapper .photos .photo-item:nth-child(odd) .bioBox, .photo-wrapper .photos .photo-item:first-child .bioBox {
       margin-left: 0;
       margin-right: -110.5%; }
