@@ -6284,10 +6284,12 @@ footer {
 		}
 		
 		.photo-item {
-			float:left;
+			// float:left;
+			display: inline-block;
 			padding:0 20px;
 			margin-bottom:35px;
-			width:50%; 
+			width:50%;
+			vertical-align: top; 
 			position: relative;
 
 			.img-wrapper {
@@ -6383,6 +6385,23 @@ footer {
 				height: 0;
 				position: relative;
 				width: 210.5%;
+				padding: 10px 20px;
+				h3 {
+					@include font-size(24px);
+					color:$colorWhite;
+					margin-bottom:10px;
+					text-transform:uppercase;
+					font-weight:500;
+				}
+				
+				h4 {
+					color:$colorWhite;
+					@include font-size(18px);
+				}
+
+				p {
+					color:$colorWhite;
+				}
 				@include max-screen($sm) {
 					width: 100%;
 				}
