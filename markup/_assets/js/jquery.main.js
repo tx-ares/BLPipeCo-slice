@@ -632,14 +632,11 @@ function isScrolledIntoView(elem)
 }
 
 function initAnimateWhenInView() {
-	console.log("initAnimate - FIRED")
 	var logoRow = $(".logo-row");
 
 	if($(".body").hasClass("landing")) {
 		$(window).scroll(function(){
-			console.log("TESTING...")
 			if(isScrolledIntoView(logoRow) == true) {
-				console.log("CONDITION PASSED!")
 				logoRow.find("div[class*=' col-']").each(
 					function(){
 						$(this).addClass("animated pulse")
@@ -680,7 +677,6 @@ $(window).resize(function(){
 // JavaScript Document - Initial Fire
 jQuery(document).ready(function() {
 	"use strict";
-	console.log("MANUAL Compile - SUCCESS x1");
 	initLogo();
 	showPage();
 	initDesktopMenu();
