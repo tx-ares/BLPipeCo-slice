@@ -6284,7 +6284,6 @@ footer {
 		}
 		
 		.photo-item {
-			// float:left;
 			display: inline-block;
 			padding:0 20px;
 			margin-bottom:35px;
@@ -6293,7 +6292,6 @@ footer {
 			position: relative;
 
 			.img-wrapper {
-				// margin-bottom:20px;
 				position:relative;
 				overflow:hidden;
 				
@@ -6384,7 +6382,7 @@ footer {
 				background: $colorBrightRed2;
 				height: 0;
 				position: relative;
-				width: 210.5%;
+				// width: 210.5%;
 				padding: 10px 20px;
 				h3 {
 					@include font-size(24px);
@@ -6414,20 +6412,14 @@ footer {
 				}
 			}
 
-			&:nth-child(odd) {
-				.bioBox { 
-					margin-left:  0;
-					margin-right: 0;
-				}
-			}
-				
-			
+			&:nth-child(odd),
 			&:first-child {
 				.bioBox { 
 					margin-left:  0;
-					margin-right: 0;
+					margin-right: -110.5%;
 				}
 			}
+		
 		}
 		
 		.info-wrapper {

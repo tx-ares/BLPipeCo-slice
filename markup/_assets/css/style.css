@@ -4357,7 +4357,6 @@ footer {
       background: #d0112b;
       height: 0;
       position: relative;
-      width: 210.5%;
       padding: 10px 20px; }
       .photo-wrapper .photos .photo-item .bioBox h3 {
         font-size: 24px;
@@ -4378,12 +4377,9 @@ footer {
     .photo-wrapper .photos .photo-item:nth-child(even) .bioBox {
       margin-left: -110.5%;
       margin-right: 0; }
-    .photo-wrapper .photos .photo-item:nth-child(odd) .bioBox {
+    .photo-wrapper .photos .photo-item:nth-child(odd) .bioBox, .photo-wrapper .photos .photo-item:first-child .bioBox {
       margin-left: 0;
-      margin-right: 0; }
-    .photo-wrapper .photos .photo-item:first-child .bioBox {
-      margin-left: 0;
-      margin-right: 0; }
+      margin-right: -110.5%; }
   .photo-wrapper .photos .info-wrapper:hover {
     cursor: pointer; }
   .photo-wrapper .photos .info-wrapper h3 {
