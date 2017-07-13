@@ -656,28 +656,32 @@ function initBioBoxes() {
 
 		$photoItems.each(function(index){
 			var $photoItem = $(this);
-			var photoItemId = index;
+			var $photoItemId = index;
 			var bioExpander = $photoItem.find(".info-wrapper");
 			// console.log($photoItem)
 			bioExpander.on("click" , function(e) {
 				e.stopPropagation();
 				$photoItems.removeClass("active no-hover");
 				$photoItem.addClass("active no-hover");
+				if($photoItem.find(".bioBox").length == 0) {
 
-				$("<div/>", 
-					{
-						class: "bioBox",
-					    id: photoItemId,
-					    title: "biography",
-					    html:"<h3>First Last</h3><h4>Really Important Title</h4><p>Beef ribs jowl cupim, beef jerky ball tip sirloin pig fatback. Pancetta venison swine pork chop short ribs. Alcatra tri-tip chuck, meatball t-bone doner porchetta cupim landjaeger. Pork chop doner capicola pastrami pork loin shank burgdoggen.</p>"
-					}).on("click", function(e) {
-						e.stopPropagation();
-						$(this).css("background" , "lime");
-					}).appendTo($photoItem).animate({
-						height: "360px"
-					}, 300);
+					$("<div/>", 
+						{
+							class: "bioBox",
+						    id: $photoItemId,
+						    title: "biography",
+						    html:"<h3>First Last</h3><h4>Really Important Title</h4><p>Beef ribs jowl cupim, beef jerky ball tip sirloin pig fatback. Pancetta venison swine pork chop short ribs. Alcatra tri-tip chuck, meatball t-bone doner porchetta cupim landjaeger. Pork chop doner capicola pastrami pork loin shank burgdoggen.</p>"
+						}).on("click", function(e) {
+							e.stopPropagation();
+							$(this).css("background" , "lime");
+						}).appendTo($photoItem).animate({
+							height: "360px"
+						}, 300);
+
+					// console.log($photoItem.closest(".bioBox") , " <<  bioBox")
+
+				}
 			});
-
 
 			$(document).click(function(){
 				resetBios($photoItem);
