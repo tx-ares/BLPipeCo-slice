@@ -6290,7 +6290,7 @@ footer {
 			width:50%; 
 			
 			.img-wrapper {
-				margin-bottom:20px;
+				// margin-bottom:20px;
 				position:relative;
 				overflow:hidden;
 				
@@ -6340,9 +6340,20 @@ footer {
 					}
 				}
 			}
+
+			&.no-hover {
+				&:hover {
+
+				}
+			}
 			
 			&:nth-child(5n+1) {
 				// clear:left;
+			}
+
+			.bioBox {
+				background: $colorBrightRed2;
+				height: 0;
 			}
 		}
 		

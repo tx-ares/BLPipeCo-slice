@@ -4276,7 +4276,6 @@ footer {
     margin-bottom: 35px;
     width: 50%; }
     .photo-wrapper .photos .photo-item .img-wrapper {
-      margin-bottom: 20px;
       position: relative;
       overflow: hidden; }
       .photo-wrapper .photos .photo-item .img-wrapper img {
@@ -4325,6 +4324,9 @@ footer {
       -o-transition: all 3s;
       -webkit-transition: all 3s;
       transition: all 3s; }
+    .photo-wrapper .photos .photo-item .bioBox {
+      background: #d0112b;
+      height: 0; }
   .photo-wrapper .photos .info-wrapper:hover {
     cursor: pointer; }
   .photo-wrapper .photos .info-wrapper h3 {
