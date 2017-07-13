@@ -6349,14 +6349,14 @@ footer {
 		.info-wrapper {
 			h3 {
 				@include font-size(24px);
-				color:$colorBrightRed2;
+				color:$colorWhite;
 				margin-bottom:10px;
 				text-transform:uppercase;
 				font-weight:500;
 			}
 			
 			h4 {
-				color:$colorDarkGrey;
+				color:$colorWhite;
 				@include font-size(18px);
 			}
 		}
