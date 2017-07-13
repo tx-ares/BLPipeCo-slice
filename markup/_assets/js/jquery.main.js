@@ -649,6 +649,17 @@ function initAnimateWhenInView() {
 	}
 }
 
+function initLogo() {
+	 if (window.matchMedia('only screen and (max-width: 1024px)').matches) {
+            $(".logo > img").each(function(){
+            	$(this).attr("src" , "_assets/images/BLPipeco_Logo-Horizontal.png")});
+        }
+        else {
+			$(".logo > img").each(function() {
+				$(this).attr("src" , "_assets/images/BLPipeco_Logo-md4.png")});
+        }
+}
+
 // Contingencies 
 	//on Scroll
 $(window).scroll(function(){ 
@@ -670,6 +681,7 @@ $(window).resize(function(){
 jQuery(document).ready(function() {
 	"use strict";
 	console.log("MANUAL Compile - SUCCESS x1");
+	initLogo();
 	showPage();
 	initDesktopMenu();
 	initMobileMenu();
