@@ -23,7 +23,7 @@ $md: 992px;
 $lg: 1024px;
 $xlg: 1280px;
 $xxlg: 1440px;
-$dktp: 1960px;
+$full: 1960px;
 
 /* Base Accent Colors */
 $colorWhite: #fff;
@@ -1656,10 +1656,15 @@ body {
 		}	
 	}
 
-	@include max-screen($xsm) {
+	@include max-screen($md) {
 		max-width: 100% !important;
 		overflow-x: hidden !important;
-	}	
+	}
+
+	// @include max-screen($xsm) {
+	// 	max-width: 100% !important;
+	// 	overflow-x: hidden !important;
+	// }	
 }
 
 
