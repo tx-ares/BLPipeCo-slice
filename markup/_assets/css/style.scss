@@ -6347,6 +6347,9 @@ footer {
 		}
 		
 		.info-wrapper {
+			&:hover {
+				cursor: pointer;
+			}
 			h3 {
 				@include font-size(24px);
 				color:$colorWhite;

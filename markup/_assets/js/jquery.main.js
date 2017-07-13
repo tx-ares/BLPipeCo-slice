@@ -650,6 +650,30 @@ function initLogo() {
         }
 }
 
+function initBioBoxes() {
+	if ($("body").hasClass("bio")) {
+		var photoItems = $(".photo-item");
+
+		photoItems.each(function(index){
+			var $photoItem = $(this);
+			var photoItemId = index;
+			var bioExpander = $photoItem.find(".info-wrapper");
+			console.log($photoItem)
+			bioExpander.on("click" , function() {
+				$("<div/>", 
+					{
+						class: "bioBox",
+					    id: photoItemId,
+					    href: "http://google.com",
+					    title: "biography",
+					    rel: "external",
+					    text: "Beef ribs jowl cupim, beef jerky ball tip sirloin pig fatback. Pancetta venison swine pork chop short ribs. Alcatra tri-tip chuck, meatball t-bone doner porchetta cupim landjaeger. Pork chop doner capicola pastrami pork loin shank burgdoggen. Pork loin venison filet mignon, short loin tenderloin porchetta swine drumstick pork chop t-bone sirloin meatloaf. Beef meatball turkey, sirloin shoulder biltong cow. Spare ribs chicken flank jowl kevin pork belly.Ham meatball pancetta, bresaola tenderloin sirloin jerky kevin doner landjaeger beef ribs shankle. Leberkas cupim doner, short ribs turkey pork tri-tip venison sirloin corned beef kevin cow kielbasa. Spare ribs venison biltong ball tip, ham hock tri-tip pork. Frankfurter jerky boudin ham hock. Landjaeger cow hamburger, short loin frankfurter pork belly fatback alcatra burgdoggen jowl. Short ribs meatball salami tail chuck spare ribs filet mignon tongue ribeye shankle jowl beef ribs."
+					}).appendTo($photoItem);
+			});
+		})
+	}
+}
+
 // Contingencies 
 	//on Scroll
 $(window).scroll(function(){ 
@@ -696,6 +720,7 @@ jQuery(document).ready(function() {
  	hideSocialMediaIconsIfPanelActive();
  	initAnimateWhenInView();
  	initMorePhoneFullScreenDropDown();
+ 	initBioBoxes();
 
 	RESPONSIVEUI.responsiveTabs();
 });
