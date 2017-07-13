@@ -3992,7 +3992,7 @@ footer {
 		@include font-size(20px);
 	}
 
-	@include max-screen($sm) {
+	@include max-screen($md) {
 		@include font-size(24px);
 	}
 }
@@ -4013,8 +4013,10 @@ footer {
 	.sub-text {
 		color: $colorWhite;
 		font-size: 1.485rem;
-		@include max-screen($xmd) {
+		@include max-screen($md) {
 			padding: 0 8px;
+			font-size: 1.285rem;
+
 		}
 	}
 
@@ -4135,22 +4137,23 @@ footer {
 				li {
 					background: $colorDarkBlue;
 					margin-bottom: 0;
-					padding: 10px 0 10px 20px;
+					padding: 20px 10px;
 					color: $colorWhite;
 					display: inline-table;
 					width: 49.5%;
-					@include max-screen($xxlg) {
-						display:block;
-						width: 100%;
-					}
-					@include max-screen ($xmd) {
+					text-align: center;
+					// @include max-screen($xxlg) {
+					// 	display:block;
+					// 	width: 100%;
+					// }
+					@include max-screen ($md) {
 						display: inline-table;
 						width: 49.5%;
 					}
 					@include max-screen ($sm) {
 						display:block;
 						width: 100%;
-						padding: 15px 0 15px 120px;
+						// padding: 15px 0 15px 120px;
 					}
 					// &:nth-child(n-3) {
 					// 	border-bottom: 1px solid $colorWhite;

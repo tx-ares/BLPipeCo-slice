@@ -2777,7 +2777,7 @@ footer {
     .num {
       font-size: 20px;
       font-size: 1.25rem; } }
-  @media only screen and (max-width: 575px) {
+  @media only screen and (max-width: 992px) {
     .num {
       font-size: 24px;
       font-size: 1.5rem; } }
@@ -2797,9 +2797,10 @@ footer {
   .send-request .sub-text {
     color: #fff;
     font-size: 1.485rem; }
-    @media only screen and (max-width: 768px) {
+    @media only screen and (max-width: 992px) {
       .send-request .sub-text {
-        padding: 0 8px; } }
+        padding: 0 8px;
+        font-size: 1.285rem; } }
   .send-request .row {
     text-align: center;
     margin: 0;
@@ -2886,23 +2887,19 @@ footer {
     .send-request .more-phone .more-phone-wrap ul li {
       background: #00263b;
       margin-bottom: 0;
-      padding: 10px 0 10px 20px;
+      padding: 20px 10px;
       color: #fff;
       display: inline-table;
-      width: 49.5%; }
-      @media only screen and (max-width: 1440px) {
-        .send-request .more-phone .more-phone-wrap ul li {
-          display: block;
-          width: 100%; } }
-      @media only screen and (max-width: 768px) {
+      width: 49.5%;
+      text-align: center; }
+      @media only screen and (max-width: 992px) {
         .send-request .more-phone .more-phone-wrap ul li {
           display: inline-table;
           width: 49.5%; } }
       @media only screen and (max-width: 575px) {
         .send-request .more-phone .more-phone-wrap ul li {
           display: block;
-          width: 100%;
-          padding: 15px 0 15px 120px; } }
+          width: 100%; } }
       .send-request .more-phone .more-phone-wrap ul li a.num {
         color: #fff;
         -moz-transition: all 0.3s;
