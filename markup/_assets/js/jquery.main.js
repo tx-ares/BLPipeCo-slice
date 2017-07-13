@@ -604,14 +604,6 @@ function initPanelSlider(){
 
 }
 
-function calculatePanelDimensions() {
-	var activePanel = $("*.panel.active .slider-container");
-	var panelWidth = activePanel.width();
-	// console.log(panelWidth, "<< Calc panelWidth")
-	activePanel.css("width", panelWidth);
-	activePanel.css("display", "block");
-}
-
 function hideSocialMediaIconsIfPanelActive() {
 	$(".panel").hasClass("active") ? $(".social-media-icons").addClass("hidden") : $(".social-media-icons").removeClass("hidden");
 }
