@@ -2594,7 +2594,7 @@ footer {
       position: absolute;
       right: 0;
       bottom: 50px;
-      height: 52.9px;
+      height: 52px;
       width: 52px;
       padding: 6px 22px; }
       @media only screen and (max-width: 575px) {
@@ -2703,7 +2703,7 @@ footer {
         position: absolute;
         right: 0;
         bottom: 0px;
-        height: 52.9px;
+        height: 52px;
         width: 52px;
         padding: 6px 22px;
         background: #d0202f; }
@@ -3202,7 +3202,7 @@ footer {
         position: absolute;
         right: 0;
         bottom: 0px;
-        height: 52.9px;
+        height: 52px;
         width: 52px;
         padding: 6px 22px;
         background: #d0202f; }
@@ -4021,6 +4021,10 @@ footer {
       width: 100%;
       height: auto;
       max-width: 170px; }
+    .static-slides .slide-content a {
+      color: inherit; }
+      .static-slides .slide-content a:hover {
+        color: inherit; }
   .static-slides.active {
     width: 91%; }
     @media only screen and (max-width: 865px) {

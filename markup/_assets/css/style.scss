@@ -3707,7 +3707,7 @@ footer {
 					position: absolute;
 					right: 0;
 				    bottom: 50px;
-				    height: 52.9px;
+				    height: 52px;
 				    width: 52px;
 				    padding: 6px 22px;
 				    @include max-screen($sm) {
@@ -3867,7 +3867,7 @@ footer {
 				position: absolute;
 				right: 0;
 			    bottom: 0px;
-			    height: 52.9px;
+			    height: 52px;
 			    width: 52px;
 			    padding: 6px 22px;
 			    background: $colorBrightRed1;
@@ -4632,7 +4632,7 @@ footer {
 				position: absolute;
 				right: 0;
 			    bottom: 0px;
-			    height: 52.9px;
+			    height: 52px;
 			    width: 52px;
 			    padding: 6px 22px;
 			    background: $colorBrightRed1;
@@ -5894,6 +5894,12 @@ footer {
 			height: auto;
 			max-width: 170px;
 
+		}
+		a {
+			color: inherit;
+			&:hover {
+				color: inherit;
+			}
 		}
 	}
 
