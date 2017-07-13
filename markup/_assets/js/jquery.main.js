@@ -640,6 +640,7 @@ function initAnimateWhenInView() {
 
 function initLogo() {
 	 if (window.matchMedia('only screen and (max-width: 1024px)').matches) {
+            $('body').addClass("header-compressed");
             $(".logo > img").each(function(){
             	$(this).attr("src" , "_assets/images/BLPipeco_Logo-Horizontal.png")});
         }
