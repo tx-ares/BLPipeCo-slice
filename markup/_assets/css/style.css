@@ -2773,10 +2773,6 @@ footer {
   color: #fff;
   font-weight: 300;
   display: block; }
-  @media only screen and (max-width: 1280px) {
-    .num {
-      font-size: 20px;
-      font-size: 1.25rem; } }
   @media only screen and (max-width: 992px) {
     .num {
       font-size: 24px;
@@ -2796,7 +2792,7 @@ footer {
     font-size: 1.285em; }
   .send-request .sub-text {
     color: #fff;
-    font-size: 1.485rem; }
+    font-size: 1.285rem; }
     @media only screen and (max-width: 992px) {
       .send-request .sub-text {
         padding: 0 8px;
@@ -4101,25 +4097,25 @@ footer {
   transition: all 0.3s; }
   .more-phone-full-scr.active {
     height: 200px; }
-    @media only screen and (max-width: 1440px) {
+    @media only screen and (max-width: 1024px) {
       .more-phone-full-scr.active {
-        height: 400px; } }
+        height: 360px; } }
     @media only screen and (max-width: 575px) {
       .more-phone-full-scr.active {
-        height: 650px; } }
+        height: 800px; } }
   .more-phone-full-scr .more-phone-wrap ul li {
     background: #00263b;
     margin-bottom: 0;
-    padding: 25px 100px;
+    padding: 25px 10px;
     color: #fff;
     display: inline-table;
-    width: 24.25%; }
-    @media only screen and (max-width: 1440px) {
+    width: 24.25%;
+    text-align: center; }
+    @media only screen and (max-width: 1024px) {
       .more-phone-full-scr .more-phone-wrap ul li {
         display: inline-block;
         width: 49.5%;
-        padding: 20px;
-        font-size: 1.2em; } }
+        padding: 20px; } }
     @media only screen and (max-width: 768px) {
       .more-phone-full-scr .more-phone-wrap ul li {
         display: inline-table;
@@ -4128,7 +4124,7 @@ footer {
       .more-phone-full-scr .more-phone-wrap ul li {
         display: block;
         width: 100%;
-        padding: 15px 0 15px 120px; } }
+        padding: 25px 10px; } }
     .more-phone-full-scr .more-phone-wrap ul li a.num {
       color: #fff;
       -moz-transition: all 0.3s;

@@ -3988,9 +3988,9 @@ footer {
 	font-weight:300;
 	display:block;
 
-	@include max-screen($xlg) {
-		@include font-size(20px);
-	}
+	// @include max-screen($xlg) {
+	// 	@include font-size(20px);
+	// }
 
 	@include max-screen($md) {
 		@include font-size(24px);
@@ -4012,7 +4012,7 @@ footer {
 
 	.sub-text {
 		color: $colorWhite;
-		font-size: 1.485rem;
+		font-size: 1.285rem;
 		@include max-screen($md) {
 			padding: 0 8px;
 			font-size: 1.285rem;
@@ -6012,11 +6012,11 @@ footer {
 	@include transition(all .3s);
 	&.active {
 		height: 200px;
-		@include max-screen($xxlg) {
-			height: 400px;
+		@include max-screen($lg) {
+			height: 360px;
 		}
 		@include max-screen($sm) {
-			height: 650px;
+			height: 800px;
 		}
 	}
 	.more-phone-wrap {
@@ -6026,15 +6026,16 @@ footer {
 			li {
 				background: $colorDarkBlue;
 				margin-bottom: 0;
-				padding: 25px 100px;
+				padding: 25px 10px;
 				color: $colorWhite;
 				display: inline-table;
 				width: 24.25%;
-				@include max-screen($xxlg) {
+				text-align: center;
+				@include max-screen($lg) {
 					display:inline-block;
 					width: 49.5%;
 					padding: 20px;
-					font-size: 1.2em;
+					// font-size: 1.2rem;
 				}
 				@include max-screen ($xmd) {
 					display: inline-table;
@@ -6043,7 +6044,7 @@ footer {
 				@include max-screen ($sm) {
 					display:block;
 					width: 100%;
-					padding: 15px 0 15px 120px;
+					padding: 25px 10px;
 				}
 				// &:nth-child(n-3) {
 				// 	border-bottom: 1px solid $colorWhite;
