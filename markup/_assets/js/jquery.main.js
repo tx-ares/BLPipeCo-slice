@@ -659,7 +659,8 @@ function initBioBoxes() {
 			var photoItemId = index;
 			var bioExpander = $photoItem.find(".info-wrapper");
 			console.log($photoItem)
-			bioExpander.on("click" , function() {
+			bioExpander.on("click" , function(e) {
+				e.stopPropagation();
 				$photoItem.addClass("no-hover");
 
 				$("<div/>", 
@@ -675,8 +676,34 @@ function initBioBoxes() {
 						height: "360px"
 					}, 300);
 			});
+
+			$(document).click(function(){
+				resetBios($photoItem);
+			});
 		})
+
+		
 	}
+}
+
+function resetBios($photoItem){
+
+	$(".bioBox").each(function() {
+		var $self = $(this);
+		$photoItem.removeClass("no-hover");
+
+		$self.animate(
+		{
+			height: 0
+		}, 300);
+		
+		setTimeout(function() {
+			console.log($self, "<< the bioBox")
+			$self.remove();
+		}, 400);
+		
+	});
+
 }
 
 // Contingencies 

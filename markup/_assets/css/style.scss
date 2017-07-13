@@ -6343,7 +6343,12 @@ footer {
 
 			&.no-hover {
 				&:hover {
-
+					.img-wrapper {
+						.overlay {
+							top: 100%;
+							@include transition(all .3s);
+						}
+					}
 				}
 			}
 			
@@ -6354,6 +6359,20 @@ footer {
 			.bioBox {
 				background: $colorBrightRed2;
 				height: 0;
+				position: relative;
+				&:after {
+				    top: -5px;
+				    border: solid transparent;
+				    content: " ";
+				    height: 0;
+				    width: 0;
+				    position: absolute;
+				    pointer-events: none;
+				    border-bottom-color: $colorBrightRed2;
+				    border-width: 15px;
+				    left: 50%;
+				    margin: -28px 0 0 -15px;
+				}
 			}
 		}
 		

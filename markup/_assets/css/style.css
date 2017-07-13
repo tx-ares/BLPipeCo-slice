@@ -4324,9 +4324,28 @@ footer {
       -o-transition: all 3s;
       -webkit-transition: all 3s;
       transition: all 3s; }
+    .photo-wrapper .photos .photo-item.no-hover:hover .img-wrapper .overlay {
+      top: 100%;
+      -moz-transition: all 0.3s;
+      -o-transition: all 0.3s;
+      -webkit-transition: all 0.3s;
+      transition: all 0.3s; }
     .photo-wrapper .photos .photo-item .bioBox {
       background: #d0112b;
-      height: 0; }
+      height: 0;
+      position: relative; }
+      .photo-wrapper .photos .photo-item .bioBox:after {
+        top: -5px;
+        border: solid transparent;
+        content: " ";
+        height: 0;
+        width: 0;
+        position: absolute;
+        pointer-events: none;
+        border-bottom-color: #d0112b;
+        border-width: 15px;
+        left: 50%;
+        margin: -28px 0 0 -15px; }
   .photo-wrapper .photos .info-wrapper:hover {
     cursor: pointer; }
   .photo-wrapper .photos .info-wrapper h3 {
