@@ -652,15 +652,16 @@ function initLogo() {
 
 function initBioBoxes() {
 	if ($("body").hasClass("bio")) {
-		var photoItems = $(".photo-item");
+		var $photoItems = $(".photo-item");
 
-		photoItems.each(function(index){
+		$photoItems.each(function(index){
 			var $photoItem = $(this);
 			var photoItemId = index;
 			var bioExpander = $photoItem.find(".info-wrapper");
 			// console.log($photoItem)
 			bioExpander.on("click" , function(e) {
 				e.stopPropagation();
+				$photoItems.removeClass("active no-hover");
 				$photoItem.addClass("active no-hover");
 
 				$("<div/>", 
@@ -676,6 +677,7 @@ function initBioBoxes() {
 						height: "360px"
 					}, 300);
 			});
+
 
 			$(document).click(function(){
 				resetBios($photoItem);
