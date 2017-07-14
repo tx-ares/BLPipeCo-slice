@@ -4375,8 +4375,11 @@ footer {
         .photo-wrapper .photos .photo-item .bioBox {
           width: 100%; } }
     .photo-wrapper .photos .photo-item:nth-child(even) .bioBox {
-      margin-left: -110.5%;
-      margin-right: 0; }
+      margin-right: 0;
+      transform: translate(-52.8%, 0px); }
+      @media only screen and (max-width: 575px) {
+        .photo-wrapper .photos .photo-item:nth-child(even) .bioBox {
+          transform: unset; } }
     .photo-wrapper .photos .photo-item:nth-child(odd) .bioBox, .photo-wrapper .photos .photo-item:first-child .bioBox {
       margin-left: 0;
       margin-right: -110.5%; }

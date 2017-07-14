@@ -6407,11 +6407,12 @@ footer {
 
 			&:nth-child(even) {
 				.bioBox { 
-					margin-left:  -110.5%;
+					// margin-left:  -110.5%;
 					margin-right: 0;
-					// @include max-screen($sm) {
-					// 	margin-left: 0;
-					// }
+					transform: translate(-52.8%, 0px);
+					@include max-screen($sm) {
+						transform: unset;
+					}
 				}
 			}
 
@@ -6419,7 +6420,7 @@ footer {
 			&:first-child {
 				.bioBox { 
 					margin-left:  0;
-					margin-right: -110.5%;
+					margin-right: -110.5%;	
 				}
 			}
 		
