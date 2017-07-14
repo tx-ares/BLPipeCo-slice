@@ -6409,9 +6409,9 @@ footer {
 				.bioBox { 
 					margin-left:  -110.5%;
 					margin-right: 0;
-					@include max-screen($sm) {
-						margin-left: 0;
-					}
+					// @include max-screen($sm) {
+					// 	margin-left: 0;
+					// }
 				}
 			}
 
