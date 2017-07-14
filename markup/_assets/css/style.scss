@@ -6269,6 +6269,7 @@ footer {
 
 
 .photo-wrapper {
+	position:relative;
 	.title {
 		@include font-size(18px);
 		font-weight:700;
@@ -6289,7 +6290,8 @@ footer {
 			margin-bottom:35px;
 			width:50%;
 			vertical-align: top; 
-			position: relative;
+			// position: relative;
+			// @include transition(height .3s);
 
 			.img-wrapper {
 				position:relative;
@@ -6381,9 +6383,10 @@ footer {
 			.bioBox {
 				background: $colorBrightRed2;
 				height: 0;
-				position: relative;
-				// width: 215.5%;
+				position: absolute;
+				width: 100%;
 				padding: 10px 20px;
+				// @include transition(height .3s);
 				h3 {
 					@include font-size(24px);
 					color:$colorWhite;
@@ -6406,9 +6409,13 @@ footer {
 			}
 
 			&:nth-child(even) {
-				.bioBox { 
+				.bioBox {
+					right: 0px;
+					// @include max-screen($sm) {
+					// 	right: 15px;
+					// } 
 					// margin-left:  -110.5%;
-					margin-right: 0;
+					// margin-right: 0;
 					// transform: translate(-52.2%, 0px);
 					// @include max-screen($xxlg) {
 					// 	transform: translate(-53.9%, 0px);
@@ -6428,8 +6435,8 @@ footer {
 			&:nth-child(odd),
 			&:first-child {
 				.bioBox { 
-					margin-left:  0;
-					margin-right: -110.5%;	
+					// margin-left:  0;
+					// margin-right: -110.5%;	
 				}
 			}
 		

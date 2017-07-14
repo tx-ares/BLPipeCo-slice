@@ -667,15 +667,22 @@ function initBioBoxes() {
 				$photoItem.addClass("active no-hover");
 				if($photoItem.find(".bioBox").length == 0) {
 
-					var $parentContainerWidth = $(".photo-wrapper").width();					
+					var $greatGrandParentContainerWidth = $(".photo-wrapper").width();
+					var $parentContainer = $photoItem;
+					var $parentContainerHeight = $photoItem.height();	
 
+					$parentContainer.animate({
+						height : $parentContainer.height() + 360
+					}, 300);	
+
+					console.log($parentContainerHeight, " << photoItem height")
 					$("<div/>", 
 						{
 							class: "bioBox",
 						    id: $photoItemId,
-						    css: {
-						    	width: $parentContainerWidth
-						    },
+						    // css: {
+						    // 	minWidth: $greatGrandParentContainerWidth
+						    // },						    
 						    title: "biography",
 						    //html to be filled dynamically by CMS.
 						    html:"<h3>First Last</h3><h4>Really Important Title</h4><p>Beef ribs jowl cupim, beef jerky ball tip sirloin pig fatback. Pancetta venison swine pork chop short ribs. Alcatra tri-tip chuck, meatball t-bone doner porchetta cupim landjaeger. Pork chop doner capicola pastrami pork loin shank burgdoggen.</p>"
@@ -685,28 +692,43 @@ function initBioBoxes() {
 							height: "360px"
 						}, 300);
 
+					// $parentContainerHeight = $parentContainer.height() + 360;
+					
+					// setTimeout(function($photoItemId) {
+					// 	var $additionalHeight = $(".bioBox").attr("id" , $photoItemId).height()
+					// 	console.log($additionalHeight, " << additionalHeight")
+					// 	$parentContainerHeight = $parentContainerHeight + $additionalHeight
+					// }, 400);
+
+					// .then(function($parentContainerHeight) {
+					// 	console.log($parentContainerHeight, " << photoItem height after calc post animation");
+					// 	$photoItem.height($parentContainerHeight);
+					// }); 
+				
+
+
 				}
 			});
 
-			$(window).resize(function(){
-				var $parentContainerWidth = $(".photo-wrapper").width();					
-				$(".bioBox").css("width" , $parentContainerWidth);
-			})
+			// $(window).resize(function(){
+			// 	var $greatGrandParentContainerWidth = $(".photo-wrapper").width();					
+			// 	$(".bioBox").css("width" , $greatGrandParentContainerWidth);
+			// })
 
-			$(document).click(function(){
-				resetBios($photoItem);
-			});
+			
 		})
 
-		
+		$(document).click(function(){
+			resetBios();
+		});
 	}
 }
 
-function resetBios($photoItem){
-
-	$(".bioBox").each(function() {
-		var $self = $(this);
-		$photoItem.removeClass("active no-hover");
+function resetBios(){
+	console.log("<< Resetting bioBox v3 >>")
+	// $(".bioBox").each(function() {
+		var $self = $(".photo-item").find(".bioBox");
+		$(".photo-item").removeClass("active no-hover");
 
 		$self.animate(
 		{
@@ -715,9 +737,9 @@ function resetBios($photoItem){
 		
 		setTimeout(function() {
 			$self.remove();
-		}, 400);
+		}, 500);
 		
-	});
+	// });
 
 }
 
