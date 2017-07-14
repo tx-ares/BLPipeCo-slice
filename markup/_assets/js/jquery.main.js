@@ -302,12 +302,14 @@ function initStickyHeader() {
         if ($(this).scrollTop() > 32 || window.matchMedia('only screen and (max-width: 1024px)').matches) {
             $('body').addClass("header-compressed");
             $(".logo > img").each(function(){
-            	$(this).attr("src" , "_assets/images/BLPipeco_Logo-Horizontal.png")});
+            	$(this).attr("src" , "_assets/images/BLPipeco_Logo-Horizontal.png")
+            });
         }
         else {
 			$('body').removeClass("header-compressed");
 			$(".logo > img").each(function() {
-				$(this).attr("src" , "_assets/images/BLPipeco_Logo-md4.png")});
+				$(this).attr("src" , "_assets/images/BLPipeco_Logo-md4.png")
+			});
         }
     });
 }
@@ -399,7 +401,7 @@ $(window).load(function () {
 });
 
 function initPopUpIcons() {
-    if ( document.getElementsByTagName("body")[0].classList.contains("homepage") && $(this).scrollTop() == 0 ) {
+    if ( $("body").hasClass("homepage") && $(this).scrollTop() == 0 ) {
 		$(".social-media-icons").css("right" , -40);
     }
 
@@ -690,7 +692,6 @@ function initBioBoxes() {
 				var $parentContainerWidth = $(".photo-wrapper").width();					
 				$(".bioBox").css("width" , $parentContainerWidth);
 			})
-
 
 			$(document).click(function(){
 				resetBios($photoItem);
