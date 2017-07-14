@@ -6409,7 +6409,16 @@ footer {
 				.bioBox { 
 					// margin-left:  -110.5%;
 					margin-right: 0;
-					transform: translate(-52.8%, 0px);
+					transform: translate(-52.2%, 0px);
+					@include max-screen($xxlg) {
+						transform: translate(-53.9%, 0px);
+					}
+					@include max-screen($xlg) {
+						transform: translate(-53.9%, 0px);
+					}
+					@include max-screen($md) {
+						transform: translate(-52.8%, 0px);
+					}
 					@include max-screen($sm) {
 						transform: unset;
 					}
