@@ -1,0 +1,128 @@
+/*START HERE NEW STYLES ====================================*/
+
+html {
+	width: 100%; height: 100%; max-width:100%;
+	/*overflow-x: hidden;*/
+}
+body {
+	width:100%;
+	margin:0;
+	font-family: "Lato", Helvetica, Arial, "sans-serif";
+	color: #666;}
+
+
+
+a {font-size: 18px; ; color:#6fbb1f; text-decoration: none;}
+a:hover {color: #cccccc; text-decoration: none;}
+
+
+
+.header {
+	background:#f3f3f3;
+	padding: 0px 0px 0px 0px;
+	height: 80px;
+	width: 100%;
+	border-bottom:1px solid #dddddd;
+	position:relative;
+}
+
+.header img {margin: 25px 0px 0px 50px;float:left;}
+
+.header .tagline {
+	
+	margin: 32px 0px 22px 10px;
+	float: left;
+	font-family: "latoregular", Helvetica, Arial, "sans-serif";
+	font-size: 14px;
+	color: #666;
+	
+}
+
+.header .contact {
+	margin: 27px 0px 22px 0px;
+	/*right: 50px;
+	position:absolute;
+	display:inline;*/
+	padding-right: 50px;
+	float:right;
+	font-family: "latolight", Helvetica, Arial, "sans-serif";
+	font-size: 24px;
+	color: #666;
+	
+}
+
+
+.content {
+	background: #ffffff;
+	padding: 50px;
+	
+}
+.company_name {
+	font-family: "latolight", Helvetica, Arial, "sans-serif";
+	font-size: 48px;
+	color: #6fbb1f;
+}
+.company_header {
+	font-family: "latolight", Helvetica, Arial, "sans-serif";
+	font-size: 24px;
+	color: #666;
+	padding-bottom: 20px;
+	border-bottom: 1px solid #dddddd;	
+}
+
+.links .date {
+	font-family: "latoregular", Helvetica, Arial, "sans-serif";
+	font-size: 12px;
+	color: #666;
+}
+.links .project_name {
+	font-family: "lato", Helvetica, Arial, "sans-serif";
+	font-weight:600; 
+	font-size: 24px;
+	color: #666;
+}
+
+.links .category {
+	font-family: "lato", Helvetica, Arial, "sans-serif";
+	font-weight:600; 
+	text-transform: uppercase;
+	font-size: 18px;
+	color: #999;
+	margin-top: 20px;
+}
+.links ul {margin: 0; padding: 0; list-style: none;}
+.links ul li {line-height: 28px;}
+
+
+.hline {
+	padding: 20px 0;
+	border-bottom: 1px solid #dddddd;
+	
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
