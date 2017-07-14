@@ -675,15 +675,13 @@ function initBioBoxes() {
 						    	width: $parentContainerWidth
 						    },
 						    title: "biography",
+						    //html to be filled dynamically by CMS.
 						    html:"<h3>First Last</h3><h4>Really Important Title</h4><p>Beef ribs jowl cupim, beef jerky ball tip sirloin pig fatback. Pancetta venison swine pork chop short ribs. Alcatra tri-tip chuck, meatball t-bone doner porchetta cupim landjaeger. Pork chop doner capicola pastrami pork loin shank burgdoggen.</p>"
 						}).on("click", function(e) {
 							e.stopPropagation();
-							// $(this).css("background" , "lime");
 						}).appendTo($photoItem).animate({
 							height: "360px"
 						}, 300);
-
-					// console.log($photoItem.closest(".bioBox") , " <<  bioBox")
 
 				}
 			});
