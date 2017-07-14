@@ -665,15 +665,20 @@ function initBioBoxes() {
 				$photoItem.addClass("active no-hover");
 				if($photoItem.find(".bioBox").length == 0) {
 
+					var $parentContainerWidth = $(".photo-wrapper").width();					
+
 					$("<div/>", 
 						{
 							class: "bioBox",
 						    id: $photoItemId,
+						    css: {
+						    	width: $parentContainerWidth
+						    },
 						    title: "biography",
 						    html:"<h3>First Last</h3><h4>Really Important Title</h4><p>Beef ribs jowl cupim, beef jerky ball tip sirloin pig fatback. Pancetta venison swine pork chop short ribs. Alcatra tri-tip chuck, meatball t-bone doner porchetta cupim landjaeger. Pork chop doner capicola pastrami pork loin shank burgdoggen.</p>"
 						}).on("click", function(e) {
 							e.stopPropagation();
-							$(this).css("background" , "lime");
+							// $(this).css("background" , "lime");
 						}).appendTo($photoItem).animate({
 							height: "360px"
 						}, 300);
@@ -682,6 +687,12 @@ function initBioBoxes() {
 
 				}
 			});
+
+			$(window).resize(function(){
+				var $parentContainerWidth = $(".photo-wrapper").width();					
+				$(".bioBox").css("width" , $parentContainerWidth);
+			})
+
 
 			$(document).click(function(){
 				resetBios($photoItem);
