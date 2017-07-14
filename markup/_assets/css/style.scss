@@ -6289,10 +6289,13 @@ footer {
 			padding:0 20px;
 			margin-bottom:35px;
 			width:50%;
-			vertical-align: top; 
+			vertical-align: top;
+			// height: 100%; 
 			// position: relative;
-			// @include transition(height .3s);
-
+			@include transition(height .3s);
+			// &.active {
+			// 	height: calc(100% + 360px);
+			// }
 			.img-wrapper {
 				position:relative;
 				overflow:hidden;
@@ -6383,10 +6386,12 @@ footer {
 			.bioBox {
 				background: $colorBrightRed2;
 				height: 0;
+				// max-height: 260px;
 				position: absolute;
 				width: 100%;
 				padding: 10px 20px;
-				// @include transition(height .3s);
+
+				// @include forceHardwareAcceleration();
 				h3 {
 					@include font-size(24px);
 					color:$colorWhite;
