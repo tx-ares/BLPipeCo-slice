@@ -697,6 +697,10 @@ function initBioBoxes() {
 		$(document).click(function(){
 			resetBios();
 		});
+
+		$(window).resize(function(){
+			resetBios();
+		});
 	}
 }
 
