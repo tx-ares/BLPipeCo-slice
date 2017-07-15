@@ -1,4 +1,4 @@
-console.log("Mic check!, KOALA WORKS for JS")
+// console.log("Mic check!, KOALA WORKS for JS")
 
 function showPage() {
 	"use strict";
@@ -247,7 +247,7 @@ function initClampText() {
 
 function initSlider() {
 	"use strict";
-	console.log("Slider init!")
+	// console.log("Slider init!")
 	
 	// $('.slider').each(function() {
  //    	var parentWidth = $(this).parent().find('.slider-width-hack').width();
@@ -456,7 +456,7 @@ function resetPanels() {
 }
 
 function initSlidePanels() {
-	console.log("initSlidePanels Fired 5!")
+	// console.log("initSlidePanels Fired 5!")
 
 	$(".slide-over-left").on("click", function(e){
 		e.stopPropagation();
@@ -665,10 +665,12 @@ function initBioBoxes() {
 				e.stopPropagation();
 				$photoItems.removeClass("active no-hover");
 				var $parentContainerHeight = $photoItem.height();
+				console.log($photoItem.hasClass("active"), " << isActive?")
 				!$photoItem.hasClass("active") ? $photoItem.css("height" , $parentContainerHeight + 360 ) : "";
 
 				$photoItem.addClass("active no-hover");
 				if($photoItem.find(".bioBox").length == 0) {
+
 
 					// var $greatGrandParentContainerWidth = $(".photo-wrapper").width();
 					
