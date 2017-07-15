@@ -669,6 +669,7 @@ function initBioBoxes() {
 				!$photoItem.hasClass("active") ? $photoItem.css("height" , $parentContainerHeight + 360 ) : "";
 
 				$photoItem.addClass("active no-hover");
+
 				if($photoItem.find(".bioBox").length == 0) {
 
 
@@ -706,7 +707,9 @@ function resetBios(){
 
 		$self.animate(
 		{
-			height: 0
+			height: 0,
+			paddingTop: 0,
+			paddingBottom: 0
 		}, 300);
 		
 		setTimeout(function() {
