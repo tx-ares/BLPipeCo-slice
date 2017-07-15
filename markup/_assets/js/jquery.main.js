@@ -703,7 +703,10 @@ function initBioBoxes() {
 function resetBios(){
 	console.log("<< Resetting bioBox v3 >>")
 		var $self = $(".photo-item").find(".bioBox");
-		$(".photo-item").removeClass("active no-hover");
+		var $bioBoxParent = $self.parent();
+		var $parentSiblings = $bioBoxParent.siblings();
+
+		$parentSiblings.removeClass("active no-hover");
 
 		$self.animate(
 		{
