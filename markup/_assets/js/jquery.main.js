@@ -724,28 +724,9 @@ function resetBios(){
 			paddingBottom: 0,
 			transition: "height .3s"
 		});
-
-		// $bioBox.animate(
-		// {
-		// 	height: 0,
-		// 	paddingTop: 0,
-		// 	paddingBottom: 0
-		// }, 300);
-
-		// $bioBoxParent.css("height", "calc(100% - 360px)");
-
-
-
-
-		// $bioBoxParent.animate(
-		// {
-		// 	height: "unset"
-		// }, 300);
-		// $bioBoxParent.addClass("compressing");
 		
 		setTimeout(function() {
 			$bioBox.remove();
-			// $bioBoxParent.removeClass("compressing");
 		}, 500);
 
 }
