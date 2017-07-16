@@ -4277,11 +4277,7 @@ footer {
       padding: 0 20px;
       margin-bottom: 35px;
       width: 50%;
-      vertical-align: top;
-      -moz-transition: height 0.3s;
-      -o-transition: height 0.3s;
-      -webkit-transition: height 0.3s;
-      transition: height 0.3s; }
+      vertical-align: top; }
       .photo-wrapper .photos .photo-item.compressing {
         height: unset; }
       .photo-wrapper .photos .photo-item .img-wrapper {
