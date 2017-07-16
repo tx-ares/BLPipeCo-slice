@@ -670,7 +670,7 @@ function initBioBoxes() {
 				if($photoItem.find(".bioBox").length == 0) {
 					$parentContainerHeight = $parentContainerHeight + 360;
 
-					!$photoItem.hasClass("active") ? $photoItem.css({height : $parentContainerHeight , transition: "height .3s" }) : "";
+					!$photoItem.hasClass("active") ? $photoItem.animate({height : $parentContainerHeight},300) : "";
 
 					$photoItem.addClass("active no-hover");
 
@@ -703,7 +703,7 @@ function initBioBoxes() {
 }
 
 function resetBios(){
-	console.log("<< Resetting bioBox v5 - Comparing JS transition >>")
+	console.log("<< Resetting bioBox v5 - Comparing CSS transition >>")
 		var $bioBox = $(".photo-item").find(".bioBox");
 		var $bioBoxParent = $bioBox.parent();
 		var $parentAndSiblings = $bioBoxParent.siblings().andSelf();
@@ -711,22 +711,24 @@ function resetBios(){
 
 		$parentAndSiblings.removeClass("active no-hover");
 
-		$bioBoxParent.css(
+		$bioBoxParent.animate(
 		{
-			height: $initialParentContainerHeight,
-			transition: "height .3s"
-		});
+			height: $initialParentContainerHeight
+		},300);
 
-		$bioBox.css(
+		$bioBox.animate(
 		{
 			height: 0,
 			paddingTop: 0,
-			paddingBottom: 0,
-			transition: "height .3s"
-		});
+			paddingBottom: 0
+
+		},300);
 		
 		setTimeout(function() {
 			$bioBox.remove();
+			$bioBoxParent.css({
+				height: ""
+			})
 		}, 500);
 
 }
