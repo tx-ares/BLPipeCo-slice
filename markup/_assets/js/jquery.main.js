@@ -665,17 +665,14 @@ function initBioBoxes() {
 				e.stopPropagation();
 				$photoItems.removeClass("active no-hover");
 				var $parentContainerHeight = $photoItem.height();
-				console.log($photoItem.hasClass("active"), " << isActive?")
+				// console.log($photoItem.hasClass("active"), " << isActive?")
 				
-
 				if($photoItem.find(".bioBox").length == 0) {
 
 					!$photoItem.hasClass("active") ? $photoItem.css("height" , $parentContainerHeight + 360 ) : "";
 
 					$photoItem.addClass("active no-hover");
-					// var $greatGrandParentContainerWidth = $(".photo-wrapper").width();
-					
-					// console.log($parentContainerHeight, " << photoItem height")
+
 					$("<div/>", 
 						{
 							class: "bioBox",
@@ -705,25 +702,47 @@ function initBioBoxes() {
 }
 
 function resetBios(){
-	console.log("<< Resetting bioBox v4 >>")
+	console.log("<< Resetting bioBox v5 - 5 >>")
 		var $bioBox = $(".photo-item").find(".bioBox");
 		var $bioBoxParent = $bioBox.parent();
 		var $parentAndSiblings = $bioBoxParent.siblings().andSelf();
-		var $parentContainerHeight = $bioBoxParent.height();
+		var $initialParentContainerHeight = $bioBoxParent.height() - 360;
 
 		$parentAndSiblings.removeClass("active no-hover");
 
-		$bioBox.animate(
+		$bioBoxParent.css(
+		{
+			height: $initialParentContainerHeight
+		});
+
+		$bioBox.css(
 		{
 			height: 0,
 			paddingTop: 0,
 			paddingBottom: 0
-		}, 300);
+		});
 
-		$bioBoxParent.css("height", $parentContainerHeight - 360);
+		// $bioBox.animate(
+		// {
+		// 	height: 0,
+		// 	paddingTop: 0,
+		// 	paddingBottom: 0
+		// }, 300);
+
+		// $bioBoxParent.css("height", "calc(100% - 360px)");
+
+
+
+
+		// $bioBoxParent.animate(
+		// {
+		// 	height: "unset"
+		// }, 300);
+		// $bioBoxParent.addClass("compressing");
 		
 		setTimeout(function() {
 			$bioBox.remove();
+			// $bioBoxParent.removeClass("compressing");
 		}, 500);
 
 }
