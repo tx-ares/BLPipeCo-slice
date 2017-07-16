@@ -669,7 +669,7 @@ function initBioBoxes() {
 				
 				if($photoItem.find(".bioBox").length == 0) {
 
-					!$photoItem.hasClass("active") ? $photoItem.css("height" , $parentContainerHeight + 360 ) : "";
+					!$photoItem.hasClass("active") ? $photoItem.css({height : $parentContainerHeight + 360 , transition: "height .3s" }) : "";
 
 					$photoItem.addClass("active no-hover");
 
@@ -719,7 +719,8 @@ function resetBios(){
 		{
 			height: 0,
 			paddingTop: 0,
-			paddingBottom: 0
+			paddingBottom: 0,
+			transition: "height .3s"
 		});
 
 		// $bioBox.animate(
