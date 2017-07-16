@@ -703,7 +703,7 @@ function initBioBoxes() {
 }
 
 function resetBios(){
-	console.log("<< Resetting bioBox v5 - Comparing CSS transition >>")
+	console.log("<< Resetting bioBox v6 - Comparing JS .animate() >>")
 		var $bioBox = $(".photo-item").find(".bioBox");
 		var $bioBoxParent = $bioBox.parent();
 		var $parentAndSiblings = $bioBoxParent.siblings().andSelf();
@@ -729,7 +729,7 @@ function resetBios(){
 			$bioBoxParent.css({
 				height: ""
 			})
-		}, 500);
+		}, 800);
 
 }
 
