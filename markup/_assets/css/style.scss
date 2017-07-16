@@ -6290,15 +6290,9 @@ footer {
 			margin-bottom:35px;
 			width:50%;
 			vertical-align: top;
-			// height: 100%; 
-			// position: relative;
-			// @include transition(height .3s);
-			// transition: all .3s;
-			// transition-timing-function: ease;
 
-			// &.active {
-			// 	height: calc(100% + 360px);
-			// }
+			// @include transition(height .3s);
+
 			&.compressing {
 				height: unset;
 				// min-height: calc(100% - 360px);
@@ -6422,24 +6416,6 @@ footer {
 			&:nth-child(even) {
 				.bioBox {
 					right: 0px;
-					// @include max-screen($sm) {
-					// 	right: 15px;
-					// } 
-					// margin-left:  -110.5%;
-					// margin-right: 0;
-					// transform: translate(-52.2%, 0px);
-					// @include max-screen($xxlg) {
-					// 	transform: translate(-53.9%, 0px);
-					// }
-					// @include max-screen($xlg) {
-					// 	transform: translate(-53.9%, 0px);
-					// }
-					// @include max-screen($md) {
-					// 	transform: translate(-52.8%, 0px);
-					// }
-					// @include max-screen($sm) {
-					// 	transform: unset;
-					// }
 				}
 			}
 
