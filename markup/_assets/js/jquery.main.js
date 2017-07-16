@@ -670,7 +670,7 @@ function initBioBoxes() {
 				if($photoItem.find(".bioBox").length == 0) {
 					$parentContainerHeight = $parentContainerHeight + 360;
 
-					!$photoItem.hasClass("active") ? $photoItem.animate({height : $parentContainerHeight},300) : "";
+					!$photoItem.hasClass("active") ? $photoItem.animate({height : $parentContainerHeight},300, "swing") : "";
 
 					$photoItem.addClass("active no-hover");
 
@@ -685,7 +685,7 @@ function initBioBoxes() {
 							e.stopPropagation();
 						}).appendTo($photoItem).animate({
 							height: "360px"
-						}, 300);
+						}, 300, "swing");
 
 				}
 			});
@@ -714,7 +714,7 @@ function resetBios(){
 		$bioBoxParent.animate(
 		{
 			height: $initialParentContainerHeight
-		},300);
+		},300, "swing");
 
 		$bioBox.animate(
 		{
@@ -722,7 +722,7 @@ function resetBios(){
 			paddingTop: 0,
 			paddingBottom: 0
 
-		},300);
+		},300, "swing");
 		
 		setTimeout(function() {
 			$bioBox.remove();
