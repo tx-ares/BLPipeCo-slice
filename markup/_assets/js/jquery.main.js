@@ -705,14 +705,14 @@ function initBioBoxes() {
 }
 
 function resetBios(){
-	console.log("<< Resetting bioBox v3 >>")
-		var $self = $(".photo-item").find(".bioBox");
-		var $bioBoxParent = $self.parent();
-		var $parentSiblings = $bioBoxParent.siblings();
+	console.log("<< Resetting bioBox v4 >>")
+		var $bioBox = $(".photo-item").find(".bioBox");
+		var $bioBoxParent = $bioBox.parent();
+		var $parentAndSiblings = $bioBoxParent.siblings().andSelf();
 
-		$parentSiblings.removeClass("active no-hover");
+		$parentAndSiblings.removeClass("active no-hover");
 
-		$self.animate(
+		$bioBox.animate(
 		{
 			height: 0,
 			paddingTop: 0,
@@ -720,7 +720,7 @@ function resetBios(){
 		}, 300);
 		
 		setTimeout(function() {
-			$self.remove();
+			$bioBox.remove();
 		}, 500);
 
 }
