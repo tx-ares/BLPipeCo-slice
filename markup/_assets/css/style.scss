@@ -219,6 +219,7 @@ blockquote {
 		border-top: 5px solid rgba($colorLightGrey3, .5);
 		border-bottom: 5px solid rgba($colorLightGrey3, .5);
 		text-align: center;
+		font-weight: 600;
 	}
 	
 	&:before {
@@ -3508,7 +3509,7 @@ footer {
 
 		@include max-screen($sm) {
 		    bottom: 33%;
-		    
+
 		    h1 {
 				@include font-size(24px);
 			}
@@ -3698,6 +3699,12 @@ footer {
 		}
 		h2 {
 			margin-top: 20px;
+			margin-bottom: 0;
+			font-weight: 600;
+			font-size: 1.875rem;
+		    letter-spacing: 2px;
+		    font-weight: 500;
+			@include font-size(30px);
 		}
 	}
 	
@@ -4544,6 +4551,11 @@ footer {
 				margin-bottom:0;
 				// padding-left:20px;
 			}
+			h4 {
+				@include font-size(24px);
+				font-weight: 500;
+				text-transform: uppercase;
+			}
 			@include max-screen($sm) {
 				text-align: center;
 			}
@@ -4617,7 +4629,7 @@ footer {
 			text-transform:uppercase;
 			font-weight:500;
 			@include font-size(24px);
-			margin-bottom:15px;
+			// margin-bottom:15px;
 			color:$colorWhite;
 		}
 		
@@ -4665,11 +4677,12 @@ footer {
 			span {
 				color: $colorWhite !important;
 				text-transform: uppercase;
+				font-weight: 500;
 			}
 			@include max-screen($xlg) {
 				margin-right:60px;
 			}
-			@include max-screen($xmd){
+			@include max-screen($xmd) {
 				padding: 8px 15px;
 				margin-right: 0;
 				border: 1px solid $colorWhite;
@@ -5189,7 +5202,11 @@ footer {
 		font-weight:400;
 		@include font-size(24px);
 	}
-	
+
+	h4 {
+		@include font-size(24px);
+	}
+
 	p {
 		&:last-child {
 			margin-bottom:0;
@@ -5225,7 +5242,7 @@ footer {
 		}
 		
 		.txt-content {
-			padding:30px;
+			padding:45px;
 		}
 		
 		@include max-screen($lg) {
