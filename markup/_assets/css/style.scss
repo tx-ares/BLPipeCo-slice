@@ -4055,7 +4055,7 @@ footer {
 	.call-us {
 		text-align: left;
 		// padding: 0 25px;
-		font-size: 1.285em;
+		// @include font-size(20px);
 		@include max-screen($md) {
 			// padding: 0 15px;
 		}
@@ -4063,7 +4063,7 @@ footer {
 
 	.sub-text {
 		color: $colorWhite;
-		font-size: 1.285rem;
+		// font-size: 1.285rem;
 		@include max-screen($lg) {
 			// padding: 0 8px;
 			font-size: 1.085rem;
@@ -4082,10 +4082,13 @@ footer {
 		}
 	
 		>[class*="col-"]:nth-child(1) {
-			padding: 0 25px;
+			padding: 0 35px;
 			.num {
-				padding-top: 5px;
-				font-size: 1.485rem;
+				padding-top: 15px;
+				@include font-size(40px);
+				@include max-screen($lg) {
+					@include font-size(30px);
+				}
 			}
 		}
 		
