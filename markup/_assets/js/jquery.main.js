@@ -447,7 +447,7 @@ function resetPanels() {
 		$(this).removeClass("loaded");
 		$(this).hide();
 	})
-	$("h3.text-flip").removeClass("vertical-text");
+	$("h2.text-flip").removeClass("vertical-text");
 
 	$(".fa-spin").css("opacity" , 0);
 
@@ -467,7 +467,7 @@ function initSlidePanels() {
 		if (!window.matchMedia('only screen and (max-width: 865px)').matches) {
 			$(this).hasClass("compressed") ? $(this).toggleClass("compressed") : "";
 			$(this).hasClass("vertical-text") ? $(this).toggleClass("vertical-text") : "";
-			$("h3.text-flip").addClass("vertical-text");
+			$("h2.text-flip").addClass("vertical-text");
 			setTimeout(function(){$(this).find(".txt-content").hide()}, 1000);
 			$(".slide-over-right").addClass("compressed");
 			// $(this).find($(".txt-content")).each(function(){ $(this).removeClass("animated fadeOut")});
@@ -494,7 +494,7 @@ function initSlidePanels() {
 		if (!window.matchMedia('only screen and (max-width: 865px)').matches) {
 			$(this).hasClass("compressed") ? $(this).toggleClass("compressed") : "";
 			$(this).hasClass("vertical-text") ? $(this).toggleClass("vertical-text") : "";
-			$("h3.text-flip").addClass("vertical-text");
+			$("h2.text-flip").addClass("vertical-text");
 			setTimeout(function(){$(this).find(".txt-content").hide()}, 1000);
 			$(".slide-over-left").addClass("compressed");
 			// $(this).find($(".txt-content")).each(function(){ $(this).removeClass("animated fadeOut")});

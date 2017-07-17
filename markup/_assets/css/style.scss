@@ -5391,7 +5391,7 @@ footer {
 			@include max-screen($smd) {
 				width: 100%;
 			}
-			h3.text-upcase.text-flip {
+			h2.text-upcase.text-flip {
 					opacity: 0;
 				}
 			.slick-slider {
@@ -5407,7 +5407,7 @@ footer {
 			}
 
 			.txt-content,
-			h3.text-upcase.text-flip.vertical-text {
+			h2.text-upcase.text-flip.vertical-text {
 				opacity: 0;
 				width: 0;
 				margin: 0;
@@ -5478,12 +5478,12 @@ footer {
 			.txt-content {
 				right: 15%
 			}
-			h3.text-flip {
+			h2.text-flip {
 				right: 25%;
 				text-align: center;
 			}
 		}
-		h3.text-flip {
+		h2.text-flip {
 			color: $colorWhite;
 			text-transform:inherit;
 			font-weight:500;
@@ -5491,6 +5491,7 @@ footer {
 			min-width: 205px;
 			left: 95px;
 			top: 145px;
+			margin-top: 0;
 			@include font-size(24px);
 			@include transition( all .3s);
 			@include max-screen($xsm) {
@@ -5545,7 +5546,7 @@ footer {
 			width: 91%;
 			@include max-screen($smd) {
 				width: 100%;
-				h3.text-upcase.text-flip {
+				h2.text-upcase.text-flip {
 					opacity: 0;
 				}
 			}
@@ -5563,7 +5564,7 @@ footer {
 
 			}
 			.txt-content,
-			h3.text-upcase.text-flip.vertical-text {
+			h2.text-upcase.text-flip.vertical-text {
 				opacity: 0;
 				width: 0;
 				margin: 0;
@@ -5618,7 +5619,7 @@ footer {
 			.txt-content {
 				right: 30%;
 			}
-			h3.text-flip {
+			h2.text-flip {
 				right: 35%;
 				text-align: center;
 			}
@@ -5628,7 +5629,7 @@ footer {
 			.txt-content {
 				right: 20%;
 			}
-			h3.text-flip {
+			h2.text-flip {
 				right: 30%;
 				text-align: center;
 			}
@@ -5639,7 +5640,7 @@ footer {
 				right: intial;
 				left: 15%;
 			}
-			h3.text-flip {
+			h2.text-flip {
 				left: 15%;
 				text-align: center;
 			}
@@ -5650,7 +5651,7 @@ footer {
 				right: intial;
 				left: 10%;
 			}
-			h3.text-flip {
+			h2.text-flip {
 				left: 10%;
 				text-align: center;
 			}
@@ -5662,7 +5663,7 @@ footer {
 				left: 10%;
 				max-width: 320px;
 			}
-			h3.text-flip {
+			h2.text-flip {
 				right: intial;
 				left: 25%;
 				text-align: center;
@@ -5700,7 +5701,7 @@ footer {
 		
 	}
 	
-	h3.text-flip {
+	h2.text-flip {
 		color:$colorDarkBlue;
 		text-transform:inherit;
 		font-weight:500;
@@ -5708,6 +5709,7 @@ footer {
 	    right: 80px;
 	    top: 145px;
 	    min-width: 265px;
+	    margin-top: 0;
 		@include font-size(24px);
 		@include transition( all .3s);
 		&.vertical-text {
@@ -5928,7 +5930,7 @@ footer {
 			}
 		}
 		.txt-content,
-		h3.text-upcase.text-flip.vertical-text {
+		h2.text-upcase.text-flip.vertical-text {
 			opacity: 0;
 			width: 0;
 			margin: 0;
@@ -5983,7 +5985,7 @@ footer {
 		.txt-content {
 			right: 15%
 		}
-		h3.text-flip {
+		h2.text-flip {
 			right: 25%;
 			text-align: center;
 		}
@@ -6183,7 +6185,7 @@ footer {
 			}
 		}
 		.txt-content,
-		h3.text-upcase.text-flip.vertical-text {
+		h2.text-upcase.text-flip.vertical-text {
 			opacity: 0;
 			width: 0;
 			margin: 0;
@@ -6238,7 +6240,7 @@ footer {
 		.txt-content {
 			right: 15%
 		}
-		h3.text-flip {
+		h2.text-flip {
 			right: 25%;
 			text-align: center;
 		}
