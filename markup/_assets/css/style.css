@@ -2472,11 +2472,9 @@ footer {
       letter-spacing: 2px; }
     .banner .subtext-box h2 {
       text-align: center; }
-    @media only screen and (max-width: 320px) {
+    @media only screen and (max-width: 575px) {
       .banner .subtext-box {
-        left: 19%;
-        bottom: 0;
-        width: 65%; }
+        bottom: 33%; }
         .banner .subtext-box h1 {
           font-size: 24px;
           font-size: 1.5rem; }

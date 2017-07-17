@@ -708,7 +708,7 @@ function resetBios(){
 			$bioBoxParent = $bioBox.parent();
 			$parentAndSiblings = $bioBoxParent.siblings().andSelf();
 			$initialParentContainerHeight = $bioBoxParent.height() - 360;
-
+						
 		$parentAndSiblings.removeClass("active no-hover");
 
 		$bioBoxParent.animate(
