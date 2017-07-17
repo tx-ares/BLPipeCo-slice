@@ -705,9 +705,9 @@ function initBioBoxes() {
 function resetBios(){
 	console.log("<< Resetting bioBox v6 - Comparing JS .animate() >>")
 		var $bioBox = $(".photo-item").find(".bioBox");
-		var $bioBoxParent = $bioBox.parent();
-		var $parentAndSiblings = $bioBoxParent.siblings().andSelf();
-		var $initialParentContainerHeight = $bioBoxParent.height() - 360;
+			$bioBoxParent = $bioBox.parent();
+			$parentAndSiblings = $bioBoxParent.siblings().andSelf();
+			$initialParentContainerHeight = $bioBoxParent.height() - 360;
 
 		$parentAndSiblings.removeClass("active no-hover");
 
@@ -727,7 +727,7 @@ function resetBios(){
 		setTimeout(function() {
 			$bioBox.remove();
 			$bioBoxParent.css({
-				height: ""
+				height: "unset"
 			})
 		}, 800);
 
