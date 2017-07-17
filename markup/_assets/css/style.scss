@@ -3487,6 +3487,28 @@ footer {
 		width:100%;
 		height:80px;	
 	}
+
+	.subtext-box {
+		position:absolute;
+		left: 34%;
+		bottom: 35%;
+		width:35%;
+		height:80px;
+		margin: auto;
+		// border: 2px solid $colorWhite;
+		color: $colorWhite;
+		h1 {
+			text-transform: uppercase;
+			text-align: center;
+			color: $colorWhite;
+			font-weight: 700;
+			letter-spacing: 2px;
+		}
+		h2 {
+			text-align: center;
+		}
+
+	}
 	
 	.sub-cat-title {
 		text-transform:uppercase;
@@ -3798,8 +3820,13 @@ footer {
 	padding: 40px;
 	position: relative;
 	h2 {
-		font-weight: 700;
-		letter-spacing: 2px;
+		font-weight: 600;
+		@include font-size(30px);
+		// letter-spacing: 2px;
+	}
+
+	h3 {
+		color: $colorWhite;
 	}
 	p, span {
 		color: $colorDarkBlue;
@@ -3809,11 +3836,16 @@ footer {
 		display: block;
 		font-size: .9rem;
 		text-transform: uppercase;
+		font-weight: 700;
+		// color: $colorSlateBlue2;
 	}
 	&.darkblue-theme {
 		background: $colorDarkBlue;
-		h2, p, span {
+		h2 {
 			color: $colorWhite;
+		}
+		h3, p ,span.date {
+			color: $colorSlateBlue2;
 		}
 	}
 	// @include max-screen($xmd){
@@ -4495,6 +4527,13 @@ footer {
 			bottom: 0;
 			width: 100%;
 			margin-bottom:53px;
+			h2 {
+				font-weight:600;
+				@include font-size(30px);
+				text-transform:uppercase;
+				margin-bottom:0;
+				// padding-left:20px;
+			}
 			@include max-screen($sm) {
 				text-align: center;
 			}
