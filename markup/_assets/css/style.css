@@ -2594,7 +2594,7 @@ footer {
     .main-content .main > .main-inner > [class*="col-"] {
       padding: 0; }
   .main-content .main h2 {
-    margin-top: 20px;
+    margin-top: 35px;
     margin-bottom: 0;
     font-weight: 600;
     font-size: 1.875rem;
@@ -4078,69 +4078,10 @@ footer {
       color: inherit; }
       .static-slides .slide-content a:hover {
         color: inherit; }
-  .static-slides.active {
-    width: 91%; }
-    @media only screen and (max-width: 865px) {
-      .static-slides.active {
-        width: 100%; } }
-    .static-slides.active .slick-slider {
-      width: 100%;
-      min-width: auto;
-      display: inline-block;
-      opacity: 1; }
-      .static-slides.active .slick-slider .slick-slide:hover {
-        background: #bcc7cd; }
-    .static-slides.active .txt-content,
-    .static-slides.active h2.text-upcase.text-flip.vertical-text {
-      opacity: 0;
-      width: 0;
-      margin: 0; }
-    .static-slides.active:after {
-      content: ""; }
-    .static-slides.active img.a-right.control-c.next.slick-next.slick-arrow {
-      right: -135px; }
-      @media only screen and (max-width: 1280px) {
-        .static-slides.active img.a-right.control-c.next.slick-next.slick-arrow {
-          right: -120px; } }
-      @media only screen and (max-width: 992px) {
-        .static-slides.active img.a-right.control-c.next.slick-next.slick-arrow {
-          right: -75px; } }
-      @media only screen and (max-width: 575px) {
-        .static-slides.active img.a-right.control-c.next.slick-next.slick-arrow {
-          right: -45px; } }
-  .static-slides.compressed {
-    width: 8%; }
-    @media only screen and (max-width: 865px) {
-      .static-slides.compressed {
-        width: 100%; } }
-    .static-slides.compressed .txt-content {
-      opacity: 0;
-      width: 0; }
-  .static-slides .txt-content {
-    position: absolute;
-    right: 0;
-    top: 40px;
-    padding-right: 50px;
-    -moz-transition: all 0.3s;
-    -o-transition: all 0.3s;
-    -webkit-transition: all 0.3s;
-    transition: all 0.3s; }
-    .static-slides .txt-content img[src] {
-      margin-bottom: 35px; }
-    @media only screen and (max-width: 865px) {
-      .static-slides .txt-content {
-        margin: 0 auto; } }
-  @media only screen and (max-width: 865px) {
-    .static-slides {
-      display: block;
-      width: 100%; }
-      .static-slides .txt-content {
-        right: 15%; }
-      .static-slides h2.text-flip {
-        right: 25%;
-        text-align: center; } }
-  .static-slides .slider {
-    width: 60%; }
+    .static-slides .slide-content h3 {
+      font-size: 24px;
+      font-size: 1.5rem;
+      font-weight: 500; }
 
 .more-phone-full-scr {
   width: 100%;
