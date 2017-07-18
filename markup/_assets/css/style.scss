@@ -3875,19 +3875,19 @@ footer {
 	    margin-bottom: 20px;
 	}
 
-	h3 {
-		color: $colorWhite;
-	}
+	// h3 {
+	// 	color: $colorWhite;
+	// }
 	p, span {
 		color: $colorDarkBlue;
 	}
 
 	span.date {
 		display: block;
-		font-size: .9rem;
+		@include font-size(14px);
+		font-weight: 500;
 		text-transform: uppercase;
-		font-weight: 700;
-		// color: $colorSlateBlue2;
+		color: $colorDarkBlue;
 	}
 	&.darkblue-theme {
 		background: $colorDarkBlue;
@@ -3900,14 +3900,23 @@ footer {
 
 		}
 	}
-	.txt-content {
-
-		&:hover {
-			h3, p, span {
-				color: $colorWhite;
-			}
+	&.slateblue-theme {
+		// background: $colorSlateBlue2;
+		// h2 {
+		// 	color: $colorWhite;
+		// }
+		h2 ,h3, p ,span.date {
+			@include transition(color .3s);
+			color: $colorDarkBlue;
 		}
 	}
+	// .txt-content {
+	// 	&:hover {
+	// 		h3, p, span {
+	// 			color: $colorWhite;
+	// 		}
+	// 	}
+	// }
 	// @include max-screen($xmd){
 	// 	background: $colorSlateBlue2 !important;
 	// 	h2, p, span {
