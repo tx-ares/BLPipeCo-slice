@@ -2683,10 +2683,15 @@ footer {
     color: #00263b; }
   .articles .txt-content {
     border-bottom: 1px solid #dbd8cf;
-    padding-top: 20px; }
-    .articles .txt-content p {
-      color: #d0112b;
-      margin-bottom: 15px; }
+    padding-top: 20px;
+    padding-bottom: 20px; }
+    .articles .txt-content h3 {
+      color: #d0202f;
+      margin-bottom: 5px;
+      font-weight: 500;
+      text-transform: none;
+      font-size: 16px;
+      font-size: 1rem; }
     .articles .txt-content span.date {
       display: block;
       font-size: 14px;
@@ -2694,6 +2699,8 @@ footer {
       font-weight: 500;
       text-transform: uppercase;
       color: #00263b; }
+    .articles .txt-content:last-child {
+      border-bottom: none; }
 
 .latest-articles {
   background: #edf1f1;
