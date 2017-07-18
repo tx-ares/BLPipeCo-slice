@@ -2614,6 +2614,13 @@ footer {
     bottom: 105px;
     left: 0;
     width: 80%; }
+    .main-content .tertiary .image-cta.resource-center .txt-content h4 {
+      text-transform: uppercase;
+      font-weight: 500;
+      font-size: 24px;
+      font-size: 24px;
+      font-size: 1.5rem;
+      color: #fff; }
     @media only screen and (max-width: 575px) {
       .main-content .tertiary .image-cta.resource-center .txt-content {
         position: relative;
@@ -2679,10 +2686,13 @@ footer {
   background: #edf1f1;
   padding: 40px;
   position: relative; }
-  .latest-articles h2 {
-    font-weight: 600;
-    font-size: 30px;
-    font-size: 1.875rem; }
+  .latest-articles h4 {
+    text-transform: uppercase;
+    font-weight: 500;
+    font-size: 24px;
+    font-size: 1.5rem;
+    color: #fff;
+    margin-bottom: 20px; }
   .latest-articles h3 {
     color: #fff; }
   .latest-articles p, .latest-articles span {

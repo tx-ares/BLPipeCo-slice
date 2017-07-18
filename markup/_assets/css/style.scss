@@ -3733,6 +3733,14 @@ footer {
 				bottom: 105px;
 				left: 0;
 				width: 80%;
+				h4 {
+					text-transform: uppercase;
+				    font-weight: 500;
+				    font-size: 24px;
+				    @include font-size(24px);
+				    color: $colorWhite;
+				}
+
 				@include max-screen($sm) {
 					position: relative;
 					background: $colorBrightRed2;
@@ -3836,10 +3844,17 @@ footer {
 	background: $colorLightGrey1;
 	padding: 40px;
 	position: relative;
-	h2 {
-		font-weight: 600;
-		@include font-size(30px);
-		// letter-spacing: 2px;
+	// h2 {
+	// 	font-weight: 600;
+	// 	@include font-size(30px);
+	// 	// letter-spacing: 2px;
+	// }
+	h4 {
+		text-transform: uppercase;
+	    font-weight: 500;
+		@include font-size(24px);
+	    color: $colorWhite;
+	    margin-bottom: 20px;
 	}
 
 	h3 {
