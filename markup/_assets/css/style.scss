@@ -3705,13 +3705,10 @@ footer {
 				padding: 0;
 			}
 		}
-		h2 {
+		h1 {
 			margin-top: 35px;
-			margin-bottom: 0;
-			font-weight: 600;
-			font-size: 1.875rem;
-		    letter-spacing: 2px;
-		    font-weight: 500;
+			margin-bottom: 20px;
+			font-weight: 500;
 			@include font-size(30px);
 		}
 	}
@@ -3889,24 +3886,40 @@ footer {
 		text-transform: uppercase;
 		color: $colorDarkBlue;
 	}
+
 	&.darkblue-theme {
 		background: $colorDarkBlue;
+		// @include transition(color .3);
 		h2 {
+			@include font-size(16px);
+			font-weight: 600;
+			text-transform: none;
+			margin-bottom: 1.875rem;
 			color: $colorWhite;
 		}
 		h3 {
 			@include font-size(16px);
 			font-weight: 600;
 			text-transform: none;
+			margin-bottom: 1.875rem;
 		}
 		h3, p {
-			@include transition(color .3s);
 			color: $colorSlateBlue2;
 
 		}
 		span.date {
 			padding-top: 5px;
 			color: $colorSlateBlue2;
+		}
+		// h2 ,h3, h4, p, span.date {
+		// 	@include transition(color .3);
+		// }
+		.txt-content {
+			&:hover {
+				h2 ,h3, h4, p, span.date {
+					color: $colorWhite !important;
+				}
+			}
 		}
 	}
 	&.slateblue-theme {
@@ -3915,9 +3928,16 @@ footer {
 		// 	color: $colorWhite;
 		// }
 		h4 {
-			@include font-size(16px);
+			@include font-size(24px);
 			text-transform: none;
 		}
+		h3 {
+			@include font-size(16px);
+			font-weight: 600;
+			text-transform: none;
+			margin-bottom: 1.875rem;
+		}
+
 		h2 ,h3, h4, p  {
 			@include transition(color .3s);
 			color: $colorDarkBlue;
@@ -3949,7 +3969,7 @@ footer {
 		left: 0;
 		width: 100%;
 
-		@include max-screen($smd) {
+		@include max-screen($xmd) {
 			position: relative;
 			height: 50px;
 		}
@@ -3962,19 +3982,21 @@ footer {
 			font-size: .9rem;
 			font-weight: 500;			
 			margin-right: 70px;
-			@include max-screen($smd) {
-				position: absolute;
-				left: 0;
+			display: block;
+			@include max-screen($xmd) {
 				width: 100% !important;
 			}
 			span {
 				color: $colorWhite !important;
 				text-transform: uppercase;
+					@include max-screen($smd) {
+					// width: 100% !important;
+				}
 			}
 			@include max-screen($xlg) {
 				margin-right:60px;
 			}
-			@include max-screen($xmd){
+			@include max-screen($xmd) {
 				padding: 8px 15px;
 				margin-right: 0;
 				border: 1px solid $colorWhite;
@@ -4620,11 +4642,19 @@ footer {
 		height: 100%;
 		padding-bottom: 55%;
 
+		@include max-screen($sm) {
+			padding-bottom: 70%;
+		}
+
 		.txt-content {
 			position: absolute;
 			bottom: 0;
 			width: 100%;
 			margin-bottom:53px;
+			padding: 40px;
+			// p {
+			// 	text-align: left;
+			// }
 			h2 {
 				font-weight:600;
 				@include font-size(30px);
@@ -4637,9 +4667,9 @@ footer {
 				font-weight: 500;
 				text-transform: uppercase;
 			}
-			@include max-screen($sm) {
-				text-align: center;
-			}
+			// @include max-screen($sm) {
+			// 	text-align: center;
+			// }
 		}
 		
 		&:after {
@@ -4746,19 +4776,31 @@ footer {
 		bottom:	0;
 		left: 0;
 		width: 100%;
+
+		@include max-screen($xmd) {
+			// position: relative;
+			height: 80px;
+			background-color: $colorSlateBlue2;
+		}
 		@include max-screen($xmd) {
 			text-align: center;
-			background: $colorSlateBlue2;
 		}	
 		a {
 			color: $colorWhite;
 			line-height: 3;
-			font-size: .9rem;			
+			font-size: .9rem;
+			font-weight: 500;			
 			margin-right: 70px;
+			display: block;
+			@include max-screen($xmd) {
+				width: 85% !important;
+			}
 			span {
 				color: $colorWhite !important;
 				text-transform: uppercase;
-				font-weight: 500;
+					@include max-screen($smd) {
+					// width: 100% !important;
+				}
 			}
 			@include max-screen($xlg) {
 				margin-right:60px;
@@ -4770,7 +4812,6 @@ footer {
 				width: 85%;
 				margin: 0 auto;
 			}
-			
 			&:after {
 				content: '\f0da';
 				font-family: FontAwesome;
@@ -4781,7 +4822,6 @@ footer {
 			    width: 52px;
 			    padding: 6px 22px;
 			    background: $colorBrightRed1;
-
 			    @include max-screen($xmd) {
 			    	display: none;
 			    }
@@ -4924,8 +4964,11 @@ footer {
 		}
 	}
 
-	&.grey7 {
-		background:$colorLightGrey7;
+	&.slateblue2 {
+		background:$colorSlateBlue2;
+		// .txt-subcontent {
+		// 	background:$colorSlateBlue2;
+		// }
 	}
 
 	&.white {
