@@ -3862,7 +3862,17 @@ footer {
 			color: $colorWhite;
 		}
 		h3, p ,span.date {
+			@include transition(color .3s);
 			color: $colorSlateBlue2;
+
+		}
+	}
+	.txt-content {
+
+		&:hover {
+			h3, p, span {
+				color: $colorWhite;
+			}
 		}
 	}
 	// @include max-screen($xmd){
@@ -3879,6 +3889,7 @@ footer {
 		bottom:	0;
 		left: 0;
 		width: 100%;
+
 		@include max-screen($smd) {
 			position: relative;
 			height: 50px;
