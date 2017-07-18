@@ -3915,7 +3915,8 @@ footer {
 		a {
 			color: $colorWhite;
 			line-height: 3;
-			font-size: .9rem;			
+			font-size: .9rem;
+			font-weight: 500;			
 			margin-right: 70px;
 			@include max-screen($smd) {
 				position: absolute;
