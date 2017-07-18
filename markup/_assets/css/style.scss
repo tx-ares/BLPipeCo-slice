@@ -3894,10 +3894,19 @@ footer {
 		h2 {
 			color: $colorWhite;
 		}
-		h3, p ,span.date {
+		h3 {
+			@include font-size(16px);
+			font-weight: 600;
+			text-transform: none;
+		}
+		h3, p {
 			@include transition(color .3s);
 			color: $colorSlateBlue2;
 
+		}
+		span.date {
+			padding-top: 5px;
+			color: $colorSlateBlue2;
 		}
 	}
 	&.slateblue-theme {
@@ -3905,9 +3914,17 @@ footer {
 		// h2 {
 		// 	color: $colorWhite;
 		// }
-		h2 ,h3, p ,span.date {
+		h4 {
+			@include font-size(16px);
+			text-transform: none;
+		}
+		h2 ,h3, h4, p  {
 			@include transition(color .3s);
 			color: $colorDarkBlue;
+		}
+		span.date {
+			padding-top: 5px;
+			color: $colorSlateBlue;
 		}
 	}
 	// .txt-content {
@@ -4436,13 +4453,20 @@ footer {
 .topic-nav {
 	background: $colorDarkBlue;
 	padding: 40px;
-	h2.topic-title {
+	h4.topic-title {
 		text-transform: uppercase;
 		color: $colorWhite;
+		@include font-size(24px);
+		font-weight: 600;
 	}
 	ul {
 		li {
 			padding: 5px 0;
+			a {
+				&:focus {
+					color: $colorLightGrey7;	
+				}
+			}
 		}
 	}
 }

@@ -2730,18 +2730,33 @@ footer {
     background: #00263b; }
     .latest-articles.darkblue-theme h2 {
       color: #fff; }
-    .latest-articles.darkblue-theme h3, .latest-articles.darkblue-theme p, .latest-articles.darkblue-theme span.date {
+    .latest-articles.darkblue-theme h3 {
+      font-size: 16px;
+      font-size: 1rem;
+      font-weight: 600;
+      text-transform: none; }
+    .latest-articles.darkblue-theme h3, .latest-articles.darkblue-theme p {
       -moz-transition: color 0.3s;
       -o-transition: color 0.3s;
       -webkit-transition: color 0.3s;
       transition: color 0.3s;
       color: #bcc7cd; }
-  .latest-articles.slateblue-theme h2, .latest-articles.slateblue-theme h3, .latest-articles.slateblue-theme p, .latest-articles.slateblue-theme span.date {
+    .latest-articles.darkblue-theme span.date {
+      padding-top: 5px;
+      color: #bcc7cd; }
+  .latest-articles.slateblue-theme h4 {
+    font-size: 16px;
+    font-size: 1rem;
+    text-transform: none; }
+  .latest-articles.slateblue-theme h2, .latest-articles.slateblue-theme h3, .latest-articles.slateblue-theme h4, .latest-articles.slateblue-theme p {
     -moz-transition: color 0.3s;
     -o-transition: color 0.3s;
     -webkit-transition: color 0.3s;
     transition: color 0.3s;
     color: #00263b; }
+  .latest-articles.slateblue-theme span.date {
+    padding-top: 5px;
+    color: #8a9ca5; }
   .latest-articles .txt-subcontent {
     padding: 5px 0;
     text-align: right;
@@ -3047,11 +3062,16 @@ footer {
 .topic-nav {
   background: #00263b;
   padding: 40px; }
-  .topic-nav h2.topic-title {
+  .topic-nav h4.topic-title {
     text-transform: uppercase;
-    color: #fff; }
+    color: #fff;
+    font-size: 24px;
+    font-size: 1.5rem;
+    font-weight: 600; }
   .topic-nav ul li {
     padding: 5px 0; }
+    .topic-nav ul li a:focus {
+      color: #e2eaed; }
 
 .side-cta {
   position: relative;
