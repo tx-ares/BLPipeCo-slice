@@ -2476,7 +2476,12 @@ footer {
       font-weight: 600;
       letter-spacing: 2px; }
     .banner .subtext-box h2 {
-      text-align: center; }
+      text-align: center;
+      width: 60%;
+      margin: auto; }
+      @media only screen and (max-width: 575px) {
+        .banner .subtext-box h2 {
+          width: 100%; } }
     @media only screen and (max-width: 575px) {
       .banner .subtext-box {
         bottom: 33%; }
@@ -2671,6 +2676,8 @@ footer {
   .articles span.subtitle {
     font-weight: initial;
     display: block;
+    font-size: 20px;
+    font-size: 1.25rem;
     margin-bottom: 20px; }
   .articles p, .articles a {
     color: #00263b; }
@@ -2682,7 +2689,9 @@ footer {
       margin-bottom: 15px; }
     .articles .txt-content span.date {
       display: block;
-      font-size: .9rem;
+      font-size: 14px;
+      font-size: 0.875rem;
+      font-weight: 500;
       text-transform: uppercase;
       color: #00263b; }
 

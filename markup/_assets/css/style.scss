@@ -3508,6 +3508,11 @@ footer {
 		}
 		h2 {
 			text-align: center;
+			width: 60%;
+			margin: auto;
+			@include max-screen($sm) {
+				width: 100%;
+			}
 		}
 
 		@include max-screen($sm) {
@@ -3822,6 +3827,7 @@ footer {
 	span.subtitle {
 		font-weight: initial;
 		display: block;
+		@include font-size(20px);
 		margin-bottom: 20px;
 	}
 	p, a {
@@ -3836,7 +3842,8 @@ footer {
 		}
 		span.date {
 			display: block;
-			font-size: .9rem;
+			@include font-size(14px);
+			font-weight: 500;
 			text-transform: uppercase;
 			color: $colorDarkBlue;
 		}
