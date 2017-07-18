@@ -3815,6 +3815,7 @@ footer {
       left: 95px;
       top: 145px;
       margin-top: 0;
+      letter-spacing: 1px;
       font-size: 24px;
       font-size: 1.5rem;
       -moz-transition: all 0.3s;
@@ -3979,6 +3980,7 @@ footer {
     top: 145px;
     min-width: 265px;
     margin-top: 0;
+    letter-spacing: 1px;
     font-size: 24px;
     font-size: 1.5rem;
     -moz-transition: all 0.3s;
@@ -3989,7 +3991,7 @@ footer {
       position: absolute;
       right: -110px;
       top: 127px;
-      width: 280px;
+      width: 300px;
       margin: 30px 5px;
       -moz-transform: rotate(-90deg);
       -o-transform: rotate(-90deg);

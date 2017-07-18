@@ -5588,6 +5588,7 @@ footer {
 			left: 95px;
 			top: 145px;
 			margin-top: 0;
+			letter-spacing: 1px;
 			@include font-size(24px);
 			@include transition( all .3s);
 			@include max-screen($xsm) {
@@ -5806,13 +5807,14 @@ footer {
 	    top: 145px;
 	    min-width: 265px;
 	    margin-top: 0;
+	    letter-spacing: 1px;
 		@include font-size(24px);
 		@include transition( all .3s);
 		&.vertical-text {
 			position: absolute;
 			right: -110px;
 			top: 127px;
-			width: 280px;
+			width: 300px;
 			margin: 30px 5px;		
 			@include transform(rotate(-90deg));
 		}
