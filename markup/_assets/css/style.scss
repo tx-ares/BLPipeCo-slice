@@ -1913,11 +1913,14 @@ header {
 				vertical-align: top;
 			}
 			.content {
-				padding:23.5px;
+				padding:30px;
 				width: 200px;
 				font-weight:500;
 				display: inline-block;
-
+				span.h3 {
+					text-transform: uppercase;
+					@include font-size(20px);
+				}
 				@include font-size(14px);
 				
 				a {
