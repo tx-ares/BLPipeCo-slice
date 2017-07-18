@@ -3746,6 +3746,11 @@ footer {
       -webkit-transition: all 0.3s;
       transition: all 0.3s;
       z-index: 3; }
+      @media only screen and (max-width: 865px) {
+        .feature-slide-box .slide-over-right .panel-title {
+          text-align: center;
+          width: 100%;
+          right: unset; } }
       .feature-slide-box .slide-over-right .panel-title:after {
         content: '\f0d7';
         font-family: "FontAwesome";
@@ -3757,6 +3762,9 @@ footer {
         font-weight: 500;
         opacity: 1;
         right: 7%; }
+        @media only screen and (max-width: 865px) {
+          .feature-slide-box .slide-over-right.active .panel-title {
+            right: unset; } }
       @media only screen and (max-width: 865px) {
         .feature-slide-box .slide-over-right.active {
           width: 100%; } }
@@ -3803,7 +3811,7 @@ footer {
     .feature-slide-box .slide-over-right .txt-content {
       position: absolute;
       left: 0;
-      top: 40px;
+      top: 60px;
       padding-left: 50px;
       -moz-transition: all 0.3s;
       -o-transition: all 0.3s;
@@ -3836,9 +3844,9 @@ footer {
       text-transform: inherit;
       font-weight: 500;
       position: absolute;
-      min-width: 205px;
-      left: 95px;
-      top: 145px;
+      min-width: 235px;
+      left: 90px;
+      top: 160px;
       margin-top: 0;
       letter-spacing: 1px;
       font-size: 24px;
@@ -3847,6 +3855,11 @@ footer {
       -o-transition: all 0.3s;
       -webkit-transition: all 0.3s;
       transition: all 0.3s; }
+      @media only screen and (max-width: 575px) {
+        .feature-slide-box .slide-over-right h2.text-flip {
+          width: 100%;
+          text-align: center;
+          left: 0; } }
       @media only screen and (max-width: 320px) {
         .feature-slide-box .slide-over-right h2.text-flip {
           left: 20%; } }
@@ -3872,7 +3885,7 @@ footer {
           left: initial;
           right: 50px;
           content: '\f0da';
-          top: 40%; } }
+          top: 45%; } }
       @media only screen and (max-width: 575px) {
         .feature-slide-box .slide-over-right:before {
           right: 0;
@@ -3886,11 +3899,17 @@ footer {
       font-weight: 500;
       opacity: 0;
       padding: 20px;
+      width: 100%;
       -moz-transition: all 0.3s;
       -o-transition: all 0.3s;
       -webkit-transition: all 0.3s;
       transition: all 0.3s;
       z-index: 3; }
+      @media only screen and (max-width: 865px) {
+        .feature-slide-box .slide-over-left .panel-title {
+          text-align: center;
+          width: 100%;
+          left: unset; } }
       .feature-slide-box .slide-over-left .panel-title:after {
         content: '\f0d7';
         font-family: "FontAwesome";
@@ -3906,6 +3925,9 @@ footer {
         font-weight: 500;
         opacity: 1;
         left: 7%; }
+        @media only screen and (max-width: 865px) {
+          .feature-slide-box .slide-over-left.active .panel-title {
+            left: unset; } }
       @media only screen and (max-width: 865px) {
         .feature-slide-box .slide-over-left.active {
           width: 100%; }
@@ -3950,7 +3972,7 @@ footer {
     .feature-slide-box .slide-over-left .txt-content {
       position: absolute;
       right: 0;
-      top: 40px;
+      top: 60px;
       padding-right: 50px;
       -moz-transition: all 0.3s;
       -o-transition: all 0.3s;
@@ -4012,7 +4034,7 @@ footer {
           right: 50px; } }
       @media only screen and (max-width: 575px) {
         .feature-slide-box .slide-over-left:after {
-          top: 40%;
+          top: 45%;
           right: 0;
           padding-right: 15px; } }
     .feature-slide-box .slide-over-left .slider {
@@ -4023,7 +4045,7 @@ footer {
     font-weight: 500;
     position: absolute;
     right: 80px;
-    top: 145px;
+    top: 160px;
     min-width: 265px;
     margin-top: 0;
     letter-spacing: 1px;
@@ -4033,6 +4055,12 @@ footer {
     -o-transition: all 0.3s;
     -webkit-transition: all 0.3s;
     transition: all 0.3s; }
+    @media only screen and (max-width: 575px) {
+      .feature-slide-box h2.text-flip {
+        width: 100%;
+        text-align: center;
+        right: 0 !important;
+        left: 0 !important; } }
     .feature-slide-box h2.text-flip.vertical-text {
       position: absolute;
       right: -110px;
