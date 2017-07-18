@@ -3844,11 +3844,11 @@ footer {
 	background: $colorLightGrey1;
 	padding: 40px;
 	position: relative;
-	// h2 {
-	// 	font-weight: 600;
-	// 	@include font-size(30px);
-	// 	// letter-spacing: 2px;
-	// }
+	h2 {
+		font-weight: 600;
+		@include font-size(30px);
+		// letter-spacing: 2px;
+	}
 	h4 {
 		text-transform: uppercase;
 	    font-weight: 500;
@@ -5455,15 +5455,15 @@ footer {
 				@include transition(all .3s);
 				.slick-slide {
 					height: 360px;				
-					padding: 30px 20px;
+					padding: 60px 20px 0;
 					text-align: center;
 					@include transition(all .3s);
 
 					@include max-screen($md) {
-						padding: 45px 100px;
+						padding: 60px 100px;
 					}
 					@include max-screen($sm) {
-						padding: 35px 40px;
+						padding: 60px 40px;
 					}
 					@include max-screen($xsm) {
 						padding: 35px 20px;
@@ -5481,9 +5481,29 @@ footer {
 	.slide-over-right {
 		background: $colorBrightRed2;
 		color: $colorWhite;
-		
+		.panel-title {
+			position: absolute;
+			right: -20px;
+			text-transform: uppercase;
+			font-weight: 500;
+			opacity: 0;
+			padding: 20px;
+			@include transition(all .3s);
+			z-index: 3;
+			&:after {
+				content: '\f0d7';
+				font-family: $font-icon;
+				padding-left: 5px;
+			}
+		}
 		&.active {
 			width: 91%;
+			.panel-title {
+				text-transform: uppercase;
+				font-weight: 500;
+				opacity: 1;
+				right: 7%;
+			}
 			@include max-screen($smd) {
 				width: 100%;
 			}
@@ -5545,6 +5565,25 @@ footer {
 				opacity: 0;
 				width: 0;
 			}
+		// 	&:before {
+		// 		content: '\f0d9';
+		// 		font-family: $font-icon;
+		// 		position: absolute;
+		// 		left: 35px;
+		// 		top: 65%;
+			
+		// 		@include max-screen($smd) {
+		// 			left: initial;
+		// 			right: 50px;
+		// 			content: '\f0da';
+		// 			top: 40%;
+		// 		}
+		// 		@include max-screen($sm) {
+		// 			right: 0;
+		// 			padding-right: 15px;
+		// 		}
+
+		// 	}
 		}
 		.txt-content {
 			position: absolute;
@@ -5597,15 +5636,11 @@ footer {
 			&.vertical-text {
 				position: absolute;
 				left: -95px;
-				top: 95px;
+				top: 145px;
 				width: 255px;
 				margin: 30px 5px;		
-				@include transform(rotate(-90deg));
-				// &:before {
-				// 	content: "\f0d8";
-				// 	padding: 0 15px;
-				// 	font-family: $font-icon; 
-				// }
+				@include transform(rotate(90deg));
+
 			}
 		}
 	
@@ -5625,27 +5660,46 @@ footer {
 				right: 0;
 				padding-right: 15px;
 			}
-			@include max-screen($xsm) {
-				// padding-right: 0;
-			}
+
 		}
 
 		
 	}
 	.slide-over-left {	
 		background: $colorLightGrey7;
+		.panel-title {
+			position: absolute;
+			left: -20px;
+			text-transform: uppercase;
+			font-weight: 500;
+			opacity: 0;
+			padding: 20px;
+			@include transition(all .3s);
+			z-index: 3;
+			&:after {
+				content: '\f0d7';
+				font-family: $font-icon;
+				padding-left: 5px;
+			}
+		}
 		@include max-screen($smd) {
 			display: block;
 			width: 100%;
 		}
-
 		&.active {
 			width: 91%;
+			.panel-title {
+				text-transform: uppercase;
+				font-weight: 500;
+				opacity: 1;
+				left: 7%;
+			}
 			@include max-screen($smd) {
 				width: 100%;
 				h2.text-upcase.text-flip {
 					opacity: 0;
 				}
+				
 			}
 			.slick-slider {
 				width: 100%;
@@ -5677,9 +5731,6 @@ footer {
 				@include max-screen($md) {
 					right: -75px;
 				}
-				// @include max-screen($smd) {
-				// 	right: -75px;
-				// }
 				@include max-screen($sm) {
 					right: -45px;
 				}
@@ -5783,12 +5834,7 @@ footer {
 				right: 0;
 				padding-right: 15px;
 			}
-			// @include max-screen($ssm) {
-			// 	padding-right: 15px;
-			// }
-			// @include max-screen($xsm) {
-			//  padding-right: 0;
-			// }
+
 		}
 
 		.slider {

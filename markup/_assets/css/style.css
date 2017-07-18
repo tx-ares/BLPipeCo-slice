@@ -2686,6 +2686,10 @@ footer {
   background: #edf1f1;
   padding: 40px;
   position: relative; }
+  .latest-articles h2 {
+    font-weight: 600;
+    font-size: 30px;
+    font-size: 1.875rem; }
   .latest-articles h4 {
     text-transform: uppercase;
     font-weight: 500;
@@ -3708,7 +3712,7 @@ footer {
               margin: 0 25px; } }
         .feature-slide-box .panel .slider-container .slick-slider .slick-slide {
           height: 360px;
-          padding: 30px 20px;
+          padding: 60px 20px 0;
           text-align: center;
           -moz-transition: all 0.3s;
           -o-transition: all 0.3s;
@@ -3716,10 +3720,10 @@ footer {
           transition: all 0.3s; }
           @media only screen and (max-width: 992px) {
             .feature-slide-box .panel .slider-container .slick-slider .slick-slide {
-              padding: 45px 100px; } }
+              padding: 60px 100px; } }
           @media only screen and (max-width: 575px) {
             .feature-slide-box .panel .slider-container .slick-slider .slick-slide {
-              padding: 35px 40px; } }
+              padding: 60px 40px; } }
           @media only screen and (max-width: 320px) {
             .feature-slide-box .panel .slider-container .slick-slider .slick-slide {
               padding: 35px 20px; } }
@@ -3730,8 +3734,29 @@ footer {
   .feature-slide-box .slide-over-right {
     background: #d0112b;
     color: #fff; }
+    .feature-slide-box .slide-over-right .panel-title {
+      position: absolute;
+      right: -20px;
+      text-transform: uppercase;
+      font-weight: 500;
+      opacity: 0;
+      padding: 20px;
+      -moz-transition: all 0.3s;
+      -o-transition: all 0.3s;
+      -webkit-transition: all 0.3s;
+      transition: all 0.3s;
+      z-index: 3; }
+      .feature-slide-box .slide-over-right .panel-title:after {
+        content: '\f0d7';
+        font-family: "FontAwesome";
+        padding-left: 5px; }
     .feature-slide-box .slide-over-right.active {
       width: 91%; }
+      .feature-slide-box .slide-over-right.active .panel-title {
+        text-transform: uppercase;
+        font-weight: 500;
+        opacity: 1;
+        right: 7%; }
       @media only screen and (max-width: 865px) {
         .feature-slide-box .slide-over-right.active {
           width: 100%; } }
@@ -3828,14 +3853,14 @@ footer {
       .feature-slide-box .slide-over-right h2.text-flip.vertical-text {
         position: absolute;
         left: -95px;
-        top: 95px;
+        top: 145px;
         width: 255px;
         margin: 30px 5px;
-        -moz-transform: rotate(-90deg);
-        -o-transform: rotate(-90deg);
-        -ms-transform: rotate(-90deg);
-        -webkit-transform: rotate(-90deg);
-        transform: rotate(-90deg); }
+        -moz-transform: rotate(90deg);
+        -o-transform: rotate(90deg);
+        -ms-transform: rotate(90deg);
+        -webkit-transform: rotate(90deg);
+        transform: rotate(90deg); }
     .feature-slide-box .slide-over-right:before {
       content: '\f0d9';
       font-family: "FontAwesome";
@@ -3854,12 +3879,33 @@ footer {
           padding-right: 15px; } }
   .feature-slide-box .slide-over-left {
     background: #e2eaed; }
+    .feature-slide-box .slide-over-left .panel-title {
+      position: absolute;
+      left: -20px;
+      text-transform: uppercase;
+      font-weight: 500;
+      opacity: 0;
+      padding: 20px;
+      -moz-transition: all 0.3s;
+      -o-transition: all 0.3s;
+      -webkit-transition: all 0.3s;
+      transition: all 0.3s;
+      z-index: 3; }
+      .feature-slide-box .slide-over-left .panel-title:after {
+        content: '\f0d7';
+        font-family: "FontAwesome";
+        padding-left: 5px; }
     @media only screen and (max-width: 865px) {
       .feature-slide-box .slide-over-left {
         display: block;
         width: 100%; } }
     .feature-slide-box .slide-over-left.active {
       width: 91%; }
+      .feature-slide-box .slide-over-left.active .panel-title {
+        text-transform: uppercase;
+        font-weight: 500;
+        opacity: 1;
+        left: 7%; }
       @media only screen and (max-width: 865px) {
         .feature-slide-box .slide-over-left.active {
           width: 100%; }
