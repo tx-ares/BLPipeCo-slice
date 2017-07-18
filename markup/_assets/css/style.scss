@@ -6108,7 +6108,14 @@ footer {
 		text-align: center;
 		&:nth-child(4),
 		:last-child {
-			h3 {
+
+			span {
+				color: $colorDarkBlue;
+				font-weight: 500;
+				@include font-size(24px);
+				@include max-screen($xlg) {
+					@include font-size(20px);
+				}
 				&:after {
 					font-family: FontAwesome;
 					content: "\f0d7";
@@ -6133,7 +6140,10 @@ footer {
 		}
 		&:last-child {
 			width: 95%;
-			text-align: center;
+			text-align: left;
+			padding-left: 20px;
+			padding-right: 15px;
+
 		}
 		img[src] {
 			width: 100%;
@@ -6152,9 +6162,11 @@ footer {
 		background: $colorDarkGrey;
 		height: 135px;
 		margin-top: 45px;
-		display: inline-block;
-		margin-right: 15px;
-		margin-left: -20px;
+		position: absolute;
+		left: 0;
+		@include max-screen($xlg) {
+			left: 5%;	
+		}
 		@include max-screen($md) {
 			display: none;
 		}
