@@ -303,12 +303,16 @@ function initStickyHeader() {
             $('body').addClass("header-compressed");
             $(".logo > img").each(function(){
             	$(this).attr("src" , "_assets/images/BLPipeco_Logo-Horizontal.png")
+            	$(this).removeClass("vertical-logo");
+
             });
         }
         else {
 			$('body').removeClass("header-compressed");
 			$(".logo > img").each(function() {
-				$(this).attr("src" , "_assets/images/BLPipeco_Logo-md4.png")
+				$(this).attr("src" , "_assets/images/BLPipeco_Logo-Vertical.png");
+				$(this).addClass("vertical-logo");
+
 			});
         }
     });
@@ -366,11 +370,15 @@ function doneResizing() {
 	if(window.matchMedia('only screen and (max-width: 1024px)').matches && $(document).scrollTop() < 1) {
 		$('body').addClass("header-compressed");
 		$(".logo > img").each(function() {
-				$(this).attr("src" , "_assets/images/BLPipeco_Logo-Horizontal.png")});
+				$(this).attr("src" , "_assets/images/BLPipeco_Logo-Horizontal.png")
+				$(this).removeClass("vertical-logo");
+			});
 	} else {
 		$('body').removeClass("header-compressed");
 		$(".logo > img").each(function() {
-				$(this).attr("src" , "_assets/images/BLPipeco_Logo-md4.png")});
+				$(this).attr("src" , "_assets/images/BLPipeco_Logo-Vertical.png");
+				$(this).addClass("vertical-logo");
+			});
 	}
 	
 	/* Check if body has scrollbar */
@@ -644,11 +652,15 @@ function initLogo() {
 	 if (window.matchMedia('only screen and (max-width: 1024px)').matches) {
             $('body').addClass("header-compressed");
             $(".logo > img").each(function(){
-            	$(this).attr("src" , "_assets/images/BLPipeco_Logo-Horizontal.png")});
+            	$(this).attr("src" , "_assets/images/BLPipeco_Logo-Horizontal.png")
+            	$(this).removeClass("vertical-logo");
+            });
         }
         else {
 			$(".logo > img").each(function() {
-				$(this).attr("src" , "_assets/images/BLPipeco_Logo-Vertical.png")});
+				$(this).attr("src" , "_assets/images/BLPipeco_Logo-Vertical.png");
+				$(this).addClass("vertical-logo");
+			});
         }
 }
 

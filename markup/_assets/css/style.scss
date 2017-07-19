@@ -1845,6 +1845,12 @@ header {
 
         img {
             @include transition(all .3s);
+            height: 79px !important;
+            width: 158px !important;
+            &.veritical-logo {
+            	height: 50px !important;
+            	width: 203px !important;
+            }
         }
     }
 
@@ -3392,7 +3398,7 @@ footer {
                 // width:85px!important;
                 height: 50px!important;
                 @include max-screen($lg) {
-                    margin-top: 8px;
+                    margin-top: 5px;
                 }
 
                 @include transition(all .3s);
