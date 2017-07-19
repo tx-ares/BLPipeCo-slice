@@ -7,6 +7,7 @@
 @import "_mixin.toolbox";
 
 
+
 /* ==========================================================================
 
 	1. SETTINGS			
@@ -29,6 +30,7 @@ $lg: 1024px;
 $xlg: 1280px;
 $xxlg: 1440px;
 $full: 1960px;
+
 
 
 /* Base Accent Colors */
@@ -69,6 +71,7 @@ sans-serif;
 $font-icon:'FontAwesome';
 
 
+
 /* Extended Classes */
 
 .nowrap {
@@ -92,6 +95,7 @@ $font-icon:'FontAwesome';
 }
 
 
+
 /* Accessibility */
 
 .accessibility {
@@ -110,6 +114,7 @@ $font-icon:'FontAwesome';
 }
 
 
+
 /* ==========================================================================
 
 	2. BASE STYLES
@@ -123,6 +128,7 @@ _:-ms-fullscreen,
  :root {
     /* insert rule here */
 }
+
 
 
 /* Typography */
@@ -157,6 +163,11 @@ b {
 .bold-red {
     font-weight: 700;
     color: $colorBrightRed2;
+    @include transition(color .3s);
+    cursor: pointer;
+    &:hover {
+    	color: $colorSlateBlue;
+    }
 }
 
 h1,
@@ -211,6 +222,7 @@ hr {
 }
 
 
+
 /* Text settings */
 
 .text-upcase {
@@ -243,11 +255,13 @@ hr {
 }
 
 
+
 /* Font Weights */
 
 .f500 {
     font-weight: 500 !important;
 }
+
 
 
 /* Display settings */
@@ -263,6 +277,7 @@ hr {
 .disp-bl {
     display: block;
 }
+
 
 
 /* Blockquote */
@@ -333,6 +348,7 @@ blockquote {
         @include font-size(20px);
     }
 }
+
 
 
 /* Unordered List */
@@ -413,6 +429,7 @@ img[src] {
 }
 
 
+
 /* Forms */
 
 form {
@@ -426,6 +443,7 @@ form {
         }
     }
 }
+
 
 
 /* Input Reset */
@@ -450,6 +468,7 @@ button {
     line-height: 120%;
     margin-bottom: 10px;
 }
+
 
 
 /* Input Focus Reset */
@@ -491,6 +510,7 @@ label {
 }
 
 
+
 /* Custom Select */
 
 select {
@@ -498,11 +518,13 @@ select {
 }
 
 
+
 /* Custom Checkbox */
 
 input[type=checkbox] {
     display: none;
 }
+
 
 
 /* to hide the checkbox itself */
@@ -529,9 +551,11 @@ input[type=checkbox]+label:before {
 }
 
 
+
 /* unchecked icon */
 
 input[type=checkbox]+label:before {}
+
 
 
 /* space between checkbox and label */
@@ -542,9 +566,11 @@ input[type=checkbox]:checked+label:before {
 }
 
 
+
 /* checked icon */
 
 input[type=checkbox]:checked+label:before {}
+
 
 
 /* allow space for check mark */
@@ -581,7 +607,7 @@ textarea:-ms-input-placeholder 						{ color: $colorDarkGrey; }*/
     text-transform: uppercase;
     border: none;
     padding: 17px 20px;
-    @include transition(all 0.6s);
+    @include transition(all 0.3s);
     @include border-radius(0);
     @extend .nowrap;
     text-decoration: none;
@@ -589,7 +615,7 @@ textarea:-ms-input-placeholder 						{ color: $colorDarkGrey; }*/
     &:hover,
     &:focus {
         text-decoration: none;
-        background: $colorBrightRed1;
+        background: $colorSlateBlue;
         color: $colorWhite;
     }
 
@@ -670,6 +696,7 @@ textarea:-ms-input-placeholder 						{ color: $colorDarkGrey; }*/
 }
 
 
+
 /* Figure with Image */
 
 figure {
@@ -732,6 +759,7 @@ figure {
         }
     }
 }
+
 
 
 
@@ -886,6 +914,7 @@ $padding-sm: 20px;
 }
 
 
+
 /*  Utilities Sizes (Height and Width) */
 
 .fullpage {
@@ -919,6 +948,7 @@ $padding-sm: 20px;
 .pos-rel {
     position: relative;
 }
+
 
 
 /* Skeleton of Elements */
@@ -1008,6 +1038,7 @@ $padding-sm: 20px;
         }
     }
 }
+
 
 
 /* Opener 3 Line Layout */
@@ -1524,6 +1555,8 @@ $padding-sm: 20px;
                     >span {
                         background: $colorLightGrey7;
                         color: $colorDarkBlue;
+    	                @include transition(all .3s);
+
                     }
 
                     &:hover {
@@ -1682,6 +1715,7 @@ $padding-sm: 20px;
 }
 
 
+
 /* Social Media Icons */
 
 .social-media-icons {
@@ -1743,6 +1777,7 @@ $padding-sm: 20px;
         }
     }
 }
+
 
 
 /* Main wrapper of the page */
@@ -2382,12 +2417,12 @@ footer {
     }
 
     .signup {
-    	.h3 {
-    		font-weight: 400;
-    		@include font-size(20px);
-    		text-transform: uppercase;
-    		color: $colorWhite;
-    	}
+        .h3 {
+            font-weight: 400;
+            @include font-size(20px);
+            text-transform: uppercase;
+            color: $colorWhite;
+        }
         line-height: 120%;
         .content {
 
@@ -3287,6 +3322,7 @@ footer {
 }
 
 
+
 /* page layout setup utilities */
 
 .fullpage {
@@ -3603,11 +3639,11 @@ footer {
             }
         }
         span.btn.whiteline {
-        	margin-top: 20px;
+            margin-top: 20px;
         }
 
         .h1 {
-        	text-transform: uppercase;
+            text-transform: uppercase;
             text-align: center;
             color: $colorWhite;
             font-weight: 600;
@@ -3813,7 +3849,7 @@ footer {
             }
         }
         h1 {
-        	margin-top: 35px;
+            margin-top: 35px;
             font-weight: 500;
             @include font-size(30px);
         }
@@ -3824,11 +3860,11 @@ footer {
             @include font-size(30px);
         }
         .subtitle {
-	        font-weight: initial;
-	        display: block;
-	        @include font-size(20px);
-	        margin-bottom: 20px;
-	    }
+            font-weight: initial;
+            display: block;
+            @include font-size(20px);
+            margin-bottom: 20px;
+        }
     }
 
     .aside,
@@ -3876,8 +3912,8 @@ footer {
                     position: absolute;
                     right: 0;
                     bottom: 50px;
-                    height: 52px;
-                    width: 52px;
+                    height: 53px;
+                    width: 53px;
                     padding: 6px 22px;
                     @include max-screen($sm) {
                         content: "";
@@ -3931,6 +3967,7 @@ footer {
 
 .articles {
     margin: 40px 0;
+
     h2 {
         font-weight: 700;
         letter-spacing: 2px;
@@ -3968,6 +4005,25 @@ footer {
         &:last-child {
             border-bottom: none;
         }
+
+        h2,
+        h3,
+        h4,
+        p,
+        span.date {
+            @include transition(color .3s);
+        }
+
+        &:hover {
+            h2,
+            h3,
+            h4,
+            p,
+            span.date {
+                color: $colorSlateBlue !important;
+            }
+        }
+        
     }
 }
 
@@ -3985,9 +4041,7 @@ footer {
         @include font-size(24px);
         color: $colorWhite;
         margin-bottom: 20px;
-    }
-
-     // h3 {
+    } // h3 {
     // 	color: $colorWhite;
     // }
     p,
@@ -4002,6 +4056,11 @@ footer {
         text-transform: uppercase;
         color: $colorDarkBlue;
     }
+ //    .txt-content {
+	//     h2 ,h3, h4, p, span.date {
+	//     	@include transition(color .3s);
+	//     }
+	// }
 
     &.darkblue-theme {
         background: $colorDarkBlue; // @include transition(color .3);
@@ -4025,9 +4084,10 @@ footer {
         span.date {
             padding-top: 5px;
             color: $colorSlateBlue2;
-        } // h2 ,h3, h4, p, span.date {
-        // 	@include transition(color .3);
-        // }
+        } 
+        h2 ,h3, h4, p, span.date {
+        	@include transition(color .3s);
+        }
         .txt-content {
             &:hover {
                 h2,
@@ -4062,6 +4122,18 @@ footer {
         p {
             @include transition(color .3s);
             color: $colorDarkBlue;
+        }
+
+         .txt-content {
+            &:hover {
+                h2,
+                h3,
+                h4,
+                p,
+                span.date {
+                    color: $colorSlateBlue !important;
+                }
+            }
         }
         span.date {
             padding-top: 5px;
@@ -4124,18 +4196,25 @@ footer {
                 margin: 0 auto;
             }
             &:after {
+            	@include transition(background .3s);
                 content: '\f0da';
                 font-family: FontAwesome;
                 position: absolute;
                 right: 0;
                 bottom: 0px;
-                height: 52px;
-                width: 52px;
+                height: 53px;
+                width: 53px;
                 padding: 6px 22px;
                 background: $colorBrightRed1;
                 @include max-screen($xmd) {
                     display: none;
                 }
+            }
+
+            &:hover {
+            	&:after {
+                	background: $colorSlateBlue;
+            	}
             }
         }
     }
@@ -4237,17 +4316,25 @@ footer {
 // 		}
 // 	}
 // }
+
 .num {
     font-family: $font-avenir;
     @include font-size(24px);
     color: $colorWhite;
     font-weight: 300;
-    display: block; // @include max-screen($xlg) {
+    display: block;
+    @include transition(color .3s);
+    &:hover {
+    	color: $colorLightGrey6;
+    } 
+
+    // @include max-screen($xlg) {
     // 	@include font-size(20px);
     // }
     @include max-screen($md) {
         @include font-size(24px);
     }
+
 }
 
 .send-request {
@@ -4257,13 +4344,13 @@ footer {
     @include transition(all .3s);
 
     .call-us {
-    	.h3 {
-    		font-weight: 500;
-    		@include font-size(30px);
-    		text-transform: uppercase;
-    		color: $colorDarkBlue;
-    		letter-spacing: 2px;
-    	}
+        .h3 {
+            font-weight: 500;
+            @include font-size(30px);
+            text-transform: uppercase;
+            color: $colorDarkBlue;
+            letter-spacing: 2px;
+        }
         text-align: left; // padding: 0 25px;
         // @include font-size(20px);
         @include max-screen($md) {
@@ -4285,7 +4372,7 @@ footer {
         position: relative;
         height: 240px;
         &.full-scr {
-            height: 210px;
+            min-height: 250px;
         }
 
         >[class*="col-"]:nth-child(1) {
@@ -4310,7 +4397,6 @@ footer {
                 @include max-screen($sm) {
                     @include font-size(20px);
                 }
-
             }
         }
 
@@ -4319,6 +4405,7 @@ footer {
             border-right: solid 2px $colorWhite;
 
             .phone-opener {
+                position: relative;
                 &:after {
                     content: '';
                     position: absolute;
@@ -4327,6 +4414,24 @@ footer {
                     width: 100%;
                     height: 15px; // background:$colorWhite;
                     z-index: 1;
+                }
+
+                .fa-angle-down {
+                    position: absolute;
+                    margin: auto;
+                    width: 100%;
+                    text-align: center;
+                    @include transition(padding-top .8s);
+                    &:before {
+                        content: "\f107";
+                        padding-left: 4px;
+                    }
+                }
+
+                &:hover {
+                    >.fa-angle-down {
+                        padding-top: 20px;
+                    }
                 }
             }
         }
@@ -4352,9 +4457,7 @@ footer {
             @include font-size(24px);
             text-transform: uppercase;
             color: $colorWhite; // font-weight:700;
-            position: relative;
-            padding: 0 20px;
-
+            position: relative; // padding: 0 20px;
             span {
                 display: inline-block;
                 padding: 0 10px;
@@ -4437,26 +4540,23 @@ footer {
                         color: $colorWhite;
                         @include transition(all .3s);
 
-                        @include font-size(30px);
-                
-		                // @include max-screen($xxlg) {
-		                //     @include font-size(30px);
-		                // }
-		                @include max-screen($xxlg) {
-		                    @include font-size(20px);
-		                }
-		                //  @include max-screen($lg) {
-		                //     @include font-size(20px);
-		                // }
-		                @include max-screen($md) {
-		                    @include font-size(30px);
-		                }
-		                @include max-screen($smd) {
-		                    @include font-size(30px);
-		                }
-		                @include max-screen($sm) {
-		                    @include font-size(20px);
-		                }
+                        @include font-size(30px); // @include max-screen($xxlg) {
+                        //     @include font-size(30px);
+                        // }
+                        @include max-screen($xxlg) {
+                            @include font-size(20px);
+                        } //  @include max-screen($lg) {
+                        //     @include font-size(20px);
+                        // }
+                        @include max-screen($md) {
+                            @include font-size(30px);
+                        }
+                        @include max-screen($smd) {
+                            @include font-size(30px);
+                        }
+                        @include max-screen($sm) {
+                            @include font-size(20px);
+                        }
                         &:hover {
                             color: $colorLightGrey6;
                         }
@@ -4562,6 +4662,7 @@ footer {
             background: $colorLightGrey1;
             margin-bottom: 0;
             padding: 20px 30px;
+            @include transition(background .3s);
             &:nth-child(n-3) {
                 border-bottom: 1px solid $colorWhite;
             }
@@ -4749,6 +4850,7 @@ footer {
     height: 100%;
     min-height: 360px;
     position: relative;
+    cursor: pointer;
     a {
         display: block;
         @include transition(all .5s);
@@ -4807,6 +4909,8 @@ footer {
             width: 4px;
             height: 100%; // background:$colorGreen;
         }
+
+
 
         img {
             position: absolute; // margin: auto;
@@ -4942,12 +5046,19 @@ footer {
                 position: absolute;
                 right: 0;
                 bottom: 0px;
-                height: 52px;
-                width: 52px;
+                height: 53px;
+                width: 53px;
                 padding: 6px 22px;
                 background: $colorBrightRed1;
+                @include transition(background-color .3s);
                 @include max-screen($xmd) {
                     display: none;
+                }
+            }
+
+            &:hover {
+                &:after {
+                    background-color: $colorSlateBlue;
                 }
             }
         }
@@ -5431,8 +5542,10 @@ footer {
     position: relative;
     padding: 30px;
     margin-bottom: 40px;
-
+    @include transition(background .3s);
+    cursor: pointer;
     .txt-content {
+    	@include transition(background .3s);
         min-height: 215px;
     }
 
@@ -5530,6 +5643,13 @@ footer {
     &.brightRed {
         background: $colorBrightRed1;
         color: $colorWhite;
+
+        &:hover {
+        	.txt-content {
+            	@include transition(background .3s);
+                background: $colorSlateBlue;
+            }
+        }
 
         h3 {
             color: $colorWhite;
@@ -6361,7 +6481,7 @@ footer {
     [class*=' col-'] {
         text-align: center;
         &:nth-child(4),
-        :last-child {
+         :last-child {
 
             span {
                 color: $colorDarkBlue;
@@ -6584,9 +6704,33 @@ footer {
                     z-index: 1;
                     @include transition(all .3s);
                     .info-wrapper {
-                        p {
+                    	display: inline-block;
+                    	margin: auto;
+                    	vertical-align: middle;
+                    	text-align: center;
+                    	width: 100%;
+                    	height: 100%;
+                    	min-height: 100%;
+                    	padding: 20% 0;
+                    	line-height: 80%;
+                    	p {
                             @include font-size(20px);
+                            margin-bottom: 10px;
                         }
+
+                        @include max-screen($xlg) {
+                    		padding: 10% 0;
+                    		line-height: 100%;
+                    		p {
+	                            @include font-size(20px);
+	                            margin-bottom: 5px;
+	                        }
+                    	}
+             
+                    	@include max-screen($sm) {
+                    		line-height: 100%;
+                    	}
+
                     }
                 }
             }
