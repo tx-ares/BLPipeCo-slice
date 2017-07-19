@@ -2985,8 +2985,8 @@ footer {
             font-size: 1.5rem; } }
         @media only screen and (max-width: 992px) {
           .send-request .row > [class*="col-"]:nth-child(1) .num {
-            font-size: 36px;
-            font-size: 2.25rem; } }
+            font-size: 20px;
+            font-size: 1.25rem; } }
         @media only screen and (max-width: 865px) {
           .send-request .row > [class*="col-"]:nth-child(1) .num {
             font-size: 30px;
