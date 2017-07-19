@@ -3705,12 +3705,13 @@ footer {
 				padding: 0;
 			}
 		}
-		h1 {
+		h1 , h2 {
 			margin-top: 35px;
-			margin-bottom: 20px;
+			margin-bottom: 0px;
 			font-weight: 500;
 			@include font-size(30px);
 		}
+		
 	}
 	
 	.aside,
@@ -4733,7 +4734,7 @@ footer {
 		color:$colorWhite;
 		background: rgba($colorDarkBlue, .5);
 		padding:40px;
-		@include max-screen($xmd){
+		@include max-screen($xmd) {
 			background: rgba($colorSlateBlue2, 1);
 		}
 		h3 {
@@ -6516,11 +6517,17 @@ footer {
 					left:0;
 					z-index:1;
 					@include transition(all .3s);
+						.info-wrapper {
+						p {
+							@include font-size(20px);
+						}
+					}
 				}
 			}
 
 			&.active {
 				.img-wrapper {
+				
 					&:after {
 						@include transition(all .3s);
 					    bottom: -2px;
