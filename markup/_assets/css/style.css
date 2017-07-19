@@ -3206,6 +3206,7 @@ footer {
     background: #edf1f1;
     margin-bottom: 0;
     padding: 20px 30px;
+    cursor: pointer;
     -moz-transition: background 0.3s;
     -o-transition: background 0.3s;
     -webkit-transition: background 0.3s;
@@ -3794,8 +3795,7 @@ footer {
   -moz-transition: background 0.3s;
   -o-transition: background 0.3s;
   -webkit-transition: background 0.3s;
-  transition: background 0.3s;
-  cursor: pointer; }
+  transition: background 0.3s; }
   .feature-box .txt-content {
     -moz-transition: background 0.3s;
     -o-transition: background 0.3s;
@@ -3816,7 +3816,8 @@ footer {
   .feature-box img {
     width: 100%; }
   .feature-box.with-img {
-    padding: 0; }
+    padding: 0;
+    cursor: pointer; }
     .feature-box.with-img:before {
       display: none; }
     .feature-box.with-img .img-content {
@@ -3896,6 +3897,7 @@ footer {
 
 .feature-slide-box {
   position: relative;
+  cursor: pointer;
   -moz-transition: all 0.3s;
   -o-transition: all 0.3s;
   -webkit-transition: all 0.3s;

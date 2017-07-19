@@ -1556,7 +1556,6 @@ $padding-sm: 20px;
                         background: $colorLightGrey7;
                         color: $colorDarkBlue;
     	                @include transition(all .3s);
-
                     }
 
                     &:hover {
@@ -4662,6 +4661,7 @@ footer {
             background: $colorLightGrey1;
             margin-bottom: 0;
             padding: 20px 30px;
+            cursor: pointer;
             @include transition(background .3s);
             &:nth-child(n-3) {
                 border-bottom: 1px solid $colorWhite;
@@ -5543,7 +5543,7 @@ footer {
     padding: 30px;
     margin-bottom: 40px;
     @include transition(background .3s);
-    cursor: pointer;
+    // cursor: pointer;
     .txt-content {
     	@include transition(background .3s);
         min-height: 215px;
@@ -5572,7 +5572,7 @@ footer {
 
     &.with-img {
         padding: 0;
-
+        cursor: pointer;
         &:before {
             display: none;
         }
@@ -5714,7 +5714,9 @@ footer {
 }
 
 .feature-slide-box {
-    position: relative; // padding:30px;
+    position: relative;
+	cursor: pointer;
+	// padding:30px;
     // margin-bottom:40px;
     // min-height: 300px;
     .panel-label {
