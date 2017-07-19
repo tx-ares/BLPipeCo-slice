@@ -235,7 +235,11 @@ hr {
 }
 
 .no-margin-bot {
-    margin-bottom: 0;
+    margin-bottom: 0 !important;
+}
+
+.no-margin-top {
+    margin-top: 0 !important;
 }
 
 
@@ -3598,6 +3602,28 @@ footer {
                 width: 100%;
             }
         }
+        span.btn.whiteline {
+        	margin-top: 20px;
+        }
+
+        .h1 {
+        	text-transform: uppercase;
+            text-align: center;
+            color: $colorWhite;
+            font-weight: 600;
+            letter-spacing: 2px;
+        }
+
+        .h2 {
+            text-align: center;
+            width: 60%;
+            margin: auto;
+            text-transform: uppercase;
+            font-weight: 400;
+            @include max-screen($sm) {
+                width: 100%;
+            }
+        }
 
         @include max-screen($sm) {
             bottom: 33%;
@@ -3786,13 +3812,23 @@ footer {
                 padding: 0;
             }
         }
-        h1,
+        h1 {
+        	margin-top: 35px;
+            font-weight: 500;
+            @include font-size(30px);
+        }
         h2 {
             margin-top: 35px;
             margin-bottom: 0px;
             font-weight: 500;
             @include font-size(30px);
         }
+        .subtitle {
+	        font-weight: initial;
+	        display: block;
+	        @include font-size(20px);
+	        margin-bottom: 20px;
+	    }
     }
 
     .aside,
@@ -3857,7 +3893,7 @@ footer {
 
     @include max-screen($xmd) {
 
-        padding-top: 40px;
+        padding-top: 20px;
     }
 
     @include max-screen($smd) {
@@ -3901,7 +3937,7 @@ footer {
         text-transform: uppercase;
         margin: 0;
     }
-    span.subtitle {
+    .subtitle {
         font-weight: initial;
         display: block;
         @include font-size(20px);
@@ -3949,7 +3985,9 @@ footer {
         @include font-size(24px);
         color: $colorWhite;
         margin-bottom: 20px;
-    } // h3 {
+    }
+
+     // h3 {
     // 	color: $colorWhite;
     // }
     p,
@@ -4008,7 +4046,7 @@ footer {
         // 	color: $colorWhite;
         // }
         h4 {
-            @include font-size(24px);
+            @include font-size(30px);
             text-transform: none;
         }
         h3 {
@@ -4571,7 +4609,7 @@ footer {
     h4.topic-title {
         text-transform: uppercase;
         color: $colorWhite;
-        @include font-size(24px);
+        @include font-size(30px);
         font-weight: 600;
     }
     ul {

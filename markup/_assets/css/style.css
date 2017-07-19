@@ -150,7 +150,10 @@ hr {
   font-size: 1.3rem; }
 
 .no-margin-bot {
-  margin-bottom: 0; }
+  margin-bottom: 0 !important; }
+
+.no-margin-top {
+  margin-top: 0 !important; }
 
 /* Font Weights */
 .f500 {
@@ -2497,6 +2500,23 @@ footer {
       @media only screen and (max-width: 575px) {
         .banner .subtext-box h2 {
           width: 100%; } }
+    .banner .subtext-box span.btn.whiteline {
+      margin-top: 20px; }
+    .banner .subtext-box .h1 {
+      text-transform: uppercase;
+      text-align: center;
+      color: #fff;
+      font-weight: 600;
+      letter-spacing: 2px; }
+    .banner .subtext-box .h2 {
+      text-align: center;
+      width: 60%;
+      margin: auto;
+      text-transform: uppercase;
+      font-weight: 400; }
+      @media only screen and (max-width: 575px) {
+        .banner .subtext-box .h2 {
+          width: 100%; } }
     @media only screen and (max-width: 575px) {
       .banner .subtext-box {
         bottom: 33%; }
@@ -2617,13 +2637,23 @@ footer {
     margin: 0; }
     .main-content .main > .main-inner > [class*="col-"] {
       padding: 0; }
-  .main-content .main h1,
+  .main-content .main h1 {
+    margin-top: 35px;
+    font-weight: 500;
+    font-size: 30px;
+    font-size: 1.875rem; }
   .main-content .main h2 {
     margin-top: 35px;
     margin-bottom: 0px;
     font-weight: 500;
     font-size: 30px;
     font-size: 1.875rem; }
+  .main-content .main .subtitle {
+    font-weight: initial;
+    display: block;
+    font-size: 20px;
+    font-size: 1.25rem;
+    margin-bottom: 20px; }
   .main-content .aside > .container-fluid,
   .main-content .secondary > .container-fluid {
     padding: 0 !important;
@@ -2664,7 +2694,7 @@ footer {
           content: ""; } }
   @media only screen and (max-width: 768px) {
     .main-content {
-      padding-top: 40px; } }
+      padding-top: 20px; } }
   @media only screen and (max-width: 865px) {
     .main-content .main > .container-fluid {
       padding-right: 20px; }
@@ -2686,7 +2716,7 @@ footer {
     letter-spacing: 2px;
     text-transform: uppercase;
     margin: 0; }
-  .articles span.subtitle {
+  .articles .subtitle {
     font-weight: initial;
     display: block;
     font-size: 20px;
@@ -2769,8 +2799,8 @@ footer {
     .latest-articles.darkblue-theme .txt-content:hover span.date {
       color: #fff !important; }
   .latest-articles.slateblue-theme h4 {
-    font-size: 24px;
-    font-size: 1.5rem;
+    font-size: 30px;
+    font-size: 1.875rem;
     text-transform: none; }
   .latest-articles.slateblue-theme h3 {
     font-size: 16px;
@@ -3139,8 +3169,8 @@ footer {
   .topic-nav h4.topic-title {
     text-transform: uppercase;
     color: #fff;
-    font-size: 24px;
-    font-size: 1.5rem;
+    font-size: 30px;
+    font-size: 1.875rem;
     font-weight: 600; }
   .topic-nav ul li {
     padding: 5px 0; }
