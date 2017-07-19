@@ -648,7 +648,7 @@ function initLogo() {
         }
         else {
 			$(".logo > img").each(function() {
-				$(this).attr("src" , "_assets/images/BLPipeco_Logo-md4.png")});
+				$(this).attr("src" , "_assets/images/BLPipeco_Logo-Vertical.png")});
         }
 }
 
