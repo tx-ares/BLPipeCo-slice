@@ -1726,6 +1726,12 @@ footer {
         padding: 0 5px !important; } }
   footer .signup {
     line-height: 120%; }
+    footer .signup .h3 {
+      font-weight: 400;
+      font-size: 20px;
+      font-size: 1.25rem;
+      text-transform: uppercase;
+      color: #fff; }
     footer .signup .content a {
       font-weight: 500;
       text-transform: uppercase;
@@ -2913,6 +2919,13 @@ footer {
   transition: all 0.3s; }
   .send-request .call-us {
     text-align: left; }
+    .send-request .call-us .h3 {
+      font-weight: 500;
+      font-size: 30px;
+      font-size: 1.875rem;
+      text-transform: uppercase;
+      color: #00263b;
+      letter-spacing: 2px; }
   .send-request .sub-text {
     color: #fff; }
     @media only screen and (max-width: 1024px) {
@@ -2929,12 +2942,29 @@ footer {
       padding: 0 35px; }
       .send-request .row > [class*="col-"]:nth-child(1) .num {
         padding-top: 15px;
-        font-size: 40px;
-        font-size: 2.5rem; }
-        @media only screen and (max-width: 1024px) {
+        min-width: 150px;
+        font-size: 36px;
+        font-size: 2.25rem; }
+        @media only screen and (max-width: 1440px) {
           .send-request .row > [class*="col-"]:nth-child(1) .num {
             font-size: 30px;
             font-size: 1.875rem; } }
+        @media only screen and (max-width: 1280px) {
+          .send-request .row > [class*="col-"]:nth-child(1) .num {
+            font-size: 24px;
+            font-size: 1.5rem; } }
+        @media only screen and (max-width: 992px) {
+          .send-request .row > [class*="col-"]:nth-child(1) .num {
+            font-size: 36px;
+            font-size: 2.25rem; } }
+        @media only screen and (max-width: 865px) {
+          .send-request .row > [class*="col-"]:nth-child(1) .num {
+            font-size: 30px;
+            font-size: 1.875rem; } }
+        @media only screen and (max-width: 575px) {
+          .send-request .row > [class*="col-"]:nth-child(1) .num {
+            font-size: 20px;
+            font-size: 1.25rem; } }
     .send-request .row > [class*="col-"]:nth-child(2) {
       border-left: solid 2px #dbd8cf;
       border-right: solid 2px #fff; }
@@ -3027,7 +3057,25 @@ footer {
         -moz-transition: all 0.3s;
         -o-transition: all 0.3s;
         -webkit-transition: all 0.3s;
-        transition: all 0.3s; }
+        transition: all 0.3s;
+        font-size: 30px;
+        font-size: 1.875rem; }
+        @media only screen and (max-width: 1440px) {
+          .send-request .more-phone .more-phone-wrap ul li a.num {
+            font-size: 20px;
+            font-size: 1.25rem; } }
+        @media only screen and (max-width: 992px) {
+          .send-request .more-phone .more-phone-wrap ul li a.num {
+            font-size: 30px;
+            font-size: 1.875rem; } }
+        @media only screen and (max-width: 865px) {
+          .send-request .more-phone .more-phone-wrap ul li a.num {
+            font-size: 30px;
+            font-size: 1.875rem; } }
+        @media only screen and (max-width: 575px) {
+          .send-request .more-phone .more-phone-wrap ul li a.num {
+            font-size: 20px;
+            font-size: 1.25rem; } }
         .send-request .more-phone .more-phone-wrap ul li a.num:hover {
           color: #c2c2c2; }
     .send-request .more-phone span {
