@@ -302,13 +302,17 @@ function initStickyHeader() {
         if ($(this).scrollTop() > 32 || window.matchMedia('only screen and (max-width: 1024px)').matches) {
             $('body').addClass("header-compressed");
             $(".logo > img").each(function(){
-            	$(this).attr("src" , "_assets/images/BLPipeco_Logo-Horizontal.png")
+            	$(this).attr("src" , "<?php echo get_template_directory_uri(); ?>/_assets/images/BLPipeco_Logo-Horizontal.png")
+            	$(this).removeClass("vertical-logo");
+
             });
         }
         else {
 			$('body').removeClass("header-compressed");
 			$(".logo > img").each(function() {
-				$(this).attr("src" , "_assets/images/BLPipeco_Logo-md4.png")
+				$(this).attr("src" , "<?php echo get_template_directory_uri(); ?>/_assets/images/BLPipeco_Logo-Vertical.png");
+				$(this).addClass("vertical-logo");
+
 			});
         }
     });
@@ -366,11 +370,15 @@ function doneResizing() {
 	if(window.matchMedia('only screen and (max-width: 1024px)').matches && $(document).scrollTop() < 1) {
 		$('body').addClass("header-compressed");
 		$(".logo > img").each(function() {
-				$(this).attr("src" , "_assets/images/BLPipeco_Logo-Horizontal.png")});
+				$(this).attr("src" , "<?php echo get_template_directory_uri(); ?>/_assets/images/BLPipeco_Logo-Horizontal.png")
+				$(this).removeClass("vertical-logo");
+			});
 	} else {
 		$('body').removeClass("header-compressed");
 		$(".logo > img").each(function() {
-				$(this).attr("src" , "_assets/images/BLPipeco_Logo-md4.png")});
+				$(this).attr("src" , "<?php echo get_template_directory_uri(); ?>/_assets/images/BLPipeco_Logo-Vertical.png");
+				$(this).addClass("vertical-logo");
+			});
 	}
 	
 	/* Check if body has scrollbar */
@@ -447,7 +455,7 @@ function resetPanels() {
 		$(this).removeClass("loaded");
 		$(this).hide();
 	})
-	$("h3.text-flip").removeClass("vertical-text");
+	$("h2.text-flip").removeClass("vertical-text");
 
 	$(".fa-spin").css("opacity" , 0);
 
@@ -467,7 +475,7 @@ function initSlidePanels() {
 		if (!window.matchMedia('only screen and (max-width: 865px)').matches) {
 			$(this).hasClass("compressed") ? $(this).toggleClass("compressed") : "";
 			$(this).hasClass("vertical-text") ? $(this).toggleClass("vertical-text") : "";
-			$("h3.text-flip").addClass("vertical-text");
+			$("h2.text-flip").addClass("vertical-text");
 			setTimeout(function(){$(this).find(".txt-content").hide()}, 1000);
 			$(".slide-over-right").addClass("compressed");
 			// $(this).find($(".txt-content")).each(function(){ $(this).removeClass("animated fadeOut")});
@@ -494,7 +502,7 @@ function initSlidePanels() {
 		if (!window.matchMedia('only screen and (max-width: 865px)').matches) {
 			$(this).hasClass("compressed") ? $(this).toggleClass("compressed") : "";
 			$(this).hasClass("vertical-text") ? $(this).toggleClass("vertical-text") : "";
-			$("h3.text-flip").addClass("vertical-text");
+			$("h2.text-flip").addClass("vertical-text");
 			setTimeout(function(){$(this).find(".txt-content").hide()}, 1000);
 			$(".slide-over-left").addClass("compressed");
 			// $(this).find($(".txt-content")).each(function(){ $(this).removeClass("animated fadeOut")});
@@ -538,8 +546,8 @@ function initPanelSlider(){
 		$(this).slick({
 		  dots: false,
 		  arrows: true,
-		  prevArrow:"<img class='a-left control-c prev slick-prev' src='_assets/images/ui/chevron-white-left.png'>",
-	      nextArrow:"<img class='a-right control-c next slick-next' src='_assets/images/ui/chevron-white-right.png'>",
+		  prevArrow:"<img class='a-left control-c prev slick-prev' src='<?php echo get_template_directory_uri(); ?>/_assets/images/ui/chevron-white-left.png'>",
+	      nextArrow:"<img class='a-right control-c next slick-next' src='<?php echo get_template_directory_uri(); ?>/_assets/images/ui/chevron-white-right.png'>",
 	      infinite: true,
 		  speed: 300,
 		  waitForAnimate: false,
@@ -560,17 +568,17 @@ function initPanelSlider(){
 		      }
 		    },
 		    {
-		      breakpoint: 1024,
+		      breakpoint: 1440,
 		      settings: {
-		        slidesToShow: 4,
+		        slidesToShow: 5,
 		        slidesToScroll: 1,
 	      		infinite: true
 		      }
 		    },
 		    {
-		      breakpoint: 865,
+		      breakpoint: 1024,
 		      settings: {
-		        slidesToShow: 1,
+		        slidesToShow: 3,
 		        slidesToScroll: 1,
 		        centerMode: true,
 	        	centerPadding: '20px',
@@ -644,11 +652,15 @@ function initLogo() {
 	 if (window.matchMedia('only screen and (max-width: 1024px)').matches) {
             $('body').addClass("header-compressed");
             $(".logo > img").each(function(){
-            	$(this).attr("src" , "_assets/images/BLPipeco_Logo-Horizontal.png")});
+            	$(this).attr("src" , "<?php echo get_template_directory_uri(); ?>/_assets/images/BLPipeco_Logo-Horizontal.png")
+            	$(this).removeClass("vertical-logo");
+            });
         }
         else {
 			$(".logo > img").each(function() {
-				$(this).attr("src" , "_assets/images/BLPipeco_Logo-md4.png")});
+				$(this).attr("src" , "<?php echo get_template_directory_uri(); ?>/_assets/images/BLPipeco_Logo-Vertical.png");
+				$(this).addClass("vertical-logo");
+			});
         }
 }
 
@@ -705,9 +717,9 @@ function initBioBoxes() {
 function resetBios(){
 	console.log("<< Resetting bioBox v6 - Comparing JS .animate() >>")
 		var $bioBox = $(".photo-item").find(".bioBox");
-		var $bioBoxParent = $bioBox.parent();
-		var $parentAndSiblings = $bioBoxParent.siblings().andSelf();
-		var $initialParentContainerHeight = $bioBoxParent.height() - 360;
+			$bioBoxParent = $bioBox.parent();
+			$parentAndSiblings = $bioBoxParent.siblings().andSelf();
+			$initialParentContainerHeight = $bioBoxParent.height() - 360;
 
 		$parentAndSiblings.removeClass("active no-hover");
 
@@ -727,7 +739,7 @@ function resetBios(){
 		setTimeout(function() {
 			$bioBox.remove();
 			$bioBoxParent.css({
-				height: ""
+				height: "unset"
 			})
 		}, 800);
 

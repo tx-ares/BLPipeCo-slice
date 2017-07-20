@@ -6,7 +6,7 @@
     <!-- set the viewport width and initial-scale on mobile devices -->
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>B&L Pipe Company</title>
+    <title>B&amp;L Pipe Company</title>
     <style>
     html,
     body {
@@ -69,7 +69,7 @@
     <a class="accessibility" href="#main-content" accesskey="S">Skip to Content</a>
     <div id="wrapper">
         <!-- ******************************************************* -->
-        <!-- Header
+        <!-- Header -->
         <!-- ******************************************************* -->
         <header>
             <div class="container-fluid">
@@ -78,7 +78,7 @@
                         <div class="tframe fh fw">
                             <div class="tcell valign-mid text-right">
                                 <a href="#" class="logo">
-                                    <img src="<?php echo get_template_directory_uri(); ?>/_assets/images/BLPipeco_Logo-md4.png" alt="BLPipeCo" width="140px" height="74px" />
+                                    <img src="<?php echo get_template_directory_uri(); ?>/_assets/images/BLPipeco_Logo-Horizontal.png" alt="BLPipeCo" />
                                     <!--  <span class="slogan">Managing Risk<br>
                                 Assuring Compliance<br>
                                 Optimizing Performance</span> --></a>
@@ -101,14 +101,14 @@
                     </form>
                     <div class="menu-container">
                         <p class="copy text-center">
-                            © 2017 B&L Pipeco. All rights reserved. | <a href="#">Privacy Policy</a>
+                            © 2017 B&amp;L Pipeco. All rights reserved. | <a href="#">Privacy Policy</a>
                         </p>
                     </div>
                 </div>
             </div>
         </header>
         <!-- ******************************************************* -->
-        <!-- Banner
+        <!-- Banner -->
         <!-- ******************************************************* -->
         <section class="banner">
             <div class="row" eq-height>
@@ -127,8 +127,8 @@
     </div>
     </section>
     <!-- ******************************************************* -->
-    <!-- Social Media Icons
-        <!-- ******************************************************* -->
+    <!-- Social Media Icons -->
+    <!-- ******************************************************* -->
     <div class="social-media-icons">
         <ul>
             <li>
