@@ -1,4 +1,4 @@
-// console.log("Mic check!, KOALA WORKS for JS")
+console.log("Mic check!, KOALA WORKS for JS - WP-Site")
 
 function showPage() {
 	"use strict";
