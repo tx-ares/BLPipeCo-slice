@@ -10,7 +10,7 @@ get_header(); ?>
 
 <section class="banner">
     <div class="row" eq-height>
-        <div class="col-md-12 col-sm-12 col-xs-12 title-content" data-img="<?php echo the_post_thumbnail_url('full'); ?>" eq-col>
+        <div class="col-md-12 col-sm-12 col-xs-12 title-content" eq-col>
             <div class="tframe fh fw ">
                 <div class="tcell valign-mid ">
                     <div class="container-fluid no-padding ">

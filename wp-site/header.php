@@ -111,25 +111,6 @@
                 </div>
             </div>
         </header>
-        <!-- ******************************************************* -->
-        <!-- Banner -->
-        <!-- ******************************************************* -->
-        <section class="banner">
-            <div class="row" eq-height>
-                <div class="col-md-12 col-sm-12 col-xs-12 title-content" data-img="http://placehold.it/1960x466/d55441/ffffff eq-col>
-                    <div class=" tframe fh fw ">
-                        <div class="tcell valign-mid ">
-                            <div class="container-fluid no-padding ">
-                            <img alt="BL Pipeco "
-                        data-src="<575:http://placehold.it/768x370/d55441/ffffff, <768:http://placehold.it/1260x370/d55441/ffffff,>768:http://placehold.it/1960x370/d55441/ffffff" />
-                    <!--   <span class="sub-cat-title">One of the largest</span>
-                                <h1>Oil Country Tubular Goods</h1> -->
-                </div>
-            </div>
-    </div>
-    </div>
-    </div>
-    </section>
     <!-- ******************************************************* -->
     <!-- Social Media Icons -->
     <!-- ******************************************************* -->
