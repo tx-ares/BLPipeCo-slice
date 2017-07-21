@@ -4868,7 +4868,7 @@ footer {
                 @include transition(all .3s);
 
                 .txt-content {
-                    background: $colorBlack;
+                    // background: $colorBlack;
                     @include transition(all .5s);
                 }
             }

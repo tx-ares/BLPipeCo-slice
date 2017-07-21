@@ -3360,7 +3360,6 @@ footer {
     -webkit-transition: all 0.3s;
     transition: all 0.3s; }
     .image-cta:not(.no-img) a:hover .txt-content {
-      background: #000;
       -moz-transition: all 0.5s;
       -o-transition: all 0.5s;
       -webkit-transition: all 0.5s;
@@ -3476,7 +3475,7 @@ footer {
     @media only screen and (max-width: 768px) {
       .image-cta .txt-subcontent {
         text-align: center; } }
-    .image-cta .txt-subcontent a {
+    .image-cta .txt-subcontent a[href="#"] {
       color: #fff;
       line-height: 3;
       font-size: .9rem;
@@ -3484,22 +3483,22 @@ footer {
       margin-right: 70px;
       display: block; }
       @media only screen and (max-width: 768px) {
-        .image-cta .txt-subcontent a {
+        .image-cta .txt-subcontent a[href="#"] {
           width: 85% !important; } }
-      .image-cta .txt-subcontent a span {
+      .image-cta .txt-subcontent a[href="#"] span {
         color: #fff !important;
         text-transform: uppercase; }
       @media only screen and (max-width: 1280px) {
-        .image-cta .txt-subcontent a {
+        .image-cta .txt-subcontent a[href="#"] {
           margin-right: 60px; } }
       @media only screen and (max-width: 768px) {
-        .image-cta .txt-subcontent a {
+        .image-cta .txt-subcontent a[href="#"] {
           padding: 8px 15px;
           margin-right: 0;
           border: 1px solid #fff;
           width: 85%;
           margin: 0 auto; } }
-      .image-cta .txt-subcontent a:after {
+      .image-cta .txt-subcontent a[href="#"]:after {
         content: '\f0da';
         font-family: FontAwesome;
         position: absolute;
@@ -3514,9 +3513,9 @@ footer {
         -webkit-transition: background-color 0.3s;
         transition: background-color 0.3s; }
         @media only screen and (max-width: 768px) {
-          .image-cta .txt-subcontent a:after {
+          .image-cta .txt-subcontent a[href="#"]:after {
             display: none; } }
-      .image-cta .txt-subcontent a:hover:after {
+      .image-cta .txt-subcontent a[href="#"]:hover:after {
         background-color: #8a9ca5; }
   @media only screen and (max-width: 1280px) {
     .image-cta .img-content .caption {

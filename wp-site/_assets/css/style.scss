@@ -4868,7 +4868,7 @@ footer {
                 @include transition(all .3s);
 
                 .txt-content {
-                    background: $colorBlack;
+                    // background: $colorBlack;
                     @include transition(all .5s);
                 }
             }
@@ -5019,7 +5019,7 @@ footer {
         @include max-screen($xmd) {
             text-align: center;
         }
-        a {
+        a[href="#"] {
             color: $colorWhite;
             line-height: 3;
             font-size: .9rem;

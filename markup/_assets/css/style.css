@@ -3360,7 +3360,6 @@ footer {
     -webkit-transition: all 0.3s;
     transition: all 0.3s; }
     .image-cta:not(.no-img) a:hover .txt-content {
-      background: #000;
       -moz-transition: all 0.5s;
       -o-transition: all 0.5s;
       -webkit-transition: all 0.5s;

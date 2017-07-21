@@ -932,8 +932,8 @@ function blpc_content_feature_right($post_id) {
 									<img alt="'.$feature_image['alt'].'"
 									src="'.$feature_image['url'].'" />
 								
-									<div class="txt-content" eq-col>
-										<h4>' . $feature->post_title  . '</h3>
+									<div class="txt-content">
+										<h4>' . $feature->post_title  . '</h4>
 										<p>'. $feature->post_content  . '</p>
 									</div>
 								</div>
