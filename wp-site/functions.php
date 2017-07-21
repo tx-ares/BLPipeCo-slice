@@ -931,16 +931,18 @@ function blpc_content_feature_right($post_id) {
 								<div class="img-content">
 									<img alt="'.$feature_image['alt'].'"
 									src="'.$feature_image['url'].'" />
-										<span class = "caption">' . get_field('feature_button_text', $feature->ID)  . '
-											<i class = "fa fa-angle-right" aria-hidden="true">
-											</i>
-										</span>
+								
+									<div class="txt-content" eq-col>
+										<h4>' . $feature->post_title  . '</h3>
+										<p>'. $feature->post_content  . '</p>
+									</div>
 								</div>
-								<div class="txt-content" eq-col>
-									<h3>' . $feature->post_title  . '</h3>
-									<p>'. $feature->post_content  . '</p>
-								</div>
-							</a>
+								<div class="txt-subcontent">
+		                            <a href="#">
+		                                <span class="text-upcase">' . get_field('feature_button_text', $feature->ID) . '</span>
+		                            </a>
+		                        </div>
+		                    </a>
 						</div>';
 		} else {
 			$string .= '<div class="image-cta no-img '.get_field('feature_background_color', $feature->ID).'">
