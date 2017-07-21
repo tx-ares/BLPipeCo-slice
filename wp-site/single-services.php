@@ -10,14 +10,14 @@ get_header(); ?>
 
 <section class="banner">
     <div class="row" eq-height>
-        <div class="col-md-12 col-sm-12 col-xs-12 title-content" eq-col>
+        <div class="col-md-12 col-sm-12 col-xs-12 bg-content title-content" eq-col>
             <div class="tframe fh fw ">
                 <div class="tcell valign-mid ">
                     <div class="container-fluid no-padding ">
                         <img alt="BL Pipeco " data-src="<575:<?php echo the_post_thumbnail_url('full'); ?>, <768:<?php echo the_post_thumbnail_url('full'); ?>,>768:<?php echo the_post_thumbnail_url('full'); ?>" />
                         <div class="subtext-box">
                             <h1><?php the_title(); ?> </h1>
-                            <h2>One of the largest OCTG suppliers in the United States, we provide access to inverntory in every active U.S. drilling region.</h2>
+                             <h2><?php echo get_field('services_menu_description'); ?></h2>
                         </div>
                     </div>
                 </div>
