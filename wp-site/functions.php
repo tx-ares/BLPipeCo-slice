@@ -797,7 +797,7 @@ function g2is_menu_child_list_pages($post_id) {
 }
 
 /* Services_submenu_list_pages */  
-function g2is_submenu_list_pages($post_type) { 
+function blpc_submenu_list_pages($post_type) { 
 
   global $post;
 	$args = array( 
@@ -824,7 +824,7 @@ function g2is_submenu_list_pages($post_type) {
 }
 
 /* custom_menu_list_pages */
-function g2is_custom_menu_list_pages($post_type) { 
+function blpc_custom_menu_list_pages($post_type) { 
 	global $post;
 	$args = array( 
 					'posts_per_page' => -1,
@@ -918,7 +918,7 @@ function g2is_content_feature($post_id) {
 	echo $string;						
 }
 
-function g2is_content_feature_right($post_id) {
+function blpc_content_feature_right($post_id) {
 	
 	$feature = get_post($post_id);
 	$string = '';

@@ -154,46 +154,45 @@ get_header(); ?>
       <div class="container-fluid">
 
         <div class="send-request" toggle-active-parent>
-                        <!-- <a href="#" class="btn orange fw">Send Us a Request</a> -->
-                        <div class="row">
-                            <div class="col-sm-7 col-xs-7 fh">
-                                <a href="#" class="tframe fh fw">
-                                    <div class="tcell valign-mid call-us">
-                                        <p class="h3">Get in Touch</p>
-                                        <p class="sub-text">Please, use our customer line to contact us</span>
-                                            <span class="num">+1 555 123 4567</span>
-                                    </div>
-                                </a>
-                            </div>
-                            <div class="col-sm-5 col-xs-5 fh">
-                                <div class="tframe fw fh popdown-phonenum">
-                                    <div class="tcell valign-mid phone-opener" toggle-active-opener><i class="fa fa-mobile" aria-hidden="true"></i> <span class="more">More</span><span class="less">Less</span> <i class="fa fa-angle-down" aria-hidden="true"></i></div>
-                                </div>
-                            </div>
+            <div class="row">
+                <div class="col-sm-7 col-xs-7 fh">
+                    <a href="#" class="tframe fh fw">
+                        <div class="tcell valign-mid call-us">
+                            <p class="h3">Get in Touch</p>
+                            <p class="sub-text">Please, use our customer line to contact us</span>
+                                <span class="num">+1 555 123 4567</span>
                         </div>
-                        <div class="more-phone">
-                            <div class="more-phone-wrap">
-                                <ul>
-                                    <li>
-                                        <span>Concord, CA</span>
-                                        <a href="#" class="num">+1 925 478 8058</a>
-                                    </li>
-                                    <li>
-                                        <span>Angleton, TX</span>
-                                        <a href="#" class="num">+1 713 260 4050</a>
-                                    </li>
-                                    <li>
-                                        <span>Denver, CO</span>
-                                        <a href="#" class="num">+1 720 789 7570</a>
-                                    </li>
-                                    <li>
-                                        <span>Denver, CO</span>
-                                        <a href="#" class="num">+1 720 789 7570</a>
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
+                    </a>
+                </div>
+                <div class="col-sm-5 col-xs-5 fh">
+                    <div class="tframe fw fh popdown-phonenum">
+                        <div class="tcell valign-mid phone-opener" toggle-active-opener><i class="fa fa-mobile" aria-hidden="true"></i> <span class="more">More</span><span class="less">Less</span> <i class="fa fa-angle-down" aria-hidden="true"></i></div>
                     </div>
+                </div>
+            </div>
+            <div class="more-phone">
+                <div class="more-phone-wrap">
+                    <ul>
+                        <li>
+                            <span>Concord, CA</span>
+                            <a href="#" class="num">+1 925 478 8058</a>
+                        </li>
+                        <li>
+                            <span>Angleton, TX</span>
+                            <a href="#" class="num">+1 713 260 4050</a>
+                        </li>
+                        <li>
+                            <span>Denver, CO</span>
+                            <a href="#" class="num">+1 720 789 7570</a>
+                        </li>
+                        <li>
+                            <span>Denver, CO</span>
+                            <a href="#" class="num">+1 720 789 7570</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
 
 
         <!-- Sidebar General -->
@@ -208,9 +207,9 @@ get_header(); ?>
                       $services_id_array = array(1964,1617,1620,1623,1625,1627);
                       
                      if ( in_array($id, $services_id_array) ) :
-                          echo g2is_submenu_list_pages('services');
+                          echo blpc_submenu_list_pages('services');
                      else :        
-                          echo g2is_custom_menu_list_pages('services'); 
+                          echo blpc_custom_menu_list_pages('services'); 
                   endif; ?>
         </div>
 
@@ -220,17 +219,17 @@ get_header(); ?>
         <?php endif; ?>
 
         <!-- Side Navigation -->
-		<?php 
-			$feature_id1 = get_field('page_feature_right1'); 
-			$feature_id2 = get_field('page_feature_right2');
-			
-			if($feature_id1) {
-				echo g2is_content_feature_right($feature_id1); 
-			}
-			if($feature_id2) {
-				echo g2is_content_feature_right($feature_id2); 
-			}
-		?>
+    		<?php 
+    			$feature_id1 = get_field('page_feature_right1'); 
+    			$feature_id2 = get_field('page_feature_right2');
+    			
+    			if($feature_id1) {
+    				echo blpc_content_feature_right($feature_id1); 
+    			}
+    			if($feature_id2) {
+    				echo blpc_content_feature_right($feature_id2); 
+    			}
+    		?>
 
       </div>
     </div>
