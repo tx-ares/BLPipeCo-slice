@@ -1354,7 +1354,7 @@ header {
       margin-right: 10px;
       /* Style from 2nd <ul> only */ }
       header ul.top-nav > li:first-child {
-        width: 170px; }
+        width: 60px; }
       header ul.top-nav > li:nth-child(2) {
         width: 140px; }
       header ul.top-nav > li:nth-child(3), header ul.top-nav > li:nth-child(4) {
