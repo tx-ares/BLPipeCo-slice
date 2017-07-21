@@ -5,24 +5,6 @@
 get_header(); ?>
 
 <!-- ******************************************************* -->
-<!-- Breadcrumbs -->
-<!-- ******************************************************* -->
-<section class="breadcrumbs">
-  <div class="container-fluid">
-    <div class="row">
-      <div class="col-xs-12">
-        <ul>
-          <?php 
-												if(function_exists('bcn_display')) {
-														bcn_display();
-												}?>
-        </ul>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ******************************************************* -->
 <!-- Banner -->
 <!-- ******************************************************* -->
 <section class="banner">
