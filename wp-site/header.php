@@ -31,6 +31,12 @@
         document.querySelector('head').appendChild(msViewportStyle)
     }
     </script>
+
+    <!-- Localize template url -->
+    <script type="text/javascript">  
+        var templateUrl = '<?= get_bloginfo("template_url"); ?>';
+    </script>
+
     <!-- Pagespeed compliant - Avoid render blocking load of CSS -->
     <script type="text/javascript">
     function loadStyleSheet(a, b, c) {
