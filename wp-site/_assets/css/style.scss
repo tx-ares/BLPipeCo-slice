@@ -2271,20 +2271,8 @@ header {
     ul.top-nav {
         >li {
             >a {
-                padding-top: 52px;
-                padding-bottom: 73px;
-                /*Was 47px*/
+                padding: 54px 40px 72px;
                 @include transition(all .3s);
-
-                @include max-screen($xlg) {
-                    padding-top: 54px;
-                    padding-bottom: 53px;
-                }
-
-                @include max-screen(1100px) {
-                    padding-top: 54px;
-                    padding-bottom: 54px;
-                }
             }
         }
     }
@@ -3423,7 +3411,7 @@ footer {
         ul.top-nav {
             >li {
                 >a {
-                    padding: 14px 20px 41px;
+                    padding: 20px 20px 35px;
                     @include transition(all .3s);
                 }
             }
@@ -3433,7 +3421,7 @@ footer {
             ul.top-nav {
                 >li {
                     >a {
-                        padding: 18px 20px;
+                        padding: 20px 20px 35px;
                     }
                 }
             }
