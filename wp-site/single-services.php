@@ -7,6 +7,28 @@ get_header(); ?>
 <!-- ******************************************************* -->
 <!-- Banner -->
 <!-- ******************************************************* -->
+
+<section class="banner">
+    <div class="row" eq-height>
+        <div class="col-md-12 col-sm-12 col-xs-12 title-content" data-img="<?php echo the_post_thumbnail_url('full'); ?>" eq-col>
+            <div class="tframe fh fw ">
+                <div class="tcell valign-mid ">
+                    <div class="container-fluid no-padding ">
+                        <img alt="BL Pipeco " data-src="<575:<?php echo the_post_thumbnail_url('full'); ?>, <768:<?php echo the_post_thumbnail_url('full'); ?>,>768:<?php echo the_post_thumbnail_url('full'); ?>" />
+                        <div class="subtext-box">
+                            <h1><?php the_title(); ?> </h1>
+                            <h2>One of the largest OCTG suppliers in the United States, we provide access to inverntory in every active U.S. drilling region.</h2>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<!--
 <section class="banner">
   <div class="row" eq-height>
     <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
@@ -42,38 +64,13 @@ get_header(); ?>
           </div>
         </div>
       </div>
-      <div class="overlay-band">
-        <div class="tframe fh fw">
-          <div class="tcell valign-mid">
-            <div class="container-fluid">
-
-              <div class="addthis_toolbox pull-right social">
-                Share
-                <a href="#" class="addthis_button_facebook" title="Facebook">
-                  <i class="fa fa-facebook" aria-hidden="true"></i>
-                </a>
-                <a href="#" class="addthis_button_twitter" title="Twitter">
-                  <i class="fa fa-twitter" aria-hidden="true"></i>
-                </a>
-                <a href="#" class="addthis_button_email" title="Contact Us">
-                  <i class="fa fa-envelope" aria-hidden="true"></i>
-                </a>
-                <a href="#" class="addthis_button_linkedin" title="LinkedIn">
-                  <i class="fa fa-linkedin" aria-hidden="true"></i>
-                </a>
-                <a href="#" class="addthis_button_more" title="Share">
-                  <i class="fa fa-share-alt" aria-hidden="true"></i>
-                </a>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
+      
     </div>
     <?php endwhile; endif; ?>
   </div>
-</section>
+</section> 
 
+-->
 
 <!-- ******************************************************* -->
 <!-- Main Content -->
