@@ -7,9 +7,21 @@ get_header(); ?>
 <!-- ******************************************************* -->
 <!-- Banner -->
 <!-- ******************************************************* -->
-<section class="banner compressed">
-    <div class="container-fluid">
-        <h1>Insights</h1>
+<section class="banner">
+    <div class="row" eq-height>
+        <div class="col-md-12 col-sm-12 col-xs-12 bg-content title-content" eq-col>
+            <div class="tframe fh fw ">
+                <div class="tcell valign-mid ">
+                    <div class="container-fluid no-padding ">
+                        <img alt="BL Pipeco " data-src="<575:<?php echo the_post_thumbnail_url('full'); ?>, <768:<?php echo the_post_thumbnail_url('full'); ?>,>768:<?php echo the_post_thumbnail_url('full'); ?>" />
+                        <div class="subtext-box">
+                            <h1><?php the_title(); ?> </h1>
+                             <h2><?php echo get_field('insights_menu_description'); ?></h2>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
 </section>
 

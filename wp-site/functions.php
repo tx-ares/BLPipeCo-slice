@@ -413,7 +413,7 @@ function g2is_home_services_list() {
 }
 
 /* insights news */
-function g2is_insights_news_list() {
+function blpc_insights_news_list() {
 	$args = array( 'numberposts' => '4',
 									'category_name' => 'latest-news');
 
@@ -451,7 +451,7 @@ function g2is_insights_news_list() {
 }
 
 /* insights webinar */
-function g2is_insights_webinar_list() {
+function blpc_insights_webinar_list() {
 	
 	$args = array( 
 					'posts_per_page'   => 4,
@@ -557,7 +557,7 @@ function g2is_home_webinar_latest() {
 }
 
 /* hubspot blog */
-function g2is_insights_blog_list() {
+function blpc_insights_blog_list() {
 	$rss = fetch_feed('http://blog.g2-is.com/blog/rss.xml');
 	$maxitems = $rss->get_item_quantity(4);
 	$rss_items = $rss->get_items(0, $maxitems);
