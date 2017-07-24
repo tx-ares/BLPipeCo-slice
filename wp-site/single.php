@@ -38,10 +38,12 @@
 	                <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
 			        <?php the_content(); ?>
 			        <?php endwhile; endif; ?>
-	                <div class="next-prev">
-	                    <a class="previous" href="#">Previous</a>
-	                    <a class="next" href="#">Next</a>
-	                </div>
+
+			        <?php 
+			        	debug_to_console( get_post_type() );
+			        ?>
+			        <!-- Pager -->
+	                <?php echo blpc_post_type_pager('post'); ?>
 	            </div>
 	        </div>
 	    </div>

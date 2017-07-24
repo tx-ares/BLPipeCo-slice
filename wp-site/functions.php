@@ -792,8 +792,8 @@ function blpc_news_detail_latest_news_list() {
 	$recent_posts = wp_get_recent_posts($args);
 	
 	$classes = ''; 
-	debug_to_console( get_page_template('page') );
-	debug_to_console( get_page_template_slug() );
+	// debug_to_console( get_page_template('page') );
+	// debug_to_console( get_page_template_slug() );
 
 
 	// if( get_page_template_slug() === 'news' ) { 
