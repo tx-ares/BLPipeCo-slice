@@ -49,19 +49,12 @@ get_header(); ?>
 					        <?php									
 								$paged = (get_query_var('paged')) ? get_query_var('paged') : 1;
 
-								$y = htmlspecialchars($_GET["y"]);
-								if($y) {
-									$args = array( 'posts_per_page' => 10, 
-															'category_name' => 'latest-news',
-															'paged' => $paged,
-															'post_type' => 'post',
-															'date_query' => array('year'  => $y ));
-								} else {
-									$args = array( 'posts_per_page' => 10, 
-															'category_name' => 'latest-news',
-															'paged' => $paged,
-															'post_type' => 'post');
-								}
+								
+								$args = array( 'posts_per_page' => 10, 
+														'category_name' => 'latest-news',
+														'paged' => $paged,
+														'post_type' => 'post');
+								
 								
 								$postslist = new WP_Query( $args );
 
@@ -117,16 +110,6 @@ get_header(); ?>
 								endif; 
 								
 							?>
-
-
-                            <!-- <div class="txt-content">
-                                <a href="#">
-                                    <h3>
-                                        Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros                                                    
-                                    </h3>
-                                    <span class="date">12th July 2017</span>
-                                </a>
-                            </div> -->
                             
                         </div>
                         <br>
@@ -149,9 +132,6 @@ get_header(); ?>
                     </div>
                 </div>
             </div>
-
-<!--             <?php echo blpc_post_type_pager('news'); ?>
- -->
 
         </div>
 
