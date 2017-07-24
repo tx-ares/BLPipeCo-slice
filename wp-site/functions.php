@@ -792,22 +792,28 @@ function blpc_news_detail_latest_news_list() {
 	$recent_posts = wp_get_recent_posts($args);
 	
 	$classes = ''; 
-	debug_to_console( get_page_template() );
+	debug_to_console( get_page_template('page') );
+	debug_to_console( get_page_template_slug() );
 
-	if( get_page_template_slug() === 'news' ) { 
-		$classes = 'slateblue-theme'; 
-	}
 
-	else {
-		$classes = "test-else";
-	}
+	// if( get_page_template_slug() === 'news' ) { 
+	// 	$classes = 'slateblue-theme'; 
+	// }
 
-	$string = '<div class="latest-articles '. $classes .' fh">
+	// else {
+	// 	$classes = "test-else";
+	// }
+
+	$string = '<div class="latest-articles slateblue-theme fh">
                     <h4 class="text-upcase">Latest News</h4>';	
 	foreach( $recent_posts as $index => $recent ) {
 		$string .= '<div class="txt-content">
-						<h3 class="title"><a href="'. get_permalink($recent["ID"]) .'">'. $recent["post_title"] .'</a>
-						<span class="date">'. date('F j, Y', strtotime($recent['post_date'])) .'</span></h3>
+						<a href="'. get_permalink($recent["ID"]) .'">
+							<h3 class="title">'. $recent["post_title"] 
+								.'<span class="date">'. date('F j, Y', strtotime($recent['post_date'])) 
+								.'</span>
+							</h3>
+						</a>
 					</div>';
 	}
 	$string .= '	</div>

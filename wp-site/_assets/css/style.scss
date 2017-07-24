@@ -2274,7 +2274,7 @@ header {
     ul.top-nav {
         >li {
             >a {
-                padding: 54px 40px 72px;
+                padding: 54px 40px 72px 10px;
                 @include transition(all .3s);
             }
         }
@@ -3414,7 +3414,7 @@ footer {
         ul.top-nav {
             >li {
                 >a {
-                    padding: 20px 20px 35px;
+                    padding: 20px 20px 35px 10px;
                     @include transition(all .3s);
                 }
             }
