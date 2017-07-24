@@ -148,6 +148,19 @@ get_header(); ?>
                     </ul>
                 </div>
             </div>
+
+            <div class="latest-articles slateblue-theme fh">
+                <h4 class="text-upcase">Latest Articles</h4>
+                <?php echo blpc_insights_news_list() ?>
+            </div>
+            <div class="topic-nav">
+                <h4 class="topic-title">By Topic</h4>
+                <ul>
+                    <li><a href="#">Systems Architecture Design and Deployment (3)</a></li>
+                    <li><a href="#">Database Structure and Modeling (2) </a></li>
+                    <li><a href="#">Business Process Management (4) </a></li>
+                </ul>
+            </div>
         </div>
 
 
@@ -156,27 +169,10 @@ get_header(); ?>
         <?php dynamic_sidebar( 'sidebar_general' ); ?>
         <?php endif; ?>
 
-        <!-- Side Navigation -->
-        <div class="side-nav">
-           <?php
-              $id = get_the_ID();
-              $services_id_array = array(1964,1617,1620,1623,1625,1627);
-              
-             if ( in_array($id, $services_id_array) ) :
-                  echo blpc_submenu_list_pages('services');
-             else :        
-                  echo blpc_custom_menu_list_pages('services'); 
-          endif; ?>
-        </div>
-
-        <!-- Sidebar Sevices -->
-        <?php if ( is_active_sidebar( 'sidebar_services' )  ) : ?>
-        <?php dynamic_sidebar( 'sidebar_services' ); ?>
-        <?php endif; ?>
 
         <!-- Side Navigation -->
             <?php 
-                $feature_id1 = get_field('services_feature_right'); 
+                $feature_id1 = get_field('insights_feature_right'); 
                 // $feature_id2 = get_field('services_feature_bottom');
                 
                 if($feature_id1) {

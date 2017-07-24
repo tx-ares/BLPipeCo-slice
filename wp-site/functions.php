@@ -28,16 +28,16 @@ function remove_yoast_metabox_features(){
 add_action( 'add_meta_boxes', 'remove_yoast_metabox_features', 11 );
 
 /* init */
-function g2is_init() {
+function blpc_init() {
   
 	/* menu */	
 	register_nav_menus( array(
-		'main-menu' => __( 'Main Menu', 'g2is' ),
-		'footer-menu'  => __( 'Footer Menu', 'g2is' ),
-		'social-menu'  => __( 'Social Menu', 'g2is' )
+		'main-menu' => __( 'Main Menu', 'blpc' ),
+		'footer-menu'  => __( 'Footer Menu', 'blpc' ),
+		'social-menu'  => __( 'Social Menu', 'blpc' )
 	) );
 }
-add_action( 'init', 'g2is_init' );
+add_action( 'init', 'blpc_init' );
 
 /* search menu */
 function g2is_search_menu($items, $args) {
@@ -438,11 +438,11 @@ function blpc_insights_news_list() {
 					</div>';
 		} else {
 			$string .= '<li>
-										<a href="'. get_permalink($recent["ID"]) .'">
-											<div class="title">'. $recent["post_title"] .'</div>
-											<div class="subtitle">'. date('F j, Y', strtotime($recent['post_date'])) .'</div>
-										</a>
-									</li>';
+							<a href="'. get_permalink($recent["ID"]) .'">
+								<div class="title">'. $recent["post_title"] .'</div>
+								<div class="subtitle">'. date('F j, Y', strtotime($recent['post_date'])) .'</div>
+							</a>
+						</li>';
 								
 		}
 	}
