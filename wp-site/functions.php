@@ -794,7 +794,7 @@ function blpc_news_detail_latest_news_list() {
 	$classes = ''; 
 	debug_to_console( get_page_template() );
 
-	if( is_page_template('insights/page-news.php') ) { 
+	if( get_page_template_slug() === 'news' ) { 
 		$classes = 'slateblue-theme'; 
 	}
 
