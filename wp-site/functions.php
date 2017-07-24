@@ -733,12 +733,12 @@ function g2is_solutions_carousel($post_id) {
 function blpc_post_type_pager($post_type) {
 		global $post;
 		$args = array( 
-						'parent' => $post->post_parent,
-						'depth' => 1,
-						'hierarchical' => 0,
-						'post_type' => $post_type,
-						'sort_column' => 'menu_order', 
-						'sort_order' => 'asc'
+			'parent' => $post->post_parent,
+			'depth' => 1,
+			'hierarchical' => 0,
+			'post_type' => $post_type,
+			'sort_column' => 'menu_order', 
+			'sort_order' => 'asc'
 		);
 		$page_list = get_pages($args);
 		

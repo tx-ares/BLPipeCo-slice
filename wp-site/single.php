@@ -44,6 +44,7 @@
 			        ?>
 			        <!-- Pager -->
 	                <?php echo blpc_post_type_pager('post'); ?>
+              
 	            </div>
 	        </div>
 	    </div>
