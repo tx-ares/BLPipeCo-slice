@@ -712,18 +712,18 @@ function g2is_solutions_carousel($post_id) {
 			$image = get_field('carousel_image', $page->ID);
 			
 			$string .= '<div>
-										<img alt="'.$image['alt'].'"
-												data-src="<575:'.$image['url'].',
-																<768:'.$image['url'].',
-																<1024:'.$image['url'].'"
-												src="'.$image['url'].'" />
-										<div class="row row-compressed">
-												<div class="col-xs-12">
-														<p class="title">' . $page->post_title  . '</p>
-														<a href="' . get_field('carousel_button_link', $page->ID)  . '" class="btn orange fw" target="'.get_field('carousel_button_target', $page->ID).'">' . get_field('carousel_button_text', $page->ID)  . '</a>
-												</div>
-										</div>
-								</div>';
+							<img alt="'.$image['alt'].'"
+									data-src="<575:'.$image['url'].',
+													<768:'.$image['url'].',
+													<1024:'.$image['url'].'"
+									src="'.$image['url'].'" />
+							<div class="row row-compressed">
+									<div class="col-xs-12">
+											<p class="title">' . $page->post_title  . '</p>
+											<a href="' . get_field('carousel_button_link', $page->ID)  . '" class="btn orange fw" target="'.get_field('carousel_button_target', $page->ID).'">' . get_field('carousel_button_text', $page->ID)  . '</a>
+									</div>
+							</div>
+						</div>';
 						
 	}
 	echo $string;
