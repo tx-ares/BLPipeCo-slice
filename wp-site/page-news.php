@@ -75,8 +75,8 @@ get_header(); ?>
                 </div>
             </div>
 
-            <?php echo blpc_post_type_pager('news'); ?>
-
+<!--             <?php echo blpc_post_type_pager('news'); ?>
+ -->
 
         </div>
 

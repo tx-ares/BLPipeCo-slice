@@ -794,7 +794,11 @@ function blpc_news_detail_latest_news_list() {
 
 	if( is_page_template('page-news.php') ) { 
 		$classes = 'slateblue-theme'; 
-	}; 
+	}
+
+	else {
+		$classes = "test-else";
+	}
 
 	$string = '<div class="latest-articles '. $classes .' fh">
                     <h4 class="text-upcase">Latest News</h4>';	
