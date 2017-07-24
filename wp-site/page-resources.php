@@ -1,6 +1,6 @@
 <?php 
 
-/* Template Name: News */ 
+/* Template Name: Resources */ 
 
 get_header(); ?>
         
@@ -16,7 +16,7 @@ get_header(); ?>
                         <img alt="BL Pipeco " data-src="<575:<?php echo the_post_thumbnail_url('full'); ?>, <768:<?php echo the_post_thumbnail_url('full'); ?>,>768:<?php echo the_post_thumbnail_url('full'); ?>" />
                         <div class="subtext-box">
                             <h1><?php the_title(); ?> </h1>
-                             <h2><?php echo get_field('insights_menu_description'); ?></h2>
+                             <h2><?php echo get_field('resources_menu_description'); ?></h2>
                         </div>
                     </div>
                 </div>
@@ -40,9 +40,9 @@ get_header(); ?>
                 <div class="col-md-offset-3 col-md-9">
                     <div class="container-fluid">
                         <div class="articles darkblue">
-                            <h2>News &amp; Events</h2>
+                            <h2>Resources</h2>
                             <p class="subtitle">
-                               	Striving to stay on top of continual changes in the industry and keeping our customers informed on new regulations, continually growing operations, and upcoming events.
+                               	Supplying a variety of resources related to our OCTG products and services to ensure our customers obtain the correct product for each application.
                             </p>
 
                             <!-- News List -->
@@ -51,7 +51,7 @@ get_header(); ?>
 
 								
 								$args = array( 'posts_per_page' => 10, 
-														'category_name' => 'latest-news',
+														'category_name' => 'resources',
 														'paged' => $paged,
 														'post_type' => 'post');
 								
