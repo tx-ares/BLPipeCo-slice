@@ -4262,6 +4262,23 @@ footer {
     margin-bottom: 40px;
     border-top: 1px solid $colorLightGrey3;
     padding-top: 10px;
+    span.previous {
+        float: left;
+        a:before {
+            content: '\f0d9';
+            font-family: FontAwesome;
+            padding: 0 5px;
+        }
+    }
+    span.next {
+        float: right;
+        a:after {
+            content: '\f0da';
+            font-family: FontAwesome;
+            padding: 0 5px;
+        }
+    }
+
     a {
         text-transform: uppercase;
         display: inline-block;
@@ -4270,22 +4287,6 @@ footer {
         color: $colorBrightRed2;
         margin: 0 15px;
         font-weight: 700; // border: 1px solid $color
-        &.previous {
-            float: left;
-            &:before {
-                content: '\f0d9';
-                font-family: FontAwesome;
-                padding: 0 5px;
-            }
-        }
-        &.next {
-            float: right;
-            &:after {
-                content: '\f0da';
-                font-family: FontAwesome;
-                padding: 0 5px;
-            }
-        }
     }
 }
 

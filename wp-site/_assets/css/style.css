@@ -2948,6 +2948,18 @@ footer {
   margin-bottom: 40px;
   border-top: 1px solid #dbd8cf;
   padding-top: 10px; }
+  .next-prev span.previous {
+    float: left; }
+    .next-prev span.previous a:before {
+      content: '\f0d9';
+      font-family: FontAwesome;
+      padding: 0 5px; }
+  .next-prev span.next {
+    float: right; }
+    .next-prev span.next a:after {
+      content: '\f0da';
+      font-family: FontAwesome;
+      padding: 0 5px; }
   .next-prev a {
     text-transform: uppercase;
     display: inline-block;
@@ -2956,18 +2968,6 @@ footer {
     color: #d0112b;
     margin: 0 15px;
     font-weight: 700; }
-    .next-prev a.previous {
-      float: left; }
-      .next-prev a.previous:before {
-        content: '\f0d9';
-        font-family: FontAwesome;
-        padding: 0 5px; }
-    .next-prev a.next {
-      float: right; }
-      .next-prev a.next:after {
-        content: '\f0da';
-        font-family: FontAwesome;
-        padding: 0 5px; }
 
 .num {
   font-family: "Avenir Next LT Pro", sans-serif;

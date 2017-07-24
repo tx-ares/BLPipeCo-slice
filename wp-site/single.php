@@ -39,11 +39,15 @@
 			        <?php the_content(); ?>
 			        <?php endwhile; endif; ?>
 
-			        <?php 
-			        	debug_to_console( get_post_type() );
-			        ?>
 			        <!-- Pager -->
-	                <?php echo blpc_post_type_pager('post'); ?>
+			        <div class="next-prev clearfix">
+						<span class="pull-left previous">
+						<?php previous_post_link( '%link','Previous' ) ?>
+						</span>
+						<span class="pull-right next">
+						<?php next_post_link( '%link','Next' ) ?>
+						</span>
+			        </div>
 
 	            </div>
 	        </div>
