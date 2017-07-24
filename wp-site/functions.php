@@ -790,7 +790,13 @@ function blpc_news_detail_latest_news_list() {
 
 	$recent_posts = wp_get_recent_posts($args);
 	
-	$string = '<div class="latest-articles">
+	$classes = ''; 
+
+	if( is_page_template('page-news.php') ) { 
+		$classes = 'slateblue-theme'; 
+	}; 
+
+	$string = '<div class="latest-articles '. $classes .' fh">
                     <h4 class="text-upcase">Latest News</h4>';	
 	foreach( $recent_posts as $index => $recent ) {
 		$string .= '<div class="txt-content">

@@ -80,8 +80,6 @@ get_header(); ?>
 
         </div>
 
-
-
         <!-- ******************************************************* -->
         <!-- Aside Content -->
         <!-- ******************************************************* -->
@@ -130,7 +128,7 @@ get_header(); ?>
 
 				<!--Latest News -->
                 <?php echo blpc_news_detail_latest_news_list(); ?>
-                
+
                 </div>
                 <div class="topic-nav">
                     <h4 class="topic-title">By Topic</h4>
