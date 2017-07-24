@@ -40,7 +40,7 @@ get_header(); ?>
                 <div class="col-md-offset-3 col-md-9">
                     <div class="container-fluid">
                         <div class="articles darkblue">
-                            <h2>Articles</h2>
+                            <h2>News &amp; Events</h2>
                             <p class="subtitle">
                                 Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
                             </p>
@@ -75,7 +75,8 @@ get_header(); ?>
                 </div>
             </div>
 
-            <?php echo blpc_post_type_pager('services'); ?>
+            <?php echo blpc_post_type_pager('news'); ?>
+
 
         </div>
 
@@ -127,9 +128,9 @@ get_header(); ?>
                     </div>
                 </div>
 
-                <div class="latest-articles slateblue-theme fh">
-                    <h4 class="text-upcase">Latest Articles</h4>
-                    <?php echo blpc_news_detail_latest_news_list(); ?>
+				<!--Latest News -->
+                <?php echo blpc_news_detail_latest_news_list(); ?>
+                
                 </div>
                 <div class="topic-nav">
                     <h4 class="topic-title">By Topic</h4>

@@ -763,7 +763,7 @@ function blpc_post_type_pager($post_type) {
 }
 
 /* news detail - latest news */
-function blpc_news_detail_latest_news_list() {
+function g2is_news_detail_latest_news_list() {
 	$args = array( 'numberposts' => '3',
 									'category_name' => 'latest-news');
 
@@ -782,6 +782,29 @@ function blpc_news_detail_latest_news_list() {
 							</div>';	
 	echo $string;
 }
+
+/* news detail - latest news */
+function blpc_news_detail_latest_news_list() {
+	$args = array( 'numberposts' => '3',
+									'category_name' => 'latest-news');
+
+	$recent_posts = wp_get_recent_posts($args);
+	
+	$string = '<div class="latest-articles">
+                    <h4 class="text-upcase">Latest News</h4>';	
+	foreach( $recent_posts as $index => $recent ) {
+		$string .= '<div class="txt-content">
+						<h3 class="title"><a href="'. get_permalink($recent["ID"]) .'">'. $recent["post_title"] .'</a>
+						<span class="date">'. date('F j, Y', strtotime($recent['post_date'])) .'</span></h3>
+					</div>';
+	}
+	$string .= '	</div>
+							</div>';	
+	echo $string;
+}
+
+
+
 
 /* menu_list_pages */
 function g2is_menu_child_list_pages($post_id) { 

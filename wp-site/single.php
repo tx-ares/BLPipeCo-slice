@@ -1,24 +1,6 @@
 <?php get_header(); ?>
 
 <!-- ******************************************************* -->
-<!-- Breadcrumbs -->
-<!-- ******************************************************* -->
-<section class="breadcrumbs">
-  <div class="container-fluid">
-    <div class="row">
-      <div class="col-xs-12">
-        <ul>
-          <?php 
-					if(function_exists('bcn_display')) {
-							bcn_display();
-					}?>
-        </ul>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ******************************************************* -->
 <!-- Banner -->
 <!-- ******************************************************* -->
 <section class="banner">
@@ -30,7 +12,6 @@
           <768:<?php echo the_post_thumbnail_url('full'); ?>,
           >768:<?php echo the_post_thumbnail_url('full'); ?>" />
 
-        <div class="overlay-band"></div>
     </div>
     <div class="col-md-8 col-sm-7 col-xs-12 title-content" eq-col="">
       <div class="tframe fh fw">
