@@ -1,6 +1,9 @@
 /* CSS Document */
 
 
+#bitnami-banner {display:none;} /*Temporary Disable while under Development */
+
+
 /* Import here reusable tools for saas */
 
 @import "_mixin.mediaqueries";
@@ -3783,7 +3786,7 @@ footer {
     }
 
     &.compressed {
-        background: $colorDarkGreen;
+        background: $colorDarkBlue2;
         color: $colorWhite;
         padding: 20px 0;
         margin-bottom: 40px;
@@ -4923,7 +4926,7 @@ footer {
             position: absolute;
             bottom: 0;
             padding: 15px 40px;
-            background: $colorGreen;
+            background: $colorBrightRed2;
             color: $colorWhite;
             text-transform: uppercase;
             @include font-size(14px);
@@ -4942,7 +4945,7 @@ footer {
             font-weight: 700;
             @include font-size(18px);
             color: $colorWhite;
-            background: rgba($colorDarkGreen, .85);
+            background: rgba($colorDarkBlue2, .85);
             text-transform: uppercase;
 
             .date-num {

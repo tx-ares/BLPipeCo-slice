@@ -763,7 +763,7 @@ function blpc_post_type_pager($post_type) {
 }
 
 /* news detail - latest news */
-function g2is_news_detail_latest_news_list() {
+function blpc_news_detail_latest_news_list() {
 	$args = array( 'numberposts' => '3',
 									'category_name' => 'latest-news');
 
