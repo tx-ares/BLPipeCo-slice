@@ -170,7 +170,7 @@ function page_body_class( $classes ) {
 		$classes[] = 'home';
 	}
 	else if(is_page_template('page-services.php')) {
-		$classes[] = 'fullpage main-content-fullpage';
+		$classes[] = 'fullpage main-content-fullpage landing';
 	}
 	else if(is_page_template('page-solutions.php')) {
 		$classes[] = 'fullpage main-content-fullpage';
@@ -224,7 +224,7 @@ function g2is_solutions_tile_pages() {
 }
 
 /* services */
-function g2is_services_tile_pages() { 
+function blpc_services_tile_pages() { 
 	$args = array( 
 					'parent' => 0,
 					'sort_column' => 'menu_order', 
