@@ -27,6 +27,7 @@ function remove_yoast_metabox_features(){
 }
 add_action( 'add_meta_boxes', 'remove_yoast_metabox_features', 11 );
 
+
 /* init */
 function blpc_init() {
   
@@ -791,8 +792,9 @@ function blpc_news_detail_latest_news_list() {
 	$recent_posts = wp_get_recent_posts($args);
 	
 	$classes = ''; 
+	debug_to_console( get_page_template() );
 
-	if( is_page_template('page-news.php') ) { 
+	if( is_page_template('insights/page-news.php') ) { 
 		$classes = 'slateblue-theme'; 
 	}
 
