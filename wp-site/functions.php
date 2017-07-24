@@ -729,7 +729,7 @@ function g2is_solutions_carousel($post_id) {
 }
 
 /* post type pager */
-function g2is_post_type_pager($post_type) {
+function blpc_post_type_pager($post_type) {
 		global $post;
 		$args = array( 
 						'parent' => $post->post_parent,
