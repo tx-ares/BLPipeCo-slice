@@ -43,13 +43,13 @@ get_header(); ?>
                     <!-- ******************************************************* -->
                     <div class="row" eq-height>
                         <div class="col-md-4 col-sm-6">
-							<?php echo g2is_insights_news_list(); ?>
+							<?php echo blpc_insights_news_list(); ?>
                         </div>
                         <div class="col-md-4 col-sm-6">
-							<?php echo g2is_insights_blog_list(); ?>
+							<?php echo blpc_insights_blog_list(); ?>
                         </div>
                         <div class="col-md-4 col-sm-6">
-							<?php echo g2is_insights_webinar_list(); ?>
+							<?php echo blpc_insights_webinar_list(); ?>
                         </div>
                     </div>
                     
