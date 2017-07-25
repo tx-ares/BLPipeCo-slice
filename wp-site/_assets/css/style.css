@@ -1892,8 +1892,7 @@ footer {
     .home .banner.homepage .home-slider .slick-next:before {
       content: '\f105'; }
   .home .banner.homepage .home-slider .slick-dots {
-    padding-top: 129px;
-    display: inline-block !important; }
+    padding-top: 129px; }
     .home .banner.homepage .home-slider .slick-dots li {
       width: 30px;
       height: 10px; }
