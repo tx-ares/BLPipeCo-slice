@@ -667,41 +667,38 @@ function blpc_insights_blog_list() {
 function blpc_primary_carousel() { 
 	$args = array( 
 		'post_type' => 'carousel',
-		'orderby' => 'menu_order',
-		'order' => 'ASC',
-		'taxonomy' => 'category',
-            'field' => 'slug',
-            'term' => 'carousel-primary'
+		'meta_key'		=> 'carousel_group',
+		'meta_value'	=> 'primary'
 	);
 	
 	$pages = get_posts( $args );
-	
+	debug_to_console( $pages );
 	foreach ( $pages as $page ) {
 		
 		$image = get_field('carousel_image', $page->ID);
+			debug_to_console( $image );
+
 		$string .= '<div class="slider-item">
 						<img alt="'.$image['alt'].'"
 								 data-src="<575:'.$image['url'].',
-								<768:'.$image['url'].',
-								<1024:'.$image['url'].',
-								<1280:'.$image['url'].',
-								>1281:'.$image['url'].'"
+																<768:'.$image['url'].',
+																<1024:'.$image['url'].',
+																<1280:'.$image['url'].',
+																>1281:'.$image['url'].'"
 								 src="'.$image['url'].'" />
 						<div class="caption">
 								<div class="title top">
-									<h3>
-										<a href="' . get_field('carousel_button_link', $page->ID)  . '"><div class="text-title"><div>' . $page->post_title  . '</div></div><div class="plus-wrapper"><div class="plus"><div class="plus-icon horiz"></div><div class="plus-icon vert"></div></div></div></a>
-									</h3>
+										<h3><a href="' . get_field('carousel_button_link', $page->ID)  . '">' . $page->post_title  . '<span>+</span></a></h3>
 								</div>
 								<div class="container-fluid">
-									<div class="row compressed">
-										<div class="col-sm-6 col-xs-12">
-												' . get_field('carousel_caption', $page->ID)  . '
+										<div class="row compressed">
+												<div class="col-sm-6 col-xs-12">
+														' . get_field('carousel_caption', $page->ID)  . '
+												</div>
 										</div>
-									</div>
 								</div>
 								<div class="title">
-									<h3><a href="' . get_field('carousel_button_link', $page->ID)  . '"><div class="text-title"><div>' . $page->post_title  . '</div></div><div class="plus-wrapper"><div class="plus"><div class="plus-icon horiz"></div><div class="plus-icon vert"></div></div></div></a></h3>
+										<h3><a href="' . get_field('carousel_button_link', $page->ID)  . '">' . $page->post_title  . '<span>+</span></a></h3>
 								</div>
 						</div>
 				</div>';
@@ -1176,169 +1173,5 @@ function g2is_people_pager() {
 		
 		echo $string;
 }
-
-function cptui_register_my_cpts() {
-
-	/**
-	 * Post Type: Carousel.
-	 */
-
-	$labels = array(
-		"name" => __( 'Carousel', 'B&L Pipeco' ),
-		"singular_name" => __( 'Carousel', 'B&L Pipeco' ),
-	);
-
-	$args = array(
-		"label" => __( 'Carousel', 'B&L Pipeco' ),
-		"labels" => $labels,
-		"description" => "",
-		"public" => true,
-		"publicly_queryable" => true,
-		"show_ui" => true,
-		"show_in_rest" => false,
-		"rest_base" => "",
-		"has_archive" => false,
-		"show_in_menu" => true,
-		"exclude_from_search" => true,
-		"capability_type" => "post",
-		"map_meta_cap" => true,
-		"hierarchical" => false,
-		"rewrite" => array( "slug" => "carousel", "with_front" => false ),
-		"query_var" => true,
-		"supports" => array( "title", "editor", "thumbnail", "page-attributes", "post-formats" ),
-		"taxonomies" => array( "category" ),
-	);
-
-	register_post_type( "carousel", $args );
-
-	/**
-	 * Post Type: Features.
-	 */
-
-	$labels = array(
-		"name" => __( 'Features', 'B&L Pipeco' ),
-		"singular_name" => __( 'Feature', 'B&L Pipeco' ),
-	);
-
-	$args = array(
-		"label" => __( 'Features', 'B&L Pipeco' ),
-		"labels" => $labels,
-		"description" => "",
-		"public" => true,
-		"publicly_queryable" => true,
-		"show_ui" => true,
-		"show_in_rest" => false,
-		"rest_base" => "",
-		"has_archive" => false,
-		"show_in_menu" => true,
-		"exclude_from_search" => true,
-		"capability_type" => "post",
-		"map_meta_cap" => true,
-		"hierarchical" => false,
-		"rewrite" => array( "slug" => "features", "with_front" => false ),
-		"query_var" => true,
-		"supports" => array( "title", "editor", "thumbnail" ),
-	);
-
-	register_post_type( "features", $args );
-
-	/**
-	 * Post Type: People.
-	 */
-
-	$labels = array(
-		"name" => __( 'People', 'B&L Pipeco' ),
-		"singular_name" => __( 'People', 'B&L Pipeco' ),
-	);
-
-	$args = array(
-		"label" => __( 'People', 'B&L Pipeco' ),
-		"labels" => $labels,
-		"description" => "",
-		"public" => true,
-		"publicly_queryable" => true,
-		"show_ui" => true,
-		"show_in_rest" => false,
-		"rest_base" => "",
-		"has_archive" => false,
-		"show_in_menu" => true,
-		"exclude_from_search" => false,
-		"capability_type" => "post",
-		"map_meta_cap" => true,
-		"hierarchical" => false,
-		"rewrite" => array( "slug" => "people", "with_front" => false ),
-		"query_var" => true,
-		"supports" => array( "title", "editor", "thumbnail", "page-attributes", "post-formats" ),
-	);
-
-	register_post_type( "people", $args );
-
-	/**
-	 * Post Type: Services.
-	 */
-
-	$labels = array(
-		"name" => __( 'Services', 'B&L Pipeco' ),
-		"singular_name" => __( 'Service', 'B&L Pipeco' ),
-	);
-
-	$args = array(
-		"label" => __( 'Services', 'B&L Pipeco' ),
-		"labels" => $labels,
-		"description" => "",
-		"public" => true,
-		"publicly_queryable" => true,
-		"show_ui" => true,
-		"show_in_rest" => false,
-		"rest_base" => "",
-		"has_archive" => false,
-		"show_in_menu" => true,
-		"exclude_from_search" => false,
-		"capability_type" => "post",
-		"map_meta_cap" => true,
-		"hierarchical" => true,
-		"rewrite" => array( "slug" => "services", "with_front" => false ),
-		"query_var" => true,
-		"supports" => array( "title", "editor", "thumbnail", "page-attributes", "post-formats" ),
-	);
-
-	register_post_type( "services", $args );
-
-	/**
-	 * Post Type: Products.
-	 */
-
-	$labels = array(
-		"name" => __( 'Products', 'B&L Pipeco' ),
-		"singular_name" => __( 'Product', 'B&L Pipeco' ),
-	);
-
-	$args = array(
-		"label" => __( 'Products', 'B&L Pipeco' ),
-		"labels" => $labels,
-		"description" => "",
-		"public" => true,
-		"publicly_queryable" => true,
-		"show_ui" => true,
-		"show_in_rest" => false,
-		"rest_base" => "",
-		"has_archive" => false,
-		"show_in_menu" => true,
-		"exclude_from_search" => false,
-		"capability_type" => "post",
-		"map_meta_cap" => true,
-		"hierarchical" => true,
-		"rewrite" => array( "slug" => "products", "with_front" => false ),
-		"query_var" => true,
-		"supports" => array( "title", "editor", "thumbnail", "page-attributes", "post-formats" ),
-		"taxonomies" => array( "category" ),
-	);
-
-	register_post_type( "products", $args );
-}
-
-add_action( 'init', 'cptui_register_my_cpts' );
-
-
 ?>
 
