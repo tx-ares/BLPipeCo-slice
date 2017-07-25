@@ -1814,16 +1814,6 @@ body {
                     margin-top: -140px;
                 }
             }
-
-            &.homepage {
-                .home-slider {
-                    min-height: 95vh;
-                }
-                @include max-screen($md) {
-                    min-height: 360px;
-                    height: 360px;
-                }
-            }
         }
         @include max-screen($smd) {
             .main-content {
@@ -2604,6 +2594,320 @@ footer {
 		}*/
     }
 
+    .banner.homepage {
+        .home-slider {
+                position: relative;
+                min-height: 95vh;
+                width: 100%;
+                
+                @include max-screen($md) {
+                    min-height: 360px;
+                    height: 360;
+                }
+
+                .slick-list {
+                    height: auto!important;
+                }
+
+                .slider-item {
+                    position: relative;
+                }
+
+                .slick-arrow {
+                    display: none!important;
+                }
+
+                .slick-next,
+                .slick-prev {
+                    top: 30vw;
+
+                    &:before {
+                        content: '\f104';
+                        font-family: $font-icon;
+                        color: $colorWhite;
+                        @include font-size(30px);
+                    }
+                }
+
+                .slick-prev {
+                    left: 5%;
+                }
+
+                .slick-next {
+                    right: 5%;
+
+                    &:before {
+                        content: '\f105';
+                    }
+                }
+
+                .slick-dots {
+                    // top: 40px;
+                    // right: 40px;
+                    padding-top: 129px;
+                    display: inline-block!important;
+                    // width: auto!important;
+
+                    li {
+                        width: 30px;
+                        height: 10px;
+
+                        // button {
+                        //     width: 30px;
+                        //     height: 10px;
+
+                        //     &:before {
+                        //         content: '';
+                        //         width: 30px;
+                        //         height: 10px;
+                        //         background: $colorWhite;
+                        //     }
+                        // }
+
+                        // &.slick-active {
+                        //     button:before {
+                        //         background: $colorOrange;
+                        //     }
+                        // }
+                    }
+                }
+
+                img {
+                    width: 100%;
+                    height: auto;
+                }
+
+                .caption {
+                    position: absolute;
+                    bottom: 0;
+                    width: 100%;
+
+                    p {
+                        margin-bottom: 35px;
+                        font-weight: 400;
+                        @include font-size(30px);
+                        color: $colorWhite;
+                        line-height: 120%;
+
+                        .text1 {
+                            font-weight: 500;
+                            @include font-size(24px);
+                            display: block;
+                        }
+
+                        .text2 {
+                            font-weight: 400;
+                            @include font-size(20px);
+                            font-style: italic;
+                            display: block;
+                        }
+                    }
+
+                    .title {
+                        background: rgba($colorDarkBlue, .5);
+                        text-align: right;
+
+                        &.top {
+                            display: none;
+                        }
+                    }
+
+                    h3 {
+                        font-weight: 300;
+                        @include font-size(64px);
+                        margin-bottom: 0;
+                        position: relative;
+                        padding-left: 10px;
+                        display: inline-block;
+                        color: $colorWhite;
+                        text-transform: none;
+
+                        a {
+                            color: $colorWhite;
+                            display: block;
+                        }
+
+                        &:before {
+                            content: '';
+                            width: 10px;
+                            height: 10px;
+                            background: $colorBrightRed2;
+                            position: absolute;
+                            left: -10px;
+                            bottom: 39px;
+                        }
+
+                        span {
+                            background: rgba($colorBrightRed2, .5);
+                            display: inline-block;
+                            height: 100%;
+                            padding: 20px 45px;
+                            margin-left: 35px;
+                        }
+                    }
+                }
+
+                @include max-screen(1500px) {
+
+                    .caption {
+                        p {
+                            @include font-size(26px);
+                        }
+
+                        h3 {
+                            @include font-size(54px);
+                        }
+                    }
+                }
+
+                @include max-screen($xxlg) {
+
+                    .slick-dots {
+                        // top: 20px;
+                    }
+
+                    .caption {
+
+                        p {
+                            @include font-size(22px);
+                        }
+
+                        h3 {
+                            @include font-size(44px);
+
+                            &:before {
+                                bottom: 29px;
+                            }
+
+                            span {
+                                padding: 15px 45px;
+                            }
+                        }
+                    }
+                }
+
+                @include max-screen($xlg) {
+                    .slick-dots {
+                        // top: 10px;
+                    }
+
+                    .row.compressed>[class*=col-] {
+                        width: 70%;
+                    }
+
+                    .caption {
+                        p {
+                            @include font-size(20px);
+                            margin-bottom: 20px;
+
+                            .text1 {
+                                @include font-size(20px);
+                            }
+
+                            .text2 {
+                                @include font-size(16px);
+                            }
+                        }
+
+                        h3 {
+                            @include font-size(36px);
+
+                            &:before {
+                                bottom: 26px;
+                            }
+
+                            span {
+                                padding: 15px 30px;
+                            }
+                        }
+                    }
+                }
+
+                @include max-screen($lg) {
+
+                    // .slick-dots {
+                    //     display: none!important;
+                    // }
+
+                    .slick-arrow {
+                        display: block!important;
+                    }
+
+                    .caption {
+                        margin-top: -51px;
+
+                        .title {}
+
+                        h3 {
+                            &:before {
+                                width: 7px;
+                                height: 7px;
+                            }
+                        }
+
+                        p {
+                            padding: 20px 0;
+                            padding-bottom: 5px;
+
+                            .text1 {
+                                margin-bottom: 15px;
+                            }
+
+                            .text2 {
+                                margin-bottom: 15px;
+                            }
+                        }
+                    }
+                }
+
+                @include max-screen($sm) {
+
+                    .slick-next,
+                    .slick-prev {
+                        top: 40vw;
+                    }
+
+                    .row.compressed>[class*=col-] {
+                        width: inherit;
+                    }
+
+                    .caption {
+                        position: relative;
+
+                        .title {
+                            display: none;
+
+                            &.top {
+                                display: block;
+                            }
+                        }
+
+                        h3 {
+                            @include font-size(24px);
+
+                            &:before {
+                                bottom: 18px;
+                            }
+
+                            span {
+                                padding: 10px 15px;
+                                margin-left: 10px;
+                            }
+                        }
+
+                        p {
+                            @include font-size(18px);
+                        }
+
+                        .container-fluid {
+                            background: $colorGreen;
+                            min-height: 180px;
+                        }
+                    }
+                }
+            }
+    }
+
     .main-content {
         padding-top: 0;
         padding-bottom: 0;
@@ -2741,9 +3045,9 @@ footer {
                         height: auto!important;
                     }
 
-                    .slick-dots {
-                        display: none!important;
-                    }
+                    // .slick-dots {
+                    //     display: none!important;
+                    // }
 
                     .slick-next,
                     .slick-prev {
@@ -2998,310 +3302,7 @@ footer {
 
         .left-content {
 
-            .home-slider {
-                position: relative;
-
-                .slick-list {
-                    height: auto!important;
-                }
-
-                .slider-item {
-                    position: relative;
-                }
-
-                .slick-arrow {
-                    display: none!important;
-                }
-
-                .slick-next,
-                .slick-prev {
-                    top: 30vw;
-
-                    &:before {
-                        content: '\f104';
-                        font-family: $font-icon;
-                        color: $colorWhite;
-                        @include font-size(30px);
-                    }
-                }
-
-                .slick-prev {
-                    left: 5%;
-                }
-
-                .slick-next {
-                    right: 5%;
-
-                    &:before {
-                        content: '\f105';
-                    }
-                }
-
-                .slick-dots {
-                    top: 40px;
-                    right: 40px;
-                    padding-top: 129px;
-                    display: inline-block!important;
-                    width: auto!important;
-
-                    li {
-                        width: 30px;
-                        height: 10px;
-
-                        button {
-                            width: 30px;
-                            height: 10px;
-
-                            &:before {
-                                content: '';
-                                width: 30px;
-                                height: 10px;
-                                background: $colorWhite;
-                            }
-                        }
-
-                        &.slick-active {
-                            button:before {
-                                background: $colorOrange;
-                            }
-                        }
-                    }
-                }
-
-                img {
-                    width: 100%;
-                    height: auto;
-                }
-
-                .caption {
-                    position: absolute;
-                    bottom: 0;
-                    width: 100%;
-
-                    p {
-                        margin-bottom: 35px;
-                        font-weight: 400;
-                        @include font-size(30px);
-                        color: $colorWhite;
-                        line-height: 120%;
-
-                        .text1 {
-                            font-weight: 500;
-                            @include font-size(24px);
-                            display: block;
-                        }
-
-                        .text2 {
-                            font-weight: 400;
-                            @include font-size(20px);
-                            font-style: italic;
-                            display: block;
-                        }
-                    }
-
-                    .title {
-                        background: rgba($colorDarkGreen, .5);
-                        text-align: right;
-
-                        &.top {
-                            display: none;
-                        }
-                    }
-
-                    h3 {
-                        font-weight: 300;
-                        @include font-size(64px);
-                        margin-bottom: 0;
-                        position: relative;
-                        padding-left: 10px;
-                        display: inline-block;
-                        color: $colorWhite;
-                        text-transform: none;
-
-                        a {
-                            color: $colorWhite;
-                            display: block;
-                        }
-
-                        &:before {
-                            content: '';
-                            width: 10px;
-                            height: 10px;
-                            background: $colorGreen;
-                            position: absolute;
-                            left: -10px;
-                            bottom: 39px;
-                        }
-
-                        span {
-                            background: rgba($colorGreen, .5);
-                            display: inline-block;
-                            height: 100%;
-                            padding: 20px 45px;
-                            margin-left: 35px;
-                        }
-                    }
-                }
-
-                @include max-screen(1500px) {
-
-                    .caption {
-                        p {
-                            @include font-size(26px);
-                        }
-
-                        h3 {
-                            @include font-size(54px);
-                        }
-                    }
-                }
-
-                @include max-screen($xxlg) {
-
-                    .slick-dots {
-                        top: 20px;
-                    }
-
-                    .caption {
-
-                        p {
-                            @include font-size(22px);
-                        }
-
-                        h3 {
-                            @include font-size(44px);
-
-                            &:before {
-                                bottom: 29px;
-                            }
-
-                            span {
-                                padding: 15px 45px;
-                            }
-                        }
-                    }
-                }
-
-                @include max-screen($xlg) {
-                    .slick-dots {
-                        top: 10px;
-                    }
-
-                    .row.compressed>[class*=col-] {
-                        width: 70%;
-                    }
-
-                    .caption {
-                        p {
-                            @include font-size(20px);
-                            margin-bottom: 20px;
-
-                            .text1 {
-                                @include font-size(20px);
-                            }
-
-                            .text2 {
-                                @include font-size(16px);
-                            }
-                        }
-
-                        h3 {
-                            @include font-size(36px);
-
-                            &:before {
-                                bottom: 26px;
-                            }
-
-                            span {
-                                padding: 15px 30px;
-                            }
-                        }
-                    }
-                }
-
-                @include max-screen($lg) {
-
-                    .slick-dots {
-                        display: none!important;
-                    }
-
-                    .slick-arrow {
-                        display: block!important;
-                    }
-
-                    .caption {
-                        margin-top: -51px;
-
-                        .title {}
-
-                        h3 {
-                            &:before {
-                                width: 7px;
-                                height: 7px;
-                            }
-                        }
-
-                        p {
-                            padding: 20px 0;
-                            padding-bottom: 5px;
-
-                            .text1 {
-                                margin-bottom: 15px;
-                            }
-
-                            .text2 {
-                                margin-bottom: 15px;
-                            }
-                        }
-                    }
-                }
-
-                @include max-screen($sm) {
-
-                    .slick-next,
-                    .slick-prev {
-                        top: 40vw;
-                    }
-
-                    .row.compressed>[class*=col-] {
-                        width: inherit;
-                    }
-
-                    .caption {
-                        position: relative;
-
-                        .title {
-                            display: none;
-
-                            &.top {
-                                display: block;
-                            }
-                        }
-
-                        h3 {
-                            @include font-size(24px);
-
-                            &:before {
-                                bottom: 18px;
-                            }
-
-                            span {
-                                padding: 10px 15px;
-                                margin-left: 10px;
-                            }
-                        }
-
-                        p {
-                            @include font-size(18px);
-                        }
-
-                        .container-fluid {
-                            background: $colorGreen;
-                            min-height: 180px;
-                        }
-                    }
-                }
-            }
+            
 
             .seo {
                 h2 {

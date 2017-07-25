@@ -252,15 +252,15 @@ function initSlider() {
 	console.log("Main Slider init!")
 	
 	$(".home-slider").each(function() {
-    	var parentWidth = $(this).parent().find(".slider-width-hack").width();
+  //   	var parentWidth = $(this).parent().find(".slider-width-hack").width();
 		
-		if(window.matchMedia("only screen and (max-width: 1024px)").matches) {
-			parentWidth = $("body").prop("clientWidth");
-		}
+		// if(window.matchMedia("only screen and (max-width: 1024px)").matches) {
+		// 	parentWidth = $("body").prop("clientWidth");
+		// }
 		
 		$(this)
 			.on("init", function() {
-				$(this).width(parentWidth);
+				// $(this).width(parentWidth);
 			})
 			.slick({
 				lazyLoad: "ondemand",
@@ -411,7 +411,7 @@ $(window).load(function () {
 });
 
 function initPopUpIcons() {
-    if ( $("body").hasClass("homepage") && $(this).scrollTop() == 0 ) {
+    if ( $("body").hasClass("home") && $(this).scrollTop() == 0 ) {
 		$(".social-media-icons").css("right" , -40);
     }
 
@@ -437,7 +437,7 @@ function initHideFooterIfHomepage() {
 
 function initHideElementsIfHomePageTop() {
 
-	if ($("body").hasClass('homepage') && $(this).scrollTop() == 0 && !window.matchMedia('only screen and (max-width: 1024px)').matches) {
+	if ($("body").hasClass('home') && $(this).scrollTop() == 0 && !window.matchMedia('only screen and (max-width: 1024px)').matches) {
 		$("header").css("background", "rgba(0,38,60,0)");
 		$(".social-media-icons").css("right" , -40);
 		resetBodyScrollX();
