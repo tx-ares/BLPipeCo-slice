@@ -168,7 +168,7 @@ add_filter( 'body_class', 'page_body_class' );
 function page_body_class( $classes ) {
 	
 	if(is_home()) {
-		$classes[] = 'home';
+		$classes[] = 'home homepage';
 	}
 	else if(is_page_template('page-services.php')) {
 		$classes[] = 'fullpage main-content-fullpage landing';
@@ -198,11 +198,11 @@ function page_body_class( $classes ) {
 /* solutions */
 function g2is_solutions_tile_pages() { 
 	$args = array( 
-					'parent' => 0,
-					'exclude' => 2347,
-					'sort_column' => 'menu_order', 
-					'sort_order' => 'asc',
-					'post_type' => 'solutions'
+		'parent' => 0,
+		'exclude' => 2347,
+		'sort_column' => 'menu_order', 
+		'sort_order' => 'asc',
+		'post_type' => 'solutions'
 	);
 	
 	$pages = get_pages( $args );
@@ -414,6 +414,44 @@ function g2is_home_services_list() {
 }
 
 /* insights news */
+function g2is_insights_news_list() {
+	$args = array( 'numberposts' => '4',
+									'category_name' => 'latest-news');
+
+	$recent_posts = wp_get_recent_posts($args);
+	
+	$string = '<ul class="link-list">';	
+	foreach( $recent_posts as $index => $recent ) {
+		
+		if ($index == 0) {
+			echo '<div class="image-cta dated noline" eq-col>
+							<div class="img-content">
+									'.get_the_post_thumbnail($recent["ID"], 'full').'
+									<span class="date">'. date('M', strtotime($recent['post_date'])) .'<span class="date-num">'. date('d', strtotime($recent['post_date'])) .'</span></span>
+									<h2 class="caption"><a href="'.get_site_url().'/insights/news">View All News  <i class="fa fa-angle-right" aria-hidden="true"></i></a></h2>
+							</div>
+							<a href="'. get_permalink($recent["ID"]) .'">
+								<div class="txt-content">
+										<h3>'. $recent["post_title"] .'</h3>
+										<p>'. $recent["post_title"] .'</p>
+								</div>
+							</a>
+					</div>';
+		} else {
+			$string .= '<li>
+							<a href="'. get_permalink($recent["ID"]) .'">
+								<div class="title">'. $recent["post_title"] .'</div>
+								<div class="subtitle">'. date('F j, Y', strtotime($recent['post_date'])) .'</div>
+							</a>
+						</li>';
+								
+		}
+	}
+	$string .= '</ul>';	
+	echo $string;
+}
+
+/* insights news */
 function blpc_insights_news_list() {
 	$args = array( 'numberposts' => '4',
 									'category_name' => 'latest-news');
@@ -504,14 +542,42 @@ function g2is_home_news_list() {
 	$string = '<ul>';	
 	foreach( $recent_posts as $index => $recent ) {
 		$string .= '<li>
-									<a href="'. get_permalink($recent["ID"]) .'">
-											<span class="title">'. $recent["post_title"] .'</span>
-											<span class="date">'. date('F j, Y', strtotime($recent['post_date'])) .'</span>
-									</a>
-								</li>';
+						<a href="'. get_permalink($recent["ID"]) .'">
+								<span class="title">'. $recent["post_title"] .'</span>
+								<span class="date">'. date('F j, Y', strtotime($recent['post_date'])) .'</span>
+						</a>
+					</li>';
 		
 	}
 	$string .= '</ul>';	
+	echo $string;
+}
+
+function blpc_home_news_list() {
+	$args = array( 'numberposts' => '5',
+					'category_name' => 'latest-news');
+
+	$recent_posts = wp_get_recent_posts($args);
+	
+	
+	$string =  '<div class="latest-articles darkblue-theme fh">
+                    <h4 class="text-upcase">Latest News</h4>';	
+	foreach( $recent_posts as $index => $recent ) {
+		$string .= '<div class="txt-content">
+						<a href="'. get_permalink($recent["ID"]) .'">
+							<h3 class="title">'. $recent["post_title"] 
+								.'<span class="date">'. date('F j, Y', strtotime($recent['post_date'])) 
+								.'</span>
+							</h3>
+						</a>
+					</div>';
+	}
+	$string .= '	<div class="txt-subcontent">
+                        <a href="'. get_site_url() . '/insights">
+                            <span>View All Articles</span>
+                        </a>
+                    </div>
+                </div>';	
 	echo $string;
 }
 
@@ -600,12 +666,12 @@ function blpc_insights_blog_list() {
 /* primary carousel */
 function blpc_primary_carousel() { 
 	$args = array( 
-					'post_type' => 'carousel',
-					'orderby' => 'menu_order',
-					'order' => 'ASC',
-					'taxonomy' => 'category',
-                        'field' => 'slug',
-                        'term' => 'carousel-primary'
+		'post_type' => 'carousel',
+		'orderby' => 'menu_order',
+		'order' => 'ASC',
+		'taxonomy' => 'category',
+        'field' => 'slug',
+        'term' => 'carousel-primary'
 	);
 	
 	$pages = get_posts( $args );

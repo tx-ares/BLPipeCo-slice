@@ -247,36 +247,36 @@ function initClampText() {
 
 function initSlider() {
 	"use strict";
-	console.log("Main Slider init!")
+	// console.log("Main Slider init!")
 	
-	$('.slider').each(function() {
-    	var parentWidth = $(this).parent().find('.slider-width-hack').width();
+	// $(".home-slider").each(function() {
+ //    	var parentWidth = $(this).parent().find(".slider-width-hack").width();
 		
-		if(window.matchMedia('only screen and (max-width: 1024px)').matches) {
-			parentWidth = $('body').prop('clientWidth');
-		}
+	// 	if(window.matchMedia("only screen and (max-width: 1024px)").matches) {
+	// 		parentWidth = $("body").prop("clientWidth");
+	// 	}
 		
-		$(this)
-			.on('init', function() {
-				$(this).width(parentWidth);
-			})
-			.slick({
-				lazyLoad: 'ondemand',
-				autoplaySpeed: 1000,
-				pauseOnHover: false,
-				dots:true,
-				responsive: [{
-				  breakpoint: 1024,
-				  settings: {
-					adaptiveHeight: true
-				  }
-				}]
-			});	
-    });
+	// 	$(this)
+	// 		.on("init", function() {
+	// 			$(this).width(parentWidth);
+	// 		})
+	// 		.slick({
+	// 			lazyLoad: "ondemand",
+	// 			autoplaySpeed: 1000,
+	// 			pauseOnHover: false,
+	// 			dots:true,
+	// 			responsive: [{
+	// 			  breakpoint: 1024,
+	// 			  settings: {
+	// 				adaptiveHeight: true
+	// 			  }
+	// 			}]
+	// 		});	
+ //    });
 	
-	$(".slider").slick();
+	// $(".home-slider").slick();
 	
-	$(window).trigger('resize');
+	// $(window).trigger('resize');
 	
 }
 
@@ -581,7 +581,7 @@ function initPanelSlider(){
 		        slidesToShow: 3,
 		        slidesToScroll: 1,
 		        centerMode: true,
-	        	centerPadding: '20px',
+	        	centerPadding: "20px",
 	        	infinite: true
 		      }
 		    },
@@ -591,7 +591,7 @@ function initPanelSlider(){
 		        slidesToShow: 1,
 		        slidesToScroll: 1,
 		        centerMode: true,
-	        	centerPadding: '20px',
+	        	centerPadding: "20px",
 	        	infinite: true
 		      }
 		    },
@@ -601,7 +601,7 @@ function initPanelSlider(){
 		        slidesToShow: 1,
 		        slidesToScroll: 1,
 		        centerMode: true,
-	        	centerPadding: '20px',
+	        	centerPadding: "20px",
 	        	infinite: true
 		      }
 		    }

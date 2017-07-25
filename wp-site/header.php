@@ -68,7 +68,7 @@
     </noscript>
 </head>
 
-<body class="inner header-sticky footer-sticky">
+<body <?php body_class(); ?>>
     <noscript>
         <div>Javascript must be enabled for the correct page display</div>
     </noscript>

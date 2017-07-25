@@ -69,7 +69,7 @@ get_header(); ?>
 <!-- ******************************************************* -->
 <section class="banner homepage">
     <div class="row" eq-height>
-        <div class="col-md-12 col-sm-12 col-xs-12 bg-content pull-right" eq-col data-img="http://placehold.it/640x310/d55441/ffffff">
+        <div class="col-md-12 col-sm-12 col-xs-12 bg-content pull-right" eq-col">
             <div class="slider-width-hack"></div>
             <div class="slider home-slider" data-slick='{"autoplay": "true", "autoplaySpeed":5000}'>
                 <?php echo blpc_primary_carousel(); ?>
@@ -91,18 +91,12 @@ get_header(); ?>
                             <div class="col-md-12 col-xs-12">
 
                                 <div class="feature-box white fullpage-centered">
-                                    <h1 class="text-upcase text-center no-margin-bot">About B&amp;L Pipeco</h1>
-                                    <p class="subtitle text-center">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-                                    </p>
-
-			                        <h3 class="title">
-			                        	<div class="container-fluid">
-			                        	<?php the_title(); ?>	
-			                        	</div>
-			                        </h3>
-			                        <div class="container-fluid">
+			                        <h1 class="title text-upcase text-center no-margin-bot">
+			                        	<?php the_title(); ?>			                        	
+			                        </h1>
+			                        <p class="subtitle text-center">
 			                            <?php the_content(); ?>
-			                        </div>
+			                        </p>
                                 </div>
 
                                 <div class="feature-slide-box no-img">
@@ -116,52 +110,52 @@ get_header(); ?>
                                                 <div class="panel-slider" eh-height>
                                                     <!-- Start Slider -->
                                                     <div class="slide-content" eq-col>
-                                                        <img src="_assets/images/ui/Pipes.png" class="icon">
+                                                        <img src="<?php echo get_template_directory_uri(); ?>/_assets/images/ui/Pipes.png" class="icon">
                                                         <h3 class="text-upcase">Casing &amp; Tubing Products</h3>
                                                         <p> Nam liber tempor cum soluta nobis eleifend option congue nihil imperdiet doming id quod mazim placerat facer possim assum.</p>
                                                     </div>
                                                     <div class="slide-content" eq-col>
-                                                        <img src="_assets/images/ui/canister2.png" class="icon">
+                                                        <img src="<?php echo get_template_directory_uri(); ?>/_assets/images/ui/canister2.png" class="icon">
                                                         <h3 class="text-upcase">Casing &amp; Tubing Products</h3>
                                                         <p> Nam liber tempor cum soluta nobis eleifend option congue nihil imperdiet doming id quod mazim placerat facer possim assum.</p>
                                                     </div>
                                                     <div class="slide-content" eq-col>
-                                                        <img src="_assets/images/ui/barometer.png" class="icon">
+                                                        <img src="<?php echo get_template_directory_uri(); ?>/_assets/images/ui/barometer.png" class="icon">
                                                         <h3 class="text-upcase">Casing &amp; Tubing Products</h3>
                                                         <p> Nam liber tempor cum soluta nobis eleifend option congue nihil imperdiet doming id quod mazim placerat facer possim assum.</p>
                                                     </div>
                                                     <div class="slide-content" eq-col>
-                                                        <img src="_assets/images/ui/pipevalve.png" class="icon">
+                                                        <img src="<?php echo get_template_directory_uri(); ?>/_assets/images/ui/pipevalve.png" class="icon">
                                                         <h3 class="text-upcase">Casing &amp; Tubing Products</h3>
                                                         <p> Nam liber tempor cum soluta nobis eleifend option congue nihil imperdiet doming id quod mazim placerat facer possim assum.</p>
                                                     </div>
                                                     <div class="slide-content" eq-col>
-                                                        <img src="_assets/images/ui/wrenchhand.png" class="icon">
+                                                        <img src="<?php echo get_template_directory_uri(); ?>/_assets/images/ui/wrenchhand.png" class="icon">
                                                         <h3 class="text-upcase">Casing &amp; Tubing Products</h3>
                                                         <p> Nam liber tempor cum soluta nobis eleifend option congue nihil imperdiet doming id quod mazim placerat facer possim assum.</p>
                                                     </div>
                                                     <div class="slide-content" eq-col>
-                                                        <img src="_assets/images/ui/Pipes.png" class="icon">
+                                                        <img src="<?php echo get_template_directory_uri(); ?>/_assets/images/ui/Pipes.png" class="icon">
                                                         <h3 class="text-upcase">Casing &amp; Tubing Products</h3>
                                                         <p> Nam liber tempor cum soluta nobis eleifend option congue nihil imperdiet doming id quod mazim placerat facer possim assum.</p>
                                                     </div>
                                                     <div class="slide-content" eq-col>
-                                                        <img src="_assets/images/ui/canister.png" class="icon">
+                                                        <img src="<?php echo get_template_directory_uri(); ?>/_assets/images/ui/canister.png" class="icon">
                                                         <h3 class="text-upcase">Casing &amp; Tubing Products</h3>
                                                         <p> Nam liber tempor cum soluta nobis eleifend option congue nihil imperdiet doming id quod mazim placerat facer possim assum.</p>
                                                     </div>
                                                     <div class="slide-content" eq-col>
-                                                        <img src="_assets/images/ui/barometer.png" class="icon">
+                                                        <img src="<?php echo get_template_directory_uri(); ?>/_assets/images/ui/barometer.png" class="icon">
                                                         <h3 class="text-upcase">Casing &amp; Tubing Products</h3>
                                                         <p> Nam liber tempor cum soluta nobis eleifend option congue nihil imperdiet doming id quod mazim placerat facer possim assum.</p>
                                                     </div>
                                                     <div class="slide-content" eq-col>
-                                                        <img src="_assets/images/ui/pipevalve.png" class="icon">
+                                                        <img src="<?php echo get_template_directory_uri(); ?>/_assets/images/ui/pipevalve.png" class="icon">
                                                         <h3 class="text-upcase">Casing &amp; Tubing Products</h3>
                                                         <p> Nam liber tempor cum soluta nobis eleifend option congue nihil imperdiet doming id quod mazim placerat facer possim assum.</p>
                                                     </div>
                                                     <div class="slide-content" eq-col>
-                                                        <img src="_assets/images/ui/wrenchhand.png" class="icon">
+                                                        <img src="<?php echo get_template_directory_uri(); ?>/_assets/images/ui/wrenchhand.png" class="icon">
                                                         <h3 class="text-upcase">Casing &amp; Tubing Products</h3>
                                                         <p> Nam liber tempor cum soluta nobis eleifend option congue nihil imperdiet doming id quod mazim placerat facer possim assum.</p>
                                                     </div>
@@ -171,7 +165,7 @@ get_header(); ?>
                                             <div class="panel-label">
                                                 <h2 class="text-flip text-upcase">Casing &amp; Tubing Products</h2>
                                                 <div class="txt-content">
-                                                    <img src="_assets/images/ui/Pipes.png" class="icon">
+                                                    <img src="<?php echo get_template_directory_uri(); ?>/_assets/images/ui/Pipes.png" class="icon">
                                                     <p> Nam liber tempor cum soluta nobis eleifend option congue nihil imperdiet doming id quod mazim placerat facer possim assum.</p>
                                                 </div>
                                             </div>
@@ -185,52 +179,52 @@ get_header(); ?>
                                                 <div class="panel-slider" eh-height>
                                                     <!-- Start Slider -->
                                                     <div class="slide-content" eq-col>
-                                                        <img src="_assets/images/ui/Pipes-white.png" class="icon">
+                                                        <img src="<?php echo get_template_directory_uri(); ?>/_assets/images/ui/Pipes-white.png" class="icon">
                                                         <h3 class="text-upcase">Upstream Products</h3>
                                                         <p> Nam liber tempor cum soluta nobis eleifend option congue nihil imperdiet doming id quod mazim placerat facer possim assum.</p>
                                                     </div>
                                                     <div class="slide-content" eq-col>
-                                                        <img src="_assets/images/ui/canister-white.png" class="icon">
+                                                        <img src="<?php echo get_template_directory_uri(); ?>/_assets/images/ui/canister-white.png" class="icon">
                                                         <h3 class="text-upcase">Upstream Products</h3>
                                                         <p> Nam liber tempor cum soluta nobis eleifend option congue nihil imperdiet doming id quod mazim placerat facer possim assum.</p>
                                                     </div>
                                                     <div class="slide-content" eq-col>
-                                                        <img src="_assets/images/ui/barometer-white.png" class="icon">
+                                                        <img src="<?php echo get_template_directory_uri(); ?>/_assets/images/ui/barometer-white.png" class="icon">
                                                         <h3 class="text-upcase">Upstream Products</h3>
                                                         <p> Nam liber tempor cum soluta nobis eleifend option congue nihil imperdiet doming id quod mazim placerat facer possim assum.</p>
                                                     </div>
                                                     <div class="slide-content" eq-col>
-                                                        <img src="_assets/images/ui/pipevalve-white.png" class="icon">
+                                                        <img src="<?php echo get_template_directory_uri(); ?>/_assets/images/ui/pipevalve-white.png" class="icon">
                                                         <h3 class="text-upcase">Upstream Products</h3>
                                                         <p> Nam liber tempor cum soluta nobis eleifend option congue nihil imperdiet doming id quod mazim placerat facer possim assum.</p>
                                                     </div>
                                                     <div class="slide-content" eq-col>
-                                                        <img src="_assets/images/ui/wrenchhand-white.png" class="icon">
+                                                        <img src="<?php echo get_template_directory_uri(); ?>/_assets/images/ui/wrenchhand-white.png" class="icon">
                                                         <h3 class="text-upcase">Upstream Products</h3>
                                                         <p> Nam liber tempor cum soluta nobis eleifend option congue nihil imperdiet doming id quod mazim placerat facer possim assum.</p>
                                                     </div>
                                                     <div class="slide-content" eq-col>
-                                                        <img src="_assets/images/ui/Pipes-white.png" class="icon">
+                                                        <img src="<?php echo get_template_directory_uri(); ?>/_assets/images/ui/Pipes-white.png" class="icon">
                                                         <h3 class="text-upcase">Upstream Products</h3>
                                                         <p> Nam liber tempor cum soluta nobis eleifend option congue nihil imperdiet doming id quod mazim placerat facer possim assum.</p>
                                                     </div>
                                                     <div class="slide-content" eq-col>
-                                                        <img src="_assets/images/ui/canister-white.png" class="icon">
+                                                        <img src="<?php echo get_template_directory_uri(); ?>/_assets/images/ui/canister-white.png" class="icon">
                                                         <h3 class="text-upcase">Upstream Products</h3>
                                                         <p> Nam liber tempor cum soluta nobis eleifend option congue nihil imperdiet doming id quod mazim placerat facer possim assum.</p>
                                                     </div>
                                                     <div class="slide-content" eq-col>
-                                                        <img src="_assets/images/ui/barometer-white.png" class="icon">
+                                                        <img src="<?php echo get_template_directory_uri(); ?>/_assets/images/ui/barometer-white.png" class="icon">
                                                         <h3 class="text-upcase">Upstream Products</h3>
                                                         <p> Nam liber tempor cum soluta nobis eleifend option congue nihil imperdiet doming id quod mazim placerat facer possim assum.</p>
                                                     </div>
                                                     <div class="slide-content" eq-col>
-                                                        <img src="_assets/images/ui/pipevalve-white.png" class="icon">
+                                                        <img src="<?php echo get_template_directory_uri(); ?>/_assets/images/ui/pipevalve-white.png" class="icon">
                                                         <h3 class="text-upcase">Upstream Products</h3>
                                                         <p> Nam liber tempor cum soluta nobis eleifend option congue nihil imperdiet doming id quod mazim placerat facer possim assum.</p>
                                                     </div>
                                                     <div class="slide-content" eq-col>
-                                                        <img src="_assets/images/ui/wrenchhand-white.png" class="icon">
+                                                        <img src="<?php echo get_template_directory_uri(); ?>/_assets/images/ui/wrenchhand-white.png" class="icon">
                                                         <h3 class="text-upcase">Upstream Products</h3>
                                                         <p> Nam liber tempor cum soluta nobis eleifend option congue nihil imperdiet doming id quod mazim placerat facer possim assum.</p>
                                                     </div>
@@ -240,7 +234,7 @@ get_header(); ?>
                                             <div class="panel-label">
                                                 <h2 class="text-upcase text-flip">Upstream Products</h2>
                                                 <div class="txt-content">
-                                                    <img src="_assets/images/ui/barrels.png" class="icon">
+                                                    <img src="<?php echo get_template_directory_uri(); ?>/_assets/images/ui/barrels.png" class="icon">
                                                     <p> Nam liber tempor cum soluta nobis eleifend option congue nihil imperdiet doming id quod mazim placerat facer possim assum.</p>
                                                 </div>
                                             </div>
@@ -280,38 +274,11 @@ get_header(); ?>
                                 </div>
                             </div>
                             <div class="col-md-5 col-sm-5 col-xs-12" eq-col>
-                                <div class="latest-articles darkblue-theme fh">
-                                    <h4 class="text-upcase">Latest Articles</h4>
-                                    <div class="txt-content">
-                                        <a href="#">
-                                            <h3>
-                                                Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis 
-                                                <span class="date">12th July 2017</span>
-                                            </h3>
-                                        </a>
-                                    </div>
-                                    <div class="txt-content">
-                                        <a href="#">
-                                            <h3>
-                                                Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis 
-                                                <span class="date">7th Aug 2017</span>
-                                            </h3>
-                                        </a>
-                                    </div>
-                                    <div class="txt-content">
-                                        <a href="#">
-                                            <h3>
-                                                Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis
-                                                <span class="date">30th Sept 2017</span>
-                                            </h3>
-                                        </a>
-                                    </div>
-                                    <div class="txt-subcontent">
-                                        <a href="#">
-                                            <span>View All Articles</span>
-                                        </a>
-                                    </div>
-                                </div>
+                                 
+                                <!--Latest News -->
+            					<?php echo blpc_home_news_list(); ?>
+
+                                
                             </div>
                         </div>
                     </div>
