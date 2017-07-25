@@ -94,9 +94,8 @@ get_header(); ?>
 			                        <h1 class="title text-upcase text-center no-margin-bot">
 			                        	<?php the_title(); ?>			                        	
 			                        </h1>
-			                        <p class="subtitle text-center">
 			                            <?php the_content(); ?>
-			                        </p>
+			                       
                                 </div>
 
                                 <div class="feature-slide-box no-img">
