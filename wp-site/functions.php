@@ -598,7 +598,7 @@ function blpc_insights_blog_list() {
 }
 
 /* primary carousel */
-function g2is_primary_carousel() { 
+function blpc_primary_carousel() { 
 	$args = array( 
 					'post_type' => 'carousel',
 					'orderby' => 'menu_order',
@@ -614,29 +614,31 @@ function g2is_primary_carousel() {
 		
 		$image = get_field('carousel_image', $page->ID);
 		$string .= '<div class="slider-item">
-										<img alt="'.$image['alt'].'"
-												 data-src="<575:'.$image['url'].',
-																				<768:'.$image['url'].',
-																				<1024:'.$image['url'].',
-																				<1280:'.$image['url'].',
-																				>1281:'.$image['url'].'"
-												 src="'.$image['url'].'" />
-										<div class="caption">
-												<div class="title top">
-														<h3><a href="' . get_field('carousel_button_link', $page->ID)  . '"><div class="text-title"><div>' . $page->post_title  . '</div></div><div class="plus-wrapper"><div class="plus"><div class="plus-icon horiz"></div><div class="plus-icon vert"></div></div></div></a></h3>
-												</div>
-												<div class="container-fluid">
-														<div class="row compressed">
-																<div class="col-sm-6 col-xs-12">
-																		' . get_field('carousel_caption', $page->ID)  . '
-																</div>
-														</div>
-												</div>
-												<div class="title">
-														<h3><a href="' . get_field('carousel_button_link', $page->ID)  . '"><div class="text-title"><div>' . $page->post_title  . '</div></div><div class="plus-wrapper"><div class="plus"><div class="plus-icon horiz"></div><div class="plus-icon vert"></div></div></div></a></h3>
-												</div>
+						<img alt="'.$image['alt'].'"
+								 data-src="<575:'.$image['url'].',
+								<768:'.$image['url'].',
+								<1024:'.$image['url'].',
+								<1280:'.$image['url'].',
+								>1281:'.$image['url'].'"
+								 src="'.$image['url'].'" />
+						<div class="caption">
+								<div class="title top">
+									<h3>
+										<a href="' . get_field('carousel_button_link', $page->ID)  . '"><div class="text-title"><div>' . $page->post_title  . '</div></div><div class="plus-wrapper"><div class="plus"><div class="plus-icon horiz"></div><div class="plus-icon vert"></div></div></div></a>
+									</h3>
+								</div>
+								<div class="container-fluid">
+									<div class="row compressed">
+										<div class="col-sm-6 col-xs-12">
+												' . get_field('carousel_caption', $page->ID)  . '
 										</div>
-								</div>';
+									</div>
+								</div>
+								<div class="title">
+									<h3><a href="' . get_field('carousel_button_link', $page->ID)  . '"><div class="text-title"><div>' . $page->post_title  . '</div></div><div class="plus-wrapper"><div class="plus"><div class="plus-icon horiz"></div><div class="plus-icon vert"></div></div></div></a></h3>
+								</div>
+						</div>
+				</div>';
 	}
 	echo $string;
 }
