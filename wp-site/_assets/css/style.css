@@ -1861,177 +1861,178 @@ footer {
 		@include max-screen($xmd) {
 			position:relative;
 		}*/ }
-.home .banner.homepage .home-slider {
-  position: relative;
-  min-height: 95vh;
-  width: 100%; }
-  @media only screen and (max-width: 992px) {
-    .home .banner.homepage .home-slider {
-      min-height: 360px;
-      height: 360; } }
-  .home .banner.homepage .home-slider .slick-list {
-    height: auto !important; }
-  .home .banner.homepage .home-slider .slider-item {
-    position: relative; }
-  .home .banner.homepage .home-slider .slick-arrow {
-    display: none !important; }
-  .home .banner.homepage .home-slider .slick-next,
-  .home .banner.homepage .home-slider .slick-prev {
-    top: 30vw; }
-    .home .banner.homepage .home-slider .slick-next:before,
-    .home .banner.homepage .home-slider .slick-prev:before {
-      content: '\f104';
-      font-family: "FontAwesome";
-      color: #fff;
-      font-size: 30px;
-      font-size: 1.875rem; }
-  .home .banner.homepage .home-slider .slick-prev {
-    left: 5%; }
-  .home .banner.homepage .home-slider .slick-next {
-    right: 5%; }
-    .home .banner.homepage .home-slider .slick-next:before {
-      content: '\f105'; }
-  .home .banner.homepage .home-slider .slick-dots {
-    padding-top: 129px; }
-    .home .banner.homepage .home-slider .slick-dots li {
-      width: 30px;
-      height: 10px; }
-  .home .banner.homepage .home-slider img {
-    width: 100%;
-    height: auto; }
-  .home .banner.homepage .home-slider .caption {
-    position: absolute;
-    bottom: 0;
+.home .banner.homepage {
+  max-height: 95vh; }
+  .home .banner.homepage .home-slider {
+    position: relative;
     width: 100%; }
-    .home .banner.homepage .home-slider .caption p {
-      margin-bottom: 35px;
-      font-weight: 400;
-      font-size: 30px;
-      font-size: 1.875rem;
-      color: #fff;
-      line-height: 120%; }
-      .home .banner.homepage .home-slider .caption p .text1 {
-        font-weight: 500;
-        font-size: 24px;
-        font-size: 1.5rem;
-        display: block; }
-      .home .banner.homepage .home-slider .caption p .text2 {
-        font-weight: 400;
-        font-size: 20px;
-        font-size: 1.25rem;
-        font-style: italic;
-        display: block; }
-    .home .banner.homepage .home-slider .caption .title {
-      background: rgba(0, 38, 59, 0.5);
-      text-align: right; }
-      .home .banner.homepage .home-slider .caption .title.top {
-        display: none; }
-    .home .banner.homepage .home-slider .caption h3 {
-      font-weight: 300;
-      font-size: 64px;
-      font-size: 4rem;
-      margin-bottom: 0;
-      position: relative;
-      padding-left: 10px;
-      display: inline-block;
-      color: #fff;
-      text-transform: none; }
-      .home .banner.homepage .home-slider .caption h3 a {
-        color: #fff;
-        display: block; }
-      .home .banner.homepage .home-slider .caption h3:before {
-        content: '';
-        width: 10px;
-        height: 10px;
-        background: #d0112b;
-        position: absolute;
-        left: -10px;
-        bottom: 39px; }
-      .home .banner.homepage .home-slider .caption h3 span {
-        background: rgba(208, 17, 43, 0.5);
-        display: inline-block;
-        height: 100%;
-        padding: 20px 45px;
-        margin-left: 35px; }
-  @media only screen and (max-width: 1500px) {
-    .home .banner.homepage .home-slider .caption p {
-      font-size: 26px;
-      font-size: 1.625rem; }
-    .home .banner.homepage .home-slider .caption h3 {
-      font-size: 54px;
-      font-size: 3.375rem; } }
-  @media only screen and (max-width: 1440px) {
-    .home .banner.homepage .home-slider .caption p {
-      font-size: 22px;
-      font-size: 1.375rem; }
-    .home .banner.homepage .home-slider .caption h3 {
-      font-size: 44px;
-      font-size: 2.75rem; }
-      .home .banner.homepage .home-slider .caption h3:before {
-        bottom: 29px; }
-      .home .banner.homepage .home-slider .caption h3 span {
-        padding: 15px 45px; } }
-  @media only screen and (max-width: 1280px) {
-    .home .banner.homepage .home-slider .row.compressed > [class*=col-] {
-      width: 70%; }
-    .home .banner.homepage .home-slider .caption p {
-      font-size: 20px;
-      font-size: 1.25rem;
-      margin-bottom: 20px; }
-      .home .banner.homepage .home-slider .caption p .text1 {
-        font-size: 20px;
-        font-size: 1.25rem; }
-      .home .banner.homepage .home-slider .caption p .text2 {
-        font-size: 16px;
-        font-size: 1rem; }
-    .home .banner.homepage .home-slider .caption h3 {
-      font-size: 36px;
-      font-size: 2.25rem; }
-      .home .banner.homepage .home-slider .caption h3:before {
-        bottom: 26px; }
-      .home .banner.homepage .home-slider .caption h3 span {
-        padding: 15px 30px; } }
-  @media only screen and (max-width: 1024px) {
+    @media only screen and (max-width: 992px) {
+      .home .banner.homepage .home-slider {
+        min-height: 360px;
+        height: 360; } }
+    .home .banner.homepage .home-slider .slick-list {
+      height: auto !important; }
+    .home .banner.homepage .home-slider .slider-item {
+      position: relative; }
     .home .banner.homepage .home-slider .slick-arrow {
-      display: block !important; }
-    .home .banner.homepage .home-slider .caption {
-      margin-top: -51px; }
-      .home .banner.homepage .home-slider .caption h3:before {
-        width: 7px;
-        height: 7px; }
-      .home .banner.homepage .home-slider .caption p {
-        padding: 20px 0;
-        padding-bottom: 5px; }
-        .home .banner.homepage .home-slider .caption p .text1 {
-          margin-bottom: 15px; }
-        .home .banner.homepage .home-slider .caption p .text2 {
-          margin-bottom: 15px; } }
-  @media only screen and (max-width: 575px) {
+      display: none !important; }
     .home .banner.homepage .home-slider .slick-next,
     .home .banner.homepage .home-slider .slick-prev {
-      top: 40vw; }
-    .home .banner.homepage .home-slider .row.compressed > [class*=col-] {
-      width: inherit; }
+      top: 30vw; }
+      .home .banner.homepage .home-slider .slick-next:before,
+      .home .banner.homepage .home-slider .slick-prev:before {
+        content: '\f104';
+        font-family: "FontAwesome";
+        color: #fff;
+        font-size: 30px;
+        font-size: 1.875rem; }
+    .home .banner.homepage .home-slider .slick-prev {
+      left: 5%; }
+    .home .banner.homepage .home-slider .slick-next {
+      right: 5%; }
+      .home .banner.homepage .home-slider .slick-next:before {
+        content: '\f105'; }
+    .home .banner.homepage .home-slider .slick-dots {
+      padding-top: 129px; }
+      .home .banner.homepage .home-slider .slick-dots li {
+        width: 30px;
+        height: 10px; }
+    .home .banner.homepage .home-slider img {
+      width: 100%;
+      height: auto; }
     .home .banner.homepage .home-slider .caption {
-      position: relative; }
-      .home .banner.homepage .home-slider .caption .title {
-        display: none; }
-        .home .banner.homepage .home-slider .caption .title.top {
-          display: block; }
-      .home .banner.homepage .home-slider .caption h3 {
-        font-size: 24px;
-        font-size: 1.5rem; }
-        .home .banner.homepage .home-slider .caption h3:before {
-          bottom: 18px; }
-        .home .banner.homepage .home-slider .caption h3 span {
-          padding: 10px 15px;
-          margin-left: 10px; }
+      position: absolute;
+      bottom: 0;
+      width: 100%; }
       .home .banner.homepage .home-slider .caption p {
-        font-size: 18px;
-        font-size: 1.125rem; }
-      .home .banner.homepage .home-slider .caption .container-fluid {
-        background: #00aa66;
-        min-height: 180px; } }
+        margin-bottom: 35px;
+        font-weight: 400;
+        font-size: 30px;
+        font-size: 1.875rem;
+        color: #fff;
+        line-height: 120%; }
+        .home .banner.homepage .home-slider .caption p .text1 {
+          font-weight: 500;
+          font-size: 24px;
+          font-size: 1.5rem;
+          display: block; }
+        .home .banner.homepage .home-slider .caption p .text2 {
+          font-weight: 400;
+          font-size: 20px;
+          font-size: 1.25rem;
+          font-style: italic;
+          display: block; }
+      .home .banner.homepage .home-slider .caption .title {
+        background: rgba(0, 38, 59, 0.5);
+        text-align: right; }
+        .home .banner.homepage .home-slider .caption .title.top {
+          display: none; }
+      .home .banner.homepage .home-slider .caption h3 {
+        font-weight: 300;
+        font-size: 64px;
+        font-size: 4rem;
+        margin-bottom: 0;
+        position: relative;
+        padding-left: 10px;
+        display: inline-block;
+        color: #fff;
+        text-transform: none; }
+        .home .banner.homepage .home-slider .caption h3 a {
+          color: #fff;
+          display: block; }
+        .home .banner.homepage .home-slider .caption h3:before {
+          content: '';
+          width: 10px;
+          height: 10px;
+          background: #d0112b;
+          position: absolute;
+          left: -10px;
+          bottom: 39px; }
+        .home .banner.homepage .home-slider .caption h3 span {
+          background: rgba(208, 17, 43, 0.5);
+          display: inline-block;
+          height: 100%;
+          padding: 20px 45px;
+          margin-left: 35px; }
+    @media only screen and (max-width: 1500px) {
+      .home .banner.homepage .home-slider .caption p {
+        font-size: 26px;
+        font-size: 1.625rem; }
+      .home .banner.homepage .home-slider .caption h3 {
+        font-size: 54px;
+        font-size: 3.375rem; } }
+    @media only screen and (max-width: 1440px) {
+      .home .banner.homepage .home-slider .caption p {
+        font-size: 22px;
+        font-size: 1.375rem; }
+      .home .banner.homepage .home-slider .caption h3 {
+        font-size: 44px;
+        font-size: 2.75rem; }
+        .home .banner.homepage .home-slider .caption h3:before {
+          bottom: 29px; }
+        .home .banner.homepage .home-slider .caption h3 span {
+          padding: 15px 45px; } }
+    @media only screen and (max-width: 1280px) {
+      .home .banner.homepage .home-slider .row.compressed > [class*=col-] {
+        width: 70%; }
+      .home .banner.homepage .home-slider .caption p {
+        font-size: 20px;
+        font-size: 1.25rem;
+        margin-bottom: 20px; }
+        .home .banner.homepage .home-slider .caption p .text1 {
+          font-size: 20px;
+          font-size: 1.25rem; }
+        .home .banner.homepage .home-slider .caption p .text2 {
+          font-size: 16px;
+          font-size: 1rem; }
+      .home .banner.homepage .home-slider .caption h3 {
+        font-size: 36px;
+        font-size: 2.25rem; }
+        .home .banner.homepage .home-slider .caption h3:before {
+          bottom: 26px; }
+        .home .banner.homepage .home-slider .caption h3 span {
+          padding: 15px 30px; } }
+    @media only screen and (max-width: 1024px) {
+      .home .banner.homepage .home-slider .slick-arrow {
+        display: block !important; }
+      .home .banner.homepage .home-slider .caption {
+        margin-top: -51px; }
+        .home .banner.homepage .home-slider .caption h3:before {
+          width: 7px;
+          height: 7px; }
+        .home .banner.homepage .home-slider .caption p {
+          padding: 20px 0;
+          padding-bottom: 5px; }
+          .home .banner.homepage .home-slider .caption p .text1 {
+            margin-bottom: 15px; }
+          .home .banner.homepage .home-slider .caption p .text2 {
+            margin-bottom: 15px; } }
+    @media only screen and (max-width: 575px) {
+      .home .banner.homepage .home-slider .slick-next,
+      .home .banner.homepage .home-slider .slick-prev {
+        top: 40vw; }
+      .home .banner.homepage .home-slider .row.compressed > [class*=col-] {
+        width: inherit; }
+      .home .banner.homepage .home-slider .caption {
+        position: relative; }
+        .home .banner.homepage .home-slider .caption .title {
+          display: none; }
+          .home .banner.homepage .home-slider .caption .title.top {
+            display: block; }
+        .home .banner.homepage .home-slider .caption h3 {
+          font-size: 24px;
+          font-size: 1.5rem; }
+          .home .banner.homepage .home-slider .caption h3:before {
+            bottom: 18px; }
+          .home .banner.homepage .home-slider .caption h3 span {
+            padding: 10px 15px;
+            margin-left: 10px; }
+        .home .banner.homepage .home-slider .caption p {
+          font-size: 18px;
+          font-size: 1.125rem; }
+        .home .banner.homepage .home-slider .caption .container-fluid {
+          background: #00aa66;
+          min-height: 180px; } }
 .home .main-content {
   padding-top: 0;
   padding-bottom: 0;

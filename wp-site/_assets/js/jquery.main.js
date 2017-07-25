@@ -1,4 +1,4 @@
-console.log("Mic check!, KOALA WORKS for JS - WP-Site - Check x9")
+console.log("Mic check!, KOALA WORKS for JS - WP-Site - Check x11")
 console.log(templateUrl, " <<template url")
 
 
@@ -264,19 +264,19 @@ function initSlider() {
 			})
 			.slick({
 				lazyLoad: "ondemand",
-				autoplaySpeed: 1000,
 				pauseOnHover: false,
 				dots:true,
+				autoplay: false,
 				responsive: [{
-				  breakpoint: 1024,
-				  settings: {
-					adaptiveHeight: true
-				  }
+				  breakpoint: 1024
+				 //  settings: {
+					// adaptiveHeight: true
+				 //  }
 				}]
 			});	
     });
 	
-	$(".home-slider").slick();
+	// $(".home-slider").slick();
 	
 	// $(window).trigger('resize');
 	

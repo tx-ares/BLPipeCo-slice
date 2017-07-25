@@ -2595,11 +2595,11 @@ footer {
     }
 
     .banner.homepage {
+         max-height: 95vh;
         .home-slider {
                 position: relative;
-                min-height: 95vh;
                 width: 100%;
-                
+
                 @include max-screen($md) {
                     min-height: 360px;
                     height: 360;
