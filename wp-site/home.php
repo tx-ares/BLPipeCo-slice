@@ -70,7 +70,6 @@ get_header(); ?>
 <section class="banner homepage">
     <div class="row" eq-height>
         <div class="col-md-12 col-sm-12 col-xs-12 bg-content pull-right" eq-col">
-            <div class="slider-width-hack"></div>
             <div class="slider home-slider" data-slick='{"autoplay": "true", "autoplaySpeed":5000}'>
                 <?php echo blpc_primary_carousel(); ?>
             </div>

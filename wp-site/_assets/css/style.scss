@@ -1814,6 +1814,16 @@ body {
                     margin-top: -140px;
                 }
             }
+
+            &.homepage {
+                .home-slider {
+                    min-height: 95vh;
+                }
+                @include max-screen($md) {
+                    min-height: 360px;
+                    height: 360px;
+                }
+            }
         }
         @include max-screen($smd) {
             .main-content {

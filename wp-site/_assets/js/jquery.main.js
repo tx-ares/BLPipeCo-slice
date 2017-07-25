@@ -1,4 +1,4 @@
-console.log("Mic check!, KOALA WORKS for JS - WP-Site - Check x5")
+console.log("Mic check!, KOALA WORKS for JS - WP-Site - Check x9")
 console.log(templateUrl, " <<template url")
 
 
@@ -249,34 +249,34 @@ function initClampText() {
 
 function initSlider() {
 	"use strict";
-	// console.log("Main Slider init!")
+	console.log("Main Slider init!")
 	
-	// $(".home-slider").each(function() {
- //    	var parentWidth = $(this).parent().find(".slider-width-hack").width();
+	$(".home-slider").each(function() {
+    	var parentWidth = $(this).parent().find(".slider-width-hack").width();
 		
-	// 	if(window.matchMedia("only screen and (max-width: 1024px)").matches) {
-	// 		parentWidth = $("body").prop("clientWidth");
-	// 	}
+		if(window.matchMedia("only screen and (max-width: 1024px)").matches) {
+			parentWidth = $("body").prop("clientWidth");
+		}
 		
-	// 	$(this)
-	// 		.on("init", function() {
-	// 			$(this).width(parentWidth);
-	// 		})
-	// 		.slick({
-	// 			lazyLoad: "ondemand",
-	// 			autoplaySpeed: 1000,
-	// 			pauseOnHover: false,
-	// 			dots:true,
-	// 			responsive: [{
-	// 			  breakpoint: 1024,
-	// 			  settings: {
-	// 				adaptiveHeight: true
-	// 			  }
-	// 			}]
-	// 		});	
- //    });
+		$(this)
+			.on("init", function() {
+				$(this).width(parentWidth);
+			})
+			.slick({
+				lazyLoad: "ondemand",
+				autoplaySpeed: 1000,
+				pauseOnHover: false,
+				dots:true,
+				responsive: [{
+				  breakpoint: 1024,
+				  settings: {
+					adaptiveHeight: true
+				  }
+				}]
+			});	
+    });
 	
-	// $(".home-slider").slick();
+	$(".home-slider").slick();
 	
 	// $(window).trigger('resize');
 	
@@ -780,7 +780,6 @@ jQuery(document).ready(function() {
 	initcollapsibleContent();
 	// initOpenCloseSearch();
 	initdataImageBackground();
-	initSlider();
 	initClampText();
 	initAccordion();
 
@@ -794,6 +793,8 @@ jQuery(document).ready(function() {
  	initAnimateWhenInView();
  	initMorePhoneFullScreenDropDown();
  	initBioBoxes();
+
+ 	initSlider();
 
 	RESPONSIVEUI.responsiveTabs();
 });

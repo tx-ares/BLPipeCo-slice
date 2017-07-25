@@ -1302,6 +1302,12 @@ body {
     body.homepage .banner img {
       height: 100vh;
       margin-top: -140px; } }
+  body.homepage .banner.homepage .home-slider {
+    min-height: 95vh; }
+  @media only screen and (max-width: 992px) {
+    body.homepage .banner.homepage {
+      min-height: 360px;
+      height: 360px; } }
   @media only screen and (max-width: 865px) {
     body.homepage .main-content {
       padding-top: 0; } }
