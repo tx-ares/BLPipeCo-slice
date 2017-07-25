@@ -83,7 +83,7 @@
                     <div class="col-xs-4">
                         <div class="tframe fh fw">
                             <div class="tcell valign-mid text-right">
-                                <a href="#" class="logo">
+                                <a href="/" class="logo">
                                     <img src="<?php echo get_template_directory_uri(); ?>/_assets/images/BLPipeco_Logo-Horizontal.png" alt="BLPipeCo" />
                                 </a>
                             </div>
