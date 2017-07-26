@@ -1889,9 +1889,21 @@ footer {
       transition: all 0.3s; }
       @media only screen and (max-width: 992px) {
         .home .banner.homepage .slider-container .home-slider .slider-item {
-          max-height: 360px; } }
+          max-height: 360px; }
+          .home .banner.homepage .slider-container .home-slider .slider-item p, .home .banner.homepage .slider-container .home-slider .slider-item h1, .home .banner.homepage .slider-container .home-slider .slider-item h2, .home .banner.homepage .slider-container .home-slider .slider-item h3 {
+            font-size: 20px;
+            font-size: 1.25rem; } }
       .home .banner.homepage .slider-container .home-slider .slider-item .btn.whiteline {
-        padding: 0; }
+        padding: 0;
+        position: relative; }
+        .home .banner.homepage .slider-container .home-slider .slider-item .btn.whiteline a {
+          position: absolute;
+          width: 100%;
+          left: 0; }
+        .home .banner.homepage .slider-container .home-slider .slider-item .btn.whiteline:hover {
+          background: #fff; }
+          .home .banner.homepage .slider-container .home-slider .slider-item .btn.whiteline:hover a {
+            color: #00263b; }
       .home .banner.homepage .slider-container .home-slider .slider-item .subtext-box {
         top: 35% !important; }
     .home .banner.homepage .slider-container .home-slider .slick-next:before,

@@ -2666,9 +2666,26 @@ footer {
                     @include transition(all .3s);
                     @include max-screen($md) {
                         max-height: 360px;
+
+                        p, h1, h2, h3 {
+                            @include font-size(20px);
+                        }
                     }
                     .btn.whiteline {
                         padding: 0;
+                        position: relative;
+                        a {
+                            position: absolute;
+                            width: 100%;
+                            left: 0;
+                        }
+                        &:hover {
+                            background: $colorWhite;
+
+                            a {
+                                color: $colorDarkBlue;
+                            }
+                        }
                     }
                     .subtext-box {
                         top: 35% !important;

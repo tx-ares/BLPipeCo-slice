@@ -701,7 +701,7 @@ function blpc_primary_carousel() {
 							</p>
 						
 							<span class="btn whiteline">
-								<a href="' . get_field('carousel_button_link', $page->ID)  . '">' . get_field('carousel_button_text') . '
+								<a href="' . get_field('carousel_button_link', $page->ID)  . '">' . get_field('carousel_button_text', $page->ID) . '
 								</a>
 							</span>
 						</div>
