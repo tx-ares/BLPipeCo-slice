@@ -556,7 +556,7 @@ function g2is_home_news_list() {
 }
 
 function blpc_home_news_list() {
-	$args = array( 'numberposts' => '5',
+	$args = array( 'numberposts' => '3',
 					'category_name' => 'latest-news');
 
 	$recent_posts = wp_get_recent_posts($args);

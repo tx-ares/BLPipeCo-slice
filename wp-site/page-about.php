@@ -16,7 +16,6 @@ get_header(); ?>
                         <img alt="BL Pipeco " data-src="<575:<?php echo the_post_thumbnail_url('full'); ?>, <768:<?php echo the_post_thumbnail_url('full'); ?>,>768:<?php echo the_post_thumbnail_url('full'); ?>" />
                         <div class="subtext-box">
                             <h1><?php the_title(); ?> </h1>
-                             <h2><?php echo get_field('resources_menu_description'); ?></h2>
                         </div>
                     </div>
                 </div>
@@ -33,15 +32,14 @@ get_header(); ?>
     <!-- Main Content -->
     <!-- ******************************************************* -->
     <section class="main-content">
-        <div class="row compressed">
+        <div class="row compressed" eq-height>
             <!-- ******************************************************* -->
             <!-- Main Content -->
             <!-- ******************************************************* -->
-            <div class="col-md-7 col-sm-7 col-xs-12 main">
+            <div class="col-md-7 col-sm-7 col-xs-12 main" eq-col>
                 <div class="row compressed">
                     <div class="col-md-offset-3 col-md-9">
                         <div class="container-fluid">
-                            <h2 class="text-upcase"><?php the_title(); ?></h2>
 
                             <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
                             <?php the_content(); ?>
@@ -54,12 +52,12 @@ get_header(); ?>
             <!-- ******************************************************* -->
             <!-- Aside Content -->
             <!-- ******************************************************* -->
-            <div class="col-md-5 col-sm-5 col-xs-12 aside">              
+            <div class="col-md-5 col-sm-5 col-xs-12 aside" eq-col>              
                     <!-- Send Request -->
                     <div class="send-request" toggle-active-parent>
                         <!-- <a href="#" class="btn orange fw">Send Us a Request</a> -->
-                        <div class="row full-scr">
-                            <div class="col-sm-7 col-xs-7 fh">
+                        <div class="row full-scr" eq-height>
+                            <div class="col-sm-7 col-xs-7 fh" eq-col>
                                 <a href="#" class="tframe fh fw">
                                     <div class="tcell valign-mid call-us">
                                         <p class="h3">Get in Touch</p>
@@ -68,7 +66,7 @@ get_header(); ?>
                                     </div>
                                 </a>
                             </div>
-                            <div class="col-sm-5 col-xs-5 fh">
+                            <div class="col-sm-5 col-xs-5 fh" eq-col>
                                 <div class="tframe fw fh popdown-phonenum">
                                     <div class="tcell valign-mid phone-opener" toggle-active-opener><i class="fa fa-mobile" aria-hidden="true"></i> <span class="more">More</span><span class="less">Less</span> <i class="fa fa-angle-down" aria-hidden="true"></i></div>
                                 </div>
