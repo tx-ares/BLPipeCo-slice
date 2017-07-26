@@ -687,24 +687,22 @@ function blpc_primary_carousel() {
 								<1280:'.$image['url'].',
 								>1281:'.$image['url'].'"
 								 src="'.$image['url'].'" />
-						<div class="caption">
-								<div class="title top">
-									<h3>
-										<a href="' . get_field('carousel_button_link', $page->ID)  . '"><div class="text-title"><div>' . $page->post_title  . '</div></div><div class="plus-wrapper"><div class="plus"><div class="plus-icon horiz"></div><div class="plus-icon vert"></div></div></div></a>
-									</h3>
-								</div>
-								<div class="container-fluid">
-									<div class="row compressed">
-										<div class="col-sm-6 col-xs-12">
-												' . get_field('carousel_caption', $page->ID)  . '
-										</div>
-									</div>
-								</div>
-								<div class="title">
-									<h3><a href="' . get_field('carousel_button_link', $page->ID)  . '"><div class="text-title"><div>' . $page->post_title  . '</div></div><div class="plus-wrapper"><div class="plus"><div class="plus-icon horiz"></div><div class="plus-icon vert"></div></div></div></a></h3>
-								</div>
+						<div class="subtext-box text-center">
+							<p class="h1">'
+								 . $page->post_title  . '</a>
+							</p>
+							
+							
+							<p class="h2">
+								' . get_field('carousel_caption', $page->ID)  . '
+							</p>
+						
+							<span class="btn whiteline">
+								<a href="' . get_field('carousel_button_link', $page->ID)  . '">
+								</a>
+							</span>
 						</div>
-				</div>';
+					</div>';
 	}
 	echo $string;
 }

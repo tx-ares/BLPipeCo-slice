@@ -267,12 +267,14 @@ function initSlider() {
 				pauseOnHover: false,
 				dots:true,
 				autoplay: false,
-				responsive: [{
-				  breakpoint: 1024
+				mobileFirst: true
+
+				// responsive: [{
+				//   breakpoint: 1024
 				 //  settings: {
 					// adaptiveHeight: true
 				 //  }
-				}]
+				// }]
 			});	
     });
 	
