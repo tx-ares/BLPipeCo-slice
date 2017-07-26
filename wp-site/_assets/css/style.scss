@@ -2643,6 +2643,7 @@ footer {
                 width: 100%;
                 display: block !important;
                 // height: 0;
+                max-height: 95vh;
 
                 @include max-screen($md) {
                     min-height: 360px;

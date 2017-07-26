@@ -675,11 +675,12 @@ function blpc_primary_carousel() {
 	);
 	
 	$pages = get_posts( $args );
+	$string = '';
 	
 	foreach ( $pages as $page ) {
 		
 		$image = get_field('carousel_image', $page->ID);
-		$string .= '<div class="slider-item">
+		$string .= '<div class="slider-item" eq-col>
 						<img alt="'.$image['alt'].'"
 								 data-src="<575:'.$image['url'].',
 								<768:'.$image['url'].',
