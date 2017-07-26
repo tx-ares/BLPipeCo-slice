@@ -41,46 +41,46 @@ function blpc_init() {
 add_action( 'init', 'blpc_init' );
 
 /* search menu */
-function g2is_search_menu($items, $args) {
+function blpc_search_menu($items, $args) {
     if($args->theme_location == 'main-menu'){
        $menu_item = '<li class="search">
-											<a href="#" class="top-search-opener"><i class="fa fa-search" aria-hidden="true"></i></a>
-											<div class="search-box">
-													<form class="tframe fh fw" role="search" method="get" class="search-form" action="'. esc_url( home_url( '/' ) ) .'">
-															<div class="tcell valign-mid">
-																	<div class="row compressed" eq-height>
-																			<div class="col-xs-offset-3 col-xs-6" eq-col>
-																					<div class="tframe fh fw">
-																							<div class="tcell valign-mid">
-																									<input type="text" placeholder="Enter Search here..." value="'.get_search_query().'" name="s" />
-																							</div>
-																					</div>
-																			</div>
-																			<div class="col-xs-3" eq-col>
-																					<div class="tframe fh fw">
-																							<div class="tcell valign-mid">
-																									<button type="submit" class="search-btn"><i class="fa fa-search" aria-hidden="true"></i></button>
-																									<a href="#" class="search-close"><span class="close thick"></span></a>
-																							</div>
-																					</div>
-																			</div>
-																	</div>
-															</div>
-													</form>
+						<a href="#" class="top-search-opener"><i class="fa fa-search" aria-hidden="true"></i></a>
+						<div class="search-box">
+							<form class="tframe fh fw" role="search" method="get" class="search-form" action="'. esc_url( home_url( '/' ) ) .'">
+								<div class="tcell valign-mid">
+									<div class="row compressed" eq-height>
+										<div class="col-xs-offset-3 col-xs-6" eq-col>
+											<div class="tframe fh fw">
+												<div class="tcell valign-mid">
+														<input type="text" placeholder="Enter Search here..." value="'.get_search_query().'" name="s" />
+												</div>
 											</div>
-									</li>';
+										</div>
+										<div class="col-xs-3" eq-col>
+											<div class="tframe fh fw">
+												<div class="tcell valign-mid">
+														<button type="submit" class="search-btn"><i class="fa fa-search" aria-hidden="true"></i></button>
+														<a href="#" class="search-close"><span class="close thick"></span></a>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</form>
+						</div>
+					</li>';
        $items = $items . $menu_item;
     }
     return $items;
 }
-add_filter('wp_nav_menu_items', 'g2is_search_menu', 10, 2);
+add_filter('wp_nav_menu_items', 'blpc_search_menu', 10, 2);
 
 /* sidebar */
-function g2is_widgets_init() {
+function blpc_widgets_init() {
 	register_sidebar( array(
-		'name'          => __( 'General', 'g2is' ),
+		'name'          => __( 'General', 'blpc' ),
 		'id'            => 'sidebar_general',
-		'description'   => __( 'General', 'g2is' ),
+		'description'   => __( 'General', 'blpc' ),
 		'before_widget' => '<div id="%1$s" class="widget %2$s">',
 		'after_widget'  => '</div>',
 		'before_title' => '<span class="hidden">',
@@ -88,9 +88,9 @@ function g2is_widgets_init() {
 	) );
 	
 	register_sidebar( array(
-		'name'          => __( 'Services', 'g2is' ),
+		'name'          => __( 'Services', 'blpc' ),
 		'id'            => 'sidebar_services',
-		'description'   => __( 'Services', 'g2is' ),
+		'description'   => __( 'Services', 'blpc' ),
 		'before_widget' => '<div id="%1$s" class="widget %2$s">',
 		'after_widget'  => '</div>',
 		'before_title' => '<span class="hidden">',
@@ -98,9 +98,9 @@ function g2is_widgets_init() {
 	) );
 	
 	register_sidebar( array(
-		'name'          => __( 'Solutions', 'g2is' ),
+		'name'          => __( 'Solutions', 'blpc' ),
 		'id'            => 'sidebar_solutionss',
-		'description'   => __( 'Solutions', 'g2is' ),
+		'description'   => __( 'Solutions', 'blpc' ),
 		'before_widget' => '<div id="%1$s" class="widget %2$s">',
 		'after_widget'  => '</div>',
 		'before_title' => '<span class="hidden">',
@@ -108,9 +108,9 @@ function g2is_widgets_init() {
 	) );
 	
 	register_sidebar( array(
-		'name'          => __( 'Insights', 'g2is' ),
+		'name'          => __( 'Insights', 'blpc' ),
 		'id'            => 'sidebar_insights',
-		'description'   => __( 'Insights', 'g2is' ),
+		'description'   => __( 'Insights', 'blpc' ),
 		'before_widget' => '<div id="%1$s" class="widget %2$s">',
 		'after_widget'  => '</div>',
 		'before_title' => '<span class="hidden">',
@@ -118,9 +118,9 @@ function g2is_widgets_init() {
 	) );
 	
 	register_sidebar( array(
-		'name'          => __( 'Company', 'g2is' ),
-		'id'            => 'sidebar_company',
-		'description'   => __( 'Company', 'g2is' ),
+		'name'          => __( 'About', 'blpc' ),
+		'id'            => 'sidebar_about',
+		'description'   => __( 'About', 'blpc' ),
 		'before_widget' => '<div id="%1$s" class="widget %2$s">',
 		'after_widget'  => '</div>',
 		'before_title' => '<span class="hidden">',
@@ -128,9 +128,9 @@ function g2is_widgets_init() {
 	) );
 	
 	register_sidebar( array(
-		'name'          => __( 'People', 'g2is' ),
+		'name'          => __( 'People', 'blpc' ),
 		'id'            => 'sidebar_people',
-		'description'   => __( 'People', 'g2is' ),
+		'description'   => __( 'People', 'blpc' ),
 		'before_widget' => '<div id="%1$s" class="widget %2$s">',
 		'after_widget'  => '</div>',
 		'before_title' => '<span class="hidden">',
@@ -138,9 +138,9 @@ function g2is_widgets_init() {
 	) );
 	
 	register_sidebar( array(
-		'name'          => __( 'News', 'g2is' ),
+		'name'          => __( 'News', 'blpc' ),
 		'id'            => 'sidebar_news',
-		'description'   => __( 'News', 'g2is' ),
+		'description'   => __( 'News', 'blpc' ),
 		'before_widget' => '<div id="%1$s" class="widget %2$s">',
 		'after_widget'  => '</div>',
 		'before_title' => '<span class="hidden">',
@@ -148,16 +148,16 @@ function g2is_widgets_init() {
 	) );
 	
 	register_sidebar( array(
-		'name'          => __( 'Webinars', 'g2is' ),
+		'name'          => __( 'Webinars', 'blpc' ),
 		'id'            => 'sidebar_webinars',
-		'description'   => __( 'Webinars', 'g2is' ),
+		'description'   => __( 'Webinars', 'blpc' ),
 		'before_widget' => '<div id="%1$s" class="widget %2$s">',
 		'after_widget'  => '</div>',
 		'before_title' => '<span class="hidden">',
 		'after_title' => '</span>'
 	) );
 }
-add_action( 'widgets_init', 'g2is_widgets_init' );
+add_action( 'widgets_init', 'blpc_widgets_init' );
 
 add_filter( 'body_class', function( $classes ) {
     return array_merge( $classes, array( 'header-sticky footer-sticky' ) );
@@ -181,11 +181,11 @@ function page_body_class( $classes ) {
 	else if(is_page_template('page-insight.php')) {
 		$classes[] = 'inner main-content-fullpage';
 	}
-	else if(is_page_template('page-company.php')) {
+	else if(is_page_template('page-about.php')) {
 		$classes[] = 'fullpage main-content-fullpage';
 	}
 	else if(is_page_template('page-people.php')) {
-		$classes[] = 'inner';
+		$classes[] = 'inner bio';
 	}
 	else if(is_singular('solutions')) {
 		$classes[] = 'home home-solutions';

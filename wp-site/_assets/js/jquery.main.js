@@ -1,6 +1,5 @@
 console.log("Mic check!, KOALA WORKS for JS - WP-Site - Check x11")
-console.log(templateUrl, " <<template url")
-
+// console.log(templateUrl, " <<template url")
 
 function showPage() {
 	"use strict";
