@@ -269,10 +269,7 @@ function initSlider() {
 				autoplay: false,
 				mobileFirst: true,
 				fade: true,
-				cssEase: 'linear',
 				infinite: true
-
-
 				// responsive: [{
 				//   breakpoint: 1024
 				 //  settings: {
@@ -401,15 +398,15 @@ function doneResizing() {
 }
 
 var resizeId;
-$(window).resize(function() {
-	"use strict";
+// $(window).resize(function() {
+// 	"use strict";
 	
-	clearTimeout(resizeId);
-    resizeId = setTimeout(doneResizing, 500);
+// 	clearTimeout(resizeId);
+//     resizeId = setTimeout(doneResizing, 500);
 	
-	resizeSlider();
-	// removeMatchHeight();
-});
+// 	resizeSlider();
+// 	// removeMatchHeight();
+// });
 
 $(window).load(function () {
 	"use strict";

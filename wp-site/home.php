@@ -71,8 +71,8 @@ get_header(); ?>
     <div class="row">
         <div class="col-md-12 col-sm-12 col-xs-12 bg-content">
         	<div class="slider-container fh fw">
-            	<div class="slider-width-hack"></div>
-	            <div class="slider home-slider" eq-height>
+<!--             	<div class="slider-width-hack"></div>
+ -->	            <div class="slider home-slider">
 	                <?php echo blpc_primary_carousel(); ?>
 	            </div>
             </div>

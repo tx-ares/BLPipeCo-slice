@@ -167,6 +167,8 @@ add_filter( 'body_class', function( $classes ) {
 add_filter( 'body_class', 'page_body_class' );
 function page_body_class( $classes ) {
 	
+	$page_template = get_page_template_slug( get_queried_object_id() );
+
 	if(is_home()) {
 		$classes[] = 'home homepage';
 	}
@@ -676,11 +678,11 @@ function blpc_primary_carousel() {
 	
 	$pages = get_posts( $args );
 	$string = '';
-	
+
 	foreach ( $pages as $page ) {
 		
 		$image = get_field('carousel_image', $page->ID);
-		$string .= '<div class="slider-item" eq-col>
+		$string .= '<div class="slider-item">
 						<img alt="'.$image['alt'].'"
 								 data-src="<575:'.$image['url'].',
 								<768:'.$image['url'].',
