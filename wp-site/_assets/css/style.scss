@@ -2627,9 +2627,10 @@ footer {
     }
 
     .banner.homepage {
+
         .row {
             >[class*=col-] {
-                max-height: 95vh;
+                max-height: 100vh;
             }
         }
 
@@ -2640,10 +2641,10 @@ footer {
            
             .home-slider {
                 position: relative;
-                width: 100%;
+                width: 100% !important;
                 display: block !important;
                 // height: 0;
-                max-height: 95vh;
+                max-height: 100vh;
 
                 @include max-screen($md) {
                     min-height: 360px;
@@ -2652,7 +2653,7 @@ footer {
 
                 .slick-list {
                     height: 100%!important;
-                    max-height: 95vh;
+                    max-height: 100vh;
                     .slick-track {
                         // height: 100%;
                     }
@@ -2661,6 +2662,7 @@ footer {
                 .slider-item {
                     position: relative;
                     height: 100% !important;
+                    max-height: 100vh;
                     @include transition(all .3s);
                     @include max-screen($md) {
                         max-height: 360px;

@@ -393,7 +393,7 @@ function doneResizing() {
 		$('body').removeClass('no-scrollbar');
 	}
 	
-	resizeSlider();
+	// resizeSlider();
 	initMatchHeight();
 }
 
@@ -764,6 +764,7 @@ $(window).scroll(function(){
 $(window).resize(function(){
 	initHideElementsIfHomePageTop();
 	resetPanels(); 
+	doneResizing();
 });
 //
 
