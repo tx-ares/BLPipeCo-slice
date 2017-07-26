@@ -40,7 +40,7 @@ get_header(); ?>
                 <div class="col-md-offset-3 col-md-9">
                     <div class="container-fluid">
                         <div class="articles darkblue">
-                            <h2>News &amp; Events</h2>
+                            <h2>Blog</h2>
                             <p class="subtitle">
                                	Striving to stay on top of continual changes in the industry and keeping our customers informed on new regulations, continually growing operations, and upcoming events.
                             </p>
@@ -51,9 +51,10 @@ get_header(); ?>
 
 								
 								$args = array( 'posts_per_page' => 10, 
-														'category_name' => 'latest-news',
-														'paged' => $paged,
-														'post_type' => 'post');
+												'category_name' => 'blog',
+												'paged' => $paged,
+												'post_type' => 'post'
+											);
 								
 								
 								$postslist = new WP_Query( $args );

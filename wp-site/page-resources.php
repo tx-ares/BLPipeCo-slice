@@ -51,9 +51,9 @@ get_header(); ?>
 
 								
 								$args = array( 'posts_per_page' => 10, 
-														'category_name' => 'resources',
-														'paged' => $paged,
-														'post_type' => 'post');
+												'category_name' => 'resources',
+												'paged' => $paged,
+												'post_type' => 'post');
 								
 								
 								$postslist = new WP_Query( $args );
