@@ -3670,7 +3670,6 @@ footer {
         }
 
         @include max-screen($sm) {
-            bottom: 33%;
 
             h1 {
                 @include font-size(24px);
