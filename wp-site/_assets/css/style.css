@@ -1877,12 +1877,15 @@ footer {
         min-height: 360px;
         height: 360px; } }
     .home .banner.homepage .slider-container .home-slider .slick-list {
-      height: auto !important;
+      height: 100% !important;
       max-height: 95vh; }
     .home .banner.homepage .slider-container .home-slider .slider-item {
       position: relative; }
       .home .banner.homepage .slider-container .home-slider .slider-item .btn.whiteline {
         padding: 0; }
+      .home .banner.homepage .slider-container .home-slider .slider-item .subtext-box {
+        top: 25% !important;
+        bottom: unset !important; }
     .home .banner.homepage .slider-container .home-slider .slick-next,
     .home .banner.homepage .slider-container .home-slider .slick-prev {
       top: 30vw; }
@@ -1899,11 +1902,9 @@ footer {
       right: 5%; }
       .home .banner.homepage .slider-container .home-slider .slick-next:before {
         content: '\f105'; }
-    .home .banner.homepage .slider-container .home-slider .slick-dots {
-      bottom: 45px; }
-      .home .banner.homepage .slider-container .home-slider .slick-dots li {
-        width: 30px;
-        height: 10px; }
+    .home .banner.homepage .slider-container .home-slider .slick-dots li {
+      width: 30px;
+      height: 10px; }
     .home .banner.homepage .slider-container .home-slider img {
       width: 100%;
       height: auto; }

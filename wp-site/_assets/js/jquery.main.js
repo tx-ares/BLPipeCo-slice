@@ -267,7 +267,11 @@ function initSlider() {
 				pauseOnHover: false,
 				dots:true,
 				autoplay: false,
-				mobileFirst: true
+				mobileFirst: true,
+				fade: true,
+				cssEase: 'linear',
+				infinite: true
+
 
 				// responsive: [{
 				//   breakpoint: 1024

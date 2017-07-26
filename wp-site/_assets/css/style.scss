@@ -2651,7 +2651,7 @@ footer {
                 }
 
                 .slick-list {
-                    height: auto!important;
+                    height: 100%!important;
                     max-height: 95vh;
                 }
 
@@ -2659,6 +2659,10 @@ footer {
                     position: relative;
                     .btn.whiteline {
                         padding: 0;
+                    }
+                    .subtext-box {
+                        top: 25% !important;
+                        bottom: unset !important;
                     }
                 }
 
@@ -2691,7 +2695,7 @@ footer {
                 }
 
                 .slick-dots {
-                    bottom: 45px;
+                    // bottom: 45px;
                     // top: 40px;
                     // right: 40px;
                     // padding-top: 129px; // display: inline-block!important;
