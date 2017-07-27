@@ -942,15 +942,17 @@ function blpc_submenu_list_pages($post_type) {
   global $post;
 	$args = array( 
           'posts_per_page' => -1,
-					'orderby' => 'menu_order', 
-					'order' => 'asc',
+		  'orderby' => 'menu_order', 
+		  'order' => 'asc',
           'post_parent' => $post->ID,
           'post_type' => $post_type
 	);
 	
 	$pages = get_posts( $args );
+	$string = '';
+	$target = '';
 
-  $string = '<ul>';
+  	$string = '<ul>';
 	foreach ( $pages as $page ) {
 
 		$string .= '<li class="'. ($page->ID == $post->ID ? 'current_page_item' : '') .'">

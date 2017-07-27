@@ -160,14 +160,17 @@ get_header(); ?>
         <!-- Side Navigation -->
         <div class="side-nav">
            <?php
-              $id = get_the_ID();
-              $services_id_array = array(1964,1617,1620,1623,1625,1627);
+             //  $id = get_the_ID();
+             //  $services_id_array = array(1964,1617,1620,1623,1625,1627);
               
-             if ( in_array($id, $services_id_array) ) :
-                  echo blpc_submenu_list_pages('services');
-             else :        
+             // if ( in_array($id, $services_id_array) ) :
+             //      debug_to_console( "Cond - 1 PASS" );
+             //      echo blpc_submenu_list_pages('services');
+             // else : 
+             //      debug_to_console( "Cond - 1 FAIL" );
                   echo blpc_custom_menu_list_pages('services'); 
-          endif; ?>
+              // endif; 
+            ?>
         </div>
 
         <!-- Sidebar Sevices -->
