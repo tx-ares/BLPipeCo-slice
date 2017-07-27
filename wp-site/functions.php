@@ -226,6 +226,35 @@ function g2is_solutions_tile_pages() {
 	echo $string;
 }
 
+/* OCTG Products */
+function blpc_octgproducts_tile_pages() { 
+	$args = array( 
+		'parent' => 0,
+		'exclude' => 2347,
+		'sort_column' => 'menu_order', 
+		'sort_order' => 'asc',
+		'post_type' => 'solutions'
+	);
+	
+	$pages = get_pages( $args );
+	$string = '';
+	foreach ( $pages as $page ) { 
+		$icon = get_field('page_menu_icon', $page->ID);
+		$string .= '<div class="col-lg-3 col-md-4 col-sm-4 col-xs-6" eq-col>
+                    <a href="'.get_post_permalink( $page->ID ).'" class="tframe fw fh text-center item-box">
+                        <div class="tcell valign-mid">
+                            <div class="container-fluid">
+                                <img src="'.$icon['url'].'" alt="'.$icon['alt'].'" class="icon" />
+                                <h2>' . $page->post_title . '</h2>
+                                <p class="details">' . get_field('page_menu_desc', $page->ID)  . '</p>
+                            </div>
+                        </div>
+                    </a>	
+                </div>';	
+	}
+	echo $string;
+}
+
 /* services */
 function blpc_services_tile_pages() { 
 	$args = array( 

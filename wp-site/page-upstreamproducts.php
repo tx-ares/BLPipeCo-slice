@@ -1,6 +1,6 @@
 <?php 
 
-/* Template Name: Upsteam Products */ 
+/* Template Name: Upstream Products */ 
 
 get_header(); ?>
         
@@ -15,7 +15,16 @@ get_header(); ?>
                     <div class="container-fluid no-padding ">
                         <img alt="BL Pipeco " data-src="<575:<?php echo the_post_thumbnail_url('full'); ?>, <768:<?php echo the_post_thumbnail_url('full'); ?>,>768:<?php echo the_post_thumbnail_url('full'); ?>" />
                         <div class="subtext-box">
-                            <h1><?php the_title(); ?> </h1>
+                            <h1>
+                                <?php 
+                                    if(get_field('alternate_h1_heading')) {
+                                        echo get_field('alternate_h1_heading');
+                                    }
+                                    else {
+                                        the_title();
+                                    }; 
+                                ?>
+                            </h1>
                         </div>
                     </div>
                 </div>
