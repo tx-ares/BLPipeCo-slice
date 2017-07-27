@@ -954,8 +954,8 @@ function blpc_submenu_list_pages($post_type) {
 	foreach ( $pages as $page ) {
 
 		$string .= '<li class="'. ($page->ID == $post->ID ? 'current_page_item' : '') .'">
-									<a href="' . get_permalink( $page->ID ) . '" '.$target.'>' . $page->post_title . '</a>
-								</li>';
+						<a href="' . get_permalink( $page->ID ) . '" '.$target.'>' . $page->post_title . '</a>
+					</li>';
 	}
 	$string .= '</ul>';
 
@@ -967,12 +967,12 @@ function blpc_submenu_list_pages($post_type) {
 function blpc_custom_menu_list_pages($post_type) { 
 	global $post;
 	$args = array( 
-					'posts_per_page' => -1,
-					'orderby' => 'menu_order', 
-					'order' => 'asc',
-					'post_parent' => $post->post_parent,
-					'post_type' => $post_type
-	);
+				'posts_per_page' => -1,
+				'orderby' => 'menu_order', 
+				'order' => 'asc',
+				'post_parent' => $post->post_parent,
+				'post_type' => $post_type
+			);
 	$categories = get_the_category();
  
 	if (!empty( $categories ) ) {
@@ -980,15 +980,15 @@ function blpc_custom_menu_list_pages($post_type) {
 			case "board-of-directors":
 			case "senior-management":
 				$args = array( 
-												'posts_per_page' => -1,
-												'orderby' => 'menu_order', 
-												'order' => 'asc',
-												'post_parent' => $post->post_parent,
-												'post_type' => $post_type,
-												'taxonomy' => 'category',
-														 'field' => 'slug',
-														 'term' => $categories[0]->name
-								);
+						'posts_per_page' => -1,
+						'orderby' => 'menu_order', 
+						'order' => 'asc',
+						'post_parent' => $post->post_parent,
+						'post_type' => $post_type,
+						'taxonomy' => 'category',
+								 'field' => 'slug',
+								 'term' => $categories[0]->name
+						);
 				break;
 		}
 	}
@@ -999,7 +999,8 @@ function blpc_custom_menu_list_pages($post_type) {
 
 	$string = '<ul>';
 	foreach ( $pages as $page ) {
-		if($page->ID == 53) {
+		if($page->ID == 1737) {
+		// if($page->ID == 53 ) {
 			$target = 'target="_blank"';
 		}
 		$string .= '<li class="'. ($page->ID == $post->ID ? 'current_page_item' : '') .'">
