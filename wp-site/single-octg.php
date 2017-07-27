@@ -136,14 +136,11 @@ get_header(); ?>
         <!-- Feature CTA -->
     		<?php 
     			$feature_id1 = get_field('products_feature_right'); 
-    			$feature_id2 = get_field('products_feature_bottom');
     			
     			if($feature_id1) {
     				echo blpc_content_feature_right($feature_id1); 
     			}
-    			if($feature_id2) {
-    				echo blpc_content_feature_right($feature_id2); 
-    			}
+
     		?>
 
       </div>
