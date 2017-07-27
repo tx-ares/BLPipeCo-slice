@@ -229,10 +229,10 @@ function g2is_solutions_tile_pages() {
 /* services */
 function blpc_services_tile_pages() { 
 	$args = array( 
-					'parent' => 0,
-					'sort_column' => 'menu_order', 
-					'sort_order' => 'asc',
-					'post_type' => 'services'
+		'parent' => 0,
+		'sort_column' => 'menu_order', 
+		'sort_order' => 'asc',
+		'post_type' => 'services'
 	);
 	
 	$pages = get_pages( $args );
@@ -994,15 +994,17 @@ function blpc_custom_menu_list_pages($post_type) {
 	}
 	
 	$pages = get_posts( $args );
-	
+	$string = '';
+	$target = '';
+
 	$string = '<ul>';
 	foreach ( $pages as $page ) {
-		if($page->ID == 1737) {
+		if($page->ID == 53) {
 			$target = 'target="_blank"';
 		}
 		$string .= '<li class="'. ($page->ID == $post->ID ? 'current_page_item' : '') .'">
-									<a href="' . get_permalink( $page->ID ) . '" '.$target.'>' . $page->post_title . '</a>
-								</li>';
+						<a href="' . get_permalink( $page->ID ) . '" '.$target.'>' . $page->post_title . '</a>
+					</li>';
 	}
 	$string .= '</ul>';
 	echo $string;

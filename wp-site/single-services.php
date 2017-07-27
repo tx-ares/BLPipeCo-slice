@@ -80,69 +80,27 @@ get_header(); ?>
     <!-- ******************************************************* -->
     <!-- Main Content -->
     <!-- ******************************************************* -->
-    <div class="col-md-8 col-sm-7 col-xs-12 main">
-      <div class="container-fluid">
-        <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
-        <?php 
-														the_content(); 
-														$feature_id = get_field('page_feature'); 
-														if($feature_id) {
-															echo g2is_content_feature($feature_id); 
-														}
-														$related_pages1 = get_field('page_related_pages1');
-														$related_pages2 = get_field('page_related_pages2');
-														$related_pages3 = get_field('page_related_pages3');
-														if($related_pages1 || $related_pages2 || $related_pages3) : ?>
-        <div class="related-contents">
-          <p class="heading">Related Services</p>
-          <div class="row">
+  <div class="col-md-8 col-sm-7 col-xs-12 main">
+       <div class="row compressed">
+            <div class="col-md-offset-3 col-md-9">
+                <div class="container-fluid">
+                    <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
+                    <?php the_content(); ?>
+                    <?php endwhile; endif; ?>
 
-            <?php if( $related_pages1 ): ?>
-            <div class="col-md-4">
-              <h4 class="title">
-                <a href="
-                  <?php echo get_permalink($related_pages1->ID); ?>"><?php echo get_the_title($related_pages1->ID); ?>
-                </a>
-              </h4>
-              <p class="date">
-                in <?php echo get_the_title($related_pages1->post_parent); ?>
-              </p>
-            </div>
-            <?php endif; ?>
+                    <!-- Pager -->
+                   <!--  <div class="next-prev clearfix">
+                        <span class="pull-left previous">
+                        <?php previous_post_link( '%link','Previous' ) ?>
+                        </span>
+                        <span class="pull-right next">
+                        <?php next_post_link( '%link','Next' ) ?>
+                        </span>
+                    </div> -->
 
-            <?php if( $related_pages2 ): ?>
-            <div class="col-md-4">
-              <h4 class="title">
-                <a href="
-                  <?php echo get_permalink($related_pages2->ID); ?>"><?php echo get_the_title($related_pages2->ID); ?>
-                </a>
-              </h4>
-              <p class="date">
-                in <?php echo get_the_title($related_pages2->post_parent); ?>
-              </p>
+                </div>
             </div>
-            <?php endif; ?>
-
-            <?php if( $related_pages3 ): ?>
-            <div class="col-md-4">
-              <h4 class="title">
-                <a href="
-                  <?php echo get_permalink($related_pages3->ID); ?>"><?php echo get_the_title($related_pages3->ID); ?>
-                </a>
-              </h4>
-              <p class="date">
-                in <?php echo get_the_title($related_pages3->post_parent); ?>
-              </p>
-            </div>
-            <?php endif; ?>
-          </div>
         </div>
-        <?php endif; ?>
-        <?php endwhile; endif; ?>
-
-        <!--<?php echo g2is_post_type_pager('services'); ?>-->
-
-      </div>
 
     </div>
 
@@ -196,10 +154,10 @@ get_header(); ?>
 
 
         <!-- Sidebar General -->
-        <?php if ( is_active_sidebar( 'sidebar_general' ) ) : ?>
+       <!--  <?php if ( is_active_sidebar( 'sidebar_general' ) ) : ?>
         <?php dynamic_sidebar( 'sidebar_general' ); ?>
         <?php endif; ?>
-
+ -->
         <!-- Side Navigation -->
         <div class="side-nav">
            <?php
@@ -221,14 +179,14 @@ get_header(); ?>
         <!-- Side Navigation -->
     		<?php 
     			$feature_id1 = get_field('services_feature_right'); 
-    			// $feature_id2 = get_field('services_feature_bottom');
+    			$feature_id2 = get_field('services_feature_bottom');
     			
     			if($feature_id1) {
     				echo blpc_content_feature_right($feature_id1); 
     			}
-    			// if($feature_id2) {
-    			// 	echo blpc_content_feature_right($feature_id2); 
-    			// }
+    			if($feature_id2) {
+    				echo blpc_content_feature_right($feature_id2); 
+    			}
     		?>
 
       </div>
