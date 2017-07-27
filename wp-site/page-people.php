@@ -15,8 +15,16 @@ get_header(); ?>
                     <div class="container-fluid no-padding ">
                         <img alt="BL Pipeco " data-src="<575:<?php echo the_post_thumbnail_url('full'); ?>, <768:<?php echo the_post_thumbnail_url('full'); ?>,>768:<?php echo the_post_thumbnail_url('full'); ?>" />
                         <div class="subtext-box">
-                            <h1><?php the_title(); ?> </h1>
-                             <h2><?php echo get_field('blog_menu_description'); ?></h2>
+                            <h1>
+                                <?php 
+                                    if(get_field('alternate_h1_heading')) {
+                                        echo get_field('alternate_h1_heading');
+                                    }
+                                    else {
+                                        the_title();
+                                    }; 
+                                ?> 
+                            </h1>
                         </div>
                     </div>
                 </div>
@@ -310,15 +318,12 @@ get_header(); ?>
                         </div>
 
                         <?php 
-                            $feature_id1 = get_field('people_feature_right'); 
-                            $feature_id2 = get_field('people_feature_bottom');
+                            $feature_id1 = get_field('about_feature_right'); 
                             
                             if($feature_id1) {
                                 echo blpc_content_feature_right($feature_id1); 
                             }
-                            if($feature_id2) {
-                             echo blpc_content_feature_right($feature_id2); 
-                            }
+
                         ?>
 
 
