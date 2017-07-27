@@ -17,7 +17,6 @@ get_header(); ?>
                         <img alt="BL Pipeco " data-src="<575:<?php echo the_post_thumbnail_url('full'); ?>, <768:<?php echo the_post_thumbnail_url('full'); ?>,>768:<?php echo the_post_thumbnail_url('full'); ?>" />
                         <div class="subtext-box">
                             <h1><?php the_title(); ?> </h1>
-                             <h2><?php echo get_field('services_menu_description'); ?></h2>
                         </div>
                     </div>
                 </div>
