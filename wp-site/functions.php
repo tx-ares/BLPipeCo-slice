@@ -339,7 +339,7 @@ function g2is_people_tile_pages($post_id) {
 }
 
 /* menu_list_pages */
-function g2is_menu_list_pages() { 
+function blpc_menu_list_pages() { 
 	global $post; 
 	$string = '';
 	if ( is_page() && $post->post_parent ) {

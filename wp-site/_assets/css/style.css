@@ -2531,7 +2531,6 @@ footer {
     font-size: 1.875rem; }
   .main-content .main h2 {
     margin-top: 35px;
-    margin-bottom: 0px;
     font-weight: 500;
     font-size: 30px;
     font-size: 1.875rem; }
@@ -3801,7 +3800,8 @@ footer {
     .feature-slide-box .panel .slider-container {
       height: auto;
       width: 90%;
-      display: inline-block; }
+      display: inline-block;
+      background: #e2eaed; }
       @media only screen and (max-width: 375px) {
         .feature-slide-box .panel .slider-container {
           width: 85%; } }

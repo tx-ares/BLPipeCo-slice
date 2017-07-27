@@ -303,44 +303,23 @@ get_header(); ?>
                         <?php endif; ?>
 
 
+                       
                         <!-- Side Navigation -->
-                            <?php 
-                                $feature_id1 = get_field('insights_feature_right'); 
-                                // $feature_id2 = get_field('services_feature_bottom');
-                                
-                                if($feature_id1) {
-                                    echo blpc_content_feature_right($feature_id1); 
-                                }
-                                // if($feature_id2) {
-                                //  echo blpc_content_feature_right($feature_id2); 
-                                // }
-                            ?>
-
-
-
-                        <!-- <div class="side-nav">
-                            <ul>
-                                <li><a href="#">Systems Architecture Design and Deployment</a></li>
-                                <li><a href="#">Database Structure and Modeling</a></li>
-                                <li><a href="#">Business Process Management</a></li>
-                                <li><a href="#">Data Conversion, Migration and Ongoing Maintenance</a></li>
-                            </ul>
+                        <div class="side-nav">
+                            <?php blpc_menu_list_pages(); ?>
                         </div>
-                        <div class="image-cta">
-                            <div class="img-content">
-                                <img alt="B&L Pipe Co" data-src=">0:http://placehold.it/570x300" />
-                                 <span class="caption">Call To Action  <i class="fa fa-angle-right" aria-hidden="true"></i></span>
-                                <div class="txt-content">
-                                    <h4>Lorem ipsum dolor sit amet, consectetuer adipiscing elit</h4>
-                                    <p>Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat.</p>
-                                </div>
-                            </div>
-                            <div class="txt-subcontent">
-                                <a href="#">
-                                <span class="text-upcase">See how the we make the world better</span>
-                            </a>
-                            </div>
-                        </div> -->
+
+                        <?php 
+                            $feature_id1 = get_field('people_feature_right'); 
+                            $feature_id2 = get_field('people_feature_bottom');
+                            
+                            if($feature_id1) {
+                                echo blpc_content_feature_right($feature_id1); 
+                            }
+                            if($feature_id2) {
+                             echo blpc_content_feature_right($feature_id2); 
+                            }
+                        ?>
 
 
                     </div>
