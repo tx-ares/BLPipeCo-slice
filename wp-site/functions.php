@@ -317,23 +317,23 @@ function g2is_people_tile_pages($post_id) {
 	foreach ( $pages as $page ) { 
 		$photo = get_field('people_photo', $page->ID);
 		$string .= '<div class="photo-item">
-										<a href="'.get_post_permalink( $page->ID ).'">
-												<div class="img-wrapper">
-														<img src="'.$photo['url'].'" alt="'.$photo['alt'].'" width="206" height="255" />
-														<div class="overlay">
-																<div class="tframe fw fh">
-																		<div class="tcell valign-mid">
-																				See Bio <i class="fa fa-angle-right" aria-hidden="true"></i>
-																		</div>
-																</div>
-														</div>
-												</div>
-												<div class="info-wrapper">
-														<h3>' . get_field('people_name', $page->ID) . '</h3>
-														<h4>' . get_field('people_title', $page->ID) . '</h4>
-												</div>
-										</a>
-								</div>';							
+						<a href="'.get_post_permalink( $page->ID ).'">
+							<div class="img-wrapper">
+								<img src="'.$photo['url'].'" alt="'.$photo['alt'].'" width="206" height="255" />
+								<div class="overlay">
+									<div class="tframe fw fh">
+										<div class="tcell valign-mid">
+												See Bio <i class="fa fa-angle-right" aria-hidden="true"></i>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="info-wrapper">
+								<h3>' . get_field('people_name', $page->ID) . '</h3>
+								<h4>' . get_field('people_title', $page->ID) . '</h4>
+							</div>
+						</a>
+					</div>';							
 	}
 	echo $string;
 }
@@ -358,10 +358,10 @@ function blpc_menu_list_pages() {
 /* home services list */
 function g2is_home_services_list() { 
 	$args = array( 
-					'parent' => 0,
-					'sort_column' => 'menu_order', 
-					'sort_order' => 'asc',
-					'post_type' => 'services'
+		'parent' => 0,
+		'sort_column' => 'menu_order', 
+		'sort_order' => 'asc',
+		'post_type' => 'services'
 	);
 	
 	$pages = get_pages( $args );
@@ -370,46 +370,41 @@ function g2is_home_services_list() {
 		$icon = get_field('page_menu_icon', $page->ID);
 		$icon_alt = get_field('page_menu_icon_rollover', $page->ID);		
 		$string .= '<div class="col-lg-12 col-md-6 col-sm-6 col-xs-12" eq-col>
-										<a href="' . get_post_permalink( $page->ID ) . '" class="icon-wrapper">
-												<div class="icon-item">
-														<div class="row compressed">
-																<div class="col-lg-3 col-md-12">
-																		<div class="tframe fh fw">
-																				<div class="tcell valign-mid">
-																						<img src="'.$icon['url'].'" alt="'.$icon['alt'].'" class="icon" />
-																				</div>
-																		</div>
-																</div>
-																<div class="col-lg-9 col-md-12 txt-content">
-																		<div class="tframe fh fw">
-																				<div class="tcell valign-mid">
-																						<h2>' . $page->post_title . '</h2>
-																				</div>
-																		</div>
-																</div>
-														</div>
-												</div>
-												<div class="icon-item-alt">
-														<div class="row compressed" eq-height>
-																<div class="col-lg-3 col-md-12 txt-content text-right pull-right" eq-col>
-																		<div class="tframe fh fw">
-																				<div class="tcell valign-mid">
-																						<img src="'.$icon_alt['url'].'" alt="'.$icon_alt['url'].'" class="icon" />
-																				</div>
-																		</div>
-																</div>
-																<div class="col-lg-9 col-md-12" eq-col>
-																		<div class="tframe fh fw">
-																				<div class="tcell valign-mid">
-																						<p class="subtitle">' . get_field('page_menu_sub_title', $page->ID) . '</p>
-																						<p>' . get_field('page_menu_sub_text', $page->ID) . '</p>
-																				</div>
-																		</div>
-																</div>
-														</div>
-												</div>
-										</a>
-								</div>';
+					    <a href="' . get_post_permalink( $page->ID ) . '" class="icon-wrapper">
+					        <div class="icon-item">
+					            <div class="row compressed">
+					                <div class="col-lg-3 col-md-12">
+					                    <div class="tframe fh fw">
+					                        <div class="tcell valign-mid"> <img src="'.$icon['url'].'" alt="'.$icon['alt'].'" class="icon" /> </div>
+					                    </div>
+					                </div>
+					                <div class="col-lg-9 col-md-12 txt-content">
+					                    <div class="tframe fh fw">
+					                        <div class="tcell valign-mid">
+					                            <h2>' . $page->post_title . '</h2> </div>
+					                    </div>
+					                </div>
+					            </div>
+					        </div>
+					        <div class="icon-item-alt">
+					            <div class="row compressed" eq-height>
+					                <div class="col-lg-3 col-md-12 txt-content text-right pull-right" eq-col>
+					                    <div class="tframe fh fw">
+					                        <div class="tcell valign-mid"> <img src="'.$icon_alt['url'].'" alt="'.$icon_alt['url'].'" class="icon" /> </div>
+					                    </div>
+					                </div>
+					                <div class="col-lg-9 col-md-12" eq-col>
+					                    <div class="tframe fh fw">
+					                        <div class="tcell valign-mid">
+					                            <p class="subtitle">' . get_field('page_menu_sub_title', $page->ID) . '</p>
+					                            <p>' . get_field('page_menu_sub_text', $page->ID) . '</p>
+					                        </div>
+					                    </div>
+					                </div>
+					            </div>
+					        </div>
+					    </a>
+					</div>';
 
 	}
 	echo $string;
