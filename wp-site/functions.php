@@ -41,39 +41,39 @@ function blpc_init() {
 add_action( 'init', 'blpc_init' );
 
 /* search menu */
-function blpc_search_menu($items, $args) {
-    if($args->theme_location == 'main-menu'){
-       $menu_item = '<li class="search">
-						<a href="#" class="top-search-opener"><i class="fa fa-search" aria-hidden="true"></i></a>
-						<div class="search-box">
-							<form class="tframe fh fw" role="search" method="get" class="search-form" action="'. esc_url( home_url( '/' ) ) .'">
-								<div class="tcell valign-mid">
-									<div class="row compressed" eq-height>
-										<div class="col-xs-offset-3 col-xs-6" eq-col>
-											<div class="tframe fh fw">
-												<div class="tcell valign-mid">
-													<input type="text" placeholder="Enter Search here..." value="'.get_search_query().'" name="s" />
-												</div>
-											</div>
-										</div>
-										<div class="col-xs-3" eq-col>
-											<div class="tframe fh fw">
-												<div class="tcell valign-mid">
-													<button type="submit" class="search-btn"><i class="fa fa-search" aria-hidden="true"></i></button>
-													<a href="#" class="search-close"><span class="close thick"></span></a>
-												</div>
-											</div>
-										</div>
-									</div>
-								</div>
-							</form>
-						</div>
-					</li>';
-       $items = $items . $menu_item;
-    }
-    return $items;
-}
-add_filter('wp_nav_menu_items', 'blpc_search_menu', 10, 2);
+// function blpc_search_menu($items, $args) {
+//     if($args->theme_location == 'main-menu'){
+//        $menu_item = '<li class="search">
+// 						<a href="#" class="top-search-opener"><i class="fa fa-search" aria-hidden="true"></i></a>
+// 						<div class="search-box">
+// 							<form class="tframe fh fw" role="search" method="get" class="search-form" action="'. esc_url( home_url( '/' ) ) .'">
+// 								<div class="tcell valign-mid">
+// 									<div class="row compressed" eq-height>
+// 										<div class="col-xs-offset-3 col-xs-6" eq-col>
+// 											<div class="tframe fh fw">
+// 												<div class="tcell valign-mid">
+// 													<input type="text" placeholder="Enter Search here..." value="'.get_search_query().'" name="s" />
+// 												</div>
+// 											</div>
+// 										</div>
+// 										<div class="col-xs-3" eq-col>
+// 											<div class="tframe fh fw">
+// 												<div class="tcell valign-mid">
+// 													<button type="submit" class="search-btn"><i class="fa fa-search" aria-hidden="true"></i></button>
+// 													<a href="#" class="search-close"><span class="close thick"></span></a>
+// 												</div>
+// 											</div>
+// 										</div>
+// 									</div>
+// 								</div>
+// 							</form>
+// 						</div>
+// 					</li>';
+//        $items = $items . $menu_item;
+//     }
+//     return $items;
+// }
+// add_filter('wp_nav_menu_items', 'blpc_search_menu', 10, 2);
 
 /* sidebar */
 function blpc_widgets_init() {
