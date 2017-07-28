@@ -131,7 +131,7 @@
                 $category_name = preg_replace("/[\s_]/", "-", $category_name);
 
                 // echo debug_to_console( $category_name );
-                echo debug_to_console( 'single.php' );    
+                echo debug_to_console( 'single-blog.php' );    
     
 
                 echo blpc_latest_articles_by_category_list($category_name);

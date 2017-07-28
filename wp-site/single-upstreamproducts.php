@@ -25,8 +25,6 @@ get_header(); ?>
                                       the_title();
                                   }; 
                               ?> 
-
-                              TEST SINGLE UPSTREAM PRODUCTS
                             </h1>
                         </div>
                     </div>
@@ -53,6 +51,14 @@ get_header(); ?>
                     <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
                     <?php the_content(); ?>
                     <?php endwhile; endif; ?>
+
+                    <?php 
+                      $feature_id2 = get_field('products_feature_bottom'); 
+                      
+                      if($feature_id2) {
+                          echo blpc_content_feature_bottom($feature_id2); 
+                      }
+                    ?> 
 
                 </div>
             </div>
@@ -117,16 +123,7 @@ get_header(); ?>
         <!-- Side Navigation -->
         <div class="side-nav">
            <?php
-             //  $id = get_the_ID();
-             //  $upstreamproducts_id_array = array(194,195,196,197,198);
-              
-             // if ( in_array($id, $upstreamproducts_id_array) ) :
-             //      debug_to_console( "Cond - 1 PASS" );
-             //      echo blpc_submenu_list_pages('upstreamproducts');
-             // else :
-             //      debug_to_console( "Cond - 1 FAIL" );
-                  echo blpc_custom_menu_list_pages('upstreamproducts'); 
-              //endif; 
+              echo blpc_custom_menu_list_pages('upstreamproducts'); 
             ?>
         </div>
 
@@ -138,13 +135,9 @@ get_header(); ?>
         <!-- Feature CTA -->
     		<?php 
     			$feature_id1 = get_field('products_feature_right'); 
-    			$feature_id2 = get_field('products_feature_bottom');
     			
     			if($feature_id1) {
     				echo blpc_content_feature_right($feature_id1); 
-    			}
-    			if($feature_id2) {
-    				echo blpc_content_feature_right($feature_id2); 
     			}
     		?>
 

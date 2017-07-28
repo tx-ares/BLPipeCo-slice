@@ -52,6 +52,14 @@ get_header(); ?>
                     <?php the_content(); ?>
                     <?php endwhile; endif; ?>
 
+                    <?php 
+                      $feature_id2 = get_field('octg_feature_bottom'); 
+                      
+                      if($feature_id2) {
+                          echo blpc_content_feature_right($feature_id2); 
+                      }
+                    ?> 
+                
                 </div>
             </div>
         </div>
@@ -115,16 +123,7 @@ get_header(); ?>
         <!-- Side Navigation -->
         <div class="side-nav">
            <?php
-             //  $id = get_the_ID();
-             //  $octg_id_array = array(194,195,196,197,198);
-              
-             // if ( in_array($id, $octg_id_array) ) :
-             //      debug_to_console( "Cond - 1 PASS" );
-             //      echo blpc_submenu_list_pages('octg');
-             // else :
-             //      debug_to_console( "Cond - 1 FAIL" );
-                  echo blpc_custom_menu_list_pages('octg'); 
-              //endif; 
+              echo blpc_custom_menu_list_pages('octg'); 
             ?>
         </div>
 
