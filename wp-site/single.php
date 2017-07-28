@@ -126,7 +126,11 @@
 
                 $category_name = $category[0]->cat_name; 
 
-                $category_name = strtolower( $category_name );    
+                $category_name = strtolower( $category_name );
+
+                $category_name = preg_replace("/[\s_]/", "-", $category_name);
+
+                // echo debug_to_console( $category_name );    
 
                 echo blpc_latest_articles_by_category_list($category_name);
              ?>
