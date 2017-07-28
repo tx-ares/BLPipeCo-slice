@@ -16,7 +16,16 @@ get_header(); ?>
                     <div class="container-fluid no-padding ">
                         <img alt="BL Pipeco " data-src="<575:<?php echo the_post_thumbnail_url('full'); ?>, <768:<?php echo the_post_thumbnail_url('full'); ?>,>768:<?php echo the_post_thumbnail_url('full'); ?>" />
                         <div class="subtext-box">
-                            <h1><?php the_title(); ?> </h1>
+                            <h1>
+                              <?php 
+                                    if(get_field('alternate_h1_heading')) {
+                                        echo get_field('alternate_h1_heading');
+                                    }
+                                    else {
+                                        the_title();
+                                    }; 
+                                ?>
+                            </h1>
                         </div>
                     </div>
                 </div>
@@ -115,22 +124,13 @@ get_header(); ?>
         <!-- Side Navigation -->
         <div class="side-nav">
            <?php
-             //  $id = get_the_ID();
-             //  $services_id_array = array(1964,1617,1620,1623,1625,1627);
-              
-             // if ( in_array($id, $services_id_array) ) :
-             //      debug_to_console( "Cond - 1 PASS" );
-             //      echo blpc_submenu_list_pages('services');
-             // else : 
-             //      debug_to_console( "Cond - 1 FAIL" );
-                  echo blpc_custom_menu_list_pages('services'); 
-              // endif; 
+              echo blpc_custom_menu_list_pages('services'); 
             ?>
         </div>
 
         <!-- Sidebar Sevices -->
         <?php if ( is_active_sidebar( 'sidebar_services' )  ) : ?>
-        <?php dynamic_sidebar( 'sidebar_services' ); ?>
+          <?php dynamic_sidebar( 'sidebar_services' ); ?>
         <?php endif; ?>
 
     		<?php 

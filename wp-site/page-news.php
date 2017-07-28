@@ -15,8 +15,16 @@ get_header(); ?>
                     <div class="container-fluid no-padding ">
                         <img alt="BL Pipeco " data-src="<575:<?php echo the_post_thumbnail_url('full'); ?>, <768:<?php echo the_post_thumbnail_url('full'); ?>,>768:<?php echo the_post_thumbnail_url('full'); ?>" />
                         <div class="subtext-box">
-                            <h1><?php the_title(); ?> </h1>
-                             <h2><?php echo get_field('insights_menu_description'); ?></h2>
+                            <h1>
+                                <?php 
+                                    if(get_field('alternate_h1_heading')) {
+                                        echo get_field('alternate_h1_heading');
+                                    }
+                                    else {
+                                        the_title();
+                                    }; 
+                                ?>        
+                            </h1>
                         </div>
                     </div>
                 </div>

@@ -940,6 +940,9 @@ function g2is_news_detail_latest_news_list() {
 // }
 
 function blpc_latest_articles_by_category_list($category_name) {
+
+	// echo debug_to_console( $category_name );
+
 	$args = array( 'numberposts' => '3',
 				   'category_name' => $category_name
 				  );
