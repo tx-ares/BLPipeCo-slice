@@ -169,7 +169,7 @@ get_header(); ?>
                 </div>
 
 				<!--Latest News -->
-                <?php echo blpc_news_detail_latest_news_list(); ?>
+                <?php echo blpc_latest_articles_by_category_list('blog'); ?>
 
                 </div>
                 <div class="topic-nav">

@@ -111,8 +111,10 @@
                 </div>
             </div>
 
+            <?php debug_to_console( get_the_category(); ); ?>
+
             <!--Latest News -->
-            <?php echo blpc_news_detail_latest_news_list(); ?>
+            <?php echo blpc_latest_articles_by_category_list(); ?>
 
             <div class="topic-nav">
                 <h4 class="topic-title">By Topic</h4>

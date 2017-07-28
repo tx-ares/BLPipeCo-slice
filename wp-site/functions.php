@@ -913,16 +913,55 @@ function g2is_news_detail_latest_news_list() {
 }
 
 /* news detail - latest news */
-function blpc_news_detail_latest_news_list() {
+// function blpc_news_detail_latest_news_list() {
+// 	$args = array( 'numberposts' => '3',
+// 				   'category_name' => 'latest-news'
+// 				  );
+
+// 	$recent_posts = wp_get_recent_posts($args);
+	
+// 	$classes = ''; 
+
+// 	$string = '<div class="latest-articles slateblue-theme fh">
+//                     <h4 class="text-upcase">Latest News</h4>';	
+// 	foreach( $recent_posts as $index => $recent ) {
+// 		$string .= '<div class="txt-content">
+// 						<a href="'. get_permalink($recent["ID"]) .'">
+// 							<h3 class="title">'. $recent["post_title"] 
+// 								.'<span class="date">'. date('F j, Y', strtotime($recent['post_date'])) 
+// 								.'</span>
+// 							</h3>
+// 						</a>
+// 					</div>';
+// 	}
+// 	$string .= '	</div>
+// 							</div>';	
+// 	echo $string;
+// }
+
+function blpc_latest_articles_by_category_list($category_name) {
 	$args = array( 'numberposts' => '3',
-									'category_name' => 'latest-news');
+				   'category_name' => $category_name
+				  );
+
+	$categoryString = '';
+
+	if ( $category_name == 'blog' ) { 
+		$categoryString = 'Latest Blogs'; 
+	}
+	else if ( $category_name == 'latest-news' ) { 
+		$categoryString = 'Latest News & Events'; 
+	}
+	else { 
+		$categoryString = 'Latest Articles'; 
+	};
 
 	$recent_posts = wp_get_recent_posts($args);
 	
 	$classes = ''; 
 
 	$string = '<div class="latest-articles slateblue-theme fh">
-                    <h4 class="text-upcase">Latest News</h4>';	
+                    <h4 class="text-upcase">' . $categoryString . '</h4>';	
 	foreach( $recent_posts as $index => $recent ) {
 		$string .= '<div class="txt-content">
 						<a href="'. get_permalink($recent["ID"]) .'">
