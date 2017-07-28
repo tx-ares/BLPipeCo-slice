@@ -41,39 +41,39 @@ function blpc_init() {
 add_action( 'init', 'blpc_init' );
 
 /* search menu */
-// function blpc_search_menu($items, $args) {
-//     if($args->theme_location == 'main-menu'){
-//        $menu_item = '<li class="search">
-// 						<a href="#" class="top-search-opener"><i class="fa fa-search" aria-hidden="true"></i></a>
-// 						<div class="search-box">
-// 							<form class="tframe fh fw" role="search" method="get" class="search-form" action="'. esc_url( home_url( '/' ) ) .'">
-// 								<div class="tcell valign-mid">
-// 									<div class="row compressed" eq-height>
-// 										<div class="col-xs-offset-3 col-xs-6" eq-col>
-// 											<div class="tframe fh fw">
-// 												<div class="tcell valign-mid">
-// 													<input type="text" placeholder="Enter Search here..." value="'.get_search_query().'" name="s" />
-// 												</div>
-// 											</div>
-// 										</div>
-// 										<div class="col-xs-3" eq-col>
-// 											<div class="tframe fh fw">
-// 												<div class="tcell valign-mid">
-// 													<button type="submit" class="search-btn"><i class="fa fa-search" aria-hidden="true"></i></button>
-// 													<a href="#" class="search-close"><span class="close thick"></span></a>
-// 												</div>
-// 											</div>
-// 										</div>
-// 									</div>
-// 								</div>
-// 							</form>
-// 						</div>
-// 					</li>';
-//        $items = $items . $menu_item;
-//     }
-//     return $items;
-// }
-// add_filter('wp_nav_menu_items', 'blpc_search_menu', 10, 2);
+function blpc_search_menu($items, $args) {
+    if($args->theme_location == 'main-menu'){
+       $menu_item = '<li class="search">
+						<a href="#" class="top-search-opener"><i class="fa fa-search" aria-hidden="true"></i></a>
+						<div class="search-box">
+							<form class="tframe fh fw" role="search" method="get" class="search-form" action="'. esc_url( home_url( '/' ) ) .'">
+								<div class="tcell valign-mid">
+									<div class="row compressed" eq-height>
+										<div class="col-xs-offset-3 col-xs-6" eq-col>
+											<div class="tframe fh fw">
+												<div class="tcell valign-mid">
+													<input type="text" placeholder="Enter Search here..." value="'.get_search_query().'" name="s" />
+												</div>
+											</div>
+										</div>
+										<div class="col-xs-3" eq-col>
+											<div class="tframe fh fw">
+												<div class="tcell valign-mid">
+													<button type="submit" class="search-btn"><i class="fa fa-search" aria-hidden="true"></i></button>
+													<a href="#" class="search-close"><span class="close thick"></span></a>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</form>
+						</div>
+					</li>';
+       $items = $items . $menu_item;
+    }
+    return $items;
+}
+add_filter('wp_nav_menu_items', 'blpc_search_menu', 10, 2);
 
 /* sidebar */
 function blpc_widgets_init() {
@@ -1107,6 +1107,45 @@ function blpc_content_feature_right($post_id) {
 		                        </div>
 		                    </a>
 						</div>';
+		} else {
+			$string .= '<div class="image-cta no-img '.get_field('feature_background_color', $feature->ID).'">
+							<a href="' . get_field('feature_button_url', $feature->ID)  . '">
+									<div class="txt-content">
+											<h3>' . $feature->post_title  . '</h3>
+											<p>'. $feature->post_content  . '</p>
+											<span class = "btn green">' . get_field('feature_button_text', $feature->ID)  . '
+									</div>
+							</a>
+						</div>';
+		}
+	}
+	
+	echo $string;						
+}
+
+function blpc_content_feature_bottom($post_id) {
+	
+	$feature = get_post($post_id);
+	$string = '';
+	if($feature) {
+		$feature_image = get_field('feature_image', $feature->ID);
+		
+		if($feature_image) {
+			$string .=  '<div class="feature-box brightRed with-img">
+							<a href="' . get_field('feature_button_url', $feature->ID)  . '">
+                                <div class="row compressed fh-col" eq-height>
+                                    <div class="col-lg-6 col-md-12 img-content" eq-col data-img="http://placehold.it/430x215/d55441/ffffff" style="background: url(&quot;http://placehold.it/430x215/d55441/ffffff&quot;) center center / cover no-repeat; height: 246px;">
+                                        <img alt="'.$feature_image['alt'].'"
+											src="'.$feature_image['url'].'" />
+                                    </div>
+                                    <div class="col-lg-6 col-md-12 txt-content" eq-col="" style="height: 246px;">
+										<h4>' . $feature->post_title  . '</h4>
+   										<p>'. $feature->post_content  . '</p>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>';
+
 		} else {
 			$string .= '<div class="image-cta no-img '.get_field('feature_background_color', $feature->ID).'">
 							<a href="' . get_field('feature_button_url', $feature->ID)  . '">

@@ -4902,7 +4902,7 @@ footer {
         padding-bottom: 55%;
 
         @include max-screen($sm) {
-            padding-bottom: 70%;
+            padding-bottom: 85%;
         }
 
         .txt-content {
@@ -5137,7 +5137,7 @@ footer {
     @include max-screen($xmd) {
 
         .img-content {
-            padding-bottom: 55%;
+            padding-bottom: 85%;
 
             img {
                 height: auto;
@@ -5608,7 +5608,8 @@ footer {
             position: relative;
 
             img {
-                display: none;
+                // display: none; //
+                height: 100%; //
             }
 
             &:before {
@@ -5700,7 +5701,7 @@ footer {
             color: $colorWhite;
             position: relative;
             display: inline-block;
-            border-bottom: dotted 1px $colorWhite;
+            // border-bottom: dotted 1px $colorWhite;
         }
 
         &.with-img {
@@ -6348,7 +6349,7 @@ footer {
             color: $colorWhite;
             position: relative;
             display: inline-block;
-            border-bottom: dotted 1px $colorWhite;
+            // border-bottom: dotted 1px $colorWhite;
         }
 
         &.with-img {

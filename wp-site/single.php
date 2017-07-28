@@ -11,7 +11,7 @@
                     <div class="container-fluid no-padding ">
                         <img alt="BL Pipeco " data-src="<575:<?php echo the_post_thumbnail_url('full'); ?>, <768:<?php echo the_post_thumbnail_url('full'); ?>,>768:<?php echo the_post_thumbnail_url('full'); ?>" />
                         <div class="subtext-box">
-                             <h2><?php echo get_field('services_menu_description'); ?></h2>
+                             <h1><?php the_title(); ?> </h1>
                         </div>
                     </div>
                 </div>
@@ -34,10 +34,18 @@
        <div class="row compressed">
 	        <div class="col-md-offset-3 col-md-9">
 	            <div class="container-fluid">
-                    <h1><?php the_title(); ?> </h1>
+                    <h1> <?php the_title(); ?> </h1>
 	                <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
 			        <?php the_content(); ?>
 			        <?php endwhile; endif; ?>
+
+                    <?php 
+                        $feature_id2 = get_field('any_feature_bottom'); 
+                        
+                        if($feature_id2) {
+                            echo blpc_content_feature_bottom($feature_id2); 
+                        }
+                    ?>
 
 			        <!-- Pager -->
 			        <div class="next-prev clearfix">

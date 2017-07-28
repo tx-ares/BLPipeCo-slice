@@ -133,7 +133,6 @@ get_header(); ?>
         <?php dynamic_sidebar( 'sidebar_services' ); ?>
         <?php endif; ?>
 
-        <!-- Side Navigation -->
     		<?php 
     			$feature_id1 = get_field('services_feature_right'); 
     			
