@@ -52,15 +52,15 @@ function blpc_search_menu($items, $args) {
 										<div class="col-xs-offset-3 col-xs-6" eq-col>
 											<div class="tframe fh fw">
 												<div class="tcell valign-mid">
-														<input type="text" placeholder="Enter Search here..." value="'.get_search_query().'" name="s" />
+													<input type="text" placeholder="Enter Search here..." value="'.get_search_query().'" name="s" />
 												</div>
 											</div>
 										</div>
 										<div class="col-xs-3" eq-col>
 											<div class="tframe fh fw">
 												<div class="tcell valign-mid">
-														<button type="submit" class="search-btn"><i class="fa fa-search" aria-hidden="true"></i></button>
-														<a href="#" class="search-close"><span class="close thick"></span></a>
+													<button type="submit" class="search-btn"><i class="fa fa-search" aria-hidden="true"></i></button>
+													<a href="#" class="search-close"><span class="close thick"></span></a>
 												</div>
 											</div>
 										</div>
@@ -841,15 +841,15 @@ function g2is_solutions_carousel($post_id) {
 			
 			$string .= '<div>
 							<img alt="'.$image['alt'].'"
-									data-src="<575:'.$image['url'].',
-													<768:'.$image['url'].',
-													<1024:'.$image['url'].'"
-									src="'.$image['url'].'" />
+								data-src="<575:'.$image['url'].',
+												<768:'.$image['url'].',
+												<1024:'.$image['url'].'"
+								src="'.$image['url'].'" />
 							<div class="row row-compressed">
-									<div class="col-xs-12">
-											<p class="title">' . $page->post_title  . '</p>
-											<a href="' . get_field('carousel_button_link', $page->ID)  . '" class="btn orange fw" target="'.get_field('carousel_button_target', $page->ID).'">' . get_field('carousel_button_text', $page->ID)  . '</a>
-									</div>
+								<div class="col-xs-12">
+									<p class="title">' . $page->post_title  . '</p>
+									<a href="' . get_field('carousel_button_link', $page->ID)  . '" class="btn orange fw" target="'.get_field('carousel_button_target', $page->ID).'">' . get_field('carousel_button_text', $page->ID)  . '</a>
+								</div>
 							</div>
 						</div>';
 						
@@ -920,17 +920,6 @@ function blpc_news_detail_latest_news_list() {
 	$recent_posts = wp_get_recent_posts($args);
 	
 	$classes = ''; 
-	// debug_to_console( get_page_template('page') );
-	// debug_to_console( get_page_template_slug() );
-
-
-	// if( get_page_template_slug() === 'news' ) { 
-	// 	$classes = 'slateblue-theme'; 
-	// }
-
-	// else {
-	// 	$classes = "test-else";
-	// }
 
 	$string = '<div class="latest-articles slateblue-theme fh">
                     <h4 class="text-upcase">Latest News</h4>';	

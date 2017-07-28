@@ -25,51 +25,6 @@ get_header(); ?>
     </div>
 </section>
 
-
-<!--
-<section class="banner">
-  <div class="row" eq-height>
-    <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
-    <div class="col-md-4 col-sm-5 col-xs-12 bg-content pull-right" eq-col data-img="
-      <?php echo the_post_thumbnail_url('full'); ?>">
-      <img alt="<?php the_title(); ?>"
-      data-src="<575:<?php echo the_post_thumbnail_url('full'); ?>,
-      <768:<?php echo the_post_thumbnail_url('full'); ?>,
-      >768:<?php echo the_post_thumbnail_url('full'); ?>" />
-
-      <div class="overlay-band"></div>
-    </div>
-    <div class="col-md-8 col-sm-7 col-xs-12 title-content" eq-col>
-      <div class="tframe fh fw">
-        <div class="tcell valign-mid">
-          <div class="container-fluid">
-
-            <span class="sub-cat-title">
-              <?php 
-                $id = get_the_ID();
-                $services_id_array = array(1964,1617,1620,1623,1625,1627);
-              if(in_array($id, $services_id_array) ) : 
-                echo get_the_title(2252);
-              else :
-                echo get_the_title($post->post_parent);
-              endif; ?>
-            </span>
-            <h1>
-              <?php the_title(); ?>
-            </h1>
-
-
-          </div>
-        </div>
-      </div>
-      
-    </div>
-    <?php endwhile; endif; ?>
-  </div>
-</section> 
-
--->
-
 <!-- ******************************************************* -->
 <!-- Main Content -->
 <!-- ******************************************************* -->

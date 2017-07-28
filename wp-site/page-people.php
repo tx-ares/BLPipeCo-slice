@@ -309,9 +309,7 @@ get_header(); ?>
                         <?php if ( is_active_sidebar( 'sidebar_general' ) ) : ?>
                         <?php dynamic_sidebar( 'sidebar_general' ); ?>
                         <?php endif; ?>
-
-
-                       
+                
                         <!-- Side Navigation -->
                         <div class="side-nav">
                             <?php blpc_menu_list_pages(); ?>
@@ -325,7 +323,6 @@ get_header(); ?>
                             }
 
                         ?>
-
 
                     </div>
                 </div>
