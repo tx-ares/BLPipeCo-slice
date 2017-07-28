@@ -306,9 +306,9 @@ get_header(); ?>
                         </div>
 
                         <!-- Sidebar General -->
-                        <?php if ( is_active_sidebar( 'sidebar_general' ) ) : ?>
+                        <!-- <?php if ( is_active_sidebar( 'sidebar_general' ) ) : ?>
                         <?php dynamic_sidebar( 'sidebar_general' ); ?>
-                        <?php endif; ?>
+                        <?php endif; ?> -->
                 
                         <!-- Side Navigation -->
                         <div class="side-nav">

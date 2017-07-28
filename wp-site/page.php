@@ -108,8 +108,6 @@
                 <?php blpc_menu_list_pages(); ?>
             </div>
 
-            
-
 
         </div>
     </div>

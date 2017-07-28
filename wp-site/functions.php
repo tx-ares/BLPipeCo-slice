@@ -81,10 +81,10 @@ function blpc_widgets_init() {
 		'name'          => __( 'General', 'blpc' ),
 		'id'            => 'sidebar_general',
 		'description'   => __( 'General', 'blpc' ),
-		'before_widget' => '<div id="%1$s" class="widget %2$s">',
-		'after_widget'  => '</div>',
-		'before_title' => '<span class="hidden">',
-		'after_title' => '</span>'
+		'before_widget' => '',
+		'after_widget'  => '',
+		'before_title' => '',
+		'after_title' => ''
 	) );
 	
 	register_sidebar( array(

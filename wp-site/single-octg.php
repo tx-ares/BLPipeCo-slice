@@ -113,9 +113,9 @@ get_header(); ?>
         </div>
 
         <!-- Sidebar Services -->
-        <?php if ( is_active_sidebar( 'sidebar_octg' )  ) : ?>
+        <!-- <?php if ( is_active_sidebar( 'sidebar_octg' )  ) : ?>
         <?php dynamic_sidebar( 'sidebar_octg' ); ?>
-        <?php endif; ?>
+        <?php endif; ?> -->
 
         <!-- Feature CTA -->
     		<?php 

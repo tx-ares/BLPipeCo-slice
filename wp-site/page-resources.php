@@ -183,50 +183,24 @@ get_header(); ?>
 
 
             <!-- Sidebar General -->
-            <?php if ( is_active_sidebar( 'sidebar_general' ) ) : ?>
+            <!-- <?php if ( is_active_sidebar( 'sidebar_general' ) ) : ?>
             <?php dynamic_sidebar( 'sidebar_general' ); ?>
-            <?php endif; ?>
+            <?php endif; ?> -->
 
 
             <!-- Side Navigation -->
                 <?php 
                     $feature_id1 = get_field('insights_feature_right'); 
-                    // $feature_id2 = get_field('services_feature_bottom');
                     
                     if($feature_id1) {
                         echo blpc_content_feature_right($feature_id1); 
                     }
-                    // if($feature_id2) {
-                    //  echo blpc_content_feature_right($feature_id2); 
-                    // }
+
                 ?>
 
           </div>
         </div>
         
-        	<!-- ******************************************************* -->
-            <!-- Content -->
-            <!-- ******************************************************* -->
-            <!-- <div class="col-xs-12 main">
-                <div class="container-fluid">
-                	<div class="news-landing">
-                      
-                        <div class="row" eq-height>
-                            <div class="col-md-4 col-sm-6">
-    							<?php echo blpc_insights_news_list(); ?>
-                            </div>
-                            <div class="col-md-4 col-sm-6">
-    							<?php echo blpc_insights_blog_list(); ?>
-                            </div>
-                            <div class="col-md-4 col-sm-6">
-    							<?php echo blpc_insights_webinar_list(); ?>
-                            </div>
-                        </div>
-                        
-                	</div>
-        		</div>
-                
-            </div> -->
             
     </div>
 	

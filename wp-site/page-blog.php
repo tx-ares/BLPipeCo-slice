@@ -176,10 +176,12 @@ get_header(); ?>
                     </div>
                 </div>
 
+
 				<!--Latest News -->
                 <?php echo blpc_latest_articles_by_category_list('blog'); ?>
 
                 </div>
+
                 <div class="topic-nav">
                     <h4 class="topic-title">By Topic</h4>
                     <ul>
@@ -188,24 +190,15 @@ get_header(); ?>
                         <li><a href="#">Business Process Management (4) </a></li>
                     </ul>
                 </div>
+
             </div>
 
 
             <!-- Sidebar General -->
-            <?php if ( is_active_sidebar( 'sidebar_general' ) ) : ?>
+            <!-- <?php if ( is_active_sidebar( 'sidebar_general' ) ) : ?>
                 <?php dynamic_sidebar( 'sidebar_general' ); ?>
             <?php endif; ?>
-
-
-            <!-- Side Navigation -->
-                <?php 
-                    $feature_id1 = get_field('insights_feature_right'); 
-                    
-                    if($feature_id1) {
-                        echo blpc_content_feature_right($feature_id1); 
-                    }
-                ?>
-
+ -->
           </div>
         </div>
             
