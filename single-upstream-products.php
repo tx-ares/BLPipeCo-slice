@@ -1,6 +1,6 @@
 <?php 
 
-/* Upstream Products Single Page */ 
+/* Upstream-Products Single Page */ 
 
 get_header(); ?>
 
@@ -126,6 +126,8 @@ get_header(); ?>
               echo blpc_custom_menu_list_pages('upstreamproducts'); 
               echo debug_to_console( 'single-upstream-products.php' );    
             ?>
+
+
         </div>
 
         <!-- Sidebar Services -->

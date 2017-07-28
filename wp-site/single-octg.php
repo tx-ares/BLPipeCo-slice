@@ -7,7 +7,6 @@ get_header(); ?>
 <!-- ******************************************************* -->
 <!-- Banner -->
 <!-- ******************************************************* -->
-
 <section class="banner">
     <div class="row" eq-height>
         <div class="col-md-12 col-sm-12 col-xs-12 bg-content title-content" eq-col>
@@ -34,39 +33,31 @@ get_header(); ?>
     </div>
 </section>
 
-
 <!-- ******************************************************* -->
 <!-- Main Content -->
 <!-- ******************************************************* -->
 <section class="main-content">
   <div class="row compressed">
+    <div class="col-md-8 col-sm-7 col-xs-12 main">
+         <div class="row compressed">
+              <div class="col-md-offset-3 col-md-9">
+                  <div class="container-fluid">
+                      <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
+                      <?php the_content(); ?>
+                      <?php endwhile; endif; ?>
 
-    <!-- ******************************************************* -->
-    <!-- Main Content -->
-    <!-- ******************************************************* -->
-  <div class="col-md-8 col-sm-7 col-xs-12 main">
-       <div class="row compressed">
-            <div class="col-md-offset-3 col-md-9">
-                <div class="container-fluid">
-                    <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
-                    <?php the_content(); ?>
-                    <?php endwhile; endif; ?>
-
-                    <?php 
-                      $feature_id2 = get_field('octg_feature_bottom'); 
-                      
-                      if($feature_id2) {
-                          echo blpc_content_feature_right($feature_id2); 
-                      }
-                    ?> 
-                
-                </div>
-            </div>
-        </div>
+                      <?php 
+                        $feature_id2 = get_field('octg_feature_bottom'); 
+                        
+                        if($feature_id2) {
+                            echo blpc_content_feature_right($feature_id2); 
+                        }
+                      ?> 
+                  </div>
+              </div>
+          </div>
 
     </div>
-
-
     <!-- ******************************************************* -->
     <!-- Aside Content -->
     <!-- ******************************************************* -->
@@ -114,12 +105,6 @@ get_header(); ?>
             </div>
         </div>
 
-
-        <!-- Sidebar General -->
-       <!--  <?php if ( is_active_sidebar( 'sidebar_general' ) ) : ?>
-        <?php dynamic_sidebar( 'sidebar_general' ); ?>
-        <?php endif; ?>
- -->
         <!-- Side Navigation -->
         <div class="side-nav">
            <?php

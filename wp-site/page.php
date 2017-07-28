@@ -47,16 +47,6 @@
                     <?php the_content(); ?>
                     <?php endwhile; endif; ?>
 
-                    <!-- Pager -->
-                   <!--  <div class="next-prev clearfix">
-                        <span class="pull-left previous">
-                        <?php previous_post_link( '%link','Previous' ) ?>
-                        </span>
-                        <span class="pull-right next">
-                        <?php next_post_link( '%link','Next' ) ?>
-                        </span>
-                    </div> -->
-
                 </div>
             </div>
         </div>
@@ -118,15 +108,7 @@
                 <?php blpc_menu_list_pages(); ?>
             </div>
 
-            <!-- TODO: Make Dynamic -->
-            <div class="topic-nav">
-                <h4 class="topic-title">By Topic</h4>
-                <ul>
-                    <li><a href="#">Systems Architecture Design and Deployment (3)</a></li>
-                    <li><a href="#">Database Structure and Modeling (2) </a></li>
-                    <li><a href="#">Business Process Management (4) </a></li>
-                </ul>
-            </div>
+            
 
 
         </div>
