@@ -3931,23 +3931,83 @@ footer {
                     &[for="last"] {
                         padding-left: 5px;
                     }
-
                 }
             }
 
             #submit-row {
                 width: 100%;
+                position: relative;
+                // &:after {
+                //     @include transition (all .3s);
+
+                //     content: "\f0da";
+                //     font-family: FontAwesome;
+                //     position: absolute;
+                //     right: 30px;
+                //     color: $colorWhite;
+                //     bottom: 12px;
+                // }
+
+                //  &:hover {
+
+                //     &:after {
+
+                //         right: 10px;
+                   
+                //     }
+                // }
 
                 input[type="submit"] {
                     font-weight: 500;
                     text-transform: uppercase;
+                    background: $colorBrightRed2;
+                    color: $colorWhite;
                     @include transition (all .3s);
+
                     &:hover {
-                        background: $colorBrightRed2;
-                        color: $colorWhite;
-                    }
+                        background: $colorSlateBlue2;
+                        color: $colorDarkBlue;
+                    }                  
                 }
             }
+        }
+
+        #address-container {
+
+            [class*="col-"] {
+                padding-right: 30px;
+
+                &:last-child {
+                    margin-bottom: 0;
+                }
+            }
+
+            .row {
+                padding: 0;
+                border-bottom: 3px solid #e5e5e5;
+
+            }
+
+            a {
+                color: $colorDarkBlue;
+                &:hover {
+                    @include transition (color .3s);
+                    color: $colorSlateBlue2;
+                }
+            }
+
+            .info {
+                margin: 20px 0;
+
+                address {
+                    display: inline-block;
+                }
+
+                .team-names {
+                    padding-right: 20px;
+                }
+            }
+
         }
     }
 

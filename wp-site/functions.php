@@ -1204,6 +1204,11 @@ function blpc_content_feature_bottom($post_id) {
 	echo $string;						
 }
 
+function blpc_locations_list() {
+	echo debug_to_console( "formatting P tags! ");
+	remove_filter( 'the_content', 'wpautop' );
+}
+
 function g2is_archive_year_list($post_type) {
 	$oldest = get_posts( 'post_type='.$post_type.'&post_status=publish&posts_per_page=1&order=ASC' );
 	$oldest_date = $oldest[0]->post_date;

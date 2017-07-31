@@ -44,6 +44,12 @@
             <div class="col-md-offset-3 col-md-9">
                 <div class="container-fluid">
                     <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
+
+                    <?php if (is_page_template("page-about.php") {
+                            blpc_locations_list()
+                        }); 
+                    ?>
+
                     <?php the_content(); ?>
                     <?php endwhile; endif; ?>
 
