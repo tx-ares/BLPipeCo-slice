@@ -3960,7 +3960,6 @@ footer {
         #address-container {
 
             [class*="col-"] {
-                padding-left: 0;
                 padding-right: 30px;
 
                 &:last-child {
@@ -3968,10 +3967,28 @@ footer {
                 }
             }
 
+            .row {
+                padding: 0;
+                border-bottom: 3px solid #e5e5e5;
+
+            }
 
             a {
                 color: $colorDarkBlue;
+                &:hover {
+                    @include transition (color .3s);
+                    color: $colorSlateBlue2;
+                }
             }
+
+            .info {
+                margin: 20px 0;
+
+                address {
+                    display: inline-block;
+                }
+            }
+
         }
     }
 
