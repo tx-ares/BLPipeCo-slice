@@ -2562,7 +2562,7 @@ footer {
       .main-content .main #contact-form .label-row label:not([for="message"]) {
         max-height: 45px; }
       .main-content .main #contact-form .label-row label[for="first"], .main-content .main #contact-form .label-row label[for="last"] {
-        width: 49.5%; }
+        width: 50%; }
       .main-content .main #contact-form .label-row label[for="email"], .main-content .main #contact-form .label-row label[for="message"] {
         width: 100%; }
       .main-content .main #contact-form .label-row label[for="last"] {
