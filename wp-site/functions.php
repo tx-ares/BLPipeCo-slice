@@ -241,18 +241,17 @@ function blpc_products_rollovers($posttype) {
 
 	foreach ( $pages as $page ) { 
 		$icon = get_field('products_menu_icon', $page->ID);
-		$string .= '<div class="col-lg-3 col-md-4 col-sm-4 col-xs-6" eq-col>
-                        <div class="slide-content" eq-col>
-
-		                    <a href="'.get_post_permalink( $page->ID ).'" class="tframe fw fh text-center item-box">
+		$string .= '<div class="col-lg-3 col-md-6 col-sm-6 col-xs-12" eq-col>
+                        
+	                    <a href="'.get_post_permalink( $page->ID ).'" class="tframe fw fh text-center item-box">
+		                    <div class="slide-content tframe valign-mid" eq-col>
 		                        
                                 <img src="'.$icon['url'].'" alt="'.$icon['alt'].'" class="icon" />
                                 <h3>' . $page->post_title . '</h3>
                                 <p class="details">' . get_field('products_menu_description', $page->ID)  . '</p>
-		                            
-		                    </a>
-
-		                </div>    	
+		                    </div>         
+	                    </a>
+                   	
                 	</div>';	
 	}
 	echo $string;
