@@ -144,7 +144,9 @@ get_header(); ?>
                                         <div class="static-slides" eq-height>
                                             <div class="row compressed grey7">
 
-                                            <?php blpc_octgproducts_rollovers(); ?>
+                                            <?php blpc_products_rollovers('octg'); ?>
+
+
                                                 <!-- <div class="col-md-2 col-md-offset-3 col-sm-12">
                                                     <div class="slide-content" eq-col>
                                                         <a href="#">

@@ -227,31 +227,33 @@ function g2is_solutions_tile_pages() {
 }
 
 /* OCTG Products */
-function blpc_octgproducts_rollovers() { 
+function blpc_products_rollovers($posttype) { 
 	$args = array( 
 		'parent' => 0,
 		'exclude' => 2347,
 		'sort_column' => 'menu_order', 
 		'sort_order' => 'asc',
-		'post_type' => 'octg'
+		'post_type' => $posttype
 	);
 	
 	$pages = get_pages( $args );
 	$string = '';
 
 	foreach ( $pages as $page ) { 
-		$icon = get_field('page_menu_icon', $page->ID);
+		$icon = get_field('products_menu_icon', $page->ID);
 		$string .= '<div class="col-lg-3 col-md-4 col-sm-4 col-xs-6" eq-col>
-                    <a href="'.get_post_permalink( $page->ID ).'" class="tframe fw fh text-center item-box">
-                        <div class="tcell valign-mid">
-                            <div class="container-fluid">
+                        <div class="slide-content" eq-col>
+
+		                    <a href="'.get_post_permalink( $page->ID ).'" class="tframe fw fh text-center item-box">
+		                        
                                 <img src="'.$icon['url'].'" alt="'.$icon['alt'].'" class="icon" />
-                                <h2>' . $page->post_title . '</h2>
-                                <p class="details">' . get_field('page_menu_desc', $page->ID)  . '</p>
-                            </div>
-                        </div>
-                    </a>	
-                </div>';	
+                                <h3>' . $page->post_title . '</h3>
+                                <p class="details">' . get_field('products_menu_description', $page->ID)  . '</p>
+		                            
+		                    </a>
+
+		                </div>    	
+                	</div>';	
 	}
 	echo $string;
 }

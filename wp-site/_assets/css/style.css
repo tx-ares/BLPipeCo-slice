@@ -4360,10 +4360,12 @@ footer {
       color: inherit; }
       .static-slides .slide-content a:hover {
         color: inherit; }
-    .static-slides .slide-content h3 {
+    .static-slides .slide-content h3,
+    .static-slides .slide-content h2 {
       font-size: 24px;
       font-size: 1.5rem;
-      font-weight: 500; }
+      font-weight: 500;
+      text-transform: uppercase; }
 
 .more-phone-full-scr {
   width: 100%;
