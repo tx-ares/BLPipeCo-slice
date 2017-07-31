@@ -8,10 +8,11 @@
 
 
 
+
 /* ==========================================================================
 
-	1. SETTINGS			
-			
+    1. SETTINGS         
+            
    ========================================================================== */
 
 
@@ -30,6 +31,7 @@ $lg: 1024px;
 $xlg: 1280px;
 $xxlg: 1440px;
 $full: 1960px;
+
 
 
 
@@ -72,6 +74,7 @@ $font-icon:'FontAwesome';
 
 
 
+
 /* Extended Classes */
 
 .nowrap {
@@ -96,6 +99,7 @@ $font-icon:'FontAwesome';
 
 
 
+
 /* Accessibility */
 
 .accessibility {
@@ -115,10 +119,11 @@ $font-icon:'FontAwesome';
 
 
 
+
 /* ==========================================================================
 
-	2. BASE STYLES
-			
+    2. BASE STYLES
+            
    ========================================================================== */
 
 
@@ -128,6 +133,7 @@ _:-ms-fullscreen,
  :root {
     /* insert rule here */
 }
+
 
 
 
@@ -166,7 +172,7 @@ b {
     @include transition(color .3s);
     cursor: pointer;
     &:hover {
-    	color: $colorSlateBlue;
+        color: $colorSlateBlue;
     }
 }
 
@@ -223,6 +229,7 @@ hr {
 
 
 
+
 /* Text settings */
 
 .text-upcase {
@@ -256,11 +263,13 @@ hr {
 
 
 
+
 /* Font Weights */
 
 .f500 {
     font-weight: 500 !important;
 }
+
 
 
 
@@ -277,6 +286,7 @@ hr {
 .disp-bl {
     display: block;
 }
+
 
 
 
@@ -348,6 +358,7 @@ blockquote {
         @include font-size(20px);
     }
 }
+
 
 
 
@@ -430,6 +441,7 @@ img[src] {
 
 
 
+
 /* Forms */
 
 form {
@@ -443,6 +455,7 @@ form {
         }
     }
 }
+
 
 
 
@@ -468,6 +481,7 @@ button {
     line-height: 120%;
     margin-bottom: 10px;
 }
+
 
 
 
@@ -511,6 +525,7 @@ label {
 
 
 
+
 /* Custom Select */
 
 select {
@@ -519,11 +534,13 @@ select {
 
 
 
+
 /* Custom Checkbox */
 
 input[type=checkbox] {
     display: none;
 }
+
 
 
 
@@ -552,9 +569,11 @@ input[type=checkbox]+label:before {
 
 
 
+
 /* unchecked icon */
 
 input[type=checkbox]+label:before {}
+
 
 
 
@@ -567,9 +586,11 @@ input[type=checkbox]:checked+label:before {
 
 
 
+
 /* checked icon */
 
 input[type=checkbox]:checked+label:before {}
+
 
 
 
@@ -577,22 +598,22 @@ input[type=checkbox]:checked+label:before {}
 
 
 /*
-input[type="text"]::-webkit-input-placeholder 		{ color: $colorDarkGrey; }
-input[type="text"]:-moz-placeholder 				{ color: $colorDarkGrey; }
-input[type="text"]::-moz-placeholder 				{ color: $colorDarkGrey; }
-input[type="text"]:-ms-input-placeholder 			{ color: $colorDarkGrey; }
-input[type="email"]::-webkit-input-placeholder 		{ color: $colorDarkGrey; }
-input[type="email"]:-moz-placeholder 				{ color: $colorDarkGrey; }
-input[type="email"]::-moz-placeholder 				{ color: $colorDarkGrey; }
-input[type="email"]:-ms-input-placeholder 			{ color: $colorDarkGrey; }
-input[type="password"]::-webkit-input-placeholder 	{ color: $colorDarkGrey; }
-input[type="password"]:-moz-placeholder 			{ color: $colorDarkGrey; }
-input[type="password"]::-moz-placeholder 			{ color: $colorDarkGrey; }
-input[type="password"]:-ms-input-placeholder 		{ color: $colorDarkGrey; }
-textarea::-webkit-input-placeholder 				{ color: $colorDarkGrey; }
-textarea:-moz-placeholder 							{ color: $colorDarkGrey; }
-textarea::-moz-placeholder 							{ color: $colorDarkGrey; }
-textarea:-ms-input-placeholder 						{ color: $colorDarkGrey; }*/
+input[type="text"]::-webkit-input-placeholder       { color: $colorDarkGrey; }
+input[type="text"]:-moz-placeholder                 { color: $colorDarkGrey; }
+input[type="text"]::-moz-placeholder                { color: $colorDarkGrey; }
+input[type="text"]:-ms-input-placeholder            { color: $colorDarkGrey; }
+input[type="email"]::-webkit-input-placeholder      { color: $colorDarkGrey; }
+input[type="email"]:-moz-placeholder                { color: $colorDarkGrey; }
+input[type="email"]::-moz-placeholder               { color: $colorDarkGrey; }
+input[type="email"]:-ms-input-placeholder           { color: $colorDarkGrey; }
+input[type="password"]::-webkit-input-placeholder   { color: $colorDarkGrey; }
+input[type="password"]:-moz-placeholder             { color: $colorDarkGrey; }
+input[type="password"]::-moz-placeholder            { color: $colorDarkGrey; }
+input[type="password"]:-ms-input-placeholder        { color: $colorDarkGrey; }
+textarea::-webkit-input-placeholder                 { color: $colorDarkGrey; }
+textarea:-moz-placeholder                           { color: $colorDarkGrey; }
+textarea::-moz-placeholder                          { color: $colorDarkGrey; }
+textarea:-ms-input-placeholder                      { color: $colorDarkGrey; }*/
 
 
 /* Buttons */
@@ -697,6 +718,7 @@ textarea:-ms-input-placeholder 						{ color: $colorDarkGrey; }*/
 
 
 
+
 /* Figure with Image */
 
 figure {
@@ -763,10 +785,11 @@ figure {
 
 
 
+
 /* ==========================================================================
 
-	4. PAGE STRUCTURE
-			
+    4. PAGE STRUCTURE
+            
    ========================================================================== */
 
 
@@ -915,6 +938,7 @@ $padding-sm: 20px;
 
 
 
+
 /*  Utilities Sizes (Height and Width) */
 
 .fullpage {
@@ -948,6 +972,7 @@ $padding-sm: 20px;
 .pos-rel {
     position: relative;
 }
+
 
 
 
@@ -1041,6 +1066,7 @@ $padding-sm: 20px;
 
 
 
+
 /* Opener 3 Line Layout */
 
 .menu-line-style {
@@ -1122,9 +1148,9 @@ $padding-sm: 20px;
     @include transition(top 1s);
 
     /*
-	@include max-screen($tablet-l) {
-		width:220px;
-	}*/
+    @include max-screen($tablet-l) {
+        width:220px;
+    }*/
     &.active {
         top: 0;
         @include transition(top .3s);
@@ -1555,7 +1581,7 @@ $padding-sm: 20px;
                     >span {
                         background: $colorLightGrey7;
                         color: $colorDarkBlue;
-    	                @include transition(all .3s);
+                        @include transition(all .3s);
                     }
 
                     &:hover {
@@ -1570,10 +1596,10 @@ $padding-sm: 20px;
                         >span:not(.holder) {
                             &:after {
                                 /*background:url('../images/ui/chevron-white.svg') no-repeat;
-								background-size:100% auto;
-								background-repeat:no-repeat;
-								width:10px;
-								height:20px;*/
+                                background-size:100% auto;
+                                background-repeat:no-repeat;
+                                width:10px;
+                                height:20px;*/
                             }
                         }
                     }
@@ -1715,6 +1741,7 @@ $padding-sm: 20px;
 
 
 
+
 /* Social Media Icons */
 
 .social-media-icons {
@@ -1725,7 +1752,7 @@ $padding-sm: 20px;
     z-index: 4;
     @include transition(all,
     .4s); // &.hidden {
-    // 	right: -40px;
+    //  right: -40px;
     // }
     @include max-screen ($sm) {
         bottom: -40px !important;
@@ -1779,6 +1806,7 @@ $padding-sm: 20px;
 
 
 
+
 /* Main wrapper of the page */
 
 #wrapper {
@@ -1823,9 +1851,9 @@ body {
         max-width: 100% !important;
         overflow-x: hidden !important;
     } // @include max-screen($xsm) {
-    // 	max-width: 100% !important;
-    // 	overflow-x: hidden !important;
-    // }	
+    //  max-width: 100% !important;
+    //  overflow-x: hidden !important;
+    // }    
 }
 
 
@@ -1848,8 +1876,8 @@ header {
             height: 79px !important;
             width: 158px !important;
             &.veritical-logo {
-            	height: 50px !important;
-            	width: 203px !important;
+                height: 50px !important;
+                width: 203px !important;
             }
         }
     }
@@ -1861,19 +1889,19 @@ header {
         text-align: center; // padding-right:110px;
         /* Style for 1st <ul> only */
         // li:first-child{
-        // 	&.has-sub {
-        // 		&:after {
-        // 			content: '\f0d7';
-        // 			font-family: FontAwesome;
-        // 			color: $colorBrightRed1;
-        // 			position: absolute;
-        // 			bottom: 44%;
-        // 			right: 0;
-        // 			&.after-menu-compressed {
-        // 				bottom: 22%;
-        // 			}
-        // 		}
-        // 	}
+        //  &.has-sub {
+        //      &:after {
+        //          content: '\f0d7';
+        //          font-family: FontAwesome;
+        //          color: $colorBrightRed1;
+        //          position: absolute;
+        //          bottom: 44%;
+        //          right: 0;
+        //          &.after-menu-compressed {
+        //              bottom: 22%;
+        //          }
+        //      }
+        //  }
         // }
         >li {
             display: inline-block;
@@ -1934,7 +1962,7 @@ header {
                     color: $colorWhite; // Transition Style Start
                     text-decoration: none;
                     border-bottom: 3px solid $colorBrightRed2;
-                    width: 100%; // End					    
+                    width: 100%; // End                     
                 }
             }
 
@@ -2592,15 +2620,15 @@ footer {
 
     footer {
         /*position:fixed;
-		bottom:0;
-		left:0;
-		width:100%;
-		z-index:3;
-		position:relative;
-		
-		@include max-screen($xmd) {
-			position:relative;
-		}*/
+        bottom:0;
+        left:0;
+        width:100%;
+        z-index:3;
+        position:relative;
+        
+        @include max-screen($xmd) {
+            position:relative;
+        }*/
     }
 
     .main-content {
@@ -3328,6 +3356,7 @@ footer {
 
 
 
+
 /* page layout setup utilities */
 
 .fullpage {
@@ -3508,17 +3537,17 @@ footer {
 }
 
 // .secondary {
-// 		.row {
-// 			>[class*="col-"] {
-// 				margin: 0 -40px;
-// 			}
-// 		}
+//      .row {
+//          >[class*="col-"] {
+//              margin: 0 -40px;
+//          }
+//      }
 // }
 
 /* ==========================================================================
 
-	5. CUSTOM STYLES
-			
+    5. CUSTOM STYLES
+            
    ========================================================================== */
 
 .breadcrumbs {
@@ -3872,33 +3901,59 @@ footer {
         }
 
         #contact-form {
-            border: 1px solid lime;
             height: auto;
             min-height: 600px;
-            padding: 25px;
             margin: 20px 0;
             position: relative;
 
+            .form-title {
+                display: block;
+                font-weight: 500;
+                @include font-size(20px);
+                color: $colorDarkBlue;
+                margin: 30px 0;
+                text-transform: uppercase;
+                text-align: left;
+            }
+
             .label-row {
                 margin: 15px 0;
+
+                label {
+
+                    &:not([for="message"]) {
+                        max-height: 45px;
+                    }
+
+                    &[for="first"],
+                    &[for="last"] {
+                        width: 49.5%;
+                    }
+
+                    &[for="email"],
+                    &[for="message"] {
+                        width: 100%;
+                    }
+
+                    &[for="last"] {
+                        padding-left: 5px;
+                    }
+
+                }
             }
 
             #submit-row {
                 width: 100%;
-                margin-top: 200px;
 
                 input[type="submit"] {
+                    font-weight: 500;
+                    text-transform: uppercase;
                     @include transition (all .3s);
                     &:hover {
                         background: $colorBrightRed2;
                         color: $colorWhite;
                     }
                 }
-            }
-
-            label {
-                max-height: 45px;
-                width: 100%;
             }
         }
     }
@@ -3909,9 +3964,9 @@ footer {
             padding: 0 !important;
             padding-left: 40px;
         } // @include max-screen($sm){
-        // 	.row {
-        // 		margin:0;
-        // 	}
+        //  .row {
+        //      margin:0;
+        //  }
         // }
     }
 
@@ -4059,7 +4114,6 @@ footer {
                 color: $colorSlateBlue !important;
             }
         }
-        
     }
 }
 
@@ -4078,7 +4132,7 @@ footer {
         color: $colorWhite;
         margin-bottom: 20px;
     } // h3 {
-    // 	color: $colorWhite;
+    //  color: $colorWhite;
     // }
     p,
     span {
@@ -4091,13 +4145,11 @@ footer {
         font-weight: 500;
         text-transform: uppercase;
         color: $colorDarkBlue;
-    }
- //    .txt-content {
-	//     h2 ,h3, h4, p, span.date {
-	//     	@include transition(color .3s);
-	//     }
-	// }
-
+    } //    .txt-content {
+    //     h2 ,h3, h4, p, span.date {
+    //      @include transition(color .3s);
+    //     }
+    // }
     &.darkblue-theme {
         background: $colorDarkBlue; // @include transition(color .3);
         h2 {
@@ -4120,9 +4172,13 @@ footer {
         span.date {
             padding-top: 5px;
             color: $colorSlateBlue2;
-        } 
-        h2 ,h3, h4, p, span.date {
-        	@include transition(color .3s);
+        }
+        h2,
+        h3,
+        h4,
+        p,
+        span.date {
+            @include transition(color .3s);
         }
         .txt-content {
             &:hover {
@@ -4139,7 +4195,7 @@ footer {
     &.slateblue-theme {
         // background: $colorSlateBlue2;
         // h2 {
-        // 	color: $colorWhite;
+        //  color: $colorWhite;
         // }
         h4 {
             @include font-size(30px);
@@ -4160,7 +4216,7 @@ footer {
             color: $colorDarkBlue;
         }
 
-         .txt-content {
+        .txt-content {
             &:hover {
                 h2,
                 h3,
@@ -4176,17 +4232,17 @@ footer {
             color: $colorSlateBlue;
         }
     } // .txt-content {
-    // 	&:hover {
-    // 		h3, p, span {
-    // 			color: $colorWhite;
-    // 		}
-    // 	}
+    //  &:hover {
+    //      h3, p, span {
+    //          color: $colorWhite;
+    //      }
+    //  }
     // }
     // @include max-screen($xmd){
-    // 	background: $colorSlateBlue2 !important;
-    // 	h2, p, span {
-    // 		color: $colorDarkBlue !important; 
-    // 	}
+    //  background: $colorSlateBlue2 !important;
+    //  h2, p, span {
+    //      color: $colorDarkBlue !important; 
+    //  }
     // }
     .txt-subcontent {
         padding: 5px 0;
@@ -4232,7 +4288,7 @@ footer {
                 margin: 0 auto;
             }
             &:after {
-            	@include transition(background .3s);
+                @include transition(background .3s);
                 content: '\f0da';
                 font-family: FontAwesome;
                 position: absolute;
@@ -4248,9 +4304,9 @@ footer {
             }
 
             &:hover {
-            	&:after {
-                	background: $colorSlateBlue;
-            	}
+                &:after {
+                    background: $colorSlateBlue;
+                }
             }
         }
     }
@@ -4330,29 +4386,28 @@ footer {
 }
 
 // .pager {
-// 	margin-bottom:40px;
-// 	text-align:center;
-// 	.page-items {
-// 		display:inline-block;
-// 	}
-// 	a {
-// 		display:inline-block;
-// 		font-family:$font-avenir;
-// 		color: $colorDarkBlue;
-// 		margin:0 15px;
-// 		font-weight: 700;
-// 		// border: 1px solid $color
-// 		.fa {
-// 			font-weight:bold;
-// 			color: red;
-// 		}
-// 		&:hover,
-// 		&.active {
-// 			color: red;
-// 		}
-// 	}
+//  margin-bottom:40px;
+//  text-align:center;
+//  .page-items {
+//      display:inline-block;
+//  }
+//  a {
+//      display:inline-block;
+//      font-family:$font-avenir;
+//      color: $colorDarkBlue;
+//      margin:0 15px;
+//      font-weight: 700;
+//      // border: 1px solid $color
+//      .fa {
+//          font-weight:bold;
+//          color: red;
+//      }
+//      &:hover,
+//      &.active {
+//          color: red;
+//      }
+//  }
 // }
-
 .num {
     font-family: $font-avenir;
     @include font-size(24px);
@@ -4361,16 +4416,13 @@ footer {
     display: block;
     @include transition(color .3s);
     &:hover {
-    	color: $colorLightGrey6;
-    } 
-
-    // @include max-screen($xlg) {
-    // 	@include font-size(20px);
+        color: $colorLightGrey6;
+    } // @include max-screen($xlg) {
+    //  @include font-size(20px);
     // }
     @include max-screen($md) {
         @include font-size(24px);
     }
-
 }
 
 .send-request {
@@ -4554,8 +4606,8 @@ footer {
                     display: inline-table;
                     width: 49.5%;
                     text-align: center; // @include max-screen($xxlg) {
-                    // 	display:block;
-                    // 	width: 100%;
+                    //  display:block;
+                    //  width: 100%;
                     // }
                     @include max-screen ($md) {
                         display: inline-table;
@@ -4565,12 +4617,12 @@ footer {
                         display: block;
                         width: 100%; // padding: 15px 0 15px 120px;
                     } // &:nth-child(n-3) {
-                    // 	border-bottom: 1px solid $colorWhite;
+                    //  border-bottom: 1px solid $colorWhite;
                     // }
                     // &:after {
-                    // 	content: '\f0da';
-                    // 	font-family: FontAwesome;
-                    // 	float: right;
+                    //  content: '\f0da';
+                    //  font-family: FontAwesome;
+                    //  float: right;
                     // }
                     a.num {
                         color: $colorWhite;
@@ -4661,37 +4713,37 @@ footer {
 .side-nav {
     position: relative; // margin-bottom:40px;
     // ul {
-    // 	li {
-    // 		padding:20px 0;
-    // 		border-bottom:solid 1px $colorLightGrey3;
-    // 		a {
-    // 			display:inline-block;					
-    // 			padding-left:35px;
-    // 			padding-right:20px;
-    // 			position:relative;
-    // 			@include font-size(17px);
-    // 			font-weight:500;
-    // 			&:after {
-    // 				// content:'\f104';
-    // 				// position:absolute;
-    // 				// left:10px;
-    // 				// top:1px;
-    // 				// font-family:$font-icon;
-    // 			}
-    // 			&:hover {
-    // 				color:$colorLightGrey6;
-    // 			}
-    // 		}
-    // 		&.active {
-    // 			a {
-    // 				color:$colorDarkGreen;
-    // 				font-weight:700;
-    // 			}
-    // 		}
-    // 		&:last-child {
-    // 			border-bottom:none;
-    // 		}
-    // 	}
+    //  li {
+    //      padding:20px 0;
+    //      border-bottom:solid 1px $colorLightGrey3;
+    //      a {
+    //          display:inline-block;                   
+    //          padding-left:35px;
+    //          padding-right:20px;
+    //          position:relative;
+    //          @include font-size(17px);
+    //          font-weight:500;
+    //          &:after {
+    //              // content:'\f104';
+    //              // position:absolute;
+    //              // left:10px;
+    //              // top:1px;
+    //              // font-family:$font-icon;
+    //          }
+    //          &:hover {
+    //              color:$colorLightGrey6;
+    //          }
+    //      }
+    //      &.active {
+    //          a {
+    //              color:$colorDarkGreen;
+    //              font-weight:700;
+    //          }
+    //      }
+    //      &:last-child {
+    //          border-bottom:none;
+    //      }
+    //  }
     // }
     ul {
         li {
@@ -4921,7 +4973,7 @@ footer {
             width: 100%;
             margin-bottom: 53px;
             padding: 40px; // p {
-            // 	text-align: left;
+            //  text-align: left;
             // }
             h2 {
                 font-weight: 600;
@@ -4934,7 +4986,7 @@ footer {
                 font-weight: 500;
                 text-transform: uppercase;
             } // @include max-screen($sm) {
-            // 	text-align: center;
+            //  text-align: center;
             // }
         }
 
@@ -5239,7 +5291,7 @@ footer {
 
     &.slateblue2 {
         background: $colorSlateBlue2; // .txt-subcontent {
-        // 	background:$colorSlateBlue2;
+        //  background:$colorSlateBlue2;
         // }
     }
 
@@ -5579,10 +5631,9 @@ footer {
     position: relative;
     padding: 30px;
     margin-bottom: 40px;
-    @include transition(background .3s);
-    // cursor: pointer;
+    @include transition(background .3s); // cursor: pointer;
     .txt-content {
-    	@include transition(background .3s);
+        @include transition(background .3s);
         min-height: 215px;
     }
 
@@ -5682,8 +5733,8 @@ footer {
         color: $colorWhite;
 
         &:hover {
-        	.txt-content {
-            	@include transition(background .3s);
+            .txt-content {
+                @include transition(background .3s);
                 background: $colorSlateBlue;
             }
         }
@@ -5752,8 +5803,7 @@ footer {
 
 .feature-slide-box {
     position: relative;
-	cursor: pointer;
-	// padding:30px;
+    cursor: pointer; // padding:30px;
     // margin-bottom:40px;
     // min-height: 300px;
     .panel-label {
@@ -5937,23 +5987,23 @@ footer {
             .txt-content {
                 opacity: 0;
                 width: 0;
-            } // 	&:before {
-            // 		content: '\f0d9';
-            // 		font-family: $font-icon;
-            // 		position: absolute;
-            // 		left: 35px;
-            // 		top: 65%;
-            // 		@include max-screen($smd) {
-            // 			left: initial;
-            // 			right: 50px;
-            // 			content: '\f0da';
-            // 			top: 40%;
-            // 		}
-            // 		@include max-screen($sm) {
-            // 			right: 0;
-            // 			padding-right: 15px;
-            // 		}
-            // 	}
+            } //    &:before {
+            //      content: '\f0d9';
+            //      font-family: $font-icon;
+            //      position: absolute;
+            //      left: 35px;
+            //      top: 65%;
+            //      @include max-screen($smd) {
+            //          left: initial;
+            //          right: 50px;
+            //          content: '\f0da';
+            //          top: 40%;
+            //      }
+            //      @include max-screen($sm) {
+            //          right: 0;
+            //          padding-right: 15px;
+            //      }
+            //  }
         }
         .txt-content {
             position: absolute;
@@ -6471,12 +6521,12 @@ footer {
                     width: 100%;
                     padding: 25px 10px;
                 } // &:nth-child(n-3) {
-                // 	border-bottom: 1px solid $colorWhite;
+                //  border-bottom: 1px solid $colorWhite;
                 // }
                 // &:after {
-                // 	content: '\f0da';
-                // 	font-family: FontAwesome;
-                // 	float: right;
+                //  content: '\f0da';
+                //  font-family: FontAwesome;
+                //  float: right;
                 // }
                 a.num {
                     color: $colorWhite;
@@ -6583,9 +6633,9 @@ footer {
             display: none;
         }
     } // .fa-spin {
-    // 	position: absolute;
-    // 	top: 40%;
-    // 	right: 45%;
+    //  position: absolute;
+    //  top: 40%;
+    //  right: 45%;
     // }
     &.active {
         width: 91%;
@@ -6620,7 +6670,7 @@ footer {
             @include max-screen($md) {
                 right: -75px;
             } // @include max-screen($smd) {
-            // 	right: -75px;
+            //  right: -75px;
             // }
             @include max-screen($sm) {
                 right: -45px;
@@ -6665,15 +6715,15 @@ footer {
     @include max-screen($xmd) {}
 
     // &:after {
-    // 	content: '\f0da';
-    // 	font-family: $font-icon;
-    // 	color: $colorDarkBlue;
-    // 	position: absolute;
-    // 	right: 10px;
-    // 	top: 45%;
-    // 	@include max-screen($smd){
-    // 		right: 50px;
-    // 	}
+    //  content: '\f0da';
+    //  font-family: $font-icon;
+    //  color: $colorDarkBlue;
+    //  position: absolute;
+    //  right: 10px;
+    //  top: 45%;
+    //  @include max-screen($smd){
+    //      right: 50px;
+    //  }
     // }
     .slider {
         width: 60%;
@@ -6743,33 +6793,32 @@ footer {
                     z-index: 1;
                     @include transition(all .3s);
                     .info-wrapper {
-                    	display: inline-block;
-                    	margin: auto;
-                    	vertical-align: middle;
-                    	text-align: center;
-                    	width: 100%;
-                    	height: 100%;
-                    	min-height: 100%;
-                    	padding: 20% 0;
-                    	line-height: 80%;
-                    	p {
+                        display: inline-block;
+                        margin: auto;
+                        vertical-align: middle;
+                        text-align: center;
+                        width: 100%;
+                        height: 100%;
+                        min-height: 100%;
+                        padding: 20% 0;
+                        line-height: 80%;
+                        p {
                             @include font-size(20px);
                             margin-bottom: 10px;
                         }
 
                         @include max-screen($xlg) {
-                    		padding: 10% 0;
-                    		line-height: 100%;
-                    		p {
-	                            @include font-size(20px);
-	                            margin-bottom: 5px;
-	                        }
-                    	}
-             
-                    	@include max-screen($sm) {
-                    		line-height: 100%;
-                    	}
+                            padding: 10% 0;
+                            line-height: 100%;
+                            p {
+                                @include font-size(20px);
+                                margin-bottom: 5px;
+                            }
+                        }
 
+                        @include max-screen($sm) {
+                            line-height: 100%;
+                        }
                     }
                 }
             }
@@ -6862,7 +6911,7 @@ footer {
             &:first-child {
                 .bioBox {
                     // margin-left:  0;
-                    // margin-right: -110.5%;	
+                    // margin-right: -110.5%;   
                 }
             }
         }
@@ -6888,10 +6937,10 @@ footer {
         @include max-screen($xxlg) {
             .photo-item {
                 width: 50%; // &:nth-child(5n+1) {
-                // 	clear:none;
+                //  clear:none;
                 // }
                 // &:nth-child(4n+1) {
-                // 	clear:left;
+                //  clear:left;
                 // }
             }
         }
@@ -6899,10 +6948,10 @@ footer {
         @include max-screen($xlg) {
             .photo-item {
                 width: 50%; // &:nth-child(4n+1) {
-                // 	clear:none;
+                //  clear:none;
                 // }
                 // &:nth-child(3n+1) {
-                // 	clear:left;
+                //  clear:left;
                 // }
             }
         }
@@ -6910,10 +6959,10 @@ footer {
         @include max-screen($md) {
             .photo-item {
                 width: 50%; // &:nth-child(3n+1) {
-                // 	clear:none;
+                //  clear:none;
                 // }
                 // &:nth-child(2n+1) {
-                // 	clear:left;
+                //  clear:left;
                 // }
             }
         }
@@ -6924,10 +6973,10 @@ footer {
             .photo-item {
                 width: 50%;
                 padding: 0 15px; // &:nth-child(2n+1) {
-                // 	clear:none;
+                //  clear:none;
                 // }
                 // &:nth-child(3n+1) {
-                // 	clear:left;
+                //  clear:left;
                 // }
             }
         }
@@ -6936,10 +6985,10 @@ footer {
 
             .photo-item {
                 width: 50%; // &:nth-child(3n+1) {
-                // 	clear:none;
+                //  clear:none;
                 // }
                 // &:nth-child(2n+1) {
-                // 	clear:left;
+                //  clear:left;
                 // }
             }
         }
@@ -6949,7 +6998,7 @@ footer {
             .photo-item {
                 width: 100%;
                 float: none; // &:nth-child(2n+1) {
-                // 	clear:none;
+                //  clear:none;
                 // }
             }
         }
