@@ -331,13 +331,13 @@ function g2is_people_tile_pages($post_id) {
 			break;
 	}
 	$args = array( 
-					'numberposts'       => -1,
-					'post_type' => 'people',
-					'orderby' => 'menu_order',
-					'order' => 'ASC',
-					'taxonomy' => 'category',
-                        'field' => 'slug',
-                        'term' => $slug
+			'numberposts'       => -1,
+			'post_type' => 'people',
+			'orderby' => 'menu_order',
+			'order' => 'ASC',
+			'taxonomy' => 'category',
+	            'field' => 'slug',
+	            'term' => $slug
 	);
 	
 	$pages = get_posts( $args );

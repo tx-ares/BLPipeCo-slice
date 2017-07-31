@@ -3956,6 +3956,23 @@ footer {
                 }
             }
         }
+
+        #address-container {
+
+            [class*="col-"] {
+                padding-left: 0;
+                padding-right: 30px;
+
+                &:last-child {
+                    margin-bottom: 0;
+                }
+            }
+
+
+            a {
+                color: $colorDarkBlue;
+            }
+        }
     }
 
     .aside,
