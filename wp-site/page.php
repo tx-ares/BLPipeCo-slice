@@ -65,9 +65,7 @@
     <div class="col-md-4 col-sm-5 col-xs-12 aside">
         <div class="container-fluid">
             <!-- Send Request -->
-            <!-- TODO: Make Dynamic -->
             <div class="send-request" toggle-active-parent>
-                <!-- <a href="#" class="btn orange fw">Send Us a Request</a> -->
                 <div class="row">
                     <div class="col-sm-7 col-xs-7 fh">
                         <a href="#" class="tframe fh fw">

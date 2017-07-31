@@ -1205,7 +1205,6 @@ function blpc_content_feature_bottom($post_id) {
 }
 
 function blpc_locations_list() {
-	echo debug_to_console( "formatting P tags! ");
 	remove_filter( 'the_content', 'wpautop' );
 }
 

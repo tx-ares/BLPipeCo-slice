@@ -4937,7 +4937,7 @@ footer {
         font-weight: 400;
         @include font-size(24px);
         margin-bottom: 25px;
-        color: $colorOrange;
+        color: $colorBrightRed1;
         position: relative;
         line-height: 130%;
 
@@ -4960,7 +4960,7 @@ footer {
     }
 
     .link {
-        color: $colorOrange;
+        color: $colorBrightRed2;
         font-weight: 700;
         @include font-size(16px);
     }
@@ -4973,7 +4973,7 @@ footer {
             right: 0;
             height: 2px;
             width: 0;
-            background: $colorOrange;
+            background: $colorBrightRed2;
             @include transition(width .3s);
         }
 
@@ -4984,7 +4984,7 @@ footer {
             right: 0;
             height: 0;
             width: 2px;
-            background: $colorOrange;
+            background: $colorBrightRed2;
             @include transition(height .3s);
         }
     }
@@ -4997,7 +4997,7 @@ footer {
             left: 0;
             height: 2px;
             width: 0;
-            background: $colorOrange;
+            background: $colorBrightRed2;
             @include transition(width .3s);
         }
     }
@@ -5105,7 +5105,7 @@ footer {
             position: absolute;
             bottom: 0;
             padding: 15px 40px;
-            background: $colorGreen;
+            background: $colorBrightRed1;
             color: $colorWhite;
             text-transform: uppercase;
             @include font-size(14px);
