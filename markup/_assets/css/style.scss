@@ -3870,6 +3870,29 @@ footer {
             @include font-size(20px);
             margin-bottom: 20px;
         }
+
+        #contact-form {
+            border: 1px solid lime;
+            height: auto;
+            min-height: 600px;
+            padding: 25px;
+            margin: 20px 0;
+            position: relative;
+
+            .label-row {
+                margin: 15px 0;
+            }
+
+            #submit-row {
+                width: 100%;
+                margin-top: 200px;
+            }
+
+            label {
+                max-height: 45px;
+                width: 100%;
+            }
+        }
     }
 
     .aside,
