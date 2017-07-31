@@ -34,10 +34,16 @@
     </script>
     <!-- Pagespeed compliant - Avoid render blocking load of CSS -->
     <script type="text/javascript">
-    function loadStyleSheet(a, b, c) { var d = document.getElementsByTagName("head")[0],
+    function loadStyleSheet(a, b, c) {
+        var d = document.getElementsByTagName("head")[0],
             e = document.createElement("link");
-        e.setAttribute("href", a), e.setAttribute("rel", "stylesheet"), e.setAttribute("type", "text/css"); var f, g; "sheet" in e ? (f = "sheet", g = "cssRules") : (f = "styleSheet", g = "rules"); var h = setInterval(function() { try { e[f] && e[f][g].length && (clearInterval(h), clearTimeout(i), b.call(c || window, !0, e)) } catch (a) {} finally {} }, 10),
-            i = setTimeout(function() { clearInterval(h), clearTimeout(i), d.removeChild(e), b.call(c || window, !1, e) }, 15e3); return d.appendChild(e), e }
+        e.setAttribute("href", a), e.setAttribute("rel", "stylesheet"), e.setAttribute("type", "text/css");
+        var f, g;
+        "sheet" in e ? (f = "sheet", g = "cssRules") : (f = "styleSheet", g = "rules");
+        var h = setInterval(function() { try { e[f] && e[f][g].length && (clearInterval(h), clearTimeout(i), b.call(c || window, !0, e)) } catch (a) {} finally {} }, 10),
+            i = setTimeout(function() { clearInterval(h), clearTimeout(i), d.removeChild(e), b.call(c || window, !1, e) }, 15e3);
+        return d.appendChild(e), e
+    }
 
     loadStyleSheet('_assets/css/all.min.css', function(success, link) {
         if (success) {
@@ -234,32 +240,17 @@
         <!-- ******************************************************* -->
         <section class="banner">
             <div class="row" eq-height>
-                <div class="col-md-4 col-sm-5 col-xs-12 bg-content pull-right" eq-col data-img="http://placehold.it/640x310/d55441/ffffff">
-                    <img alt="G2 Integrated" data-src="<575:http://placehold.it/575x370/d55441/ffffff,
+                <div class="col-md-12 col-sm-12 col-xs-12 bg-content title-content" eq-col>
+                    <div class="tframe fh fw ">
+                        <div class="tcell valign-mid ">
+                            <div class="container-fluid no-padding ">
+                                <img alt="BL Pipeco" data-src="<575:http://placehold.it/575x370/d55441/ffffff,
                                 <768:http://placehold.it/768x370/d55441/ffffff,
-                                >768:http://placehold.it/640x310/d55441/ffffff" />
-                    <div class="overlay-band"></div>
-                </div>
-                <div class="col-md-8 col-sm-7 col-xs-12 title-content" eq-col>
-                    <div class="tframe fh fw">
-                        <div class="tcell valign-mid">
-                            <div class="container-fluid">
-                                <span class="sub-cat-title">Geospatial Systems and Services</span>
-                                <h1>H1 Systems Architecture Design and Deployment</h1>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="overlay-band">
-                        <div class="tframe fh fw">
-                            <div class="tcell valign-mid">
-                                <div class="container-fluid">
-                                    <h3>Houston, TX, <span class="date">October 26, 2016</span></h3>
-                                    <span class="pull-right social">Share 
-                                    <a href="#" title="Facebook"><i class="fa fa-facebook" aria-hidden="true"></i></a>
-                                    <a href="#" title="Twitter"><i class="fa fa-twitter" aria-hidden="true"></i></a>
-                                    <a href="#" title="Contact Us"><i class="fa fa-envelope" aria-hidden="true"></i></a>
-                                    <a href="#" title="LinkedIn"><i class="fa fa-linkedin" aria-hidden="true"></i></a>
-                                    <a href="#" title="Share"><i class="fa fa-share-alt" aria-hidden="true"></i></a></span>
+                                >768:http://placehold.it/1960x768/d55441/ffffff" />
+                                <div class="subtext-box">
+                                    <h1 class="text-upcase">
+                                       A full H1 Heading 
+                                    </h1>
                                 </div>
                             </div>
                         </div>
@@ -277,10 +268,10 @@
                         <div class="col-md-offset-3 col-md-9">
                             <div class="container-fluid">
                                 <h2>H2 Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam.</h2>
-                                <p>Effective strategic decision-making comes when there is a complete understanding of all the identified threats. Every conversation G2 Integrated Solutions has with our customers starts with a thorough examination of all current and potential risks.</p>
+                                <p>Effective strategic decision-making comes when there is a complete understanding of all the identified threats. Every conversation BL Pipeco Solutions has with our customers starts with a thorough examination of all current and potential risks.</p>
                                 <p>Our proprietary process leads to resourceful, cost-effective and successful solutions that will ensure smart pipeline management.</p>
                                 <figure class="pull-left col-lg-4 col-md-5 col-sm-6 col-xs-12">
-                                    <img alt="G2 Integrated" data-src=">0:http://placehold.it/390x280/d55441/ffffff" />
+                                    <img alt="BL Pipeco" data-src=">0:http://placehold.it/390x280/d55441/ffffff" />
                                     <figcaption>Caption would go here</figcaption>
                                 </figure>
                                 <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi.</p>
@@ -344,11 +335,11 @@
                                 <blockquote class="pull-right col-md-5">
                                     <p>Our new package of services includes safety culture assessments and subsequent culture transformation processes that are customized to address each organizations’ unique needs.</p>
                                 </blockquote>
-                                <p>G2 Integrated Solutions (G2-IS) has announced that it has joined with Mergentis, LLC (Mergentis) in an exclusive alliance agreement to provide Safety Culture Consulting to the Pipeline, Utility and Downstream marketplace. Our new package of services includes, but is not limited to, safety culture assessments and subsequent culture transformation processes that are customized to address each organizations’ unique needs. With API RP 1173 (Pipeline Safety Management Systems, PSMS) on the horizon for pipeline operators, this new G2-IS service capability comes in time to provide the specialist and experienced help to ensure that safety culture is conducive to the successful integration of an organization’s PSMS.</p>
+                                <p>BL Pipeco Solutions (G2-IS) has announced that it has joined with Mergentis, LLC (Mergentis) in an exclusive alliance agreement to provide Safety Culture Consulting to the Pipeline, Utility and Downstream marketplace. Our new package of services includes, but is not limited to, safety culture assessments and subsequent culture transformation processes that are customized to address each organizations’ unique needs. With API RP 1173 (Pipeline Safety Management Systems, PSMS) on the horizon for pipeline operators, this new G2-IS service capability comes in time to provide the specialist and experienced help to ensure that safety culture is conducive to the successful integration of an organization’s PSMS.</p>
                                 <p>“We are very pleased to be working with the G2-IS team”, said Jade Strong, President & CEO of Mergentis. “With the changes in regulatory requirements approaching the gas utility and pipeline industry, we can share our extensive knowledge and experience working in other high-risk industries who have undergone many of these same changes”. G2-IS’s CEO, David Corbett added, “To be able to offer safety culture consulting services of this caliber, is another example of how G2-IS is positioned to assist our customers with their unique current and future challenges. Our new capability further enhances our mission to be leaders in the provision of holistic solutions to the drive for optimization of pipeline asset performance management and assurance”.</p>
                                 <div class="feature-box grey3">
-                                    <h3>About G2 Integrated Solutions</h3>
-                                    <p>G2 Integrated Solutions (G2-IS) delivers expertise to pipeline operators, utility companies and other energy stakeholders in seven specialized service disciplines — Asset Integrity, Engineering, Geospatial Systems and Services, Regulatory, Field Services, Technology Services and Strategic Consulting. We provide end-to-end solutions that help manage risk, assure compliance and optimize performance.</p>
+                                    <h3>About BL Pipeco Solutions</h3>
+                                    <p>BL Pipeco Solutions (G2-IS) delivers expertise to pipeline operators, utility companies and other energy stakeholders in seven specialized service disciplines — Asset Integrity, Engineering, Geospatial Systems and Services, Regulatory, Field Services, Technology Services and Strategic Consulting. We provide end-to-end solutions that help manage risk, assure compliance and optimize performance.</p>
                                     <p>Our commitment is to implement innovative, cost-effective solutions that align specifically with our customers’ needs. In order to accomplish this, we have built an organization that is robust in talent and experience. G2-IS has offices located in Houston, Texas (Corporate Headquarters), Angleton, Texas, Concord, California and Denver, Colorado.</p>
                                     <p>For more details on the spectrum of services G2-IS offers, please visit our website at <a href="#">www.g2-is.com</a>.</p>
                                 </div>
@@ -356,15 +347,15 @@
                                     <h3>Latest News</h3>
                                     <div class="row">
                                         <div class="col-md-4">
-                                            <h3 class="title"><a href="#">Strategic Growth Continues at G2 Integrated Solutions with the Addition of Scott A. Glaeser</a></h3>
+                                            <h3 class="title"><a href="#">Strategic Growth Continues at BL Pipeco Solutions with the Addition of Scott A. Glaeser</a></h3>
                                             <p class="date">November 17, 2016</p>
                                         </div>
                                         <div class="col-md-4">
-                                            <h3 class="title"><a href="#">G2 Integrated Solutions Adds Executive Sales & Marketing Leadership to its Redefined Leadership Team</a></h3>
+                                            <h3 class="title"><a href="#">BL Pipeco Solutions Adds Executive Sales & Marketing Leadership to its Redefined Leadership Team</a></h3>
                                             <p class="date">October 26, 2016</p>
                                         </div>
                                         <div class="col-md-4">
-                                            <h3 class="title"><a href="#">Christopher Johns Joins the G2 Integrated Solutions Board of Directors as a Non-Executive Board Member</a></h3>
+                                            <h3 class="title"><a href="#">Christopher Johns Joins the BL Pipeco Solutions Board of Directors as a Non-Executive Board Member</a></h3>
                                             <p class="date">September 28, 2016</p>
                                         </div>
                                     </div>
@@ -679,29 +670,29 @@
                                             <label for="check1">Yes, I want to receive all communications related to my areas of interest</label>
                                         </div>
                                     </div>
-                                    <input type="submit" value="Send Message" class="btn orange" />
+                                    <input type="submit" value="Send Message" class="btn brightRed" />
                                 </form>
                                 <div class="feature-box grey3">
                                     <h3>Large Special Feature</h3>
-                                    <p>G2 Integrated Solutions (G2-IS) delivers expertise to pipeline operators, utility companies and other energy stakeholders in seven specialized service disciplines — Asset Integrity, Engineering, Geospatial Systems and Services, Regulatory, Field Services, Technology Services and Strategic Consulting. We provide end-to-end solutions that help manage risk, assure compliance and optimize performance.</p>
+                                    <p>BL Pipeco Solutions (G2-IS) delivers expertise to pipeline operators, utility companies and other energy stakeholders in seven specialized service disciplines — Asset Integrity, Engineering, Geospatial Systems and Services, Regulatory, Field Services, Technology Services and Strategic Consulting. We provide end-to-end solutions that help manage risk, assure compliance and optimize performance.</p>
                                     <p>Our commitment is to implement innovative, cost-effective solutions that align specifically with our customers’ needs. In order to accomplish this, we have built an organization that is robust in talent and experience. G2-IS has offices located in Houston, Texas (Corporate Headquarters), Angleton, Texas, Concord, California and Denver, Colorado.</p>
                                     <p>For more details on the spectrum of services G2-IS offers, please visit our website at <a href="#">www.g2-is.com</a>.</p>
                                 </div>
                                 <div class="feature-box grey2">
                                     <h3>Large Special Feature</h3>
-                                    <p>G2 Integrated Solutions (G2-IS) delivers expertise to pipeline operators, utility companies and other energy stakeholders in seven specialized service disciplines — Asset Integrity, Engineering, Geospatial Systems and Services, Regulatory, Field Services, Technology Services and Strategic Consulting. We provide end-to-end solutions that help manage risk, assure compliance and optimize performance.</p>
+                                    <p>BL Pipeco Solutions (G2-IS) delivers expertise to pipeline operators, utility companies and other energy stakeholders in seven specialized service disciplines — Asset Integrity, Engineering, Geospatial Systems and Services, Regulatory, Field Services, Technology Services and Strategic Consulting. We provide end-to-end solutions that help manage risk, assure compliance and optimize performance.</p>
                                     <p>Our commitment is to implement innovative, cost-effective solutions that align specifically with our customers’ needs. In order to accomplish this, we have built an organization that is robust in talent and experience. G2-IS has offices located in Houston, Texas (Corporate Headquarters), Angleton, Texas, Concord, California and Denver, Colorado.</p>
                                     <p>For more details on the spectrum of services G2-IS offers, please visit our website at <a href="#">www.g2-is.com</a>.</p>
                                 </div>
                                 <div class="feature-box green">
                                     <h3>Large Special Feature</h3>
-                                    <p>G2 Integrated Solutions (G2-IS) delivers expertise to pipeline operators, utility companies and other energy stakeholders in seven specialized service disciplines — Asset Integrity, Engineering, Geospatial Systems and Services, Regulatory, Field Services, Technology Services and Strategic Consulting. We provide end-to-end solutions that help manage risk, assure compliance and optimize performance.</p>
+                                    <p>BL Pipeco Solutions (G2-IS) delivers expertise to pipeline operators, utility companies and other energy stakeholders in seven specialized service disciplines — Asset Integrity, Engineering, Geospatial Systems and Services, Regulatory, Field Services, Technology Services and Strategic Consulting. We provide end-to-end solutions that help manage risk, assure compliance and optimize performance.</p>
                                     <p>Our commitment is to implement innovative, cost-effective solutions that align specifically with our customers’ needs. In order to accomplish this, we have built an organization that is robust in talent and experience. G2-IS has offices located in Houston, Texas (Corporate Headquarters), Angleton, Texas, Concord, California and Denver, Colorado.</p>
                                     <p>For more details on the spectrum of services G2-IS offers, please visit our website at <a href="#">www.g2-is.com</a>.</p>
                                 </div>
                                 <div class="feature-box darkgrey">
                                     <h3>Large Special Feature</h3>
-                                    <p>G2 Integrated Solutions (G2-IS) delivers expertise to pipeline operators, utility companies and other energy stakeholders in seven specialized service disciplines — Asset Integrity, Engineering, Geospatial Systems and Services, Regulatory, Field Services, Technology Services and Strategic Consulting. We provide end-to-end solutions that help manage risk, assure compliance and optimize performance.</p>
+                                    <p>BL Pipeco Solutions (G2-IS) delivers expertise to pipeline operators, utility companies and other energy stakeholders in seven specialized service disciplines — Asset Integrity, Engineering, Geospatial Systems and Services, Regulatory, Field Services, Technology Services and Strategic Consulting. We provide end-to-end solutions that help manage risk, assure compliance and optimize performance.</p>
                                     <p>Our commitment is to implement innovative, cost-effective solutions that align specifically with our customers’ needs. In order to accomplish this, we have built an organization that is robust in talent and experience. G2-IS has offices located in Houston, Texas (Corporate Headquarters), Angleton, Texas, Concord, California and Denver, Colorado.</p>
                                     <p>For more details on the spectrum of services G2-IS offers, please visit our website at <a href="#">www.g2-is.com</a>.</p>
                                 </div>
@@ -758,7 +749,7 @@
                                 <div class="feature-box grey3 with-img">
                                     <div class="row compressed fh-col" eq-height>
                                         <div class="col-lg-5 col-md-12 img-content" eq-col data-img="http://placehold.it/430x345/d55441/ffffff">
-                                            <img alt="G2 Integrated" src="http://placehold.it/430x345/d55441/ffffff" />
+                                            <img alt="BL Pipeco" src="http://placehold.it/430x345/d55441/ffffff" />
                                         </div>
                                         <div class="col-lg-7 col-md-12 txt-content" eq-col>
                                             <h3>Large Special Feature With Image</h3>
@@ -770,7 +761,7 @@
                                 <div class="feature-box grey2 with-img">
                                     <div class="row compressed fh-col" eq-height>
                                         <div class="col-lg-5 col-md-12 img-content" eq-col data-img="http://placehold.it/430x345/d55441/ffffff">
-                                            <img alt="G2 Integrated" src="http://placehold.it/430x345/d55441/ffffff" />
+                                            <img alt="BL Pipeco" src="http://placehold.it/430x345/d55441/ffffff" />
                                         </div>
                                         <div class="col-lg-7 col-md-12 txt-content" eq-col>
                                             <h3>Large Special Feature With Image</h3>
@@ -782,7 +773,7 @@
                                 <div class="feature-box green with-img">
                                     <div class="row compressed fh-col" eq-height>
                                         <div class="col-lg-5 col-md-12 img-content" eq-col data-img="http://placehold.it/430x345/d55441/ffffff">
-                                            <img alt="G2 Integrated" src="http://placehold.it/430x345/d55441/ffffff" />
+                                            <img alt="BL Pipeco" src="http://placehold.it/430x345/d55441/ffffff" />
                                         </div>
                                         <div class="col-lg-7 col-md-12 txt-content" eq-col>
                                             <h3>Large Special Feature With Image</h3>
@@ -794,7 +785,7 @@
                                 <div class="feature-box darkgrey with-img">
                                     <div class="row compressed fh-col" eq-height>
                                         <div class="col-lg-5 col-md-12 img-content" eq-col data-img="http://placehold.it/430x345/d55441/ffffff">
-                                            <img alt="G2 Integrated" src="http://placehold.it/430x345/d55441/ffffff" />
+                                            <img alt="BL Pipeco" src="http://placehold.it/430x345/d55441/ffffff" />
                                         </div>
                                         <div class="col-lg-7 col-md-12 txt-content" eq-col>
                                             <h3>Large Special Feature With Image</h3>
@@ -913,10 +904,11 @@
                                 </a>
                         </div>
                         <!-- Image CTA -->
+                        <br>
                         <div class="image-cta">
                             <a href="#">
-                                <div class="img-content">
-                                    <img alt="G2 Integrated" data-src=">0:http://placehold.it/570x300" />
+                                <div class="img-content no-padding">
+                                    <img alt="BL Pipeco" data-src=">0:http://placehold.it/570x300" />
                                     <span class="caption">Call To Action  <i class="fa fa-angle-right" aria-hidden="true"></i></span>
                                 </div>
                                 <div class="txt-content">
@@ -930,7 +922,7 @@
                                 </div>
                             </a>
                         </div>
-                        
+                        <br>
                         <!--    <div class="image-cta darkgreen no-img">
                                 <a href="#">
                                     <div class="txt-content">
@@ -1051,9 +1043,12 @@
     </div>
     <!-- Pagespeed compliant - Avoid render blocking load of JS -->
     <script type="text/javascript">
-    function loadJS(e) { var t = document.createElement("script");
-        t.type = "text/javascript", t.async = !0, t.src = e; var n = document.getElementsByTagName("head")[0];
-        n.appendChild(t) };
+    function loadJS(e) {
+        var t = document.createElement("script");
+        t.type = "text/javascript", t.async = !0, t.src = e;
+        var n = document.getElementsByTagName("head")[0];
+        n.appendChild(t)
+    };
     loadJS('_assets/js/all.min.js');
     </script>
     <!-- In case javascript is disabled -->
