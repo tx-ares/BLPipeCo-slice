@@ -227,17 +227,18 @@ function g2is_solutions_tile_pages() {
 }
 
 /* OCTG Products */
-function blpc_octgproducts_tile_pages() { 
+function blpc_octgproducts_rollovers() { 
 	$args = array( 
 		'parent' => 0,
 		'exclude' => 2347,
 		'sort_column' => 'menu_order', 
 		'sort_order' => 'asc',
-		'post_type' => 'solutions'
+		'post_type' => 'octg'
 	);
 	
 	$pages = get_pages( $args );
 	$string = '';
+
 	foreach ( $pages as $page ) { 
 		$icon = get_field('page_menu_icon', $page->ID);
 		$string .= '<div class="col-lg-3 col-md-4 col-sm-4 col-xs-6" eq-col>

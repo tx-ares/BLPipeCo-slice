@@ -143,7 +143,9 @@ get_header(); ?>
                                     <div class="col-md-12 col-sm-12 col-xs-12">
                                         <div class="static-slides" eq-height>
                                             <div class="row compressed grey7">
-                                                <div class="col-md-2 col-md-offset-3 col-sm-12">
+
+                                            <?php blpc_octgproducts_rollovers(); ?>
+                                                <!-- <div class="col-md-2 col-md-offset-3 col-sm-12">
                                                     <div class="slide-content" eq-col>
                                                         <a href="#">
                                                             <img src="<?php echo get_template_directory_uri(); ?>/_assets/images/ui/Pipes.png" class="icon">
@@ -169,7 +171,9 @@ get_header(); ?>
                                                             <p> Nam liber tempor cum soluta nobis eleifend option congue nihil imperdiet doming id quod mazim placerat facer possim assum.</p>
                                                         </a>
                                                     </div>
-                                                </div>
+                                                </div> -->
+
+
                                             </div>
                                         </div>   
                                     </div>                 
