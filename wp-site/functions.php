@@ -175,6 +175,12 @@ function page_body_class( $classes ) {
 	else if(is_page_template('page-services.php')) {
 		$classes[] = 'fullpage main-content-fullpage landing';
 	}
+	else if(is_page_template('page-octg.php')) {
+		$classes[] = 'fullpage main-content-fullpage landing';
+	}
+	else if(is_page_template('page-upstreamproducts.php')) {
+		$classes[] = 'fullpage main-content-fullpage landing';
+	}
 	else if(is_page_template('page-solutions.php')) {
 		$classes[] = 'fullpage main-content-fullpage';
 	}
@@ -1219,11 +1225,11 @@ function blpc_content_feature_bottom($post_id) {
 		} else {
 			$string .= '<div class="image-cta no-img '.get_field('feature_background_color', $feature->ID).'">
 							<a href="' . get_field('feature_button_url', $feature->ID)  . '">
-									<div class="txt-content">
-											<h3>' . $feature->post_title  . '</h3>
-											<p>'. $feature->post_content  . '</p>
-											<span class = "btn whiteline">' . get_field('feature_button_text', $feature->ID)  . '
-									</div>
+								<div class="txt-content">
+										<h3>' . $feature->post_title  . '</h3>
+										<p>'. $feature->post_content  . '</p>
+										<span class = "btn whiteline">' . get_field('feature_button_text', $feature->ID)  . '
+								</div>
 							</a>
 						</div>';
 		}
@@ -1233,6 +1239,7 @@ function blpc_content_feature_bottom($post_id) {
 }
 
 function blpc_locations_list() {
+	debug_to_console( "Removing Auto P Tags ");
 	remove_filter( 'the_content', 'wpautop' );
 }
 

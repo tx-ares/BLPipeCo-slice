@@ -423,8 +423,15 @@ function initPopUpIcons() {
 }
 
 function initMobileSocialMediaMenu() {
+
+	console.log("Checking Pos.")
 	if ($(this).scrollTop() != 0 && window.matchMedia('only screen and (max-width: 575px)').matches) {
 		$(".social-media-icons").addClass("active");
+	}
+
+	else if ( $("body").hasClass("page-bottom-edge-hit") ) {
+		console.log("Condition 2 PASS - Removing Active Icons ")
+		$(".social-media-icons").removeClass("active");
 	}
 
 	else {
@@ -641,7 +648,7 @@ function initAnimateWhenInView() {
 	var logoRow = $(".logo-row");
 	var staticSlideRow = $(".static-slides");
 
-	if($("body").hasClass("page")) {
+	if($("body").hasClass("landing")) {
 		$(window).scroll(function(){
 
 			if(isScrolledIntoView(logoRow) == true) {

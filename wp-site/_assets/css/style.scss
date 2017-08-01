@@ -2547,6 +2547,46 @@ footer {
             max-height: 0px;
             overflow: hidden;
 
+            #subscribe-form {
+            height: auto;
+            margin: 20px 30px;
+            position: relative;
+
+            .form-title {
+                display: block;
+                font-weight: 500;
+                @include font-size(20px);
+                color: $colorDarkBlue;
+                margin: 30px 0;
+                text-transform: uppercase;
+                text-align: left;
+            }
+
+            .label-row {
+                padding: 0 !important; 
+                label {
+                    width: 100%;
+                }
+            }
+
+            #submit-row {
+                width: 100%;
+                position: relative; 
+                input[type="submit"] {
+                    font-weight: 500;
+                    text-transform: uppercase;
+                    background: $colorBrightRed2;
+                    color: $colorWhite;
+                    @include transition (all .3s);
+
+                    &:hover {
+                        background: $colorSlateBlue2;
+                        color: $colorDarkBlue;
+                    }
+                }
+            }
+        }
+
             .info {
                 padding: 18px 35px;
             }
@@ -3891,7 +3931,6 @@ footer {
 
         #contact-form {
             height: auto;
-            min-height: 600px;
             margin: 20px 0;
             position: relative;
 

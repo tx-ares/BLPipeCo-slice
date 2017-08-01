@@ -31,26 +31,29 @@
 
 
 <!-- ******************************************************* -->
-<!-- Content -->
+<!-- Main Content -->
 <!-- ******************************************************* -->
 <section class="main-content">
   <div class="row compressed">
-
-    <!-- ******************************************************* -->
-    <!-- Main -->
-    <!-- ******************************************************* -->
     <div class="col-md-8 col-sm-7 col-xs-12 main">
        <div class="row compressed">
             <div class="col-md-offset-3 col-md-9">
                 <div class="container-fluid">
                     <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
 
-                    <?php if (is_page_template("page-about.php") {
-                            blpc_locations_list()
-                        }); 
+                    <?php
+
+                        global $post;
+                        $pageId = $post->ID;
+
+                        if ($pageId == 142) {
+                            blpc_locations_list();
+                        } 
+
                     ?>
 
                     <?php the_content(); ?>
+
                     <?php endwhile; endif; ?>
 
                 </div>
