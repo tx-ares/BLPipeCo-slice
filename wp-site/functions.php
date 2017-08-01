@@ -226,8 +226,9 @@ function g2is_solutions_tile_pages() {
 	echo $string;
 }
 
-/* OCTG Products */
-function blpc_products_rollovers($posttype) { 
+/* OCTG & Upstream Products */
+function blpc_products_rollovers($posttype) {
+
 	$args = array( 
 		'parent' => 0,
 		'exclude' => 2347,
@@ -338,73 +339,16 @@ function g2is_company_tile_pages() {
 	echo $string;
 }
 
-/* our people */
-function g2is_people_tile_pages($post_id) { 
-	
-	switch($post_id) {
-		case 2745: //board-of-directors
-			$slug = "board-of-directors";
-			break;
-		case 1742: //senior-management
-			$slug = "senior-management";
-			break;
-	}
-	$args = array( 
-			'numberposts'       => -1,
-			'post_type' => 'people',
-			'orderby' => 'menu_order',
-			'order' => 'ASC',
-			'taxonomy' => 'category',
-	            'field' => 'slug',
-	            'term' => $slug
-	);
-	
-	$pages = get_posts( $args );
-	
-	$string = '';
-	foreach ( $pages as $page ) { 
-		$photo = get_field('people_photo', $page->ID);
-		$string .= '<div class="photo-item">
-						<a href="'.get_post_permalink( $page->ID ).'">
-							<div class="img-wrapper">
-								<img src="'.$photo['url'].'" alt="'.$photo['alt'].'" width="206" height="255" />
-								<div class="overlay">
-									<div class="tframe fw fh">
-										<div class="tcell valign-mid">
-												See Bio <i class="fa fa-angle-right" aria-hidden="true"></i>
-										</div>
-									</div>
-								</div>
-							</div>
-							<div class="info-wrapper">
-								<h3>' . get_field('people_name', $page->ID) . '</h3>
-								<h4>' . get_field('people_title', $page->ID) . '</h4>
-							</div>
-						</a>
-					</div>';							
-	}
-	echo $string;
-}
+/* Management Team Bios */
+function blpc_bio_tiles($post_id) { 
 
-/* our people */
-function blpc_people_tiles($post_id) { 
-	
-	switch($post_id) {
-		case 2745: //board-of-directors
-			$slug = "board-of-directors";
-			break;
-		case 1742: //senior-management
-			$slug = "senior-management";
-			break;
-	}
 	$args = array( 
 			'numberposts'       => -1,
 			'post_type' => 'people',
 			'orderby' => 'menu_order',
 			'order' => 'ASC',
 			'taxonomy' => 'category',
-	            'field' => 'slug',
-	            'term' => $slug
+	            'field' => 'slug'
 	);
 	
 	$pages = get_posts( $args );
@@ -418,18 +362,24 @@ function blpc_people_tiles($post_id) {
 							<div class="overlay">
 								<div class="tframe fw fh">
 									<div class="tcell valign-mid">
-											See Bio <i class="fa fa-angle-right" aria-hidden="true"></i>
+										<div class="info-wrapper">
+											<h3>' 
+												. get_field('people_name', $page->ID) . 
+											'</h3>
+											<h4>' 
+												. get_field('people_title', $page->ID) . 
+											'</h4>
+											<span>See Bio</span>
+											<i class="fa fa-caret-down" aria-hidden="true"></i>
+										</div>
 									</div>
 								</div>
 							</div>
-						</div>
-						<div class="info-wrapper">
-							<h3>' . get_field('people_name', $page->ID) . '</h3>
-							<h4>' . get_field('people_title', $page->ID) . '</h4>
-							<i class="fa fa-caret-down" aria-hidden="true"></i>
-						</div>
+						</div>	
 					</div>';							
 	}
+
+
 	echo $string;
 }
 
@@ -800,37 +750,49 @@ function blpc_primary_carousel() {
 	echo $string;
 }
 
-/* secondary carousel */
-function blpc_secondary_carousel() { 
+/* Products Carousel */
+function blpc_products_carousel($posttype) {
+
 	$args = array( 
-		'post_type' => 'carousel',
-		'orderby' => 'menu_order',
-		'order' => 'ASC',
-		'taxonomy' => 'category',
-            'field' => 'slug',
-            'term' => 'carousel-secondary'
+		'parent' => 0,
+		'exclude' => 2347,
+		'sort_column' => 'menu_order', 
+		'sort_order' => 'asc',
+		'post_type' => $posttype
 	);
 	
-	$pages = get_posts( $args );
-	
-	foreach ( $pages as $page ) {
-			
-			$image = get_field('carousel_image', $page->ID);
-			
-			$string .= '<div>
-							<img alt="'.$image['alt'].'"
-									data-src="<575:'.$image['url'].',
-													<768:'.$image['url'].',
-													<1024:'.$image['url'].'"
-									src="'.$image['url'].'" />
-							<div class="row row-compressed">
-								<div class="col-xs-12">
-									<p class="title">' . $page->post_title  . '</p>
-									<a href="' . get_field('carousel_button_link', $page->ID)  . '" class="btn orange fw">' . get_field('carousel_button_text', $page->ID)  . '</a>
-								</div>
-							</div>
-						</div>';
-						
+	$pages = get_pages( $args );
+	$string = '';
+	$classes = '';
+
+	if ( count($pages) == 1 ) {
+		$classes = 'col-lg-12 col-md-12 col-sm-12 col-xs-12';
+	}
+
+	else if ( count($pages) < 1 && count($pages) > 4 ) {
+		$classes = 'col-lg-4 col-md-6 col-sm-6 col-xs-12';
+	}
+
+	else if ( count($pages) == 4 ) {
+		$classes = 'col-lg-3 col-md-6 col-sm-6 col-xs-12';
+	}
+
+	else {
+		$classes = 'col-lg-2 col-md-6 col-sm-6 col-xs-12';
+	}
+
+	foreach ( $pages as $page ) { 
+		$icon = get_field('products_menu_icon', $page->ID);
+		$string .= '<div class="slide-content" eq-col>  
+	                    <a href="'.get_post_permalink( $page->ID ).'" class="tframe fw fh text-center item-box">
+		                    <div class="slide-content tframe valign-mid" eq-col>
+		                        
+                                <img src="'.$icon['url'].'" alt="'.$icon['alt'].'" class="icon" />
+                                <h3 class="text-upcase">' . $page->post_title . '</h3>
+                                <p class="details">' . get_field('products_menu_description', $page->ID)  . '</p>
+		                    </div>         
+	                    </a> 	
+                	</div>';	
 	}
 	echo $string;
 }
@@ -1260,7 +1222,7 @@ function blpc_content_feature_bottom($post_id) {
 									<div class="txt-content">
 											<h3>' . $feature->post_title  . '</h3>
 											<p>'. $feature->post_content  . '</p>
-											<span class = "btn green">' . get_field('feature_button_text', $feature->ID)  . '
+											<span class = "btn whiteline">' . get_field('feature_button_text', $feature->ID)  . '
 									</div>
 							</a>
 						</div>';

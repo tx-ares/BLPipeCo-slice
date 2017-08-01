@@ -163,20 +163,18 @@ get_header(); ?>
                     <div class="container-fluid no-padding">
                         <div class="row compressed row-no-padding" eq-height>
                             <div class="col-md-4 col-sm-12 col-xs-12" eq-col>
-                                <div class="image-cta grey7">
-                                    <div class="img-content">
-                                        <img alt="B&L Pipe Co" data-src=">0:http://placehold.it/570x300" />
-                                        <div class="txt-content">
-                                            <h4>Services</h4>
-                                            <p>Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat.</p>
-                                        </div>
-                                    </div>
-                                    <div class="txt-subcontent">
-                                        <a href="#">
-                                            <span>See how the we make the world better</span>
-                                        </a>
-                                    </div>
-                                </div>     
+                                <div class="image-cta slateblue2 fh">
+                                    <!-- Feature CTA Bottom -->
+                                    <?php 
+                                        $feature_id1 = get_field('any_feature_bottom'); 
+                                        
+                                        if($feature_id1) {
+                                            echo blpc_content_feature_right($feature_id1); 
+                                        }
+
+                                    ?>
+
+                                </div>    
                             </div>
                             <div class="col-md-4 col-sm-12 col-xs-12" eq-col>
                             
@@ -186,14 +184,19 @@ get_header(); ?>
                             </div> 
                             <div class="col-md-4 col-sm-12 col-xs-12" eq-col>
                                 <div class="image-cta resource-center">
-                                    <div class="img-content">
-                                        <img alt="B&L Pipeco"
-                                            data-src=">0:http://placehold.it/570x300" />    
-                                    </div>
-                                    <div class="txt-content">
-                                        <h4>Resource Center</h4>
-                                        <p>Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat.</p>
-                                    </div>
+                                    
+                                    <div class="image-cta slateblue2 fh">
+                                    <!-- Feature CTA Bottom 2-->
+                                    <?php 
+                                        $feature_id1 = get_field('any_feature_bottom'); 
+                                        
+                                        if($feature_id2) {
+                                            echo blpc_content_feature_bottom($feature_id2); 
+                                        }
+
+                                    ?>
+
+                                </div>
                                 </div>     
                             </div>                  
                         </div>

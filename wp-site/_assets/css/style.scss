@@ -5280,6 +5280,16 @@ footer {
 
         .btn {
             width: 100%;
+            &.whiteline {
+                background: none;
+                border: solid 3px $colorWhite!important;
+                color: $colorWhite;
+                &:hover,
+                &:focus {
+                    background: $colorWhite;
+                    color: $colorDarkGrey;
+                }
+            }
         }
     }
 
@@ -5306,6 +5316,8 @@ footer {
             background: $colorOrange;
         }
     }
+
+
 
     &.grey3 {
         h3,
@@ -5915,6 +5927,10 @@ footer {
                 @include transition(all .3s);
                 .slick-slide {
                     height: 360px;
+                    // min-width: 260px;
+                    @include max-screen ($xmd) {
+                        min-width: unset;
+                    }
                     padding: 60px 20px 0;
                     text-align: center;
                     @include transition(all .3s);
@@ -5929,11 +5945,16 @@ footer {
                         padding: 35px 20px;
                     }
                     h3 {
-                        color: inherit;
+                        @include font-size(20px);
+                        font-weight: 500;
+                    }
+                    p.details {
+                        color: $colorDarkGrey;
                     }
                     &:focus {
                         outline: none;
                     }
+
                 }
             }
         }
@@ -5985,6 +6006,12 @@ footer {
                 .slick-slide {
                     &:hover {
                         background: $colorBrightRed3;
+                    }
+                    h3 {
+                        color: $colorWhite;
+                    }
+                     p.details {
+                        color: $colorWhite;
                     }
                 }
             }
@@ -6107,6 +6134,7 @@ footer {
                 top: 145px;
                 width: 255px;
                 margin: 30px 5px;
+                text-align: center;
                 @include transform(rotate(90deg));
             }
         }
@@ -6314,7 +6342,7 @@ footer {
         text-transform: inherit;
         font-weight: 500;
         position: absolute;
-        right: 80px;
+        right: 25px;
         top: 160px;
         min-width: 265px;
         margin-top: 0;
@@ -6331,6 +6359,7 @@ footer {
             position: absolute;
             right: -110px;
             top: 127px;
+            text-align: center;
             width: 300px;
             margin: 30px 5px;
             @include transform(rotate(-90deg));
@@ -6678,6 +6707,31 @@ footer {
         }
     }
 
+    a.item-box {
+        padding-top: 20px;
+        padding-bottom: 20px;
+        color: inherit;
+
+        h3 {
+            color: $colorDarkBlue;
+            text-transform: uppercase;
+            @include transition(all .3s);
+        }
+    }
+
+    img {
+        display: inline-block;
+        margin-bottom: 20px;
+    }
+
+    p.details {
+        color: $colorDarkGrey;
+        // max-height: 0px;
+        overflow: hidden;
+        @include transition(all 1s);
+        margin-bottom: 0;
+    }
+
     .slide-content[eq-col] {
         text-align: center;
         padding: 60px 5px;
@@ -6705,6 +6759,13 @@ footer {
             }
             &.sm {
                 width: 50%;
+            }
+        }
+        &:hover {
+
+            p.details {
+                // max-height: 500px;
+                @include transition(all 1s);
             }
         }
     }
