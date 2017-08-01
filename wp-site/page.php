@@ -54,6 +54,14 @@
 
                     <?php the_content(); ?>
 
+                    <?php 
+                        $feature_id2 = get_field('any_feature_bottom'); 
+                        
+                        if($feature_id2) {
+                            echo blpc_content_feature_bottom($feature_id2); 
+                        }
+                    ?>
+
                     <?php endwhile; endif; ?>
 
                 </div>
