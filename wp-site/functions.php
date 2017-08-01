@@ -238,10 +238,27 @@ function blpc_products_rollovers($posttype) {
 	
 	$pages = get_pages( $args );
 	$string = '';
+	$classes = '';
+
+	if ( count($pages) == 1 ) {
+		$classes = 'col-lg-12 col-md-12 col-sm-12 col-xs-12';
+	}
+
+	else if ( count($pages) < 1 && count($pages) > 4 ) {
+		$classes = 'col-lg-4 col-md-6 col-sm-6 col-xs-12';
+	}
+
+	else if ( count($pages) == 4 ) {
+		$classes = 'col-lg-3 col-md-6 col-sm-6 col-xs-12';
+	}
+
+	else {
+		$classes = 'col-lg-2 col-md-6 col-sm-6 col-xs-12';
+	}
 
 	foreach ( $pages as $page ) { 
 		$icon = get_field('products_menu_icon', $page->ID);
-		$string .= '<div class="col-lg-3 col-md-6 col-sm-6 col-xs-12" eq-col>
+		$string .= '<div class="' . $classes . '" eq-col>
                         
 	                    <a href="'.get_post_permalink( $page->ID ).'" class="tframe fw fh text-center item-box">
 		                    <div class="slide-content tframe valign-mid" eq-col>
