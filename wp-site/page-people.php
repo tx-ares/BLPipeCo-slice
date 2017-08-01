@@ -56,7 +56,11 @@ get_header(); ?>
                             <?php endwhile; endif; ?>
                                 <div class="photo-wrapper">
                                     <div class="photos clear">
-                                        <div class="photo-item">
+
+                                        <!-- People Tiles -->
+                                        <?php blpc_people_tiles(148); ?>
+
+                                        <!-- <div class="photo-item">
                                             <div class="img-wrapper">
                                                 <img src="<?php echo get_template_directory_uri(); ?>/_assets/images/people/IMG_0304.jpg" alt="Name" width="206" height="255" />
                                                 <div class="overlay">
@@ -250,7 +254,7 @@ get_header(); ?>
                                                     </div>
                                                 </div>
                                             </div>
-                                        </div>
+                                        </div> -->
                                     </div>
                                 </div>
                             </div>

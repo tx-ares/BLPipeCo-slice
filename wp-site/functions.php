@@ -386,6 +386,53 @@ function g2is_people_tile_pages($post_id) {
 	echo $string;
 }
 
+/* our people */
+function blpc_people_tiles($post_id) { 
+	
+	switch($post_id) {
+		case 2745: //board-of-directors
+			$slug = "board-of-directors";
+			break;
+		case 1742: //senior-management
+			$slug = "senior-management";
+			break;
+	}
+	$args = array( 
+			'numberposts'       => -1,
+			'post_type' => 'people',
+			'orderby' => 'menu_order',
+			'order' => 'ASC',
+			'taxonomy' => 'category',
+	            'field' => 'slug',
+	            'term' => $slug
+	);
+	
+	$pages = get_posts( $args );
+	
+	$string = '';
+	foreach ( $pages as $page ) { 
+		$photo = get_field('people_photo', $page->ID);
+		$string .= '<div class="photo-item">
+						<div class="img-wrapper">
+							<img src="'.$photo['url'].'" alt="'.$photo['alt'].'" width="206" height="255" />
+							<div class="overlay">
+								<div class="tframe fw fh">
+									<div class="tcell valign-mid">
+											See Bio <i class="fa fa-angle-right" aria-hidden="true"></i>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="info-wrapper">
+							<h3>' . get_field('people_name', $page->ID) . '</h3>
+							<h4>' . get_field('people_title', $page->ID) . '</h4>
+							<i class="fa fa-caret-down" aria-hidden="true"></i>
+						</div>
+					</div>';							
+	}
+	echo $string;
+}
+
 /* menu_list_pages */
 function blpc_menu_list_pages() { 
 	global $post; 
