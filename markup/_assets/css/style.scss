@@ -3922,6 +3922,14 @@ footer {
             font-weight: 500;
             @include font-size(30px);
         }
+
+        a:not(.btn) {
+            color: $colorBrightRed1;
+            @include transition (color .3s);
+            &:hover {
+                color: $colorSlateBlue2;
+            }
+        }
         .subtitle {
             font-weight: initial;
             display: block;
