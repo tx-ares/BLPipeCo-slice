@@ -635,17 +635,36 @@ function isScrolledIntoView(elem)
 
 function initAnimateWhenInView() {
 	var logoRow = $(".logo-row");
+	var staticSlideRow = $(".static-slides");
 
-	if($(".body").hasClass("landing")) {
+	if($("body").hasClass("page")) {
 		$(window).scroll(function(){
+
 			if(isScrolledIntoView(logoRow) == true) {
 				logoRow.find("div[class*=' col-']").each(
 					function(){
 						$(this).addClass("animated pulse")
 					})
 			}
+
+			if(isScrolledIntoView(staticSlideRow) == true) {
+				var delayedTimer = 0;
+
+				staticSlideRow.find("div.slide-content").each(
+					function(){
+						delayedTimer += 300;
+						var self = this;
+						console.log(delayedTimer, " << timer !")
+						setTimeout(
+							function() { 
+								$(self).addClass("animated bounceInLeft active");
+							}, delayedTimer);
+					});
+			}
+
 		});
 	}
+
 }
 
 function initLogo() {

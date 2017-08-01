@@ -6550,11 +6550,47 @@ footer {
         width: 100%;
     }
 
+    a.item-box {
+        padding-top: 20px;
+        padding-bottom: 20px;
+
+        h3 {
+            color: $colorDarkBlue;
+            text-transform: uppercase;
+            @include transition(all .3s);
+        }
+    }
+
+    img {
+        display: inline-block;
+        margin-bottom: 20px;
+    }
+
+    p.details {
+        color: $colorDarkGrey;
+        // max-height: 0px;
+        overflow: hidden;
+        @include transition(all 1s);
+        margin-bottom: 0;
+    }
+
     .slide-content {
         text-align: center;
         padding: 20px;
         max-width: 360px;
+        // min-height: 360px;
         margin: auto;
+        opacity: 0;
+        @include transition(opacity .3s);
+
+        &.active {
+            opacity: 1;
+        }
+
+        @include max-screen ($xmd) {
+            opacity: 1;
+        }
+
         img[src] {
             width: 100%;
             height: auto;
@@ -6567,12 +6603,23 @@ footer {
             }
         }
 
-        h3 {
+        &:hover {
+
+            p.details {
+                // max-height: 500px;
+                @include transition(all 1s);
+            }
+        }
+
+        h3,
+        h2 {
             @include font-size(24px);
             font-weight: 500;
+            text-transform: uppercase;
         }
     }
 }
+
 
 .more-phone-full-scr {
     width: 100%;
