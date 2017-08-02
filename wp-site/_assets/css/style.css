@@ -308,6 +308,22 @@ ul.list {
         font-size: 0.375rem;
         color: #d55441; }
 
+ul.locations-list {
+  margin: 20px 0 20px 0; }
+  ul.locations-list li {
+    padding-bottom: 20px; }
+    @media only screen and (max-width: 768px) {
+      ul.locations-list li {
+        height: 100%;
+        vertical-align: top; } }
+  ul.locations-list li:not(:first-child) {
+    width: 45%;
+    display: inline-block; }
+    @media only screen and (max-width: 768px) {
+      ul.locations-list li:not(:first-child) {
+        display: block;
+        width: 100%; } }
+
 img.lazy {
   opacity: 0;
   filter: alpha(opacity=0);

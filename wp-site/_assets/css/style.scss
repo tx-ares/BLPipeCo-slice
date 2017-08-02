@@ -471,6 +471,30 @@ ul.list {
     }
 }
 
+ul.locations-list {
+    margin: 20px 0 20px 0;
+
+    li {
+        padding-bottom: 20px;
+        @include max-screen($xmd) {
+            height: 100%;
+            vertical-align: top;
+        }
+    }
+      
+    li:not(:first-child) {
+        width: 45%;
+        display: inline-block;
+        @include max-screen($xmd) {
+            display: block;
+            width: 100%;
+        }
+    }
+
+
+}
+
+
 img.lazy {
     @include opacity(0);
     @include transition(opacity 1s);

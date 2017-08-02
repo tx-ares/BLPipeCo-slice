@@ -7,21 +7,11 @@ get_header(); ?>
 <!-- ******************************************************* -->
 <!-- Banner -->
 <!-- ******************************************************* -->
-<section class="banner">
-    <div class="row" eq-height>
-        <div class="col-md-12 col-sm-12 col-xs-12 bg-content title-content" eq-col>
-            <div class="tframe fh fw ">
-                <div class="tcell valign-mid ">
-                    <div class="container-fluid no-padding ">
-                        <img alt="BL Pipeco " data-src="<575:<?php echo the_post_thumbnail_url('full'); ?>, <768:<?php echo the_post_thumbnail_url('full'); ?>,>768:<?php echo the_post_thumbnail_url('full'); ?>" />
-                        <div class="subtext-box">
-                            <h1 class="text-upcase"><?php the_title(); ?> </h1>
-                         </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
+<section class="map">
+
+    <!-- Banner Map -->
+    <?php echo do_shortcode( '[wpgmza id="1"]' ); ?>
+     
 </section>
 
 
@@ -38,19 +28,12 @@ get_header(); ?>
        <div class="row compressed">
             <div class="col-md-offset-3 col-md-9">
                 <div class="container-fluid">
+
+
                     <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
                     <?php the_content(); ?>
                     <?php endwhile; endif; ?>
 
-                    <!-- Pager -->
-                   <!--  <div class="next-prev clearfix">
-                        <span class="pull-left previous">
-                        <?php previous_post_link( '%link','Previous' ) ?>
-                        </span>
-                        <span class="pull-right next">
-                        <?php next_post_link( '%link','Next' ) ?>
-                        </span>
-                    </div> -->
 
                 </div>
             </div>

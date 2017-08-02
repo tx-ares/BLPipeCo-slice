@@ -46,6 +46,9 @@
     <noscript>
         <script type="text/javascript" src="<?php echo get_template_directory_uri(); ?>/_assets/css/all.min.js"></script>
     </noscript>
+
+    <?php wp_footer(); ?>
+    
 </body>
 
 </html>
