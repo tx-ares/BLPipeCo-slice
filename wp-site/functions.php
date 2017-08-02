@@ -1209,13 +1209,13 @@ function blpc_content_feature_bottom($post_id) {
 		if($feature_image) {
 			$string .=  '<div class="feature-box brightRed with-img">
 							<a href="' . get_field('feature_button_url', $feature->ID)  . '">
-                                <div class="row compressed fh-col" eq-height>
+                                <div class="row compressed" eq-height>
                                     <div class="col-lg-6 col-md-12 img-content" eq-col data-img="http://placehold.it/430x215/d55441/ffffff" style="background: url(&quot;http://placehold.it/430x215/d55441/ffffff&quot;) center center / cover no-repeat; height: 246px;">
                                         <img alt="'.$feature_image['alt'].'"
 											src="'.$feature_image['url'].'" />
                                     </div>
                                     <div class="col-lg-6 col-md-12 txt-content" eq-col="" style="height: 246px;">
-										<h4>' . $feature->post_title  . '</h4>
+										<h4 class="text-upcase f500">' . $feature->post_title  . '</h4>
    										<p>'. $feature->post_content  . '</p>
                                     </div>
                                 </div>
@@ -1226,9 +1226,13 @@ function blpc_content_feature_bottom($post_id) {
 			$string .= '<div class="image-cta no-img '.get_field('feature_background_color', $feature->ID).'">
 							<a href="' . get_field('feature_button_url', $feature->ID)  . '">
 								<div class="txt-content">
-										<h3>' . $feature->post_title  . '</h3>
-										<p>'. $feature->post_content  . '</p>
-										<span class = "btn whiteline">' . get_field('feature_button_text', $feature->ID)  . '
+									<h3>' . $feature->post_title  . '</h3>
+									<p>'. $feature->post_content  . '</p>
+									<span class = "btn whiteline">
+										<a href="/" tabindex="0">' 
+										. get_field('feature_button_text', $feature->ID)  . 
+										'</a>
+									</span>
 								</div>
 							</a>
 						</div>';

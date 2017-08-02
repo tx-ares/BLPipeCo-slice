@@ -6,6 +6,7 @@
 
 
 
+
 /*Temporary Disable while under Development */
 
 
@@ -13,6 +14,7 @@
 
 @import "_mixin.mediaqueries";
 @import "_mixin.toolbox";
+
 
 
 
@@ -40,6 +42,7 @@ $lg: 1024px;
 $xlg: 1280px;
 $xxlg: 1440px;
 $full: 1960px;
+
 
 
 
@@ -86,6 +89,7 @@ $font-icon:'FontAwesome';
 
 
 
+
 /* Extended Classes */
 
 .nowrap {
@@ -112,6 +116,7 @@ $font-icon:'FontAwesome';
 
 
 
+
 /* Accessibility */
 
 .accessibility {
@@ -133,6 +138,7 @@ $font-icon:'FontAwesome';
 
 
 
+
 /* ==========================================================================
 
     2. BASE STYLES
@@ -146,6 +152,7 @@ _:-ms-fullscreen,
  :root {
     /* insert rule here */
 }
+
 
 
 
@@ -245,6 +252,7 @@ hr {
 
 
 
+
 /* Text settings */
 
 .text-upcase {
@@ -280,11 +288,13 @@ hr {
 
 
 
+
 /* Font Weights */
 
 .f500 {
     font-weight: 500 !important;
 }
+
 
 
 
@@ -303,6 +313,7 @@ hr {
 .disp-bl {
     display: block;
 }
+
 
 
 
@@ -381,6 +392,7 @@ blockquote {
 
 
 
+
 /* Unordered List */
 
 ul {
@@ -389,6 +401,11 @@ ul {
     /*Fix for IE10-11 adding bullets*/
     padding: 0;
     margin: 0;
+    &.columnsof3 {
+        -webkit-column-count: 4;
+        -moz-column-count: 4;
+        column-count: 4;
+    }
 }
 
 ul.list {
@@ -462,6 +479,7 @@ img[src] {
 
 
 
+
 /* Forms */
 
 form {
@@ -475,6 +493,7 @@ form {
         }
     }
 }
+
 
 
 
@@ -502,6 +521,7 @@ button {
     line-height: 120%;
     margin-bottom: 10px;
 }
+
 
 
 
@@ -549,6 +569,7 @@ label {
 
 
 
+
 /* Custom Select */
 
 select {
@@ -559,11 +580,13 @@ select {
 
 
 
+
 /* Custom Checkbox */
 
 input[type=checkbox] {
     display: none;
 }
+
 
 
 
@@ -596,9 +619,11 @@ input[type=checkbox]+label:before {
 
 
 
+
 /* unchecked icon */
 
 input[type=checkbox]+label:before {}
+
 
 
 
@@ -615,9 +640,11 @@ input[type=checkbox]:checked+label:before {
 
 
 
+
 /* checked icon */
 
 input[type=checkbox]:checked+label:before {}
+
 
 
 
@@ -680,7 +707,7 @@ textarea:-ms-input-placeholder                      { color: $colorDarkGrey; }*/
 
     &.whiteline {
         background: none;
-        border: solid 3px $colorWhite!important;
+        border: solid 3px $colorWhite!important;    
 
         &:hover,
         &:focus {
@@ -749,6 +776,7 @@ textarea:-ms-input-placeholder                      { color: $colorDarkGrey; }*/
 
 
 
+
 /* Figure with Image */
 
 figure {
@@ -811,6 +839,7 @@ figure {
         }
     }
 }
+
 
 
 
@@ -971,6 +1000,7 @@ $padding-sm: 20px;
 
 
 
+
 /*  Utilities Sizes (Height and Width) */
 
 .fullpage {
@@ -1004,6 +1034,7 @@ $padding-sm: 20px;
 .pos-rel {
     position: relative;
 }
+
 
 
 
@@ -1096,6 +1127,7 @@ $padding-sm: 20px;
         }
     }
 }
+
 
 
 
@@ -1777,6 +1809,7 @@ $padding-sm: 20px;
 
 
 
+
 /* Social Media Icons */
 
 .social-media-icons {
@@ -1838,6 +1871,7 @@ $padding-sm: 20px;
         }
     }
 }
+
 
 
 
@@ -2548,44 +2582,44 @@ footer {
             overflow: hidden;
 
             #subscribe-form {
-            height: auto;
-            margin: 20px 30px;
-            position: relative;
+                height: auto;
+                margin: 20px 30px;
+                position: relative;
 
-            .form-title {
-                display: block;
-                font-weight: 500;
-                @include font-size(20px);
-                color: $colorDarkBlue;
-                margin: 30px 0;
-                text-transform: uppercase;
-                text-align: left;
-            }
-
-            .label-row {
-                padding: 0 !important; 
-                label {
-                    width: 100%;
-                }
-            }
-
-            #submit-row {
-                width: 100%;
-                position: relative; 
-                input[type="submit"] {
+                .form-title {
+                    display: block;
                     font-weight: 500;
+                    @include font-size(20px);
+                    color: $colorDarkBlue;
+                    margin: 30px 0;
                     text-transform: uppercase;
-                    background: $colorBrightRed2;
-                    color: $colorWhite;
-                    @include transition (all .3s);
+                    text-align: left;
+                }
 
-                    &:hover {
-                        background: $colorSlateBlue2;
-                        color: $colorDarkBlue;
+                .label-row {
+                    padding: 0 !important;
+                    label {
+                        width: 100%;
+                    }
+                }
+
+                #submit-row {
+                    width: 100%;
+                    position: relative;
+                    input[type="submit"] {
+                        font-weight: 500;
+                        text-transform: uppercase;
+                        background: $colorBrightRed2;
+                        color: $colorWhite;
+                        @include transition (all .3s);
+
+                        &:hover {
+                            background: $colorSlateBlue2;
+                            color: $colorDarkBlue;
+                        }
                     }
                 }
             }
-        }
 
             .info {
                 padding: 18px 35px;
@@ -3383,6 +3417,7 @@ footer {
         }
     }
 }
+
 
 
 
@@ -5765,17 +5800,15 @@ footer {
             img {
                 // display: none; //
                 height: 100%; //
-            }
-
-            &:before {
-                content: '';
-                position: absolute;
-                left: 0;
-                top: 0;
-                width: 5px;
-                height: 100%; // background:$colorGreen;
-                z-index: 2;
-            }
+            } // &:before {
+            //     content: '';
+            //     position: absolute;
+            //     left: 0;
+            //     top: 0;
+            //     width: 5px;
+            //     height: 100%; // background:$colorGreen;
+            //     z-index: 2;
+            // }
         }
 
         .txt-content {
@@ -5798,13 +5831,13 @@ footer {
     }
 
     &:before {
-        content: '';
-        position: absolute;
-        left: 0;
-        top: 0;
-        width: 5px;
-        height: 100%; // background:$colorGreen;
-        z-index: 2;
+        // content: '';
+        // position: absolute;
+        // left: 0;
+        // top: 0;
+        // width: 5px;
+        // height: 100%; // background:$colorGreen;
+        // z-index: 2;
     }
 
     &.grey2 {
@@ -5824,15 +5857,8 @@ footer {
     }
 
     &.brightRed {
-        background: $colorBrightRed1;
         color: $colorWhite;
 
-        &:hover {
-            .txt-content {
-                @include transition(background .3s);
-                background: $colorSlateBlue;
-            }
-        }
 
         h3 {
             color: $colorWhite;
@@ -5860,11 +5886,21 @@ footer {
 
         &.with-img {
             padding: 0;
+            &:hover {
+                .txt-content {
+                    @include transition(background .3s);
+                    background: $colorSlateBlue;
+                }
+            }
 
             .img-content {
                 &:before {
                     // background:$colorDarkGreen;
                 }
+            }
+
+            .txt-content {
+                background: $colorBrightRed1;
             }
         }
     }
@@ -5965,8 +6001,7 @@ footer {
                 }
                 @include transition(all .3s);
                 .slick-slide {
-                    height: 360px;
-                    // min-width: 260px;
+                    height: 360px; // min-width: 260px;
                     @include max-screen ($xmd) {
                         min-width: unset;
                     }
@@ -5993,7 +6028,6 @@ footer {
                     &:focus {
                         outline: none;
                     }
-
                 }
             }
         }
@@ -6049,7 +6083,7 @@ footer {
                     h3 {
                         color: $colorWhite;
                     }
-                     p.details {
+                    p.details {
                         color: $colorWhite;
                     }
                 }
@@ -6583,8 +6617,7 @@ footer {
     }
 
     p.details {
-        color: $colorDarkGrey;
-        // max-height: 0px;
+        color: $colorDarkGrey; // max-height: 0px;
         overflow: hidden;
         @include transition(all 1s);
         margin-bottom: 0;
@@ -6593,8 +6626,7 @@ footer {
     .slide-content {
         text-align: center;
         padding: 20px;
-        max-width: 360px;
-        // min-height: 360px;
+        max-width: 360px; // min-height: 360px;
         margin: auto;
         opacity: 0;
         @include transition(opacity .3s);
@@ -6764,8 +6796,7 @@ footer {
     }
 
     p.details {
-        color: $colorDarkGrey;
-        // max-height: 0px;
+        color: $colorDarkGrey; // max-height: 0px;
         overflow: hidden;
         @include transition(all 1s);
         margin-bottom: 0;
