@@ -206,10 +206,27 @@ p,
 hr {
     margin-top: 0;
     font-weight: normal;
+    &.slateblue {
+        color: $colorSlateBlue !important;
+    }
+    &.slateblue2 {
+        color: $colorSlateBlue2 !important;
+    }
+    &.brightRed {
+        color: $colorBrightRed1 !important;
+    }
 }
 
 p {
     margin-bottom: 1.875rem;
+    &.h3 {
+       @include font-size(18px);
+        text-transform: uppercase;
+        color: $colorDarkBlue;
+        font-weight: 700;
+        margin-bottom: 15px; 
+    }
+
 }
 
 h1 {
@@ -3956,6 +3973,15 @@ footer {
             margin-top: 35px; // margin-bottom: 0px;
             font-weight: 500;
             @include font-size(30px);
+        }
+
+        a {
+            font-weight: 700;
+            color: $colorBrightRed1;
+            &:hover {
+                @include transition(color .3s);
+                color: $colorSlateBlue2;
+            }
         }
         .subtitle {
             font-weight: initial;

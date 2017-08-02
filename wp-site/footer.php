@@ -24,7 +24,7 @@
                 <div class="col-lg-8 col-md-8 col-sm-8 hidden-xs copyright text-right">
                     <div class="content tframe fw fh">
                         <div class="tcell valign-mid">
-                            © 2017 B&amp;L Pipeco. All rights reserved. | <a href="#">Privacy Policy</a>
+                            &copy; 2017 B&amp;L Pipeco. All rights reserved. | <a href="#">Privacy Policy</a>
                         </div>
                     </div>
                 </div>

@@ -107,9 +107,40 @@ p,
 hr {
   margin-top: 0;
   font-weight: normal; }
+  h1.slateblue,
+  h2.slateblue,
+  h3.slateblue,
+  h4.slateblue,
+  h5.slateblue,
+  p.slateblue,
+  hr.slateblue {
+    color: #8a9ca5 !important; }
+  h1.slateblue2,
+  h2.slateblue2,
+  h3.slateblue2,
+  h4.slateblue2,
+  h5.slateblue2,
+  p.slateblue2,
+  hr.slateblue2 {
+    color: #bcc7cd !important; }
+  h1.brightRed,
+  h2.brightRed,
+  h3.brightRed,
+  h4.brightRed,
+  h5.brightRed,
+  p.brightRed,
+  hr.brightRed {
+    color: #d0202f !important; }
 
 p {
   margin-bottom: 1.875rem; }
+  p.h3 {
+    font-size: 18px;
+    font-size: 1.125rem;
+    text-transform: uppercase;
+    color: #00263b;
+    font-weight: 700;
+    margin-bottom: 15px; }
 
 h1 {
   font-size: 30px;
@@ -2576,6 +2607,15 @@ footer {
     font-weight: 500;
     font-size: 30px;
     font-size: 1.875rem; }
+  .main-content .main a {
+    font-weight: 700;
+    color: #d0202f; }
+    .main-content .main a:hover {
+      -moz-transition: color 0.3s;
+      -o-transition: color 0.3s;
+      -webkit-transition: color 0.3s;
+      transition: color 0.3s;
+      color: #bcc7cd; }
   .main-content .main .subtitle {
     font-weight: initial;
     display: block;
