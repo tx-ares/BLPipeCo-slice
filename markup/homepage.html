@@ -63,6 +63,68 @@
     </noscript>
 </head>
 
+<head>
+    <!-- set the encoding of your site -->
+    <meta charset="utf-8">
+    <!-- set the viewport width and initial-scale on mobile devices -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>B&amp;L Pipeco</title>
+    <style>
+    html,
+    body {
+        opacity: 0;
+        overflow: hidden;
+    }
+    </style>
+    <!--[if lt IE 9]>
+        <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.6.2/html5shiv.js"></script>
+        <script src="//s3.amazonaws.com/nwapi/nwmatcher/nwmatcher-1.2.5-min.js"></script>
+        <script src="//html5base.googlecode.com/svn-history/r38/trunk/js/selectivizr-1.0.3b.js"></script>
+        <script src="//cdnjs.cloudflare.com/ajax/libs/respond.js/1.1.0/respond.min.js"></script>
+    <![endif]-->
+    <script type="text/javascript">
+    if (navigator.userAgent.match(/IEMobile\/10\.0/)) {
+        var msViewportStyle = document.createElement('style')
+        msViewportStyle.appendChild(
+            document.createTextNode(
+                '@-ms-viewport{width:auto!important}'
+            )
+        )
+        document.querySelector('head').appendChild(msViewportStyle)
+    }
+    </script>
+    <!-- Pagespeed compliant - Avoid render blocking load of CSS -->
+    <script type="text/javascript">
+    function loadStyleSheet(a, b, c) {
+        var d = document.getElementsByTagName("head")[0],
+            e = document.createElement("link");
+        e.setAttribute("href", a), e.setAttribute("rel", "stylesheet"), e.setAttribute("type", "text/css");
+        var f, g;
+        "sheet" in e ? (f = "sheet", g = "cssRules") : (f = "styleSheet", g = "rules");
+        var h = setInterval(function() {
+                try {
+                    e[f] && e[f][g].length && (clearInterval(h), clearTimeout(i), b.call(c || window, !0, e))
+                } catch (a) {} finally {}
+            }, 10),
+            i = setTimeout(function() {
+                clearInterval(h), clearTimeout(i), d.removeChild(e), b.call(c || window, !1, e)
+            }, 15e3);
+        return d.appendChild(e), e
+    }
+
+    loadStyleSheet('_assets/css/all.min.css', function(success, link) {
+        if (success) {
+            document.body.className += " cssloaded";
+        }
+    });
+    </script>
+    <!-- In case javascript is disabled -->
+    <noscript>
+        <link href="_assets/css/all.min.css" rel="stylesheet">
+    </noscript>
+</head>
+
 <body class="inner header-sticky footer-sticky homepage">
     <noscript>
         <div>Javascript must be enabled for the correct page display</div>
