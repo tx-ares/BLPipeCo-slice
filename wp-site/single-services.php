@@ -40,9 +40,6 @@ get_header(); ?>
 <section class="main-content">
   <div class="row compressed">
 
-    <!-- ******************************************************* -->
-    <!-- Main Content -->
-    <!-- ******************************************************* -->
   <div class="col-md-8 col-sm-7 col-xs-12 main">
        <div class="row compressed">
             <div class="col-md-offset-3 col-md-9">
@@ -50,16 +47,6 @@ get_header(); ?>
                     <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
                     <?php the_content(); ?>
                     <?php endwhile; endif; ?>
-
-                    <!-- Pager -->
-                   <!--  <div class="next-prev clearfix">
-                        <span class="pull-left previous">
-                        <?php previous_post_link( '%link','Previous' ) ?>
-                        </span>
-                        <span class="pull-right next">
-                        <?php next_post_link( '%link','Next' ) ?>
-                        </span>
-                    </div> -->
 
                 </div>
             </div>

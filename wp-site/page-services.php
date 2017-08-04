@@ -29,9 +29,7 @@ get_header(); ?>
     <!-- ******************************************************* -->
     <section class="main-content">
         <div class="row compressed" eq-height>
-            <!-- ******************************************************* -->
-            <!-- Main Content -->
-            <!-- ******************************************************* -->
+   
             <div class="col-md-7 col-sm-7 col-xs-12 main" eq-col>
                 <div class="row compressed">
                     <div class="col-md-offset-3 col-md-9">

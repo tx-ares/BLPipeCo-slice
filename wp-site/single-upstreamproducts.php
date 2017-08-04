@@ -41,9 +41,6 @@ get_header(); ?>
 <section class="main-content">
   <div class="row compressed">
 
-    <!-- ******************************************************* -->
-    <!-- Main Content -->
-    <!-- ******************************************************* -->
   <div class="col-md-8 col-sm-7 col-xs-12 main">
        <div class="row compressed">
             <div class="col-md-offset-3 col-md-9">

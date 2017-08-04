@@ -39,14 +39,11 @@ get_header();
 
 
 <!-- ******************************************************* -->
-<!-- Content -->
+<!-- Main Content -->
 <!-- ******************************************************* -->
 <section class="main-content">
   <div class="row compressed">
 
-    <!-- ******************************************************* -->
-    <!-- Main -->
-    <!-- ******************************************************* -->
     <div class="col-md-8 col-sm-7 col-xs-12 main">
        <div class="row compressed">
 	        <div class="col-md-offset-3 col-md-9">
@@ -87,7 +84,6 @@ get_header();
         <div class="container-fluid">
             <!-- Send Request -->
             <div class="send-request" toggle-active-parent>
-                <!-- <a href="#" class="btn orange fw">Send Us a Request</a> -->
                 <div class="row">
                     <div class="col-sm-7 col-xs-7 fh">
                         <a href="#" class="tframe fh fw">

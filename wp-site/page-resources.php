@@ -27,14 +27,11 @@ get_header(); ?>
 
 
 <!-- ******************************************************* -->
-<!-- Main -->
+<!-- Main Content -->
 <!-- ******************************************************* -->
 <section class="main-content">
 	<div class="row compressed">
 
-        <!-- ******************************************************* -->
-        <!-- Main Content -->
-        <!-- ******************************************************* -->
         <div class="col-md-8 col-sm-7 col-xs-12 main">
             <div class="row">
                 <div class="col-md-offset-3 col-md-9">
@@ -190,7 +187,7 @@ get_header(); ?>
 
             <!-- Side Navigation -->
                 <?php 
-                    $feature_id1 = get_field('insights_feature_right'); 
+                    $feature_id1 = get_field('resources_feature_right'); 
                     
                     if($feature_id1) {
                         echo blpc_content_feature_right($feature_id1); 
