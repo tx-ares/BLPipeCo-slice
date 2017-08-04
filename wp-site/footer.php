@@ -4,7 +4,7 @@
    <footer>
         <div class="container-fluid">
             <div class="row">
-                <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12 signup">
+                <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12 signup">
                     <div class="content tframe fw fh">
                         <div class="tcell valign-mid">
                             <div class="collapsible-data">
@@ -21,7 +21,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-8 col-md-8 col-sm-8 hidden-xs copyright text-right">
+                <div class="col-lg-9 col-md-9 col-sm-9 hidden-xs copyright text-right">
                     <div class="content tframe fw fh">
                         <div class="tcell valign-mid">
                             &copy; 2017 B&amp;L Pipeco. All rights reserved. | <a href="#">Privacy Policy</a>
