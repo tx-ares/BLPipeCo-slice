@@ -823,5 +823,5 @@ jQuery(document).ready(function() {
 
  	initSlider();
 
-	// RESPONSIVEUI.responsiveTabs();
+	RESPONSIVEUI.responsiveTabs();
 });
