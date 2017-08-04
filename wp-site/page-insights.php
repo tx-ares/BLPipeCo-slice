@@ -37,7 +37,7 @@ get_header(); ?>
                                 <?php echo blpc_insights_blog_list(); ?>
                             </div>
                             <div class="col-md-4 col-sm-6">
-                                <?php echo blpc_insights_webinar_list(); ?>
+                                <!-- Resources -->
                             </div>
                         </div>
                         

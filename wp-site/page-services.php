@@ -24,10 +24,6 @@ get_header(); ?>
     </div>
 </section>
 
-
-<!-- ******************************************************* -->
-<!-- Main -->
-<!-- ******************************************************* -->
  <!-- ******************************************************* -->
     <!-- Main Content -->
     <!-- ******************************************************* -->
@@ -55,7 +51,6 @@ get_header(); ?>
             <div class="col-md-5 col-sm-5 col-xs-12 aside" eq-col>              
                     <!-- Send Request -->
                     <div class="send-request" toggle-active-parent>
-                        <!-- <a href="#" class="btn orange fw">Send Us a Request</a> -->
                         <div class="row full-scr" eq-height>
                             <div class="col-sm-7 col-xs-7 fh" eq-col>
                                 <a href="#" class="tframe fh fw">

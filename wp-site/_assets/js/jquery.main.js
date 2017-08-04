@@ -399,6 +399,7 @@ function doneResizing() {
 }
 
 var resizeId;
+
 // $(window).resize(function() {
 // 	"use strict";
 	
@@ -822,5 +823,5 @@ jQuery(document).ready(function() {
 
  	initSlider();
 
-	RESPONSIVEUI.responsiveTabs();
+	// RESPONSIVEUI.responsiveTabs();
 });
