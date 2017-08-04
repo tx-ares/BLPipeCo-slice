@@ -400,15 +400,15 @@ function doneResizing() {
 
 var resizeId;
 
-// $(window).resize(function() {
-// 	"use strict";
+$(window).resize(function() {
+	"use strict";
 	
-// 	clearTimeout(resizeId);
-//     resizeId = setTimeout(doneResizing, 500);
+	clearTimeout(resizeId);
+    resizeId = setTimeout(doneResizing, 500);
 	
-// 	resizeSlider();
-// 	// removeMatchHeight();
-// });
+	// resizeSlider();
+	removeMatchHeight();
+});
 
 $(window).load(function () {
 	"use strict";
@@ -552,6 +552,80 @@ function delayedLoad(activePanel) {
 function initPanelSlider(){
 
 	$(".panel-slider").each(function(){
+		$(this).slick({
+		  dots: false,
+		  arrows: true,
+		  prevArrow:"<img class='a-left control-c prev slick-prev' src=" + templateUrl + "/_assets/images/ui/chevron-white-left.png>",
+	      nextArrow:"<img class='a-right control-c next slick-next' src=" + templateUrl + "/_assets/images/ui/chevron-white-right.png>",
+	      infinite: true,
+		  speed: 300,
+		  waitForAnimate: false,
+		  easing: 'linear',
+		  slidesToShow: 5,
+		  slidesToScroll: 1,
+		  // variableWidth: true,
+		  mobileFirst: true,
+	  
+		  responsive: [
+		  	{
+		      breakpoint: 1960,
+		      settings: {
+		        slidesToShow: 5,
+		        slidesToScroll: 1,
+		        infinite: true
+
+		      }
+		    },
+		    {
+		      breakpoint: 1440,
+		      settings: {
+		        slidesToShow: 5,
+		        slidesToScroll: 1,
+	      		infinite: true
+		      }
+		    },
+		    {
+		      breakpoint: 1024,
+		      settings: {
+		        slidesToShow: 3,
+		        slidesToScroll: 1,
+		        centerMode: true,
+	        	centerPadding: "20px",
+	        	infinite: true
+		      }
+		    },
+		    {
+		      breakpoint: 575,
+		      settings: {
+		        slidesToShow: 1,
+		        slidesToScroll: 1,
+		        centerMode: true,
+	        	centerPadding: "20px",
+	        	infinite: true
+		      }
+		    },
+		    {
+		      breakpoint: 300,
+		      settings: {
+		        slidesToShow: 1,
+		        slidesToScroll: 1,
+		        centerMode: true,
+	        	centerPadding: "20px",
+	        	infinite: true
+		      }
+		    }
+		    // You can unslick at a given breakpoint now by adding:
+		    // settings: "unslick"
+		    // instead of a settings object
+		  ]
+		})
+	});
+
+}
+
+function initLogoSlider() {
+
+	$(".logo-slider").each(function(){
 		$(this).slick({
 		  dots: false,
 		  arrows: true,
@@ -812,6 +886,8 @@ jQuery(document).ready(function() {
 
 	initPanelSlider();
 	initSlidePanels();
+	initLogoSlider();
+	
 	initHideFooterIfHomepage();
 	initHideElementsIfHomePageTop();
  	initPopUpIcons();

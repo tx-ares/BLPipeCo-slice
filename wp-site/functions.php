@@ -515,7 +515,37 @@ function blpc_products_carousel($posttype) {
 	}
 	echo $string;
 }
-												
+
+/* Logo Carousel */
+// function blpc_logo_carousel() { 
+// 	$args = array( 
+// 		'post_type' => 'carousel',
+// 		'orderby' => 'menu_order',
+// 		'order' => 'ASC',
+// 		'taxonomy' => 'category',
+//             'field' => 'slug',
+//             'term' => 'carousel-logo'
+// 	);
+	
+// 	$pages = get_posts( $args );
+// 	$string = '';
+
+// 	foreach ( $pages as $page ) {
+		
+// 		$image = get_field('carousel_image', $page->ID);
+
+// 		$string .= '<div class="slide-content" eq-col>  
+// 	                    <a href="'.get_post_permalink( $page->ID ).'" class="tframe fw fh text-center item-box">
+// 		                    <div class="slide-content tframe valign-mid" eq-col>
+		                        
+//                                 <img src="'.$image['url'].'" alt="'.$image['alt'].'" class="icon" />
+
+// 		                    </div>         
+// 	                    </a> 	
+//                 	</div>';
+// 	}
+// 	echo $string;
+// }												
 
 /* post type pager */
 function blpc_post_type_pager($post_type) {

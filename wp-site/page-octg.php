@@ -199,7 +199,17 @@ get_header(); ?>
                         <div class="row compressed row-no-padding" eq-height>         
                             <div class="logo-row" eq-height>
                                 <div class="row compressed grey7">
-                                    <div class="col-md-2 col-md-offset-1 col-xs-6">
+                                    <div class="slider logo-slider">
+                                        
+                                    
+                                      <!--   <?php 
+                                            /* Logo Carousel */
+                                            blpc_logo_carousel();
+
+                                        ?> -->
+
+                                    </div>       
+                                    <!-- <div class="col-md-2 col-md-offset-1 col-xs-6">
                                         <div class="slide-content" eq-col>
                                             <img src="<?php echo get_template_directory_uri(); ?>/_assets/images/ui/axis.png" class="icon">
                                         </div>
@@ -221,7 +231,9 @@ get_header(); ?>
                                             </a>
                                             <img src="<?php echo get_template_directory_uri(); ?>/_assets/images/ui/ipsco.png" class="icon sm">   
                                         </div>
-                                    </div>
+                                    </div> -->
+
+
                                     <div class="col-md-2 col-sm-12">
                                         <div class="bar"></div>
                                         <div class="slide-content" eq-col>
