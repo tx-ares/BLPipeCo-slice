@@ -237,6 +237,10 @@ ul {
   /*Fix for IE10-11 adding bullets*/
   padding: 0;
   margin: 0; }
+  ul.columnsof3 {
+    -webkit-column-count: 4;
+    -moz-column-count: 4;
+    column-count: 4; }
 
 ul.list {
   position: relative;
@@ -264,6 +268,48 @@ ul.list {
         font-size: 0.375rem;
         color: #959595; }
       ul.list li ul ul li:before {
+        content: '\f111';
+        font-size: 6px;
+        font-size: 0.375rem;
+        color: #d55441; }
+
+ul.list-with-logos {
+  position: relative;
+  margin-bottom: 40px;
+  margin-top: 20px; }
+  ul.list-with-logos .logo-container {
+    display: inline-block;
+    width: auto;
+    vertical-align: top; }
+  ul.list-with-logos li {
+    position: relative;
+    padding-left: 20px;
+    margin-bottom: 15px;
+    margin-left: 15px;
+    margin-bottom: 30px;
+    display: inline-block;
+    width: 66%; }
+    ul.list-with-logos li:before {
+      content: '\f0c8';
+      font-family: "FontAwesome";
+      position: absolute;
+      top: 0;
+      left: 0;
+      color: #d0112b;
+      font-size: 6px;
+      font-size: 0.375rem; }
+    ul.list-with-logos li ul {
+      padding-left: 10px;
+      margin-top: 20px; }
+      ul.list-with-logos li ul li {
+        width: 100%; }
+        ul.list-with-logos li ul li:before {
+          content: '\f0c8';
+          top: 0;
+          font-size: 6px;
+          font-size: 0.375rem;
+          color: #959595; }
+      ul.list-with-logos li ul ul li:before {
         content: '\f111';
         font-size: 6px;
         font-size: 0.375rem;
