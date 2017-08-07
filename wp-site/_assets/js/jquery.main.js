@@ -427,7 +427,7 @@ function initPopUpIcons() {
 
 function initMobileSocialMediaMenu() {
 
-	console.log("Checking Pos.")
+	// console.log("Checking Pos.")
 	if ($(this).scrollTop() != 0 && window.matchMedia('only screen and (max-width: 575px)').matches) {
 		$(".social-media-icons").addClass("active");
 	}
@@ -737,7 +737,7 @@ function initAnimateWhenInView() {
 					function(){
 						delayedTimer += 300;
 						var self = this;
-						console.log(delayedTimer, " << timer !")
+						// console.log(delayedTimer, " << timer !")
 						setTimeout(
 							function() { 
 								$(self).addClass("animated bounceInLeft active");

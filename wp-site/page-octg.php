@@ -203,14 +203,18 @@ get_header(); ?>
                                         
                                     
                                         <?php 
+
+                                            debug_to_console( "Check-a-rino!" );
                                             /* Logo Carousel */
                                             echo blpc_logo_carousel();
 
                                         ?>
 
+
+
                                     </div>  
 
-                                         
+
                                     <!-- <div class="col-md-2 col-md-offset-1 col-xs-6">
                                         <div class="slide-content" eq-col>
                                             <img src="<?php echo get_template_directory_uri(); ?>/_assets/images/ui/axis.png" class="icon">
