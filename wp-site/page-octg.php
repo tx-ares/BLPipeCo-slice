@@ -202,13 +202,15 @@ get_header(); ?>
                                     <div class="slider logo-slider">
                                         
                                     
-                                      <!--   <?php 
+                                        <?php 
                                             /* Logo Carousel */
-                                            blpc_logo_carousel();
+                                            echo blpc_logo_carousel();
 
-                                        ?> -->
+                                        ?>
 
-                                    </div>       
+                                    </div>  
+
+                                         
                                     <!-- <div class="col-md-2 col-md-offset-1 col-xs-6">
                                         <div class="slide-content" eq-col>
                                             <img src="<?php echo get_template_directory_uri(); ?>/_assets/images/ui/axis.png" class="icon">
