@@ -524,13 +524,11 @@ function blpc_logo_carousel() {
 		'order' => 'ASC',
 		'taxonomy' => 'category',
             'field' => 'slug',
-            'term' => 'carousel-logo'
+            'term' => 'logo'
 	);
 	
 	$pages = get_posts( $args );
 	$string = '';
-
-	debug_to_console( $pages );
 
 	foreach ( $pages as $page ) {
 		

@@ -196,23 +196,31 @@ get_header(); ?>
                                 </div>     
                             </div>                  
                         </div>
-                        <div class="row compressed row-no-padding" eq-height>         
-                            <div class="logo-row" eq-height>
-                                <div class="row compressed grey7">
-                                    <div class="slider logo-slider">
-                                        
+                        <div class="row compressed row-no-padding">         
+                            <div class="logo-row">
+                                <div class="row compressed grey7" eq-height>
+                                    <div class="col-md-10" eq-col>
+                                          <div class="slider logo-slider">
+                                         
+                                            <?php 
+
+                                                /* Logo Carousel */
+                                                echo blpc_logo_carousel();
+
+                                            ?>
+
+                                            <?php 
+
+                                                /* Logo Carousel - DEBUG ONLY */
+                                                echo blpc_logo_carousel();
+
+                                            ?>
+
+                                        </div>    
+
+                                    </div>
+
                                     
-                                        <?php 
-
-                                            debug_to_console( "Check-a-rino!" );
-                                            /* Logo Carousel */
-                                            echo blpc_logo_carousel();
-
-                                        ?>
-
-
-
-                                    </div>  
 
 
                                     <!-- <div class="col-md-2 col-md-offset-1 col-xs-6">
@@ -240,7 +248,7 @@ get_header(); ?>
                                     </div> -->
 
 
-                                    <div class="col-md-2 col-sm-12">
+                                    <div class="col-md-2 col-sm-12" eq-col>
                                         <div class="bar"></div>
                                         <div class="slide-content" eq-col>
                                                 <a href="#">

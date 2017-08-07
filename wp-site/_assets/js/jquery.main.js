@@ -624,6 +624,7 @@ function initPanelSlider(){
 }
 
 function initLogoSlider() {
+	console.log("Logo Slider INIT")
 
 	$(".logo-slider").each(function(){
 		$(this).slick({
@@ -887,7 +888,7 @@ jQuery(document).ready(function() {
 	initPanelSlider();
 	initSlidePanels();
 	initLogoSlider();
-	
+
 	initHideFooterIfHomepage();
 	initHideElementsIfHomePageTop();
  	initPopUpIcons();

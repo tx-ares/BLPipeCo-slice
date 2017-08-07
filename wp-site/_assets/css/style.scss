@@ -6441,6 +6441,8 @@ footer {
 
 .logo-row {
     background: $colorLightGrey7;
+    min-height: 300px;
+
     @include max-screen($smd) {
         display: block;
         width: 100%;
@@ -6492,43 +6494,50 @@ footer {
         margin-bottom: 0;
     }
 
-    .slide-content[eq-col] {
-        text-align: center;
-        padding: 60px 5px;
-        max-width: 360px;
+    .logo-slider {
+        width: 100%;
         margin: auto;
-        display: inline-block;
-        vertical-align: top;
-        @include max-screen($md) {
-            padding: 0;
-            padding-top: 60px;
-            height: 200px;
-        }
-        &:last-child {
-            width: 95%;
-            text-align: left;
-            padding-left: 20px;
-            padding-right: 15px;
-        }
-        img[src] {
-            width: 100%;
-            height: auto;
-            max-width: 170px;
-            @include max-screen($md) {
-                max-width: 250px;
-            }
-            &.sm {
-                width: 50%;
-            }
-        }
-        &:hover {
 
-            p.details {
-                // max-height: 500px;
-                @include transition(all 1s);
-            }
-        }
     }
+
+    // .slide-content[eq-col] {
+    //     text-align: center;
+    //     padding: 60px 5px;
+    //     max-width: 360px;
+    //     margin: auto;
+    //     display: inline-block;
+    //     vertical-align: top;
+    //     @include max-screen($md) {
+    //         padding: 0;
+    //         padding-top: 60px;
+    //         height: 200px;
+    //     }
+    //     &:last-child {
+    //         width: 95%;
+    //         text-align: left;
+    //         padding-left: 20px;
+    //         padding-right: 15px;
+    //     }
+    //     img[src] {
+    //         width: 100%;
+    //         height: auto;
+    //         max-width: 170px;
+    //         @include max-screen($md) {
+    //             max-width: 250px;
+    //         }
+    //         &.sm {
+    //             width: 50%;
+    //         }
+    //     }
+    //     &:hover {
+
+    //         p.details {
+    //             // max-height: 500px;
+    //             @include transition(all 1s);
+    //         }
+    //     }
+    // }
+
     .bar {
         width: 2px;
         background: $colorDarkGrey;
@@ -6543,6 +6552,7 @@ footer {
             display: none;
         }
     } 
+
     &.active {
         width: 91%;
         @include max-screen($smd) {
@@ -6559,38 +6569,38 @@ footer {
                 }
             }
         }
-        .txt-content,
-        h2.text-upcase.text-flip.vertical-text {
-            opacity: 0;
-            width: 0;
-            margin: 0;
-        }
-        &:after {
-            content: "";
-        }
-        img.a-right.control-c.next.slick-next.slick-arrow {
-            right: -135px;
-            @include max-screen($xlg) {
-                right: -120px;
-            }
-            @include max-screen($md) {
-                right: -75px;
-            } 
-            @include max-screen($sm) {
-                right: -45px;
-            }
-        }
+        // .txt-content,
+        // h2.text-upcase.text-flip.vertical-text {
+        //     opacity: 0;
+        //     width: 0;
+        //     margin: 0;
+        // }
+        // &:after {
+        //     content: "";
+        // }
+        // img.a-right.control-c.next.slick-next.slick-arrow {
+        //     right: -135px;
+        //     @include max-screen($xlg) {
+        //         right: -120px;
+        //     }
+        //     @include max-screen($md) {
+        //         right: -75px;
+        //     } 
+        //     @include max-screen($sm) {
+        //         right: -45px;
+        //     }
+        // }
     }
-    &.compressed {
-        width: 8%;
-        @include max-screen($smd) {
-            width: 100%;
-        }
-        .txt-content {
-            opacity: 0;
-            width: 0;
-        }
-    }
+    // &.compressed {
+    //     width: 8%;
+    //     @include max-screen($smd) {
+    //         width: 100%;
+    //     }
+    //     .txt-content {
+    //         opacity: 0;
+    //         width: 0;
+    //     }
+    // }
     .txt-content {
         position: absolute;
         right: 0;
@@ -6604,23 +6614,25 @@ footer {
             margin: 0 auto;
         }
     }
-    @include max-screen($smd) {
-        display: block;
-        width: 100%;
-        .txt-content {
-            right: 15%
-        }
-        h2.text-flip {
-            right: 25%;
-            text-align: center;
-        }
-    }
+    // @include max-screen($smd) {
+    //     display: block;
+    //     width: 100%;
+    //     .txt-content {
+    //         right: 15%
+    //     }
+    //     h2.text-flip {
+    //         right: 25%;
+    //         text-align: center;
+    //     }
+    // }
 
-    @include max-screen($xmd) {}
+    // @include max-screen($xmd) {
 
-    .slider {
-        width: 60%;
-    }
+    // }
+
+    // .slider {
+    //     width: 60%;
+    // }
 }
 
 
