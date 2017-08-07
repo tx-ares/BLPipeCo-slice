@@ -6495,17 +6495,31 @@ footer {
 
     .slider-container {
         width: 100%;
-        padding: 20px 0;
+        padding: 0 100px;
+
+        @include max-screen($smd) {
+            padding: 0 20px;
+        }
 
         .logo-slider {
             width: 100%;
             margin: auto;
+
+            .slide-content {
+                width: 100%;
+            }
             img.a-left.control-c.prev.slick-prev.slick-arrow {
                 left: -30px;
+                @include max-screen ($smd) {
+                    left: 0;
+                }
             }
 
             img.a-right.control-c.next.slick-next.slick-arrow {
                 right: -30px;
+                @include max-screen ($smd) {
+                    left: 0;
+                }
             }
         }
     }
@@ -6514,54 +6528,16 @@ footer {
         padding-bottom: 60px;
     }
 
-    // .slide-content[eq-col] {
-    //     text-align: center;
-    //     padding: 60px 5px;
-    //     max-width: 360px;
-    //     margin: auto;
-    //     display: inline-block;
-    //     vertical-align: top;
-    //     @include max-screen($md) {
-    //         padding: 0;
-    //         padding-top: 60px;
-    //         height: 200px;
-    //     }
-    //     &:last-child {
-    //         width: 95%;
-    //         text-align: left;
-    //         padding-left: 20px;
-    //         padding-right: 15px;
-    //     }
-    //     img[src] {
-    //         width: 100%;
-    //         height: auto;
-    //         max-width: 170px;
-    //         @include max-screen($md) {
-    //             max-width: 250px;
-    //         }
-    //         &.sm {
-    //             width: 50%;
-    //         }
-    //     }
-    //     &:hover {
-
-    //         p.details {
-    //             // max-height: 500px;
-    //             @include transition(all 1s);
-    //         }
-    //     }
-    // }
-
     .bar {
         width: 2px;
         background: $colorDarkGrey;
         height: 135px;
         margin-top: 45px;
         position: absolute;
-        left: 0;
-        @include max-screen($xlg) {
-            left: 5%;
-        }
+        left: -10%;
+        // @include max-screen($xlg) {
+        //     left: 5%;
+        // }
         @include max-screen($md) {
             display: none;
         }
