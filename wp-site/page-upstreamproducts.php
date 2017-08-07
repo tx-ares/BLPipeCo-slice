@@ -153,26 +153,31 @@ get_header(); ?>
                         <div class="row compressed row-no-padding" eq-height>
                             <div class="logo-row" eq-height>
                                 <div class="row compressed grey7">
-                                    <div class="col-md-2 col-md-offset-1 col-xs-6">
-                                        <div class="slide-content" eq-col> <img src="<?php echo get_template_directory_uri(); ?>/_assets/images/ui/axis.png" class="icon"> </div>
+                                    <div class="col-md-10">
+                                        <div class="slider-container">
+                                          <div class="slider logo-slider" eq-height>
+                                         
+                                                <?php 
+
+                                                    /* Logo Carousel */
+                                                    echo blpc_logo_carousel();
+
+                                                ?>
+
+                                            </div> 
+                                        </div>   
                                     </div>
-                                    <div class="col-md-2 col-xs-6">
-                                        <div class="slide-content" eq-col> <img src="<?php echo get_template_directory_uri(); ?>/_assets/images/ui/nssm.png" class="icon"> </div>
-                                    </div>
-                                    <div class="col-md-2 col-xs-6">
-                                        <div class="slide-content" eq-col> <img src="<?php echo get_template_directory_uri(); ?>/_assets/images/ui/paragon.png" class="icon"> </div>
-                                    </div>
-                                    <div class="col-md-2 col-xs-6">
-                                        <div class="slide-content" eq-col>
-                                            <a href="#"> <span class="text-upcase">Mill Representation</span> </a> <img src="<?php echo get_template_directory_uri(); ?>/_assets/images/ui/ipsco.png" class="icon sm"> </div>
-                                    </div>
+
                                     <div class="col-md-2 col-sm-12">
                                         <div class="bar"></div>
-                                        <div class="slide-content" eq-col>
-                                            <a href="#"> <span class="text-upcase">Additional Sources</span> </a>
-                                            <p> Nam liber tempor cum soluta nobis eleifend option congue nihil imperdiet doming id quod mazim placerat facer possim assum.</p>
+                                        <div class="slide-content tframe valign-mid fw fh info-box" eq-col>
+                                                <a href="#">
+                                                    <span class="text-upcase">Additional Sources</span>
+                                                </a>
+                                                <p> Nam liber tempor cum soluta nobis eleifend option congue nihil imperdiet doming id quod mazim placerat facer possim assum.</p>
                                         </div>
                                     </div>
+
                                 </div>
                             </div>
                         </div>
