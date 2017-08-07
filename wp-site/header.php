@@ -80,9 +80,9 @@
         <header>
             <div class="container-fluid">
                 <div class="row">
-                    <div class="col-xs-4">
+                    <div class="col-xs-4 no-padding-md">
                         <div class="tframe fh fw">
-                            <div class="tcell valign-mid text-right">
+                            <div class="tcell valign-mid text-right pull-left-md">
                                 <a href="/" class="logo">
                                     <img src="<?php echo get_template_directory_uri(); ?>/_assets/images/BLPipeco_Logo-Horizontal.png" alt="BLPipeCo" />
                                 </a>

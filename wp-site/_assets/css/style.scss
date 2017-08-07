@@ -297,7 +297,17 @@ hr {
 }
 
 
+.pull-left-md {
+    @include max-screen($md) {
+        float: left;   
+    }
+}
 
+.no-padding-md {
+    @include max-screen($md) {
+        padding: 0 !important;
+    }
+}
 
 
 
