@@ -3639,7 +3639,7 @@ footer {
             text-transform: uppercase;
             font-weight: 400;
             @include max-screen($sm) {
-                width: 100%;
+                width: 80%;
             }
         }
 
@@ -5601,7 +5601,7 @@ footer {
     }
 
     &.fullpage-centered {
-        width: 75%;
+        width: 90%;
         margin: auto;
         min-height: 215px;
     }
@@ -5937,10 +5937,12 @@ footer {
             }
             @include max-screen($smd) {
                 margin: 0 auto;
+                padding-left: 0;
             }
             @include max-screen($xsm) {
                 left: -5%;
                 max-width: 320px;
+                padding: 0 20px;
             }
         }
 
@@ -6123,10 +6125,10 @@ footer {
         @include max-screen($sm) {
             .txt-content {
                 right: intial;
-                left: 15%;
+                left: 20%;
             }
             h2.text-flip {
-                left: 15%;
+                left: 20%;
                 text-align: center;
             }
         }
@@ -6134,7 +6136,7 @@ footer {
         @include max-screen($ssm) {
             .txt-content {
                 right: intial;
-                left: 10%;
+                left: 5%;
             }
             h2.text-flip {
                 left: 10%;
@@ -6145,7 +6147,7 @@ footer {
         @include max-screen($xsm) {
             .txt-content {
                 right: intial;
-                left: 10%;
+                left: 5%;
                 max-width: 320px;
             }
             h2.text-flip {

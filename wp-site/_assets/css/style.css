@@ -2520,7 +2520,7 @@ footer {
       font-weight: 400; }
       @media only screen and (max-width: 575px) {
         .banner .subtext-box .h2 {
-          width: 100%; } }
+          width: 80%; } }
     @media only screen and (max-width: 575px) {
       .banner .subtext-box h1 {
         font-size: 24px;
@@ -3914,7 +3914,7 @@ footer {
       .feature-box.with-img .img-content img {
         display: block; } }
   .feature-box.fullpage-centered {
-    width: 75%;
+    width: 90%;
     margin: auto;
     min-height: 215px; }
   .feature-box.grey2 {
@@ -4172,11 +4172,13 @@ footer {
         margin-bottom: 35px; }
       @media only screen and (max-width: 865px) {
         .feature-slide-box .slide-over-right .txt-content {
-          margin: 0 auto; } }
+          margin: 0 auto;
+          padding-left: 0; } }
       @media only screen and (max-width: 320px) {
         .feature-slide-box .slide-over-right .txt-content {
           left: -5%;
-          max-width: 320px; } }
+          max-width: 320px;
+          padding: 0 20px; } }
     .feature-slide-box .slide-over-right h2.text-flip {
       color: #fff;
       text-transform: inherit;
@@ -4343,21 +4345,21 @@ footer {
     @media only screen and (max-width: 575px) {
       .feature-slide-box .slide-over-left .txt-content {
         right: intial;
-        left: 15%; }
+        left: 20%; }
       .feature-slide-box .slide-over-left h2.text-flip {
-        left: 15%;
+        left: 20%;
         text-align: center; } }
     @media only screen and (max-width: 375px) {
       .feature-slide-box .slide-over-left .txt-content {
         right: intial;
-        left: 10%; }
+        left: 5%; }
       .feature-slide-box .slide-over-left h2.text-flip {
         left: 10%;
         text-align: center; } }
     @media only screen and (max-width: 320px) {
       .feature-slide-box .slide-over-left .txt-content {
         right: intial;
-        left: 10%;
+        left: 5%;
         max-width: 320px; }
       .feature-slide-box .slide-over-left h2.text-flip {
         right: intial;
