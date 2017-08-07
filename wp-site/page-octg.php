@@ -135,6 +135,7 @@ get_header(); ?>
             <div class="row compressed">
                 <div class="col-md-12">
                     <div class="container-fluid no-padding">
+
                         <div class="row compressed row-no-padding">
                             <div class="col-md-12 col-sm-12 col-xs-12">
                                 <div class="static-slides" eq-height>
@@ -147,19 +148,7 @@ get_header(); ?>
                                 </div>   
                             </div>                 
                         </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- ******************************************************* -->
-    <!-- Tertiary Content -->
-    <!-- ******************************************************* -->
-    <div class="row compressed">    
-        <div class="col-md-12 col-sm-12 col-xs-12 tertiary">
-            <div class="row compressed">
-                <div class="col-md-12">
-                    <div class="container-fluid no-padding">
+
                         <div class="row compressed row-no-padding" eq-height>
                             <div class="col-md-4 col-sm-12 col-xs-12" eq-col>
                                 <div class="image-cta slateblue2 fh">
@@ -193,9 +182,24 @@ get_header(); ?>
                             
 
                                 </div>
-                                </div>     
-                            </div>                  
-                        </div>
+                            </div>     
+                        </div>  
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ******************************************************* -->
+    <!-- Tertiary Content -->
+    <!-- ******************************************************* -->
+    <div class="row compressed">    
+        <div class="col-md-12 col-sm-12 col-xs-12 tertiary">
+            <div class="row compressed">
+                <div class="col-md-12">
+                    <div class="container-fluid no-padding">
+
                         <div class="row compressed row-no-padding">         
                             <div class="logo-row">
                                 <div class="row compressed grey7">
@@ -228,6 +232,7 @@ get_header(); ?>
                                 </div>
                             </div>
                         </div> 
+
                     </div>
                 </div>
             </div>

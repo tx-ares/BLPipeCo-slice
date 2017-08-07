@@ -3960,6 +3960,43 @@ footer {
 
     .secondary {
         margin-top: -7px;
+        .image-cta.resource-center {
+            .txt-content {
+                position: absolute;
+                background: $colorBrightRed2;
+                bottom: 105px;
+                left: 0;
+                width: 80%;
+                h4 {
+                    text-transform: uppercase;
+                    font-weight: 500;
+                    font-size: 24px;
+                    @include font-size(24px);
+                    color: $colorWhite;
+                }
+
+                @include max-screen($sm) {
+                    position: relative;
+                    background: $colorBrightRed2;
+                    bottom: initial;
+                    left: initial;
+                    width: initial;
+                }
+                &:after {
+                    content: "\f0da";
+                    font-family: FontAwesome;
+                    position: absolute;
+                    right: 0;
+                    bottom: 50px;
+                    height: 53px;
+                    width: 53px;
+                    padding: 6px 22px;
+                    @include max-screen($sm) {
+                        content: "";
+                    }
+                }
+            }
+        }
     }
 
     .tertiary {
