@@ -180,16 +180,16 @@ function initcollapsibleContent() {
 
 function initOpenCloseSearch() {
 	"use strict";
-	
+
 	$('.top-search-opener').click(function (e) {
+
 		e.preventDefault();
-		
 		$('.search-box').toggleClass('active');
 	});
 	
 	$('.search-close').click(function (e) {
+
 		e.preventDefault();
-		
 		$('.search-box').toggleClass('active');
 	});
 	
@@ -868,6 +868,7 @@ $(window).resize(function(){
 	initHideElementsIfHomePageTop();
 	resetPanels(); 
 	doneResizing();
+	// removeMatchHeight();
 });
 //
 
@@ -885,7 +886,7 @@ jQuery(document).ready(function() {
 	initAccordion();
 	initMatchHeight();
 	initcollapsibleContent();
-	// initOpenCloseSearch();
+	initOpenCloseSearch();
 	initdataImageBackground();
 	initClampText();
 	initAccordion();

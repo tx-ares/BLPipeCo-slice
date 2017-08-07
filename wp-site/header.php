@@ -99,8 +99,8 @@
             </div>
             <div class="mobile-menu">
                 <div class="content-wrapper">
-                    <form>
-                        <input type="text" placeholder="Enter search here..." />
+                    <form role="search" method="get" class="search-form" action="<?php echo esc_url( home_url( '/' )); ?>">
+                        <input type="text" placeholder="Enter search here..." value="<?php echo get_search_query(); ?>" name="s"  />
                         <a href="#" class="search-btn"><i class="fa fa-search" aria-hidden="true"></i></a>
                     </form>
                     <div class="menu-container">
