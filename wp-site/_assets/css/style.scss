@@ -983,6 +983,7 @@ $padding-sm: 20px;
 
     &.slider-row {
         margin: 0;
+        font-size: 0;
         &:after {
             background: $colorBrightRed2;
             height: 360px;
@@ -3929,7 +3930,7 @@ footer {
             }
 
             a {
-                color: $colorDarkBlue;
+                color: $colorBrightRed1;
                 &:hover {
                     @include transition (color .3s);
                     color: $colorSlateBlue2;
@@ -5712,12 +5713,13 @@ footer {
     }
     @include transition(all .3s);
     .panel {
+        font-size: 1rem;
         min-height: 360px;
         height: 360px !important;
         display: inline-block;
         position: relative;
         vertical-align: top;
-        width: 49.8%;
+        width: 50%;
         padding: 0 25px !important;
         @include transition(all .3s);
         @include max-screen($md) {
@@ -5821,6 +5823,17 @@ footer {
                 padding-left: 5px;
             }
         }
+        @include max-screen($smd) {
+            display: block;
+            width: 100%;
+            .txt-content {
+                right: 15%
+            }
+            h2.text-flip {
+                right: 25%;
+                text-align: center;
+            }
+        }
         &.active {
             width: 91%;
             .panel-title {
@@ -5919,21 +5932,8 @@ footer {
                 max-width: 320px;
             }
         }
-        @include max-screen($smd) {
-            display: block;
-            width: 100%;
-        }
-        @include max-screen($smd) {
-            display: block;
-            width: 100%;
-            .txt-content {
-                right: 15%
-            }
-            h2.text-flip {
-                right: 25%;
-                text-align: center;
-            }
-        }
+
+
         h2.text-flip {
             color: $colorWhite;
             text-transform: inherit;

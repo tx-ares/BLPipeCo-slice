@@ -668,7 +668,8 @@ figure {
   .row.row-compressed {
     margin: 0; }
   .row.slider-row {
-    margin: 0; }
+    margin: 0;
+    font-size: 0; }
     .row.slider-row:after {
       background: #d0112b;
       height: 360px;
@@ -2709,7 +2710,7 @@ footer {
     padding: 0;
     border-bottom: 3px solid #e5e5e5; }
   .main-content .main #address-container a {
-    color: #00263b; }
+    color: #d0202f; }
     .main-content .main #address-container a:hover {
       -moz-transition: color 0.3s;
       -o-transition: color 0.3s;
@@ -3978,12 +3979,13 @@ footer {
     right: 45%;
     opacity: 0; }
   .feature-slide-box .panel {
+    font-size: 1rem;
     min-height: 360px;
     height: 360px !important;
     display: inline-block;
     position: relative;
     vertical-align: top;
-    width: 49.8%;
+    width: 50%;
     padding: 0 25px !important;
     -moz-transition: all 0.3s;
     -o-transition: all 0.3s;
@@ -4083,6 +4085,15 @@ footer {
         content: '\f0d7';
         font-family: "FontAwesome";
         padding-left: 5px; }
+    @media only screen and (max-width: 865px) {
+      .feature-slide-box .slide-over-right {
+        display: block;
+        width: 100%; }
+        .feature-slide-box .slide-over-right .txt-content {
+          right: 15%; }
+        .feature-slide-box .slide-over-right h2.text-flip {
+          right: 25%;
+          text-align: center; } }
     .feature-slide-box .slide-over-right.active {
       width: 91%; }
       .feature-slide-box .slide-over-right.active .panel-title {
@@ -4159,19 +4170,6 @@ footer {
         .feature-slide-box .slide-over-right .txt-content {
           left: -5%;
           max-width: 320px; } }
-    @media only screen and (max-width: 865px) {
-      .feature-slide-box .slide-over-right {
-        display: block;
-        width: 100%; } }
-    @media only screen and (max-width: 865px) {
-      .feature-slide-box .slide-over-right {
-        display: block;
-        width: 100%; }
-        .feature-slide-box .slide-over-right .txt-content {
-          right: 15%; }
-        .feature-slide-box .slide-over-right h2.text-flip {
-          right: 25%;
-          text-align: center; } }
     .feature-slide-box .slide-over-right h2.text-flip {
       color: #fff;
       text-transform: inherit;

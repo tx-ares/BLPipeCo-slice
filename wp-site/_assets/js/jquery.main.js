@@ -775,6 +775,7 @@ function initLogo() {
 function initBioBoxes() {
 	if ($("body").hasClass("bio")) {
 		var $photoItems = $(".photo-item");
+			$phpQueryString = '<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?><?php the_content(); ?><?php endwhile; endif; ?>';
 
 		$photoItems.each(function(index){
 			var $photoItem = $(this);
@@ -798,9 +799,9 @@ function initBioBoxes() {
 						{
 							class: "bioBox",
 						    id: $photoItemId,					    
-						    title: "biography"
+						    title: "biography",
 						    //html to be filled dynamically by CMS.
-						    // html:"<h3>First Last</h3><h4>Really Important Title</h4><p>Spicy jalapeno bacon ipsum dolor amet cow bresaola pastrami jerky hamburger. Sausage drumstick tongue swine fatback, tail ground round ribeye filet mignon boudin porchetta. Kevin turducken ball tip flank, drumstick shankle ham hock chuck. Fatback alcatra landjaeger meatball. <br/> Bresaola turducken ham hock tail alcatra, frankfurter corned beef short ribs jowl ham chicken. Ham hock pork chop ground round spare ribs short ribs pastrami salami flank pig meatloaf kevin t-bone porchetta. Shoulder chuck fatback, tail capicola swine cow beef pork chop spare ribs pork loin brisket salami ham. </p>"
+						    html: $phpQueryString
 						}).on("click", function(e) {
 							e.stopPropagation();
 						}).appendTo($photoItem).animate({

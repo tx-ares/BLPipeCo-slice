@@ -269,8 +269,8 @@ function blpc_bio_tiles($post_id) {
 	);
 	
 	$pages = get_posts( $args );
-	
 	$string = '';
+
 	foreach ( $pages as $page ) { 
 		$photo = get_field('people_photo', $page->ID);
 		$string .= '<div class="photo-item">
