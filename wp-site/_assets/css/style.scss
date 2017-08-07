@@ -2862,12 +2862,12 @@ footer {
                     @include max-screen($md) {
                         max-height: 360px;
 
-                        p,
-                        h1,
-                        h2,
-                        h3 {
-                            @include font-size(20px);
-                        }
+                        // p,
+                        // h1,
+                        // h2,
+                        // h3 {
+                        //     @include font-size(20px);
+                        // }
                     }
                     .btn.whiteline {
                         padding: 0;
@@ -2886,7 +2886,7 @@ footer {
                         }
                     }
                     .subtext-box {
-                        top: 35% !important;
+                        // top: 35% !important;
                     }
                 }
 
@@ -3630,17 +3630,29 @@ footer {
             color: $colorWhite;
             font-weight: 600;
             letter-spacing: 2px;
+            @include font-size(48px);
+
+            @include max-screen ($md) {
+                @include font-size(30px);
+            }
         }
 
         .h2 {
             text-align: center;
-            width: 60%;
+            width: 80%;
             margin: auto;
             text-transform: uppercase;
             font-weight: 400;
+            @include max-screen ($md) {
+                @include font-size(20px);
+            }
             @include max-screen($sm) {
                 width: 80%;
             }
+        }
+
+        @include max-screen($md) {
+            top: 30% !important;
         }
 
         @include max-screen($sm) {
@@ -3652,6 +3664,7 @@ footer {
                 @include font-size(20px);
                 text-align: center;
             }
+
         }
     }
 

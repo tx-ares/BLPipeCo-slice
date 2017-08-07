@@ -2027,13 +2027,7 @@ footer {
       transition: all 0.3s; }
       @media only screen and (max-width: 992px) {
         .home .banner.homepage .slider-container .home-slider .slider-item {
-          max-height: 360px; }
-          .home .banner.homepage .slider-container .home-slider .slider-item p,
-          .home .banner.homepage .slider-container .home-slider .slider-item h1,
-          .home .banner.homepage .slider-container .home-slider .slider-item h2,
-          .home .banner.homepage .slider-container .home-slider .slider-item h3 {
-            font-size: 20px;
-            font-size: 1.25rem; } }
+          max-height: 360px; } }
       .home .banner.homepage .slider-container .home-slider .slider-item .btn.whiteline {
         padding: 0;
         position: relative; }
@@ -2045,8 +2039,6 @@ footer {
           background: #fff; }
           .home .banner.homepage .slider-container .home-slider .slider-item .btn.whiteline:hover a {
             color: #00263b; }
-      .home .banner.homepage .slider-container .home-slider .slider-item .subtext-box {
-        top: 35% !important; }
     .home .banner.homepage .slider-container .home-slider .slick-next:before,
     .home .banner.homepage .slider-container .home-slider .slick-prev:before {
       content: '\f104';
@@ -2511,16 +2503,29 @@ footer {
       text-align: center;
       color: #fff;
       font-weight: 600;
-      letter-spacing: 2px; }
+      letter-spacing: 2px;
+      font-size: 48px;
+      font-size: 3rem; }
+      @media only screen and (max-width: 992px) {
+        .banner .subtext-box .h1 {
+          font-size: 30px;
+          font-size: 1.875rem; } }
     .banner .subtext-box .h2 {
       text-align: center;
-      width: 60%;
+      width: 80%;
       margin: auto;
       text-transform: uppercase;
       font-weight: 400; }
+      @media only screen and (max-width: 992px) {
+        .banner .subtext-box .h2 {
+          font-size: 20px;
+          font-size: 1.25rem; } }
       @media only screen and (max-width: 575px) {
         .banner .subtext-box .h2 {
           width: 80%; } }
+    @media only screen and (max-width: 992px) {
+      .banner .subtext-box {
+        top: 30% !important; } }
     @media only screen and (max-width: 575px) {
       .banner .subtext-box h1 {
         font-size: 24px;
