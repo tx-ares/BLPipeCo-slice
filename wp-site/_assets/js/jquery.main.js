@@ -475,6 +475,10 @@ function resetPanels() {
 function initSlidePanels() {
 	// console.log("initSlidePanels Fired 5!")
 
+	$(".panel").on("click"), function(e) {
+		e.one("click", false);
+	}
+
 	$(".slide-over-left").on("click", function(e){
 		e.stopPropagation();
 		var activeSlider = $(".panel.active").find(".panel-slider");
@@ -561,7 +565,7 @@ function initPanelSlider(){
 		  speed: 300,
 		  waitForAnimate: false,
 		  easing: 'linear',
-		  slidesToShow: 5,
+		  slidesToShow: 3,
 		  slidesToScroll: 1,
 		  // variableWidth: true,
 		  mobileFirst: true,
@@ -570,7 +574,7 @@ function initPanelSlider(){
 		  	{
 		      breakpoint: 1960,
 		      settings: {
-		        slidesToShow: 5,
+		        slidesToShow: 3,
 		        slidesToScroll: 1,
 		        infinite: true
 
@@ -579,7 +583,7 @@ function initPanelSlider(){
 		    {
 		      breakpoint: 1440,
 		      settings: {
-		        slidesToShow: 5,
+		        slidesToShow: 3,
 		        slidesToScroll: 1,
 	      		infinite: true
 		      }
@@ -635,7 +639,7 @@ function initLogoSlider() {
 	      infinite: true,
 		  speed: 300,
 		  waitForAnimate: false,
-		  // autoplay: true,
+		  autoplay: true,
 		  easing: 'linear',
 		  slidesToShow: 5,
 		  slidesToScroll: 1,

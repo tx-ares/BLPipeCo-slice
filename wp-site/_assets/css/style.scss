@@ -5696,6 +5696,8 @@ footer {
                 display: block !important;
                 height: 0;
                 opacity: 0;
+                visibility: hidden;
+
                 .slick-next,
                 .slick-prev {
                     top: 175px;
@@ -5797,7 +5799,10 @@ footer {
                 width: 100%;
                 min-width: auto;
                 display: inline-block; // opacity: 1;
+                visibility: visible;
+
                 .slick-slide {
+
                     &:hover {
                         background: $colorBrightRed3;
                     }
@@ -5983,6 +5988,8 @@ footer {
                 width: 100%;
                 min-width: auto;
                 display: inline-block; // opacity: 1;
+                visibility: visible;
+
                 @include transition (opacity 1s);
                 .slick-slide {
                     &:hover {
@@ -6497,7 +6504,11 @@ footer {
         width: 100%;
         padding: 0 100px;
 
-        @include max-screen($smd) {
+        @include max-screen( $xlg ) {
+            padding: 0 60px;
+        }
+
+        @include max-screen( $smd ) {
             padding: 0 20px;
         }
 
@@ -6518,14 +6529,13 @@ footer {
             img.a-right.control-c.next.slick-next.slick-arrow {
                 right: -30px;
                 @include max-screen ($smd) {
-                    left: 0;
+                    right: 0;
                 }
             }
         }
     }
     .info-box {
-        padding-top: 60px;
-        padding-bottom: 60px;
+        padding: 60px 20px;
     }
 
     .bar {
@@ -6553,6 +6563,7 @@ footer {
             min-width: auto;
             display: inline-block;
             opacity: 1;
+
             .slick-slide {
                 &:hover {
                     background: $colorSlateBlue2;

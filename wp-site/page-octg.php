@@ -210,44 +210,9 @@ get_header(); ?>
 
                                                 ?>
 
-                                                <?php 
-
-                                                    /* Logo Carousel - DEBUG ONLY */
-                                                    echo blpc_logo_carousel();
-
-                                                ?>
-
                                             </div> 
                                         </div>   
                                     </div>
-
-                                    
-
-
-                                    <!-- <div class="col-md-2 col-md-offset-1 col-xs-6">
-                                        <div class="slide-content" eq-col>
-                                            <img src="<?php echo get_template_directory_uri(); ?>/_assets/images/ui/axis.png" class="icon">
-                                        </div>
-                                    </div>
-                                     <div class="col-md-2 col-xs-6">
-                                        <div class="slide-content" eq-col>
-                                            <img src="<?php echo get_template_directory_uri(); ?>/_assets/images/ui/nssm.png" class="icon">
-                                        </div>
-                                    </div> 
-                                    <div class="col-md-2 col-xs-6">
-                                        <div class="slide-content" eq-col>
-                                            <img src="<?php echo get_template_directory_uri(); ?>/_assets/images/ui/paragon.png" class="icon">     
-                                        </div>
-                                    </div>
-                                    <div class="col-md-2 col-xs-6">
-                                        <div class="slide-content" eq-col>
-                                            <a href="#">
-                                                <span class="text-upcase">Mill Representation</span>
-                                            </a>
-                                            <img src="<?php echo get_template_directory_uri(); ?>/_assets/images/ui/ipsco.png" class="icon sm">   
-                                        </div>
-                                    </div> -->
-
 
                                     <div class="col-md-2 col-sm-12">
                                         <div class="bar"></div>

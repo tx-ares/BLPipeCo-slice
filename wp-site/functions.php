@@ -521,6 +521,7 @@ function blpc_logo_carousel() {
 	$args = array( 
 		'post_type' => 'carousel',
 		'orderby' => 'menu_order',
+		'numberposts' => -1,
 		'order' => 'ASC',
 		'taxonomy' => 'category',
             'field' => 'slug',
@@ -529,6 +530,8 @@ function blpc_logo_carousel() {
 	
 	$pages = get_posts( $args );
 	$string = '';
+
+	// debug_to_console( count($pages) );
 
 	foreach ( $pages as $page ) {
 		

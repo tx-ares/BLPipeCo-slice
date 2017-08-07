@@ -54,14 +54,6 @@ get_header(); ?>
                                                     <!-- Product Carousel Left -->
                                                     <?php blpc_products_carousel('octg'); ?>
 
-                                                        <!-- Repeating for Test Only -->
-
-                                                    <!-- Product Carousel Left -->
-                                                    <?php blpc_products_carousel('octg'); ?>
-
-                                                    <!-- Product Carousel Left -->
-                                                    <?php blpc_products_carousel('octg'); ?>
-
                                                 </div>
                                                 <!-- End Slider -->
                                             </div>
@@ -83,25 +75,7 @@ get_header(); ?>
                                                 <div class="panel-slider" eh-height>
                                                     <!-- Product Carousel Right -->
                                                     <?php blpc_products_carousel('upstreamproducts'); ?>
-                                                        <!-- Repeating for Test only -->
-                                                    <!-- Product Carousel Right -->
-                                                    <?php blpc_products_carousel('upstreamproducts'); ?>
-                                                    <!-- Product Carousel Right -->
-                                                    <?php blpc_products_carousel('upstreamproducts'); ?>
-                                                    <!-- Product Carousel Right -->
-                                                    <?php blpc_products_carousel('upstreamproducts'); ?>
-                                                    <!-- Product Carousel Right -->
-                                                    <?php blpc_products_carousel('upstreamproducts'); ?>
-                                                    <!-- Product Carousel Right -->
-                                                    <?php blpc_products_carousel('upstreamproducts'); ?>
-                                                    <!-- Product Carousel Right -->
-                                                    <?php blpc_products_carousel('upstreamproducts'); ?>
-                                                    <!-- Product Carousel Right -->
-                                                    <?php blpc_products_carousel('upstreamproducts'); ?>
-                                                    <!-- Product Carousel Right -->
-                                                    <?php blpc_products_carousel('upstreamproducts'); ?>
-                                                    <!-- Product Carousel Right -->
-                                                    <?php blpc_products_carousel('upstreamproducts'); ?>
+                                                   
 
                                                 </div>
                                                 <!-- End Slider -->
