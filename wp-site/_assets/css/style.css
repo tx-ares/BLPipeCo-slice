@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /* CSS Document */
 #bitnami-banner {
   display: none; }
@@ -1152,8 +1153,8 @@ figure {
     .mobile-menu .content-wrapper form .search-btn {
       display: block;
       position: absolute;
-      top: 78px;
-      right: 17px; }
+      top: 18px;
+      right: 18px; }
       .mobile-menu .content-wrapper form .search-btn:hover {
         color: #d0112b; }
   .mobile-menu .menu-container {
@@ -1214,15 +1215,16 @@ figure {
       margin-left: 1px;
       text-align: center;
       font-weight: 300 !important;
-      font-size: 26px;
+      font-size: 20px;
       color: #d0202f; }
       .mobile-menu .menu-container .holder:after {
-        content: '+';
+        font-family: "FontAwesome";
+        content: "";
         position: absolute;
         width: 19px;
         height: 19px;
         left: 50%;
-        top: 50%;
+        top: 52%;
         -moz-transform: translate(-50%, -50%);
         -o-transform: translate(-50%, -50%);
         -ms-transform: translate(-50%, -50%);
@@ -1232,7 +1234,8 @@ figure {
     .mobile-menu .menu-container .has-sub > a {
       padding-right: 50px; }
     .mobile-menu .menu-container .has-sub.open > a .holder:after {
-      content: '-'; }
+      font-family: "FontAwesome";
+      content: '\f068'; }
     .mobile-menu .menu-container .has-sub.open > a > span:not(.holder):after {
       color: #fff; }
     .mobile-menu .menu-container > ul {
@@ -1293,7 +1296,9 @@ figure {
                 position: relative;
                 text-transform: none;
                 padding: 12px 30px !important;
-                padding-left: 45px !important; }
+                padding-left: 45px !important;
+                background: #00263b;
+                color: #fff; }
                 .mobile-menu .menu-container ul > li > ul > li > ul > li > a > span:before {
                   content: '';
                   position: absolute;
@@ -1353,7 +1358,8 @@ figure {
       width: 100%;
       background: rgba(0, 38, 59, 0.8); }
       .social-media-icons.active {
-        bottom: 0 !important; } }
+        bottom: 0 !important;
+        left: 0; } }
   .social-media-icons ul {
     color: #00263b; }
     @media only screen and (max-width: 575px) {

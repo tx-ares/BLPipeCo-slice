@@ -1630,8 +1630,8 @@ $padding-sm: 20px;
             .search-btn {
                 display: block;
                 position: absolute;
-                top: 78px;
-                right: 17px;
+                top: 18px; //78px
+                right: 18px; //17px
 
                 &:hover {
                     color: $colorBrightRed2;
@@ -1699,15 +1699,16 @@ $padding-sm: 20px;
             margin-left: 1px;
             text-align: center;
             font-weight: 300!important;
-            font-size: 26px;
+            font-size: 20px; //26px
             color: $colorBrightRed1;
             &:after {
-                content: '+';
+                font-family: $font-icon;
+                content: '\f067' ;
                 position: absolute;
                 width: 19px;
                 height: 19px;
                 left: 50%;
-                top: 50%;
+                top: 52%; //50%
                 @include transform(translate(-50%,
                 -50%));
                 font-weight: 300!important;
@@ -1724,7 +1725,8 @@ $padding-sm: 20px;
             &.open {
                 >a {
                     .holder:after {
-                        content: '-';
+                        font-family: $font-icon;
+                        content: '\f068';
                     }
                     >span:not(.holder) {
                         &:after {
@@ -1833,6 +1835,9 @@ $padding-sm: 20px;
                                         padding: 12px 30px!important;
                                         padding-left: 45px!important;
 
+                                        background: $colorDarkBlue;
+                                        color: $colorWhite;
+
                                         &:before {
                                             content: '';
                                             position: absolute;
@@ -1938,6 +1943,7 @@ $padding-sm: 20px;
         background: rgba($colorDarkBlue, .8);
         &.active {
             bottom: 0 !important;
+            left: 0;
         }
     }
     ul {

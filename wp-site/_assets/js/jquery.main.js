@@ -428,7 +428,7 @@ function initPopUpIcons() {
 function initMobileSocialMediaMenu() {
 
 	// console.log("Checking Pos.")
-	if ($(this).scrollTop() != 0 && window.matchMedia('only screen and (max-width: 575px)').matches) {
+	if ($(this).scrollTop() == 0 && window.matchMedia('only screen and (max-width: 575px)').matches) {
 		$(".social-media-icons").addClass("active");
 	}
 
