@@ -198,26 +198,27 @@ get_header(); ?>
                         </div>
                         <div class="row compressed row-no-padding">         
                             <div class="logo-row">
-                                <div class="row compressed grey7" eq-height>
-                                    <div class="col-md-10" eq-col>
-                                          <div class="slider logo-slider">
+                                <div class="row compressed grey7">
+                                    <div class="col-md-10">
+                                        <div class="slider-container">
+                                          <div class="slider logo-slider" eq-height>
                                          
-                                            <?php 
+                                                <?php 
 
-                                                /* Logo Carousel */
-                                                echo blpc_logo_carousel();
+                                                    /* Logo Carousel */
+                                                    echo blpc_logo_carousel();
 
-                                            ?>
+                                                ?>
 
-                                            <?php 
+                                                <?php 
 
-                                                /* Logo Carousel - DEBUG ONLY */
-                                                echo blpc_logo_carousel();
+                                                    /* Logo Carousel - DEBUG ONLY */
+                                                    echo blpc_logo_carousel();
 
-                                            ?>
+                                                ?>
 
-                                        </div>    
-
+                                            </div> 
+                                        </div>   
                                     </div>
 
                                     
@@ -248,15 +249,17 @@ get_header(); ?>
                                     </div> -->
 
 
-                                    <div class="col-md-2 col-sm-12" eq-col>
+                                    <div class="col-md-2 col-sm-12">
                                         <div class="bar"></div>
-                                        <div class="slide-content" eq-col>
+                                        <div class="slide-content tframe valign-mid fw fh info-box" eq-col>
                                                 <a href="#">
                                                     <span class="text-upcase">Additional Sources</span>
                                                 </a>
                                                 <p> Nam liber tempor cum soluta nobis eleifend option congue nihil imperdiet doming id quod mazim placerat facer possim assum.</p>
                                         </div>
                                     </div>
+
+
                                 </div>
                             </div>
                         </div> 

@@ -635,6 +635,7 @@ function initLogoSlider() {
 	      infinite: true,
 		  speed: 300,
 		  waitForAnimate: false,
+		  autoplay: true,
 		  easing: 'linear',
 		  slidesToShow: 5,
 		  slidesToScroll: 1,

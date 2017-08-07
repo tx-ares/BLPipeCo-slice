@@ -6441,7 +6441,6 @@ footer {
 
 .logo-row {
     background: $colorLightGrey7;
-    min-height: 300px;
 
     @include max-screen($smd) {
         display: block;
@@ -6471,8 +6470,8 @@ footer {
     }
 
     a.item-box {
-        padding-top: 20px;
-        padding-bottom: 20px;
+        padding-top: 60px;
+        padding-bottom: 60px;
         color: inherit;
 
         h3 {
@@ -6494,10 +6493,25 @@ footer {
         margin-bottom: 0;
     }
 
-    .logo-slider {
+    .slider-container {
         width: 100%;
-        margin: auto;
+        padding: 20px 0;
 
+        .logo-slider {
+            width: 100%;
+            margin: auto;
+            img.a-left.control-c.prev.slick-prev.slick-arrow {
+                left: -30px;
+            }
+
+            img.a-right.control-c.next.slick-next.slick-arrow {
+                right: -30px;
+            }
+        }
+    }
+    .info-box {
+        padding-top: 60px;
+        padding-bottom: 60px;
     }
 
     // .slide-content[eq-col] {
@@ -6569,38 +6583,9 @@ footer {
                 }
             }
         }
-        // .txt-content,
-        // h2.text-upcase.text-flip.vertical-text {
-        //     opacity: 0;
-        //     width: 0;
-        //     margin: 0;
-        // }
-        // &:after {
-        //     content: "";
-        // }
-        // img.a-right.control-c.next.slick-next.slick-arrow {
-        //     right: -135px;
-        //     @include max-screen($xlg) {
-        //         right: -120px;
-        //     }
-        //     @include max-screen($md) {
-        //         right: -75px;
-        //     } 
-        //     @include max-screen($sm) {
-        //         right: -45px;
-        //     }
-        // }
+       
     }
-    // &.compressed {
-    //     width: 8%;
-    //     @include max-screen($smd) {
-    //         width: 100%;
-    //     }
-    //     .txt-content {
-    //         opacity: 0;
-    //         width: 0;
-    //     }
-    // }
+  
     .txt-content {
         position: absolute;
         right: 0;
@@ -6614,25 +6599,7 @@ footer {
             margin: 0 auto;
         }
     }
-    // @include max-screen($smd) {
-    //     display: block;
-    //     width: 100%;
-    //     .txt-content {
-    //         right: 15%
-    //     }
-    //     h2.text-flip {
-    //         right: 25%;
-    //         text-align: center;
-    //     }
-    // }
-
-    // @include max-screen($xmd) {
-
-    // }
-
-    // .slider {
-    //     width: 60%;
-    // }
+    
 }
 
 
