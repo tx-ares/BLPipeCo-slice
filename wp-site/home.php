@@ -76,8 +76,8 @@ get_header(); ?>
                                                     <!-- Product Carousel Right -->
                                                     <?php blpc_products_carousel('upstreamproducts'); ?>
                                                    
-
                                                 </div>
+
                                                 <!-- End Slider -->
                                             </div>
                                             <div class="panel-label">

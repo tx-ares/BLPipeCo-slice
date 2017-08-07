@@ -4276,7 +4276,9 @@ footer {
       -webkit-transition: all 0.3s;
       transition: all 0.3s; }
       .feature-slide-box .slide-over-left .txt-content img[src] {
-        margin-bottom: 35px; }
+        width: 150px;
+        height: 100px;
+        margin-bottom: 45px; }
       @media only screen and (max-width: 865px) {
         .feature-slide-box .slide-over-left .txt-content {
           margin: 0 auto; } }

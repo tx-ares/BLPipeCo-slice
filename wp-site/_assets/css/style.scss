@@ -6036,7 +6036,9 @@ footer {
             padding-right: 50px;
             @include transition(all .3s);
             img[src] {
-                margin-bottom: 35px;
+                width: 150px;
+                height: 100px;
+                margin-bottom: 45px;
             }
             @include max-screen($smd) {
                 margin: 0 auto;
