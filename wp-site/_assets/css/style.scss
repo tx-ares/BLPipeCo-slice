@@ -5759,7 +5759,17 @@ footer {
                 }
                 .slick-track {
                     width: 100%;
+                        
+                    &.no-transform {
+                        -webkit-transform: translate3d(0,0,0) !important;
+                        -moz-transform: translate3d(0,0,0) !important;
+                        -ms-transform: translate3d(0,0,0) !important;
+                        -o-transform: translate3d(0,0,0) !important;
+                        transform: translate3d(0,0,0) !important;
+                    }
+
                 }
+
                 .slick-list {
                     margin: 0 50px;
                     @include max-screen($smd) {
@@ -5769,7 +5779,8 @@ footer {
                 }
                 @include transition(all .3s);
                 .slick-slide {
-                    height: 360px; // min-width: 260px;
+                    height: 360px; 
+                    min-width: 250px;
                     @include max-screen ($xmd) {
                         min-width: unset;
                     }

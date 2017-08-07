@@ -464,6 +464,9 @@ function resetPanels() {
 		$(this).removeClass("loaded");
 		$(this).hide();
 	})
+	$(".slick-track").each(function(){
+		$(this).removeClass("no-transform");
+	})
 	$("h2.text-flip").removeClass("vertical-text");
 
 	$(".fa-spin").css("opacity" , 0);
@@ -539,6 +542,8 @@ function initSlidePanels() {
 
 function delayedLoad(activePanel) {
 	var activeSlider = $(".panel.active").find(".panel-slider");
+		slides = activeSlider[0].childElementCount;
+
 	$("body").addClass("no-scroll-x");  
 
 	if(!$(activeSlider).hasClass("loaded")) {	
@@ -550,6 +555,15 @@ function delayedLoad(activePanel) {
 		} , 500);
 		$(activeSlider).slick("slickNext");
 		$(activeSlider).addClass("loaded");
+
+		if(slides < 3) {
+			console.log("Not enough Slides, locking track!")
+			var activeTrack = activeSlider.find(".slick-track");
+			// console.log(activeTrack, " << track")
+			activeTrack.addClass("no-transform");
+		}
+
+
 	}
 }
 
