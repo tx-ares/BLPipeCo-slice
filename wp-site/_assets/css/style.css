@@ -3476,7 +3476,9 @@ footer {
     @media only screen and (max-width: 768px) {
       .image-cta .txt-content {
         background: #bcc7cd;
-        position: relative; } }
+        position: relative;
+        text-align: center;
+        margin-bottom: 63px; } }
     .image-cta .txt-content h2 {
       font-weight: 600;
       font-size: 30px;
@@ -3513,10 +3515,10 @@ footer {
     @media only screen and (max-width: 768px) {
       .image-cta .txt-subcontent {
         height: 80px;
-        background-color: #bcc7cd; } }
-    @media only screen and (max-width: 768px) {
-      .image-cta .txt-subcontent {
-        text-align: center; } }
+        background-color: #bcc7cd;
+        text-align: center;
+        padding: 0 40px 20px;
+        height: auto; } }
     .image-cta .txt-subcontent a[href="#"] {
       color: #fff;
       line-height: 3;
@@ -3524,9 +3526,6 @@ footer {
       font-weight: 500;
       margin-right: 70px;
       display: block; }
-      @media only screen and (max-width: 768px) {
-        .image-cta .txt-subcontent a[href="#"] {
-          width: 85% !important; } }
       .image-cta .txt-subcontent a[href="#"] span {
         color: #fff !important;
         text-transform: uppercase; }
@@ -3538,7 +3537,6 @@ footer {
           padding: 8px 15px;
           margin-right: 0;
           border: 1px solid #fff;
-          width: 85%;
           margin: 0 auto; } }
       .image-cta .txt-subcontent a[href="#"]:after {
         content: '\f0da';

@@ -5008,6 +5008,8 @@ footer {
         @include max-screen($xmd) {
             background: rgba($colorSlateBlue2, 1);
             position: relative;
+            text-align: center;
+            margin-bottom: 63px;
         }
 
         h2 {
@@ -5064,10 +5066,11 @@ footer {
             // position: relative;
             height: 80px;
             background-color: $colorSlateBlue2;
-        }
-        @include max-screen($xmd) {
             text-align: center;
+            padding: 0 40px 20px;
+            height: auto;
         }
+
         a[href="#"] {
             color: $colorWhite;
             line-height: 3;
@@ -5075,9 +5078,7 @@ footer {
             font-weight: 500;
             margin-right: 70px;
             display: block;
-            @include max-screen($xmd) {
-                width: 85% !important;
-            }
+            
             span {
                 color: $colorWhite !important;
                 text-transform: uppercase;
@@ -5092,7 +5093,6 @@ footer {
                 padding: 8px 15px;
                 margin-right: 0;
                 border: 1px solid $colorWhite;
-                width: 85%;
                 margin: 0 auto;
             }
             &:after {

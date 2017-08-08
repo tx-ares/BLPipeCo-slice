@@ -151,18 +151,15 @@ get_header(); ?>
 
                         <div class="row compressed row-no-padding" eq-height>
                             <div class="col-md-4 col-sm-12 col-xs-12" eq-col>
-                                <div class="image-cta slateblue2 fh">
-                                    <!-- Feature CTA Bottom -->
-                                    <?php 
-                                        $feature_id1 = get_field('any_feature_bottom'); 
-                                        
-                                        if($feature_id1) {
-                                            echo blpc_content_feature_right($feature_id1); 
-                                        }
+                                <!-- Feature CTA Bottom -->
+                                <?php 
+                                    $feature_id1 = get_field('any_feature_bottom'); 
+                                    
+                                    if($feature_id1) {
+                                        echo blpc_content_feature_right($feature_id1); 
+                                    }
 
-                                    ?>
-
-                                </div>    
+                                ?>
                             </div>
                             <div class="col-md-4 col-sm-12 col-xs-12" eq-col>
                             
@@ -180,7 +177,7 @@ get_header(); ?>
                                         <p>Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat.</p>
                                     </div>
                             
-
+                            
                                 </div>
                             </div>     
                         </div>  
