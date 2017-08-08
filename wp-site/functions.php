@@ -535,13 +535,15 @@ function blpc_logo_carousel() {
 
 	foreach ( $pages as $page ) {
 		
-		$image = get_field('carousel_image', $page->ID);
+		$image_color = get_field('carousel_image', $page->ID);
+		$image_bw = get_field('carousel_image_bw', $page->ID);
 
 		$string .= '<div class="slide-content" eq-col>  
 	                    <a href="'.get_post_permalink( $page->ID ).'" class="tframe fw fh text-center item-box">
 		                    <div class="slide-content tframe valign-mid" eq-col>
 		                        
-                                <img src="'.$image['url'].'" alt="'.$image['alt'].'" class="icon" />
+                                <img src="'.$image_bw['url'].'" alt="'.$image_bw['alt'].'" class="icon" />
+                                <img src="'.$image_color['url'].'" alt="'.$image_color['alt'].'" class="icon" />
 
 		                    </div>         
 	                    </a> 	
