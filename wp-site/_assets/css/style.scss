@@ -4888,6 +4888,7 @@ footer {
     min-height: 360px;
     position: relative;
     cursor: pointer;
+
     a {
         display: block;
         @include transition(all .5s);
@@ -4910,28 +4911,8 @@ footer {
         height: 100%;
         padding-bottom: 55%;
 
-        @include max-screen($sm) {
-            padding-bottom: 85%;
-        }
-
-        .txt-content {
-            position: absolute;
-            bottom: 0;
-            width: 100%;
-            margin-bottom: 53px;
-            padding: 40px; 
-
-            h2 {
-                font-weight: 600;
-                @include font-size(30px);
-                text-transform: uppercase;
-                margin-bottom: 0; // padding-left:20px;
-            }
-            h4 {
-                @include font-size(24px);
-                font-weight: 500;
-                text-transform: uppercase;
-            } 
+        @include max-screen($xmd) {
+            padding-bottom: 0;
         }
 
         &:after {
@@ -4956,6 +4937,9 @@ footer {
             width: 100%;
             @include transform(translate(-50.1%,
             0));
+            @include max-screen ($xmd) {
+                position: relative;
+            }
         }
 
         .caption {
@@ -4992,13 +4976,51 @@ footer {
         }
     }
 
+    // .txt-content {
+    //     position: absolute;
+    //     bottom: 0;
+    //     width: 100%;
+    //     margin-bottom: 53px;
+    //     padding: 40px; 
+
+    //     h2 {
+    //         font-weight: 600;
+    //         @include font-size(30px);
+    //         text-transform: uppercase;
+    //         margin-bottom: 0; // padding-left:20px;
+    //     }
+    //     h4 {
+    //         @include font-size(24px);
+    //         font-weight: 500;
+    //         text-transform: uppercase;
+    //     } 
+    // }
+
     .txt-content {
         color: $colorWhite;
         background: rgba($colorDarkBlue, .5);
         padding: 40px;
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+        margin-bottom: 53px;
+
         @include max-screen($xmd) {
             background: rgba($colorSlateBlue2, 1);
+            position: relative;
         }
+
+        h2 {
+            font-weight: 600;
+            @include font-size(30px);
+            text-transform: uppercase;
+            margin-bottom: 0; // padding-left:20px;
+        }
+        h4 {
+            @include font-size(24px);
+            font-weight: 500;
+            text-transform: uppercase;
+        } 
         h3 {
             text-transform: uppercase;
             font-weight: 500;
@@ -5098,81 +5120,81 @@ footer {
     }
 
 
-    @include max-screen($xlg) {
+    // @include max-screen($xlg) {
 
-        .img-content {
+    //     .img-content {
 
-            .caption {
-                padding: 10px 30px;
-            }
-        }
+    //         .caption {
+    //             padding: 10px 30px;
+    //         }
+    //     }
 
-        .txt-content {
-            padding: 30px;
+    //     .txt-content {
+    //         padding: 30px;
 
-            h3 {
-                @include font-size(28px);
-            }
-        }
-    }
+    //         h3 {
+    //             @include font-size(28px);
+    //         }
+    //     }
+    // }
 
-    @include max-screen($lg) {
+    // @include max-screen($lg) {
 
-        .img-content {
-            // padding-bottom:85%;
-            .date {
-                @include font-size(14px);
-                padding: 15px 20px;
+    //     .img-content {
+    //         // padding-bottom:85%;
+    //         .date {
+    //             @include font-size(14px);
+    //             padding: 15px 20px;
 
-                .date-num {
-                    @include font-size(26px);
-                }
-            }
-        }
+    //             .date-num {
+    //                 @include font-size(26px);
+    //             }
+    //         }
+    //     }
 
-        .txt-content {
-            padding: 25px;
+    //     .txt-content {
+    //         padding: 25px;
 
-            h3 {
-                @include font-size(24px);
-                margin-bottom: 15px;
-            }
-        }
-    }
+    //         h3 {
+    //             @include font-size(24px);
+    //             margin-bottom: 15px;
+    //         }
+    //     }
+    // }
 
-    @include max-screen($xmd) {
+    // @include max-screen($xmd) {
 
-        .img-content {
-            padding-bottom: 85%;
+    //     .img-content {
+    //         padding-bottom: 85%;
 
-            img {
-                height: auto;
-                min-height: 300px;
-                width: 100%;
-                left: 49.9%;
-                @include transform(translate(-50.1%,
-                0));
-            }
+    //         img {
+    //             height: auto;
+    //             min-height: 300px;
+    //             width: 100%;
+    //             left: 49.9%;
+    //             @include transform(translate(-50.1%,
+    //             0));
+    //         }
 
-            .date {
-                @include font-size(14px);
-                padding: 15px 20px;
+    //         .date {
+    //             @include font-size(14px);
+    //             padding: 15px 20px;
 
-                .date-num {
-                    @include font-size(26px);
-                }
-            }
-        }
-    }
+    //             .date-num {
+    //                 @include font-size(26px);
+    //             }
+    //         }
+    //     }
+    // }
 
-    @include max-screen($sm) {}
+    // @include max-screen($sm) {}
 
-    @include max-screen(420px) {
+    // @include max-screen(420px) {
 
-        .img-content {
-            // padding-bottom: 90%;
-        }
-    }
+    //     .img-content {
+    //         // padding-bottom: 90%;
+    //     }
+    // }
 
     &.no-img {
         p {

@@ -3472,26 +3472,9 @@ footer {
     overflow: hidden;
     height: 100%;
     padding-bottom: 55%; }
-    @media only screen and (max-width: 575px) {
+    @media only screen and (max-width: 768px) {
       .image-cta .img-content {
-        padding-bottom: 85%; } }
-    .image-cta .img-content .txt-content {
-      position: absolute;
-      bottom: 0;
-      width: 100%;
-      margin-bottom: 53px;
-      padding: 40px; }
-      .image-cta .img-content .txt-content h2 {
-        font-weight: 600;
-        font-size: 30px;
-        font-size: 1.875rem;
-        text-transform: uppercase;
-        margin-bottom: 0; }
-      .image-cta .img-content .txt-content h4 {
-        font-size: 24px;
-        font-size: 1.5rem;
-        font-weight: 500;
-        text-transform: uppercase; }
+        padding-bottom: 0; } }
     .image-cta .img-content:after {
       content: '';
       position: absolute;
@@ -3513,6 +3496,9 @@ footer {
       -ms-transform: translate(-50.1%, 0);
       -webkit-transform: translate(-50.1%, 0);
       transform: translate(-50.1%, 0); }
+      @media only screen and (max-width: 768px) {
+        .image-cta .img-content img {
+          position: relative; } }
     .image-cta .img-content .caption {
       position: absolute;
       bottom: 0;
@@ -3546,10 +3532,26 @@ footer {
   .image-cta .txt-content {
     color: #fff;
     background: rgba(0, 38, 59, 0.5);
-    padding: 40px; }
+    padding: 40px;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    margin-bottom: 53px; }
     @media only screen and (max-width: 768px) {
       .image-cta .txt-content {
-        background: #bcc7cd; } }
+        background: #bcc7cd;
+        position: relative; } }
+    .image-cta .txt-content h2 {
+      font-weight: 600;
+      font-size: 30px;
+      font-size: 1.875rem;
+      text-transform: uppercase;
+      margin-bottom: 0; }
+    .image-cta .txt-content h4 {
+      font-size: 24px;
+      font-size: 1.5rem;
+      font-weight: 500;
+      text-transform: uppercase; }
     .image-cta .txt-content h3 {
       text-transform: uppercase;
       font-weight: 500;
@@ -3621,48 +3623,6 @@ footer {
             display: none; } }
       .image-cta .txt-subcontent a[href="#"]:hover:after {
         background-color: #8a9ca5; }
-  @media only screen and (max-width: 1280px) {
-    .image-cta .img-content .caption {
-      padding: 10px 30px; }
-    .image-cta .txt-content {
-      padding: 30px; }
-      .image-cta .txt-content h3 {
-        font-size: 28px;
-        font-size: 1.75rem; } }
-  @media only screen and (max-width: 1024px) {
-    .image-cta .img-content .date {
-      font-size: 14px;
-      font-size: 0.875rem;
-      padding: 15px 20px; }
-      .image-cta .img-content .date .date-num {
-        font-size: 26px;
-        font-size: 1.625rem; }
-    .image-cta .txt-content {
-      padding: 25px; }
-      .image-cta .txt-content h3 {
-        font-size: 24px;
-        font-size: 1.5rem;
-        margin-bottom: 15px; } }
-  @media only screen and (max-width: 768px) {
-    .image-cta .img-content {
-      padding-bottom: 85%; }
-      .image-cta .img-content img {
-        height: auto;
-        min-height: 300px;
-        width: 100%;
-        left: 49.9%;
-        -moz-transform: translate(-50.1%, 0);
-        -o-transform: translate(-50.1%, 0);
-        -ms-transform: translate(-50.1%, 0);
-        -webkit-transform: translate(-50.1%, 0);
-        transform: translate(-50.1%, 0); }
-      .image-cta .img-content .date {
-        font-size: 14px;
-        font-size: 0.875rem;
-        padding: 15px 20px; }
-        .image-cta .img-content .date .date-num {
-          font-size: 26px;
-          font-size: 1.625rem; } }
   .image-cta.no-img p {
     font-size: 20px;
     font-size: 1.25rem;

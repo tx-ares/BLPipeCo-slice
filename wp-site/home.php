@@ -107,8 +107,8 @@ get_header(); ?>
                     <div class="container-fluid no-padding">
                         <div class="row compressed row-no-padding" eq-height>
                             <div class="col-md-7 col-sm-7 col-xs-12" eq-col>
-                                <div class="image-cta slateblue2 fh">
-                                
+                            
+                            
                                 <!-- Feature CTA Bottom -->
                                 <?php 
                                     $feature_id1 = get_field('any_feature_bottom'); 
@@ -116,10 +116,8 @@ get_header(); ?>
                                     if($feature_id1) {
                                         echo blpc_content_feature_right($feature_id1); 
                                     }
-
                                 ?>
 
-                                </div>
                             </div>
                             <div class="col-md-5 col-sm-5 col-xs-12" eq-col>
                                  

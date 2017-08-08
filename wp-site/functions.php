@@ -703,6 +703,56 @@ function blpc_custom_menu_list_pages($post_type) {
 	echo $string;
 }
 
+
+function blpc_content_feature($post_id) {
+	
+	$feature = get_post($post_id);
+	$string = '';
+	if($feature) {
+		$feature_image = get_field('feature_image', $feature->ID);
+		
+		if($feature_image) {
+			$feature_url = get_field('feature_button_url', $feature->ID);
+			if ($feature_url) {
+			$string .= '<div class="feature-box '.get_field('feature_background_color', $feature->ID).' with-img">
+									<div class="row compressed fh-col" eq-height>
+												<div class="col-lg-5 col-md-12 img-content" eq-col data-img="'.$feature_image['url'].'">
+														<img alt="'.$feature_image['alt'].'"
+																src="'.$feature_image['url'].'" />
+												</div>
+												<div class="col-lg-7 col-md-12 txt-content" eq-col>
+														<h3>' . $feature->post_title  . '</h3>
+														' . $feature->post_content  . '
+														<a href="' . get_field('feature_button_url', $feature->ID)  . '" class="btn '.get_field('feature_button_color', $feature->ID).' hvr-icon-push" target="'.get_field('feature_button_target', $feature->ID).'">' . get_field('feature_button_text', $feature->ID)  . ' <i class="fa fa-angle-right" aria-hidden="true"></i></a>
+												</div>
+										</div>
+								</div>';
+			} else {
+			$string .= '<div class="feature-box '.get_field('feature_background_color', $feature->ID).' with-img">
+									<div class="row compressed fh-col" eq-height>
+												<div class="col-lg-5 col-md-12 img-content" eq-col data-img="'.$feature_image['url'].'">
+														<img alt="'.$feature_image['alt'].'"
+																src="'.$feature_image['url'].'" />
+												</div>
+												<div class="col-lg-7 col-md-12 txt-content" eq-col>
+														<h3>' . $feature->post_title  . '</h3>
+														' . $feature->post_content  . '
+												</div>
+										</div>
+								</div>';
+				
+			}
+		} else {
+			$string .= '<div class="feature-box '.get_field('feature_background_color', $feature->ID).'">
+											<h3>' . $feature->post_title  . '</h3>
+											' . $feature->post_content  . '
+									</div>';
+		}
+	}
+	
+	echo $string;						
+}
+
 function blpc_content_feature_right($post_id) {
 	
 	$feature = get_post($post_id);
@@ -716,11 +766,10 @@ function blpc_content_feature_right($post_id) {
 								<div class="img-content">
 									<img alt="'.$feature_image['alt'].'"
 									src="'.$feature_image['url'].'" />
-								
-									<div class="txt-content">
-										<h4>' . $feature->post_title  . '</h4>
-										<p>'. $feature->post_content  . '</p>
-									</div>
+								</div>
+								<div class="txt-content">
+									<h4>' . $feature->post_title  . '</h4>
+									<p>'. $feature->post_content  . '</p>
 								</div>
 								<div class="txt-subcontent">
 		                            <a href="#">
