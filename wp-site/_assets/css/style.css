@@ -4097,7 +4097,7 @@ footer {
           .feature-slide-box .slide-over-right.active img.a-right.control-c.next.slick-next.slick-arrow {
             right: -45px; } }
     .feature-slide-box .slide-over-right.compressed {
-      width: 8%; }
+      width: 9%; }
       @media only screen and (max-width: 575px) {
         .feature-slide-box .slide-over-right.compressed {
           width: 100%; } }
@@ -4115,15 +4115,6 @@ footer {
       transition: all 0.3s; }
       .feature-slide-box .slide-over-right .txt-content img[src] {
         margin-bottom: 35px; }
-      @media only screen and (max-width: 865px) {
-        .feature-slide-box .slide-over-right .txt-content {
-          margin: 0 auto;
-          padding-left: 0; } }
-      @media only screen and (max-width: 320px) {
-        .feature-slide-box .slide-over-right .txt-content {
-          left: -5%;
-          max-width: 320px;
-          padding: 0 20px; } }
     .feature-slide-box .slide-over-right h2.text-flip {
       color: #fff;
       text-transform: inherit;
@@ -4140,14 +4131,6 @@ footer {
       -o-transition: all 0.3s;
       -webkit-transition: all 0.3s;
       transition: all 0.3s; }
-      @media only screen and (max-width: 575px) {
-        .feature-slide-box .slide-over-right h2.text-flip {
-          width: 100%;
-          text-align: center;
-          left: 0; } }
-      @media only screen and (max-width: 320px) {
-        .feature-slide-box .slide-over-right h2.text-flip {
-          left: 20%; } }
       .feature-slide-box .slide-over-right h2.text-flip.vertical-text {
         position: absolute;
         left: -95px;
@@ -4181,10 +4164,16 @@ footer {
         display: block;
         width: 100%; }
         .feature-slide-box .slide-over-right .txt-content {
-          right: 15%; }
+          right: 0;
+          width: 100%;
+          padding: 0 40px; }
         .feature-slide-box .slide-over-right h2.text-flip {
           right: 25%;
           text-align: center; } }
+    @media only screen and (max-width: 320px) {
+      .feature-slide-box .slide-over-right .txt-content {
+        max-width: 320px;
+        padding: 0 20px; } }
   .feature-slide-box .slide-over-left {
     background: #e2eaed; }
     .feature-slide-box .slide-over-left .panel-title {
@@ -4254,7 +4243,7 @@ footer {
           .feature-slide-box .slide-over-left.active img.a-right.control-c.next.slick-next.slick-arrow {
             right: -45px; } }
     .feature-slide-box .slide-over-left.compressed {
-      width: 8%; }
+      width: 9%; }
       @media only screen and (max-width: 575px) {
         .feature-slide-box .slide-over-left.compressed {
           width: 100%; } }
@@ -4274,46 +4263,43 @@ footer {
         width: 150px;
         height: 100px;
         margin-bottom: 45px; }
-      @media only screen and (max-width: 865px) {
-        .feature-slide-box .slide-over-left .txt-content {
-          margin: 0 auto; } }
     @media only screen and (max-width: 575px) {
       .feature-slide-box .slide-over-left {
         display: block;
-        width: 100%; } }
-    @media only screen and (max-width: 865px) {
-      .feature-slide-box .slide-over-left .txt-content {
-        right: 30%; }
-      .feature-slide-box .slide-over-left h2.text-flip {
-        right: 35%;
-        text-align: center; } }
+        width: 100%; }
+        .feature-slide-box .slide-over-left .txt-content {
+          right: 30%; }
+        .feature-slide-box .slide-over-left h2.text-flip {
+          right: 35%;
+          text-align: center; } }
     @media only screen and (max-width: 768px) {
       .feature-slide-box .slide-over-left .txt-content {
-        right: 20%; }
+        right: -10%;
+        padding-left: 25px; }
       .feature-slide-box .slide-over-left h2.text-flip {
-        right: 30%;
         text-align: center; } }
     @media only screen and (max-width: 575px) {
       .feature-slide-box .slide-over-left .txt-content {
-        right: intial;
-        left: 20%; }
+        right: unset;
+        left: 15px;
+        width: 100%; }
       .feature-slide-box .slide-over-left h2.text-flip {
         left: 20%;
         text-align: center; } }
     @media only screen and (max-width: 375px) {
       .feature-slide-box .slide-over-left .txt-content {
-        right: intial;
-        left: 5%; }
+        right: unset; }
       .feature-slide-box .slide-over-left h2.text-flip {
         left: 10%;
         text-align: center; } }
     @media only screen and (max-width: 320px) {
       .feature-slide-box .slide-over-left .txt-content {
-        right: intial;
-        left: 5%;
-        max-width: 320px; }
+        right: unset;
+        left: 0;
+        max-width: 320px;
+        padding: 0 20px; }
       .feature-slide-box .slide-over-left h2.text-flip {
-        right: intial;
+        right: unset;
         left: 25%;
         text-align: center;
         min-width: 165px; } }
@@ -4358,7 +4344,7 @@ footer {
         left: 0 !important; } }
     .feature-slide-box h2.text-flip.vertical-text {
       position: absolute;
-      right: -110px;
+      right: -125px;
       top: 127px;
       text-align: center;
       width: 300px;
