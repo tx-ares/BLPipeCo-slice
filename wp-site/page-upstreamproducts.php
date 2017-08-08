@@ -35,13 +35,15 @@ get_header(); ?>
 <!-- ******************************************************* -->
 <section class="main-content">
     <div class="row compressed" eq-height>
-        <div class="col-md-7 col-sm-7 col-xs-12 main" eq-col>
+        <div class="col-md-7 col-sm-12 col-xs-12 main" eq-col>
             <div class="row compressed">
-                <div class="col-md-offset-3 col-md-9">
+                <div class="col-lg-offset-3 col-lg-9 col-md-12 col-sm-12">
                     <div class="container-fluid">
+
                         <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
-                            <?php the_content(); ?>
-                                <?php endwhile; endif; ?>
+                        <?php the_content(); ?>
+                        <?php endwhile; endif; ?>
+
                     </div>
                 </div>
             </div>
@@ -49,7 +51,7 @@ get_header(); ?>
         <!-- ******************************************************* -->
         <!-- Aside Content -->
         <!-- ******************************************************* -->
-        <div class="col-md-5 col-sm-5 col-xs-12 aside" eq-col>
+        <div class="col-md-5 col-xs-12 hidden-sm hidden-xs aside" eq-col>              
             <!-- Send Request -->
             <div class="send-request" toggle-active-parent>
                 <div class="row full-scr" eq-height>
@@ -57,16 +59,22 @@ get_header(); ?>
                         <a href="#" class="tframe fh fw">
                             <div class="tcell valign-mid call-us">
                                 <p class="h3">Get in Touch</p>
-                                <p class="sub-text">Please, use our customer line to contact us</span> <span class="num">+1 555 123 4567</span> 
+                                <p class="sub-text">Please, use our customer line to contact us</p>
+                                    <span class="num">+1 555 123 4567</span>
                             </div>
                         </a>
                     </div>
                     <div class="col-sm-5 col-xs-5 fh" eq-col>
                         <div class="tframe fw fh popdown-phonenum">
-                            <div class="tcell valign-mid phone-opener" toggle-active-opener><i class="fa fa-mobile" aria-hidden="true"></i> <span class="more">More</span><span class="less">Less</span> <i class="fa fa-angle-down" aria-hidden="true"></i></div>
+                            <div class="tcell valign-mid phone-opener" toggle-active-opener>
+                                <i class="fa fa-mobile" aria-hidden="true"></i> 
+                                <span class="more">More</span>
+                                <span class="less">Less</span> 
+                                <i class="fa fa-angle-down" aria-hidden="true"></i>
+                            </div>
                         </div>
                     </div>
-                </div>
+                </div>  
             </div>
         </div>
     </div>
@@ -91,28 +99,136 @@ get_header(); ?>
     <!-- ******************************************************* -->
     <!-- Secondary Content -->
     <!-- ******************************************************* -->
-    <div class="row compressed">
+    <div class="row compressed">    
         <div class="col-md-12 col-sm-12 col-xs-12 secondary">
             <div class="row compressed">
                 <div class="col-md-12">
                     <div class="container-fluid no-padding">
+
                         <div class="row compressed row-no-padding">
                             <div class="col-md-12 col-sm-12 col-xs-12">
                                 <div class="static-slides" eq-height>
                                     <div class="row compressed grey7">
-                                        
-                                        <!-- Product Row -->
-                                        <?php blpc_products_rollovers('upstreamproducts'); ?>
 
+                                    <!-- Product Row -->
+                                    <?php blpc_products_rollovers('upstreamproducts'); ?>
+
+                                    </div>
+                                </div>   
+                            </div>                 
+                        </div>
+
+                        <div class="row compressed row-no-padding">
+                            <div class="col-xs-12 visible-sm visible-xs">
+                                 <!-- Send Request -->
+                                <div class="send-request" toggle-active-parent>
+                                    <div class="row full-scr" eq-height>
+                                        <div class="col-sm-7 col-xs-7 fh" eq-col>
+                                            <a href="#" class="tframe fh fw">
+                                                <div class="tcell valign-mid call-us">
+                                                    <p class="h3">Get in Touch</p>
+                                                    <p class="sub-text">Please, use our customer line to contact us</p>
+                                                        <span class="num">+1 555 123 4567</span>
+                                                </div>
+                                            </a>
+                                        </div>
+                                        <div class="col-sm-5 col-xs-5 fh" eq-col>
+                                            <div class="tframe fw fh popdown-phonenum">
+                                                <div class="tcell valign-mid phone-opener" toggle-active-opener>
+                                                    <i class="fa fa-mobile" aria-hidden="true"></i> 
+                                                    <span class="more">More</span>
+                                                    <span class="less">Less</span> 
+                                                    <i class="fa fa-angle-down" aria-hidden="true"></i>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>  
+                                </div>
+                            </div>                 
+                        </div>
+
+                        <div class="row compressed">
+                            <div class="col-md-12">        
+                                <div class="more-phone-full-scr" toggle-active-single>
+                                    <div class="more-phone-wrap">
+                                        <ul>
+                                            <li>
+                                                <span>Concord, CA</span>
+                                                <a href="#" class="num">+1 925 478 8058</a>
+                                            </li>
+                                            <li>
+                                                <span>Angleton, TX</span>
+                                                <a href="#" class="num">+1 713 260 4050</a>
+                                            </li>
+                                            <li>
+                                                <span>Denver, CO</span>
+                                                <a href="#" class="num">+1 720 789 7570</a>
+                                            </li>
+                                            <li>
+                                                <span>Denver, CO</span>
+                                                <a href="#" class="num">+1 720 789 7570</a>
+                                            </li>
+                                            <li>
+                                                <span>Concord, CA</span>
+                                                <a href="#" class="num">+1 925 478 8058</a>
+                                            </li>
+                                            <li>
+                                                <span>Angleton, TX</span>
+                                                <a href="#" class="num">+1 713 260 4050</a>
+                                            </li>
+                                            <li>
+                                                <span>Denver, CO</span>
+                                                <a href="#" class="num">+1 720 789 7570</a>
+                                            </li>
+                                            <li>
+                                                <span>Denver, CO</span>
+                                                <a href="#" class="num">+1 720 789 7570</a>
+                                            </li>
+                                        </ul>
                                     </div>
                                 </div>
                             </div>
                         </div>
+       
+                        <div class="row compressed row-no-padding" eq-height>
+                            <div class="col-md-4 col-sm-12 col-xs-12" eq-col>
+                                <!-- Feature CTA Bottom -->
+                                <?php 
+                                    $feature_id1 = get_field('any_feature_bottom'); 
+                                    
+                                    if($feature_id1) {
+                                        echo blpc_content_feature_right($feature_id1); 
+                                    }
+
+                                ?>
+                            </div>
+                            <div class="col-md-4 col-sm-12 col-xs-12" eq-col>
+                            
+                            <!-- News List -->
+                            <?php echo blpc_home_news_list(); ?>
+
+                            </div> 
+                            <div class="col-md-4 col-sm-12 col-xs-12" eq-col>
+                                <div class="image-cta resource-center">
+                                    
+                                    
+                                    <div class="img-content"> <img alt="B&L Pipeco" data-src=">0:http://placehold.it/570x300" /> </div>
+                                    <div class="txt-content">
+                                        <h4>Resource Center</h4>
+                                        <p>Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat.</p>
+                                    </div>
+                            
+
+                                </div>
+                            </div>     
+                        </div>  
+
                     </div>
                 </div>
             </div>
         </div>
     </div>
+
     <!-- ******************************************************* -->
     <!-- Tertiary Content -->
     <!-- ******************************************************* -->
@@ -121,35 +237,7 @@ get_header(); ?>
             <div class="row compressed">
                 <div class="col-md-12">
                     <div class="container-fluid no-padding">
-                        <div class="row compressed row-no-padding" eq-height>
-                            <div class="col-md-4 col-sm-12 col-xs-12" eq-col>
-                                <div class="image-cta slateblue2 fh">
-                                    <!-- Feature CTA Bottom -->
-                                    <?php 
-                                        $feature_id1 = get_field('any_feature_bottom'); 
-                                        
-                                        if($feature_id1) {
-                                            echo blpc_content_feature_right($feature_id1); 
-                                        }
-
-                                    ?>
-
-                                </div>
-                            </div>
-                            <div class="col-md-4 col-sm-12 col-xs-12" eq-col>
-                                <!-- News List -->
-                                <?php echo blpc_home_news_list(); ?>
-                            </div>
-                            <div class="col-md-4 col-sm-12 col-xs-12" eq-col>
-                                <div class="image-cta resource-center">
-                                    <div class="img-content"> <img alt="B&L Pipeco" data-src=">0:http://placehold.it/570x300" /> </div>
-                                    <div class="txt-content">
-                                        <h4>Resource Center</h4>
-                                        <p>Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat.</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+                    
                         <div class="row compressed row-no-padding" eq-height>
                             <div class="logo-row" eq-height>
                                 <div class="row compressed grey7">

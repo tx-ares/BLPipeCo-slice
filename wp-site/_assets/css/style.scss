@@ -4443,9 +4443,11 @@ footer {
 
     .sub-text {
         color: $colorWhite; // font-size: 1.285rem;
+        margin-bottom: 1.375rem;
         @include max-screen($lg) {
             // padding: 0 8px;
-            font-size: 1.085rem;
+            @include font-size(16px);
+            
         }
     }
 
@@ -4461,24 +4463,24 @@ footer {
         >[class*="col-"]:nth-child(1) {
             padding: 0 35px;
             .num {
-                padding-top: 15px;
+                // padding-top: 15px;
                 min-width: 150px;
-                @include font-size(36px);
+                @include font-size(40px);
 
                 @include max-screen($xxlg) {
-                    @include font-size(30px);
+                    @include font-size(36px);
                 }
                 @include max-screen($xlg) {
-                    @include font-size(24px);
-                }
-                @include max-screen($md) {
-                    @include font-size(20px);
-                }
-                @include max-screen($smd) {
                     @include font-size(30px);
                 }
+                @include max-screen($md) {
+                    @include font-size(24px);
+                }
+                @include max-screen($smd) {
+                    @include font-size(36px);
+                }
                 @include max-screen($sm) {
-                    @include font-size(20px);
+                    @include font-size(24px);
                 }
             }
         }

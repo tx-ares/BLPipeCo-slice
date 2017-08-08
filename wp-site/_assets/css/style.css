@@ -3053,10 +3053,12 @@ footer {
       color: #00263b;
       letter-spacing: 2px; }
   .send-request .sub-text {
-    color: #fff; }
+    color: #fff;
+    margin-bottom: 1.375rem; }
     @media only screen and (max-width: 1024px) {
       .send-request .sub-text {
-        font-size: 1.085rem; } }
+        font-size: 16px;
+        font-size: 1rem; } }
   .send-request .row {
     text-align: center;
     margin: 0;
@@ -3067,30 +3069,29 @@ footer {
     .send-request .row > [class*="col-"]:nth-child(1) {
       padding: 0 35px; }
       .send-request .row > [class*="col-"]:nth-child(1) .num {
-        padding-top: 15px;
         min-width: 150px;
-        font-size: 36px;
-        font-size: 2.25rem; }
+        font-size: 40px;
+        font-size: 2.5rem; }
         @media only screen and (max-width: 1440px) {
+          .send-request .row > [class*="col-"]:nth-child(1) .num {
+            font-size: 36px;
+            font-size: 2.25rem; } }
+        @media only screen and (max-width: 1280px) {
           .send-request .row > [class*="col-"]:nth-child(1) .num {
             font-size: 30px;
             font-size: 1.875rem; } }
-        @media only screen and (max-width: 1280px) {
+        @media only screen and (max-width: 992px) {
           .send-request .row > [class*="col-"]:nth-child(1) .num {
             font-size: 24px;
             font-size: 1.5rem; } }
-        @media only screen and (max-width: 992px) {
-          .send-request .row > [class*="col-"]:nth-child(1) .num {
-            font-size: 20px;
-            font-size: 1.25rem; } }
         @media only screen and (max-width: 865px) {
           .send-request .row > [class*="col-"]:nth-child(1) .num {
-            font-size: 30px;
-            font-size: 1.875rem; } }
+            font-size: 36px;
+            font-size: 2.25rem; } }
         @media only screen and (max-width: 575px) {
           .send-request .row > [class*="col-"]:nth-child(1) .num {
-            font-size: 20px;
-            font-size: 1.25rem; } }
+            font-size: 24px;
+            font-size: 1.5rem; } }
     .send-request .row > [class*="col-"]:nth-child(2) {
       border-left: solid 2px #dbd8cf;
       border-right: solid 2px #fff; }
