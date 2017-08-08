@@ -3974,83 +3974,83 @@ footer {
 
     .secondary {
         margin-top: -7px;
-        .image-cta.resource-center {
-            .txt-content {
-                position: absolute;
-                background: $colorBrightRed2;
-                bottom: 105px;
-                left: 0;
-                width: 80%;
-                h4 {
-                    text-transform: uppercase;
-                    font-weight: 500;
-                    font-size: 24px;
-                    @include font-size(24px);
-                    color: $colorWhite;
-                }
+        // .image-cta.resource-center {
+        //     .txt-content {
+        //         position: absolute;
+        //         background: $colorBrightRed2;
+        //         bottom: 105px;
+        //         left: 0;
+        //         width: 80%;
+        //         h4 {
+        //             text-transform: uppercase;
+        //             font-weight: 500;
+        //             font-size: 24px;
+        //             @include font-size(24px);
+        //             color: $colorWhite;
+        //         }
 
-                @include max-screen($sm) {
-                    position: relative;
-                    background: $colorBrightRed2;
-                    bottom: initial;
-                    left: initial;
-                    width: initial;
-                }
-                &:after {
-                    content: "\f0da";
-                    font-family: FontAwesome;
-                    position: absolute;
-                    right: 0;
-                    bottom: 50px;
-                    height: 53px;
-                    width: 53px;
-                    padding: 6px 22px;
-                    @include max-screen($sm) {
-                        content: "";
-                    }
-                }
-            }
-        }
+        //         @include max-screen($sm) {
+        //             position: relative;
+        //             background: $colorBrightRed2;
+        //             bottom: initial;
+        //             left: initial;
+        //             width: initial;
+        //         }
+        //         &:after {
+        //             content: "\f0da";
+        //             font-family: FontAwesome;
+        //             position: absolute;
+        //             right: 0;
+        //             bottom: 50px;
+        //             height: 53px;
+        //             width: 53px;
+        //             padding: 6px 22px;
+        //             @include max-screen($sm) {
+        //                 content: "";
+        //             }
+        //         }
+        //     }
+        // }
     }
 
     .tertiary {
-        .image-cta.resource-center {
-            .txt-content {
-                position: absolute;
-                background: $colorBrightRed2;
-                bottom: 105px;
-                left: 0;
-                width: 80%;
-                h4 {
-                    text-transform: uppercase;
-                    font-weight: 500;
-                    font-size: 24px;
-                    @include font-size(24px);
-                    color: $colorWhite;
-                }
+        // .image-cta.resource-center {
+        //     .txt-content {
+        //         position: absolute;
+        //         background: $colorBrightRed2;
+        //         bottom: 105px;
+        //         left: 0;
+        //         width: 80%;
+        //         h4 {
+        //             text-transform: uppercase;
+        //             font-weight: 500;
+        //             font-size: 24px;
+        //             @include font-size(24px);
+        //             color: $colorWhite;
+        //         }
 
-                @include max-screen($sm) {
-                    position: relative;
-                    background: $colorBrightRed2;
-                    bottom: initial;
-                    left: initial;
-                    width: initial;
-                }
-                &:after {
-                    content: "\f0da";
-                    font-family: FontAwesome;
-                    position: absolute;
-                    right: 0;
-                    bottom: 50px;
-                    height: 53px;
-                    width: 53px;
-                    padding: 6px 22px;
-                    @include max-screen($sm) {
-                        content: "";
-                    }
-                }
-            }
-        }
+        //         @include max-screen($sm) {
+        //             position: relative;
+        //             background: $colorBrightRed2;
+        //             bottom: initial;
+        //             left: initial;
+        //             width: initial;
+        //         }
+        //         &:after {
+        //             content: "\f0da";
+        //             font-family: FontAwesome;
+        //             position: absolute;
+        //             right: 0;
+        //             bottom: 50px;
+        //             height: 53px;
+        //             width: 53px;
+        //             padding: 6px 22px;
+        //             @include max-screen($sm) {
+        //                 content: "";
+        //             }
+        //         }
+        //     }
+        // }
     }
 
     @include max-screen($lg) {
@@ -5247,6 +5247,51 @@ footer {
 
     &.white {
         background: $colorWhite;
+    }
+
+    &.resource-center {
+        &:hover {
+            .txt-content {
+                background: $colorSlateBlue2;
+            }
+        }
+        .txt-content {
+            @include transition (background .3s);
+            position: absolute;
+            background: $colorBrightRed2;
+            bottom: 105px;
+            left: 0;
+            width: 80%;
+            margin-bottom: 0;
+            h4 {
+                text-transform: uppercase;
+                font-weight: 500;
+                font-size: 24px;
+                @include font-size(24px);
+                color: $colorWhite;
+            }
+
+            @include max-screen($sm) {
+                position: relative;
+                background: $colorBrightRed2;
+                bottom: initial;
+                left: initial;
+                width: initial;
+            }
+            &:after {
+                content: "\f0da";
+                font-family: FontAwesome;
+                position: absolute;
+                right: 0;
+                bottom: 50px;
+                height: 53px;
+                width: 53px;
+                padding: 6px 22px;
+                @include max-screen($sm) {
+                    content: "";
+                }
+            }
+        }
     }
 }
 
