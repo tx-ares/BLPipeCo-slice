@@ -5864,17 +5864,10 @@ footer {
                         .slide-content {
                             float: none;
                             margin: auto;
-
+                            @include max-screen ($sm) {
+                                float: left;
+                            }
                         }
-                    }
-
-                    @include max-screen ($sm) {
-                        -webkit-transform: translate3d(0,0,0) !important;
-                        -moz-transform: translate3d(0,0,0) !important;
-                        -ms-transform: translate3d(0,0,0) !important;
-                        -o-transform: translate3d(0,0,0) !important;
-                        transform: translate3d(0,0,0) !important;
-                        width: 100% !important;
                     }
 
                 }
@@ -5949,10 +5942,6 @@ footer {
         }
 
         .slick-slide {
-
-            &:hover {
-                background: $colorBrightRed3;
-            }
             h3 {
                 color: $colorWhite;
             }
@@ -5982,7 +5971,20 @@ footer {
                 width: 100%;
                 min-width: auto;
                 display: inline-block; // opacity: 1;
-                visibility: visible;    
+                visibility: visible;
+                .slick-slide {
+
+                    &:hover {
+                        background: $colorBrightRed3;
+                    }
+       
+                    h3 {
+                        color: $colorWhite;
+                    }
+                    p.details {
+                        color: $colorWhite !important;
+                    }
+                }    
             }
 
             .txt-content,
