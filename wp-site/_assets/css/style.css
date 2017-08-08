@@ -2381,6 +2381,9 @@ footer {
       @media only screen and (max-width: 1024px) {
         .header-compressed header .logo img {
           margin-top: 5px; } }
+      @media only screen and (max-width: 575px) {
+        .header-compressed header .logo img {
+          margin-left: 10px; } }
   .header-compressed header .slogan {
     display: inline-block;
     float: left;

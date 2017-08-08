@@ -45,9 +45,6 @@ $full: 1960px;
 
 
 
-
-
-
 /* Base Accent Colors */
 
 $colorWhite: #fff;
@@ -82,9 +79,6 @@ $font-icon:'FontAwesome';
 
 
 
-
-
-
 /* Extended Classes */
 
 .nowrap {
@@ -110,8 +104,6 @@ $font-icon:'FontAwesome';
 
 
 
-
-
 /* Accessibility */
 
 .accessibility {
@@ -131,9 +123,6 @@ $font-icon:'FontAwesome';
 
 
 
-
-
-
 /* ==========================================================================
 
     2. BASE STYLES
@@ -147,9 +136,6 @@ _:-ms-fullscreen,
  :root {
     /* insert rule here */
 }
-
-
-
 
 
 
@@ -3437,6 +3423,10 @@ footer {
                 height: 50px!important;
                 @include max-screen($lg) {
                     margin-top: 5px;
+                }
+
+                @include max-screen($sm) {
+                    margin-left: 10px;
                 }
 
                 @include transition(all .3s);
