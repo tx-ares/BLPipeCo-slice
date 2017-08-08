@@ -4428,6 +4428,8 @@ footer {
     @include transition(all .3s);
 
     .call-us {
+        text-align: left; 
+
         .h3 {
             font-weight: 500;
             @include font-size(30px);
@@ -4435,9 +4437,9 @@ footer {
             color: $colorDarkBlue;
             letter-spacing: 2px;
         }
-        text-align: left; 
         @include max-screen($md) {
-            // padding: 0 15px;
+            padding: 0 15px;
+            text-align: center;
         }
     }
 
