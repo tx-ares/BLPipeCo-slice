@@ -5788,6 +5788,10 @@ footer {
     .panel-label {
         overflow: hidden;
         display: inline-block;
+         @include max-screen ($sm) {
+            visibility: hidden !important;
+            opacity: 0 !important;
+        }
     }
     .fa-spin {
         position: absolute;
@@ -5806,6 +5810,7 @@ footer {
         width: 50%;
         padding: 0 25px !important;
         @include transition(all .3s);
+       
         @include max-screen($md) {
             padding: 0 !important;
         }
@@ -5826,6 +5831,11 @@ footer {
                 height: 0;
                 opacity: 0;
                 visibility: hidden;
+
+                @include max-screen ($sm) {
+                    visibility: visible !important;
+                    opacity: 1 !important;
+                }
 
                 .slick-next,
                 .slick-prev {
@@ -5850,6 +5860,21 @@ footer {
                         -ms-transform: translate3d(0,0,0) !important;
                         -o-transform: translate3d(0,0,0) !important;
                         transform: translate3d(0,0,0) !important;
+                        width: 100% !important;
+                        .slide-content {
+                            float: none;
+                            margin: auto;
+
+                        }
+                    }
+
+                    @include max-screen ($sm) {
+                        -webkit-transform: translate3d(0,0,0) !important;
+                        -moz-transform: translate3d(0,0,0) !important;
+                        -ms-transform: translate3d(0,0,0) !important;
+                        -o-transform: translate3d(0,0,0) !important;
+                        transform: translate3d(0,0,0) !important;
+                        width: 100% !important;
                     }
 
                 }
@@ -5873,7 +5898,7 @@ footer {
                     @include transition(all .3s);
 
                     @include max-screen($md) {
-                        padding: 60px 100px;
+                        // padding: 60px 100px;
                     }
                     @include max-screen($sm) {
                         padding: 60px 40px;
@@ -5900,7 +5925,7 @@ footer {
         color: $colorWhite;
         .panel-title {
             position: absolute;
-            right: -20px;
+            right: 0;
             text-transform: uppercase;
             font-weight: 500;
             opacity: 0;
@@ -5912,10 +5937,27 @@ footer {
                 width: 100%;
                 right: unset; // @include font-size(24px);
             }
+
+            @include max-screen($sm) {
+                opacity: 1;
+            }
             &:after {
                 content: '\f0d7';
                 font-family: $font-icon;
                 padding-left: 5px;
+            }
+        }
+
+        .slick-slide {
+
+            &:hover {
+                background: $colorBrightRed3;
+            }
+            h3 {
+                color: $colorWhite;
+            }
+            p.details {
+                color: $colorWhite !important;
             }
         }
 
@@ -5925,7 +5967,7 @@ footer {
                 text-transform: uppercase;
                 font-weight: 500;
                 opacity: 1;
-                right: 7%;
+                // right: 7%;
                 @include max-screen($sm) {
                     right: unset;
                 }
@@ -5940,20 +5982,7 @@ footer {
                 width: 100%;
                 min-width: auto;
                 display: inline-block; // opacity: 1;
-                visibility: visible;
-
-                .slick-slide {
-
-                    &:hover {
-                        background: $colorBrightRed3;
-                    }
-                    h3 {
-                        color: $colorWhite;
-                    }
-                    p.details {
-                        color: $colorWhite;
-                    }
-                }
+                visibility: visible;    
             }
 
             .txt-content,
@@ -6047,15 +6076,28 @@ footer {
             position: absolute;
             left: 10px;
             top: 45%;
-            @include max-screen($smd) {
-                left: initial;
-                right: 50px;
-                content: '\f0da';
-                top: 45%;
-            }
+            // @include max-screen($smd) {
+            //     left: initial;
+            //     right: 50px;
+            //     content: '\f0da';
+            //     top: 45%;
+            // }
             @include max-screen($sm) {
                 right: 0;
                 padding-right: 15px;
+
+                display: none;
+            }
+        }
+
+        @include max-screen($xmd) {
+            .txt-content {
+                right: -10%;
+                padding-left: 25px;
+            }
+            h2.text-flip {
+                left: 20%;
+                text-align: center;
             }
         }
 
@@ -6085,7 +6127,7 @@ footer {
         background: $colorLightGrey7;
         .panel-title {
             position: absolute;
-            left: -20px;
+            left: 0;
             text-transform: uppercase;
             font-weight: 500;
             opacity: 0;
@@ -6097,6 +6139,9 @@ footer {
                 text-align: center;
                 width: 100%;
                 left: unset; // @include font-size(20px);
+            }
+            @include max-screen($sm) {
+                opacity: 1;
             }
             &:after {
                 content: '\f0d7';
@@ -6111,7 +6156,7 @@ footer {
                 text-transform: uppercase;
                 font-weight: 500;
                 opacity: 1;
-                left: 7%;
+                // left: 7%;
                 @include max-screen($sm) {
                     left: unset;
                 }
@@ -6144,18 +6189,7 @@ footer {
             &:after {
                 content: "";
             }
-            img.a-right.control-c.next.slick-next.slick-arrow {
-                right: -135px;
-                @include max-screen($xlg) {
-                    right: -120px;
-                }
-                @include max-screen($md) {
-                    right: -75px;
-                }
-                @include max-screen($sm) {
-                    right: -45px;
-                }
-            }
+            
         }
         &.compressed {
             width: 9%;
@@ -6182,6 +6216,19 @@ footer {
             //     margin: 0 auto;
             // }
         }
+
+        img.a-right.control-c.next.slick-next.slick-arrow {
+                right: -135px;
+                @include max-screen($xlg) {
+                    right: -120px;
+                }
+                @include max-screen($md) {
+                    right: -75px;
+                }
+                @include max-screen($sm) {
+                    right: -45px;
+                }
+            }
 
         @include max-screen($sm) {
             display: block;
@@ -6251,13 +6298,16 @@ footer {
             position: absolute;
             right: 10px;
             top: 45%;
-            @include max-screen($smd) {
-                right: 50px;
-            }
+            // @include max-screen($smd) {
+            //     right: 50px;
+            // }
             @include max-screen($sm) {
                 top: 45%;
                 right: 0;
                 padding-right: 15px;
+
+                display: none;
+                
             }
         }
 
