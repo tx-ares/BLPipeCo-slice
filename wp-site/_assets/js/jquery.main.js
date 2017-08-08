@@ -488,7 +488,7 @@ function initSlidePanels() {
 		$(activeSlider).show();
 		$(activeSlider).css("opacity" , 1);
 
-		if (!window.matchMedia('only screen and (max-width: 865px)').matches) {
+		if (!window.matchMedia('only screen and (max-width: 575px)').matches) {
 			$(this).hasClass("compressed") ? $(this).toggleClass("compressed") : "";
 			$(this).hasClass("vertical-text") ? $(this).toggleClass("vertical-text") : "";
 			$("h2.text-flip").addClass("vertical-text");
@@ -515,7 +515,7 @@ function initSlidePanels() {
 		$(activeSlider).show();
 		$(activeSlider).css("opacity" , 1);
 
-		if (!window.matchMedia('only screen and (max-width: 865px)').matches) {
+		if (!window.matchMedia('only screen and (max-width: 575px)').matches) {
 			$(this).hasClass("compressed") ? $(this).toggleClass("compressed") : "";
 			$(this).hasClass("vertical-text") ? $(this).toggleClass("vertical-text") : "";
 			$("h2.text-flip").addClass("vertical-text");

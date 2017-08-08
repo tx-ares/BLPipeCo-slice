@@ -5918,17 +5918,7 @@ footer {
                 padding-left: 5px;
             }
         }
-        @include max-screen($smd) {
-            display: block;
-            width: 100%;
-            .txt-content {
-                right: 15%
-            }
-            h2.text-flip {
-                right: 25%;
-                text-align: center;
-            }
-        }
+
         &.active {
             width: 91%;
             .panel-title {
@@ -5936,11 +5926,11 @@ footer {
                 font-weight: 500;
                 opacity: 1;
                 right: 7%;
-                @include max-screen($smd) {
+                @include max-screen($sm) {
                     right: unset;
                 }
             }
-            @include max-screen($smd) {
+            @include max-screen($sm) {
                 width: 100%;
             }
             h2.text-upcase.text-flip {
@@ -6002,7 +5992,7 @@ footer {
         }
         &.compressed {
             width: 8%;
-            @include max-screen($smd) {
+            @include max-screen($sm) {
                 width: 100%;
             }
             .txt-content {
@@ -6029,8 +6019,6 @@ footer {
                 padding: 0 20px;
             }
         }
-
-
         h2.text-flip {
             color: $colorWhite;
             text-transform: inherit;
@@ -6061,7 +6049,6 @@ footer {
                 @include transform(rotate(90deg));
             }
         }
-
         &:before {
             content: '\f0d9';
             font-family: $font-icon;
@@ -6077,6 +6064,18 @@ footer {
             @include max-screen($sm) {
                 right: 0;
                 padding-right: 15px;
+            }
+        }
+
+        @include max-screen($sm) {
+            display: block;
+            width: 100%;
+            .txt-content {
+                right: 15%
+            }
+            h2.text-flip {
+                right: 25%;
+                text-align: center;
             }
         }
     }
@@ -6103,10 +6102,7 @@ footer {
                 padding-left: 5px;
             }
         }
-        @include max-screen($smd) {
-            display: block;
-            width: 100%;
-        }
+
         &.active {
             width: 91%;
             .panel-title {
@@ -6114,11 +6110,11 @@ footer {
                 font-weight: 500;
                 opacity: 1;
                 left: 7%;
-                @include max-screen($smd) {
+                @include max-screen($sm) {
                     left: unset;
                 }
             }
-            @include max-screen($smd) {
+            @include max-screen($sm) {
                 width: 100%;
                 h2.text-upcase.text-flip {
                     opacity: 0;
@@ -6161,7 +6157,7 @@ footer {
         }
         &.compressed {
             width: 8%;
-            @include max-screen($smd) {
+            @include max-screen($sm) {
                 width: 100%;
             }
             .txt-content {
@@ -6184,9 +6180,12 @@ footer {
                 margin: 0 auto;
             }
         }
-        @include max-screen($smd) {
+
+        @include max-screen($sm) {
             display: block;
             width: 100%;
+        }
+        @include max-screen($smd) {
             .txt-content {
                 right: 30%;
             }

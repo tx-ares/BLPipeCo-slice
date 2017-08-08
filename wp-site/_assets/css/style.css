@@ -4046,15 +4046,6 @@ footer {
         content: '\f0d7';
         font-family: "FontAwesome";
         padding-left: 5px; }
-    @media only screen and (max-width: 865px) {
-      .feature-slide-box .slide-over-right {
-        display: block;
-        width: 100%; }
-        .feature-slide-box .slide-over-right .txt-content {
-          right: 15%; }
-        .feature-slide-box .slide-over-right h2.text-flip {
-          right: 25%;
-          text-align: center; } }
     .feature-slide-box .slide-over-right.active {
       width: 91%; }
       .feature-slide-box .slide-over-right.active .panel-title {
@@ -4062,10 +4053,10 @@ footer {
         font-weight: 500;
         opacity: 1;
         right: 7%; }
-        @media only screen and (max-width: 865px) {
+        @media only screen and (max-width: 575px) {
           .feature-slide-box .slide-over-right.active .panel-title {
             right: unset; } }
-      @media only screen and (max-width: 865px) {
+      @media only screen and (max-width: 575px) {
         .feature-slide-box .slide-over-right.active {
           width: 100%; } }
       .feature-slide-box .slide-over-right.active h2.text-upcase.text-flip {
@@ -4107,7 +4098,7 @@ footer {
             right: -45px; } }
     .feature-slide-box .slide-over-right.compressed {
       width: 8%; }
-      @media only screen and (max-width: 865px) {
+      @media only screen and (max-width: 575px) {
         .feature-slide-box .slide-over-right.compressed {
           width: 100%; } }
       .feature-slide-box .slide-over-right.compressed .txt-content {
@@ -4185,6 +4176,15 @@ footer {
         .feature-slide-box .slide-over-right:before {
           right: 0;
           padding-right: 15px; } }
+    @media only screen and (max-width: 575px) {
+      .feature-slide-box .slide-over-right {
+        display: block;
+        width: 100%; }
+        .feature-slide-box .slide-over-right .txt-content {
+          right: 15%; }
+        .feature-slide-box .slide-over-right h2.text-flip {
+          right: 25%;
+          text-align: center; } }
   .feature-slide-box .slide-over-left {
     background: #e2eaed; }
     .feature-slide-box .slide-over-left .panel-title {
@@ -4209,10 +4209,6 @@ footer {
         content: '\f0d7';
         font-family: "FontAwesome";
         padding-left: 5px; }
-    @media only screen and (max-width: 865px) {
-      .feature-slide-box .slide-over-left {
-        display: block;
-        width: 100%; } }
     .feature-slide-box .slide-over-left.active {
       width: 91%; }
       .feature-slide-box .slide-over-left.active .panel-title {
@@ -4220,10 +4216,10 @@ footer {
         font-weight: 500;
         opacity: 1;
         left: 7%; }
-        @media only screen and (max-width: 865px) {
+        @media only screen and (max-width: 575px) {
           .feature-slide-box .slide-over-left.active .panel-title {
             left: unset; } }
-      @media only screen and (max-width: 865px) {
+      @media only screen and (max-width: 575px) {
         .feature-slide-box .slide-over-left.active {
           width: 100%; }
           .feature-slide-box .slide-over-left.active h2.text-upcase.text-flip {
@@ -4259,7 +4255,7 @@ footer {
             right: -45px; } }
     .feature-slide-box .slide-over-left.compressed {
       width: 8%; }
-      @media only screen and (max-width: 865px) {
+      @media only screen and (max-width: 575px) {
         .feature-slide-box .slide-over-left.compressed {
           width: 100%; } }
       .feature-slide-box .slide-over-left.compressed .txt-content {
@@ -4281,15 +4277,16 @@ footer {
       @media only screen and (max-width: 865px) {
         .feature-slide-box .slide-over-left .txt-content {
           margin: 0 auto; } }
-    @media only screen and (max-width: 865px) {
+    @media only screen and (max-width: 575px) {
       .feature-slide-box .slide-over-left {
         display: block;
-        width: 100%; }
-        .feature-slide-box .slide-over-left .txt-content {
-          right: 30%; }
-        .feature-slide-box .slide-over-left h2.text-flip {
-          right: 35%;
-          text-align: center; } }
+        width: 100%; } }
+    @media only screen and (max-width: 865px) {
+      .feature-slide-box .slide-over-left .txt-content {
+        right: 30%; }
+      .feature-slide-box .slide-over-left h2.text-flip {
+        right: 35%;
+        text-align: center; } }
     @media only screen and (max-width: 768px) {
       .feature-slide-box .slide-over-left .txt-content {
         right: 20%; }
