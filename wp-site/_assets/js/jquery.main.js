@@ -455,7 +455,8 @@ function initHideElementsIfHomePageTop() {
 	}
 }
 
-function resetPanels() {
+function resetPanels() { //Resets Blue and Red Panels to neutral state.
+	
 	$(".panel").each(function(){
 		$(this).removeClass("active compressed");
 	})
@@ -484,27 +485,35 @@ function initSlidePanels() {
 
 	$(".slide-over-left").on("click", function(e){
 		e.stopPropagation();
-		var activeSlider = $(".panel.active").find(".panel-slider");
-		$(activeSlider).show();
-		$(activeSlider).css("opacity" , 1);
+		//Grab Carousel
+		var activeCarousel = $(".panel.active").find(".panel-slider");
 
+		//Show Carousel
+		$(activeCarousel).show();
+		$(activeCarousel).css("opacity" , 1);
+
+		//Text Flipping Animation for Opposite Panel * Animation not on Mobile *
 		if (!window.matchMedia('only screen and (max-width: 575px)').matches) {
 			$(this).hasClass("compressed") ? $(this).toggleClass("compressed") : "";
 			$(this).hasClass("vertical-text") ? $(this).toggleClass("vertical-text") : "";
 			$("h2.text-flip").addClass("vertical-text");
 			setTimeout(function(){$(this).find(".txt-content").hide()}, 1000);
 			$(".slide-over-right").addClass("compressed");
-			// $(this).find($(".txt-content")).each(function(){ $(this).removeClass("animated fadeOut")});
 		}
+
+		//Adding styles to Activated Panel ( Blue Side )
 		$(this).addClass("active");
 		var activePanel = $(this);
 
+		//Removing Styles to De-activated Panel ( Blue Side )
 		$(".slide-over-right").removeClass("active");
 		var deactivatedSlider = $(".panel:not(.active)").find(".panel-slider");
 		$(deactivatedSlider).css("opacity" , 0).removeClass("loaded");
 
+		//Hide Icons while Panel is active
 		$(".social-media-icons").addClass("hidden");
 
+		//Simulate loading, to give carousel time to fix slide widths. * Animation not on Mobile *
 		if (!window.matchMedia('only screen and (max-width: 575px)').matches) {
 			delayedLoad(activePanel);
 		}
@@ -512,28 +521,35 @@ function initSlidePanels() {
 
 	$(".slide-over-right").on("click", function(e){
 		e.stopPropagation();
-		var activeSlider = $(".panel.active").find(".panel-slider");
+		//Grab Carousel
+		var activeCarousel = $(".panel.active").find(".panel-slider");
 
-		$(activeSlider).show();
-		$(activeSlider).css("opacity" , 1);
+		//Show Carousel
+		$(activeCarousel).show();
+		$(activeCarousel).css("opacity" , 1);
 
+		//Text Flipping Animation for Opposite Panel * Animation not on Mobile *
 		if (!window.matchMedia('only screen and (max-width: 575px)').matches) {
 			$(this).hasClass("compressed") ? $(this).toggleClass("compressed") : "";
 			$(this).hasClass("vertical-text") ? $(this).toggleClass("vertical-text") : "";
 			$("h2.text-flip").addClass("vertical-text");
 			setTimeout(function(){$(this).find(".txt-content").hide()}, 1000);
 			$(".slide-over-left").addClass("compressed");
-			// $(this).find($(".txt-content")).each(function(){ $(this).removeClass("animated fadeOut")});
 		}
+
+		//Adding styles to Activated Panel ( Red Side )
 		$(this).addClass("active");
 		var activePanel = $(this);
 
+		//Removing Styles to De-activated Panel ( Blue Side )
 		$(".slide-over-left").removeClass("active");
 		var deactivatedSlider = $(".panel:not(.active)").find(".panel-slider");
 		$(deactivatedSlider).css("opacity" , 0).removeClass("loaded");
 
+		//Hide Icons while Panel is active
 		$(".social-media-icons").addClass("hidden");
 
+		//Simulate loading to give carousel time to fix slide widths. * Animation not on Mobile *
 		if (!window.matchMedia('only screen and (max-width: 575px)').matches) {
 			delayedLoad(activePanel);
 		}
@@ -546,27 +562,28 @@ function initSlidePanels() {
 	});
 }
 
-function delayedLoad(activePanel) {
-	var activeSlider = $(".panel.active").find(".panel-slider");
-		slides = activeSlider[0].childElementCount;
+function delayedLoad(activePanel) { //Creates simulated loading of carousel and fixes slider width bug.
+	
+	var activeCarousel = $(".panel.active").find(".panel-slider");
+		slides = activeCarousel[0].childElementCount;
 
 	$("body").addClass("no-scroll-x");  
 
-	if(!$(activeSlider).hasClass("loaded")) {	
+	if(!$(activeCarousel).hasClass("loaded")) {	
 		$(activePanel).find(".fa-spin").css("opacity" , 1);
-		$(activeSlider).css("opacity", 0);
+		$(activeCarousel).css("opacity", 0);
 		setTimeout(function(){
 			$(activePanel).find(".fa-spin").css("opacity" , 0);
-			$(activeSlider).css("opacity", 1);
+			$(activeCarousel).css("opacity", 1);
 		} , 500);
-		$(activeSlider).slick("slickNext");
-		$(activeSlider).addClass("loaded");
+		$(activeCarousel).slick("slickNext");
+		$(activeCarousel).addClass("loaded");
 
-		if(slides < 3) {
+		if(slides < 3) { 
+			//Centers the slide if there aren't enough to utilize a Carousel
 			console.log("Not enough Slides, locking track!")
-			var activeTrack = activeSlider.find(".slick-track");
-			// console.log(activeTrack, " << track")
-			activeTrack.addClass("no-transform");
+			var activeTrack = activeCarousel.find(".slick-track");
+				activeTrack.addClass("no-transform");
 		}
 
 
@@ -744,11 +761,12 @@ function isScrolledIntoView(elem)
     return ((elemBottom <= docViewBottom) && (elemTop >= docViewTop));
 }
 
-function initAnimateWhenInView() {
-	var logoRow = $(".logo-row");
-	var staticSlideRow = $(".static-slides");
+function initAnimateWhenInView() { //Animations when a certain element is scrolled into view.
 
-	if($("body").hasClass("landing")) {
+	var logoRow = $(".logo-row");
+		staticSlideRow = $(".static-slides");
+
+	if($("body").hasClass("landing")) { //Pulsing animation for Logo row on landing pages.
 		$(window).scroll(function(){
 
 			if(isScrolledIntoView(logoRow) == true) {
@@ -758,7 +776,7 @@ function initAnimateWhenInView() {
 					})
 			}
 
-			if(isScrolledIntoView(staticSlideRow) == true) {
+			if(isScrolledIntoView(staticSlideRow) == true) { //Bounce in left animations for Product Icons on landing pages.
 				var delayedTimer = 0;
 
 				staticSlideRow.find("div.slide-content").each(
@@ -846,7 +864,7 @@ function initBioBoxes() {
 }
 
 function resetBios(){
-	console.log("<< Resetting bioBox v6 - Comparing JS .animate() >>")
+	// console.log("<< Resetting bioBox v6 - Comparing JS .animate() >>")
 		var $bioBox = $(".photo-item").find(".bioBox");
 			$bioBoxParent = $bioBox.parent();
 			$parentAndSiblings = $bioBoxParent.siblings().andSelf();

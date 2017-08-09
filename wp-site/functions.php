@@ -539,22 +539,21 @@ function blpc_logo_carousel() {
 		$image_bw = get_field('carousel_image_bw', $page->ID);
 
 		$string .= '<div class="slick-slide" eq-col>  
-		                    <div class="slide-content" eq-col>
-		                    		<div class="logo-wrap">
-		                       <a href="'.get_post_permalink( $page->ID ).'" class="logo-box">
+	                    <div class="slide-content" eq-col>
+	                    		<div class="logo-wrap">
+	                       <a href="'.get_post_permalink( $page->ID ).'" class="logo-box">
 
-		                        <img src="'.$image_color['url'].'" alt="'.$image_color['alt'].'" class="icon color" />';
-		                        if ($image_bw) {			
-	                                $string .= '<img src="'.$image_bw['url'].'" alt="'.$image_bw['alt'].'" class="icon bw" />';
-                                }
+	                        <img src="'.$image_color['url'].'" alt="'.$image_color['alt'].'" class="icon color" />';
+	                        if ($image_bw) {			
+                                $string .= '<img src="'.$image_bw['url'].'" alt="'.$image_bw['alt'].'" class="icon bw" />';
+                            }
 
-                                
-	                                $string .= '  </a> 
-	                                				</div>          
-							                    
-							                    </div>	
-						                	</div>';
-                				
+                            
+                            $string .= '  </a> 
+                            				</div>          
+					                    
+					                    </div>	
+				                	</div>';          				
 	}
 	echo $string;
 }												
