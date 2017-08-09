@@ -341,8 +341,7 @@ ul.list-with-logos {
         margin-top: 10%; } }
     @media only screen and (max-width: 575px) {
       ul.list-with-logos .logo-container {
-        width: 80%;
-        margin-top: 25%; } }
+        width: 80%; } }
   ul.list-with-logos li {
     position: relative;
     padding-left: 20px;

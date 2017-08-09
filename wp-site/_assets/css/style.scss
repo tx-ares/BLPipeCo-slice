@@ -5,9 +5,6 @@
 }
 
 
-
-
-
 /*Temporary Disable while under Development */
 
 
@@ -15,6 +12,7 @@
 
 @import "_mixin.mediaqueries";
 @import "_mixin.toolbox";
+
 
 
 
@@ -44,6 +42,7 @@ $lg: 1024px;
 $xlg: 1280px;
 $xxlg: 1440px;
 $full: 1960px;
+
 
 
 
@@ -83,6 +82,7 @@ $font-icon:'FontAwesome';
 
 
 
+
 /* Extended Classes */
 
 .nowrap {
@@ -109,6 +109,7 @@ $font-icon:'FontAwesome';
 
 
 
+
 /* Accessibility */
 
 .accessibility {
@@ -129,6 +130,7 @@ $font-icon:'FontAwesome';
 
 
 
+
 /* ==========================================================================
 
     2. BASE STYLES
@@ -142,6 +144,7 @@ _:-ms-fullscreen,
  :root {
     /* insert rule here */
 }
+
 
 
 
@@ -258,6 +261,7 @@ hr {
 
 
 
+
 /* Text settings */
 
 .text-upcase {
@@ -305,11 +309,13 @@ hr {
 
 
 
+
 /* Font Weights */
 
 .f500 {
     font-weight: 500 !important;
 }
+
 
 
 
@@ -330,6 +336,7 @@ hr {
 .disp-bl {
     display: block;
 }
+
 
 
 
@@ -405,6 +412,7 @@ blockquote {
         @include font-size(20px);
     }
 }
+
 
 
 
@@ -501,7 +509,7 @@ ul.list-with-logos {
 
         @include max-screen ($sm) {
             width: 80%;
-            margin-top: 25%;
+            // margin-top: 25%;
         }
     }
 
@@ -606,6 +614,7 @@ img[src] {
 
 
 
+
 /* Forms */
 
 form {
@@ -619,6 +628,7 @@ form {
         }
     }
 }
+
 
 
 
@@ -648,6 +658,7 @@ button {
     line-height: 120%;
     margin-bottom: 10px;
 }
+
 
 
 
@@ -699,6 +710,7 @@ label {
 
 
 
+
 /* Custom Select */
 
 select {
@@ -711,11 +723,13 @@ select {
 
 
 
+
 /* Custom Checkbox */
 
 input[type=checkbox] {
     display: none;
 }
+
 
 
 
@@ -752,9 +766,11 @@ input[type=checkbox]+label:before {
 
 
 
+
 /* unchecked icon */
 
 input[type=checkbox]+label:before {}
+
 
 
 
@@ -775,9 +791,11 @@ input[type=checkbox]:checked+label:before {
 
 
 
+
 /* checked icon */
 
 input[type=checkbox]:checked+label:before {}
+
 
 
 
@@ -895,6 +913,7 @@ textarea:-ms-input-placeholder                      { color: $colorDarkGrey; }*/
 
 
 
+
 /* Figure with Image */
 
 figure {
@@ -957,6 +976,7 @@ figure {
         }
     }
 }
+
 
 
 
@@ -1122,6 +1142,7 @@ $padding-sm: 20px;
 
 
 
+
 /*  Utilities Sizes (Height and Width) */
 
 .fullpage {
@@ -1155,6 +1176,7 @@ $padding-sm: 20px;
 .pos-rel {
     position: relative;
 }
+
 
 
 
@@ -1249,6 +1271,7 @@ $padding-sm: 20px;
         }
     }
 }
+
 
 
 
@@ -1938,6 +1961,7 @@ $padding-sm: 20px;
 
 
 
+
 /* Social Media Icons */
 
 .social-media-icons {
@@ -2000,6 +2024,7 @@ $padding-sm: 20px;
         }
     }
 }
+
 
 
 
@@ -3367,6 +3392,7 @@ footer {
 
 
 
+
 /* page layout setup utilities */
 
 .fullpage {
@@ -3549,6 +3575,7 @@ footer {
         }
     }
 }
+
 
 
 /* ==========================================================================

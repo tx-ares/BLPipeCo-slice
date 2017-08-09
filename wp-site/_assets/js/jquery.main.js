@@ -813,18 +813,20 @@ function initLogo() {
 }
 
 function initBioBoxes() {
+	console.log("fixing BIOBOXES php")
 	if ($("body").hasClass("bio")) {
 		var $photoItems = $(".photo-item");
-			$phpQueryString = '<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?><?php the_content(); ?><?php endwhile; endif; ?>';
+			
 
 		$photoItems.each(function(index){
 			var $photoItem = $(this);
-			var $photoItemId = index;
-			var bioExpander = $photoItem.find(".info-wrapper");
+				$photoItemId = index;
+			    $bioExpander = $photoItem.find(".info-wrapper");
 			// console.log($photoItem)
-			bioExpander.on("click" , function(e) {
+			$bioExpander.on("click" , function(e) {
 				e.stopPropagation();
 				$photoItems.removeClass("active no-hover");
+
 				var $parentContainerHeight = $photoItem.height();
 				// console.log($photoItem.hasClass("active"), " << isActive?")
 
@@ -841,12 +843,21 @@ function initBioBoxes() {
 						    id: $photoItemId,					    
 						    title: "biography",
 						    //html to be filled dynamically by CMS.
-						    html: $phpQueryString
+						    html: $.ajax({
+									  url: templateUrl + "/biobox.php",
+									  success: function(data) {
+									  	console.log(data , " << data")
+										$(this).html(data);
+									  }
+									})
+
 						}).on("click", function(e) {
 							e.stopPropagation();
 						}).appendTo($photoItem).animate({
 							height: "360px"
 						}, 300, "swing");
+
+						
 
 				}
 			});
