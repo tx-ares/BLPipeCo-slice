@@ -7,6 +7,7 @@
 
 
 
+
 /*Temporary Disable while under Development */
 
 
@@ -14,6 +15,7 @@
 
 @import "_mixin.mediaqueries";
 @import "_mixin.toolbox";
+
 
 
 
@@ -42,6 +44,7 @@ $lg: 1024px;
 $xlg: 1280px;
 $xxlg: 1440px;
 $full: 1960px;
+
 
 
 
@@ -79,6 +82,7 @@ $font-icon:'FontAwesome';
 
 
 
+
 /* Extended Classes */
 
 .nowrap {
@@ -104,6 +108,7 @@ $font-icon:'FontAwesome';
 
 
 
+
 /* Accessibility */
 
 .accessibility {
@@ -123,6 +128,7 @@ $font-icon:'FontAwesome';
 
 
 
+
 /* ==========================================================================
 
     2. BASE STYLES
@@ -136,6 +142,7 @@ _:-ms-fullscreen,
  :root {
     /* insert rule here */
 }
+
 
 
 
@@ -201,13 +208,12 @@ hr {
 p {
     margin-bottom: 1.875rem;
     &.h3 {
-       @include font-size(18px);
+        @include font-size(18px);
         text-transform: uppercase;
         color: $colorDarkBlue;
         font-weight: 700;
-        margin-bottom: 15px; 
+        margin-bottom: 15px;
     }
-
 }
 
 h1 {
@@ -251,6 +257,7 @@ hr {
 
 
 
+
 /* Text settings */
 
 .text-upcase {
@@ -285,7 +292,7 @@ hr {
 
 .pull-left-md {
     @include max-screen($md) {
-        float: left;   
+        float: left;
     }
 }
 
@@ -297,11 +304,13 @@ hr {
 
 
 
+
 /* Font Weights */
 
 .f500 {
     font-weight: 500 !important;
 }
+
 
 
 
@@ -321,6 +330,7 @@ hr {
 .disp-bl {
     display: block;
 }
+
 
 
 
@@ -401,6 +411,7 @@ blockquote {
 
 
 
+
 /* Unordered List */
 
 ul {
@@ -473,23 +484,24 @@ ul.list-with-logos {
     position: relative;
     margin-bottom: 40px;
     margin-top: 20px;
+    width: 90%;
 
     .logo-container {
         display: inline-block;
         width: auto;
         vertical-align: top;
 
-         @include max-screen ($xmd) {
+        @include max-screen ($xmd) {
             width: 100%;
             display: block;
             text-align: center;
             margin: 0 auto;
             margin-top: 10%;
-         }
+        }
 
-        @include max-screen ($sm) {          
+        @include max-screen ($sm) {
             width: 80%;
-            margin-top: 25%;             
+            margin-top: 25%;
         }
     }
 
@@ -501,19 +513,19 @@ ul.list-with-logos {
         margin-left: 15px;
         margin-bottom: 30px;
 
-        display:inline-block;
+        display: inline-block;
         width: 45%;
 
-        @include max-screen ($xmd) {          
+        @include max-screen ($xmd) {
 
-            width: 50%;    
+            width: 50%;
             display: block;
             text-align: left;
-            margin: 20px auto;         
+            margin: 20px auto;
         }
 
-         @include max-screen ($sm) {          
-            width: 80%;             
+        @include max-screen ($sm) {
+            width: 80%;
         }
 
         &:before {
@@ -527,8 +539,7 @@ ul.list-with-logos {
         }
 
         ul {
-             // padding-left: 10px;
-
+            // padding-left: 10px;
             margin-left: -10px;
             margin-top: 20px;
 
@@ -542,13 +553,8 @@ ul.list-with-logos {
                     color: $colorLightGrey5;
                 }
             }
-
         }
     }
-
-    
-
-  
 }
 
 ul.locations-list {
@@ -561,7 +567,7 @@ ul.locations-list {
             vertical-align: top;
         }
     }
-      
+
     li:not(:first-child) {
         width: 45%;
         display: inline-block;
@@ -570,8 +576,6 @@ ul.locations-list {
             width: 100%;
         }
     }
-
-
 }
 
 
@@ -601,6 +605,7 @@ img[src] {
 
 
 
+
 /* Forms */
 
 form {
@@ -614,6 +619,7 @@ form {
         }
     }
 }
+
 
 
 
@@ -642,6 +648,7 @@ button {
     line-height: 120%;
     margin-bottom: 10px;
 }
+
 
 
 
@@ -691,6 +698,7 @@ label {
 
 
 
+
 /* Custom Select */
 
 select {
@@ -702,11 +710,13 @@ select {
 
 
 
+
 /* Custom Checkbox */
 
 input[type=checkbox] {
     display: none;
 }
+
 
 
 
@@ -741,9 +751,11 @@ input[type=checkbox]+label:before {
 
 
 
+
 /* unchecked icon */
 
 input[type=checkbox]+label:before {}
+
 
 
 
@@ -762,9 +774,11 @@ input[type=checkbox]:checked+label:before {
 
 
 
+
 /* checked icon */
 
 input[type=checkbox]:checked+label:before {}
+
 
 
 
@@ -820,7 +834,7 @@ textarea:-ms-input-placeholder                      { color: $colorDarkGrey; }*/
 
     &.whiteline {
         background: none;
-        border: solid 3px $colorWhite!important;    
+        border: solid 3px $colorWhite!important;
 
         &:hover,
         &:focus {
@@ -873,6 +887,7 @@ textarea:-ms-input-placeholder                      { color: $colorDarkGrey; }*/
         }
     }
 }
+
 
 
 
@@ -942,6 +957,7 @@ figure {
         }
     }
 }
+
 
 
 
@@ -1105,6 +1121,7 @@ $padding-sm: 20px;
 
 
 
+
 /*  Utilities Sizes (Height and Width) */
 
 .fullpage {
@@ -1138,6 +1155,7 @@ $padding-sm: 20px;
 .pos-rel {
     position: relative;
 }
+
 
 
 
@@ -1231,6 +1249,7 @@ $padding-sm: 20px;
         }
     }
 }
+
 
 
 
@@ -1629,7 +1648,6 @@ $padding-sm: 20px;
                 position: absolute;
                 top: 18px; //78px
                 right: 18px; //17px
-
                 &:hover {
                     color: $colorBrightRed2;
                 }
@@ -1700,7 +1718,7 @@ $padding-sm: 20px;
             color: $colorBrightRed1;
             &:after {
                 font-family: $font-icon;
-                content: '\f067' ;
+                content: '\f067';
                 position: absolute;
                 width: 19px;
                 height: 19px;
@@ -1919,6 +1937,7 @@ $padding-sm: 20px;
 
 
 
+
 /* Social Media Icons */
 
 .social-media-icons {
@@ -1981,6 +2000,7 @@ $padding-sm: 20px;
         }
     }
 }
+
 
 
 
@@ -2213,8 +2233,6 @@ header {
                                 @include font-size(13px);
                                 padding: 12px 30px;
                                 position: relative;
-
-                                
                             }
 
                             &:hover {
@@ -2856,9 +2874,7 @@ footer {
                     max-height: 100vh;
                     @include transition(all .3s);
                     @include max-screen($md) {
-                        max-height: 360px;
-
-                        // p,
+                        max-height: 360px; // p,
                         // h1,
                         // h2,
                         // h3 {
@@ -2915,11 +2931,9 @@ footer {
 
                 .slick-dots {
                     bottom: 5%; // top: 40px;
-                   
                     li {
                         width: 30px;
                         height: 10px; // button {
-                      
                     }
                 }
 
@@ -2927,8 +2941,8 @@ footer {
                     width: 100%;
                     height: auto;
                     height: 100%; //demo
-                } 
-            } 
+                }
+            }
         }
     }
 
@@ -3067,7 +3081,7 @@ footer {
 
                     .slick-list {
                         height: auto!important;
-                    } 
+                    }
                     .slick-next,
                     .slick-prev {
                         top: 5vw;
@@ -3352,6 +3366,7 @@ footer {
 
 
 
+
 /* page layout setup utilities */
 
 .fullpage {
@@ -3535,6 +3550,7 @@ footer {
     }
 }
 
+
 /* ==========================================================================
 
     5. CUSTOM STYLES
@@ -3664,7 +3680,6 @@ footer {
                 @include font-size(20px);
                 text-align: center;
             }
-
         }
     }
 
@@ -3910,7 +3925,7 @@ footer {
 
             #submit-row {
                 width: 100%;
-                position: relative; 
+                position: relative;
 
                 input[type="submit"] {
                     font-weight: 500;
@@ -3969,12 +3984,11 @@ footer {
         >.container-fluid {
             padding: 0 !important;
             padding-left: 40px;
-        } 
+        }
     }
 
     .secondary {
-        margin-top: -7px;
-        // .image-cta.resource-center {
+        margin-top: -7px; // .image-cta.resource-center {
         //     .txt-content {
         //         position: absolute;
         //         background: $colorBrightRed2;
@@ -3988,7 +4002,6 @@ footer {
         //             @include font-size(24px);
         //             color: $colorWhite;
         //         }
-
         //         @include max-screen($sm) {
         //             position: relative;
         //             background: $colorBrightRed2;
@@ -4028,7 +4041,6 @@ footer {
         //             @include font-size(24px);
         //             color: $colorWhite;
         //         }
-
         //         @include max-screen($sm) {
         //             position: relative;
         //             background: $colorBrightRed2;
@@ -4183,7 +4195,7 @@ footer {
         font-weight: 500;
         text-transform: uppercase;
         color: $colorDarkBlue;
-    } 
+    }
     &.darkblue-theme {
         background: $colorDarkBlue; // @include transition(color .3);
         h2 {
@@ -4227,7 +4239,7 @@ footer {
         }
     }
     &.slateblue-theme {
-        
+
         h4 {
             @include font-size(30px);
             text-transform: none;
@@ -4262,7 +4274,7 @@ footer {
             padding-top: 5px;
             color: $colorSlateBlue;
         }
-    } 
+    }
     .txt-subcontent {
         padding: 5px 0;
         text-align: right;
@@ -4414,7 +4426,7 @@ footer {
     @include transition(color .3s);
     &:hover {
         color: $colorLightGrey6;
-    } 
+    }
     @include max-screen($md) {
         @include font-size(24px);
     }
@@ -4428,7 +4440,7 @@ footer {
     @include transition(all .3s);
 
     .call-us {
-        text-align: left; 
+        text-align: left;
 
         .h3 {
             font-weight: 500;
@@ -4449,7 +4461,6 @@ footer {
         @include max-screen($lg) {
             // padding: 0 8px;
             @include font-size(16px);
-            
         }
     }
 
@@ -4594,7 +4605,7 @@ footer {
         @include transition(all .3s);
 
         .more-phone-wrap {
-            
+
             ul {
                 li {
                     background: $colorDarkBlue;
@@ -4603,7 +4614,7 @@ footer {
                     color: $colorWhite;
                     display: inline-table;
                     width: 49.5%;
-                    text-align: center; 
+                    text-align: center;
 
                     @include max-screen ($md) {
                         display: inline-table;
@@ -4612,16 +4623,16 @@ footer {
                     @include max-screen ($sm) {
                         display: block;
                         width: 100%; // padding: 15px 0 15px 120px;
-                    } 
+                    }
                     a.num {
                         color: $colorWhite;
                         @include transition(all .3s);
 
-                        @include font-size(30px); 
+                        @include font-size(30px);
 
                         @include max-screen($xxlg) {
                             @include font-size(20px);
-                        } 
+                        }
                         @include max-screen($md) {
                             @include font-size(30px);
                         }
@@ -4697,7 +4708,7 @@ footer {
 }
 
 .side-nav {
-    position: relative; 
+    position: relative;
     ul {
         li {
             background: $colorLightGrey1;
@@ -4925,7 +4936,7 @@ footer {
             right: 0;
             top: 0;
             width: 4px;
-            height: 100%; 
+            height: 100%;
         }
 
 
@@ -4978,15 +4989,12 @@ footer {
                 @include font-size(36px);
             }
         }
-    }
-
-    // .txt-content {
+    } // .txt-content {
     //     position: absolute;
     //     bottom: 0;
     //     width: 100%;
     //     margin-bottom: 53px;
     //     padding: 40px; 
-
     //     h2 {
     //         font-weight: 600;
     //         @include font-size(30px);
@@ -4999,7 +5007,6 @@ footer {
     //         text-transform: uppercase;
     //     } 
     // }
-
     .txt-content {
         color: $colorWhite;
         background: rgba($colorDarkBlue, .5);
@@ -5026,7 +5033,7 @@ footer {
             @include font-size(24px);
             font-weight: 500;
             text-transform: uppercase;
-        } 
+        }
         h3 {
             text-transform: uppercase;
             font-weight: 500;
@@ -5082,7 +5089,7 @@ footer {
             font-weight: 500;
             margin-right: 70px;
             display: block;
-            
+
             span {
                 color: $colorWhite !important;
                 text-transform: uppercase;
@@ -5121,56 +5128,41 @@ footer {
                 }
             }
         }
-    }
-
-
-    // @include max-screen($xlg) {
-
+    } // @include max-screen($xlg) {
     //     .img-content {
-
     //         .caption {
     //             padding: 10px 30px;
     //         }
     //     }
-
     //     .txt-content {
     //         padding: 30px;
-
     //         h3 {
     //             @include font-size(28px);
     //         }
     //     }
     // }
-
     // @include max-screen($lg) {
-
     //     .img-content {
     //         // padding-bottom:85%;
     //         .date {
     //             @include font-size(14px);
     //             padding: 15px 20px;
-
     //             .date-num {
     //                 @include font-size(26px);
     //             }
     //         }
     //     }
-
     //     .txt-content {
     //         padding: 25px;
-
     //         h3 {
     //             @include font-size(24px);
     //             margin-bottom: 15px;
     //         }
     //     }
     // }
-
     // @include max-screen($xmd) {
-
     //     .img-content {
     //         padding-bottom: 85%;
-
     //         img {
     //             height: auto;
     //             min-height: 300px;
@@ -5179,27 +5171,21 @@ footer {
     //             @include transform(translate(-50.1%,
     //             0));
     //         }
-
     //         .date {
     //             @include font-size(14px);
     //             padding: 15px 20px;
-
     //             .date-num {
     //                 @include font-size(26px);
     //             }
     //         }
     //     }
     // }
-
     // @include max-screen($sm) {}
-
     // @include max-screen(420px) {
-
     //     .img-content {
     //         // padding-bottom: 90%;
     //     }
     // }
-
     &.no-img {
         p {
             @include font-size(20px);
@@ -5246,7 +5232,7 @@ footer {
     }
 
     &.slateblue2 {
-        background: $colorSlateBlue2; 
+        background: $colorSlateBlue2;
     }
 
     &.white {
@@ -5483,7 +5469,7 @@ footer {
     margin-bottom: 40px;
 
     a {
-        
+
         font-weight: 500;
         color: $colorBrightRed2;
         .title {
@@ -5668,7 +5654,7 @@ footer {
             img {
                 // display: none; //
                 height: 100%; //
-            } 
+            }
         }
 
         .txt-content {
@@ -5784,11 +5770,11 @@ footer {
 
 .feature-slide-box {
     position: relative;
-    cursor: pointer; 
+    cursor: pointer;
     .panel-label {
         overflow: hidden;
         display: inline-block;
-         @include max-screen ($sm) {
+        @include max-screen ($sm) {
             visibility: hidden !important;
             opacity: 0 !important;
         }
@@ -5810,7 +5796,7 @@ footer {
         width: 50%;
         padding: 0 25px !important;
         @include transition(all .3s);
-       
+
         @include max-screen($md) {
             padding: 0 !important;
         }
@@ -5853,13 +5839,13 @@ footer {
                 }
                 .slick-track {
                     width: 100%;
-                        
+
                     &.no-transform {
-                        -webkit-transform: translate3d(0,0,0) !important;
-                        -moz-transform: translate3d(0,0,0) !important;
-                        -ms-transform: translate3d(0,0,0) !important;
-                        -o-transform: translate3d(0,0,0) !important;
-                        transform: translate3d(0,0,0) !important;
+                        -webkit-transform: translate3d(0, 0, 0) !important;
+                        -moz-transform: translate3d(0, 0, 0) !important;
+                        -ms-transform: translate3d(0, 0, 0) !important;
+                        -o-transform: translate3d(0, 0, 0) !important;
+                        transform: translate3d(0, 0, 0) !important;
                         width: 100% !important;
                         .slide-content {
                             float: none;
@@ -5869,7 +5855,6 @@ footer {
                             }
                         }
                     }
-
                 }
 
                 .slick-list {
@@ -5881,7 +5866,7 @@ footer {
                 }
                 @include transition(all .3s);
                 .slick-slide {
-                    height: 360px; 
+                    height: 360px;
                     min-width: 250px;
                     @include max-screen ($xmd) {
                         min-width: unset;
@@ -5955,8 +5940,7 @@ footer {
             .panel-title {
                 text-transform: uppercase;
                 font-weight: 500;
-                opacity: 1;
-                // right: 7%;
+                opacity: 1; // right: 7%;
                 @include max-screen($sm) {
                     right: unset;
                 }
@@ -5977,14 +5961,14 @@ footer {
                     &:hover {
                         background: $colorBrightRed3;
                     }
-       
+
                     h3 {
                         color: $colorWhite;
                     }
                     p.details {
                         color: $colorWhite !important;
                     }
-                }    
+                }
             }
 
             .txt-content,
@@ -6029,7 +6013,7 @@ footer {
             .txt-content {
                 opacity: 0;
                 width: 0;
-            } 
+            }
         }
         .txt-content {
             position: absolute;
@@ -6040,7 +6024,6 @@ footer {
             img[src] {
                 margin-bottom: 35px;
             }
-            
         }
         h2.text-flip {
             color: $colorWhite;
@@ -6053,8 +6036,7 @@ footer {
             margin-top: 0;
             letter-spacing: 1px;
             @include font-size(24px);
-            @include transition( all .3s);
-            // @include max-screen($sm) {
+            @include transition( all .3s); // @include max-screen($sm) {
             //     width: 100%;
             //     text-align: center;
             //     left: 0;
@@ -6077,8 +6059,7 @@ footer {
             font-family: $font-icon;
             position: absolute;
             left: 10px;
-            top: 45%;
-            // @include max-screen($smd) {
+            top: 45%; // @include max-screen($smd) {
             //     left: initial;
             //     right: 50px;
             //     content: '\f0da';
@@ -6157,8 +6138,7 @@ footer {
             .panel-title {
                 text-transform: uppercase;
                 font-weight: 500;
-                opacity: 1;
-                // left: 7%;
+                opacity: 1; // left: 7%;
                 @include max-screen($sm) {
                     left: unset;
                 }
@@ -6191,7 +6171,6 @@ footer {
             &:after {
                 content: "";
             }
-            
         }
         &.compressed {
             width: 9%;
@@ -6213,24 +6192,23 @@ footer {
                 width: 150px;
                 height: 100px;
                 margin-bottom: 45px;
-            }
-            // @include max-screen($smd) {
+            } // @include max-screen($smd) {
             //     margin: 0 auto;
             // }
         }
 
         img.a-right.control-c.next.slick-next.slick-arrow {
-                right: -135px;
-                @include max-screen($xlg) {
-                    right: -120px;
-                }
-                @include max-screen($md) {
-                    right: -75px;
-                }
-                @include max-screen($sm) {
-                    right: -45px;
-                }
+            right: -135px;
+            @include max-screen($xlg) {
+                right: -120px;
             }
+            @include max-screen($md) {
+                right: -75px;
+            }
+            @include max-screen($sm) {
+                right: -45px;
+            }
+        }
 
         @include max-screen($sm) {
             display: block;
@@ -6269,8 +6247,7 @@ footer {
 
         @include max-screen($ssm) {
             .txt-content {
-                right: unset;
-                // left: 5%;
+                right: unset; // left: 5%;
             }
             h2.text-flip {
                 left: 10%;
@@ -6281,7 +6258,7 @@ footer {
         @include max-screen($xsm) {
             .txt-content {
                 right: unset;
-               left: 0;
+                left: 0;
                 max-width: 320px;
                 padding: 0 20px;
             }
@@ -6299,8 +6276,7 @@ footer {
             color: $colorDarkBlue;
             position: absolute;
             right: 10px;
-            top: 45%;
-            // @include max-screen($smd) {
+            top: 45%; // @include max-screen($smd) {
             //     right: 50px;
             // }
             @include max-screen($sm) {
@@ -6309,7 +6285,6 @@ footer {
                 padding-right: 15px;
 
                 display: none;
-                
             }
         }
 
@@ -6392,7 +6367,7 @@ footer {
                 left: 0;
                 top: 0;
                 width: 5px;
-                height: 100%; 
+                height: 100%;
                 z-index: 2;
             }
         }
@@ -6416,7 +6391,7 @@ footer {
         left: 0;
         top: 0;
         width: 5px;
-        height: 100%; 
+        height: 100%;
         z-index: 2;
     }
 
@@ -6463,7 +6438,6 @@ footer {
 
         &.with-img {
             padding: 0;
-
         }
     }
 
@@ -6609,7 +6583,7 @@ footer {
                     display: block;
                     width: 100%;
                     padding: 25px 10px;
-                } 
+                }
                 a.num {
                     color: $colorWhite;
                     @include transition(all .3s);
@@ -6672,22 +6646,7 @@ footer {
         }
     }
 
-    a.item-box {
-        padding-top: 60px;
-        padding-bottom: 60px;
-        color: inherit;
 
-        h3 {
-            color: $colorDarkBlue;
-            text-transform: uppercase;
-            @include transition(all .3s);
-        }
-    }
-
-    img {
-        display: inline-block;
-        margin-bottom: 20px;
-    }
 
     p.details {
         color: $colorDarkGrey; // max-height: 0px;
@@ -6697,23 +6656,70 @@ footer {
     }
 
     .slider-container {
-        width: 100%;
-        padding: 0 100px;
+        // width: 100%;
+        padding: 80px 100px;
 
-        @include max-screen( $xlg ) {
-            padding: 0 60px;
+        @include max-screen( $xlg) {
+            padding: 80px 60px;
         }
 
-        @include max-screen( $smd ) {
-            padding: 0 20px;
+        @include max-screen( $smd) {
+            padding: 80px 20px;
         }
 
         .logo-slider {
-            width: 100%;
+            // width: 100%;
             margin: auto;
 
             .slide-content {
-                width: 100%;
+                display: table;
+                text-align: center;
+                margin: 0 auto;
+
+                .logo-wrap {
+                    display: table-cell;
+                    vertical-align: middle;
+                    height: 110px;
+                    text-align: center;
+                }
+
+                a.logo-box {
+                    padding-top: 60px;
+                    padding-bottom: 60px;
+                    color: inherit;
+                    display: block;
+                    max-width: 100%;
+                    white-space: normal;
+                    position: relative;
+                    width: 180px;
+                    h3 {
+                        color: $colorDarkBlue;
+                        text-transform: uppercase;
+                        @include transition(all .3s);
+                    }
+                }
+
+
+                img {
+                    display: inline-block;
+                    margin-bottom: 20px;
+                    position: absolute;
+                    &.icon {
+                        display: block;
+                        top: 0;
+                        max-height: 105px;
+                        max-width: 180px;
+                    }
+                    &.icon.bw {}
+                    &.icon.color {
+                        opacity: 0;
+                        z-index: 3;
+                        @include transition (all 0s);
+                        &:hover {
+                            opacity: 1;
+                        }
+                    }
+                }
             }
             img.a-left.control-c.prev.slick-prev.slick-arrow {
                 left: -30px;
@@ -6730,6 +6736,9 @@ footer {
             }
         }
     }
+
+
+
     .info-box {
         padding: 60px 20px;
     }
@@ -6740,14 +6749,13 @@ footer {
         height: 135px;
         margin-top: 45px;
         position: absolute;
-        left: -10%;
-        // @include max-screen($xlg) {
+        left: -10%; // @include max-screen($xlg) {
         //     left: 5%;
         // }
         @include max-screen($md) {
             display: none;
         }
-    } 
+    }
 
     &.active {
         width: 91%;
@@ -6766,9 +6774,8 @@ footer {
                 }
             }
         }
-       
     }
-  
+
     .txt-content {
         position: absolute;
         right: 0;
@@ -6782,7 +6789,6 @@ footer {
             margin: 0 auto;
         }
     }
-    
 }
 
 
@@ -6991,19 +6997,19 @@ footer {
 
         @include max-screen($xxlg) {
             .photo-item {
-                width: 50%; 
+                width: 50%;
             }
         }
 
         @include max-screen($xlg) {
             .photo-item {
-                width: 50%; 
+                width: 50%;
             }
         }
 
         @include max-screen($md) {
             .photo-item {
-                width: 50%; 
+                width: 50%;
             }
         }
 
@@ -7012,7 +7018,7 @@ footer {
 
             .photo-item {
                 width: 50%;
-                padding: 0 15px; 
+                padding: 0 15px;
             }
         }
 
@@ -7027,7 +7033,7 @@ footer {
 
             .photo-item {
                 width: 100%;
-                float: none; 
+                float: none;
             }
         }
     }

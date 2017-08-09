@@ -538,16 +538,23 @@ function blpc_logo_carousel() {
 		$image_color = get_field('carousel_image', $page->ID);
 		$image_bw = get_field('carousel_image_bw', $page->ID);
 
-		$string .= '<div class="slide-content" eq-col>  
-	                    <a href="'.get_post_permalink( $page->ID ).'" class="tframe fw fh text-center item-box">
-		                    <div class="slide-content tframe valign-mid" eq-col>
-		                        
-                                <img src="'.$image_bw['url'].'" alt="'.$image_bw['alt'].'" class="icon" />
-                                <img src="'.$image_color['url'].'" alt="'.$image_color['alt'].'" class="icon" />
+		$string .= '<div class="slick-slide" eq-col>  
+		                    <div class="slide-content" eq-col>
+		                    		<div class="logo-wrap">
+		                       <a href="'.get_post_permalink( $page->ID ).'" class="logo-box">
 
-		                    </div>         
-	                    </a> 	
-                	</div>';
+		                        <img src="'.$image_color['url'].'" alt="'.$image_color['alt'].'" class="icon color" />';
+		                        if ($image_bw) {			
+	                                $string .= '<img src="'.$image_bw['url'].'" alt="'.$image_bw['alt'].'" class="icon bw" />';
+                                }
+
+                                
+	                                $string .= '  </a> 
+	                                				</div>          
+							                    
+							                    </div>	
+						                	</div>';
+                				
 	}
 	echo $string;
 }												
