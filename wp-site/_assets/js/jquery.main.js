@@ -770,7 +770,7 @@ function initAnimateWhenInView() { //Animations when a certain element is scroll
 		$(window).scroll(function(){
 
 			if(isScrolledIntoView(logoRow) == true) {
-				logoRow.find("div[class*=' col-']").each(
+				logoRow.find(".icon").each(
 					function(){
 						$(this).addClass("animated pulse")
 					})
