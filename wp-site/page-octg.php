@@ -102,7 +102,9 @@ get_header(); ?>
 
                 <!-- Side Navigation -->
                 <div class="side-nav">
-                    <?php blpc_menu_list_pages(); ?>
+                   <?php
+                      echo blpc_custom_menu_list_pages('octg'); 
+                    ?>
                 </div>
 
 

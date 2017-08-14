@@ -51,54 +51,69 @@ get_header(); ?>
         <!-- ******************************************************* -->
         <!-- Aside Content -->
         <!-- ******************************************************* -->
-        <div class="col-md-5 col-xs-12 hidden-sm hidden-xs aside" eq-col>              
-            <!-- Send Request -->
-            <div class="send-request" toggle-active-parent>
-                <div class="row full-scr" eq-height>
-                    <div class="col-sm-7 col-xs-7 fh" eq-col>
-                        <a href="#" class="tframe fh fw">
-                            <div class="tcell valign-mid call-us">
-                                <p class="h3">Get in Touch</p>
-                                <p class="sub-text">Please, use our customer line to contact us</p>
-                                    <span class="num">+1 555 123 4567</span>
-                            </div>
-                        </a>
-                    </div>
-                    <div class="col-sm-5 col-xs-5 fh" eq-col>
-                        <div class="tframe fw fh popdown-phonenum">
-                            <div class="tcell valign-mid phone-opener" toggle-active-opener>
-                                <i class="fa fa-mobile" aria-hidden="true"></i> 
-                                <span class="more">More</span>
-                                <span class="less">Less</span> 
-                                <i class="fa fa-angle-down" aria-hidden="true"></i>
+        <div class="col-md-5 col-sm-5 col-xs-12 hidden-sm hidden-xs aside">
+            <div class="container-fluid">
+                <!-- Send Request -->
+                <div class="send-request" toggle-active-parent>
+                    <div class="row">
+                        <div class="col-sm-7 col-xs-7 fh">
+                            <a href="#" class="tframe fh fw">
+                                <div class="tcell valign-mid call-us">
+                                    <p class="h3">Get in Touch</p>
+                                    <p class="sub-text">Please, use our customer line to contact us</p>
+                                        <span class="num">+1 555 123 4567</span>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="col-sm-5 col-xs-5 fh">
+                            <div class="tframe fw fh popdown-phonenum">
+                                <div class="tcell valign-mid phone-opener" toggle-active-opener><i class="fa fa-mobile" aria-hidden="true"></i> <span class="more">More</span><span class="less">Less</span> <i class="fa fa-angle-down" aria-hidden="true"></i></div>
                             </div>
                         </div>
                     </div>
-                </div>  
-            </div>
-        </div>
-    </div>
-    <div class="row compressed">
-        <div class="col-md-12">
-            <div class="more-phone-full-scr" toggle-active-single>
-                <div class="more-phone-wrap">
-                    <ul>
-                        <li> <span>Concord, CA</span> <a href="#" class="num">+1 925 478 8058</a> </li>
-                        <li> <span>Angleton, TX</span> <a href="#" class="num">+1 713 260 4050</a> </li>
-                        <li> <span>Denver, CO</span> <a href="#" class="num">+1 720 789 7570</a> </li>
-                        <li> <span>Denver, CO</span> <a href="#" class="num">+1 720 789 7570</a> </li>
-                        <li> <span>Concord, CA</span> <a href="#" class="num">+1 925 478 8058</a> </li>
-                        <li> <span>Angleton, TX</span> <a href="#" class="num">+1 713 260 4050</a> </li>
-                        <li> <span>Denver, CO</span> <a href="#" class="num">+1 720 789 7570</a> </li>
-                        <li> <span>Denver, CO</span> <a href="#" class="num">+1 720 789 7570</a> </li>
-                    </ul>
+                    
+                    <!-- TODO: Make Dynamic -->
+                    <div class="more-phone">
+                        <div class="more-phone-wrap">
+                            <ul>
+                                <li>
+                                    <span>Concord, CA</span>
+                                    <a href="#" class="num">+1 925 478 8058</a>
+                                </li>
+                                <li>
+                                    <span>Angleton, TX</span>
+                                    <a href="#" class="num">+1 713 260 4050</a>
+                                </li>
+                                <li>
+                                    <span>Denver, CO</span>
+                                    <a href="#" class="num">+1 720 789 7570</a>
+                                </li>
+                                <li>
+                                    <span>Denver, CO</span>
+                                    <a href="#" class="num">+1 720 789 7570</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
                 </div>
+
+                <!-- Side Navigation -->
+                <div class="side-nav">
+                   <?php
+                      echo blpc_custom_menu_list_pages('upstreamproducts'); 
+                    ?>
+                </div>
+
+
             </div>
-        </div>
+        </div>  
+        
     </div>
+
     <!-- ******************************************************* -->
     <!-- Secondary Content -->
-    <!-- ******************************************************* -->
+    <!-- ******************************************************* -->    
+  
     <div class="row compressed">    
         <div class="col-md-12 col-sm-12 col-xs-12 secondary">
             <div class="row compressed">
@@ -120,7 +135,6 @@ get_header(); ?>
 
                         <div class="row compressed row-no-padding">
                             <div class="col-xs-12 visible-sm visible-xs">
-                                 <!-- Send Request -->
                                 <div class="send-request" toggle-active-parent>
                                     <div class="row full-scr" eq-height>
                                         <div class="col-sm-7 col-xs-7 fh" eq-col>
@@ -190,6 +204,8 @@ get_header(); ?>
                             </div>
                         </div>
        
+                        
+
                         <div class="row compressed row-no-padding" eq-height>
                             <div class="col-md-4 col-sm-12 col-xs-12" eq-col>
                                 <!-- Feature CTA Bottom -->
@@ -232,14 +248,14 @@ get_header(); ?>
     <!-- ******************************************************* -->
     <!-- Tertiary Content -->
     <!-- ******************************************************* -->
-    <div class="row compressed">
+    <div class="row compressed">    
         <div class="col-md-12 col-sm-12 col-xs-12 tertiary">
             <div class="row compressed">
                 <div class="col-md-12">
                     <div class="container-fluid no-padding">
-                    
-                        <div class="row compressed row-no-padding" eq-height>
-                            <div class="logo-row" eq-height>
+
+                        <div class="row compressed row-no-padding">         
+                            <div class="logo-row">
                                 <div class="row compressed grey7">
                                     <div class="col-md-10">
                                         <div class="slider-container">
@@ -266,15 +282,17 @@ get_header(); ?>
                                         </div>
                                     </div>
 
+
                                 </div>
                             </div>
-                        </div>
+                        </div> 
+
                     </div>
                 </div>
             </div>
         </div>
-    </div>
-    </div>
+    </div>   
+       
 </section>
 
 <?php get_footer(); ?>
