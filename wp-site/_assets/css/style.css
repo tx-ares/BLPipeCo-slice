@@ -3119,6 +3119,9 @@ footer {
       min-height: 250px; }
     .send-request .row > [class*="col-"]:nth-child(1) {
       padding: 0 35px; }
+      @media only screen and (max-width: 575px) {
+        .send-request .row > [class*="col-"]:nth-child(1) {
+          padding: 0; } }
       .send-request .row > [class*="col-"]:nth-child(1) .num {
         min-width: 150px;
         font-size: 40px;
@@ -3141,8 +3144,8 @@ footer {
             font-size: 2.25rem; } }
         @media only screen and (max-width: 575px) {
           .send-request .row > [class*="col-"]:nth-child(1) .num {
-            font-size: 24px;
-            font-size: 1.5rem; } }
+            font-size: 22px;
+            font-size: 1.375rem; } }
     .send-request .row > [class*="col-"]:nth-child(2) {
       border-left: solid 2px #dbd8cf;
       border-right: solid 2px #fff; }
