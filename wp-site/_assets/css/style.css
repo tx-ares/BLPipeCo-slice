@@ -2051,7 +2051,8 @@ footer {
     margin-bottom: 0 !important; } }
 
 .home #wrapper {
-  padding-top: 0 !important; }
+  padding-top: 0 !important;
+  width: 100%; }
 .home .banner.homepage .row > [class*=col-] {
   max-height: 100vh; }
 .home .banner.homepage .slider-container {
