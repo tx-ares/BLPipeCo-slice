@@ -396,6 +396,37 @@ ul.locations-list {
         display: block;
         width: 100%; } }
 
+.mill-sources-container > [class*="row"] {
+  padding-bottom: 40px; }
+.mill-sources-container .row > [class^="col-"],
+.mill-sources-container .row > [class*=" col-"] {
+  padding-left: 0;
+  padding-right: 15px; }
+  @media only screen and (max-width: 575px) {
+    .mill-sources-container .row > [class^="col-"],
+    .mill-sources-container .row > [class*=" col-"] {
+      margin-bottom: 40px;
+      padding-left: 20px;
+      padding-right: 20px; } }
+.mill-sources-container .logo-container {
+  margin-bottom: 20px; }
+.mill-sources-container ul.list li {
+  margin-bottom: 0; }
+@media only screen and (max-width: 992px) {
+  .mill-sources-container {
+    width: 70%; } }
+@media only screen and (max-width: 768px) {
+  .mill-sources-container {
+    width: 100%; }
+    .mill-sources-container .logo-container {
+      text-align: center; }
+    .mill-sources-container .info-box {
+      width: 40%;
+      margin: auto; } }
+@media only screen and (max-width: 575px) {
+  .mill-sources-container .info-box {
+    width: 80%; } }
+
 img.lazy {
   opacity: 0;
   filter: alpha(opacity=0);

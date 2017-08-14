@@ -701,12 +701,22 @@ figure {
       padding-right: 20px; } }
 .mill-sources-container .logo-container {
   margin-bottom: 20px; }
+.mill-sources-container ul.list li {
+  margin-bottom: 0; }
+@media only screen and (max-width: 992px) {
+  .mill-sources-container {
+    width: 70%; } }
+@media only screen and (max-width: 768px) {
+  .mill-sources-container {
+    width: 100%; }
+    .mill-sources-container .logo-container {
+      text-align: center; }
+    .mill-sources-container .info-box {
+      width: 40%;
+      margin: auto; } }
 @media only screen and (max-width: 575px) {
-  .mill-sources-container .logo-container {
-    text-align: center; }
   .mill-sources-container .info-box {
-    width: 80%;
-    margin: auto; } }
+    width: 80%; } }
 
 /*  Utilities Sizes (Height and Width) */
 .fullpage {
