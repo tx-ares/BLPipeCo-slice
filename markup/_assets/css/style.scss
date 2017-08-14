@@ -1030,7 +1030,8 @@ $padding-sm: 20px;
 
 
 .mill-sources-container {
-
+    margin-top: 40px;
+    
     >[class*="row"] {
         padding-bottom: 40px;
     }
@@ -1050,6 +1051,18 @@ $padding-sm: 20px;
 
     .logo-container {
         margin-bottom: 20px;
+    }
+
+    .list-container {
+        margin-left: -40px;
+        margin-right: -40px;
+    
+        @include max-screen ($sm) {
+            padding-left: 20px;
+            h3 {
+                padding-left: 40px;
+            }
+        }
     }
 
     ul.list {

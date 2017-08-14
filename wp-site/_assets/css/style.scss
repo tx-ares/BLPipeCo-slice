@@ -589,6 +589,7 @@ ul.locations-list {
 }
 
 .mill-sources-container {
+    margin-top: 40px;
 
     >[class*="row"] {
         padding-bottom: 40px;
@@ -609,6 +610,18 @@ ul.locations-list {
 
     .logo-container {
         margin-bottom: 20px;
+    }
+
+    .list-container {
+        margin-left: -40px;
+        margin-right: -40px;
+    
+        @include max-screen ($sm) {
+            padding-left: 20px;
+            h3 {
+                padding-left: 40px;
+            }
+        }
     }
 
     ul.list {
@@ -6786,7 +6799,7 @@ footer {
                     max-width: 100%;
                     white-space: normal;
                     position: relative;
-                    width: 180px;
+                    width: 160px;
                     h3 {
                         color: $colorDarkBlue;
                         text-transform: uppercase;
@@ -6834,16 +6847,16 @@ footer {
 
 
     .info-box {
-        padding: 60px 20px;
+        padding: 75px 20px 40px;
     }
 
     .bar {
         width: 2px;
         background: $colorDarkGrey;
-        height: 135px;
-        margin-top: 45px;
+        height: 75%;
+        margin-top: 40px;
         position: absolute;
-        left: -10%; // @include max-screen($xlg) {
+        left: -5%; // @include max-screen($xlg) {
         //     left: 5%;
         // }
         @include max-screen($md) {
