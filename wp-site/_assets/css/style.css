@@ -327,7 +327,7 @@ ul.list-with-logos {
   position: relative;
   margin-bottom: 40px;
   margin-top: 20px;
-  width: 90%; }
+  width: 100%; }
   ul.list-with-logos .logo-container {
     display: inline-block;
     width: auto;
@@ -741,6 +741,10 @@ figure {
 .no-padding {
   padding: 0 !important; }
 
+.row-pad-right-first-child > [class*="col-"]:first-child {
+  padding-right: 40px !important;
+  padding-left: 0 !important; }
+
 .no-margin {
   margin: 0 !important; }
 
@@ -757,6 +761,9 @@ figure {
   .row.no-gutters > [class*=" col-"] {
     padding-right: 0 !important;
     padding-left: 0 !important; }
+
+.pad-rows-bottom-40 > [class*="row"] {
+  padding-bottom: 40px; }
 
 /*  Utilities Sizes (Height and Width) */
 .fullpage {

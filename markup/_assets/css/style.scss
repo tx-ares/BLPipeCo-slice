@@ -493,6 +493,11 @@ ul.list-with-logos {
     }
 }
 
+.list-container {
+    margin-top: 40px;
+    margin-bottom: 40px;
+}
+
 img.lazy {
     @include opacity(0);
     @include transition(opacity 1s);
@@ -1021,6 +1026,41 @@ $padding-sm: 20px;
         padding-right: 0 !important;
         padding-left: 0 !important;
     }
+}
+
+
+.mill-sources-container {
+    >[class*="row"] {
+        padding-bottom: 40px;
+    }
+
+    .row {
+        >[class^="col-"],
+        >[class*=" col-"] {
+            padding-left: 0;
+            padding-right: 15px;
+            @include max-screen($sm) {
+                margin-bottom: 40px;
+                padding-left: 20px;
+                padding-right: 20px;
+            }
+        }
+    }
+
+    .logo-container {
+        margin-bottom: 20px;
+
+    }
+
+    @include max-screen ($sm) {
+        .logo-container {
+            text-align: center;
+        }
+        .info-box {
+            width: 80%;
+            margin: auto;
+        }
+    }   
 }
 
 

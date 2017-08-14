@@ -492,7 +492,7 @@ ul.list-with-logos {
     position: relative;
     margin-bottom: 40px;
     margin-top: 20px;
-    width: 90%;
+    width: 100%;
 
     .logo-container {
         display: inline-block;
@@ -1112,6 +1112,14 @@ $padding-sm: 20px;
     padding: 0 !important;
 }
 
+.row-pad-right-first-child {
+
+     >[class*="col-"]:first-child {
+        padding-right: 40px !important;
+        padding-left: 0 !important;
+    }
+}
+
 .no-margin {
     margin: 0 !important;
 }
@@ -1136,6 +1144,11 @@ $padding-sm: 20px;
     }
 }
 
+.pad-rows-bottom-40 {  
+    >[class*="row"] {
+        padding-bottom: 40px;
+    }
+}
 
 
 
