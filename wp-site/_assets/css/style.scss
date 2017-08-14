@@ -6656,7 +6656,12 @@ footer {
     text-align: left;
     height: 0;
     overflow: hidden;
+    display: none;
     @include transition(all .3s);
+    @include max-screen($md) {
+        display: block;
+    }
+
     &.active {
         height: 200px;
         @include max-screen($lg) {

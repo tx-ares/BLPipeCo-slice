@@ -327,31 +327,35 @@ function initStickyHeader() {
 function initToggleActiveClass() {
 	"use strict";
 	
-	$('[toggle-active-opener]').click(function (e) {
-		e.preventDefault();
+	$('[toggle-active-opener]').each(function(){
+		console.log($(this) , " << a toggler")
+		
+		$(this).click(function (e) {
+			e.preventDefault();
 
-		if($(this).closest('[toggle-active-parent]').hasClass('active')) {
-			
-			//remove opener active class
-			$(this).closest('[toggle-active-parent]').removeClass('active');
-			
-			//remove content active class
-			$('.'+$(this).closest('[toggle-active-parent]').attr('toggle-add-active-to-ref')).removeClass('active');
-			
-		} else {
-			
-			//remove all opener that has active class
-			$(this).closest('[toggle-active-single]').find('[toggle-active-parent]').removeClass('active');
-			
-			//remove all content that has active class
-			$(this).closest('[toggle-active-single]').find('[toggle-active-content]').removeClass('active');
-			
-			//make this opener active
-			$(this).closest('[toggle-active-parent]').addClass('active');
-			
-			//make this content active
-			$('.'+$(this).closest('[toggle-active-parent]').attr('toggle-add-active-to-ref')).addClass('active');
-		}
+			if($(this).closest('[toggle-active-parent]').hasClass('active')) {
+				
+				//remove opener active class
+				$(this).closest('[toggle-active-parent]').removeClass('active');
+				
+				//remove content active class
+				$('.'+$(this).closest('[toggle-active-parent]').attr('toggle-add-active-to-ref')).removeClass('active');
+				
+			} else {
+				
+				//remove all opener that has active class
+				$(this).closest('[toggle-active-single]').find('[toggle-active-parent]').removeClass('active');
+				
+				//remove all content that has active class
+				$(this).closest('[toggle-active-single]').find('[toggle-active-content]').removeClass('active');
+				
+				//make this opener active
+				$(this).closest('[toggle-active-parent]').addClass('active');
+				
+				//make this content active
+				$('.'+$(this).closest('[toggle-active-parent]').attr('toggle-add-active-to-ref')).addClass('active');
+			}
+		})
 		
 		// console.log('test 8');
 	});
@@ -505,7 +509,7 @@ function initSlidePanels() {
 		$(this).addClass("active");
 		var activePanel = $(this);
 
-		//Removing Styles to De-activated Panel ( Blue Side )
+		//Removing Styles to De-activated Panel ( Red Side )
 		$(".slide-over-right").removeClass("active");
 		var deactivatedSlider = $(".panel:not(.active)").find(".panel-slider");
 		$(deactivatedSlider).css("opacity" , 0).removeClass("loaded");
@@ -598,7 +602,7 @@ function initPanelSlider(){
 		  arrows: true,
 		  prevArrow:"<img class='a-left control-c prev slick-prev' src=" + templateUrl + "/_assets/images/ui/chevron-white-left.png>",
 	      nextArrow:"<img class='a-right control-c next slick-next' src=" + templateUrl + "/_assets/images/ui/chevron-white-right.png>",
-	      infinite: true,
+	      infinite: false,
 		  speed: 300,
 		  waitForAnimate: false,
 		  easing: 'linear',
