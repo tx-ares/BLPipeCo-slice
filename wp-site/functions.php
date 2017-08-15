@@ -150,26 +150,31 @@ function page_body_class( $classes ) {
 	
 	$page_template = get_page_template_slug( get_queried_object_id() );
 
-	if(is_home()) {
-		$classes[] = 'fullpage home homepage';
+	if(is_front_page()) {
+		$classes[] = 'fullpage homepage home';
 	}
 	else if(is_page_template('page-services.php')) {
 		$classes[] = 'fullpage main-content-fullpage landing';
+
 	}
 	else if(is_page_template('page-octg.php')) {
 		$classes[] = 'fullpage main-content-fullpage landing';
 	}
 	else if(is_page_template('page-upstreamproducts.php')) {
 		$classes[] = 'fullpage main-content-fullpage landing';
+
 	}
 	else if(is_page_template('page-insight.php')) {
 		$classes[] = 'inner main-content-fullpage';
+
 	}
 	else if(is_page_template('page-about.php')) {
 		$classes[] = 'fullpage main-content-fullpage';
+
 	}
 	else if(is_page_template('page-people.php')) {
 		$classes[] = 'inner bio';
+
 	}
 
 	else {

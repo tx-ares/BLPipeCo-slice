@@ -717,7 +717,8 @@ figure {
     margin: 0; }
   .row.slider-row {
     margin: 0;
-    font-size: 0; }
+    font-size: 0;
+    width: 100%; }
     .row.slider-row:after {
       background: #d0112b;
       height: 360px;

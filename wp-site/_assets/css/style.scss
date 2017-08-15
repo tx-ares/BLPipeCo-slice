@@ -1084,6 +1084,7 @@ $padding-sm: 20px;
     &.slider-row {
         margin: 0;
         font-size: 0;
+        width: 100%;
         &:after {
             background: $colorBrightRed2;
             height: 360px;

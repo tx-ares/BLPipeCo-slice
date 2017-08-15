@@ -421,6 +421,7 @@ $(window).load(function () {
 
 function initPopUpIcons() {
     if ( $("body").hasClass("home") && $(this).scrollTop() == 0 ) {
+    	console.log("HOME - Detected -initPopUpIcons .js")
 		$(".social-media-icons").css("right" , -40);
     }
 
@@ -449,6 +450,7 @@ function initHideFooterIfHomepage() {
 function initHideElementsIfHomePageTop() {
 
 	if ($("body").hasClass("home") && $(this).scrollTop() == 0 && !window.matchMedia('only screen and (max-width: 1024px)').matches) {
+		console.log("HOME - Detected - initHideElementsIfHomePageTop - .js")
 		$("header").css("background", "rgba(0,38,60,0)");
 		$(".social-media-icons").css("right" , -40);
 		resetBodyScrollX();
@@ -514,11 +516,14 @@ function initSlidePanels() {
 		var deactivatedSlider = $(".panel:not(.active)").find(".panel-slider");
 		$(deactivatedSlider).css("opacity" , 0).removeClass("loaded");
 
-		//Hide Icons while Panel is active
-		$(".social-media-icons").addClass("hidden");
+		
 
 		//Simulate loading, to give carousel time to fix slide widths. * Animation not on Mobile *
 		if (!window.matchMedia('only screen and (max-width: 575px)').matches) {
+			//Hide Icons while Panel is active
+			$(".social-media-icons").addClass("hidden");
+			console.log("Delayed Load -> Hiding Icons ")
+
 			delayedLoad(activePanel);
 		}
 	});
@@ -550,11 +555,12 @@ function initSlidePanels() {
 		var deactivatedSlider = $(".panel:not(.active)").find(".panel-slider");
 		$(deactivatedSlider).css("opacity" , 0).removeClass("loaded");
 
-		//Hide Icons while Panel is active
-		$(".social-media-icons").addClass("hidden");
 
 		//Simulate loading to give carousel time to fix slide widths. * Animation not on Mobile *
 		if (!window.matchMedia('only screen and (max-width: 575px)').matches) {
+			//Hide Icons while Panel is active
+			$(".social-media-icons").addClass("hidden");
+			console.log("Delayed Load -> Hiding Icons ")
 			delayedLoad(activePanel);
 		}
 	});
@@ -595,6 +601,7 @@ function delayedLoad(activePanel) { //Creates simulated loading of carousel and 
 }
 
 function initPanelSlider(){
+	"use strict";
 
 	$(".panel-slider").each(function(){
 		$(this).slick({
@@ -604,7 +611,7 @@ function initPanelSlider(){
 	      nextArrow:"<img class='a-right control-c next slick-next' src=" + templateUrl + "/_assets/images/ui/chevron-white-right.png>",
 	      infinite: false,
 		  speed: 300,
-		  waitForAnimate: false,
+		  waitForAnimate: true,
 		  easing: 'linear',
 		  slidesToShow: 3,
 		  slidesToScroll: 1,
@@ -616,8 +623,7 @@ function initPanelSlider(){
 		      breakpoint: 1960,
 		      settings: {
 		        slidesToShow: 3,
-		        slidesToScroll: 1,
-		        infinite: true
+		        slidesToScroll: 1
 
 		      }
 		    },
@@ -625,8 +631,7 @@ function initPanelSlider(){
 		      breakpoint: 1440,
 		      settings: {
 		        slidesToShow: 3,
-		        slidesToScroll: 1,
-	      		infinite: true
+		        slidesToScroll: 1
 		      }
 		    },
 		    {
@@ -635,8 +640,7 @@ function initPanelSlider(){
 		        slidesToShow: 3,
 		        slidesToScroll: 1,
 		        centerMode: true,
-	        	centerPadding: "20px",
-	        	infinite: true
+	        	centerPadding: "20px"
 		      }
 		    },
 		    {
@@ -645,8 +649,7 @@ function initPanelSlider(){
 		        slidesToShow: 1,
 		        slidesToScroll: 1,
 		        centerMode: true,
-	        	centerPadding: "20px",
-	        	infinite: true
+	        	centerPadding: "20px"
 		      }
 		    },
 		    {
@@ -655,8 +658,7 @@ function initPanelSlider(){
 		        slidesToShow: 1,
 		        slidesToScroll: 1,
 		        centerMode: true,
-	        	centerPadding: "20px",
-	        	infinite: true
+	        	centerPadding: "20px"
 		      }
 		    }
 		    // You can unslick at a given breakpoint now by adding:
@@ -665,6 +667,9 @@ function initPanelSlider(){
 		  ]
 		})
 	});
+
+	// Slider Width Fix Hack prevent body scrolling
+	setTimeout( function() {$(".slick-next").trigger("click") }, 300);		
 
 	lockSlickTrackIfNotEnoughSlides();
 
@@ -749,7 +754,12 @@ function initLogoSlider() {
 }
 
 function hideSocialMediaIconsIfPanelActive() {
-	$(".panel").hasClass("active") ? $(".social-media-icons").addClass("hidden") : $(".social-media-icons").removeClass("hidden");
+	if ( $(".panel").hasClass("active") && !window.matchMedia('only screen and (max-width: 575px)').matches) {
+		$(".social-media-icons").addClass("hidden") 
+	}
+	else {
+		 $(".social-media-icons").removeClass("hidden");
+	}
 }
 
 function resetBodyScrollX() {
@@ -912,7 +922,7 @@ function resetBios(){
 }
 
 function lockSlickTrackIfNotEnoughSlides() {
-	$(".slick-track").each(function(){
+	$(".slick-track").each(function() {
 		var $slickTrack = $(this);
 
 		if( $slickTrack.find(".slick-slide").length < 3 ) {

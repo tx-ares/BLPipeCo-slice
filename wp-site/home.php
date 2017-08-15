@@ -36,7 +36,7 @@ get_header(); ?>
                             <?php endwhile; endif; ?>
                 </div>
 
-                <div class="feature-slide-box no-img">
+                <div class="feature-slide-box">
                     <div class="row slider-row fh-col" eq-height>
                         <div class="slide-over-left panel" eq-col>
                             <div class="slider-container fw fh">
