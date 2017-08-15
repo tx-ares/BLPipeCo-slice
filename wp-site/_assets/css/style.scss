@@ -2231,7 +2231,15 @@ header {
             }
             &:last-child {
                 margin-right: 0;
-                width: 40px;
+                width: 40px;    
+            }
+            &:nth-last-child(2) {
+                ul {
+                    @include max-screen($xlg) {
+                        left: auto;
+                        right: 0;
+                    }
+                }
             }
             >a {
                 color: $colorLightGrey3;
@@ -2283,7 +2291,8 @@ header {
                 position: absolute;
                 left: 0;
                 top: 100%;
-                left: 18% !important;
+                // left: 18% !important;  // With Features
+
                 background: $colorLightGrey7;
                 width: 320px; // min-height:520px;
                 // padding-top:15px;
@@ -2365,10 +2374,7 @@ header {
                     }
                 }
                 /* End of 2nd <li> */
-                @include max-screen($xlg) {
-                    left: auto;
-                    right: 0;
-                }
+                
 
                 @include max-screen($xlg) {
                     width: 280px;

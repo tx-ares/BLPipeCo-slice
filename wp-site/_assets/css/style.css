@@ -1537,6 +1537,10 @@ header {
       header ul.top-nav > li:last-child {
         margin-right: 0;
         width: 40px; }
+      @media only screen and (max-width: 1280px) {
+        header ul.top-nav > li:nth-last-child(2) ul {
+          left: auto;
+          right: 0; } }
       header ul.top-nav > li > a {
         color: #dbd8cf;
         font-weight: 500;
@@ -1577,7 +1581,6 @@ header {
         position: absolute;
         left: 0;
         top: 100%;
-        left: 18% !important;
         background: #e2eaed;
         width: 320px;
         /* Style of <a> from here forward */
@@ -1638,10 +1641,6 @@ header {
         header ul.top-nav > li > ul li a:first-child:nth-last-child(2):after {
           content: '\f0da';
           font-family: "FontAwesome"; }
-        @media only screen and (max-width: 1280px) {
-          header ul.top-nav > li > ul {
-            left: auto;
-            right: 0; } }
         @media only screen and (max-width: 1280px) {
           header ul.top-nav > li > ul {
             width: 280px; } }
