@@ -5908,12 +5908,16 @@ footer {
     .panel {
         font-size: 1rem;
         min-height: 360px;
+        overflow: hidden;
         height: 360px !important;
         display: inline-block;
         position: relative;
         vertical-align: top;
         width: 50%;
         padding: 0 25px !important;
+        @include max-screen($sm) {
+            width: 100%;
+        }
         @include transition(all .3s);
 
         @include max-screen($md) {

@@ -463,9 +463,13 @@ function initHideElementsIfHomePageTop() {
 
 function resetPanels() { //Resets Blue and Red Panels to neutral state.
 	
-	$(".panel").each(function(){
-		$(this).removeClass("active compressed");
-	})
+
+	if (!window.matchMedia('only screen and (max-width: 575px)').matches) {
+		$(".panel").each(function() {
+			$(this).removeClass("active compressed");
+		});
+	}
+	
 	$(".panel-slider").each(function(){
 		$(this).css("opacity",0);
 		$(this).removeClass("loaded");
@@ -669,7 +673,7 @@ function initPanelSlider(){
 	});
 
 	// Slider Width Fix Hack prevent body scrolling
-	setTimeout( function() {$(".slick-next").trigger("click") }, 300);		
+	// setTimeout( function() {$(".slick-next").trigger("click") }, 300);		
 
 	lockSlickTrackIfNotEnoughSlides();
 
