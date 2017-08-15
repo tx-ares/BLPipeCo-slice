@@ -6,6 +6,7 @@
     <!-- set the viewport width and initial-scale on mobile devices -->
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    
     <title>B&amp;L Pipe Company</title>
     <style>
     html,

@@ -151,7 +151,7 @@ function page_body_class( $classes ) {
 	$page_template = get_page_template_slug( get_queried_object_id() );
 
 	if(is_home()) {
-		$classes[] = 'home homepage';
+		$classes[] = 'fullpage home homepage';
 	}
 	else if(is_page_template('page-services.php')) {
 		$classes[] = 'fullpage main-content-fullpage landing';

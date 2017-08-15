@@ -2156,7 +2156,10 @@ body {
     @include max-screen($md) {
         max-width: 100% !important;
         overflow-x: hidden !important;
-    } // @include max-screen($xsm) {
+    } 
+
+
+    // @include max-screen($xsm) {
     //  max-width: 100% !important;
     //  overflow-x: hidden !important;
     // }    

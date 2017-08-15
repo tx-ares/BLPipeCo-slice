@@ -1,4 +1,4 @@
-console.log("Mic check!, KOALA WORKS for JS - WP-Site - Check x11")
+console.log("Mic check! - 3")
 // console.log(templateUrl, " <<template url")
 
 function showPage() {
@@ -329,7 +329,7 @@ function initToggleActiveClass() {
 	
 	$('[toggle-active-opener]').each(function(){
 		console.log($(this) , " << a toggler")
-		
+
 		$(this).click(function (e) {
 			e.preventDefault();
 
@@ -448,7 +448,7 @@ function initHideFooterIfHomepage() {
 
 function initHideElementsIfHomePageTop() {
 
-	if ($("body").hasClass('home') && $(this).scrollTop() == 0 && !window.matchMedia('only screen and (max-width: 1024px)').matches) {
+	if ($("body").hasClass("home") && $(this).scrollTop() == 0 && !window.matchMedia('only screen and (max-width: 1024px)').matches) {
 		$("header").css("background", "rgba(0,38,60,0)");
 		$(".social-media-icons").css("right" , -40);
 		resetBodyScrollX();
@@ -672,6 +672,8 @@ function initPanelSlider(){
 
 function initLogoSlider() {
 	console.log("Logo Slider INIT")
+
+	"use strict";
 
 	$(".logo-slider").each(function(){
 		$(this).slick({
