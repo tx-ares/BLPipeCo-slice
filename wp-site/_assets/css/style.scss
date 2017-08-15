@@ -5887,6 +5887,8 @@ footer {
 .feature-slide-box {
     position: relative;
     cursor: pointer;
+    width: 100%;
+    max-width: 100%;
     .panel-label {
         overflow: hidden;
         display: inline-block;

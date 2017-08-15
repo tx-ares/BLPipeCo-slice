@@ -180,14 +180,14 @@ function page_body_class( $classes ) {
 }
 
 /* OCTG & Upstream Products */
-function blpc_products_rollovers($posttype) {
+function blpc_products_rollovers($post_type) {
 
 	$args = array( 
 		'parent' => 0,
 		'exclude' => 2347,
 		'sort_column' => 'menu_order', 
 		'sort_order' => 'asc',
-		'post_type' => $posttype
+		'post_type' => $post_type
 	);
 	
 	$pages = get_pages( $args );
@@ -224,34 +224,6 @@ function blpc_products_rollovers($posttype) {
 	                    </a>
                    	
                 	</div>';	
-	}
-	echo $string;
-}
-
-/* services */
-function blpc_services_tile_pages() { 
-	$args = array( 
-		'parent' => 0,
-		'sort_column' => 'menu_order', 
-		'sort_order' => 'asc',
-		'post_type' => 'services'
-	);
-	
-	$pages = get_pages( $args );
-	
-	foreach ( $pages as $page ) { 
-		$icon = get_field('page_menu_icon', $page->ID);
-		$string .= '<div class="col-lg-3 col-md-4 col-sm-4 col-xs-6" eq-col>
-                    <a href="'.get_post_permalink( $page->ID ).'" class="tframe fw fh text-center item-box">
-                        <div class="tcell valign-mid">
-                            <div class="container-fluid">
-                                <img src="'.$icon['url'].'" alt="'.$icon['alt'].'" class="icon" />
-                                <h2>' . $page->post_title . '</h2>
-                                <p class="details">' . get_field('page_menu_desc', $page->ID)  . '</p>
-                            </div>
-                        </div>
-                    </a>	
-                </div>';							
 	}
 	echo $string;
 }
@@ -317,7 +289,7 @@ function blpc_menu_list_pages() {
 	echo $string;
 }
 
-/* insights news */
+/* Insights News */
 function blpc_insights_news_list() {
 	$args = array( 'numberposts' => '4',
 									'category_name' => 'latest-news');
@@ -395,7 +367,7 @@ function blpc_insights_blog_list() {
 	echo $string;
 }
 
-/* home latest news */
+/* Home Latest News */
 function blpc_home_news_list() {
 	$args = array( 'numberposts' => '3',
 					'category_name' => 'latest-news');
@@ -424,7 +396,7 @@ function blpc_home_news_list() {
 	echo $string;
 }
 
-/* primary carousel */
+/* Primary Carousel */
 function blpc_primary_carousel() { 
 	$args = array( 
 		'post_type' => 'carousel',
@@ -470,14 +442,14 @@ function blpc_primary_carousel() {
 }
 
 /* Products Carousel */
-function blpc_products_carousel($posttype) {
+function blpc_products_carousel($post_type) {
 
 	$args = array( 
 		'parent' => 0,
 		'exclude' => 2347,
 		'sort_column' => 'menu_order', 
 		'sort_order' => 'asc',
-		'post_type' => $posttype
+		'post_type' => $post_type
 	);
 	
 	$pages = get_pages( $args );
@@ -558,7 +530,7 @@ function blpc_logo_carousel() {
 	echo $string;
 }												
 
-/* post type pager */
+/* Post Type Pager*/
 function blpc_post_type_pager($post_type) {
 		global $post;
 		$args = array( 

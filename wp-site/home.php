@@ -36,7 +36,55 @@ get_header(); ?>
                             <?php endwhile; endif; ?>
                 </div>
 
-                
+                <div class="feature-slide-box no-img">
+                    <div class="row slider-row fh-col" eq-height>
+                        <div class="slide-over-left panel" eq-col>
+                            <div class="slider-container fw fh">
+                                <div class="loading-container">
+                                    <i class="fa fa-spinner fa-spin fa-3x fa-fw"></i>
+                                </div>
+                                <span class="panel-title">Casing &amp; Tubing Products</span>
+                                <!-- Start Slider -->
+                                <div class="panel-slider" eh-height>
+                                    <!-- Product Carousel Left -->
+                                    <?php blpc_products_carousel('octg'); ?>
+
+                                </div>
+                                <!-- End Slider -->
+                            </div>
+                            <div class="panel-label">
+                                <h2 class="text-flip text-upcase">OCTG Products</h2>
+                                <div class="txt-content">
+                                    <img src="<?php echo get_template_directory_uri(); ?>/_assets/images/ui/Pipes.png" class="icon">
+                                    <p> Providing access to an extensive inventory of OCTG products in every active U.S. drilling region. </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="slide-over-right panel" eq-col>
+                            <div class="slider-container fw fh">
+                                <div class="loading-container">
+                                    <i class="fa fa-spinner fa-spin fa-3x fa-fw"></i>
+                                </div>
+                                <span class="panel-title">Upstream Products</span>
+                                <!-- Start Slider -->
+                                <div class="panel-slider" eh-height>
+                                    <!-- Product Carousel Right -->
+                                    <?php blpc_products_carousel('upstreamproducts'); ?>
+                                   
+                                </div>
+
+                                <!-- End Slider -->
+                            </div>
+                            <div class="panel-label">
+                                <h2 class="text-upcase text-flip">Upstream Products</h2>
+                                <div class="txt-content">
+                                    <img src="<?php echo get_template_directory_uri(); ?>/_assets/images/ui/barrels.png" class="icon">
+                                    <p>Expanding our product and service offerings to help streamline the E&amp;P supply chain process</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
 
                 <script type="text/javascript">console.log("from home.php 6 ")</script>
                         
