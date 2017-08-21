@@ -422,6 +422,8 @@ ul.locations-list {
           padding-left: 40px; } }
   .mill-sources-container ul.list li {
     margin-bottom: 0; }
+  .mill-sources-container .info-box p:first-child {
+    margin-bottom: .675rem; }
   @media only screen and (max-width: 992px) {
     .mill-sources-container {
       width: 70%; } }

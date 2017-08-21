@@ -630,6 +630,12 @@ ul.locations-list {
         }
     }
 
+    .info-box {
+        p:first-child {
+            margin-bottom: .675rem;
+        }
+    }
+
     @include max-screen ($md) {
         width: 70%;
     }
