@@ -402,8 +402,7 @@ ul.locations-list {
     padding-bottom: 40px; }
   .mill-sources-container .row > [class^="col-"],
   .mill-sources-container .row > [class*=" col-"] {
-    padding-left: 0;
-    padding-right: 15px; }
+    padding-left: 0; }
     @media only screen and (max-width: 575px) {
       .mill-sources-container .row > [class^="col-"],
       .mill-sources-container .row > [class*=" col-"] {

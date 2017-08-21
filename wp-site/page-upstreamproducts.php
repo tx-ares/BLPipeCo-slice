@@ -98,11 +98,11 @@ get_header(); ?>
                 </div>
 
                 <!-- Side Navigation -->
-                <div class="side-nav">
+                <!-- <div class="side-nav">
                    <?php
                       echo blpc_custom_menu_list_pages('upstreamproducts'); 
                     ?>
-                </div>
+                </div> -->
 
 
             </div>
