@@ -2592,6 +2592,8 @@ header {
             img {
                 // width:85px!important;
                 height: 50px!important;
+                margin-left: 10px; //
+                margin-top: 5px; //
             }
 
             .slogan {
@@ -4583,7 +4585,7 @@ footer {
 
     .call-us {
         text-align: left;
-
+        padding-left: 20px;
         .h3 {
             font-weight: 500;
             @include font-size(30px);
@@ -4591,9 +4593,23 @@ footer {
             color: $colorDarkBlue;
             letter-spacing: 2px;
         }
+        @include max-screen($xxlg) {
+            padding-left: 10px;
+        }
+
+        @include max-screen($xlg) {
+            padding: 0 15px;
+        }
         @include max-screen($md) {
             padding: 0 15px;
-            text-align: center;
+            // text-align: left;
+        }
+        @include max-screen($xmd) {
+            padding: 0 35px;
+            // text-align: left;
+        }
+        @include max-screen($sm) {
+            padding: 0 15px;
         }
     }
 
@@ -4616,30 +4632,31 @@ footer {
         }
 
         >[class*="col-"]:nth-child(1) {
-            padding: 0 35px;
-            @include max-screen($sm) {
-                padding: 0;
-            }
+            padding: 0;
+            // @include max-screen($sm) {
+            //     padding: 0;
+            // }
 
             .num {
                 // padding-top: 15px;
-                min-width: 150px;
+                // min-width: 150px;
+                @include transition(.3s all);
                 @include font-size(40px);
 
                 @include max-screen($xxlg) {
                     @include font-size(36px);
                 }
                 @include max-screen($xlg) {
-                    @include font-size(30px);
+                    @include font-size(24px);
                 }
                 @include max-screen($md) {
                     @include font-size(24px);
                 }
-                @include max-screen($smd) {
-                    @include font-size(36px);
+                @include max-screen($xmd) {
+                    @include font-size(30px);
                 }
                 @include max-screen($sm) {
-                    @include font-size(22px);
+                    @include font-size(24px);
                 }
             }
         }

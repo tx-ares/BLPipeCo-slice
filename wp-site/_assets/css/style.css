@@ -1813,7 +1813,9 @@ header {
       transition: all 0.3s; }
     @media only screen and (max-width: 1024px) {
       header .logo img {
-        height: 50px !important; }
+        height: 50px !important;
+        margin-left: 10px;
+        margin-top: 5px; }
       header .logo .slogan {
         display: none; } }
   header .slogan {
@@ -3106,7 +3108,8 @@ footer {
   -webkit-transition: all 0.3s;
   transition: all 0.3s; }
   .send-request .call-us {
-    text-align: left; }
+    text-align: left;
+    padding-left: 20px; }
     .send-request .call-us .h3 {
       font-weight: 500;
       font-size: 30px;
@@ -3114,10 +3117,21 @@ footer {
       text-transform: uppercase;
       color: #00263b;
       letter-spacing: 2px; }
+    @media only screen and (max-width: 1440px) {
+      .send-request .call-us {
+        padding-left: 10px; } }
+    @media only screen and (max-width: 1280px) {
+      .send-request .call-us {
+        padding: 0 15px; } }
     @media only screen and (max-width: 992px) {
       .send-request .call-us {
-        padding: 0 15px;
-        text-align: center; } }
+        padding: 0 15px; } }
+    @media only screen and (max-width: 768px) {
+      .send-request .call-us {
+        padding: 0 35px; } }
+    @media only screen and (max-width: 575px) {
+      .send-request .call-us {
+        padding: 0 15px; } }
   .send-request .sub-text {
     color: #fff;
     margin-bottom: 1.375rem; }
@@ -3133,12 +3147,12 @@ footer {
     .send-request .row.full-scr {
       min-height: 250px; }
     .send-request .row > [class*="col-"]:nth-child(1) {
-      padding: 0 35px; }
-      @media only screen and (max-width: 575px) {
-        .send-request .row > [class*="col-"]:nth-child(1) {
-          padding: 0; } }
+      padding: 0; }
       .send-request .row > [class*="col-"]:nth-child(1) .num {
-        min-width: 150px;
+        -moz-transition: 0.3s all;
+        -o-transition: 0.3s all;
+        -webkit-transition: 0.3s all;
+        transition: 0.3s all;
         font-size: 40px;
         font-size: 2.5rem; }
         @media only screen and (max-width: 1440px) {
@@ -3147,20 +3161,20 @@ footer {
             font-size: 2.25rem; } }
         @media only screen and (max-width: 1280px) {
           .send-request .row > [class*="col-"]:nth-child(1) .num {
-            font-size: 30px;
-            font-size: 1.875rem; } }
+            font-size: 24px;
+            font-size: 1.5rem; } }
         @media only screen and (max-width: 992px) {
           .send-request .row > [class*="col-"]:nth-child(1) .num {
             font-size: 24px;
             font-size: 1.5rem; } }
-        @media only screen and (max-width: 865px) {
+        @media only screen and (max-width: 768px) {
           .send-request .row > [class*="col-"]:nth-child(1) .num {
-            font-size: 36px;
-            font-size: 2.25rem; } }
+            font-size: 30px;
+            font-size: 1.875rem; } }
         @media only screen and (max-width: 575px) {
           .send-request .row > [class*="col-"]:nth-child(1) .num {
-            font-size: 22px;
-            font-size: 1.375rem; } }
+            font-size: 24px;
+            font-size: 1.5rem; } }
     .send-request .row > [class*="col-"]:nth-child(2) {
       border-left: solid 2px #dbd8cf;
       border-right: solid 2px #fff; }
