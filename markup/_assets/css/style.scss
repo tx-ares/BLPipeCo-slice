@@ -1105,7 +1105,7 @@ $padding-sm: 20px;
 }
 
 .fh {
-    height: 100%;
+    height: 100% !important;
 }
 
 .fw {
@@ -4660,6 +4660,7 @@ footer {
     z-index: 2;
     background-color: $colorSlateBlue;
     @include transition(all .3s);
+   
 
     .call-us {
         .h3 {
@@ -4689,6 +4690,9 @@ footer {
         margin: 0; // margin-top:20px;
         position: relative;
         height: 240px;
+         @include max-screen($md) {
+            height: 240px !important;
+        }
         &.full-scr {
             min-height: 250px;
         }
@@ -6679,7 +6683,8 @@ footer {
 
 .static-slides {
     background: $colorLightGrey7;
-    margin-top: 6px;
+    // margin-top: 6px;
+    height: 100%;
     @include max-screen($smd) {
         display: block;
         width: 100%;

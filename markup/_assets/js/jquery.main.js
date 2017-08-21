@@ -1,5 +1,7 @@
 // console.log("Mic check!, KOALA WORKS for JS")
 
+var templateUrl = '';
+
 function showPage() {
 	"use strict";
 	

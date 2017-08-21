@@ -38,7 +38,7 @@ get_header(); ?>
 <!-- ******************************************************* -->
 <section class="main-content">
     <div class="row compressed" eq-height>
-        <div class="col-md-7 col-sm-12 col-xs-12 main" eq-col>
+        <div class="col-md-8 col-sm-12 col-xs-12 main" eq-col>
             <div class="row compressed">
                 <div class="col-lg-offset-3 col-lg-9 col-md-12 col-sm-12">
                     <div class="container-fluid">
@@ -54,7 +54,7 @@ get_header(); ?>
         <!-- ******************************************************* -->
         <!-- Aside Content -->
         <!-- ******************************************************* -->
-        <div class="col-md-5 col-sm-5 col-xs-12 hidden-sm hidden-xs aside">
+        <div class="col-md-4 col-xs-12 hidden-sm hidden-xs aside">
             <div class="container-fluid">
                 <!-- Send Request -->
                 <div class="send-request" toggle-active-parent>
@@ -101,12 +101,11 @@ get_header(); ?>
                 </div>
 
                 <!-- Side Navigation -->
-                <div class="side-nav">
+                <!-- <div class="side-nav">
                    <?php
                       echo blpc_custom_menu_list_pages('octg'); 
                     ?>
-                </div>
-
+                </div> -->
 
             </div>
         </div>  
