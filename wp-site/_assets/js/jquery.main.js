@@ -806,7 +806,7 @@ function initAnimateWhenInView() { //Animations when a certain element is scroll
 						console.log(delayedTimer, " << timer !")
 						setTimeout(
 							function() { 
-								$(self).addClass("active");
+								$(self).addClass("active"); //add animate.css classes here
 							}, delayedTimer);
 					});
 			}

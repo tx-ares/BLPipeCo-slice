@@ -4596,6 +4596,7 @@ footer {
         }
         @include max-screen($md) {
             padding: 0 15px;
+            padding-left: 50px;
             // text-align: left;
         }
         @include max-screen($xmd) {
@@ -6675,10 +6676,10 @@ footer {
         margin: auto;
         opacity: 1;
         @include transition(opacity .3s);
-        @include transition(background .3s);
-        &:hover {
-            background: rgba(#000, .15);
-        }
+        // @include transition(background .3s);
+        // &:hover {
+        //     background: rgba(#000, .15);
+        // }
         // animation-duration: .5s;
         // animation-delay: .1s;
         &.active {
