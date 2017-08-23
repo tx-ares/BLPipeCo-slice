@@ -211,22 +211,22 @@ function blpc_products_rollovers($post_type) {
 	
 	$pages = get_pages( $args );
 	$string = '';
-	$classes = '';
+	$classes = 'static-container ';
 
 	if ( count($pages) == 1 ) {
-		$classes = 'col-lg-12 col-md-12 col-sm-12 col-xs-12';
+		$classes .= 'col-lg-offset-4 col-lg-4 col-md-offset-3 col-md-6 col-sm-offset-3 col-sm-6 col-xs-12';
 	}
 
 	else if ( count($pages) < 1 && count($pages) > 4 ) {
-		$classes = 'col-lg-4 col-md-6 col-sm-6 col-xs-12';
+		$classes .= 'col-lg-4 col-md-6 col-sm-6 col-xs-12';
 	}
 
 	else if ( count($pages) == 4 ) {
-		$classes = 'col-lg-3 col-md-6 col-sm-6 col-xs-12';
+		$classes .= 'col-lg-3 col-md-6 col-sm-6 col-xs-12';
 	}
 
 	else {
-		$classes = 'col-lg-2 col-md-6 col-sm-6 col-xs-12';
+		$classes .= 'col-lg-2 col-md-6 col-sm-6 col-xs-12';
 	}
 
 	foreach ( $pages as $page ) { 
