@@ -75,6 +75,20 @@ function blpc_search_menu($items, $args) {
 }
 add_filter('wp_nav_menu_items', 'blpc_search_menu', 10, 2);
 
+/* Get Title */
+function blpc_generate_page_title() {
+	
+    if( is_front_page() ) {
+        echo "Home | B&amp;L Pipeco Services";
+    }
+    else {
+        $string = '';
+        $string .= the_title() . " | B&amp;L Pipeco Services";
+        echo $string;
+    }
+    
+}
+
 /* sidebar */
 function blpc_widgets_init() {
 	register_sidebar( array(
