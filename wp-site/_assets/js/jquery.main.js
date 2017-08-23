@@ -796,17 +796,17 @@ function initAnimateWhenInView() { //Animations when a certain element is scroll
 					})
 			}
 
-			if(isScrolledIntoView(staticSlideRow) == true) { //Bounce in left animations for Product Icons on landing pages.
+			if(isScrolledIntoView(staticSlideRow) == true) { //Animations for Product Icons on landing pages.  Can use animate.css
 				var delayedTimer = 0;
 
 				staticSlideRow.find("div.slide-content").each(
 					function(){
-						delayedTimer += 300;
+						delayedTimer += 30;
 						var self = this;
-						// console.log(delayedTimer, " << timer !")
+						console.log(delayedTimer, " << timer !")
 						setTimeout(
 							function() { 
-								$(self).addClass("animated bounceInLeft active");
+								$(self).addClass("active");
 							}, delayedTimer);
 					});
 			}
