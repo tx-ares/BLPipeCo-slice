@@ -15,7 +15,16 @@ get_header(); ?>
                     <div class="container-fluid no-padding ">
                         <img alt="BL Pipeco " data-src="<575:<?php echo the_post_thumbnail_url('full'); ?>, <768:<?php echo the_post_thumbnail_url('full'); ?>,>768:<?php echo the_post_thumbnail_url('full'); ?>" />
                         <div class="subtext-box">
-                            <h1><?php the_title(); ?> </h1>
+                            <h1>
+                                <?php 
+                                    if(get_field('alternate_h1_heading')) {
+                                        echo get_field('alternate_h1_heading');
+                                    }
+                                    else {
+                                        the_title();
+                                    }; 
+                                ?>
+                            </h1>
                         </div>
                     </div>
                 </div>
@@ -29,7 +38,7 @@ get_header(); ?>
 <!-- ******************************************************* -->
 <section class="main-content">
     <div class="row compressed" eq-height>
-        <div class="col-md-7 col-sm-12 col-xs-12 main" eq-col>
+        <div class="col-md-8 col-sm-12 col-xs-12 main" eq-col>
             <div class="row compressed">
                 <div class="col-lg-offset-3 col-lg-9 col-md-12 col-sm-12">
                     <div class="container-fluid">
@@ -45,7 +54,7 @@ get_header(); ?>
         <!-- ******************************************************* -->
         <!-- Aside Content -->
         <!-- ******************************************************* -->
-        <div class="col-md-5 col-sm-5 col-xs-12 hidden-sm hidden-xs aside">
+        <div class="col-md-4 col-xs-12 hidden-sm hidden-xs aside">
             <div class="container-fluid">
                 <!-- Send Request -->
                 <div class="send-request" toggle-active-parent>
@@ -92,11 +101,11 @@ get_header(); ?>
                 </div>
 
                 <!-- Side Navigation -->
-                <div class="side-nav">
+              <!--   <div class="side-nav">
                    <?php
                       echo blpc_custom_menu_list_pages('services'); 
                     ?>
-                </div>
+                </div> -->
 
 
             </div>
@@ -120,7 +129,7 @@ get_header(); ?>
                                     <div class="row compressed grey7">
 
                                     <!-- Product Row -->
-                                    <?php blpc_products_rollovers('services'); ?>
+                                    <?php blpc_services_rollovers('services'); ?>
 
                                     </div>
                                 </div>   
