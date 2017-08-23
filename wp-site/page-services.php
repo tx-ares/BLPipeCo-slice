@@ -124,21 +124,6 @@ get_header(); ?>
                     <div class="container-fluid no-padding">
 
                         <div class="row compressed row-no-padding">
-                            <div class="col-md-12 col-sm-12 col-xs-12">
-                                <div class="static-slides" eq-height>
-                                    <div class="row compressed grey7">
-
-                                    <!-- Product Row -->
-                                    <?php blpc_services_rollovers('services'); ?>
-
-                                    </div>
-                                </div>   
-                            </div>                 
-                        </div>
-
-
-
-                        <div class="row compressed row-no-padding">
                             <div class="col-xs-12 visible-sm visible-xs">
                                 <div class="send-request" toggle-active-parent>
                                     <div class="row full-scr" eq-height>

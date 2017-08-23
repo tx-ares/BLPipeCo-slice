@@ -786,7 +786,7 @@ function initAnimateWhenInView() { //Animations when a certain element is scroll
 	var logoRow = $(".logo-row");
 		staticSlideRow = $(".static-slides");
 
-	if($("body").hasClass("landing")) { //Pulsing animation for Logo row on landing pages.
+	if($("body").hasClass("landing") && !$("body").hasClass("services") ) { //Pulsing animation for Logo row on landing pages.
 		$(window).scroll(function(){
 
 			if(isScrolledIntoView(logoRow) == true) {

@@ -168,7 +168,7 @@ function page_body_class( $classes ) {
 		$classes[] = 'fullpage homepage home';
 	}
 	else if(is_page_template('page-services.php')) {
-		$classes[] = 'fullpage main-content-fullpage landing';
+		$classes[] = 'fullpage main-content-fullpage services landing';
 
 	}
 	else if(is_page_template('page-octg.php')) {
