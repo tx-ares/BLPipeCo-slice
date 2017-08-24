@@ -841,10 +841,10 @@ function initBioBoxes() {
 
 		$photoItems.each(function(index){
 			var $photoItem = $(this);
-				$photoItemId = index;
+				// $photoItemId = index;
 			    $bioExpander = $photoItem.find(".info-wrapper");
 
-			    console.log($photoItemId , " << photoItemId");
+			    console.log(index, " << index");
 
 			// console.log($photoItem)
 			$bioExpander.on("click" , function(e) {
@@ -864,7 +864,7 @@ function initBioBoxes() {
 					$("<div/>", 
 						{
 							class: "bioBox",
-						    id: $photoItemId,					    
+						    id: index,					    
 						    title: "biography",
 						    //html to be filled dynamically by CMS.
 						    html: bioArray[index]
