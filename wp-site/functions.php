@@ -296,6 +296,8 @@ function blpc_services_rollovers($post_type) {
 	echo $string;
 }
 
+
+
 /* Management Team Bios */
 function blpc_bio_tiles($post_id) { 
 
@@ -310,8 +312,25 @@ function blpc_bio_tiles($post_id) {
 	
 	$pages = get_posts( $args );
 	$string = '';
+	$bioArray = array();
+	$bioIndex = '';
 
-	foreach ( $pages as $page ) { 
+	foreach ( $pages as $page ) {
+
+		/* Localize Team Bio Data */
+
+		$bioIndex = '<h3>' 
+						. get_field('people_name', $page->ID) . 
+					'</h3>
+					<h4>' 
+						. get_field('people_title', $page->ID) . 
+					'</h4> 
+					<p>' 
+						. get_field('people_biography' , $page->ID) .
+					'</p>';
+
+		array_push($bioArray, $bioIndex);
+
 		$photo = get_field('people_photo', $page->ID);
 		$string .= '<div class="photo-item">
 						<div class="img-wrapper">
@@ -332,12 +351,16 @@ function blpc_bio_tiles($post_id) {
 									</div>
 								</div>
 							</div>
-						</div>	
-					</div>';							
+						</div>
+
+					</div>
+
+					';							
 	}
 
-
 	echo $string;
+	echo "<script>var bioArray = " . json_encode($bioArray) . ';</script>';
+
 }
 
 /* menu_list_pages */

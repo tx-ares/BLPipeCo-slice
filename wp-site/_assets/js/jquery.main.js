@@ -834,14 +834,18 @@ function initLogo() {
 
 function initBioBoxes() {
 	console.log("fixing BIOBOXES php")
+	console.log(bioArray, " << did we pass php data?")
+
 	if ($("body").hasClass("bio")) {
 		var $photoItems = $(".photo-item");
-			
 
 		$photoItems.each(function(index){
 			var $photoItem = $(this);
 				$photoItemId = index;
 			    $bioExpander = $photoItem.find(".info-wrapper");
+
+			    console.log($photoItemId , " << photoItemId");
+
 			// console.log($photoItem)
 			$bioExpander.on("click" , function(e) {
 				e.stopPropagation();
@@ -863,13 +867,7 @@ function initBioBoxes() {
 						    id: $photoItemId,					    
 						    title: "biography",
 						    //html to be filled dynamically by CMS.
-						    html: $.ajax({
-									  url: templateUrl + "/biobox.php",
-									  success: function(data) {
-									  	console.log(data , " << data")
-										$(this).html(data);
-									  }
-									})
+						    html: bioArray[index]
 
 						}).on("click", function(e) {
 							e.stopPropagation();
