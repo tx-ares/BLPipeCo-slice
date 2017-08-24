@@ -193,6 +193,16 @@ get_header(); ?>
 
             </div>
 
+              <!-- Feature CTA Right -->
+                <?php 
+                    $feature_id1 = get_field('any_feature_right'); 
+                    
+                    if($feature_id1) {
+                        echo blpc_content_feature_right($feature_id1); 
+                    }
+                   
+                ?>
+
 
             <!-- Sidebar General -->
             <!-- <?php if ( is_active_sidebar( 'sidebar_general' ) ) : ?>
