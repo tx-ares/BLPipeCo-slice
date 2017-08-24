@@ -3984,6 +3984,8 @@ footer {
     line-height: 150%;
 
     .main {
+        min-height: 50vh;
+
         >.container-fluid {
             padding-right: 40px;
         }

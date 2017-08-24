@@ -1,10 +1,20 @@
 /* CSS Document */
 
+#bitnami-banner {
+    display: none;
+}
+
+
+/*Temporary Disable while under Development */
+
 
 /* Import here reusable tools for saas */
 
 @import "_mixin.mediaqueries";
 @import "_mixin.toolbox";
+
+
+
 
 
 
@@ -49,11 +59,6 @@ $colorLightGrey4: #878686;
 $colorLightGrey5: #959595;
 $colorLightGrey6: #c2c2c2;
 $colorDarkGrey: #333;
-$colorGreen: #00aa66;
-$colorLightGreen: #07bd74;
-$colorDarkGreen: #00492c;
-$colorOrange: #ff7441;
-$colorLightOrange: #ff6927;
 $colorRedOrange: #d55441;
 
 
@@ -99,6 +104,7 @@ $font-icon:'FontAwesome';
     clear: both;
     float: none;
 }
+
 
 
 
@@ -191,10 +197,26 @@ p,
 hr {
     margin-top: 0;
     font-weight: normal;
+    &.slateblue {
+        color: $colorSlateBlue !important;
+    }
+    &.slateblue2 {
+        color: $colorSlateBlue2 !important;
+    }
+    &.brightRed {
+        color: $colorBrightRed1 !important;
+    }
 }
 
 p {
     margin-bottom: 1.875rem;
+    &.h3 {
+        @include font-size(18px);
+        text-transform: uppercase;
+        color: $colorDarkBlue;
+        font-weight: 700;
+        margin-bottom: 15px;
+    }
 }
 
 h1 {
@@ -237,6 +259,9 @@ hr {
 
 
 
+
+
+
 /* Text settings */
 
 .text-upcase {
@@ -269,6 +294,19 @@ hr {
 }
 
 
+.pull-left-md {
+    @include max-screen($md) {
+        float: left;
+    }
+}
+
+.no-padding-md {
+    @include max-screen($md) {
+        padding: 0 !important;
+    }
+}
+
+
 
 
 
@@ -277,6 +315,9 @@ hr {
 .f500 {
     font-weight: 500 !important;
 }
+
+
+
 
 
 
@@ -295,6 +336,9 @@ hr {
 .disp-bl {
     display: block;
 }
+
+
+
 
 
 
@@ -325,7 +369,7 @@ blockquote {
         top: 0;
         left: 0;
         width: 5px;
-        height: 100%; // background:$colorGreen;
+        height: 100%; // background:$colorDarkBlue;
     }
 
     &.pull-left {
@@ -373,6 +417,9 @@ blockquote {
 
 
 
+
+
+
 /* Unordered List */
 
 ul {
@@ -381,10 +428,17 @@ ul {
     /*Fix for IE10-11 adding bullets*/
     padding: 0;
     margin: 0;
-     &.columnsof3 {
+    &.columnsof3 {
         -webkit-column-count: 4;
         -moz-column-count: 4;
         column-count: 4;
+        @include max-screen($sm) {
+            -webkit-column-count: 1;
+            -moz-column-count: 1;
+            column-count: 1;
+            width: 80%;
+            margin: auto;
+        }
     }
 }
 
@@ -434,26 +488,55 @@ ul.list {
     }
 }
 
+
+
 ul.list-with-logos {
     position: relative;
     margin-bottom: 40px;
     margin-top: 20px;
+    width: 100%;
 
     .logo-container {
         display: inline-block;
         width: auto;
         vertical-align: top;
+
+        @include max-screen ($xmd) {
+            width: 100%;
+            display: block;
+            text-align: center;
+            margin: 0 auto;
+            margin-top: 10%;
+        }
+
+        @include max-screen ($sm) {
+            width: 80%;
+            // margin-top: 25%;
+        }
     }
 
     li {
         position: relative;
         padding-left: 20px;
         margin-bottom: 15px;
+
         margin-left: 15px;
         margin-bottom: 30px;
 
-        display:inline-block;
-        width: 66%;
+        display: inline-block;
+        width: 45%;
+
+        @include max-screen ($xmd) {
+
+            width: 50%;
+            display: block;
+            text-align: left;
+            margin: 20px auto;
+        }
+
+        @include max-screen ($sm) {
+            width: 80%;
+        }
 
         &:before {
             content: '\f0c8';
@@ -466,8 +549,10 @@ ul.list-with-logos {
         }
 
         ul {
-            padding-left: 10px;
+            // padding-left: 10px;
+            margin-left: -10px;
             margin-top: 20px;
+
 
             li {
                 width: 100%;
@@ -478,25 +563,103 @@ ul.list-with-logos {
                     color: $colorLightGrey5;
                 }
             }
-
-            ul {
-
-                li {
-                    &:before {
-                        content: '\f111';
-                        @include font-size(6px);
-                        color: $colorRedOrange;
-                    }
-                }
-            }
         }
     }
 }
 
-.list-container {
-    margin-top: 40px;
-    margin-bottom: 40px;
+ul.locations-list {
+    margin: 20px 0 20px 0;
+
+    li {
+        padding-bottom: 20px;
+        @include max-screen($xmd) {
+            height: 100%;
+            vertical-align: top;
+        }
+    }
+
+    li:not(:first-child) {
+        width: 45%;
+        display: inline-block;
+        @include max-screen($xmd) {
+            display: block;
+            width: 100%;
+        }
+    }
 }
+
+.mill-sources-container {
+    margin-top: 40px;
+
+    >[class*="row"] {
+        padding-bottom: 40px;
+    }
+
+    .row {
+        >[class^="col-"],
+        >[class*=" col-"] {
+            padding-left: 0;
+            // padding-right: 15px;
+            @include max-screen($sm) {
+                margin-bottom: 40px;
+                padding-left: 20px;
+                padding-right: 20px;
+            }
+        }
+    }
+
+    .logo-container {
+        margin-bottom: 20px;
+    }
+
+    .list-container {
+        margin-left: -40px;
+        margin-right: -40px;
+    
+        @include max-screen ($sm) {
+            padding-left: 20px;
+            h3 {
+                padding-left: 40px;
+            }
+        }
+    }
+
+    ul.list {
+        li {
+            margin-bottom: 0;
+        }
+    }
+
+    .info-box {
+        p:first-child {
+            margin-bottom: .675rem;
+        }
+    }
+
+    @include max-screen ($md) {
+        width: 70%;
+    }
+
+    @include max-screen ($xmd) {
+        width: 100%;
+
+        .logo-container {
+            text-align: center;
+        }
+        .info-box {
+            width: 40%;
+            margin: auto;
+        }
+    }
+
+    @include max-screen ($sm) {
+        .info-box {
+            width: 80%;
+        }
+    }   
+}
+
+
 
 img.lazy {
     @include opacity(0);
@@ -520,9 +683,6 @@ img[src] {
 }
 
 
-
-
-
 /* Forms */
 
 form {
@@ -536,6 +696,9 @@ form {
         }
     }
 }
+
+
+
 
 
 
@@ -563,6 +726,9 @@ button {
     line-height: 120%;
     margin-bottom: 10px;
 }
+
+
+
 
 
 
@@ -610,6 +776,9 @@ label {
 
 
 
+
+
+
 /* Custom Select */
 
 select {
@@ -620,11 +789,17 @@ select {
 
 
 
+
+
+
 /* Custom Checkbox */
 
 input[type=checkbox] {
     display: none;
 }
+
+
+
 
 
 
@@ -657,9 +832,15 @@ input[type=checkbox]+label:before {
 
 
 
+
+
+
 /* unchecked icon */
 
 input[type=checkbox]+label:before {}
+
+
+
 
 
 
@@ -669,8 +850,11 @@ input[type=checkbox]+label:before {}
 
 input[type=checkbox]:checked+label:before {
     content: "\f00c";
-    color: $colorGreen;
+    color: $colorDarkBlue;
 }
+
+
+
 
 
 
@@ -679,6 +863,9 @@ input[type=checkbox]:checked+label:before {
 /* checked icon */
 
 input[type=checkbox]:checked+label:before {}
+
+
+
 
 
 
@@ -730,14 +917,6 @@ textarea:-ms-input-placeholder                      { color: $colorDarkGrey; }*/
         color: $colorWhite;
     }
 
-    &.orange {
-        background: $colorOrange;
-
-        &:hover,
-        &:focus {
-            background: $colorLightOrange;
-        }
-    }
 
     &.whiteline {
         background: none;
@@ -756,7 +935,7 @@ textarea:-ms-input-placeholder                      { color: $colorDarkGrey; }*/
         &.whiteline {
             &:hover,
             &:focus {
-                color: $colorGreen;
+                color: $colorDarkBlue;
             }
         }
     }
@@ -767,7 +946,7 @@ textarea:-ms-input-placeholder                      { color: $colorDarkGrey; }*/
         &.whiteline {
             &:hover,
             &:focus {
-                color: $colorDarkGreen;
+                color: $colorDarkBlue2;
             }
         }
     }
@@ -795,16 +974,9 @@ textarea:-ms-input-placeholder                      { color: $colorDarkGrey; }*/
     }
 }
 
-.orange {
-    .btn {
-        &.whiteline {
-            &:hover,
-            &:focus {
-                color: $colorOrange;
-            }
-        }
-    }
-}
+
+
+
 
 
 
@@ -845,7 +1017,7 @@ figure {
             right: 0;
             bottom: 0;
             width: 2px;
-            height: 100%; // background:$colorOrange;
+            height: 100%; // background:$colorBrightRed1;
             z-index: 99;
         }
     }
@@ -872,6 +1044,9 @@ figure {
         }
     }
 }
+
+
+
 
 
 
@@ -908,6 +1083,8 @@ $padding-sm: 20px;
 
     &.slider-row {
         margin: 0;
+        font-size: 0;
+        width: 100%;
         &:after {
             background: $colorBrightRed2;
             height: 360px;
@@ -1004,6 +1181,14 @@ $padding-sm: 20px;
     padding: 0 !important;
 }
 
+.row-pad-right-first-child {
+
+     >[class*="col-"]:first-child {
+        padding-right: 40px !important;
+        padding-left: 0 !important;
+    }
+}
+
 .no-margin {
     margin: 0 !important;
 }
@@ -1028,71 +1213,13 @@ $padding-sm: 20px;
     }
 }
 
-
-.mill-sources-container {
-    margin-top: 40px;
-    
+.pad-rows-bottom-40 {  
     >[class*="row"] {
         padding-bottom: 40px;
     }
-
-    .row {
-        >[class^="col-"],
-        >[class*=" col-"] {
-            padding-left: 0;
-            padding-right: 15px;
-            @include max-screen($sm) {
-                margin-bottom: 40px;
-                padding-left: 20px;
-                padding-right: 20px;
-            }
-        }
-    }
-
-    .logo-container {
-        margin-bottom: 20px;
-    }
-
-    .list-container {
-        margin-left: -40px;
-        margin-right: -40px;
-    
-        @include max-screen ($sm) {
-            padding-left: 20px;
-            h3 {
-                padding-left: 40px;
-            }
-        }
-    }
-
-    ul.list {
-        li {
-            margin-bottom: 0;
-        }
-    }
-
-    @include max-screen ($md) {
-        width: 70%;
-    }
-
-    @include max-screen ($xmd) {
-        width: 100%;
-
-        .logo-container {
-            text-align: center;
-        }
-        .info-box {
-            width: 40%;
-            margin: auto;
-        }
-    }
-
-    @include max-screen ($sm) {
-        .info-box {
-            width: 80%;
-        }
-    }   
 }
+
+
 
 
 
@@ -1105,7 +1232,7 @@ $padding-sm: 20px;
 }
 
 .fh {
-    height: 100% !important;
+    height: 100%;
 }
 
 .fw {
@@ -1131,6 +1258,9 @@ $padding-sm: 20px;
 .pos-rel {
     position: relative;
 }
+
+
+
 
 
 
@@ -1223,6 +1353,9 @@ $padding-sm: 20px;
         }
     }
 }
+
+
+
 
 
 
@@ -1618,8 +1751,8 @@ $padding-sm: 20px;
             .search-btn {
                 display: block;
                 position: absolute;
-                top: 78px;
-                right: 17px;
+                top: 18px; //78px
+                right: 18px; //17px
 
                 &:hover {
                     color: $colorBrightRed2;
@@ -1687,15 +1820,16 @@ $padding-sm: 20px;
             margin-left: 1px;
             text-align: center;
             font-weight: 300!important;
-            font-size: 26px;
+            font-size: 20px; //26px
             color: $colorBrightRed1;
             &:after {
-                content: '+';
+                font-family: $font-icon;
+                content: '\f067';
                 position: absolute;
                 width: 19px;
                 height: 19px;
                 left: 50%;
-                top: 50%;
+                top: 52%; //50%
                 @include transform(translate(-50%,
                 -50%));
                 font-weight: 300!important;
@@ -1712,7 +1846,8 @@ $padding-sm: 20px;
             &.open {
                 >a {
                     .holder:after {
-                        content: '-';
+                        font-family: $font-icon;
+                        content: '\f068';
                     }
                     >span:not(.holder) {
                         &:after {
@@ -1791,7 +1926,7 @@ $padding-sm: 20px;
                         >a {
                             font-weight: 400;
                             >span {
-                                background: $colorDarkBlue;
+                                background: $colorSlateBlue;
                                 color: $colorWhite;
                             }
                             >.holder {
@@ -1820,6 +1955,9 @@ $padding-sm: 20px;
                                         text-transform: none;
                                         padding: 12px 30px!important;
                                         padding-left: 45px!important;
+
+                                        background: $colorDarkBlue;
+                                        color: $colorWhite;
 
                                         &:before {
                                             content: '';
@@ -1904,6 +2042,9 @@ $padding-sm: 20px;
 
 
 
+
+
+
 /* Social Media Icons */
 
 .social-media-icons {
@@ -1925,6 +2066,7 @@ $padding-sm: 20px;
         background: rgba($colorDarkBlue, .8);
         &.active {
             bottom: 0 !important;
+            left: 0;
         }
     }
     ul {
@@ -1965,6 +2107,9 @@ $padding-sm: 20px;
         }
     }
 }
+
+
+
 
 
 
@@ -2013,7 +2158,10 @@ body {
     @include max-screen($md) {
         max-width: 100% !important;
         overflow-x: hidden !important;
-    } // @include max-screen($xsm) {
+    } 
+
+
+    // @include max-screen($xsm) {
     //  max-width: 100% !important;
     //  overflow-x: hidden !important;
     // }    
@@ -2073,7 +2221,7 @@ header {
             width: 90px; // Transition Style
             margin-right: 10px;
             &:first-child {
-                width: 170px;
+                width: 60px;
             }
             &:nth-child(2) {
                 width: 140px;
@@ -2084,7 +2232,15 @@ header {
             }
             &:last-child {
                 margin-right: 0;
-                width: 40px;
+                width: 40px;    
+            }
+            &:nth-last-child(2) {
+                ul {
+                    @include max-screen($xlg) {
+                        left: auto;
+                        right: 0;
+                    }
+                }
             }
             >a {
                 color: $colorLightGrey3;
@@ -2136,7 +2292,8 @@ header {
                 position: absolute;
                 left: 0;
                 top: 100%;
-                left: 18% !important;
+                // left: 18% !important;  // With Features
+
                 background: $colorLightGrey7;
                 width: 320px; // min-height:520px;
                 // padding-top:15px;
@@ -2196,16 +2353,6 @@ header {
                                 @include font-size(13px);
                                 padding: 12px 30px;
                                 position: relative;
-
-                                &:before {
-                                    // content:'';
-                                    // position:absolute;
-                                    // left:17px;
-                                    // top:15px;
-                                    // background:$colorGreen;
-                                    // width:3px;
-                                    // height:3px;
-                                }
                             }
 
                             &:hover {
@@ -2228,10 +2375,7 @@ header {
                     }
                 }
                 /* End of 2nd <li> */
-                @include max-screen($xlg) {
-                    left: auto;
-                    right: 0;
-                }
+                
 
                 @include max-screen($xlg) {
                     width: 280px;
@@ -2328,6 +2472,7 @@ header {
                 right: -100%;
                 width: 100%;
                 height: 100%; // opacity: 0;
+                color: $colorWhite;
                 @include transition(all .3s);
 
                 &:after {
@@ -2364,8 +2509,23 @@ header {
                     margin-right: 10px;
                     width: auto;
                     background: none;
+                    @include transition(color .3s);
                     &:hover {
-                        color: $colorOrange;
+                        color: $colorSlateBlue2;
+                    }
+                }
+
+                .search-close{
+                    .close {
+                        @include transition(color .3s);
+
+                        &:before,
+                        &:after {
+                             &:hover {
+                                color: $colorSlateBlue2;
+                            }   
+                        }
+                        
                     }
                 }
 
@@ -2426,6 +2586,8 @@ header {
             img {
                 // width:85px!important;
                 height: 50px!important;
+                margin-left: 10px; //
+                margin-top: 5px; //
             }
 
             .slogan {
@@ -2462,20 +2624,8 @@ header {
     ul.top-nav {
         >li {
             >a {
-                padding-top: 52px;
-                padding-bottom: 73px;
-                /*Was 47px*/
+                padding: 54px 40px 72px 10px;
                 @include transition(all .3s);
-
-                @include max-screen($xlg) {
-                    padding-top: 54px;
-                    padding-bottom: 53px;
-                }
-
-                @include max-screen(1100px) {
-                    padding-top: 54px;
-                    padding-bottom: 54px;
-                }
             }
         }
     }
@@ -2552,7 +2702,7 @@ footer {
         background: $colorBrightRed1;
 
         &:hover {
-            // background:$colorOrange;
+            // background:$colorBrightRed1;
             @include transition(background .3s);
         }
 
@@ -2686,6 +2836,46 @@ footer {
             max-height: 0px;
             overflow: hidden;
 
+            #subscribe-form {
+                height: auto;
+                margin: 20px 30px;
+                position: relative;
+
+                .form-title {
+                    display: block;
+                    font-weight: 500;
+                    @include font-size(20px);
+                    color: $colorDarkBlue;
+                    margin: 30px 0;
+                    text-transform: uppercase;
+                    text-align: left;
+                }
+
+                .label-row {
+                    padding: 0 !important;
+                    label {
+                        width: 100%;
+                    }
+                }
+
+                #submit-row {
+                    width: 100%;
+                    position: relative;
+                    input[type="submit"] {
+                        font-weight: 500;
+                        text-transform: uppercase;
+                        background: $colorBrightRed2;
+                        color: $colorWhite;
+                        @include transition (all .3s);
+
+                        &:hover {
+                            background: $colorSlateBlue2;
+                            color: $colorDarkBlue;
+                        }
+                    }
+                }
+            }
+
             .info {
                 padding: 18px 35px;
             }
@@ -2779,19 +2969,117 @@ footer {
 
     #wrapper {
         padding-top: 0!important;
+        width: 100%;
     }
 
-    footer {
-        /*position:fixed;
-        bottom:0;
-        left:0;
-        width:100%;
-        z-index:3;
-        position:relative;
-        
-        @include max-screen($xmd) {
-            position:relative;
-        }*/
+    .banner.homepage {
+
+        .row {
+            >[class*=col-] {
+                max-height: 100vh;
+            }
+        }
+
+        .slider-container {
+            height: auto;
+            width: 100%;
+            display: inline-block;
+
+            .home-slider {
+                position: relative;
+                width: 100% !important;
+                display: block !important; // height: 0;
+                max-height: 100vh;
+
+                @include max-screen($md) {
+                    min-height: 360px;
+                    height: 360px;
+                }
+
+                .slick-list {
+                    height: 100%!important;
+                    max-height: 100vh;
+                    .slick-track {
+                        height: 100%; // demo
+                    }
+                }
+
+                .slider-item {
+                    position: relative;
+                    height: 100% !important;
+                    max-height: 100vh;
+                    @include transition(all .3s);
+                    @include max-screen($md) {
+                        max-height: 360px; // p,
+                        // h1,
+                        // h2,
+                        // h3 {
+                        //     @include font-size(20px);
+                        // }
+                    }
+                    .btn.whiteline {
+                        padding: 0;
+                        position: relative;
+                        a {
+                            position: absolute;
+                            width: 100%;
+                            left: 0;
+                        }
+                        &:hover {
+                            background: $colorWhite;
+
+                            a {
+                                color: $colorDarkBlue;
+                            }
+                        }
+                    }
+                    .subtext-box {
+                        // top: 35% !important;
+                    }
+                }
+
+                .slick-arrow {
+                    // display: none!important;
+                }
+
+                .slick-next,
+                .slick-prev {
+                    // top: 30vw;
+                    &:before {
+                        content: '\f104';
+                        font-family: $font-icon;
+                        color: $colorWhite;
+                        @include font-size(30px);
+                    }
+                }
+
+                .slick-prev {
+                    left: 5%;
+                }
+
+                .slick-next {
+                    right: 5%;
+
+                    &:before {
+                        content: '\f105';
+                    }
+                }
+
+                .slick-dots {
+                    bottom: 5%; // top: 40px;
+                    li {
+                        width: 30px;
+                        height: 10px; // button {
+                    }
+                }
+
+                img {
+                    width: 100%;
+                    height: auto;
+                    height: 100%; //demo
+                }
+            }
+        }
     }
 
     .main-content {
@@ -2809,7 +3097,7 @@ footer {
             .col1 {
                 position: relative;
                 z-index: 2;
-                background: $colorDarkGreen;
+                background: $colorDarkBlue2;
             }
 
             .col2 {
@@ -2839,9 +3127,9 @@ footer {
 
                         a {
                             display: inline-block;
-                            border-left: solid 1px $colorLightGreen;
+                            border-left: solid 1px $colorBrightRed2;
                             padding: 0 15px;
-                            color: $colorDarkGreen;
+                            color: $colorDarkBlue2;
 
                             .title {
                                 display: block;
@@ -2851,11 +3139,11 @@ footer {
                             .date {
                                 display: block;
                                 @include font-size(14px);
-                                color: $colorLightGreen;
+                                color: $colorBrightRed2;
                             }
 
                             &:hover {
-                                color: $colorLightGreen;
+                                color: $colorBrightRed2;
                             }
                         }
                     }
@@ -2866,12 +3154,12 @@ footer {
                         text-transform: uppercase;
                         @include font-size(14px);
                         font-weight: 700;
-                        color: $colorDarkGreen;
+                        color: $colorDarkBlue2;
                         display: inline-block;
                         margin-right: 10px;
 
                         &:hover {
-                            color: $colorLightGreen;
+                            color: $colorBrightRed2;
                         }
 
                         &:last-child {
@@ -2900,7 +3188,7 @@ footer {
             }
 
             .cta {
-                background: $colorDarkGreen;
+                background: $colorDarkBlue2;
 
                 .home-cta {
                     width: 1px;
@@ -2930,11 +3218,6 @@ footer {
                     .slick-list {
                         height: auto!important;
                     }
-
-                    .slick-dots {
-                        display: none!important;
-                    }
-
                     .slick-next,
                     .slick-prev {
                         top: 5vw;
@@ -3016,7 +3299,7 @@ footer {
                     }
 
                     h2 {
-                        color: $colorDarkGreen;
+                        color: $colorDarkBlue2;
                         font-weight: 400;
                         @include font-size(24px);
                         text-transform: none;
@@ -3025,7 +3308,7 @@ footer {
                     }
 
                     p.subtitle {
-                        color: $colorDarkGreen;
+                        color: $colorDarkBlue2;
                         font-weight: 500;
                         @include font-size(18px);
                         text-transform: none;
@@ -3070,7 +3353,7 @@ footer {
                             top: 0;
                             width: 5px;
                             height: 100%;
-                            background: $colorGreen;
+                            background: $colorDarkBlue;
                         }
 
                         >.row.compressed {
@@ -3188,315 +3471,12 @@ footer {
 
         .left-content {
 
-            .home-slider {
-                position: relative;
 
-                .slick-list {
-                    height: auto!important;
-                }
-
-                .slider-item {
-                    position: relative;
-                }
-
-                .slick-arrow {
-                    display: none!important;
-                }
-
-                .slick-next,
-                .slick-prev {
-                    top: 30vw;
-
-                    &:before {
-                        content: '\f104';
-                        font-family: $font-icon;
-                        color: $colorWhite;
-                        @include font-size(30px);
-                    }
-                }
-
-                .slick-prev {
-                    left: 5%;
-                }
-
-                .slick-next {
-                    right: 5%;
-
-                    &:before {
-                        content: '\f105';
-                    }
-                }
-
-                .slick-dots {
-                    top: 40px;
-                    right: 40px;
-                    padding-top: 129px;
-                    display: inline-block!important;
-                    width: auto!important;
-
-                    li {
-                        width: 30px;
-                        height: 10px;
-
-                        button {
-                            width: 30px;
-                            height: 10px;
-
-                            &:before {
-                                content: '';
-                                width: 30px;
-                                height: 10px;
-                                background: $colorWhite;
-                            }
-                        }
-
-                        &.slick-active {
-                            button:before {
-                                background: $colorOrange;
-                            }
-                        }
-                    }
-                }
-
-                img {
-                    width: 100%;
-                    height: auto;
-                }
-
-                .caption {
-                    position: absolute;
-                    bottom: 0;
-                    width: 100%;
-
-                    p {
-                        margin-bottom: 35px;
-                        font-weight: 400;
-                        @include font-size(30px);
-                        color: $colorWhite;
-                        line-height: 120%;
-
-                        .text1 {
-                            font-weight: 500;
-                            @include font-size(24px);
-                            display: block;
-                        }
-
-                        .text2 {
-                            font-weight: 400;
-                            @include font-size(20px);
-                            font-style: italic;
-                            display: block;
-                        }
-                    }
-
-                    .title {
-                        background: rgba($colorDarkGreen, .5);
-                        text-align: right;
-
-                        &.top {
-                            display: none;
-                        }
-                    }
-
-                    h3 {
-                        font-weight: 300;
-                        @include font-size(64px);
-                        margin-bottom: 0;
-                        position: relative;
-                        padding-left: 10px;
-                        display: inline-block;
-                        color: $colorWhite;
-                        text-transform: none;
-
-                        a {
-                            color: $colorWhite;
-                            display: block;
-                        }
-
-                        &:before {
-                            content: '';
-                            width: 10px;
-                            height: 10px;
-                            background: $colorGreen;
-                            position: absolute;
-                            left: -10px;
-                            bottom: 39px;
-                        }
-
-                        span {
-                            background: rgba($colorGreen, .5);
-                            display: inline-block;
-                            height: 100%;
-                            padding: 20px 45px;
-                            margin-left: 35px;
-                        }
-                    }
-                }
-
-                @include max-screen(1500px) {
-
-                    .caption {
-                        p {
-                            @include font-size(26px);
-                        }
-
-                        h3 {
-                            @include font-size(54px);
-                        }
-                    }
-                }
-
-                @include max-screen($xxlg) {
-
-                    .slick-dots {
-                        top: 20px;
-                    }
-
-                    .caption {
-
-                        p {
-                            @include font-size(22px);
-                        }
-
-                        h3 {
-                            @include font-size(44px);
-
-                            &:before {
-                                bottom: 29px;
-                            }
-
-                            span {
-                                padding: 15px 45px;
-                            }
-                        }
-                    }
-                }
-
-                @include max-screen($xlg) {
-                    .slick-dots {
-                        top: 10px;
-                    }
-
-                    .row.compressed>[class*=col-] {
-                        width: 70%;
-                    }
-
-                    .caption {
-                        p {
-                            @include font-size(20px);
-                            margin-bottom: 20px;
-
-                            .text1 {
-                                @include font-size(20px);
-                            }
-
-                            .text2 {
-                                @include font-size(16px);
-                            }
-                        }
-
-                        h3 {
-                            @include font-size(36px);
-
-                            &:before {
-                                bottom: 26px;
-                            }
-
-                            span {
-                                padding: 15px 30px;
-                            }
-                        }
-                    }
-                }
-
-                @include max-screen($lg) {
-
-                    .slick-dots {
-                        display: none!important;
-                    }
-
-                    .slick-arrow {
-                        display: block!important;
-                    }
-
-                    .caption {
-                        margin-top: -51px;
-
-                        .title {}
-
-                        h3 {
-                            &:before {
-                                width: 7px;
-                                height: 7px;
-                            }
-                        }
-
-                        p {
-                            padding: 20px 0;
-                            padding-bottom: 5px;
-
-                            .text1 {
-                                margin-bottom: 15px;
-                            }
-
-                            .text2 {
-                                margin-bottom: 15px;
-                            }
-                        }
-                    }
-                }
-
-                @include max-screen($sm) {
-
-                    .slick-next,
-                    .slick-prev {
-                        top: 40vw;
-                    }
-
-                    .row.compressed>[class*=col-] {
-                        width: inherit;
-                    }
-
-                    .caption {
-                        position: relative;
-
-                        .title {
-                            display: none;
-
-                            &.top {
-                                display: block;
-                            }
-                        }
-
-                        h3 {
-                            @include font-size(24px);
-
-                            &:before {
-                                bottom: 18px;
-                            }
-
-                            span {
-                                padding: 10px 15px;
-                                margin-left: 10px;
-                            }
-                        }
-
-                        p {
-                            @include font-size(18px);
-                        }
-
-                        .container-fluid {
-                            background: $colorGreen;
-                            min-height: 180px;
-                        }
-                    }
-                }
-            }
 
             .seo {
                 h2 {
                     display: inline-block;
-                    background: $colorDarkGreen;
+                    background: $colorDarkBlue2;
                     color: $colorWhite;
                     padding: 15px 0;
                     font-weight: 400;
@@ -3516,6 +3496,9 @@ footer {
         }
     }
 }
+
+
+
 
 
 
@@ -3594,6 +3577,10 @@ footer {
                     margin-top: 5px;
                 }
 
+                @include max-screen($sm) {
+                    margin-left: 10px;
+                }
+
                 @include transition(all .3s);
             }
         }
@@ -3616,7 +3603,7 @@ footer {
         ul.top-nav {
             >li {
                 >a {
-                    padding: 14px 20px 41px;
+                    padding: 20px 20px 35px 10px;
                     @include transition(all .3s);
                 }
             }
@@ -3626,7 +3613,7 @@ footer {
             ul.top-nav {
                 >li {
                     >a {
-                        padding: 18px 20px;
+                        padding: 20px 20px 35px;
                     }
                 }
             }
@@ -3700,62 +3687,13 @@ footer {
     }
 }
 
-// .secondary {
-//      .row {
-//          >[class*="col-"] {
-//              margin: 0 -40px;
-//          }
-//      }
-// }
+
 
 /* ==========================================================================
 
     5. CUSTOM STYLES
             
    ========================================================================== */
-
-.breadcrumbs {
-    background: $colorGreen;
-    padding: 5px 0;
-
-    ul {
-        li {
-            display: inline-block;
-
-            a {
-                display: inline-block;
-                color: $colorWhite;
-                @include font-size(13px);
-
-                &:hover {
-                    color: $colorDarkBlue;
-                }
-            }
-
-            &:after {
-                content: '/';
-                color: $colorWhite;
-                @include font-size(10px);
-                display: inline-block;
-                padding: 0 8px;
-            }
-
-            &:last-child {
-                a {
-                    font-weight: 600;
-                }
-
-                &:after {
-                    display: none;
-                }
-            }
-        }
-    }
-
-    @include max-screen($xmd) {
-        display: none;
-    }
-}
 
 .banner {
     position: relative;
@@ -3816,7 +3754,7 @@ footer {
 
     .subtext-box {
         position: absolute;
-        bottom: 50%;
+        top: 35%;
         width: 100%;
         height: 80px;
         margin: auto;
@@ -3846,21 +3784,32 @@ footer {
             color: $colorWhite;
             font-weight: 600;
             letter-spacing: 2px;
+            @include font-size(48px);
+
+            @include max-screen ($md) {
+                @include font-size(30px);
+            }
         }
 
         .h2 {
             text-align: center;
-            width: 60%;
+            width: 80%;
             margin: auto;
             text-transform: uppercase;
             font-weight: 400;
+            @include max-screen ($md) {
+                @include font-size(20px);
+            }
             @include max-screen($sm) {
-                width: 100%;
+                width: 80%;
             }
         }
 
+        @include max-screen($md) {
+            top: 30% !important;
+        }
+
         @include max-screen($sm) {
-            bottom: 33%;
 
             h1 {
                 @include font-size(24px);
@@ -3881,7 +3830,7 @@ footer {
 
     h1 {
         @include font-size(43px);
-        color: $colorDarkGreen;
+        color: $colorDarkBlue2;
         margin-bottom: 0;
     }
 
@@ -3988,7 +3937,7 @@ footer {
     }
 
     &.compressed {
-        background: $colorDarkGreen;
+        background: $colorDarkBlue2;
         color: $colorWhite;
         padding: 20px 0;
         margin-bottom: 40px;
@@ -4002,7 +3951,7 @@ footer {
         a {
             display: inline-block;
             margin-right: 20px;
-            color: $colorGreen;
+            color: $colorDarkBlue;
             font-family: $font-avenir;
             @include font-size(20px);
 
@@ -4035,6 +3984,8 @@ footer {
     line-height: 150%;
 
     .main {
+        min-height: 50vh;
+
         >.container-fluid {
             padding-right: 40px;
         }
@@ -4052,16 +4003,16 @@ footer {
             @include font-size(30px);
         }
         h2 {
-            margin-top: 35px;
-            margin-bottom: 0px;
+            margin-top: 35px; // margin-bottom: 0px;
             font-weight: 500;
             @include font-size(30px);
         }
 
-        a:not(.btn) {
+        a {
+            font-weight: 700;
             color: $colorBrightRed1;
-            @include transition (color .3s);
             &:hover {
+                @include transition(color .3s);
                 color: $colorSlateBlue2;
             }
         }
@@ -4074,7 +4025,6 @@ footer {
 
         #contact-form {
             height: auto;
-            min-height: 600px;
             margin: 20px 0;
             position: relative;
 
@@ -4099,7 +4049,7 @@ footer {
 
                     &[for="first"],
                     &[for="last"] {
-                        width: 49.5%;
+                        width: 50%;
                     }
 
                     &[for="email"],
@@ -4116,25 +4066,6 @@ footer {
             #submit-row {
                 width: 100%;
                 position: relative;
-                // &:after {
-                //     @include transition (all .3s);
-
-                //     content: "\f0da";
-                //     font-family: FontAwesome;
-                //     position: absolute;
-                //     right: 30px;
-                //     color: $colorWhite;
-                //     bottom: 12px;
-                // }
-
-                //  &:hover {
-
-                //     &:after {
-
-                //         right: 10px;
-                   
-                //     }
-                // }
 
                 input[type="submit"] {
                     font-weight: 500;
@@ -4146,12 +4077,17 @@ footer {
                     &:hover {
                         background: $colorSlateBlue2;
                         color: $colorDarkBlue;
-                    }                  
+                    }
                 }
             }
         }
 
         #address-container {
+
+            h3 {
+                margin-top: 20px;
+                margin-bottom: 10px;
+            }
 
             [class*="col-"] {
                 padding-right: 30px;
@@ -4167,7 +4103,7 @@ footer {
             }
 
             a {
-                color: $colorDarkBlue;
+                color: $colorBrightRed1;
                 &:hover {
                     @include transition (color .3s);
                     color: $colorSlateBlue2;
@@ -4193,55 +4129,85 @@ footer {
         >.container-fluid {
             padding: 0 !important;
             padding-left: 40px;
-        } // @include max-screen($sm){
-        //  .row {
-        //      margin:0;
-        //  }
-        // }
+        }
     }
 
     .secondary {
-        margin-top: -7px;
+        margin-top: -7px; // .image-cta.resource-center {
+        //     .txt-content {
+        //         position: absolute;
+        //         background: $colorBrightRed2;
+        //         bottom: 105px;
+        //         left: 0;
+        //         width: 80%;
+        //         h4 {
+        //             text-transform: uppercase;
+        //             font-weight: 500;
+        //             font-size: 24px;
+        //             @include font-size(24px);
+        //             color: $colorWhite;
+        //         }
+        //         @include max-screen($sm) {
+        //             position: relative;
+        //             background: $colorBrightRed2;
+        //             bottom: initial;
+        //             left: initial;
+        //             width: initial;
+        //         }
+        //         &:after {
+        //             content: "\f0da";
+        //             font-family: FontAwesome;
+        //             position: absolute;
+        //             right: 0;
+        //             bottom: 50px;
+        //             height: 53px;
+        //             width: 53px;
+        //             padding: 6px 22px;
+        //             @include max-screen($sm) {
+        //                 content: "";
+        //             }
+        //         }
+        //     }
+        // }
     }
 
     .tertiary {
-        .image-cta.resource-center {
-            .txt-content {
-                position: absolute;
-                background: $colorBrightRed2;
-                bottom: 105px;
-                left: 0;
-                width: 80%;
-                h4 {
-                    text-transform: uppercase;
-                    font-weight: 500;
-                    font-size: 24px;
-                    @include font-size(24px);
-                    color: $colorWhite;
-                }
-
-                @include max-screen($sm) {
-                    position: relative;
-                    background: $colorBrightRed2;
-                    bottom: initial;
-                    left: initial;
-                    width: initial;
-                }
-                &:after {
-                    content: "\f0da";
-                    font-family: FontAwesome;
-                    position: absolute;
-                    right: 0;
-                    bottom: 50px;
-                    height: 53px;
-                    width: 53px;
-                    padding: 6px 22px;
-                    @include max-screen($sm) {
-                        content: "";
-                    }
-                }
-            }
-        }
+        // .image-cta.resource-center {
+        //     .txt-content {
+        //         position: absolute;
+        //         background: $colorBrightRed2;
+        //         bottom: 105px;
+        //         left: 0;
+        //         width: 80%;
+        //         h4 {
+        //             text-transform: uppercase;
+        //             font-weight: 500;
+        //             font-size: 24px;
+        //             @include font-size(24px);
+        //             color: $colorWhite;
+        //         }
+        //         @include max-screen($sm) {
+        //             position: relative;
+        //             background: $colorBrightRed2;
+        //             bottom: initial;
+        //             left: initial;
+        //             width: initial;
+        //         }
+        //         &:after {
+        //             content: "\f0da";
+        //             font-family: FontAwesome;
+        //             position: absolute;
+        //             right: 0;
+        //             bottom: 50px;
+        //             height: 53px;
+        //             width: 53px;
+        //             padding: 6px 22px;
+        //             @include max-screen($sm) {
+        //                 content: "";
+        //             }
+        //         }
+        //     }
+        // }
     }
 
     @include max-screen($lg) {
@@ -4361,9 +4327,8 @@ footer {
         @include font-size(24px);
         color: $colorWhite;
         margin-bottom: 20px;
-    } // h3 {
-    //  color: $colorWhite;
-    // }
+    }
+
     p,
     span {
         color: $colorDarkBlue;
@@ -4375,11 +4340,7 @@ footer {
         font-weight: 500;
         text-transform: uppercase;
         color: $colorDarkBlue;
-    } //    .txt-content {
-    //     h2 ,h3, h4, p, span.date {
-    //      @include transition(color .3s);
-    //     }
-    // }
+    }
     &.darkblue-theme {
         background: $colorDarkBlue; // @include transition(color .3);
         h2 {
@@ -4423,10 +4384,7 @@ footer {
         }
     }
     &.slateblue-theme {
-        // background: $colorSlateBlue2;
-        // h2 {
-        //  color: $colorWhite;
-        // }
+
         h4 {
             @include font-size(30px);
             text-transform: none;
@@ -4461,19 +4419,7 @@ footer {
             padding-top: 5px;
             color: $colorSlateBlue;
         }
-    } // .txt-content {
-    //  &:hover {
-    //      h3, p, span {
-    //          color: $colorWhite;
-    //      }
-    //  }
-    // }
-    // @include max-screen($xmd){
-    //  background: $colorSlateBlue2 !important;
-    //  h2, p, span {
-    //      color: $colorDarkBlue !important; 
-    //  }
-    // }
+    }
     .txt-subcontent {
         padding: 5px 0;
         text-align: right;
@@ -4588,6 +4534,23 @@ footer {
     margin-bottom: 40px;
     border-top: 1px solid $colorLightGrey3;
     padding-top: 10px;
+    span.previous {
+        float: left;
+        a:before {
+            content: '\f0d9';
+            font-family: FontAwesome;
+            padding: 0 5px;
+        }
+    }
+    span.next {
+        float: right;
+        a:after {
+            content: '\f0da';
+            font-family: FontAwesome;
+            padding: 0 5px;
+        }
+    }
+
     a {
         text-transform: uppercase;
         display: inline-block;
@@ -4596,48 +4559,9 @@ footer {
         color: $colorBrightRed2;
         margin: 0 15px;
         font-weight: 700; // border: 1px solid $color
-        &.previous {
-            float: left;
-            &:before {
-                content: '\f0d9';
-                font-family: FontAwesome;
-                padding: 0 5px;
-            }
-        }
-        &.next {
-            float: right;
-            &:after {
-                content: '\f0da';
-                font-family: FontAwesome;
-                padding: 0 5px;
-            }
-        }
     }
 }
 
-// .pager {
-//  margin-bottom:40px;
-//  text-align:center;
-//  .page-items {
-//      display:inline-block;
-//  }
-//  a {
-//      display:inline-block;
-//      font-family:$font-avenir;
-//      color: $colorDarkBlue;
-//      margin:0 15px;
-//      font-weight: 700;
-//      // border: 1px solid $color
-//      .fa {
-//          font-weight:bold;
-//          color: red;
-//      }
-//      &:hover,
-//      &.active {
-//          color: red;
-//      }
-//  }
-// }
 .num {
     font-family: $font-avenir;
     @include font-size(24px);
@@ -4647,9 +4571,7 @@ footer {
     @include transition(color .3s);
     &:hover {
         color: $colorLightGrey6;
-    } // @include max-screen($xlg) {
-    //  @include font-size(20px);
-    // }
+    }
     @include max-screen($md) {
         @include font-size(24px);
     }
@@ -4659,10 +4581,12 @@ footer {
     position: relative; // margin-bottom:40px;
     z-index: 2;
     background-color: $colorSlateBlue;
+    height: 100%; //
     @include transition(all .3s);
-   
 
     .call-us {
+        text-align: left;
+        padding-left: 20px;
         .h3 {
             font-weight: 500;
             @include font-size(30px);
@@ -4670,18 +4594,33 @@ footer {
             color: $colorDarkBlue;
             letter-spacing: 2px;
         }
-        text-align: left; // padding: 0 25px;
-        // @include font-size(20px);
+        @include max-screen($xxlg) {
+            padding-left: 10px;
+        }
+
+        @include max-screen($xlg) {
+            padding: 0 15px;
+        }
         @include max-screen($md) {
-            // padding: 0 15px;
+            padding: 0 15px;
+            padding-left: 50px;
+            // text-align: left;
+        }
+        @include max-screen($xmd) {
+            padding: 0 35px;
+            // text-align: left;
+        }
+        @include max-screen($sm) {
+            padding: 0 15px;
         }
     }
 
     .sub-text {
         color: $colorWhite; // font-size: 1.285rem;
+        margin-bottom: 1.375rem;
         @include max-screen($lg) {
             // padding: 0 8px;
-            font-size: 1.085rem;
+            @include font-size(16px);
         }
     }
 
@@ -4690,34 +4629,36 @@ footer {
         margin: 0; // margin-top:20px;
         position: relative;
         height: 240px;
-         @include max-screen($md) {
-            height: 240px !important;
-        }
         &.full-scr {
             min-height: 250px;
         }
 
         >[class*="col-"]:nth-child(1) {
-            padding: 0 35px;
+            padding: 0;
+            // @include max-screen($sm) {
+            //     padding: 0;
+            // }
+
             .num {
-                padding-top: 15px;
-                min-width: 150px;
-                @include font-size(36px);
+                // padding-top: 15px;
+                // min-width: 150px;
+                @include transition(.3s all);
+                @include font-size(40px);
 
                 @include max-screen($xxlg) {
-                    @include font-size(30px);
+                    @include font-size(36px);
                 }
                 @include max-screen($xlg) {
                     @include font-size(24px);
                 }
                 @include max-screen($md) {
-                    @include font-size(20px);
+                    @include font-size(24px);
                 }
-                @include max-screen($smd) {
+                @include max-screen($xmd) {
                     @include font-size(30px);
                 }
                 @include max-screen($sm) {
-                    @include font-size(20px);
+                    @include font-size(24px);
                 }
             }
         }
@@ -4829,8 +4770,7 @@ footer {
         @include transition(all .3s);
 
         .more-phone-wrap {
-            // padding:30px 45px;
-            // border:solid 2px $colorLightGrey3;
+
             ul {
                 li {
                     background: $colorDarkBlue;
@@ -4839,10 +4779,8 @@ footer {
                     color: $colorWhite;
                     display: inline-table;
                     width: 49.5%;
-                    text-align: center; // @include max-screen($xxlg) {
-                    //  display:block;
-                    //  width: 100%;
-                    // }
+                    text-align: center;
+
                     @include max-screen ($md) {
                         display: inline-table;
                         width: 49.5%;
@@ -4850,26 +4788,16 @@ footer {
                     @include max-screen ($sm) {
                         display: block;
                         width: 100%; // padding: 15px 0 15px 120px;
-                    } // &:nth-child(n-3) {
-                    //  border-bottom: 1px solid $colorWhite;
-                    // }
-                    // &:after {
-                    //  content: '\f0da';
-                    //  font-family: FontAwesome;
-                    //  float: right;
-                    // }
+                    }
                     a.num {
                         color: $colorWhite;
                         @include transition(all .3s);
 
-                        @include font-size(30px); // @include max-screen($xxlg) {
-                        //     @include font-size(30px);
-                        // }
+                        @include font-size(30px);
+
                         @include max-screen($xxlg) {
                             @include font-size(20px);
-                        } //  @include max-screen($lg) {
-                        //     @include font-size(20px);
-                        // }
+                        }
                         @include max-screen($md) {
                             @include font-size(30px);
                         }
@@ -4945,40 +4873,7 @@ footer {
 }
 
 .side-nav {
-    position: relative; // margin-bottom:40px;
-    // ul {
-    //  li {
-    //      padding:20px 0;
-    //      border-bottom:solid 1px $colorLightGrey3;
-    //      a {
-    //          display:inline-block;                   
-    //          padding-left:35px;
-    //          padding-right:20px;
-    //          position:relative;
-    //          @include font-size(17px);
-    //          font-weight:500;
-    //          &:after {
-    //              // content:'\f104';
-    //              // position:absolute;
-    //              // left:10px;
-    //              // top:1px;
-    //              // font-family:$font-icon;
-    //          }
-    //          &:hover {
-    //              color:$colorLightGrey6;
-    //          }
-    //      }
-    //      &.active {
-    //          a {
-    //              color:$colorDarkGreen;
-    //              font-weight:700;
-    //          }
-    //      }
-    //      &:last-child {
-    //          border-bottom:none;
-    //      }
-    //  }
-    // }
+    position: relative;
     ul {
         li {
             background: $colorLightGrey1;
@@ -5052,7 +4947,7 @@ footer {
 .side-cta {
     position: relative;
     margin-bottom: 40px;
-    color: $colorOrange;
+    color: $colorBrightRed1;
 
     a {
         display: block;
@@ -5062,7 +4957,6 @@ footer {
         border-bottom: solid 2px $colorLightGrey3;
 
         &:hover {
-            /*border-color:$colorOrange;*/
             .top-right-line {
                 &:before {
                     width: 100%;
@@ -5107,7 +5001,7 @@ footer {
     }
 
     .link {
-        color: $colorBrightRed2;
+        color: $colorBrightRed1;
         font-weight: 700;
         @include font-size(16px);
     }
@@ -5120,7 +5014,7 @@ footer {
             right: 0;
             height: 2px;
             width: 0;
-            background: $colorBrightRed2;
+            background: $colorBrightRed1;
             @include transition(width .3s);
         }
 
@@ -5131,7 +5025,7 @@ footer {
             right: 0;
             height: 0;
             width: 2px;
-            background: $colorBrightRed2;
+            background: $colorBrightRed1;
             @include transition(height .3s);
         }
     }
@@ -5144,7 +5038,7 @@ footer {
             left: 0;
             height: 2px;
             width: 0;
-            background: $colorBrightRed2;
+            background: $colorBrightRed1;
             @include transition(width .3s);
         }
     }
@@ -5174,6 +5068,7 @@ footer {
     min-height: 360px;
     position: relative;
     cursor: pointer;
+
     a {
         display: block;
         @include transition(all .5s);
@@ -5185,7 +5080,6 @@ footer {
                 @include transition(all .3s);
 
                 .txt-content {
-                    // background: $colorBlack;
                     @include transition(all .5s);
                 }
             }
@@ -5197,31 +5091,8 @@ footer {
         height: 100%;
         padding-bottom: 55%;
 
-        @include max-screen($sm) {
-            padding-bottom: 70%;
-        }
-
-        .txt-content {
-            position: absolute;
-            bottom: 0;
-            width: 100%;
-            margin-bottom: 53px;
-            padding: 40px; // p {
-            //  text-align: left;
-            // }
-            h2 {
-                font-weight: 600;
-                @include font-size(30px);
-                text-transform: uppercase;
-                margin-bottom: 0; // padding-left:20px;
-            }
-            h4 {
-                @include font-size(24px);
-                font-weight: 500;
-                text-transform: uppercase;
-            } // @include max-screen($sm) {
-            //  text-align: center;
-            // }
+        @include max-screen($xmd) {
+            padding-bottom: 0;
         }
 
         &:after {
@@ -5230,7 +5101,7 @@ footer {
             right: 0;
             top: 0;
             width: 4px;
-            height: 100%; // background:$colorGreen;
+            height: 100%;
         }
 
 
@@ -5246,13 +5117,16 @@ footer {
             width: 100%;
             @include transform(translate(-50.1%,
             0));
+            @include max-screen ($xmd) {
+                position: relative;
+            }
         }
 
         .caption {
             position: absolute;
             bottom: 0;
             padding: 15px 40px;
-            background: $colorBrightRed1;
+            background: $colorBrightRed2;
             color: $colorWhite;
             text-transform: uppercase;
             @include font-size(14px);
@@ -5271,7 +5145,7 @@ footer {
             font-weight: 700;
             @include font-size(18px);
             color: $colorWhite;
-            background: rgba($colorDarkGreen, .85);
+            background: rgba($colorDarkBlue2, .85);
             text-transform: uppercase;
 
             .date-num {
@@ -5280,14 +5154,50 @@ footer {
                 @include font-size(36px);
             }
         }
-    }
-
+    } // .txt-content {
+    //     position: absolute;
+    //     bottom: 0;
+    //     width: 100%;
+    //     margin-bottom: 53px;
+    //     padding: 40px; 
+    //     h2 {
+    //         font-weight: 600;
+    //         @include font-size(30px);
+    //         text-transform: uppercase;
+    //         margin-bottom: 0; // padding-left:20px;
+    //     }
+    //     h4 {
+    //         @include font-size(24px);
+    //         font-weight: 500;
+    //         text-transform: uppercase;
+    //     } 
+    // }
     .txt-content {
         color: $colorWhite;
         background: rgba($colorDarkBlue, .5);
         padding: 40px;
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+        margin-bottom: 53px;
+
         @include max-screen($xmd) {
             background: rgba($colorSlateBlue2, 1);
+            position: relative;
+            text-align: center;
+            margin-bottom: 63px;
+        }
+
+        h2 {
+            font-weight: 600;
+            @include font-size(30px);
+            text-transform: uppercase;
+            margin-bottom: 0; // padding-left:20px;
+        }
+        h4 {
+            @include font-size(24px);
+            font-weight: 500;
+            text-transform: uppercase;
         }
         h3 {
             text-transform: uppercase;
@@ -5332,20 +5242,19 @@ footer {
             // position: relative;
             height: 80px;
             background-color: $colorSlateBlue2;
-        }
-        @include max-screen($xmd) {
             text-align: center;
+            padding: 0 40px 20px;
+            height: auto;
         }
-        a {
+
+        a[href="#"] {
             color: $colorWhite;
             line-height: 3;
             font-size: .9rem;
             font-weight: 500;
             margin-right: 70px;
             display: block;
-            @include max-screen($xmd) {
-                width: 85% !important;
-            }
+
             span {
                 color: $colorWhite !important;
                 text-transform: uppercase;
@@ -5360,7 +5269,6 @@ footer {
                 padding: 8px 15px;
                 margin-right: 0;
                 border: 1px solid $colorWhite;
-                width: 85%;
                 margin: 0 auto;
             }
             &:after {
@@ -5385,85 +5293,64 @@ footer {
                 }
             }
         }
-    }
-
-
-    @include max-screen($xlg) {
-
-        .img-content {
-
-            .caption {
-                padding: 10px 30px;
-            }
-        }
-
-        .txt-content {
-            padding: 30px;
-
-            h3 {
-                @include font-size(28px);
-            }
-        }
-    }
-
-    @include max-screen($lg) {
-
-        .img-content {
-            // padding-bottom:85%;
-            .date {
-                @include font-size(14px);
-                padding: 15px 20px;
-
-                .date-num {
-                    @include font-size(26px);
-                }
-            }
-        }
-
-        .txt-content {
-            padding: 25px;
-
-            h3 {
-                @include font-size(24px);
-                margin-bottom: 15px;
-            }
-        }
-    }
-
-    @include max-screen($xmd) {
-
-        .img-content {
-            padding-bottom: 55%;
-
-            img {
-                height: auto;
-                min-height: 300px;
-                width: 100%;
-                left: 49.9%;
-                @include transform(translate(-50.1%,
-                0));
-            }
-
-            .date {
-                @include font-size(14px);
-                padding: 15px 20px;
-
-                .date-num {
-                    @include font-size(26px);
-                }
-            }
-        }
-    }
-
-    @include max-screen($sm) {}
-
-    @include max-screen(420px) {
-
-        .img-content {
-            // padding-bottom: 90%;
-        }
-    }
-
+    } // @include max-screen($xlg) {
+    //     .img-content {
+    //         .caption {
+    //             padding: 10px 30px;
+    //         }
+    //     }
+    //     .txt-content {
+    //         padding: 30px;
+    //         h3 {
+    //             @include font-size(28px);
+    //         }
+    //     }
+    // }
+    // @include max-screen($lg) {
+    //     .img-content {
+    //         // padding-bottom:85%;
+    //         .date {
+    //             @include font-size(14px);
+    //             padding: 15px 20px;
+    //             .date-num {
+    //                 @include font-size(26px);
+    //             }
+    //         }
+    //     }
+    //     .txt-content {
+    //         padding: 25px;
+    //         h3 {
+    //             @include font-size(24px);
+    //             margin-bottom: 15px;
+    //         }
+    //     }
+    // }
+    // @include max-screen($xmd) {
+    //     .img-content {
+    //         padding-bottom: 85%;
+    //         img {
+    //             height: auto;
+    //             min-height: 300px;
+    //             width: 100%;
+    //             left: 49.9%;
+    //             @include transform(translate(-50.1%,
+    //             0));
+    //         }
+    //         .date {
+    //             @include font-size(14px);
+    //             padding: 15px 20px;
+    //             .date-num {
+    //                 @include font-size(26px);
+    //             }
+    //         }
+    //     }
+    // }
+    // @include max-screen($sm) {}
+    // @include max-screen(420px) {
+    //     .img-content {
+    //         // padding-bottom: 90%;
+    //     }
+    // }
     &.no-img {
         p {
             @include font-size(20px);
@@ -5472,30 +5359,16 @@ footer {
 
         .btn {
             width: 100%;
-        }
-    }
-
-    &.green {
-        .txt-content {
-            background: $colorGreen;
-        }
-    }
-
-    &.darkgreen {
-        .txt-content {
-            background: $colorDarkGreen;
-        }
-    }
-
-    &.orange {
-        .txt-content {
-            background: $colorOrange;
-        }
-    }
-
-    &.orange {
-        .txt-content {
-            background: $colorOrange;
+            &.whiteline {
+                background: none;
+                border: solid 3px $colorWhite!important;
+                color: $colorWhite;
+                &:hover,
+                &:focus {
+                    background: $colorWhite;
+                    color: $colorDarkGrey;
+                }
+            }
         }
     }
 
@@ -5524,13 +5397,56 @@ footer {
     }
 
     &.slateblue2 {
-        background: $colorSlateBlue2; // .txt-subcontent {
-        //  background:$colorSlateBlue2;
-        // }
+        background: $colorSlateBlue2;
     }
 
     &.white {
         background: $colorWhite;
+    }
+
+    &.resource-center {
+        &:hover {
+            .txt-content {
+                background: $colorSlateBlue2;
+            }
+        }
+        .txt-content {
+            @include transition (background .3s);
+            position: absolute;
+            background: $colorBrightRed2;
+            bottom: 105px;
+            left: 0;
+            width: 80%;
+            margin-bottom: 0;
+            h4 {
+                text-transform: uppercase;
+                font-weight: 500;
+                font-size: 24px;
+                @include font-size(24px);
+                color: $colorWhite;
+            }
+
+            @include max-screen($sm) {
+                position: relative;
+                background: $colorBrightRed2;
+                bottom: initial;
+                left: initial;
+                width: initial;
+            }
+            &:after {
+                content: "\f0da";
+                font-family: FontAwesome;
+                position: absolute;
+                right: 0;
+                bottom: 50px;
+                height: 53px;
+                width: 53px;
+                padding: 6px 22px;
+                @include max-screen($sm) {
+                    content: "";
+                }
+            }
+        }
     }
 }
 
@@ -5543,7 +5459,7 @@ footer {
         min-height: 50%;
 
         &.seo {
-            background-color: $colorDarkGreen;
+            background-color: $colorDarkBlue2;
             color: $colorWhite;
             padding-top: 40px;
             padding-bottom: 30px;
@@ -5576,7 +5492,7 @@ footer {
             }
 
             .overlay-band {
-                background: rgba($colorDarkGreen, .5);
+                background: rgba($colorDarkBlue2, .5);
                 position: absolute;
                 left: 0;
                 bottom: 0;
@@ -5591,7 +5507,7 @@ footer {
             padding-bottom: 20px;
 
             h2 {
-                color: $colorDarkGreen;
+                color: $colorDarkBlue2;
                 text-transform: none;
                 font-weight: 400;
                 @include font-size(30px);
@@ -5615,7 +5531,7 @@ footer {
         &:hover {
             a.item-box {
                 h2 {
-                    color: $colorOrange;
+                    color: $colorBrightRed1;
                 }
             }
 
@@ -5718,14 +5634,12 @@ footer {
     margin-bottom: 40px;
 
     a {
-        border-bottom: 3px solid $colorLightGrey2;
-        padding: 25px 0;
-        @include font-size(18px);
-        display: block;
 
+        font-weight: 500;
+        color: $colorBrightRed2;
         .title {
-            @include font-size(18px);
-            margin-bottom: 5px;
+            // @include font-size(18px);
+            // margin-bottom: 5px;
         }
 
         .subtitle {
@@ -5817,7 +5731,7 @@ footer {
 }
 
 .sub-headline {
-    border-top: solid 2px $colorDarkGreen;
+    border-top: solid 2px $colorDarkBlue2;
     border-bottom: solid 3px $colorLightGrey2;
     padding: 25px 0;
     display: block;
@@ -5836,14 +5750,14 @@ footer {
 
     .social {
         @include font-size(18px);
-        color: $colorGreen;
+        color: $colorDarkBlue;
         margin-bottom: 0;
 
         a {
             margin: 0 7px;
 
             &:hover {
-                color: $colorDarkGreen;
+                color: $colorDarkBlue2;
             }
         }
     }
@@ -5903,17 +5817,8 @@ footer {
             position: relative;
 
             img {
-                display: none;
-            }
-
-            &:before {
-                content: '';
-                position: absolute;
-                left: 0;
-                top: 0;
-                width: 5px;
-                height: 100%; // background:$colorGreen;
-                z-index: 2;
+                // display: none; //
+                height: 100%; //
             }
         }
 
@@ -5931,20 +5836,11 @@ footer {
     }
 
     &.fullpage-centered {
-        width: 75%;
+        width: 90%;
         margin: auto;
         min-height: 215px;
     }
 
-    &:before {
-        content: '';
-        position: absolute;
-        left: 0;
-        top: 0;
-        width: 5px;
-        height: 100%; // background:$colorGreen;
-        z-index: 2;
-    }
 
     &.grey2 {
         background: $colorLightGrey2;
@@ -5963,22 +5859,15 @@ footer {
     }
 
     &.brightRed {
-        background: $colorBrightRed1;
         color: $colorWhite;
 
-        &:hover {
-            .txt-content {
-                @include transition(background .3s);
-                background: $colorSlateBlue;
-            }
-        }
 
         h3 {
             color: $colorWhite;
         }
 
         &:before {
-            // background:$colorDarkGreen;
+            // background:$colorDarkBlue2;
         }
 
         p {
@@ -5994,17 +5883,26 @@ footer {
         a {
             color: $colorWhite;
             position: relative;
-            display: inline-block;
-            border-bottom: dotted 1px $colorWhite;
+            display: inline-block; // border-bottom: dotted 1px $colorWhite;
         }
 
         &.with-img {
             padding: 0;
+            &:hover {
+                .txt-content {
+                    @include transition(background .3s);
+                    background: $colorSlateBlue;
+                }
+            }
 
             .img-content {
                 &:before {
-                    // background:$colorDarkGreen;
+                    // background:$colorDarkBlue2;
                 }
+            }
+
+            .txt-content {
+                background: $colorBrightRed1;
             }
         }
     }
@@ -6037,12 +5935,16 @@ footer {
 
 .feature-slide-box {
     position: relative;
-    cursor: pointer; // padding:30px;
-    // margin-bottom:40px;
-    // min-height: 300px;
+    cursor: pointer;
+    width: 100%;
+    max-width: 100%;
     .panel-label {
         overflow: hidden;
         display: inline-block;
+        @include max-screen ($sm) {
+            visibility: hidden !important;
+            opacity: 0 !important;
+        }
     }
     .fa-spin {
         position: absolute;
@@ -6052,14 +5954,20 @@ footer {
     }
     @include transition(all .3s);
     .panel {
+        font-size: 1rem;
         min-height: 360px;
+        overflow: hidden;
         height: 360px !important;
         display: inline-block;
         position: relative;
         vertical-align: top;
-        width: 49.8%;
+        width: 50%;
         padding: 0 25px !important;
+        @include max-screen($sm) {
+            width: 100%;
+        }
         @include transition(all .3s);
+
         @include max-screen($md) {
             padding: 0 !important;
         }
@@ -6067,6 +5975,7 @@ footer {
             height: auto;
             width: 90%;
             display: inline-block;
+            background: $colorLightGrey7; // Temporary
             @include max-screen($ssm) {
                 width: 85%;
             }
@@ -6078,6 +5987,13 @@ footer {
                 display: block !important;
                 height: 0;
                 opacity: 0;
+                visibility: hidden;
+
+                @include max-screen ($sm) {
+                    visibility: visible !important;
+                    opacity: 1 !important;
+                }
+
                 .slick-next,
                 .slick-prev {
                     top: 175px;
@@ -6094,7 +6010,24 @@ footer {
                 }
                 .slick-track {
                     width: 100%;
+
+                    &.no-transform {
+                        -webkit-transform: translate3d(0, 0, 0) !important;
+                        -moz-transform: translate3d(0, 0, 0) !important;
+                        -ms-transform: translate3d(0, 0, 0) !important;
+                        -o-transform: translate3d(0, 0, 0) !important;
+                        transform: translate3d(0, 0, 0) !important;
+                        width: 100% !important;
+                        .slide-content {
+                            float: none;
+                            margin: auto;
+                            @include max-screen ($sm) {
+                                float: left;
+                            }
+                        }
+                    }
                 }
+
                 .slick-list {
                     margin: 0 50px;
                     @include max-screen($smd) {
@@ -6105,12 +6038,16 @@ footer {
                 @include transition(all .3s);
                 .slick-slide {
                     height: 360px;
+                    min-width: 250px;
+                    @include max-screen ($xmd) {
+                        min-width: unset;
+                    }
                     padding: 60px 20px 0;
                     text-align: center;
                     @include transition(all .3s);
 
                     @include max-screen($md) {
-                        padding: 60px 100px;
+                        // padding: 60px 100px;
                     }
                     @include max-screen($sm) {
                         padding: 60px 40px;
@@ -6119,7 +6056,11 @@ footer {
                         padding: 35px 20px;
                     }
                     h3 {
-                        color: inherit;
+                        @include font-size(20px);
+                        font-weight: 500;
+                    }
+                    p.details {
+                        color: $colorDarkGrey;
                     }
                     &:focus {
                         outline: none;
@@ -6133,7 +6074,7 @@ footer {
         color: $colorWhite;
         .panel-title {
             position: absolute;
-            right: -20px;
+            right: 0;
             text-transform: uppercase;
             font-weight: 500;
             opacity: 0;
@@ -6145,24 +6086,37 @@ footer {
                 width: 100%;
                 right: unset; // @include font-size(24px);
             }
+
+            @include max-screen($sm) {
+                opacity: 1;
+            }
             &:after {
                 content: '\f0d7';
                 font-family: $font-icon;
                 padding-left: 5px;
             }
         }
+
+        .slick-slide {
+            h3 {
+                color: $colorWhite;
+            }
+            p.details {
+                color: $colorWhite !important;
+            }
+        }
+
         &.active {
             width: 91%;
             .panel-title {
                 text-transform: uppercase;
                 font-weight: 500;
-                opacity: 1;
-                right: 7%;
-                @include max-screen($smd) {
+                opacity: 1; // right: 7%;
+                @include max-screen($sm) {
                     right: unset;
                 }
             }
-            @include max-screen($smd) {
+            @include max-screen($sm) {
                 width: 100%;
             }
             h2.text-upcase.text-flip {
@@ -6172,9 +6126,18 @@ footer {
                 width: 100%;
                 min-width: auto;
                 display: inline-block; // opacity: 1;
+                visibility: visible;
                 .slick-slide {
+
                     &:hover {
                         background: $colorBrightRed3;
+                    }
+
+                    h3 {
+                        color: $colorWhite;
+                    }
+                    p.details {
+                        color: $colorWhite !important;
                     }
                 }
             }
@@ -6214,30 +6177,14 @@ footer {
             }
         }
         &.compressed {
-            width: 8%;
-            @include max-screen($smd) {
+            width: 9%;
+            @include max-screen($sm) {
                 width: 100%;
             }
             .txt-content {
                 opacity: 0;
                 width: 0;
-            } //    &:before {
-            //      content: '\f0d9';
-            //      font-family: $font-icon;
-            //      position: absolute;
-            //      left: 35px;
-            //      top: 65%;
-            //      @include max-screen($smd) {
-            //          left: initial;
-            //          right: 50px;
-            //          content: '\f0da';
-            //          top: 40%;
-            //      }
-            //      @include max-screen($sm) {
-            //          right: 0;
-            //          padding-right: 15px;
-            //      }
-            //  }
+            }
         }
         .txt-content {
             position: absolute;
@@ -6247,28 +6194,6 @@ footer {
             @include transition(all .3s);
             img[src] {
                 margin-bottom: 35px;
-            }
-            @include max-screen($smd) {
-                margin: 0 auto;
-            }
-            @include max-screen($xsm) {
-                left: -5%;
-                max-width: 320px;
-            }
-        }
-        @include max-screen($smd) {
-            display: block;
-            width: 100%;
-        }
-        @include max-screen($smd) {
-            display: block;
-            width: 100%;
-            .txt-content {
-                right: 15%
-            }
-            h2.text-flip {
-                right: 25%;
-                text-align: center;
             }
         }
         h2.text-flip {
@@ -6282,40 +6207,73 @@ footer {
             margin-top: 0;
             letter-spacing: 1px;
             @include font-size(24px);
-            @include transition( all .3s);
-            @include max-screen($sm) {
-                width: 100%;
-                text-align: center;
-                left: 0;
-            }
-            @include max-screen($xsm) {
-                left: 20%;
-            }
+            @include transition( all .3s); // @include max-screen($sm) {
+            //     width: 100%;
+            //     text-align: center;
+            //     left: 0;
+            // }
+            // @include max-screen($xsm) {
+            //     left: 20%;
+            // }
             &.vertical-text {
                 position: absolute;
                 left: -95px;
                 top: 145px;
                 width: 255px;
                 margin: 30px 5px;
+                text-align: center;
                 @include transform(rotate(90deg));
             }
         }
-
         &:before {
             content: '\f0d9';
             font-family: $font-icon;
             position: absolute;
             left: 10px;
-            top: 45%;
-            @include max-screen($smd) {
-                left: initial;
-                right: 50px;
-                content: '\f0da';
-                top: 45%;
-            }
+            top: 45%; // @include max-screen($smd) {
+            //     left: initial;
+            //     right: 50px;
+            //     content: '\f0da';
+            //     top: 45%;
+            // }
             @include max-screen($sm) {
                 right: 0;
                 padding-right: 15px;
+
+                display: none;
+            }
+        }
+
+        @include max-screen($xmd) {
+            .txt-content {
+                right: -10%;
+                padding-left: 25px;
+            }
+            h2.text-flip {
+                left: 20%;
+                text-align: center;
+            }
+        }
+
+        @include max-screen($sm) {
+            display: block;
+            width: 100%;
+            .txt-content {
+                right: 0;
+                width: 100%;
+                padding: 0 40px;
+            }
+            h2.text-flip {
+                right: 25%;
+                text-align: center;
+            }
+        }
+
+        @include max-screen($xsm) {
+            .txt-content {
+                // left: -5%;
+                max-width: 320px;
+                padding: 0 20px;
             }
         }
     }
@@ -6323,7 +6281,7 @@ footer {
         background: $colorLightGrey7;
         .panel-title {
             position: absolute;
-            left: -20px;
+            left: 0;
             text-transform: uppercase;
             font-weight: 500;
             opacity: 0;
@@ -6336,28 +6294,27 @@ footer {
                 width: 100%;
                 left: unset; // @include font-size(20px);
             }
+            @include max-screen($sm) {
+                opacity: 1;
+            }
             &:after {
                 content: '\f0d7';
                 font-family: $font-icon;
                 padding-left: 5px;
             }
         }
-        @include max-screen($smd) {
-            display: block;
-            width: 100%;
-        }
+
         &.active {
             width: 91%;
             .panel-title {
                 text-transform: uppercase;
                 font-weight: 500;
-                opacity: 1;
-                left: 7%;
-                @include max-screen($smd) {
+                opacity: 1; // left: 7%;
+                @include max-screen($sm) {
                     left: unset;
                 }
             }
-            @include max-screen($smd) {
+            @include max-screen($sm) {
                 width: 100%;
                 h2.text-upcase.text-flip {
                     opacity: 0;
@@ -6367,6 +6324,8 @@ footer {
                 width: 100%;
                 min-width: auto;
                 display: inline-block; // opacity: 1;
+                visibility: visible;
+
                 @include transition (opacity 1s);
                 .slick-slide {
                     &:hover {
@@ -6383,22 +6342,10 @@ footer {
             &:after {
                 content: "";
             }
-            img.a-right.control-c.next.slick-next.slick-arrow {
-                right: -135px;
-                @include max-screen($xlg) {
-                    right: -120px;
-                }
-                @include max-screen($md) {
-                    right: -75px;
-                }
-                @include max-screen($sm) {
-                    right: -45px;
-                }
-            }
         }
         &.compressed {
-            width: 8%;
-            @include max-screen($smd) {
+            width: 9%;
+            @include max-screen($sm) {
                 width: 100%;
             }
             .txt-content {
@@ -6413,15 +6360,31 @@ footer {
             padding-right: 50px;
             @include transition(all .3s);
             img[src] {
-                margin-bottom: 35px;
+                width: 150px;
+                height: 100px;
+                margin-bottom: 45px;
+            } // @include max-screen($smd) {
+            //     margin: 0 auto;
+            // }
+        }
+
+        img.a-right.control-c.next.slick-next.slick-arrow {
+            right: -135px;
+            @include max-screen($xlg) {
+                right: -120px;
             }
-            @include max-screen($smd) {
-                margin: 0 auto;
+            @include max-screen($md) {
+                right: -75px;
+            }
+            @include max-screen($sm) {
+                right: -45px;
             }
         }
-        @include max-screen($smd) {
+
+        @include max-screen($sm) {
             display: block;
             width: 100%;
+
             .txt-content {
                 right: 30%;
             }
@@ -6433,29 +6396,29 @@ footer {
 
         @include max-screen($xmd) {
             .txt-content {
-                right: 20%;
+                right: -10%;
+                padding-left: 25px;
             }
             h2.text-flip {
-                right: 30%;
                 text-align: center;
             }
         }
 
         @include max-screen($sm) {
             .txt-content {
-                right: intial;
-                left: 15%;
+                right: unset;
+                left: 15px;
+                width: 100%;
             }
             h2.text-flip {
-                left: 15%;
+                left: 20%;
                 text-align: center;
             }
         }
 
         @include max-screen($ssm) {
             .txt-content {
-                right: intial;
-                left: 10%;
+                right: unset; // left: 5%;
             }
             h2.text-flip {
                 left: 10%;
@@ -6465,12 +6428,13 @@ footer {
 
         @include max-screen($xsm) {
             .txt-content {
-                right: intial;
-                left: 10%;
+                right: unset;
+                left: 0;
                 max-width: 320px;
+                padding: 0 20px;
             }
             h2.text-flip {
-                right: intial;
+                right: unset;
                 left: 25%;
                 text-align: center;
                 min-width: 165px;
@@ -6483,14 +6447,15 @@ footer {
             color: $colorDarkBlue;
             position: absolute;
             right: 10px;
-            top: 45%;
-            @include max-screen($smd) {
-                right: 50px;
-            }
+            top: 45%; // @include max-screen($smd) {
+            //     right: 50px;
+            // }
             @include max-screen($sm) {
                 top: 45%;
                 right: 0;
                 padding-right: 15px;
+
+                display: none;
             }
         }
 
@@ -6504,7 +6469,7 @@ footer {
         text-transform: inherit;
         font-weight: 500;
         position: absolute;
-        right: 80px;
+        right: 25px;
         top: 160px;
         min-width: 265px;
         margin-top: 0;
@@ -6519,8 +6484,9 @@ footer {
         }
         &.vertical-text {
             position: absolute;
-            right: -110px;
+            right: -125px;
             top: 127px;
+            text-align: center;
             width: 300px;
             margin: 30px 5px;
             @include transform(rotate(-90deg));
@@ -6572,7 +6538,7 @@ footer {
                 left: 0;
                 top: 0;
                 width: 5px;
-                height: 100%; // background:$colorGreen;
+                height: 100%;
                 z-index: 2;
             }
         }
@@ -6596,7 +6562,7 @@ footer {
         left: 0;
         top: 0;
         width: 5px;
-        height: 100%; // background:$colorGreen;
+        height: 100%;
         z-index: 2;
     }
 
@@ -6624,9 +6590,6 @@ footer {
             color: $colorWhite;
         }
 
-        &:before {
-            // background:$colorDarkGreen;
-        }
 
         p {
             &:after {
@@ -6641,18 +6604,11 @@ footer {
         a {
             color: $colorWhite;
             position: relative;
-            display: inline-block;
-            border-bottom: dotted 1px $colorWhite;
+            display: inline-block; // border-bottom: dotted 1px $colorWhite;
         }
 
         &.with-img {
             padding: 0;
-
-            .img-content {
-                &:before {
-                    // background:$colorDarkGreen;
-                }
-            }
         }
     }
 
@@ -6683,16 +6639,22 @@ footer {
 
 .static-slides {
     background: $colorLightGrey7;
-    // margin-top: 6px;
-    height: 100%;
+    margin-top: 6px;
     @include max-screen($smd) {
         display: block;
         width: 100%;
     }
 
+    .static-container {
+        @include transition(background .3s);
+        &:hover {
+            background: rgba(#000, .15);
+        }
+    }
+
     a.item-box {
-        padding-top: 20px;
-        padding-bottom: 20px;
+        // padding-top: 20px;
+        // padding-bottom: 20px;
 
         h3 {
             color: $colorDarkBlue;
@@ -6707,8 +6669,7 @@ footer {
     }
 
     p.details {
-        color: $colorDarkGrey;
-        // max-height: 0px;
+        color: $colorDarkGrey; // max-height: 0px;
         overflow: hidden;
         @include transition(all 1s);
         margin-bottom: 0;
@@ -6717,17 +6678,27 @@ footer {
     .slide-content {
         text-align: center;
         padding: 20px;
-        max-width: 360px;
-        // min-height: 360px;
+        max-width: 360px; 
+        min-height: 360px; //
         margin: auto;
-        opacity: 0;
+        opacity: 1;
         @include transition(opacity .3s);
-
+        // @include transition(background .3s);
+        // &:hover {
+        //     background: rgba(#000, .15);
+        // }
+        // animation-duration: .5s;
+        // animation-delay: .1s;
         &.active {
             opacity: 1;
+            // box-shadow: 0 1px 2px rgba(0,0,0,0.15); //
+            // transition: box-shadow 0.3s ease-in-out; //
+            //&:hover {
+                // box-shadow: 0 5px 15px rgba(0,0,0,0.3); //
+            //}
         }
 
-        @include max-screen ($xmd) {
+        @include max-screen ($lg) {
             opacity: 1;
         }
 
@@ -6760,14 +6731,18 @@ footer {
     }
 }
 
-
 .more-phone-full-scr {
     width: 100%;
     background: $colorDarkBlue;
     text-align: left;
     height: 0;
     overflow: hidden;
+    display: none;
     @include transition(all .3s);
+    @include max-screen($md) {
+        display: block;
+    }
+
     &.active {
         height: 200px;
         @include max-screen($lg) {
@@ -6802,14 +6777,7 @@ footer {
                     display: block;
                     width: 100%;
                     padding: 25px 10px;
-                } // &:nth-child(n-3) {
-                //  border-bottom: 1px solid $colorWhite;
-                // }
-                // &:after {
-                //  content: '\f0da';
-                //  font-family: FontAwesome;
-                //  float: right;
-                // }
+                }
                 a.num {
                     color: $colorWhite;
                     @include transition(all .3s);
@@ -6844,6 +6812,7 @@ footer {
 
 .logo-row {
     background: $colorLightGrey7;
+
     @include max-screen($smd) {
         display: block;
         width: 100%;
@@ -6871,54 +6840,116 @@ footer {
         }
     }
 
-    .slide-content[eq-col] {
-        text-align: center;
-        padding: 60px 5px;
-        max-width: 360px;
-        margin: auto;
-        display: inline-block;
-        vertical-align: top;
-        @include max-screen($md) {
-            padding: 0;
-            padding-top: 60px;
-            height: 200px;
+
+
+    p.details {
+        color: $colorDarkGrey; // max-height: 0px;
+        overflow: hidden;
+        @include transition(all 1s);
+        margin-bottom: 0;
+    }
+
+    .slider-container {
+        // width: 100%;
+        padding: 80px 100px;
+
+        @include max-screen( $xlg) {
+            padding: 80px 60px;
         }
-        &:last-child {
-            width: 95%;
-            text-align: left;
-            padding-left: 20px;
-            padding-right: 15px;
+
+        @include max-screen( $smd) {
+            padding: 80px 20px;
         }
-        img[src] {
-            width: 100%;
-            height: auto;
-            max-width: 170px;
-            @include max-screen($md) {
-                max-width: 250px;
+
+        .logo-slider {
+            // width: 100%;
+            margin: auto;
+
+            .slide-content {
+                display: table;
+                text-align: center;
+                margin: 0 auto;
+
+                .logo-wrap {
+                    display: table-cell;
+                    vertical-align: middle;
+                    height: 110px;
+                    text-align: center;
+                }
+
+                a.logo-box {
+                    padding-top: 60px;
+                    padding-bottom: 60px;
+                    color: inherit;
+                    display: block;
+                    max-width: 100%;
+                    white-space: normal;
+                    position: relative;
+                    width: 160px;
+                    h3 {
+                        color: $colorDarkBlue;
+                        text-transform: uppercase;
+                        @include transition(all .3s);
+                    }
+                }
+
+                img {
+                    display: inline-block;
+                    margin-bottom: 20px;
+                    position: absolute;
+                    &.icon {
+                        display: block;
+                        top: 0;
+                        max-height: 105px;
+                        max-width: 180px;
+                    }
+                    &.icon.bw {}
+                    &.icon.color {
+                        opacity: 0;
+                        z-index: 3;
+                        @include transition (all 0s);
+                        &:hover {
+                            opacity: 1;
+                        }
+                    }
+                }
             }
-            &.sm {
-                width: 50%;
+            img.a-left.control-c.prev.slick-prev.slick-arrow {
+                left: -30px;
+                @include max-screen ($smd) {
+                    left: 0;
+                }
+            }
+
+            img.a-right.control-c.next.slick-next.slick-arrow {
+                right: -30px;
+                @include max-screen ($smd) {
+                    right: 0;
+                }
             }
         }
     }
+
+
+
+    .info-box {
+        padding: 75px 20px 40px;
+    }
+
     .bar {
         width: 2px;
         background: $colorDarkGrey;
-        height: 135px;
-        margin-top: 45px;
+        height: 75%;
+        margin-top: 40px;
         position: absolute;
-        left: 0;
-        @include max-screen($xlg) {
-            left: 5%;
-        }
+        left: -5%; // @include max-screen($xlg) {
+        //     left: 5%;
+        // }
         @include max-screen($md) {
             display: none;
         }
-    } // .fa-spin {
-    //  position: absolute;
-    //  top: 40%;
-    //  right: 45%;
-    // }
+    }
+
     &.active {
         width: 91%;
         @include max-screen($smd) {
@@ -6929,46 +6960,15 @@ footer {
             min-width: auto;
             display: inline-block;
             opacity: 1;
+
             .slick-slide {
                 &:hover {
                     background: $colorSlateBlue2;
                 }
             }
         }
-        .txt-content,
-        h2.text-upcase.text-flip.vertical-text {
-            opacity: 0;
-            width: 0;
-            margin: 0;
-        }
-        &:after {
-            content: "";
-        }
-        img.a-right.control-c.next.slick-next.slick-arrow {
-            right: -135px;
-            @include max-screen($xlg) {
-                right: -120px;
-            }
-            @include max-screen($md) {
-                right: -75px;
-            } // @include max-screen($smd) {
-            //  right: -75px;
-            // }
-            @include max-screen($sm) {
-                right: -45px;
-            }
-        }
     }
-    &.compressed {
-        width: 8%;
-        @include max-screen($smd) {
-            width: 100%;
-        }
-        .txt-content {
-            opacity: 0;
-            width: 0;
-        }
-    }
+
     .txt-content {
         position: absolute;
         right: 0;
@@ -6982,34 +6982,6 @@ footer {
             margin: 0 auto;
         }
     }
-    @include max-screen($smd) {
-        display: block;
-        width: 100%;
-        .txt-content {
-            right: 15%
-        }
-        h2.text-flip {
-            right: 25%;
-            text-align: center;
-        }
-    }
-
-    @include max-screen($xmd) {}
-
-    // &:after {
-    //  content: '\f0da';
-    //  font-family: $font-icon;
-    //  color: $colorDarkBlue;
-    //  position: absolute;
-    //  right: 10px;
-    //  top: 45%;
-    //  @include max-screen($smd){
-    //      right: 50px;
-    //  }
-    // }
-    .slider {
-        width: 60%;
-    }
 }
 
 
@@ -7020,7 +6992,7 @@ footer {
         @include font-size(18px);
         font-weight: 700;
         text-transform: uppercase;
-        color: $colorDarkGreen;
+        color: $colorDarkBlue2;
     }
 
     .photos {
@@ -7218,34 +7190,19 @@ footer {
 
         @include max-screen($xxlg) {
             .photo-item {
-                width: 50%; // &:nth-child(5n+1) {
-                //  clear:none;
-                // }
-                // &:nth-child(4n+1) {
-                //  clear:left;
-                // }
+                width: 50%;
             }
         }
 
         @include max-screen($xlg) {
             .photo-item {
-                width: 50%; // &:nth-child(4n+1) {
-                //  clear:none;
-                // }
-                // &:nth-child(3n+1) {
-                //  clear:left;
-                // }
+                width: 50%;
             }
         }
 
         @include max-screen($md) {
             .photo-item {
-                width: 50%; // &:nth-child(3n+1) {
-                //  clear:none;
-                // }
-                // &:nth-child(2n+1) {
-                //  clear:left;
-                // }
+                width: 50%;
             }
         }
 
@@ -7254,24 +7211,14 @@ footer {
 
             .photo-item {
                 width: 50%;
-                padding: 0 15px; // &:nth-child(2n+1) {
-                //  clear:none;
-                // }
-                // &:nth-child(3n+1) {
-                //  clear:left;
-                // }
+                padding: 0 15px;
             }
         }
 
         @include max-screen($sm) {
 
             .photo-item {
-                width: 50%; // &:nth-child(3n+1) {
-                //  clear:none;
-                // }
-                // &:nth-child(2n+1) {
-                //  clear:left;
-                // }
+                width: 50%;
             }
         }
 
@@ -7279,9 +7226,7 @@ footer {
 
             .photo-item {
                 width: 100%;
-                float: none; // &:nth-child(2n+1) {
-                //  clear:none;
-                // }
+                float: none;
             }
         }
     }
@@ -7457,7 +7402,7 @@ footer {
         .responsive-tabs__heading {
             padding: 25px;
             color: $colorWhite;
-            background: $colorGreen;
+            background: $colorDarkBlue;
             margin-bottom: 5px;
             text-transform: uppercase;
             @include font-size(14px);
@@ -7465,9 +7410,9 @@ footer {
             outline: none;
 
             &.responsive-tabs__heading--active {
-                border: solid 2px $colorGreen;
+                border: solid 2px $colorDarkBlue;
                 border-bottom: none;
-                color: $colorGreen;
+                color: $colorDarkBlue;
                 background: none;
             }
         }
