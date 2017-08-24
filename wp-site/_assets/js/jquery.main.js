@@ -834,9 +834,10 @@ function initLogo() {
 
 function initBioBoxes() {
 	console.log("fixing BIOBOXES php")
-	console.log(bioArray, " << did we pass php data?")
 
 	if ($("body").hasClass("bio")) {
+		console.log(bioArray, " << did we pass php data?")
+
 		var $photoItems = $(".photo-item");
 
 		$photoItems.each(function(index){
