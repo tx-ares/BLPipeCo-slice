@@ -230,7 +230,14 @@ function blpc_products_rollovers($post_type) {
 	}
 
 	foreach ( $pages as $page ) { 
-		$icon = get_field('products_menu_icon', $page->ID);
+
+		if($page->ID == 206) {
+			$icon = get_field('products_menu_icon_alt', $page->ID);
+		}
+		else {
+			$icon = get_field('products_menu_icon', $page->ID);
+		}
+
 		$string .= '<div class="' . $classes . '" eq-col>
                         
 	                    <a href="'.get_post_permalink( $page->ID ).'" class="tframe fw fh text-center item-box">
