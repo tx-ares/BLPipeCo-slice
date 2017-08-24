@@ -178,8 +178,8 @@ get_header(); ?>
 
 
 				<!--Latest News -->
-                <?php echo blpc_latest_articles_by_category_list('blog'); ?>
-
+<!--                 <?php echo blpc_latest_articles_by_category_list('blog'); ?>
+ -->
                 </div>
 
                 <div class="topic-nav">

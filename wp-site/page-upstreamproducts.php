@@ -275,10 +275,10 @@ get_header(); ?>
                                     <div class="col-md-2 col-sm-12">
                                         <div class="bar"></div>
                                         <div class="slide-content tframe valign-mid fw fh info-box" eq-col>
-                                                <a href="#">
+                                                <a href="/octg/top-mill-sourcing/">
                                                     <span class="text-upcase">Additional Sources</span>
                                                 </a>
-                                                <p> Nam liber tempor cum soluta nobis eleifend option congue nihil imperdiet doming id quod mazim placerat facer possim assum.</p>
+                                                <p> Establishing long standing relationships with a multitude of Tier 1 steel pipe manufacturers, and providing our customers with numerous options. </p>
                                         </div>
                                     </div>
 

@@ -173,8 +173,8 @@ get_header(); ?>
                 </div>
 
 				<!--Latest News -->
-                <?php echo blpc_latest_articles_by_category_list('latest-news'); ?>
-
+<!--            <?php echo blpc_latest_articles_by_category_list('latest-news'); ?>
+ -->
                 </div>
                 <div class="topic-nav">
                     <h4 class="topic-title">By Topic</h4>
