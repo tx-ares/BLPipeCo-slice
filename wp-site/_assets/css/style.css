@@ -4911,6 +4911,8 @@ footer {
         left: 50%;
         margin: -28px 0 0 -15px;
         background: transparent; }
+      .photo-wrapper .photos .photo-item.active .bioBox {
+        z-index: 2; }
       .photo-wrapper .photos .photo-item:hover .img-wrapper .overlay {
         top: 0;
         -moz-transition: all 0.3s;

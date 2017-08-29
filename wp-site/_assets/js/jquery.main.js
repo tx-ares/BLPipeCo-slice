@@ -611,8 +611,8 @@ function initPanelSlider(){
 		$(this).slick({
 		  dots: false,
 		  arrows: true,
-		  prevArrow:"<img class='a-left control-c prev slick-prev' src=" + templateUrl + "/_assets/images/ui/chevron-white-left.png>",
-	      nextArrow:"<img class='a-right control-c next slick-next' src=" + templateUrl + "/_assets/images/ui/chevron-white-right.png>",
+		  prevArrow:"<img class='a-left control-c prev slick-prev' src=" + templateUrl + "/_assets/images/ui/chevron-bluegray-left.png>",
+	      nextArrow:"<img class='a-right control-c next slick-next' src=" + templateUrl + "/_assets/images/ui/chevron-bluegray-right.png>",
 	      infinite: false,
 		  speed: 300,
 		  waitForAnimate: true,
@@ -836,7 +836,7 @@ function initBioBoxes() {
 	console.log("fixing BIOBOXES php")
 
 	if ($("body").hasClass("bio")) {
-		console.log(bioArray, " << did we pass php data?")
+		console.log(bioArray, " << did we pass php data from functions.php?")
 
 		var $photoItems = $(".photo-item");
 

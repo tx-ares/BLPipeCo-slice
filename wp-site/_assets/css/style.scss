@@ -7096,6 +7096,9 @@ footer {
                         background: transparent;
                     }
                 }
+                .bioBox {
+                    z-index: 2;
+                }
             }
 
             &:hover {
