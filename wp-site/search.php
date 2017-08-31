@@ -76,7 +76,9 @@
 
             <!-- Side Navigation -->
             <div class="side-nav">
-                <?php blpc_menu_list_pages(); ?>
+                <?php blpc_custom_menu_list_pages('octg'); ?>
+                <?php blpc_custom_menu_list_pages('upstreamproducts'); ?>
+                <?php blpc_custom_menu_list_pages('services'); ?>
             </div>
 
 
