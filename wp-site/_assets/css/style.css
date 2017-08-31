@@ -3843,8 +3843,7 @@ footer {
         font-size: 16px;
         font-size: 1rem; }
   .link-list .title {
-    font-size: 18px;
-    font-size: 1.125rem;
+    font-size: 24px !important;
     margin-bottom: 5px; }
   .link-list > div:nth-child(n+7) a {
     border-bottom: none; }
