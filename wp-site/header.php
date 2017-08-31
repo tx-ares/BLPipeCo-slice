@@ -1,7 +1,6 @@
 <!doctype html>
 <html>
 <head>
-    <?php wp_head(); ?>
     <!-- set the encoding of your site -->
     <meta charset="utf-8">
     <!-- set the viewport width and initial-scale on mobile devices -->
@@ -73,6 +72,8 @@
     <noscript>
         <link href="<?php echo get_template_directory_uri(); ?>/_assets/css/all.min.css" rel="stylesheet">
     </noscript>
+
+    <?php wp_head(); ?>
 </head>
 
 <body <?php body_class(); ?>>
