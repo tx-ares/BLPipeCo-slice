@@ -198,6 +198,72 @@ function page_body_class( $classes ) {
 	return $classes;
 }
 
+/* Phone List for Asides */
+function blpc_generate_send_request() {
+
+	$string = '';
+
+	$string .= '<div class="send-request" toggle-active-parent>
+	                <div class="row">
+	                    <div class="col-sm-7 col-xs-7 fh">
+	                        <a href="#" class="tframe fh fw">
+	                            <div class="tcell valign-mid call-us">
+	                                <p class="h3">Get in Touch</p>
+	                                <p class="sub-text">Please, use our customer line to contact us</p>
+	                                    <span class="num">+1 281-955-3500</span>
+	                            </div>
+	                        </a>
+	                    </div>
+	                    <div class="col-sm-5 col-xs-5 fh">
+	                        <div class="tframe fw fh popdown-phonenum">
+	                            <div class="tcell valign-mid phone-opener" toggle-active-opener><i class="fa fa-mobile" aria-hidden="true"></i> <span class="more">More</span><span class="less">Less</span> <i class="fa fa-angle-down" aria-hidden="true"></i></div>
+	                        </div>
+	                    </div>
+	                </div>
+	                
+	                <div class="more-phone">
+	                    <div class="more-phone-wrap">
+	                        <ul>
+	                            <li>
+	                                <span>Dallas, TX</span>
+	                                <a href="#" class="num">1-800-927-4732</a>
+	                            </li>
+	                            <li>
+	                                <span>Midland, TX</span>
+	                                <a href="#" class="num">1-800-927-4732</a>
+	                            </li>
+	                            <li>
+	                                <span>Fredericksburg, TX</span>
+	                                <a href="#" class="num">830-997-2986</a>
+	                            </li>
+	                            <li>
+	                                <span>Shreveport, LA</span>
+	                                <a href="#" class="num">318-424-5412</a>
+	                            </li>
+	                            <li>
+	                                <span>Tulsa, OK</span>
+	                                <a href="#" class="num">918-491-9333</a>
+	                            </li>
+	                            <li>
+	                                <span>Oklahoma Cita, OK</span>
+	                                <a href="#" class="num">1-800-927-4732</a>
+	                            </li>
+	                            <li>
+	                                <span>Denver, CO</span>
+	                                <a href="#" class="num">303-628-0606</a>
+	                            </li>
+	                            <li>
+	                                <span>Pittsburg, PA</span>
+	                                <a href="#" class="num">1-800-927-4732</a>
+	                            </li>
+	                        </ul>
+	                    </div>
+	                </div>
+	            </div>';
+
+    echo $string;
+}
+
 /* OCTG & Upstream Products */
 function blpc_products_rollovers($post_type) {
 

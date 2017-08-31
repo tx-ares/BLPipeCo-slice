@@ -33,31 +33,31 @@
             <div class="col-md-offset-3 col-md-9">
                 <div class="container-fluid">
                                                 
-                                                    <?php if (have_posts()) : ?>
+                    <?php if (have_posts()) : ?>
 
-                                                    <h2>Search Results for "<?php echo $s ?>"</h2>
-                                                    <ul class="link-list">
-                                                    <?php while (have_posts()) : the_post(); ?>
-                                                        <li>
-                                                            <a href="<?php the_permalink() ?>">
-                                                                    <h2 class="title"><?php the_title(); ?></h2>
-                                                                    <?php if ( function_exists('the_excerpt') && is_search() ) : ?>
-                                                                        <div class="subtitle"><?php echo the_excerpt(); ?></div>
-                                                                    <?php endif; ?>
-                                                            </a>
-                            </li>
-                                                    <?php endwhile; ?>
-                                                    </ul>
-                                                    <div class="next-prev clearfix">
-                                                        <?php next_posts_link('<i class="fa fa-angle-left" aria-hidden="true"></i> Previous') ?>
-                                                        <?php previous_posts_link('Next <i class="fa fa-angle-right" aria-hidden="true"></i>') ?>
-                                                    </div>
-                                                
-                                                <?php else : ?>
+                    <h2>Search Results for "<?php echo $s ?>"</h2>
+                    <ul class="link-list">
+                    <?php while (have_posts()) : the_post(); ?>
+                        <li>
+                            <a href="<?php the_permalink() ?>">
+                                    <h2 class="title"><?php the_title(); ?></h2>
+                                    <?php if ( function_exists('the_excerpt') && is_search() ) : ?>
+                                        <div class="subtitle"><?php echo the_excerpt(); ?></div>
+                                    <?php endif; ?>
+                            </a>
+                        </li>
+                    <?php endwhile; ?>
+                    </ul>
+                    <div class="next-prev clearfix">
+                        <?php next_posts_link('<i class="fa fa-angle-left" aria-hidden="true"></i> Previous') ?>
+                        <?php previous_posts_link('Next <i class="fa fa-angle-right" aria-hidden="true"></i>') ?>
+                    </div>
+                
+                <?php else : ?>
 
-                                                    <h2>No posts found. Try a different search?</h2>
+                    <h2>No posts found. Try a different search?</h2>
 
-                                                <?php endif; ?>
+                <?php endif; ?>
                         
                         
                     </div>
@@ -72,48 +72,7 @@
     <div class="col-md-4 col-sm-5 col-xs-12 aside">
         <div class="container-fluid">
             <!-- Send Request -->
-            <div class="send-request" toggle-active-parent>
-                <div class="row">
-                    <div class="col-sm-7 col-xs-7 fh">
-                        <a href="#" class="tframe fh fw">
-                            <div class="tcell valign-mid call-us">
-                                <p class="h3">Get in Touch</p>
-                                <p class="sub-text">Please, use our customer line to contact us</p>
-                                    <span class="num">+1 281-955-3500</span>
-                            </div>
-                        </a>
-                    </div>
-                    <div class="col-sm-5 col-xs-5 fh">
-                        <div class="tframe fw fh popdown-phonenum">
-                            <div class="tcell valign-mid phone-opener" toggle-active-opener><i class="fa fa-mobile" aria-hidden="true"></i> <span class="more">More</span><span class="less">Less</span> <i class="fa fa-angle-down" aria-hidden="true"></i></div>
-                        </div>
-                    </div>
-                </div>
-                
-                <!-- TODO: Make Dynamic -->
-                <div class="more-phone">
-                    <div class="more-phone-wrap">
-                        <ul>
-                            <li>
-                                <span>Concord, CA</span>
-                                <a href="#" class="num">+1 925 478 8058</a>
-                            </li>
-                            <li>
-                                <span>Angleton, TX</span>
-                                <a href="#" class="num">+1 713 260 4050</a>
-                            </li>
-                            <li>
-                                <span>Denver, CO</span>
-                                <a href="#" class="num">+1 720 789 7570</a>
-                            </li>
-                            <li>
-                                <span>Denver, CO</span>
-                                <a href="#" class="num">+1 720 789 7570</a>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
+            <?php blpc_generate_send_request(); ?>
 
             <!-- Side Navigation -->
             <div class="side-nav">

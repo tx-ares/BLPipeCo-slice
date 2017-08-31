@@ -5637,14 +5637,19 @@ footer {
 
         font-weight: 500;
         color: $colorBrightRed2;
-        .title {
-            // @include font-size(18px);
-            // margin-bottom: 5px;
-        }
+        
 
         .subtitle {
             color: $colorLightGrey4;
+            p {
+                @include font-size(16px);
+            }
         }
+    }
+
+    .title {
+        @include font-size(18px);
+        margin-bottom: 5px;
     }
 
     >div:nth-child(n+7) {
