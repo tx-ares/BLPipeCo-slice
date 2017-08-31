@@ -85,8 +85,6 @@ get_header(); ?>
                         </div>
                     </div>
                 </div>
-
-                <script type="text/javascript">console.log("from home.php 6 ")</script>
                         
             </div>
         </div>

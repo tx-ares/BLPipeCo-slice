@@ -3509,17 +3509,17 @@ footer {
     .image-cta .img-content img {
       position: absolute;
       display: block;
-      left: 49.9%;
+      left: 50%;
       right: 0;
       top: 0;
       bottom: 0;
       height: 100%;
       width: 100%;
-      -moz-transform: translate(-50.1%, 0);
-      -o-transform: translate(-50.1%, 0);
-      -ms-transform: translate(-50.1%, 0);
-      -webkit-transform: translate(-50.1%, 0);
-      transform: translate(-50.1%, 0); }
+      -moz-transform: translate(-50%, 0);
+      -o-transform: translate(-50%, 0);
+      -ms-transform: translate(-50%, 0);
+      -webkit-transform: translate(-50%, 0);
+      transform: translate(-50%, 0); }
       @media only screen and (max-width: 768px) {
         .image-cta .img-content img {
           position: relative; } }
