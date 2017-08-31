@@ -2860,21 +2860,19 @@ footer {
                     }
                 }
 
-                #submit-row {
-                    width: 100%;
-                    position: relative;
-                    input[type="submit"] {
-                        font-weight: 500;
-                        text-transform: uppercase;
-                        background: $colorBrightRed2;
-                        color: $colorWhite;
-                        @include transition (all .3s);
+                
+                input[type="submit"] {
+                    font-weight: 500;
+                    text-transform: uppercase;
+                    background: $colorBrightRed2;
+                    color: $colorWhite;
+                    @include transition (all .3s);
 
-                        &:hover {
-                            background: $colorSlateBlue2;
-                            color: $colorDarkBlue;
-                        }
+                    &:hover {
+                        background: $colorSlateBlue2;
+                        color: $colorDarkBlue;
                     }
+                    
                 }
             }
 

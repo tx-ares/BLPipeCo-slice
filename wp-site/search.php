@@ -9,17 +9,10 @@
             <div class="tframe fh fw ">
                 <div class="tcell valign-mid ">
                     <div class="container-fluid no-padding ">
-                        <img alt="BL Pipeco " data-src="<575:<?php echo the_post_thumbnail_url('full'); ?>, <768:<?php echo the_post_thumbnail_url('full'); ?>,>768:<?php echo the_post_thumbnail_url('full'); ?>" />
+                        <img alt="BL Pipeco " data-src="<575: http://ec2-54-210-43-70.compute-1.amazonaws.com/wp-content/uploads/2017/08/TopBanner_AboutUs_Locations.jpg, <768:http://ec2-54-210-43-70.compute-1.amazonaws.com/wp-content/uploads/2017/08/TopBanner_AboutUs_Locations.jpg,>768: http://ec2-54-210-43-70.compute-1.amazonaws.com/wp-content/uploads/2017/08/TopBanner_AboutUs_Locations.jpg" />
                         <div class="subtext-box">
                             <h1 class="text-upcase">
-                                <?php 
-                                    if(get_field('alternate_h1_heading')) {
-                                        echo get_field('alternate_h1_heading');
-                                    }
-                                    else {
-                                        the_title();
-                                    }; 
-                                ?> 
+                                Search
                             </h1>
                       </div>
                     </div>
