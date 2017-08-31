@@ -27,7 +27,20 @@ get_header(); ?>
 
 
                     <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
+
+                    <?php
+
+                        global $post;
+                        $pageId = $post->ID;
+
+                        if ($pageId == 142 || $pageId == 153 ) {
+                            blpc_locations_list();
+                        } 
+
+                    ?>
+
                     <?php the_content(); ?>
+
                     <?php endwhile; endif; ?>
 
 
