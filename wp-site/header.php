@@ -1,6 +1,7 @@
 <!doctype html>
 <html>
 <head>
+    <?php wp_head(); ?>
     <!-- set the encoding of your site -->
     <meta charset="utf-8">
     <!-- set the viewport width and initial-scale on mobile devices -->
