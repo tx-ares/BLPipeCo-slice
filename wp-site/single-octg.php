@@ -71,7 +71,7 @@ get_header(); ?>
                         <div class="tcell valign-mid call-us">
                             <p class="h3">Get in Touch</p>
                             <p class="sub-text">Please, use our customer line to contact us</p>
-                            <span class="num">+1 555 123 4567</span>
+                            <span class="num">+1 281-955-3500</span>
                         </div>
                     </a>
                 </div>

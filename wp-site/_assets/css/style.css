@@ -1533,8 +1533,10 @@ header {
         width: 60px; }
       header ul.top-nav > li:nth-child(2) {
         width: 140px; }
-      header ul.top-nav > li:nth-child(3), header ul.top-nav > li:nth-child(4) {
+      header ul.top-nav > li:nth-child(3) {
         width: 75px; }
+      header ul.top-nav > li:nth-child(4) {
+        width: 100px; }
       header ul.top-nav > li:last-child {
         margin-right: 0;
         width: 40px; }
