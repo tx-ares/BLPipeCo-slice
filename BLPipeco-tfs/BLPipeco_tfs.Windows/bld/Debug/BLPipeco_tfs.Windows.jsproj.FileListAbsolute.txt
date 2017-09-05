@@ -1,0 +1,15 @@
+C:\Users\ahuerta\Source\Workspaces\BLPipeco\BLPipeco-tfs\BLPipeco_tfs.Windows\bin\Debug\ReverseMap\resources.pri
+C:\Users\ahuerta\Source\Workspaces\BLPipeco\BLPipeco-tfs\BLPipeco_tfs.Windows\bin\Debug\AppxManifest.xml
+C:\Users\ahuerta\Source\Workspaces\BLPipeco\BLPipeco-tfs\BLPipeco_tfs.Windows\bin\Debug\BLPipeco_tfs.Windows.build.appxrecipe
+C:\Users\ahuerta\Source\Workspaces\BLPipeco\BLPipeco-tfs\BLPipeco_tfs.Windows\bld\Debug\priconfig.xml
+C:\Users\ahuerta\Source\Workspaces\BLPipeco\BLPipeco-tfs\BLPipeco_tfs.Windows\bld\Debug\priconfig.xml.intermediate
+C:\Users\ahuerta\Source\Workspaces\BLPipeco\BLPipeco-tfs\BLPipeco_tfs.Windows\bld\Debug\layout.resfiles
+C:\Users\ahuerta\Source\Workspaces\BLPipeco\BLPipeco-tfs\BLPipeco_tfs.Windows\bld\Debug\layout.resfiles.intermediate
+C:\Users\ahuerta\Source\Workspaces\BLPipeco\BLPipeco-tfs\BLPipeco_tfs.Windows\bld\Debug\resources.resfiles
+C:\Users\ahuerta\Source\Workspaces\BLPipeco\BLPipeco-tfs\BLPipeco_tfs.Windows\bld\Debug\resources.resfiles.intermediate
+C:\Users\ahuerta\Source\Workspaces\BLPipeco\BLPipeco-tfs\BLPipeco_tfs.Windows\bld\Debug\pri.resfiles
+C:\Users\ahuerta\Source\Workspaces\BLPipeco\BLPipeco-tfs\BLPipeco_tfs.Windows\bld\Debug\pri.resfiles.intermediate
+C:\Users\ahuerta\Source\Workspaces\BLPipeco\BLPipeco-tfs\BLPipeco_tfs.Windows\bld\Debug\qualifiers.txt
+C:\Users\ahuerta\Source\Workspaces\BLPipeco\BLPipeco-tfs\BLPipeco_tfs.Windows\bld\Debug\qualifiers.txt.intermediate
+C:\Users\ahuerta\Source\Workspaces\BLPipeco\BLPipeco-tfs\BLPipeco_tfs.Windows\bld\Debug\MultipleQualifiersPerDimensionFound.txt
+C:\Users\ahuerta\Source\Workspaces\BLPipeco\BLPipeco-tfs\BLPipeco_tfs.Windows\bld\Debug\ProjectArchitectures.txt
