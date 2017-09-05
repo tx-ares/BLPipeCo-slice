@@ -56,26 +56,8 @@ get_header(); ?>
             <!-- Aside Content -->
             <!-- ******************************************************* -->
             <div class="col-md-5 col-sm-5 col-xs-12 aside" eq-col>              
-                    <!-- Send Request -->
-                    <div class="send-request" toggle-active-parent>
-                        <div class="row full-scr" eq-height>
-                            <div class="col-sm-7 col-xs-7 fh" eq-col>
-                                <a href="#" class="tframe fh fw">
-                                    <div class="tcell valign-mid call-us">
-                                        <p class="h3">Get in Touch</p>
-                                        <p class="sub-text">Please, use our customer line to contact us</span>
-                                            <span class="num">+1 555 123 4567</span>
-                                    </div>
-                                </a>
-                            </div>
-                            <div class="col-sm-5 col-xs-5 fh" eq-col>
-                                <div class="tframe fw fh popdown-phonenum">
-                                    <div class="tcell valign-mid phone-opener" toggle-active-opener><i class="fa fa-mobile" aria-hidden="true"></i> <span class="more">More</span><span class="less">Less</span> <i class="fa fa-angle-down" aria-hidden="true"></i></div>
-                                </div>
-                            </div>
-                        </div>
-                        
-                    </div>
+            <!-- Send Request -->
+            <?php blpc_generate_send_request(); ?>
                    
             </div>
         </div>

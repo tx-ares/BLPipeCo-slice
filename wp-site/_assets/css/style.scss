@@ -2226,9 +2226,11 @@ header {
             &:nth-child(2) {
                 width: 140px;
             }
-            &:nth-child(3),
-            &:nth-child(4) {
+            &:nth-child(3){ 
                 width: 75px;
+            }
+            &:nth-child(4) {
+                width: 100px;
             }
             &:last-child {
                 margin-right: 0;
@@ -2858,21 +2860,19 @@ footer {
                     }
                 }
 
-                #submit-row {
-                    width: 100%;
-                    position: relative;
-                    input[type="submit"] {
-                        font-weight: 500;
-                        text-transform: uppercase;
-                        background: $colorBrightRed2;
-                        color: $colorWhite;
-                        @include transition (all .3s);
+                
+                input[type="submit"] {
+                    font-weight: 500;
+                    text-transform: uppercase;
+                    background: $colorBrightRed2;
+                    color: $colorWhite;
+                    @include transition (all .3s);
 
-                        &:hover {
-                            background: $colorSlateBlue2;
-                            color: $colorDarkBlue;
-                        }
+                    &:hover {
+                        background: $colorSlateBlue2;
+                        color: $colorDarkBlue;
                     }
+                    
                 }
             }
 
@@ -5109,13 +5109,13 @@ footer {
         img {
             position: absolute; // margin: auto;
             display: block;
-            left: 49.9%;
+            left: 50%;
             right: 0;
             top: 0;
             bottom: 0;
             height: 100%;
             width: 100%;
-            @include transform(translate(-50.1%,
+            @include transform(translate(-50%,
             0));
             @include max-screen ($xmd) {
                 position: relative;
@@ -5637,14 +5637,19 @@ footer {
 
         font-weight: 500;
         color: $colorBrightRed2;
-        .title {
-            // @include font-size(18px);
-            // margin-bottom: 5px;
-        }
+        
 
         .subtitle {
             color: $colorLightGrey4;
+            p {
+                @include font-size(16px);
+            }
         }
+    }
+
+    .title {
+        font-size: 24px !important;
+        margin-bottom: 5px;
     }
 
     >div:nth-child(n+7) {
@@ -7095,6 +7100,9 @@ footer {
                         margin: -28px 0 0 -15px;
                         background: transparent;
                     }
+                }
+                .bioBox {
+                    z-index: 2;
                 }
             }
 
