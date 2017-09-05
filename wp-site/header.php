@@ -7,7 +7,12 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     
-    <title>B&amp;L Pipe Company</title>
+    <title>
+        <?php
+            echo blpc_generate_page_title();
+        ?>
+    </title>
+
     <style>
     html,
     body {

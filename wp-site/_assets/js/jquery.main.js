@@ -786,7 +786,7 @@ function initAnimateWhenInView() { //Animations when a certain element is scroll
 	var logoRow = $(".logo-row");
 		staticSlideRow = $(".static-slides");
 
-	if($("body").hasClass("landing")) { //Pulsing animation for Logo row on landing pages.
+	if($("body").hasClass("landing") && !$("body").hasClass("services") ) { //Pulsing animation for Logo row on landing pages.
 		$(window).scroll(function(){
 
 			if(isScrolledIntoView(logoRow) == true) {
@@ -796,17 +796,17 @@ function initAnimateWhenInView() { //Animations when a certain element is scroll
 					})
 			}
 
-			if(isScrolledIntoView(staticSlideRow) == true) { //Bounce in left animations for Product Icons on landing pages.
+			if(isScrolledIntoView(staticSlideRow) == true) { //Animations for Product Icons on landing pages.  Can use animate.css
 				var delayedTimer = 0;
 
 				staticSlideRow.find("div.slide-content").each(
 					function(){
-						delayedTimer += 300;
+						delayedTimer += 30;
 						var self = this;
-						// console.log(delayedTimer, " << timer !")
+						console.log(delayedTimer, " << timer !")
 						setTimeout(
 							function() { 
-								$(self).addClass("animated bounceInLeft active");
+								$(self).addClass("active"); //add animate.css classes here
 							}, delayedTimer);
 					});
 			}
@@ -834,14 +834,19 @@ function initLogo() {
 
 function initBioBoxes() {
 	console.log("fixing BIOBOXES php")
+
 	if ($("body").hasClass("bio")) {
+		console.log(bioArray, " << did we pass php data?")
+
 		var $photoItems = $(".photo-item");
-			
 
 		$photoItems.each(function(index){
 			var $photoItem = $(this);
-				$photoItemId = index;
+				// $photoItemId = index;
 			    $bioExpander = $photoItem.find(".info-wrapper");
+
+			    console.log(index, " << index");
+
 			// console.log($photoItem)
 			$bioExpander.on("click" , function(e) {
 				e.stopPropagation();
@@ -860,16 +865,10 @@ function initBioBoxes() {
 					$("<div/>", 
 						{
 							class: "bioBox",
-						    id: $photoItemId,					    
+						    id: index,					    
 						    title: "biography",
 						    //html to be filled dynamically by CMS.
-						    html: $.ajax({
-									  url: templateUrl + "/biobox.php",
-									  success: function(data) {
-									  	console.log(data , " << data")
-										$(this).html(data);
-									  }
-									})
+						    html: bioArray[index]
 
 						}).on("click", function(e) {
 							e.stopPropagation();

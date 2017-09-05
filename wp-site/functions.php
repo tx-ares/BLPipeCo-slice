@@ -75,6 +75,20 @@ function blpc_search_menu($items, $args) {
 }
 add_filter('wp_nav_menu_items', 'blpc_search_menu', 10, 2);
 
+/* Get Title */
+function blpc_generate_page_title() {
+	
+    if( is_front_page() ) {
+        echo "Home | B&amp;L Pipeco Services";
+    }
+    else {
+        $string = '';
+        $string .= the_title() . " | B&amp;L Pipeco Services";
+        echo $string;
+    }
+    
+}
+
 /* sidebar */
 function blpc_widgets_init() {
 	register_sidebar( array(
@@ -154,7 +168,7 @@ function page_body_class( $classes ) {
 		$classes[] = 'fullpage homepage home';
 	}
 	else if(is_page_template('page-services.php')) {
-		$classes[] = 'fullpage main-content-fullpage landing';
+		$classes[] = 'fullpage main-content-fullpage services landing';
 
 	}
 	else if(is_page_template('page-octg.php')) {
@@ -197,6 +211,62 @@ function blpc_products_rollovers($post_type) {
 	
 	$pages = get_pages( $args );
 	$string = '';
+	$classes = 'static-container ';
+
+	if ( count($pages) == 1 ) {
+		$classes .= 'col-lg-offset-4 col-lg-4 col-md-offset-3 col-md-6 col-sm-offset-3 col-sm-6 col-xs-12';
+	}
+
+	else if ( count($pages) < 1 && count($pages) > 4 ) {
+		$classes .= 'col-lg-4 col-md-6 col-sm-6 col-xs-12';
+	}
+
+	else if ( count($pages) == 4 ) {
+		$classes .= 'col-lg-3 col-md-6 col-sm-6 col-xs-12';
+	}
+
+	else {
+		$classes .= 'col-lg-2 col-md-6 col-sm-6 col-xs-12';
+	}
+
+	foreach ( $pages as $page ) { 
+
+		if($page->ID == 206) {
+			$icon = get_field('products_menu_icon_alt', $page->ID);
+		}
+		else {
+			$icon = get_field('products_menu_icon', $page->ID);
+		}
+
+		$string .= '<div class="' . $classes . '" eq-col>
+                        
+	                    <a href="'.get_post_permalink( $page->ID ).'" class="tframe fw fh text-center item-box">
+		                    <div class="slide-content tframe valign-mid" eq-col>
+		                        
+                                <img src="'.$icon['url'].'" alt="'.$icon['alt'].'" class="icon" />
+                                <h3>' . $page->post_title . '</h3>
+                                <p class="details">' . get_field('products_menu_description', $page->ID)  . '</p>
+		                    </div>         
+	                    </a>
+                   	
+                	</div>';	
+	}
+	echo $string;
+}
+
+/* OCTG & Upstream Products */
+function blpc_services_rollovers($post_type) {
+
+	$args = array( 
+		'parent' => 0,
+		'exclude' => 2347,
+		'sort_column' => 'menu_order', 
+		'sort_order' => 'asc',
+		'post_type' => $post_type
+	);
+	
+	$pages = get_pages( $args );
+	$string = '';
 	$classes = '';
 
 	if ( count($pages) == 1 ) {
@@ -216,7 +286,7 @@ function blpc_products_rollovers($post_type) {
 	}
 
 	foreach ( $pages as $page ) { 
-		$icon = get_field('products_menu_icon', $page->ID);
+		$icon = get_field('services_menu_icon', $page->ID);
 		$string .= '<div class="' . $classes . '" eq-col>
                         
 	                    <a href="'.get_post_permalink( $page->ID ).'" class="tframe fw fh text-center item-box">
@@ -224,7 +294,7 @@ function blpc_products_rollovers($post_type) {
 		                        
                                 <img src="'.$icon['url'].'" alt="'.$icon['alt'].'" class="icon" />
                                 <h3>' . $page->post_title . '</h3>
-                                <p class="details">' . get_field('products_menu_description', $page->ID)  . '</p>
+                                <p class="details">' . get_field('services_menu_description', $page->ID)  . '</p>
 		                    </div>         
 	                    </a>
                    	
@@ -232,6 +302,8 @@ function blpc_products_rollovers($post_type) {
 	}
 	echo $string;
 }
+
+
 
 /* Management Team Bios */
 function blpc_bio_tiles($post_id) { 
@@ -247,8 +319,25 @@ function blpc_bio_tiles($post_id) {
 	
 	$pages = get_posts( $args );
 	$string = '';
+	$bioArray = array();
+	$bioIndex = '';
 
-	foreach ( $pages as $page ) { 
+	foreach ( $pages as $page ) {
+
+		/* Localize Team Bio Data */
+
+		$bioIndex = '<h3>' 
+						. get_field('people_name', $page->ID) . 
+					'</h3>
+					<h4>' 
+						. get_field('people_title', $page->ID) . 
+					'</h4> 
+					<p>' 
+						. get_field('people_biography' , $page->ID) .
+					'</p>';
+
+		array_push($bioArray, $bioIndex);
+
 		$photo = get_field('people_photo', $page->ID);
 		$string .= '<div class="photo-item">
 						<div class="img-wrapper">
@@ -269,12 +358,16 @@ function blpc_bio_tiles($post_id) {
 									</div>
 								</div>
 							</div>
-						</div>	
-					</div>';							
+						</div>
+
+					</div>
+
+					';							
 	}
 
-
 	echo $string;
+	echo "<script>var bioArray = " . json_encode($bioArray) . ';</script>';
+
 }
 
 /* menu_list_pages */

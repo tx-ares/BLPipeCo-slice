@@ -178,8 +178,8 @@ get_header(); ?>
 
 
 				<!--Latest News -->
-                <?php echo blpc_latest_articles_by_category_list('blog'); ?>
-
+<!--                 <?php echo blpc_latest_articles_by_category_list('blog'); ?>
+ -->
                 </div>
 
                 <div class="topic-nav">
@@ -192,6 +192,16 @@ get_header(); ?>
                 </div>
 
             </div>
+
+              <!-- Feature CTA Right -->
+                <?php 
+                    $feature_id1 = get_field('any_feature_right'); 
+                    
+                    if($feature_id1) {
+                        echo blpc_content_feature_right($feature_id1); 
+                    }
+                   
+                ?>
 
 
             <!-- Sidebar General -->

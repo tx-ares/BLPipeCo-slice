@@ -138,7 +138,7 @@ get_header(); ?>
                         <a href="#" class="tframe fh fw">
                             <div class="tcell valign-mid call-us">
                                 <p class="h3">Get in Touch</p>
-                                <p class="sub-text">Please, use our customer line to contact us</span>
+                                <p class="sub-text">Please, use our customer line to contact us</p>
                                     <span class="num">+1 555 123 4567</span>
                             </div>
                         </a>
@@ -173,8 +173,8 @@ get_header(); ?>
                 </div>
 
 				<!--Latest News -->
-                <?php echo blpc_latest_articles_by_category_list('latest-news'); ?>
-
+<!--            <?php echo blpc_latest_articles_by_category_list('latest-news'); ?>
+ -->
                 </div>
                 <div class="topic-nav">
                     <h4 class="topic-title">By Topic</h4>
@@ -195,7 +195,7 @@ get_header(); ?>
 
             <!-- Feature CTA Right -->
                 <?php 
-                    $feature_id1 = get_field('latest_news_feature_right'); 
+                    $feature_id1 = get_field('any_feature_right'); 
                     
                     if($feature_id1) {
                         echo blpc_content_feature_right($feature_id1); 

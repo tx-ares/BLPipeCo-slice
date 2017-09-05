@@ -46,7 +46,7 @@
                         global $post;
                         $pageId = $post->ID;
 
-                        if ($pageId == 142) {
+                        if ($pageId == 142 || $pageId == 153 ) {
                             blpc_locations_list();
                         } 
 
