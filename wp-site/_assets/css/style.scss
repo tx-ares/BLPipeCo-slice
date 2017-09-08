@@ -2220,6 +2220,15 @@ header {
             text-align: left;
             width: 90px; // Transition Style
             margin-right: 10px;
+            &.current-menu-item {
+                >a {
+                    color: #fff;
+                    text-decoration: none;
+                    border-bottom: 3px solid #d0112b;
+                    width: 100%;
+                }
+            }
+
             &:first-child {
                 width: 60px;
             }
@@ -2244,6 +2253,7 @@ header {
                     }
                 }
             }
+
             >a {
                 color: $colorLightGrey3;
                 font-weight: 500;

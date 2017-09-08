@@ -1529,6 +1529,11 @@ header {
       width: 90px;
       margin-right: 10px;
       /* Style from 2nd <ul> only */ }
+      header ul.top-nav > li.current-menu-item > a {
+        color: #fff;
+        text-decoration: none;
+        border-bottom: 3px solid #d0112b;
+        width: 100%; }
       header ul.top-nav > li:first-child {
         width: 60px; }
       header ul.top-nav > li:nth-child(2) {
