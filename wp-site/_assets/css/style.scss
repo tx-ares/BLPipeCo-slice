@@ -4891,6 +4891,9 @@ footer {
             padding: 20px 30px;
             cursor: pointer;
             @include transition(background .3s);
+            &.current_page_item {
+                background: $colorLightGrey2;
+            }
             &:nth-child(n-3) {
                 border-bottom: 1px solid $colorWhite;
             }

@@ -270,7 +270,7 @@ function blpc_products_rollovers($post_type) {
 	$args = array( 
 		'parent' => 0,
 		'exclude' => 2347,
-		'sort_column' => 'menu_order', 
+		'sort_column' => 'post_title', 
 		'sort_order' => 'asc',
 		'post_type' => $post_type
 	);
