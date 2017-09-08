@@ -1407,6 +1407,9 @@ figure {
   -o-transition: all, 0.4s;
   -webkit-transition: all, 0.4s;
   transition: all, 0.4s; }
+  .social-media-icons.move-icons-from-blocking-map-controls {
+    left: 0 !important;
+    right: unset !important; }
   @media only screen and (max-width: 575px) {
     .social-media-icons {
       bottom: -40px !important;
@@ -1529,7 +1532,7 @@ header {
       width: 90px;
       margin-right: 10px;
       /* Style from 2nd <ul> only */ }
-      header ul.top-nav > li.current-menu-item > a {
+      header ul.top-nav > li.current-menu-item > a, header ul.top-nav > li.current-page-ancestor > a, header ul.top-nav > li.current-page-parent > a {
         color: #fff;
         text-decoration: none;
         border-bottom: 3px solid #d0112b;

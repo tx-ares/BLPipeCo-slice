@@ -785,6 +785,7 @@ function initAnimateWhenInView() { //Animations when a certain element is scroll
 
 	var logoRow = $(".logo-row");
 		staticSlideRow = $(".static-slides");
+		locationMap = $(".map");			
 
 	if($("body").hasClass("landing") && !$("body").hasClass("services") ) { //Pulsing animation for Logo row on landing pages.
 		$(window).scroll(function(){
@@ -812,6 +813,15 @@ function initAnimateWhenInView() { //Animations when a certain element is scroll
 			}
 
 		});
+	}
+
+	if($("body").hasClass("location")) { //Moving Social media icons from blocking locations map.
+		var socialMediaIcons = $(".social-media-icons");
+
+		socialMediaIcons.addClass("move-icons-from-blocking-map-controls");
+
+		console.log("LOCATIONS CLASS FOUND")
+		console.log(socialMediaIcons, " << socialMediaIcons")
 	}
 
 }

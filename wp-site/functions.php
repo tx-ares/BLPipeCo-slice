@@ -188,7 +188,9 @@ function page_body_class( $classes ) {
 	}
 	else if(is_page_template('page-people.php')) {
 		$classes[] = 'inner bio';
-
+	}
+	else if(is_page_template('page-locations.php')) {
+		$classes[] = 'inner location';
 	}
 
 	else {

@@ -2053,6 +2053,10 @@ $padding-sm: 20px;
     top: 30%;
     right: 0;
     z-index: 4;
+    &.move-icons-from-blocking-map-controls {
+        left: 0 !important;
+        right: unset !important;
+    }
     @include transition(all,
     .4s); // &.hidden {
     //  right: -40px;
@@ -2220,7 +2224,9 @@ header {
             text-align: left;
             width: 90px; // Transition Style
             margin-right: 10px;
-            &.current-menu-item {
+            &.current-menu-item,
+            &.current-page-ancestor,
+            &.current-page-parent {
                 >a {
                     color: #fff;
                     text-decoration: none;

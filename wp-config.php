@@ -125,3 +125,8 @@ add_filter( 'xmlrpc_methods', function( $methods ) {
         return $methods;
 });
 add_filter( 'auto_update_translation', '__return_false' );
+
+
+// for debugging only,  Delete or comment out once debugging is complete. // *******
+error_reporting(E_ALL); ini_set('display_errors', 1);
+ 
