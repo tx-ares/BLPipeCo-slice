@@ -61,9 +61,13 @@
             }, 15e3);
         return d.appendChild(e), e
     }
+    // console.log("Check HEAD Scripts 5")
 
     loadStyleSheet('<?php echo get_template_directory_uri(); ?>/_assets/css/all.min.css', function(success, link) {
+        // console.log($(this), " << loading of stylesheet ")
+
         if (success) {
+            // console.log("CSS Load - SUCCESS")
             document.body.className += " cssloaded";
         }
     });

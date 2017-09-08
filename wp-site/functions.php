@@ -2,7 +2,7 @@
 
 include_once(ABSPATH.WPINC.'/feed.php');
 
-add_filter('show_admin_bar', '__return_false');
+// add_filter('show_admin_bar', '__return_false'); 
 add_theme_support( 'post-thumbnails' );
 
 add_filter('single_template', 'blpc_single_template');
