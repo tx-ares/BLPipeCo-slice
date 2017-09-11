@@ -2245,7 +2245,7 @@ header {
                 width: 75px;
             }
             &:nth-child(4) {
-                width: 100px;
+                width: 105px;
             }
             &:last-child {
                 margin-right: 0;
@@ -3990,6 +3990,30 @@ footer {
                 color: $colorLightGrey6;
             }
         }
+    }
+}
+
+// Locations Google Plugin Map
+
+@include min-screen ($sm) {
+    .gm-style {
+        @include transition(all .3s);
+        div:nth-child(7) {
+            // top: unset !important;
+            right: 40px !important;
+        }   
+    }
+
+    .gmnoprint.gm-bundled-control.gm-bundled-control-on-bottom {
+        @include transition(all .3s);
+        right: 70px !important;
+        .gm-svpc {
+            left: 0px !important;
+            top: 0px !important;
+        }
+        //  div.gmnoprint:first-child {
+        //     left: -40px !important;
+        // }
     }
 }
 

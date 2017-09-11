@@ -35,7 +35,9 @@
                                                 
                     <?php if (have_posts()) : ?>
 
-                    <h2>Search Results for <span class="search-keyword">"<?php echo $s ?>"</span></h2>
+                    <h2>Displaying 
+                    <?php global $wp_query;
+                        echo $wp_query->found_posts.' search results for '?><span class="search-keyword">"<?php echo $s ?>"</span></h2>
                     <ul class="link-list">
                     <?php while (have_posts()) : the_post(); ?>
                         <li>
