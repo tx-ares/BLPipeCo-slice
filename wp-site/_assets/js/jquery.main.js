@@ -887,8 +887,6 @@ function initBioBoxes() {
 							height: "360px"
 						}, 300, "swing");
 
-						
-
 				}
 			});
 
@@ -936,7 +934,7 @@ function resetBios(){
 }
 
 function lockSlickTrackIfNotEnoughSlides() {
-	$(".slick-track").each(function() {
+	$(".slick-track").each( function() {
 		var $slickTrack = $(this);
 
 		if( $slickTrack.find(".slick-slide").length < 3 ) {

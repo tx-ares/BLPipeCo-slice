@@ -435,7 +435,7 @@ function blpc_bio_tiles($post_id) {
 	}
 
 	echo $string;
-	echo "<script>var bioArray = " . json_encode($bioArray) . ';</script>';
+	echo "<script>var bioArray = " . json_encode($bioArray) . ';</script>'; // Create JSON for use in jquery.main.js
 
 }
 
