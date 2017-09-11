@@ -815,14 +815,15 @@ function initAnimateWhenInView() { //Animations when a certain element is scroll
 		});
 	}
 
-	if($("body").hasClass("location")) { //Moving Social media icons from blocking locations map.
-		var socialMediaIcons = $(".social-media-icons");
+	 //Moving Social media icons from blocking locations map.
+	// if($("body").hasClass("location")) {
+	// 	var socialMediaIcons = $(".social-media-icons");
 
-		socialMediaIcons.addClass("move-icons-from-blocking-map-controls");
+	// 	socialMediaIcons.addClass("move-icons-from-blocking-map-controls");
 
-		console.log("LOCATIONS CLASS FOUND")
-		console.log(socialMediaIcons, " << socialMediaIcons")
-	}
+	// 	console.log("LOCATIONS CLASS FOUND")
+	// 	console.log(socialMediaIcons, " << socialMediaIcons")
+	// }
 
 }
 

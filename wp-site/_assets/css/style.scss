@@ -2225,8 +2225,8 @@ header {
             width: 90px; // Transition Style
             margin-right: 10px;
             &.current-menu-item,
-            &.current-page-ancestor,
-            &.current-page-parent {
+            &.current-menu-ancestor,
+            &.current_page_parent {
                 >a {
                     color: #fff;
                     text-decoration: none;
@@ -4037,6 +4037,11 @@ footer {
             display: block;
             @include font-size(20px);
             margin-bottom: 20px;
+        }
+
+        .search-keyword {
+            font-weight: 700;
+            color: $colorBrightRed2;  
         }
 
         #contact-form {

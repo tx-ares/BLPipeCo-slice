@@ -2,7 +2,7 @@
 
 include_once(ABSPATH.WPINC.'/feed.php');
 
-// add_filter('show_admin_bar', '__return_false'); 
+add_filter('show_admin_bar', '__return_false'); 
 add_theme_support( 'post-thumbnails' );
 
 add_filter('single_template', 'blpc_single_template');
@@ -154,8 +154,9 @@ function blpc_widgets_init() {
 }
 add_action( 'widgets_init', 'blpc_widgets_init' );
 
+// Added cssloaded to initial class list to work around cssloaded failing to be added in header.
 add_filter( 'body_class', function( $classes ) {
-    return array_merge( $classes, array( 'header-sticky footer-sticky' ) );
+    return array_merge( $classes, array( 'header-sticky footer-sticky cssloaded' ) );
 } );
 
 /* body class */
@@ -189,9 +190,9 @@ function page_body_class( $classes ) {
 	else if(is_page_template('page-people.php')) {
 		$classes[] = 'inner bio';
 	}
-	else if(is_page_template('page-locations.php')) {
-		$classes[] = 'inner location';
-	}
+	// else if(is_page_template('page-locations.php')) {
+	// 	$classes[] = 'inner location';
+	// }
 
 	else {
 		$classes[] = 'inner';

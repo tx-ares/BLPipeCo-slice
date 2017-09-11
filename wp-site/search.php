@@ -35,7 +35,7 @@
                                                 
                     <?php if (have_posts()) : ?>
 
-                    <h2>Search Results for "<?php echo $s ?>"</h2>
+                    <h2>Search Results for <span class="search-keyword">"<?php echo $s ?>"</span></h2>
                     <ul class="link-list">
                     <?php while (have_posts()) : the_post(); ?>
                         <li>
@@ -75,12 +75,12 @@
             <?php blpc_generate_send_request(); ?>
 
             <!-- Side Navigation -->
-            <div class="side-nav">
+            <!-- <div class="side-nav">
                 <?php blpc_custom_menu_list_pages('octg'); ?>
                 <?php blpc_custom_menu_list_pages('upstreamproducts'); ?>
                 <?php blpc_custom_menu_list_pages('services'); ?>
             </div>
-
+ -->
 
         </div>
     </div>

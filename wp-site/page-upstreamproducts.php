@@ -184,7 +184,15 @@ get_header(); ?>
 
                             </div> 
                             <div class="col-md-4 col-sm-12 col-xs-12" eq-col>
-                                <div class="image-cta resource-center">
+                                <!-- Feature CTA Bottom -->
+                                    <?php 
+                                        $feature_id2 = get_field('any_feature_bottom_2'); 
+                                        
+                                        if($feature_id2) {
+                                            echo blpc_content_feature_right($feature_id2); 
+                                        }
+                                    ?>
+                                <!-- <div class="image-cta resource-center">
                                     
                                     
                                     <div class="img-content"> <img alt="B&L Pipeco" data-src=">0:http://placehold.it/570x300" /> </div>
@@ -194,7 +202,7 @@ get_header(); ?>
                                     </div>
                             
 
-                                </div>
+                                </div> -->
                             </div>     
                         </div>  
 

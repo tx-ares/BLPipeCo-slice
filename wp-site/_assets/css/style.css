@@ -1532,7 +1532,7 @@ header {
       width: 90px;
       margin-right: 10px;
       /* Style from 2nd <ul> only */ }
-      header ul.top-nav > li.current-menu-item > a, header ul.top-nav > li.current-page-ancestor > a, header ul.top-nav > li.current-page-parent > a {
+      header ul.top-nav > li.current-menu-item > a, header ul.top-nav > li.current-menu-ancestor > a, header ul.top-nav > li.current_page_parent > a {
         color: #fff;
         text-decoration: none;
         border-bottom: 3px solid #d0112b;
@@ -2752,6 +2752,9 @@ footer {
       font-size: 20px;
       font-size: 1.25rem;
       margin-bottom: 20px; }
+    .main-content .main .search-keyword {
+      font-weight: 700;
+      color: #d0112b; }
     .main-content .main #contact-form {
       height: auto;
       margin: 20px 0;
