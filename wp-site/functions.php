@@ -661,7 +661,7 @@ function blpc_logo_carousel() {
 		'post_type' => 'carousel',
 		'orderby' => 'menu_order',
 		'numberposts' => -1,
-		'order' => 'ASC',
+		'order' => 'asc',
 		'taxonomy' => 'category',
             'field' => 'slug',
             'term' => 'logo'
