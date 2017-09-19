@@ -1434,9 +1434,8 @@ figure {
       height: 40px;
       width: 40px;
       text-align: center;
-      padding: 5px; }
-      .social-media-icons ul li:not(:last-child) {
-        border-bottom: 2px solid #fff; }
+      padding: 5px;
+      box-shadow: 0 1px 5px 0; }
       @media only screen and (max-width: 575px) {
         .social-media-icons ul li {
           bottom: 0;
