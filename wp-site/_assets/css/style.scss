@@ -7206,10 +7206,10 @@ footer {
 
             &.active {
                 .img-wrapper {
-
+                    padding-bottom: 8px; //
                     &:after {
                         @include transition(all .3s);
-                        bottom: -2px;
+                        bottom: 0; //
                         border: solid transparent;
                         content: " ";
                         height: 0;
@@ -7236,7 +7236,7 @@ footer {
                     }
 
                     img {
-                        @include transform(scale(1.1));
+                        // @include transform(scale(1.1));
                         @include transition(all 3s);
                     }
                 }
@@ -7263,7 +7263,8 @@ footer {
                 max-height: 360px; //TBD - Per Karen / Client Requirements
                 position: absolute;
                 width: 100%;
-                padding: 10px 20px; // @include transition (height .3s);
+                padding: 40px;
+                // padding: 10px 20px; // @include transition (height .3s);
                 h3 {
                     @include font-size(24px);
                     color: $colorWhite;
@@ -7279,6 +7280,7 @@ footer {
 
                 p {
                     color: $colorWhite;
+                    @include font-size(14px);
                 }
                 @include max-screen($sm) {
                     width: 100%;

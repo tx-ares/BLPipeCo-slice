@@ -4985,23 +4985,25 @@ footer {
             @media only screen and (max-width: 575px) {
               .photo-wrapper .photos .photo-item .img-wrapper .overlay .info-wrapper {
                 line-height: 100%; } }
-      .photo-wrapper .photos .photo-item.active .img-wrapper:after {
-        -moz-transition: all 0.3s;
-        -o-transition: all 0.3s;
-        -webkit-transition: all 0.3s;
-        transition: all 0.3s;
-        bottom: -2px;
-        border: solid transparent;
-        content: " ";
-        height: 0;
-        width: 0;
-        position: absolute;
-        pointer-events: none;
-        border-bottom-color: #d0112b;
-        border-width: 15px;
-        left: 50%;
-        margin: -28px 0 0 -15px;
-        background: transparent; }
+      .photo-wrapper .photos .photo-item.active .img-wrapper {
+        padding-bottom: 8px; }
+        .photo-wrapper .photos .photo-item.active .img-wrapper:after {
+          -moz-transition: all 0.3s;
+          -o-transition: all 0.3s;
+          -webkit-transition: all 0.3s;
+          transition: all 0.3s;
+          bottom: 0;
+          border: solid transparent;
+          content: " ";
+          height: 0;
+          width: 0;
+          position: absolute;
+          pointer-events: none;
+          border-bottom-color: #d0112b;
+          border-width: 15px;
+          left: 50%;
+          margin: -28px 0 0 -15px;
+          background: transparent; }
       .photo-wrapper .photos .photo-item.active .bioBox {
         z-index: 2; }
       .photo-wrapper .photos .photo-item:hover .img-wrapper .overlay {
@@ -5011,11 +5013,6 @@ footer {
         -webkit-transition: all 0.3s;
         transition: all 0.3s; }
       .photo-wrapper .photos .photo-item:hover .img-wrapper img {
-        -moz-transform: scale(1.1);
-        -o-transform: scale(1.1);
-        -ms-transform: scale(1.1);
-        -webkit-transform: scale(1.1);
-        transform: scale(1.1);
         -moz-transition: all 3s;
         -o-transition: all 3s;
         -webkit-transition: all 3s;
@@ -5032,7 +5029,7 @@ footer {
         max-height: 360px;
         position: absolute;
         width: 100%;
-        padding: 10px 20px; }
+        padding: 40px; }
         .photo-wrapper .photos .photo-item .bioBox h3 {
           font-size: 24px;
           font-size: 1.5rem;
@@ -5045,7 +5042,9 @@ footer {
           font-size: 18px;
           font-size: 1.125rem; }
         .photo-wrapper .photos .photo-item .bioBox p {
-          color: #fff; }
+          color: #fff;
+          font-size: 14px;
+          font-size: 0.875rem; }
         @media only screen and (max-width: 575px) {
           .photo-wrapper .photos .photo-item .bioBox {
             width: 100%; } }
