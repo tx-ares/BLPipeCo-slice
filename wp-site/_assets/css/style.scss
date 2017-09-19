@@ -7233,7 +7233,7 @@ footer {
 
             &:hover {
                 .img-wrapper {
-                    background: transparent;
+                    // background: transparent;
                     .overlay {
                         top: 0;
                         @include transition(all .3s);
