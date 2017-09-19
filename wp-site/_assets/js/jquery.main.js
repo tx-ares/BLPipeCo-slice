@@ -894,7 +894,7 @@ function initBioBoxes() {
 
 					$parentContainerHeight = $parentContainerHeight + $responsiveHeight;
 					console.log($parentContainerHeight, " << $parentContainerHeight")
-					!$photoItem.hasClass("active") ? $photoItem.animate({height : $parentContainerHeight} ,300, "swing") : "";
+					!$photoItem.hasClass("active") ? $photoItem.animate({height : $parentContainerHeight - 8} ,300, "swing") : "";
 
 					$photoItem.addClass("active no-hover");
 
