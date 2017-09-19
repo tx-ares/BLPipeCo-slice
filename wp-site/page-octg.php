@@ -100,7 +100,7 @@ get_header(); ?>
                             <div class="col-xs-12 visible-sm visible-xs">
                                 <div class="send-request" toggle-active-parent>
                                     <div class="row full-scr" eq-height>
-                                        <div class="col-sm-7 col-xs-7 fh" eq-col>
+                                        <div class="col-sm-8 col-xs-8 fh" eq-col>
                                             <a href="#" class="tframe fh fw">
                                                 <div class="tcell valign-mid call-us">
                                                     <p class="h3">Get in Touch</p>
@@ -109,7 +109,7 @@ get_header(); ?>
                                                 </div>
                                             </a>
                                         </div>
-                                        <div class="col-sm-5 col-xs-5 fh" eq-col>
+                                        <div class="col-sm-4 col-xs-4 fh" eq-col>
                                             <div class="tframe fw fh popdown-phonenum">
                                                 <div class="tcell valign-mid phone-opener" toggle-active-opener>
                                                     <i class="fa fa-mobile" aria-hidden="true"></i> 
