@@ -58,6 +58,7 @@ $colorLightGrey3: #dbd8cf;
 $colorLightGrey4: #878686;
 $colorLightGrey5: #959595;
 $colorLightGrey6: #c2c2c2;
+$colorLightGrey8: #bcc6c8;
 $colorDarkGrey: #333;
 $colorRedOrange: #d55441;
 
@@ -4223,6 +4224,7 @@ footer {
     }
 
     .tertiary {
+        background-color: $colorLightGrey7;
         // .image-cta.resource-center {
         //     .txt-content {
         //         position: absolute;
@@ -4372,6 +4374,9 @@ footer {
         font-weight: 600;
         @include font-size(30px); // letter-spacing: 2px;
     }
+    h3 {
+        color: $colorWhite;
+    }
     h4 {
         text-transform: uppercase;
         font-weight: 500;
@@ -4388,7 +4393,7 @@ footer {
     span.date {
         display: block;
         @include font-size(14px);
-        font-weight: 500;
+        font-weight: 700;
         text-transform: uppercase;
         color: $colorDarkBlue;
     }
@@ -4650,10 +4655,10 @@ footer {
         }
 
         @include max-screen($xlg) {
-            padding: 0 15px;
+            padding: 0 20px;
         }
         @include max-screen($md) {
-            padding: 0 15px;
+            padding: 0 20px;
             padding-left: 50px;
             // text-align: left;
         }
@@ -4662,7 +4667,7 @@ footer {
             // text-align: left;
         }
         @include max-screen($sm) {
-            padding: 0 15px;
+            padding: 0 20px;
         }
     }
 
@@ -6883,9 +6888,46 @@ footer {
 .logo-row {
     background: $colorLightGrey7;
 
+    @include min-screen($lg) {
+        margin: 40px 0; //
+    }
+
     @include max-screen($smd) {
         display: block;
         width: 100%;
+    }
+
+
+    .logo-slider-label {
+        color: $colorDarkBlue;
+        font-weight: 500;
+        @include font-size(24px);
+       
+        position: absolute;
+        right: 65px;
+        top: 60px;
+        min-width: 210px;
+
+        &:after {
+            font-family: FontAwesome;
+            content: "\f0d7";
+            color: $colorBrightRed2;
+            margin: 0 5px;
+            @include font-size(18px);
+            position: absolute;
+        }
+
+        @include max-screen($xlg) {
+            @include font-size(20px);
+            text-align: right;
+            margin: 0 10px;
+        }
+        @include max-screen($lg) {
+            font-size: 1.25rem;
+            width: 100%;
+            right: 0%;
+            text-align: center;
+        }
     }
 
     [class*=' col-'] {
@@ -6905,6 +6947,8 @@ footer {
                     content: "\f0d7";
                     color: $colorBrightRed2;
                     margin: 0 5px;
+                    @include font-size(18px);
+                    position: absolute;
                 }
             }
         }
@@ -6921,14 +6965,15 @@ footer {
 
     .slider-container {
         // width: 100%;
-        padding: 80px 100px;
+        padding: 100px 60px 0;
+        margin: 0 30px;
 
         @include max-screen( $xlg) {
-            padding: 80px 60px;
+            padding: 100px 60px 0;
         }
 
         @include max-screen( $smd) {
-            padding: 80px 20px;
+            padding: 100px 20px 0;
         }
 
         .logo-slider {
@@ -7003,14 +7048,25 @@ footer {
 
 
     .info-box {
-        padding: 75px 20px 40px;
+        padding: 60px 40px;
+        text-align: left;
+
+        p {
+            margin-top: 1.675rem;
+            @include font-size(20px);
+            line-height: 30px;
+        }
+
+        @include max-screen ($lg) {
+            text-align: center;
+        }
     }
 
     .bar {
         width: 2px;
-        background: $colorDarkGrey;
+        background-color: $colorLightGrey8;
         height: 75%;
-        margin-top: 40px;
+        margin-top: 28px;
         position: absolute;
         left: -5%; // @include max-screen($xlg) {
         //     left: 5%;

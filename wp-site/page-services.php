@@ -203,10 +203,13 @@ get_header(); ?>
                         <div class="row compressed row-no-padding">         
                             <div class="logo-row">
                                 <div class="row compressed grey7">
-                                    <div class="col-md-10">
+                                    <div class="col-md-9">
+                                        <a href="/octg/top-mill-sourcing/" class="logo-slider-label">
+                                            <span class="text-upcase">Mill Representation</span>
+                                        </a>
                                         <div class="slider-container">
                                           <div class="slider logo-slider" eq-height>
-                                         
+                                                
                                                 <?php 
 
                                                     /* Logo Carousel */
@@ -218,7 +221,7 @@ get_header(); ?>
                                         </div>   
                                     </div>
 
-                                    <div class="col-md-2 col-sm-12">
+                                    <div class="col-md-3 col-sm-12">
                                         <div class="bar"></div>
                                         <div class="slide-content tframe valign-mid fw fh info-box" eq-col>
                                                 <a href="/octg/top-mill-sourcing/">
