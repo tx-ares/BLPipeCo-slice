@@ -7115,6 +7115,7 @@ footer {
 
 .photo-wrapper {
     position: relative;
+    font-size: 0; //IE fix
     .title {
         @include font-size(18px);
         font-weight: 700;
@@ -7260,10 +7261,11 @@ footer {
             .bioBox {
                 background: $colorBrightRed2;
                 height: 0;
-                max-height: 360px; //TBD - Per Karen / Client Requirements
+                // min-height: 360px;
+                // max-height: 360px; //TBD - Per Karen / Client Requirements
                 position: absolute;
                 width: 100%;
-                padding: 40px;
+                padding: 25px 40px;
                 // padding: 10px 20px; // @include transition (height .3s);
                 h3 {
                     @include font-size(24px);
@@ -7349,18 +7351,23 @@ footer {
 
         @include max-screen($sm) {
 
-            .photo-item {
-                width: 50%;
-            }
-        }
+            // .photo-item {
+            //     width: 50%;
+            // }
 
-        @include max-screen(420px) {
-
-            .photo-item {
+             .photo-item {
                 width: 100%;
                 float: none;
             }
         }
+
+        // @include max-screen(420px) {
+
+        //     .photo-item {
+        //         width: 100%;
+        //         float: none;
+        //     }
+        // }
     }
 }
 

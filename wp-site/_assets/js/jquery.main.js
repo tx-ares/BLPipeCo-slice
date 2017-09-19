@@ -864,12 +864,37 @@ function initBioBoxes() {
 				$photoItems.removeClass("active no-hover");
 
 				var $parentContainerHeight = $photoItem.height();
+					$responsiveHeight = 360; // default height
+
 				// console.log($photoItem.hasClass("active"), " << isActive?")
 
-				if($photoItem.find(".bioBox").length == 0) {
-					$parentContainerHeight = $parentContainerHeight + 360;
+				if(window.matchMedia('(max-width: 1360px)').matches) {
+					$responsiveHeight = 400;
+					console.log($responsiveHeight)
+				}
 
-					!$photoItem.hasClass("active") ? $photoItem.animate({height : $parentContainerHeight},300, "swing") : "";
+				if (window.matchMedia('(max-width:992px)').matches) {
+					$responsiveHeight = 360;
+					console.log($responsiveHeight)
+				}				
+
+				if (window.matchMedia('(max-width: 575px)').matches) {
+					$responsiveHeight = 500;
+					console.log($responsiveHeight)
+				}
+
+				if (window.matchMedia('(max-width: 400px)').matches) {
+					$responsiveHeight = 660;
+					console.log($responsiveHeight)
+				}
+
+
+				if ($photoItem.find(".bioBox").length == 0) {
+					// if (typeof($responsiveHeight) === "string") {}
+
+					$parentContainerHeight = $parentContainerHeight + $responsiveHeight;
+					console.log($parentContainerHeight, " << $parentContainerHeight")
+					!$photoItem.hasClass("active") ? $photoItem.animate({height : $parentContainerHeight} ,300, "swing") : "";
 
 					$photoItem.addClass("active no-hover");
 
@@ -877,37 +902,45 @@ function initBioBoxes() {
 						{
 							class: "bioBox",
 						    id: index,					    
-						    title: "biography",
 						    //html to be filled dynamically by CMS.
 						    html: bioArray[index]
 
 						}).on("click", function(e) {
 							e.stopPropagation();
 						}).appendTo($photoItem).animate({
-							height: "360px"
+							height: $responsiveHeight
 						}, 300, "swing");
 
 				}
+
+				var boxId = "#" + index;
+
+				$('html, body').animate({
+			        scrollTop: $(boxId).offset().top - 360
+			    }, 500);
+
+			    return $responsiveHeight;
 			});
 
 		})
 
 		$(document).click(function(){
-			resetBios();
+			resetBios($responsiveHeight);
 		});
 
 		$(window).resize(function(){
-			resetBios();
+			resetBios($responsiveHeight);
 		});
 	}
 }
 
-function resetBios(){
+function resetBios($responsiveHeight){
+		console.log($responsiveHeight , " << responsive height")
 	// console.log("<< Resetting bioBox v6 - Comparing JS .animate() >>")
 		var $bioBox = $(".photo-item").find(".bioBox");
 			$bioBoxParent = $bioBox.parent();
 			$parentAndSiblings = $bioBoxParent.siblings().andSelf();
-			$initialParentContainerHeight = $bioBoxParent.height() - 360;
+			$initialParentContainerHeight = $bioBoxParent.height() - $responsiveHeight;
 
 		$parentAndSiblings.removeClass("active no-hover");
 

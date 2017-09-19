@@ -4904,7 +4904,8 @@ footer {
         margin: 0 auto; } }
 
 .photo-wrapper {
-  position: relative; }
+  position: relative;
+  font-size: 0; }
   .photo-wrapper .title {
     font-size: 18px;
     font-size: 1.125rem;
@@ -5026,10 +5027,9 @@ footer {
       .photo-wrapper .photos .photo-item .bioBox {
         background: #d0112b;
         height: 0;
-        max-height: 360px;
         position: absolute;
         width: 100%;
-        padding: 40px; }
+        padding: 25px 40px; }
         .photo-wrapper .photos .photo-item .bioBox h3 {
           font-size: 24px;
           font-size: 1.5rem;
@@ -5079,9 +5079,6 @@ footer {
           width: 50%;
           padding: 0 15px; } }
     @media only screen and (max-width: 575px) {
-      .photo-wrapper .photos .photo-item {
-        width: 50%; } }
-    @media only screen and (max-width: 420px) {
       .photo-wrapper .photos .photo-item {
         width: 100%;
         float: none; } }
