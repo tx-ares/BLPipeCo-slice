@@ -443,20 +443,20 @@ function initMobileSocialMediaMenu() {
 
 }
 
-function initHideFooterIfHomepage() {
+function initHideFooterIfHomepage() { 
 	$(this).scrollTop() == 0 ? $("footer").css("bottom", -55) : $("footer").css("bottom", 0);
 }
 
-function initHideElementsIfHomePageTop() {
+function initHideElementsIfHomePageTop() { //Adds transparency to header and hides social media icons on homepage
 
 	if ($("body").hasClass("home") && $(this).scrollTop() == 0 && !window.matchMedia('only screen and (max-width: 1024px)').matches) {
-		console.log("HOME - Detected - initHideElementsIfHomePageTop - .js")
-		$("header").css("background", "rgba(0,38,60,0)");
+		// console.log("HOME - Detected - initHideElementsIfHomePageTop - .js")
+		// $("header").css("background", "rgba(0,38,60,0)");
 		$(".social-media-icons").css("right" , -40);
 		resetBodyScrollX();
 	}
 	else {
-		$("header").css("background", "rgba(0,38,60,1)");
+		// $("header").css("background", "rgba(0,38,60,1)");
 		$(".social-media-icons").css("right" , 0);
 	}
 }

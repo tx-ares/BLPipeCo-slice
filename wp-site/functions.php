@@ -180,7 +180,7 @@ function page_body_class( $classes ) {
 
 	}
 	else if(is_page_template('page-insight.php')) {
-		$classes[] = 'inner main-content-fullpage';
+		$classes[] = 'fullpage inner main-content-fullpage';
 
 	}
 	else if(is_page_template('page-about.php')) {

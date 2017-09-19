@@ -2124,7 +2124,7 @@ $padding-sm: 20px;
 
 #wrapper {
     @include transition(padding-top .3s);
-
+    background: $colorDarkBlue; //
     &:before,
     &:after {
         @extend .clear;
@@ -2146,6 +2146,7 @@ body {
     }
     &.homepage {
         .banner {
+            margin-top: 129px; //
             @include min-screen ($smd) {
                 img {
                     height: 100vh;
@@ -3705,6 +3706,10 @@ footer {
 }
 
 
+.main-content {
+    background: $colorWhite;
+}
+
 
 /* ==========================================================================
 
@@ -3714,7 +3719,7 @@ footer {
 
 .banner {
     position: relative;
-
+    background: $colorWhite; //
     img {
         width: 100%;
         max-width: 100%;

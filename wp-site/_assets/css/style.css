@@ -1458,7 +1458,8 @@ figure {
   -moz-transition: padding-top 0.3s;
   -o-transition: padding-top 0.3s;
   -webkit-transition: padding-top 0.3s;
-  transition: padding-top 0.3s; }
+  transition: padding-top 0.3s;
+  background: #00263b; }
 
 html,
 body {
@@ -1472,10 +1473,12 @@ body {
   body.no-scroll-x {
     max-width: 100% !important;
     overflow-x: hidden !important; }
-  @media only screen and (min-width: 865px) {
-    body.homepage .banner img {
-      height: 100vh;
-      margin-top: -140px; } }
+  body.homepage .banner {
+    margin-top: 129px; }
+    @media only screen and (min-width: 865px) {
+      body.homepage .banner img {
+        height: 100vh;
+        margin-top: -140px; } }
   @media only screen and (max-width: 865px) {
     body.homepage .main-content {
       padding-top: 0; } }
@@ -2515,13 +2518,17 @@ footer {
     .main-content-fullpage .main-content {
       padding-bottom: 0; } }
 
+.main-content {
+  background: #fff; }
+
 /* ==========================================================================
 
     5. CUSTOM STYLES
             
    ========================================================================== */
 .banner {
-  position: relative; }
+  position: relative;
+  background: #fff; }
   .banner img {
     width: 100%;
     max-width: 100%;
