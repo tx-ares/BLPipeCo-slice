@@ -6080,7 +6080,8 @@ footer {
                         .slide-content {
                             float: none;
                             margin: auto;
-                            padding: 20px 15px !important;
+                            padding: 10px 15px !important;
+                            // margin-top: 53px; //
                             @include max-screen ($sm) {
                                 float: left;
                             }
@@ -6097,25 +6098,16 @@ footer {
                 }
                 @include transition(all .3s);
                 .slick-slide {
-                    height: 360px;
-                    min-width: 250px;
-                    @include max-screen ($xmd) {
-                        min-width: unset;
-                    }
-                    // padding: 60px 20px 0;
-                    padding: 60px;
+                    height: 300px;
+                    margin-top: 63px !important;
+                    padding: 30px 60px;
+                    min-width: 350px;
+                     // padding: 60px 20px 0;
+                    // padding: 60px;
                     text-align: center;
+
                     @include transition(all .3s);
 
-                    @include max-screen($md) {
-                        // padding: 60px 100px;
-                    }
-                    @include max-screen($sm) {
-                        padding: 60px 40px;
-                    }
-                    @include max-screen($xsm) {
-                        padding: 35px 20px;
-                    }
                     h3 {
                         @include font-size(20px);
                         font-weight: 500;
@@ -6126,6 +6118,20 @@ footer {
                     &:focus {
                         outline: none;
                     }
+
+                    @include max-screen ($xmd) {
+                        min-width: unset;
+                    }
+                    @include max-screen($md) {
+                        // padding: 60px 100px;
+                    }
+                    @include max-screen($sm) {
+                        padding: 60px 40px;
+                    }
+                    @include max-screen($xsm) {
+                        padding: 35px 20px;
+                    }
+                    
                 }
             }
         }
@@ -6136,6 +6142,7 @@ footer {
         .panel-title {
             position: absolute;
             right: 0;
+            top: 0; //
             text-transform: uppercase;
             font-weight: 500;
             opacity: 0;
@@ -6343,6 +6350,7 @@ footer {
         .panel-title {
             position: absolute;
             left: 0;
+            top: 0; //
             text-transform: uppercase;
             font-weight: 500;
             opacity: 0;
