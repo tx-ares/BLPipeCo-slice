@@ -208,7 +208,7 @@ function blpc_generate_send_request() {
 
 	$string .= '<div class="send-request" toggle-active-parent>
 	                <div class="row">
-	                    <div class="col-sm-7 col-xs-7 fh">
+	                    <div class="col-sm-8 col-xs-8 fh">
 	                        <a href="#" class="tframe fh fw">
 	                            <div class="tcell valign-mid call-us">
 	                                <p class="h3">Get in Touch</p>
@@ -217,7 +217,7 @@ function blpc_generate_send_request() {
 	                            </div>
 	                        </a>
 	                    </div>
-	                    <div class="col-sm-5 col-xs-5 fh">
+	                    <div class="col-sm-4 col-xs-4 fh">
 	                        <div class="tframe fw fh popdown-phonenum">
 	                            <div class="tcell valign-mid phone-opener" toggle-active-opener><i class="fa fa-mobile" aria-hidden="true"></i> <span class="more">More</span><span class="less">Less</span> <i class="fa fa-angle-down" aria-hidden="true"></i></div>
 	                        </div>

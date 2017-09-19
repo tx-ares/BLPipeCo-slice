@@ -3151,7 +3151,7 @@ footer {
   transition: all 0.3s; }
   .send-request .call-us {
     text-align: left;
-    padding-left: 20px; }
+    padding: 0 40px; }
     .send-request .call-us .h3 {
       font-weight: 500;
       font-size: 30px;
@@ -3159,16 +3159,12 @@ footer {
       text-transform: uppercase;
       color: #00263b;
       letter-spacing: 2px; }
-    @media only screen and (max-width: 1440px) {
-      .send-request .call-us {
-        padding-left: 10px; } }
     @media only screen and (max-width: 1280px) {
       .send-request .call-us {
         padding: 0 20px; } }
     @media only screen and (max-width: 992px) {
       .send-request .call-us {
-        padding: 0 20px;
-        padding-left: 50px; } }
+        padding: 0 40px; } }
     @media only screen and (max-width: 768px) {
       .send-request .call-us {
         padding: 0 35px; } }
@@ -3196,20 +3192,20 @@ footer {
         -o-transition: 0.3s all;
         -webkit-transition: 0.3s all;
         transition: 0.3s all;
-        font-size: 40px;
-        font-size: 2.5rem; }
+        font-size: 36px;
+        font-size: 2.25rem; }
         @media only screen and (max-width: 1440px) {
           .send-request .row > [class*="col-"]:nth-child(1) .num {
-            font-size: 36px;
-            font-size: 2.25rem; } }
+            font-size: 30px;
+            font-size: 1.875rem; } }
         @media only screen and (max-width: 1280px) {
           .send-request .row > [class*="col-"]:nth-child(1) .num {
             font-size: 24px;
             font-size: 1.5rem; } }
         @media only screen and (max-width: 992px) {
           .send-request .row > [class*="col-"]:nth-child(1) .num {
-            font-size: 24px;
-            font-size: 1.5rem; } }
+            font-size: 30px;
+            font-size: 1.875rem; } }
         @media only screen and (max-width: 768px) {
           .send-request .row > [class*="col-"]:nth-child(1) .num {
             font-size: 30px;
