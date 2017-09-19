@@ -33,7 +33,25 @@
     </footer>
     </div>
     <!-- Pagespeed compliant - Avoid render blocking load of JS -->
+    <noscript id="deferred-styles">
+      <link rel="stylesheet" type="text/css" href="<?php echo get_template_directory_uri(); ?>/_assets/css/all.min.css?v=<?php echo time(); ?>"/>
+    </noscript>
     <script type="text/javascript">
+
+    var loadDeferredStyles = function() {
+        var addStylesNode = document.getElementById("deferred-styles");
+        var replacement = document.createElement("div");
+        replacement.innerHTML = addStylesNode.textContent;
+        document.body.appendChild(replacement)
+        addStylesNode.parentElement.removeChild(addStylesNode);
+        document.body.className += " cssloaded";
+        };
+        var raf = requestAnimationFrame || mozRequestAnimationFrame ||
+        webkitRequestAnimationFrame || msRequestAnimationFrame;
+        
+    if (raf) raf(function() { window.setTimeout(loadDeferredStyles, 0); });
+    else window.addEventListener('load', loadDeferredStyles);
+
     function loadJS(e) {
         var t = document.createElement("script");
         t.type = "text/javascript", t.async = !0, t.src = e;

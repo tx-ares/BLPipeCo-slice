@@ -154,9 +154,8 @@ function blpc_widgets_init() {
 }
 add_action( 'widgets_init', 'blpc_widgets_init' );
 
-// Added cssloaded to initial class list to work around cssloaded failing to be added in header.
 add_filter( 'body_class', function( $classes ) {
-    return array_merge( $classes, array( 'header-sticky footer-sticky cssloaded' ) );
+    return array_merge( $classes, array( 'header-sticky footer-sticky' ) );
 } );
 
 /* body class */

@@ -6,7 +6,7 @@ function showPage() {
 	
 	(function defer() {
 		if ($('body').hasClass('cssloaded')) {
-					
+			console.log("adding cssloaded class")		
 			//make page visible
 			$('html,body').animate({
 				opacity: 1
@@ -16,13 +16,13 @@ function showPage() {
 					'overflow':'visible'
 				});
 				
-				setTimeout(function() {
+				window.setTimeout(function() {
 					loadElements();
 				 }, 500);
 			});
 		}
 		else {
-			setTimeout(function() { defer(); }, 50);
+			window.setTimeout(function() { defer(); }, 50);
 		}
 	})();
 	
