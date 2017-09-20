@@ -5002,9 +5002,9 @@ footer {
           position: absolute;
           bottom: 0;
           left: 0;
-          height: 5px;
+          height: 8px;
           width: 100%;
-          background: #d0112b;
+          background: #fff;
           z-index: 2; }
         .photo-wrapper .photos .photo-item .img-wrapper .overlay {
           position: absolute;

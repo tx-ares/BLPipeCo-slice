@@ -7265,9 +7265,10 @@ footer {
                     position: absolute;
                     bottom: 0;
                     left: 0;
-                    height: 5px;
+                    height: 8px;
                     width: 100%;
-                    background: $colorBrightRed2;
+                    // background: $colorBrightRed2;
+                    background: $colorWhite;
                     z-index: 2;
                 }
 
@@ -7334,6 +7335,9 @@ footer {
                         margin: -28px 0 0 -15px;
                         background: transparent;
                     }
+                }
+                .overlay {
+                    // background: 0 0;
                 }
                 .bioBox {
                     z-index: 2;
