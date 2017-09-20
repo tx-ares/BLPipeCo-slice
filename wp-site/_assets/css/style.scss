@@ -6011,12 +6011,12 @@ footer {
             opacity: 0 !important;
         }
     }
-    .fa-spin {
-        position: absolute;
-        top: 40%;
-        right: 45%;
-        opacity: 0;
-    }
+    // .fa-spin {
+    //     position: absolute;
+    //     top: 40%;
+    //     right: 45%;
+    //     opacity: 0;
+    // }
     @include transition(all .3s);
     .panel {
         font-size: 1rem;
@@ -6037,15 +6037,32 @@ footer {
             padding: 0 !important;
         }
         .slider-container {
+            position: absolute; // IE Fix
             height: auto;
             width: 90%;
             display: inline-block;
             background: $colorLightGrey7; // Temporary
+
             @include max-screen($ssm) {
                 width: 85%;
             }
             @include max-screen($xsm) {
                 width: 85%;
+            }
+
+            .loading-container {
+                position: absolute;
+                display: block;
+                /* right: 40%; */
+                margin-top: 140px;
+                width: 100%;
+                /* margin: 0 auto; */
+                height: 80px;
+                text-align: center;
+                .fa-spin {
+                    margin-top: 10px;                           
+                    opacity: 0;
+                }
             }
 
             .slick-slider {
