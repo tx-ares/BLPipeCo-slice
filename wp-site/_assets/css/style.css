@@ -2839,6 +2839,11 @@ footer {
       margin: 20px 0; }
       .main-content .main #address-container .info address {
         display: inline-block; }
+        @media only screen and (max-width: 992px) {
+          .main-content .main #address-container .info address {
+            vertical-align: top;
+            height: auto;
+            width: 50%; } }
       .main-content .main #address-container .info .team-names {
         padding-right: 20px; }
   .main-content .aside > .container-fluid,
@@ -3413,8 +3418,33 @@ footer {
     font-weight: 600; }
   .topic-nav ul li {
     padding: 5px 0; }
-    .topic-nav ul li a:focus {
-      color: #e2eaed; }
+    .topic-nav ul li a {
+      color: #fff; }
+      .topic-nav ul li a:hover {
+        color: #c2c2c2; }
+  .topic-nav.slateblue-theme {
+    background-color: #bcc7cd; }
+    .topic-nav.slateblue-theme h4 {
+      font-size: 30px;
+      font-size: 1.875rem;
+      font-weight: 500;
+      text-transform: uppercase;
+      margin-bottom: 1.175rem; }
+    .topic-nav.slateblue-theme h2,
+    .topic-nav.slateblue-theme h3,
+    .topic-nav.slateblue-theme h4,
+    .topic-nav.slateblue-theme p {
+      -moz-transition: color 0.3s;
+      -o-transition: color 0.3s;
+      -webkit-transition: color 0.3s;
+      transition: color 0.3s;
+      color: #00263b; }
+    .topic-nav.slateblue-theme ul li {
+      padding: 5px 0; }
+      .topic-nav.slateblue-theme ul li a {
+        color: #00263b; }
+        .topic-nav.slateblue-theme ul li a:hover {
+          color: #e2eaed; }
 
 .side-cta {
   position: relative;

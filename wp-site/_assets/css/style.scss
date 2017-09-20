@@ -4167,6 +4167,11 @@ footer {
 
                 address {
                     display: inline-block;
+                    @include max-screen($md) {
+                        vertical-align: top;
+                        height: auto;
+                        width: 50%;
+                    }
                 }
 
                 .team-names {
@@ -4996,11 +5001,43 @@ footer {
         li {
             padding: 5px 0;
             a {
-                &:focus {
-                    color: $colorLightGrey7;
+                color: $colorWhite;
+                &:hover {
+                    color: $colorLightGrey6;
                 }
             }
         }
+    }
+
+    &.slateblue-theme {
+        background-color: $colorSlateBlue2;
+        h4 {
+            @include font-size(30px);
+            font-weight: 500;
+            text-transform: uppercase;
+            margin-bottom: 1.175rem;
+        }
+
+        h2,
+        h3,
+        h4,
+        p {
+            @include transition(color .3s);
+            color: $colorDarkBlue;
+        }
+
+        ul {
+            li {
+                padding: 5px 0;
+                a {
+                    color: $colorDarkBlue;
+                    &:hover {
+                        color: $colorLightGrey7;
+                    }
+                }
+            }
+        }
+
     }
 }
 

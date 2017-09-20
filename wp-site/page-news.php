@@ -135,7 +135,7 @@ get_header(); ?>
             <!-- Send Request -->
             <?php blpc_generate_send_request(); ?>
             
-                <div class="topic-nav">
+                <div class="topic-nav slateblue-theme">
                     <h4 class="topic-title">By Topic</h4>
                     <ul>
                         <li><a href="#">Systems Architecture Design and Deployment (3)</a></li>
