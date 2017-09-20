@@ -39,7 +39,7 @@ get_header(); ?>
 <section class="main-content">
     <div class="row compressed">
         <div class="col-md-8 col-sm-12 col-xs-12 main">
-            <div class="row">
+            <div class="row compressed">
                 <div class="col-md-offset-3 col-md-9">
                     <div class="container-fluid">
                         <h2 class="text-upcase">Management Team</h2>

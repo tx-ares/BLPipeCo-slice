@@ -1479,6 +1479,17 @@ body {
     @media only screen and (min-width: 865px) {
       body.homepage .banner img {
         height: 100vh; } }
+    @media only screen and (max-width: 575px) {
+      body.homepage .banner .subtext-box {
+        top: 0% !important;
+        padding: 0 5%; }
+        body.homepage .banner .subtext-box h1 {
+          font-size: 22px;
+          font-size: 1.375rem; }
+        body.homepage .banner .subtext-box h2 {
+          font-size: 20px;
+          font-size: 1.25rem;
+          text-align: center; } }
   @media only screen and (max-width: 865px) {
     body.homepage .main-content {
       padding-top: 0; } }
@@ -2531,14 +2542,10 @@ footer {
     width: 100%;
     max-width: 100%;
     height: auto; }
-    @media only screen and (min-width: 768px) {
-      .banner img {
-        min-height: 370px; } }
   .banner .row {
     margin: 0; }
     .banner .row > [class*="col-"] {
-      padding: 0;
-      min-height: 310px; }
+      padding: 0; }
     .banner .row > [class*="col-"]:nth-child(2) {
       padding-bottom: 80px; }
       .banner .row > [class*="col-"]:nth-child(2) > .tframe .container-fluid {
@@ -2614,10 +2621,10 @@ footer {
         top: 30% !important; } }
     @media only screen and (max-width: 575px) {
       .banner .subtext-box {
-        top: 0% !important; }
+        padding: 0 5%; }
         .banner .subtext-box h1 {
-          font-size: 24px;
-          font-size: 1.5rem; }
+          font-size: 22px;
+          font-size: 1.375rem; }
         .banner .subtext-box h2 {
           font-size: 20px;
           font-size: 1.25rem;
@@ -2670,8 +2677,6 @@ footer {
     .banner h3 {
       font-size: 16px;
       font-size: 1rem; }
-    .banner .row > [class*="col-"] {
-      min-height: 200px; }
     .banner .row > [class*="col-"]:nth-child(2) {
       padding-bottom: 60px; }
     .banner .pull-right.social {
@@ -2691,7 +2696,8 @@ footer {
     .banner .bg-content {
       background: none !important; }
       .banner .bg-content img {
-        opacity: 1; }
+        opacity: 1;
+        min-height: 160px; }
     .banner .overlay-band {
       position: relative;
       height: auto;

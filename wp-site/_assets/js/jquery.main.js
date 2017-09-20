@@ -884,7 +884,7 @@ function initBioBoxes() {
 				}
 
 				if (window.matchMedia('(max-width: 400px)').matches) {
-					$responsiveHeight = 660;
+					$responsiveHeight = 600;
 					console.log($responsiveHeight)
 				}
 
