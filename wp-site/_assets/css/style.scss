@@ -2149,12 +2149,12 @@ body {
         .banner {
             margin-top: 129px; //
             @include max-screen ($lg) {
-                margin-top: 0;
+                margin-top: 58px;
             }
             @include min-screen ($smd) {
                 img {
                     height: 100vh;
-                    margin-top: -140px;
+                    // margin-top: -140px;
                 }
             }
         }
@@ -3013,10 +3013,15 @@ footer {
                 display: block !important; // height: 0;
                 max-height: 100vh;
 
-                @include max-screen($md) {
-                    min-height: 360px;
-                    height: 360px;
+                @include max-screen($lg) {
+                    // min-height: 360px;
+                    // height: 360px;
+                    height: auto;
                 }
+
+                .slick-dots li button:before {
+                    color: #fff;
+                  }
 
                 .slick-list {
                     height: 100%!important;
@@ -3032,7 +3037,7 @@ footer {
                     max-height: 100vh;
                     @include transition(all .3s);
                     @include max-screen($md) {
-                        max-height: 360px; // p,
+                        // max-height: 360px; // p,
                         // h1,
                         // h2,
                         // h3 {
@@ -3828,6 +3833,7 @@ footer {
             }
             @include max-screen($sm) {
                 width: 80%;
+                display: none;
             }
         }
 
@@ -3836,7 +3842,7 @@ footer {
         }
 
         @include max-screen($sm) {
-
+            top: 0% !important;
             h1 {
                 @include font-size(24px);
             }
