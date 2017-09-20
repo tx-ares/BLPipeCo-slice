@@ -541,7 +541,7 @@ function blpc_insights_blog_list() {
 
 /* Home Latest News */
 function blpc_home_news_list() {
-	$args = array( 'numberposts' => '5',
+	$args = array( 'numberposts' => '3',
 					'category_name' => 'latest-news');
 
 	$recent_posts = wp_get_recent_posts($args);

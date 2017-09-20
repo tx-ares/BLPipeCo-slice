@@ -2086,7 +2086,7 @@ $padding-sm: 20px;
             width: 40px;
             text-align: center;
             padding: 5px;
-            box-shadow: 0 1px 5px 0;
+            box-shadow: 0 1px 1px 0;
             &:not(:last-child) {
                 // border-bottom: 2px solid $colorWhite;
             }
@@ -4274,6 +4274,12 @@ footer {
         //         }
         //     }
         // }
+
+        .feature-row {
+           >[class*=col-] {
+                max-height: 460px !important;
+           }
+        }
     }
 
     .tertiary {
@@ -4423,6 +4429,7 @@ footer {
     background: $colorLightGrey1;
     padding: 40px;
     position: relative;
+    min-height: 460px;
     h2 {
         font-weight: 600;
         @include font-size(30px); // letter-spacing: 2px;
@@ -4774,8 +4781,8 @@ footer {
         }
 
         >[class*="col-"]:nth-child(2) {
-            border-left: solid 2px $colorLightGrey3;
-            border-right: solid 2px $colorWhite;
+            // border-left: solid 2px $colorLightGrey3;
+            // border-right: solid 2px $colorWhite;
 
             .phone-opener {
                 position: relative;
@@ -7102,6 +7109,10 @@ footer {
             // width: 100%;
             margin: auto;
 
+            .slick-arrow {
+                height: 30px;
+            }
+
             .slide-content {
                 display: table;
                 text-align: center;
@@ -7190,7 +7201,7 @@ footer {
         height: 75%;
         margin-top: 28px;
         position: absolute;
-        left: -5%; // @include max-screen($xlg) {
+        left: 0%; // @include max-screen($xlg) {
         //     left: 5%;
         // }
         @include max-screen($md) {
