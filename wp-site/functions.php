@@ -308,8 +308,8 @@ function blpc_products_rollovers($post_type) {
 
 		$string .= '<div class="' . $classes . '" eq-col>
                         
-	                    <a href="'.get_post_permalink( $page->ID ).'" class="tframe fw fh text-center item-box">
-		                    <div class="slide-content tframe valign-mid" eq-col>
+	                    <a href="'.get_post_permalink( $page->ID ).'" class="tcell fw fh text-center item-box">
+		                    <div class="slide-content tcell valign-mid" eq-col>
 		                        
                                 <img src="'.$icon['url'].'" alt="'.$icon['alt'].'" class="icon" />
                                 <h3>' . $page->post_title . '</h3>
@@ -358,7 +358,7 @@ function blpc_services_rollovers($post_type) {
 		$string .= '<div class="' . $classes . '" eq-col>
                         
 	                    <a href="'.get_post_permalink( $page->ID ).'" class="tframe fw fh text-center item-box">
-		                    <div class="slide-content tframe valign-mid" eq-col>
+		                    <div class="slide-content tcell valign-mid" eq-col>
 		                        
                                 <img src="'.$icon['url'].'" alt="'.$icon['alt'].'" class="icon" />
                                 <h3>' . $page->post_title . '</h3>
@@ -641,13 +641,10 @@ function blpc_products_carousel($post_type) {
 	foreach ( $pages as $page ) { 
 		$icon = get_field('products_menu_icon', $page->ID);
 		$string .= '<div class="slide-content" eq-col>  
-	                    <a href="'.get_post_permalink( $page->ID ).'" class="tframe fw fh text-center item-box">
-		                    <div class="slide-content tframe valign-mid" eq-col>
-		                        
+	                    <a href="'.get_post_permalink( $page->ID ).'" class="tcell valign-mid fw fh text-center item-box">		                        
                                 <img src="'.$icon['url'].'" alt="'.$icon['alt'].'" class="icon" />
                                 <h3 class="text-upcase">' . $page->post_title . '</h3>
                                 <p class="details">' . get_field('products_menu_description', $page->ID)  . '</p>
-		                    </div>         
 	                    </a> 	
                 	</div>';	
 	}

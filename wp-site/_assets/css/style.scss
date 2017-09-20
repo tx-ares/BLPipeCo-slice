@@ -4185,7 +4185,7 @@ footer {
     }
 
     .secondary {
-        margin-top: -7px; // .image-cta.resource-center {
+        // margin-top: -7px; // .image-cta.resource-center {
         //     .txt-content {
         //         position: absolute;
         //         background: $colorBrightRed2;
@@ -6083,11 +6083,19 @@ footer {
                         -o-transform: translate3d(0, 0, 0) !important;
                         transform: translate3d(0, 0, 0) !important;
                         width: 100% !important;
-                        .slide-content {
+                        .slick-slide {
                             float: none;
                             margin: auto;
-                            padding: 10px 15px !important;
+                            display: table;
+                            // padding: 30px !important;
+                            max-width: 360px;
+                            min-width: 300px;
+                            padding: 45px 60px !important;
                             // margin-top: 53px; //
+                            @include max-screen ($lg) {
+                                max-width: unset;
+                                width: 100% !important;
+                            }
                             @include max-screen ($sm) {
                                 float: left;
                             }
@@ -6104,13 +6112,15 @@ footer {
                 }
                 @include transition(all .3s);
                 .slick-slide {
-                    height: 300px;
-                    margin-top: 63px !important;
-                    padding: 30px 60px;
-                    min-width: 350px;
+                    height: 360px;
+                    // margin-top: 63px !important;
+                    // padding: 30px 60px;
+                    // min-width: 350px;
                      // padding: 60px 20px 0;
                     // padding: 60px;
+                    padding: 45px 60px;
                     text-align: center;
+                    display: table;
 
                     @include transition(all .3s);
 
@@ -6123,6 +6133,10 @@ footer {
                     }
                     &:focus {
                         outline: none;
+                    }
+
+                    @include max-screen ($xlg) {
+                        padding: 45px 30px;
                     }
 
                     @include max-screen ($xmd) {
@@ -6395,12 +6409,13 @@ footer {
                     opacity: 0;
                 }
             }
-            .slick-slider {
+            .panel-slider {
                 width: 100%;
                 min-width: auto;
                 display: inline-block; // opacity: 1;
                 visibility: visible;
-
+                // position: absolute; // fixes IE but breaks chrome
+                // top: 0;
                 @include transition (opacity 1s);
                 .slick-slide {
                     &:hover {
@@ -6731,6 +6746,9 @@ footer {
         // padding-top: 20px;
         // padding-bottom: 20px;
 
+        display: table-cell;
+        vertical-align: middle;
+
         h3 {
             color: $colorDarkBlue;
             text-transform: uppercase;
@@ -6751,6 +6769,7 @@ footer {
     }
 
     .slide-content {
+        display: table;
         text-align: center;
         // padding: 20px;
         padding: 45px 20px;
@@ -7082,7 +7101,9 @@ footer {
         @include max-screen($smd) {
             width: 100%;
         }
-        .slick-slider {
+        .panel-slider {
+            position: absolute;
+            top: 0;
             width: 100%;
             min-width: auto;
             display: inline-block;

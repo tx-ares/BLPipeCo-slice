@@ -44,7 +44,7 @@
     </script>
 
     <!-- Pagespeed compliant - Avoid render blocking load of CSS -->
-    <script type="text/javascript">
+    <!-- <script type="text/javascript">
     function loadStyleSheet(a, b, c) {
         var d = document.getElementsByTagName("head")[0],
             e = document.createElement("link");
@@ -71,7 +71,7 @@
             document.body.className += " cssloaded";
         }
     });
-    </script>
+    </script> -->
 
     <!-- Default Loading of Main stylesheet, use if Pagecompliant JS script is causing errors. -->
 <!--     <link href="<?php echo get_template_directory_uri(); ?>/_assets/css/all.min.css" rel="stylesheet">
