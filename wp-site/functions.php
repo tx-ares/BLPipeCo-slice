@@ -81,6 +81,12 @@ function blpc_generate_page_title() {
     if( is_front_page() ) {
         echo "Home | B&amp;L Pipeco Services";
     }
+
+
+    if( is_search() ) {
+		echo "Search | B&amp;L Pipeco Services";
+	}
+
     else {
         $string = '';
         $string .= the_title() . " | B&amp;L Pipeco Services";
