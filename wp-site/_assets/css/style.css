@@ -3423,7 +3423,7 @@ footer {
       .topic-nav ul li a:hover {
         color: #c2c2c2; }
   .topic-nav.slateblue-theme {
-    background-color: #bcc7cd; }
+    background-color: #edf1f1; }
     .topic-nav.slateblue-theme h4 {
       font-size: 30px;
       font-size: 1.875rem;
@@ -3444,7 +3444,7 @@ footer {
       .topic-nav.slateblue-theme ul li a {
         color: #00263b; }
         .topic-nav.slateblue-theme ul li a:hover {
-          color: #e2eaed; }
+          color: #c2c2c2; }
 
 .side-cta {
   position: relative;

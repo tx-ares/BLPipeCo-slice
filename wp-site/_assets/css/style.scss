@@ -5010,7 +5010,7 @@ footer {
     }
 
     &.slateblue-theme {
-        background-color: $colorSlateBlue2;
+        background-color: $colorLightGrey1;
         h4 {
             @include font-size(30px);
             font-weight: 500;
@@ -5032,7 +5032,7 @@ footer {
                 a {
                     color: $colorDarkBlue;
                     &:hover {
-                        color: $colorLightGrey7;
+                        color: $colorLightGrey6;
                     }
                 }
             }
