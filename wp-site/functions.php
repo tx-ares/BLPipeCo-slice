@@ -189,9 +189,9 @@ function page_body_class( $classes ) {
 	else if(is_page_template('page-people.php')) {
 		$classes[] = 'inner bio';
 	}
-	// else if(is_page_template('page-locations.php')) {
-	// 	$classes[] = 'inner location';
-	// }
+	else if(is_page_template('page-locations.php')) {
+		$classes[] = 'inner location';
+	}
 
 	else {
 		$classes[] = 'inner';
@@ -981,7 +981,7 @@ function blpc_content_feature_bottom($post_id) {
 }
 
 function blpc_locations_list() {
-	debug_to_console( "Removing Auto P Tags ");
+	// debug_to_console( "Removing Auto P Tags ");
 	remove_filter( 'the_content', 'wpautop' );
 }
 
