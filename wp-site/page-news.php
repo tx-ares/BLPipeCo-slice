@@ -41,7 +41,7 @@ get_header(); ?>
 	<div class="row compressed">
 
         <div class="col-md-8 col-sm-7 col-xs-12 main">
-            <div class="row">
+            <div class="row compressed">
                 <div class="col-md-offset-3 col-md-9">
                     <div class="container-fluid">
                         <div class="articles darkblue">

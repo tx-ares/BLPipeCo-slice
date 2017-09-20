@@ -1078,9 +1078,9 @@ $padding-sm: 20px;
         }
     }
 
-    &.row-compressed {
-        margin: 0;
-    }
+    // &.row-compressed {
+    //     margin: 0;
+    // }
 
     &.slider-row {
         margin: 0;
@@ -2148,6 +2148,9 @@ body {
     &.homepage {
         .banner {
             margin-top: 129px; //
+            @include max-screen ($lg) {
+                margin-top: 0;
+            }
             @include min-screen ($smd) {
                 img {
                     height: 100vh;
@@ -4141,8 +4144,14 @@ footer {
                 margin-bottom: 10px;
             }
 
+            p.h3 {
+                padding: 0 15px;
+            }
+
             [class*="col-"] {
-                padding-right: 30px;
+                // padding-right: 30px;
+                padding-left: 15px;
+                padding-right: 15px;
 
                 &:last-child {
                     margin-bottom: 0;
