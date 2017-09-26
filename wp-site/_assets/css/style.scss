@@ -464,7 +464,7 @@ ul.list {
 
         ul {
             padding-left: 10px;
-            margin-top: 20px;
+            margin-top: 10px;
 
             li {
                 &:before {
@@ -473,18 +473,22 @@ ul.list {
                     @include font-size(6px);
                     color: $colorLightGrey5;
                 }
-            }
-
-            ul {
-
-                li {
-                    &:before {
-                        content: '\f111';
-                        @include font-size(6px);
-                        color: $colorRedOrange;
+                ul {
+                    li {
+                        list-style: none;
+                        @include font-size(14px);
+                        font-weight: 500;
+                        &:before {
+                            content: '';
+                            // content: '\f111';
+                            // @include font-size(6px);
+                            // color: $colorRedOrange;
+                        }
                     }
                 }
             }
+
+            
         }
     }
 }

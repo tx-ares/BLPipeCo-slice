@@ -43,6 +43,16 @@ get_header(); ?>
               <div class="col-md-offset-3 col-md-9">
                   <div class="container-fluid">
                       <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
+                        <?php
+
+                        global $post;
+                        $pageId = $post->ID;
+
+                        if ($pageId == 203 ) {
+                            blpc_format_p_tags();
+                        } 
+
+                    ?>
                       <?php the_content(); ?>
                       <?php endwhile; endif; ?>
 

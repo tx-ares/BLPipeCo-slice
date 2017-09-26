@@ -2,6 +2,7 @@
 
 include_once(ABSPATH.WPINC.'/feed.php');
 
+//Hide the Admin bar, uncomment to hide.
 add_filter('show_admin_bar', '__return_false'); 
 add_theme_support( 'post-thumbnails' );
 
@@ -986,7 +987,7 @@ function blpc_content_feature_bottom($post_id) {
 	echo $string;						
 }
 
-function blpc_locations_list() {
+function blpc_format_p_tags() {
 	// debug_to_console( "Removing Auto P Tags ");
 	remove_filter( 'the_content', 'wpautop' );
 }

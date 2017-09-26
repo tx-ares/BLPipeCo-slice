@@ -34,7 +34,7 @@ get_header(); ?>
                         $pageId = $post->ID;
 
                         if ($pageId == 142 || $pageId == 153 ) {
-                            blpc_locations_list();
+                            blpc_format_p_tags();
                         } 
 
                     ?>
