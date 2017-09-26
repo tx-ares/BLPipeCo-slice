@@ -250,7 +250,7 @@ function initClampText() {
 
 function initSlider() {
 	"use strict";
-	console.log("Main Slider init!")
+	console.log(".home-slider Slider init!")
 	
 	$(".home-slider").each(function() {
   //   	var parentWidth = $(this).parent().find(".slider-width-hack").width();
@@ -267,7 +267,8 @@ function initSlider() {
 				lazyLoad: "ondemand",
 				pauseOnHover: false,
 				dots:true,
-				autoplay: false,
+				autoplay: true,
+				autoplaySpeed: 5000,
 				mobileFirst: true,
 				fade: true,
 				infinite: true
@@ -590,7 +591,11 @@ function delayedLoad(activePanel) { //Creates simulated loading of carousel and 
 			$(activePanel).find(".fa-spin").css("opacity" , 0);
 			$(activeCarousel).css("opacity", 1);
 		} , 500);
-		$(activeCarousel).slick("slickNext");
+		$(activeCarousel).slick("slickNext"); // Selecting next slide fixes the width issue.
+		setTimeout( function() { // Reset it back to starting postion.
+			$(activeCarousel).slick("slickPrev");
+		}, 500 );
+
 		$(activeCarousel).addClass("loaded");
 
 		if(slides < 3) { 

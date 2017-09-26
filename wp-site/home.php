@@ -55,7 +55,7 @@ get_header(); ?>
                             <div class="panel-label">
                                 <h2 class="text-flip text-upcase">OCTG Products</h2>
                                 <div class="txt-content">
-                                    <img src="<?php echo get_template_directory_uri(); ?>/_assets/images/ui/Pipes.png" class="icon">
+                                    <img src="<?php echo get_template_directory_uri(); ?>/_assets/images/ui/tubes2.png" class="icon">
                                     <p> Providing access to an extensive inventory of OCTG products in every active U.S. drilling region. </p>
                                 </div>
                             </div>
