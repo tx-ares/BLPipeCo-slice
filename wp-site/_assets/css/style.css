@@ -4218,6 +4218,8 @@ footer {
             color: #333; }
           .feature-slide-box .panel .slider-container .slick-slider .slick-slide:focus {
             outline: none; }
+          .feature-slide-box .panel .slider-container .slick-slider .slick-slide a.item-box {
+            padding: 15px 0; }
           @media only screen and (max-width: 1280px) {
             .feature-slide-box .panel .slider-container .slick-slider .slick-slide {
               padding: 45px 30px; } }

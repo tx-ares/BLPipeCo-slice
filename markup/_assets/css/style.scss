@@ -58,6 +58,7 @@ $colorLightGrey3: #dbd8cf;
 $colorLightGrey4: #878686;
 $colorLightGrey5: #959595;
 $colorLightGrey6: #c2c2c2;
+$colorLightGrey8: #bcc6c8;
 $colorDarkGrey: #333;
 $colorRedOrange: #d55441;
 
@@ -463,7 +464,7 @@ ul.list {
 
         ul {
             padding-left: 10px;
-            margin-top: 20px;
+            margin-top: 10px;
 
             li {
                 &:before {
@@ -472,18 +473,22 @@ ul.list {
                     @include font-size(6px);
                     color: $colorLightGrey5;
                 }
-            }
-
-            ul {
-
-                li {
-                    &:before {
-                        content: '\f111';
-                        @include font-size(6px);
-                        color: $colorRedOrange;
+                ul {
+                    li {
+                        list-style: none;
+                        @include font-size(14px);
+                        font-weight: 500;
+                        &:before {
+                            content: '';
+                            // content: '\f111';
+                            // @include font-size(6px);
+                            // color: $colorRedOrange;
+                        }
                     }
                 }
             }
+
+            
         }
     }
 }
@@ -610,6 +615,16 @@ ul.locations-list {
 
     .logo-container {
         margin-bottom: 20px;
+        // a {
+        //     -webkit-filter: drop-shadow(0px 0px 0px rgba(255,255,255,0.80));
+        //     -webkit-transition: all 0.5s ease;
+        //     -o-transition: all 0.5s ease;
+        //     transition: all 0.5s ease;
+        //     border-radius: 25px;
+            
+        // }a:hover {
+        //     -webkit-filter: drop-shadow(0px 0px 8px rgba(229, 230, 230, 0.8));
+        // }
     }
 
     .list-container {
@@ -1077,9 +1092,9 @@ $padding-sm: 20px;
         }
     }
 
-    &.row-compressed {
-        margin: 0;
-    }
+    // &.row-compressed {
+    //     margin: 0;
+    // }
 
     &.slider-row {
         margin: 0;
@@ -2053,6 +2068,10 @@ $padding-sm: 20px;
     top: 30%;
     right: 0;
     z-index: 4;
+    &.move-icons-from-blocking-map-controls {
+        left: 0 !important;
+        right: unset !important;
+    }
     @include transition(all,
     .4s); // &.hidden {
     //  right: -40px;
@@ -2081,8 +2100,9 @@ $padding-sm: 20px;
             width: 40px;
             text-align: center;
             padding: 5px;
+            box-shadow: 0 1px 1px 0;
             &:not(:last-child) {
-                border-bottom: 2px solid $colorWhite;
+                // border-bottom: 2px solid $colorWhite;
             }
             @include max-screen ($sm) {
                 bottom: 0;
@@ -2119,7 +2139,7 @@ $padding-sm: 20px;
 
 #wrapper {
     @include transition(padding-top .3s);
-
+    background: $colorDarkBlue; //
     &:before,
     &:after {
         @extend .clear;
@@ -2141,10 +2161,27 @@ body {
     }
     &.homepage {
         .banner {
+            margin-top: 129px; //
+            @include max-screen ($lg) {
+                margin-top: 58px;
+            }
             @include min-screen ($smd) {
                 img {
                     height: 100vh;
-                    margin-top: -140px;
+                    // margin-top: -140px;
+                }
+            }
+            .subtext-box {
+                @include max-screen($sm) {
+                top: 0% !important;
+                padding: 0 5%;
+                    h1 {
+                        @include font-size(22px);
+                    }
+                    h2 {
+                        @include font-size(20px);
+                        text-align: center;
+                    }
                 }
             }
         }
@@ -2220,15 +2257,28 @@ header {
             text-align: left;
             width: 90px; // Transition Style
             margin-right: 10px;
+            &.current-menu-item,
+            &.current-menu-ancestor,
+            &.current_page_parent {
+                >a {
+                    color: #fff;
+                    text-decoration: none;
+                    border-bottom: 3px solid #d0112b;
+                    width: 100%;
+                }
+            }
+
             &:first-child {
                 width: 60px;
             }
             &:nth-child(2) {
                 width: 140px;
             }
-            &:nth-child(3),
-            &:nth-child(4) {
+            &:nth-child(3){ 
                 width: 75px;
+            }
+            &:nth-child(4) {
+                width: 105px;
             }
             &:last-child {
                 margin-right: 0;
@@ -2242,6 +2292,7 @@ header {
                     }
                 }
             }
+
             >a {
                 color: $colorLightGrey3;
                 font-weight: 500;
@@ -2858,21 +2909,19 @@ footer {
                     }
                 }
 
-                #submit-row {
-                    width: 100%;
-                    position: relative;
-                    input[type="submit"] {
-                        font-weight: 500;
-                        text-transform: uppercase;
-                        background: $colorBrightRed2;
-                        color: $colorWhite;
-                        @include transition (all .3s);
+                
+                input[type="submit"] {
+                    font-weight: 500;
+                    text-transform: uppercase;
+                    background: $colorBrightRed2;
+                    color: $colorWhite;
+                    @include transition (all .3s);
 
-                        &:hover {
-                            background: $colorSlateBlue2;
-                            color: $colorDarkBlue;
-                        }
+                    &:hover {
+                        background: $colorSlateBlue2;
+                        color: $colorDarkBlue;
                     }
+                    
                 }
             }
 
@@ -2991,10 +3040,15 @@ footer {
                 display: block !important; // height: 0;
                 max-height: 100vh;
 
-                @include max-screen($md) {
-                    min-height: 360px;
-                    height: 360px;
+                @include max-screen($lg) {
+                    // min-height: 360px;
+                    // height: 360px;
+                    height: auto;
                 }
+
+                .slick-dots li button:before {
+                    color: #fff;
+                  }
 
                 .slick-list {
                     height: 100%!important;
@@ -3010,7 +3064,7 @@ footer {
                     max-height: 100vh;
                     @include transition(all .3s);
                     @include max-screen($md) {
-                        max-height: 360px; // p,
+                        // max-height: 360px; // p,
                         // h1,
                         // h2,
                         // h3 {
@@ -3688,6 +3742,10 @@ footer {
 }
 
 
+.main-content {
+    background: $colorWhite;
+}
+
 
 /* ==========================================================================
 
@@ -3697,13 +3755,13 @@ footer {
 
 .banner {
     position: relative;
-
+    background: $colorWhite; //
     img {
         width: 100%;
         max-width: 100%;
         height: auto;
         @include min-screen($xmd) {
-            min-height: 370px; // Might need to change
+            // min-height: 370px; // Might need to change
         }
     }
 
@@ -3713,7 +3771,7 @@ footer {
 
         >[class*="col-"] {
             padding: 0;
-            min-height: 310px;
+            // min-height: 310px;
         }
 
         >[class*="col-"]:nth-child(2) {
@@ -3802,6 +3860,7 @@ footer {
             }
             @include max-screen($sm) {
                 width: 80%;
+                display: none;
             }
         }
 
@@ -3810,9 +3869,10 @@ footer {
         }
 
         @include max-screen($sm) {
-
+            // top: 15% !important;
+            padding: 0 5%;
             h1 {
-                @include font-size(24px);
+                @include font-size(22px);
             }
             h2 {
                 @include font-size(20px);
@@ -3885,7 +3945,7 @@ footer {
 
         .row {
             >[class*="col-"] {
-                min-height: 200px;
+                // min-height: 200px;
             }
 
             >[class*="col-"]:nth-child(2) {
@@ -3926,6 +3986,7 @@ footer {
 
             img {
                 opacity: 1;
+                min-height: 160px;
             }
         }
 
@@ -3977,6 +4038,30 @@ footer {
     }
 }
 
+// Locations Google Plugin Map
+
+@include min-screen ($sm) {
+    .gm-style {
+        @include transition(all .3s);
+        div:nth-child(7) {
+            // top: unset !important;
+            right: 40px !important;
+        }   
+    }
+
+    .gmnoprint.gm-bundled-control.gm-bundled-control-on-bottom {
+        @include transition(all .3s);
+        right: 70px !important;
+        .gm-svpc {
+            left: 0px !important;
+            top: 0px !important;
+        }
+        //  div.gmnoprint:first-child {
+        //     left: -40px !important;
+        // }
+    }
+}
+
 .main-content {
     // padding-top:80px;
     min-height: 185px;
@@ -4023,9 +4108,28 @@ footer {
             margin-bottom: 20px;
         }
 
+        .search-keyword {
+            font-weight: 700;
+            color: $colorBrightRed2;  
+        }
+
+        // .location {
+        //     h2:first-child {
+        //         margin: 30px 8px 0; 
+        //     }
+        // }
+
+        
+        h2#location-subtitle {
+            margin: 30px 8px 0;
+            @include max-screen ($sm) {
+                @include font-size(22px);
+            } 
+        }
+        
         #contact-form {
             height: auto;
-            margin: 20px 0;
+            margin: 20px;
             position: relative;
 
             .form-title {
@@ -4033,9 +4137,10 @@ footer {
                 font-weight: 500;
                 @include font-size(20px);
                 color: $colorDarkBlue;
-                margin: 30px 0;
+                margin: 30px -15px;
                 text-transform: uppercase;
                 text-align: left;
+
             }
 
             .label-row {
@@ -4082,6 +4187,11 @@ footer {
             }
         }
 
+
+         p.h3 {
+            padding: 0 15px;
+        }
+
         #address-container {
 
             h3 {
@@ -4089,8 +4199,12 @@ footer {
                 margin-bottom: 10px;
             }
 
+           
+
             [class*="col-"] {
-                padding-right: 30px;
+                // padding-right: 30px;
+                padding-left: 15px;
+                padding-right: 15px;
 
                 &:last-child {
                     margin-bottom: 0;
@@ -4115,6 +4229,11 @@ footer {
 
                 address {
                     display: inline-block;
+                    @include max-screen($md) {
+                        vertical-align: top;
+                        height: auto;
+                        width: 100%;
+                    }
                 }
 
                 .team-names {
@@ -4133,7 +4252,7 @@ footer {
     }
 
     .secondary {
-        margin-top: -7px; // .image-cta.resource-center {
+        // margin-top: -7px; // .image-cta.resource-center {
         //     .txt-content {
         //         position: absolute;
         //         background: $colorBrightRed2;
@@ -4169,9 +4288,16 @@ footer {
         //         }
         //     }
         // }
+
+        .feature-row {
+           >[class*=col-] {
+                max-height: 460px !important;
+           }
+        }
     }
 
     .tertiary {
+        background-color: $colorLightGrey7;
         // .image-cta.resource-center {
         //     .txt-content {
         //         position: absolute;
@@ -4317,9 +4443,13 @@ footer {
     background: $colorLightGrey1;
     padding: 40px;
     position: relative;
+    min-height: 460px;
     h2 {
         font-weight: 600;
         @include font-size(30px); // letter-spacing: 2px;
+    }
+    h3 {
+        color: $colorWhite;
     }
     h4 {
         text-transform: uppercase;
@@ -4337,7 +4467,7 @@ footer {
     span.date {
         display: block;
         @include font-size(14px);
-        font-weight: 500;
+        font-weight: 700;
         text-transform: uppercase;
         color: $colorDarkBlue;
     }
@@ -4586,7 +4716,8 @@ footer {
 
     .call-us {
         text-align: left;
-        padding-left: 20px;
+        padding: 0 40px;
+        // padding-left: 20px;
         .h3 {
             font-weight: 500;
             @include font-size(30px);
@@ -4595,15 +4726,15 @@ footer {
             letter-spacing: 2px;
         }
         @include max-screen($xxlg) {
-            padding-left: 10px;
+            // padding-left: 10px;
         }
 
         @include max-screen($xlg) {
-            padding: 0 15px;
+            padding: 0 20px;
         }
         @include max-screen($md) {
-            padding: 0 15px;
-            padding-left: 50px;
+            padding: 0 40px;
+            // padding-left: 50px;
             // text-align: left;
         }
         @include max-screen($xmd) {
@@ -4611,7 +4742,7 @@ footer {
             // text-align: left;
         }
         @include max-screen($sm) {
-            padding: 0 15px;
+            padding: 0 20px;
         }
     }
 
@@ -4643,16 +4774,16 @@ footer {
                 // padding-top: 15px;
                 // min-width: 150px;
                 @include transition(.3s all);
-                @include font-size(40px);
+                @include font-size(36px);
 
                 @include max-screen($xxlg) {
-                    @include font-size(36px);
+                    @include font-size(30px);
                 }
                 @include max-screen($xlg) {
                     @include font-size(24px);
                 }
                 @include max-screen($md) {
-                    @include font-size(24px);
+                    @include font-size(30px);
                 }
                 @include max-screen($xmd) {
                     @include font-size(30px);
@@ -4664,8 +4795,8 @@ footer {
         }
 
         >[class*="col-"]:nth-child(2) {
-            border-left: solid 2px $colorLightGrey3;
-            border-right: solid 2px $colorWhite;
+            // border-left: solid 2px $colorLightGrey3;
+            // border-right: solid 2px $colorWhite;
 
             .phone-opener {
                 position: relative;
@@ -4881,6 +5012,9 @@ footer {
             padding: 20px 30px;
             cursor: pointer;
             @include transition(background .3s);
+            &.current_page_item {
+                background: $colorLightGrey2;
+            }
             &:nth-child(n-3) {
                 border-bottom: 1px solid $colorWhite;
             }
@@ -4936,11 +5070,43 @@ footer {
         li {
             padding: 5px 0;
             a {
-                &:focus {
-                    color: $colorLightGrey7;
+                color: $colorWhite;
+                &:hover {
+                    color: $colorLightGrey6;
                 }
             }
         }
+    }
+
+    &.slateblue-theme {
+        background-color: $colorLightGrey1;
+        h4 {
+            @include font-size(30px);
+            font-weight: 500;
+            text-transform: uppercase;
+            margin-bottom: 1.175rem;
+        }
+
+        h2,
+        h3,
+        h4,
+        p {
+            @include transition(color .3s);
+            color: $colorDarkBlue;
+        }
+
+        ul {
+            li {
+                padding: 5px 0;
+                a {
+                    color: $colorDarkBlue;
+                    &:hover {
+                        color: $colorLightGrey6;
+                    }
+                }
+            }
+        }
+
     }
 }
 
@@ -5109,13 +5275,13 @@ footer {
         img {
             position: absolute; // margin: auto;
             display: block;
-            left: 49.9%;
+            left: 50%;
             right: 0;
             top: 0;
             bottom: 0;
             height: 100%;
             width: 100%;
-            @include transform(translate(-50.1%,
+            @include transform(translate(-50%,
             0));
             @include max-screen ($xmd) {
                 position: relative;
@@ -5637,14 +5803,19 @@ footer {
 
         font-weight: 500;
         color: $colorBrightRed2;
-        .title {
-            // @include font-size(18px);
-            // margin-bottom: 5px;
-        }
+        
 
         .subtitle {
             color: $colorLightGrey4;
+            p {
+                @include font-size(16px);
+            }
         }
+    }
+
+    .title {
+        font-size: 24px !important;
+        margin-bottom: 5px;
     }
 
     >div:nth-child(n+7) {
@@ -5946,12 +6117,12 @@ footer {
             opacity: 0 !important;
         }
     }
-    .fa-spin {
-        position: absolute;
-        top: 40%;
-        right: 45%;
-        opacity: 0;
-    }
+    // .fa-spin {
+    //     position: absolute;
+    //     top: 40%;
+    //     right: 45%;
+    //     opacity: 0;
+    // }
     @include transition(all .3s);
     .panel {
         font-size: 1rem;
@@ -5972,15 +6143,32 @@ footer {
             padding: 0 !important;
         }
         .slider-container {
+            position: absolute; // IE Fix
             height: auto;
             width: 90%;
             display: inline-block;
             background: $colorLightGrey7; // Temporary
+
             @include max-screen($ssm) {
                 width: 85%;
             }
             @include max-screen($xsm) {
                 width: 85%;
+            }
+
+            .loading-container {
+                position: absolute;
+                display: block;
+                /* right: 40%; */
+                margin-top: 140px;
+                width: 100%;
+                /* margin: 0 auto; */
+                height: 80px;
+                text-align: center;
+                .fa-spin {
+                    margin-top: 10px;                           
+                    opacity: 0;
+                }
             }
 
             .slick-slider {
@@ -6018,9 +6206,19 @@ footer {
                         -o-transform: translate3d(0, 0, 0) !important;
                         transform: translate3d(0, 0, 0) !important;
                         width: 100% !important;
-                        .slide-content {
+                        .slick-slide {
                             float: none;
                             margin: auto;
+                            display: table;
+                            // padding: 30px !important;
+                            // max-width: 360px;
+                            min-width: 300px;
+                            padding: 45px 60px !important;
+                            // margin-top: 53px; //
+                            @include max-screen ($lg) {
+                                max-width: unset;
+                                width: 100% !important;
+                            }
                             @include max-screen ($sm) {
                                 float: left;
                             }
@@ -6038,23 +6236,17 @@ footer {
                 @include transition(all .3s);
                 .slick-slide {
                     height: 360px;
-                    min-width: 250px;
-                    @include max-screen ($xmd) {
-                        min-width: unset;
-                    }
-                    padding: 60px 20px 0;
+                    // margin-top: 63px !important;
+                    // padding: 30px 60px;
+                    // min-width: 350px;
+                     // padding: 60px 20px 0;
+                    // padding: 60px;
+                    padding: 45px 60px;
                     text-align: center;
+                    display: table;
+
                     @include transition(all .3s);
 
-                    @include max-screen($md) {
-                        // padding: 60px 100px;
-                    }
-                    @include max-screen($sm) {
-                        padding: 60px 40px;
-                    }
-                    @include max-screen($xsm) {
-                        padding: 35px 20px;
-                    }
                     h3 {
                         @include font-size(20px);
                         font-weight: 500;
@@ -6065,6 +6257,28 @@ footer {
                     &:focus {
                         outline: none;
                     }
+
+                    a.item-box {
+                        padding: 15px 0;
+                    }
+
+                    @include max-screen ($xlg) {
+                        padding: 45px 30px;
+                    }
+
+                    @include max-screen ($xmd) {
+                        min-width: unset;
+                    }
+                    @include max-screen($md) {
+                        // padding: 60px 100px;
+                    }
+                    @include max-screen($sm) {
+                        padding: 60px 40px;
+                    }
+                    @include max-screen($xsm) {
+                        padding: 35px 20px;
+                    }
+                    
                 }
             }
         }
@@ -6075,6 +6289,7 @@ footer {
         .panel-title {
             position: absolute;
             right: 0;
+            top: 0; //
             text-transform: uppercase;
             font-weight: 500;
             opacity: 0;
@@ -6282,6 +6497,7 @@ footer {
         .panel-title {
             position: absolute;
             left: 0;
+            top: 0; //
             text-transform: uppercase;
             font-weight: 500;
             opacity: 0;
@@ -6320,12 +6536,13 @@ footer {
                     opacity: 0;
                 }
             }
-            .slick-slider {
+            .panel-slider {
                 width: 100%;
                 min-width: auto;
                 display: inline-block; // opacity: 1;
                 visibility: visible;
-
+                // position: absolute; // fixes IE but breaks chrome
+                // top: 0;
                 @include transition (opacity 1s);
                 .slick-slide {
                     &:hover {
@@ -6656,6 +6873,9 @@ footer {
         // padding-top: 20px;
         // padding-bottom: 20px;
 
+        display: table-cell;
+        vertical-align: middle;
+
         h3 {
             color: $colorDarkBlue;
             text-transform: uppercase;
@@ -6676,9 +6896,11 @@ footer {
     }
 
     .slide-content {
+        display: table;
         text-align: center;
-        padding: 20px;
-        max-width: 360px; 
+        // padding: 20px;
+        padding: 45px 20px;
+        // max-width: 360px; 
         min-height: 360px; //
         margin: auto;
         opacity: 1;
@@ -6813,9 +7035,46 @@ footer {
 .logo-row {
     background: $colorLightGrey7;
 
+    @include min-screen($lg) {
+        margin: 40px 0; //
+    }
+
     @include max-screen($smd) {
         display: block;
         width: 100%;
+    }
+
+
+    .logo-slider-label {
+        color: $colorDarkBlue;
+        font-weight: 500;
+        @include font-size(24px);
+       
+        position: absolute;
+        right: 65px;
+        top: 60px;
+        min-width: 210px;
+
+        &:after {
+            font-family: FontAwesome;
+            content: "\f0d7";
+            color: $colorBrightRed2;
+            margin: 0 5px;
+            @include font-size(18px);
+            position: absolute;
+        }
+
+        @include max-screen($xlg) {
+            @include font-size(20px);
+            text-align: right;
+            margin: 0 10px;
+        }
+        @include max-screen($lg) {
+            font-size: 1.25rem;
+            width: 100%;
+            right: 0%;
+            text-align: center;
+        }
     }
 
     [class*=' col-'] {
@@ -6835,6 +7094,8 @@ footer {
                     content: "\f0d7";
                     color: $colorBrightRed2;
                     margin: 0 5px;
+                    @include font-size(18px);
+                    position: absolute;
                 }
             }
         }
@@ -6851,19 +7112,24 @@ footer {
 
     .slider-container {
         // width: 100%;
-        padding: 80px 100px;
+        padding: 100px 60px 0;
+        margin: 0 30px;
 
         @include max-screen( $xlg) {
-            padding: 80px 60px;
+            padding: 100px 60px 0;
         }
 
         @include max-screen( $smd) {
-            padding: 80px 20px;
+            padding: 100px 20px 0;
         }
 
         .logo-slider {
             // width: 100%;
             margin: auto;
+
+            .slick-arrow {
+                height: 30px;
+            }
 
             .slide-content {
                 display: table;
@@ -6933,16 +7199,27 @@ footer {
 
 
     .info-box {
-        padding: 75px 20px 40px;
+        padding: 60px 40px;
+        text-align: left;
+
+        p {
+            margin-top: 1.675rem;
+            @include font-size(20px);
+            line-height: 30px;
+        }
+
+        @include max-screen ($lg) {
+            text-align: center;
+        }
     }
 
     .bar {
         width: 2px;
-        background: $colorDarkGrey;
+        background-color: $colorLightGrey8;
         height: 75%;
-        margin-top: 40px;
+        margin-top: 28px;
         position: absolute;
-        left: -5%; // @include max-screen($xlg) {
+        left: 0%; // @include max-screen($xlg) {
         //     left: 5%;
         // }
         @include max-screen($md) {
@@ -6955,7 +7232,9 @@ footer {
         @include max-screen($smd) {
             width: 100%;
         }
-        .slick-slider {
+        .panel-slider {
+            position: absolute;
+            top: 0;
             width: 100%;
             min-width: auto;
             display: inline-block;
@@ -6988,6 +7267,7 @@ footer {
 
 .photo-wrapper {
     position: relative;
+    font-size: 0; //IE fix
     .title {
         @include font-size(18px);
         font-weight: 700;
@@ -7014,7 +7294,8 @@ footer {
             .img-wrapper {
                 position: relative;
                 overflow: hidden;
-
+                padding-bottom: 8px; //
+                background: $colorBrightRed2;
                 img {
                     display: block;
                     width: 100%;
@@ -7028,9 +7309,10 @@ footer {
                     position: absolute;
                     bottom: 0;
                     left: 0;
-                    height: 5px;
+                    height: 8px;
                     width: 100%;
-                    background: $colorBrightRed2;
+                    // background: $colorBrightRed2;
+                    background: $colorWhite;
                     z-index: 2;
                 }
 
@@ -7054,15 +7336,17 @@ footer {
                         width: 100%;
                         height: 100%;
                         min-height: 100%;
-                        padding: 20% 0;
+                        // padding: 20% 0;
+                        padding: 15% 3%;
                         line-height: 80%;
                         p {
                             @include font-size(20px);
                             margin-bottom: 10px;
                         }
 
+
                         @include max-screen($xlg) {
-                            padding: 10% 0;
+                            // padding: 10% 0;
                             line-height: 100%;
                             p {
                                 @include font-size(20px);
@@ -7079,10 +7363,10 @@ footer {
 
             &.active {
                 .img-wrapper {
-
+                    background: transparent;
                     &:after {
                         @include transition(all .3s);
-                        bottom: -2px;
+                        bottom: 0; //
                         border: solid transparent;
                         content: " ";
                         height: 0;
@@ -7096,17 +7380,24 @@ footer {
                         background: transparent;
                     }
                 }
+                .overlay {
+                    // background: 0 0;
+                }
+                .bioBox {
+                    z-index: 2;
+                }
             }
 
             &:hover {
                 .img-wrapper {
+                    // background: transparent;
                     .overlay {
                         top: 0;
                         @include transition(all .3s);
                     }
 
                     img {
-                        @include transform(scale(1.1));
+                        // @include transform(scale(1.1));
                         @include transition(all 3s);
                     }
                 }
@@ -7130,10 +7421,12 @@ footer {
             .bioBox {
                 background: $colorBrightRed2;
                 height: 0;
-                max-height: 360px; //TBD - Per Karen / Client Requirements
+                // min-height: 360px;
+                // max-height: 360px; //TBD - Per Karen / Client Requirements
                 position: absolute;
                 width: 100%;
-                padding: 10px 20px; // @include transition (height .3s);
+                padding: 25px;
+                // padding: 10px 20px; // @include transition (height .3s);
                 h3 {
                     @include font-size(24px);
                     color: $colorWhite;
@@ -7149,6 +7442,7 @@ footer {
 
                 p {
                     color: $colorWhite;
+                    @include font-size(14px);
                 }
                 @include max-screen($sm) {
                     width: 100%;
@@ -7217,18 +7511,23 @@ footer {
 
         @include max-screen($sm) {
 
-            .photo-item {
-                width: 50%;
-            }
-        }
+            // .photo-item {
+            //     width: 50%;
+            // }
 
-        @include max-screen(420px) {
-
-            .photo-item {
+             .photo-item {
                 width: 100%;
                 float: none;
             }
         }
+
+        // @include max-screen(420px) {
+
+        //     .photo-item {
+        //         width: 100%;
+        //         float: none;
+        //     }
+        // }
     }
 }
 
