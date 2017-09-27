@@ -7175,7 +7175,7 @@ footer {
                     &.icon.color {
                         opacity: 0;
                         z-index: 3;
-                        @include transition (all 0s);
+                        @include transition (all .6s);
                         &:hover {
                             opacity: 1;
                         }

@@ -592,9 +592,12 @@ function delayedLoad(activePanel) { //Creates simulated loading of carousel and 
 			$(activeCarousel).css("opacity", 1);
 		} , 500);
 		$(activeCarousel).slick("slickNext"); // Selecting next slide fixes the width issue.
-		setTimeout( function() { // Reset it back to starting postion.
-			$(activeCarousel).slick("slickPrev");
-		}, 500 );
+		
+		if(window.matchMedia('(min-width: 1440px)').matches) { // Reset it back to starting postion for desktop only bug. 
+			setTimeout( function() { 
+				$(activeCarousel).slick("slickPrev");
+			}, 500 );
+		}
 
 		$(activeCarousel).addClass("loaded");
 
