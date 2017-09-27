@@ -4290,7 +4290,10 @@ footer {
 
         .feature-row {
            >[class*=col-] {
-                max-height: 460px !important;
+                max-height: 460px;
+                @include max-screen ($md) {
+                    max-height: unset;
+                }
            }
         }
     }

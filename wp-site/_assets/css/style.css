@@ -2869,7 +2869,10 @@ footer {
     padding: 0 !important;
     padding-left: 40px; }
   .main-content .secondary .feature-row > [class*=col-] {
-    max-height: 460px !important; }
+    max-height: 460px; }
+    @media only screen and (max-width: 992px) {
+      .main-content .secondary .feature-row > [class*=col-] {
+        max-height: unset; } }
   .main-content .tertiary {
     background-color: #e2eaed; }
   @media only screen and (max-width: 768px) {
