@@ -913,7 +913,7 @@ function blpc_content_feature_right($post_id) {
 		$feature_image = get_field('feature_image', $feature->ID);
 		
 		if($feature_image) {
-			$string .= '<div class="image-cta">
+			$string .= '<div class="image-cta" style="background: url('.$feature_image['url'].'">
 							<a href="' . get_field('feature_button_url', $feature->ID)  . '">
 								<div class="img-content">
 									<img alt="'.$feature_image['alt'].'"

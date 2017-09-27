@@ -2409,6 +2409,59 @@ footer {
     .home .main-content .left-content .seo h2 {
       font-size: 24px;
       font-size: 1.5rem; } }
+  .home .main-content .image-cta {
+    background-position: top !important;
+    background-size: cover !important; }
+    .home .main-content .image-cta a {
+      display: block;
+      -moz-transition: all 0.5s;
+      -o-transition: all 0.5s;
+      -webkit-transition: all 0.5s;
+      transition: all 0.5s; }
+    .home .main-content .image-cta:not(.no-img) a:hover {
+      -moz-transition: all 0.3s;
+      -o-transition: all 0.3s;
+      -webkit-transition: all 0.3s;
+      transition: all 0.3s; }
+      .home .main-content .image-cta:not(.no-img) a:hover .txt-content {
+        -moz-transition: all 0.5s;
+        -o-transition: all 0.5s;
+        -webkit-transition: all 0.5s;
+        transition: all 0.5s; }
+    .home .main-content .image-cta .img-content {
+      overflow: hidden;
+      height: 100%;
+      padding-bottom: 55%; }
+      @media only screen and (max-width: 768px) {
+        .home .main-content .image-cta .img-content {
+          padding-bottom: 0; } }
+      .home .main-content .image-cta .img-content:after {
+        content: '';
+        position: absolute;
+        right: 0;
+        top: 0;
+        width: 4px;
+        height: 100%; }
+      .home .main-content .image-cta .img-content img {
+        display: none; }
+      @media only screen and (max-width: 768px) {
+        .home .main-content .image-cta .img-content img {
+          position: absolute;
+          display: block;
+          left: 50%;
+          right: 0;
+          top: 0;
+          bottom: 0;
+          height: 100%;
+          width: 100%;
+          -moz-transform: translate(-50%, 0);
+          -o-transform: translate(-50%, 0);
+          -ms-transform: translate(-50%, 0);
+          -webkit-transform: translate(-50%, 0);
+          transform: translate(-50%, 0); } }
+  @media only screen and (max-width: 768px) and (max-width: 768px) {
+    .home .main-content .image-cta .img-content img {
+      position: relative; } }
 
 /* page layout setup utilities */
 .fullpage #wrapper {
@@ -3561,7 +3614,9 @@ footer {
   height: 100%;
   min-height: 360px;
   position: relative;
-  cursor: pointer; }
+  cursor: pointer;
+  background-position: top !important;
+  background-size: cover !important; }
   .image-cta a {
     display: block;
     -moz-transition: all 0.5s;
@@ -3593,22 +3648,26 @@ footer {
       width: 4px;
       height: 100%; }
     .image-cta .img-content img {
-      position: absolute;
-      display: block;
-      left: 50%;
-      right: 0;
-      top: 0;
-      bottom: 0;
-      height: 100%;
-      width: 100%;
-      -moz-transform: translate(-50%, 0);
-      -o-transform: translate(-50%, 0);
-      -ms-transform: translate(-50%, 0);
-      -webkit-transform: translate(-50%, 0);
-      transform: translate(-50%, 0); }
-      @media only screen and (max-width: 768px) {
-        .image-cta .img-content img {
-          position: relative; } }
+      display: none; }
+    @media only screen and (max-width: 992px) {
+      .image-cta .img-content img {
+        position: absolute;
+        display: block;
+        left: 50%;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        height: 100%;
+        width: 100%;
+        -moz-transform: translate(-50%, 0);
+        -o-transform: translate(-50%, 0);
+        -ms-transform: translate(-50%, 0);
+        -webkit-transform: translate(-50%, 0);
+        transform: translate(-50%, 0); } }
+  @media only screen and (max-width: 992px) and (max-width: 768px) {
+    .image-cta .img-content img {
+      position: relative; } }
+
     .image-cta .img-content .caption {
       position: absolute;
       bottom: 0;
