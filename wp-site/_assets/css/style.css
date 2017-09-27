@@ -1483,7 +1483,7 @@ body {
         height: 100vh; } }
     @media only screen and (max-width: 575px) {
       body.homepage .banner .subtext-box {
-        top: 0% !important;
+        top: 15% !important;
         padding: 0 5%; }
         body.homepage .banner .subtext-box h1 {
           font-size: 22px;
@@ -1492,6 +1492,12 @@ body {
           font-size: 20px;
           font-size: 1.25rem;
           text-align: center; } }
+    @media only screen and (max-width: 320px) {
+      body.homepage .banner .subtext-box {
+        top: 0% !important;
+        padding: 0; }
+        body.homepage .banner .subtext-box span.btn.whiteline {
+          margin-top: 5px; } }
   @media only screen and (max-width: 865px) {
     body.homepage .main-content {
       padding-top: 0; } }
@@ -2673,7 +2679,7 @@ footer {
           display: none; } }
     @media only screen and (max-width: 992px) {
       .banner .subtext-box {
-        top: 30% !important; } }
+        top: 25% !important; } }
     @media only screen and (max-width: 575px) {
       .banner .subtext-box {
         padding: 0 5%; }
@@ -2752,7 +2758,7 @@ footer {
       background: none !important; }
       .banner .bg-content img {
         opacity: 1;
-        min-height: 160px; }
+        min-height: 100px; }
     .banner .overlay-band {
       position: relative;
       height: auto;

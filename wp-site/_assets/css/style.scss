@@ -2189,7 +2189,7 @@ body {
             }
             .subtext-box {
                 @include max-screen($sm) {
-                    top: 0% !important;
+                    top: 15% !important;
                     padding: 0 5%;
                     h1 {
                         @include font-size(22px);
@@ -2198,6 +2198,13 @@ body {
                         @include font-size(20px);
                         text-align: center;
                     }
+                }
+                @include max-screen($xsm) {
+                    top: 0% !important;
+                    padding: 0;
+                    span.btn.whiteline {
+                        margin-top: 5px;
+                    }              
                 }
             }
         }
@@ -3936,7 +3943,7 @@ footer {
         }
 
         @include max-screen($md) {
-            top: 30% !important;
+            top: 25% !important;
         }
 
         @include max-screen($sm) {
@@ -4057,7 +4064,7 @@ footer {
 
             img {
                 opacity: 1;
-                min-height: 160px;
+                min-height: 100px;
             }
         }
 
