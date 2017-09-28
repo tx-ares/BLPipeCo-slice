@@ -3896,6 +3896,7 @@ footer {
         margin: auto;
         color: $colorWhite;
         h1 {
+            text-shadow: -4px 4px 3px rgba(0, 0, 0, 0.3); //
             text-transform: uppercase;
             text-align: center;
             color: $colorWhite;
@@ -3915,6 +3916,7 @@ footer {
         }
 
         .h1 {
+            text-shadow: -4px 4px 3px rgba(0, 0, 0, 0.3); //
             text-transform: uppercase;
             text-align: center;
             color: $colorWhite;
@@ -3928,6 +3930,7 @@ footer {
         }
 
         .h2 {
+            text-shadow: -4px 4px 3px rgba(0, 0, 0, 0.3); //
             text-align: center;
             width: 80%;
             margin: auto;

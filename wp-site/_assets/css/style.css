@@ -2637,6 +2637,7 @@ footer {
     margin: auto;
     color: #fff; }
     .banner .subtext-box h1 {
+      text-shadow: -4px 4px 3px rgba(0, 0, 0, 0.3);
       text-transform: uppercase;
       text-align: center;
       color: #fff;
@@ -2652,6 +2653,7 @@ footer {
     .banner .subtext-box span.btn.whiteline {
       margin-top: 20px; }
     .banner .subtext-box .h1 {
+      text-shadow: -4px 4px 3px rgba(0, 0, 0, 0.3);
       text-transform: uppercase;
       text-align: center;
       color: #fff;
@@ -2664,6 +2666,7 @@ footer {
           font-size: 30px;
           font-size: 1.875rem; } }
     .banner .subtext-box .h2 {
+      text-shadow: -4px 4px 3px rgba(0, 0, 0, 0.3);
       text-align: center;
       width: 80%;
       margin: auto;
