@@ -3290,8 +3290,8 @@ footer {
             font-size: 1.5rem; } }
         @media only screen and (max-width: 992px) {
           .send-request .row > [class*="col-"]:nth-child(1) .num {
-            font-size: 30px;
-            font-size: 1.875rem; } }
+            font-size: 20px;
+            font-size: 1.25rem; } }
         @media only screen and (max-width: 768px) {
           .send-request .row > [class*="col-"]:nth-child(1) .num {
             font-size: 30px;

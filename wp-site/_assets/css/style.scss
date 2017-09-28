@@ -4850,7 +4850,7 @@ footer {
                     @include font-size(24px);
                 }
                 @include max-screen($md) {
-                    @include font-size(30px);
+                    @include font-size(20px);
                 }
                 @include max-screen($xmd) {
                     @include font-size(30px);
