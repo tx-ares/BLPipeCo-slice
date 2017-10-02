@@ -442,12 +442,6 @@ function initMobileSocialMediaMenu() {
 		$(".social-media-icons").removeClass("active");
 	}
 
-	// $(document).ready(function(){
-	//     $(".email-button").click(function(e){
-	//     	e.preventDefault();
-	//         $("#emailModal").modal('show');
-	//     });
-	// });
 
 }
 

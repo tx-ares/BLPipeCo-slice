@@ -7885,6 +7885,10 @@ footer {
         }
     }
 
+    div.wpcf7-response-output {
+        margin: 0;
+    }
+
     label {
         width: 100%;
     }
@@ -7893,5 +7897,9 @@ footer {
         resize: none;
     }
 
-
+    @include max-screen($lg) {
+        textarea {
+            height: 100px;
+        }
+    }
 }

@@ -177,8 +177,10 @@
             </button>
           </div>
           <div class="modal-body">
-                <?php blpc_format_p_tags(); ?>
-                <?php echo do_shortcode( '[contact-form-7 id="email-form" title="Contact by Email - Social Media Menu"]' ); ?>
+                <?php 
+                    echo do_shortcode( '[contact-form-7 id="email-form" title="Contact by Email - Social Media Menu"]' ); 
+                    blpc_format_p_tags(); 
+                ?>
           </div>
           <!-- <div class="modal-footer">
             <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>

@@ -5414,9 +5414,14 @@ footer {
     #emailModal input[type="submit"]:hover {
       background: #bcc7cd;
       color: #00263b; }
+  #emailModal div.wpcf7-response-output {
+    margin: 0; }
   #emailModal label {
     width: 100%; }
   #emailModal textarea {
     resize: none; }
+  @media only screen and (max-width: 1024px) {
+    #emailModal textarea {
+      height: 100px; } }
 
 /*# sourceMappingURL=style.css.map */
