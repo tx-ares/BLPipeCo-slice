@@ -153,7 +153,7 @@
                 </a>
             </li>
             <!-- <li>
-                <a href="https://www.linkedin.com/company/blpipeco" target="_blank">
+                <a href="#" target="_blank">
                     <i class="fa fa-commenting" aria-hidden="true"></i>
                 </a>
             </li> -->
@@ -161,12 +161,9 @@
                 <!-- <a href="mailto:Marketing@blpipeco.com?subject=Contact - B&L Pipeco Services" role="email" type="email">
                     <i class="fa fa-envelope" aria-hidden="true"></i>
                 </a> -->
-                 <a href="#" target="_none" class="email-button" data-toggle="modal" data-target="#emailModal">
+                <a href="#" target="_none" class="email-button" data-toggle="modal" data-target="#emailModal">
                     <i class="fa fa-envelope" aria-hidden="true"></i>
                 </a>
-               <!--  <button type="button" class="btn btn-primary" class="email-button" data-toggle="modal" data-target="#emailModal">
-                  Launch demo modal
-                </button> -->
             </li>
         </ul>
     </div>
