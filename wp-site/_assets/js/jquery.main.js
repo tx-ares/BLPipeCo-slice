@@ -591,11 +591,22 @@ function delayedLoad(activePanel) { //Creates simulated loading of carousel and 
 			$(activePanel).find(".fa-spin").css("opacity" , 0);
 			$(activeCarousel).css("opacity", 1);
 		} , 500);
-		$(activeCarousel).slick("slickNext"); // Selecting next slide fixes the width issue.
+		// $(activeCarousel).slick("slickNext"); // Selecting next slide fixes the width issue.
 		
-		if(window.matchMedia('(min-width: 1440px)').matches) { // Reset it back to starting postion for desktop only bug. 
+		$(activeCarousel).slick("slickGoTo" , 0);
+
+
+
+		// setTimeout( function() { 
+		// 	$(activeCarousel).slick("slickNext");
+				
+		// 	}, 500 );
+
+		if(window.matchMedia('(max-width: 1440px)').matches && window.matchMedia('(min-width: 1024px)').matches) { // Reset it back to starting postion for desktop only bug. 
 			setTimeout( function() { 
-				$(activeCarousel).slick("slickPrev");
+				$(activeCarousel).slick("slickNext"); // Selecting next slide fixes the width issue.
+				// $(activeCarousel).slick("slickGoTo" , 0);
+				console.log("Going to next slide.")
 			}, 500 );
 		}
 
@@ -627,6 +638,7 @@ function initPanelSlider(){
 		  easing: 'linear',
 		  slidesToShow: 3,
 		  slidesToScroll: 1,
+		  respondTo: 'window',
 		  // variableWidth: true,
 		  mobileFirst: true,
 	  
