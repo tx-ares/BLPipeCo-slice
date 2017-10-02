@@ -2143,7 +2143,7 @@ $padding-sm: 20px;
             height: 40px;
             width: 40px;
             text-align: center;
-            padding: 5px;
+            // padding: 5px;
             box-shadow: 0 1px 1px 0;
             &:not(:last-child) {
                 // border-bottom: 2px solid $colorWhite;
@@ -2158,6 +2158,11 @@ $padding-sm: 20px;
             a {
                 color: $colorDarkBlue;
                 font-size: 1.2rem;
+                display: block;
+                padding-top: 5px;
+                height: 40px;
+                width: 100%;
+                margin: auto;
                 @include max-screen ($sm) {
                     color: $colorWhite;
                 }
@@ -5106,8 +5111,9 @@ footer {
         li {
             background: $colorLightGrey1;
             margin-bottom: 0;
-            padding: 20px 30px;
+            // padding: 20px 30px;
             cursor: pointer;
+            position: relative;
             @include transition(background .3s);
             &.current_page_item {
                 background: $colorLightGrey2;
@@ -5120,6 +5126,9 @@ footer {
                 content: '\f0da';
                 font-family: FontAwesome;
                 float: right;
+                right: 20px;
+                top: 20px;
+                position: absolute;
             }
             &:hover {
                 background: $colorLightGrey2;
@@ -5128,6 +5137,8 @@ footer {
                 color: $colorDarkBlue;
                 font-size: 1.175rem;
                 font-weight: 500;
+                display: block;
+                padding: 20px 30px;
             }
         }
     }
@@ -7816,4 +7827,66 @@ footer {
             }
         }
     }
+}
+
+// Email Modal Form
+#emailModal {
+    overflow-y: hidden;
+    z-index: 9999;
+    form {
+        margin-bottom: 0;
+        p {
+            margin-bottom: 0;
+        } 
+    }
+    .modal-title {
+        @include font-size(20px);
+        font-weight: 500;
+        text-transform: uppercase;
+    }
+    .modal-header {
+        .close {
+            position: absolute;
+            right: 0px;
+            top: 2px;
+            border-radius: 0 4px 0 0;
+            background: $colorBrightRed2;
+            &:hover {
+                &:after, 
+                &:before {
+                    background: $colorDarkBlue;
+                 }  
+            }
+            &:after, 
+            &:before {
+                @include transition(background .3s);
+                width: 70%;
+                left: 6px;
+                background: #fff;
+             }
+        }
+    }
+
+    input[type="submit"] {
+        @include transition(all .3s);
+        background: $colorBrightRed2;
+        color: #fff;
+        @include font-size(18px);
+        font-weight: 500;
+        text-transform: uppercase;
+        &:hover {
+            background: #bcc7cd;
+            color: $colorDarkBlue;
+        }
+    }
+
+    label {
+        width: 100%;
+    }
+
+    textarea {
+        resize: none;
+    }
+
+
 }

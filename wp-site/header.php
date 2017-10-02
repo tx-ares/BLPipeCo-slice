@@ -133,29 +133,58 @@
     <div class="social-media-icons">
         <ul>
             <li>
-                <a href="#">
+                <a href="https://www.facebook.com/blpipeco/" target="_blank">
                     <i class="fa fa-facebook" aria-hidden="true"></i>
                 </a>
             </li>
             <li>
-                <a href="#">
+                <a href="#" target="_blank">
                     <i class="fa fa-twitter" aria-hidden="true"></i>
                 </a>
             </li>
             <li>
-                <a href="#">
+                <a href="https://www.linkedin.com/company/blpipeco" target="_blank">
                     <i class="fa fa-linkedin" aria-hidden="true"></i>
                 </a>
             </li>
-            <li>
-                <a href="#">
+            <!-- <li>
+                <a href="https://www.linkedin.com/company/blpipeco" target="_blank">
                     <i class="fa fa-commenting" aria-hidden="true"></i>
                 </a>
-            </li>
+            </li> -->
             <li>
-                <a href="#">
+                <!-- <a href="mailto:Marketing@blpipeco.com?subject=Contact - B&L Pipeco Services" role="email" type="email">
+                    <i class="fa fa-envelope" aria-hidden="true"></i>
+                </a> -->
+                 <a href="#" target="_none" class="email-button" data-toggle="modal" data-target="#emailModal">
                     <i class="fa fa-envelope" aria-hidden="true"></i>
                 </a>
+               <!--  <button type="button" class="btn btn-primary" class="email-button" data-toggle="modal" data-target="#emailModal">
+                  Launch demo modal
+                </button> -->
             </li>
         </ul>
     </div>
+
+    <!-- Email Modal -->
+    <div class="modal fade" id="emailModal" tabindex="-1" role="dialog" aria-labelledby="ModalLabel" aria-hidden="true">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="ModalLabel">Contact Us</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+<!--               <span aria-hidden="true">&times;</span>-->            
+            </button>
+          </div>
+          <div class="modal-body">
+                <?php blpc_format_p_tags(); ?>
+                <?php echo do_shortcode( '[contact-form-7 id="email-form" title="Contact by Email - Social Media Menu"]' ); ?>
+          </div>
+          <!-- <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+            <button type="button" class="btn btn-primary">Send</button>
+          </div> -->
+        </div>
+      </div>
+    </div>
+

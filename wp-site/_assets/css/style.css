@@ -1434,7 +1434,6 @@ figure {
       height: 40px;
       width: 40px;
       text-align: center;
-      padding: 5px;
       box-shadow: 0 1px 1px 0; }
       @media only screen and (max-width: 575px) {
         .social-media-icons ul li {
@@ -1444,7 +1443,12 @@ figure {
           border-bottom: 0 !important; } }
       .social-media-icons ul li a {
         color: #00263b;
-        font-size: 1.2rem; }
+        font-size: 1.2rem;
+        display: block;
+        padding-top: 5px;
+        height: 40px;
+        width: 100%;
+        margin: auto; }
         @media only screen and (max-width: 575px) {
           .social-media-icons ul li a {
             color: #fff; } }
@@ -3458,8 +3462,8 @@ footer {
   .side-nav ul li {
     background: #edf1f1;
     margin-bottom: 0;
-    padding: 20px 30px;
     cursor: pointer;
+    position: relative;
     -moz-transition: background 0.3s;
     -o-transition: background 0.3s;
     -webkit-transition: background 0.3s;
@@ -3471,13 +3475,18 @@ footer {
     .side-nav ul li:after {
       content: '\f0da';
       font-family: FontAwesome;
-      float: right; }
+      float: right;
+      right: 20px;
+      top: 20px;
+      position: absolute; }
     .side-nav ul li:hover {
       background: #e5e5e5; }
     .side-nav ul li a {
       color: #00263b;
       font-size: 1.175rem;
-      font-weight: 500; }
+      font-weight: 500;
+      display: block;
+      padding: 20px 30px; }
   @media only screen and (max-width: 1280px) {
     .side-nav ul li a {
       font-size: 16px;
@@ -5362,5 +5371,52 @@ footer {
       padding: 25px; }
       .responsive-tabs-wrapper .responsive-tabs__panel.responsive-tabs__panel--active {
         padding-top: 0; } }
+
+#emailModal {
+  overflow-y: hidden;
+  z-index: 9999; }
+  #emailModal form {
+    margin-bottom: 0; }
+    #emailModal form p {
+      margin-bottom: 0; }
+  #emailModal .modal-title {
+    font-size: 20px;
+    font-size: 1.25rem;
+    font-weight: 500;
+    text-transform: uppercase; }
+  #emailModal .modal-header .close {
+    position: absolute;
+    right: 0px;
+    top: 2px;
+    border-radius: 0 4px 0 0;
+    background: #d0112b; }
+    #emailModal .modal-header .close:hover:after, #emailModal .modal-header .close:hover:before {
+      background: #00263b; }
+    #emailModal .modal-header .close:after, #emailModal .modal-header .close:before {
+      -moz-transition: background 0.3s;
+      -o-transition: background 0.3s;
+      -webkit-transition: background 0.3s;
+      transition: background 0.3s;
+      width: 70%;
+      left: 6px;
+      background: #fff; }
+  #emailModal input[type="submit"] {
+    -moz-transition: all 0.3s;
+    -o-transition: all 0.3s;
+    -webkit-transition: all 0.3s;
+    transition: all 0.3s;
+    background: #d0112b;
+    color: #fff;
+    font-size: 18px;
+    font-size: 1.125rem;
+    font-weight: 500;
+    text-transform: uppercase; }
+    #emailModal input[type="submit"]:hover {
+      background: #bcc7cd;
+      color: #00263b; }
+  #emailModal label {
+    width: 100%; }
+  #emailModal textarea {
+    resize: none; }
 
 /*# sourceMappingURL=style.css.map */
