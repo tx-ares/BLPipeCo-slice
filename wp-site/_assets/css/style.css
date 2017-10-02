@@ -2602,7 +2602,7 @@ footer {
    ========================================================================== */
 .banner {
   position: relative;
-  background: #fff; }
+  background: #000; }
   .banner img {
     width: 100%;
     max-width: 100%;
@@ -2730,7 +2730,7 @@ footer {
       font-size: 18px;
       font-size: 1.125rem; }
   .banner .bg-content img {
-    opacity: 1;
+    opacity: .8;
     width: 100%;
     height: auto; }
   @media only screen and (max-width: 1024px) {
@@ -3294,8 +3294,8 @@ footer {
             font-size: 1.5rem; } }
         @media only screen and (max-width: 992px) {
           .send-request .row > [class*="col-"]:nth-child(1) .num {
-            font-size: 30px;
-            font-size: 1.875rem; } }
+            font-size: 20px;
+            font-size: 1.25rem; } }
         @media only screen and (max-width: 768px) {
           .send-request .row > [class*="col-"]:nth-child(1) .num {
             font-size: 30px;
@@ -4264,7 +4264,7 @@ footer {
               margin: auto;
               display: table;
               min-width: 300px;
-              padding: 45px 60px !important; }
+              padding: 40px 60px !important; }
               @media only screen and (max-width: 1024px) {
                 .feature-slide-box .panel .slider-container .slick-slider .slick-track.no-transform .slick-slide {
                   max-width: unset;
@@ -4280,7 +4280,7 @@ footer {
               margin: 0 25px; } }
         .feature-slide-box .panel .slider-container .slick-slider .slick-slide {
           height: 360px;
-          padding: 45px 60px;
+          padding: 40px 60px;
           text-align: center;
           display: table;
           -moz-transition: all 0.3s;

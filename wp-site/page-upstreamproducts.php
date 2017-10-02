@@ -8,8 +8,8 @@ get_header(); ?>
 <!-- Banner -->
 <!-- ******************************************************* -->
 <section class="banner">
-    <div class="row" eq-height>
-        <div class="col-md-12 col-sm-12 col-xs-12 bg-content title-content" eq-col>
+    <div class="row">
+        <div class="col-md-12 col-sm-12 col-xs-12 bg-content title-content">
             <div class="tframe fh fw ">
                 <div class="tcell valign-mid ">
                     <div class="container-fluid no-padding "> <img alt="BL Pipeco " data-src="<575:<?php echo the_post_thumbnail_url('full'); ?>, <768:<?php echo the_post_thumbnail_url('full'); ?>,>768:<?php echo the_post_thumbnail_url('full'); ?>" />

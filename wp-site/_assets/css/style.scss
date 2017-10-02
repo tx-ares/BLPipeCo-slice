@@ -3870,7 +3870,7 @@ footer {
 
 .banner {
     position: relative;
-    background: $colorWhite; //
+    background: #000; //
     img {
         width: 100%;
         max-width: 100%;
@@ -3932,6 +3932,7 @@ footer {
         margin: auto;
         color: $colorWhite;
         h1 {
+            // text-shadow: -4px 1px 45px rgba(0,0,0,1); //
             text-transform: uppercase;
             text-align: center;
             color: $colorWhite;
@@ -3951,6 +3952,7 @@ footer {
         }
 
         .h1 {
+            // text-shadow: -4px 1px 45px rgba(0,0,0,1); //
             text-transform: uppercase;
             text-align: center;
             color: $colorWhite;
@@ -3964,6 +3966,7 @@ footer {
         }
 
         .h2 {
+            // text-shadow: -4px 1px 45px rgba(0,0,0,1); //
             text-align: center;
             width: 80%;
             margin: auto;
@@ -4038,7 +4041,9 @@ footer {
 
     .bg-content {
         img {
-            opacity: 1;
+            // opacity: 1;
+            opacity: .8; //
+
             width: 100%;
             height: auto;
         }
@@ -4886,7 +4891,7 @@ footer {
                     @include font-size(24px);
                 }
                 @include max-screen($md) {
-                    @include font-size(30px);
+                    @include font-size(20px);
                 }
                 @include max-screen($xmd) {
                     @include font-size(30px);
@@ -6324,7 +6329,7 @@ footer {
                             display: table; // padding: 30px !important;
                             // max-width: 360px;
                             min-width: 300px;
-                            padding: 45px 60px !important; // margin-top: 53px; //
+                            padding: 40px 60px !important; // margin-top: 53px; //
                             @include max-screen ($lg) {
                                 max-width: unset;
                                 width: 100% !important;
@@ -6350,7 +6355,7 @@ footer {
                     // min-width: 350px;
                     // padding: 60px 20px 0;
                     // padding: 60px;
-                    padding: 45px 60px;
+                    padding: 40px 60px;
                     text-align: center;
                     display: table;
 
