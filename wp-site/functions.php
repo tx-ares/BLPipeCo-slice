@@ -680,7 +680,7 @@ function blpc_logo_carousel() {
 		$image_color = get_field('carousel_image', $page->ID);
 		$image_bw = get_field('carousel_image_bw', $page->ID);
 		$image_link = get_field('carousel_button_link', $page->ID);
-		$image_target = get_field('carousel_button_target');
+		$image_target = get_field('carousel_button_target', $page ->ID);
 
 		$string .= '<div class="slick-slide" eq-col>  
 	                    <div class="slide-content" eq-col>
