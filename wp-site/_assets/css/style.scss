@@ -4179,6 +4179,33 @@ footer {
     }
 }
 
+.landing {
+    .main-content {
+        // padding-top:80px;
+        min-height: 185px;
+        min-height: 500px;
+        line-height: 150%;
+
+        .main {
+            min-height: 50vh;
+            margin-bottom: 20px;
+
+            >.container-fluid {
+                padding-right: 40px;
+            }
+
+            >.main-inner {
+                margin: 0;
+
+                >[class*="col-"] {
+                    padding: 0;
+                }
+            }
+
+        }
+
+    }
+}
 .main-content {
     // padding-top:80px;
     min-height: 185px;
@@ -5352,6 +5379,19 @@ footer {
     a {
         display: block;
         @include transition(all .5s);
+    }
+
+    a:first-child {
+        display: block;
+        height: 100%;
+        z-index: 99999;
+        position: relative;
+        @include transition(all .5s);
+        &:hover {
+                & + a[href="#"]:after {
+                    background-color: $colorSlateBlue;
+                }
+            }
     }
 
     &:not(.no-img) {

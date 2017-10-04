@@ -605,7 +605,7 @@ function blpc_primary_carousel() {
 							</p>
 						
 							<span class="btn whiteline">
-								<a href="' .  get_bloginfo("template_url") . get_field('carousel_button_link', $page->ID)  . '">' . get_field('carousel_button_text', $page->ID) . '
+								<a href="' . get_bloginfo("template_url") . get_field('carousel_button_link', $page->ID)  . '">' . get_field('carousel_button_text', $page->ID) . '
 								</a>
 							</span>
 						</div>
@@ -875,7 +875,7 @@ function blpc_content_feature($post_id) {
 												<div class="col-lg-7 col-md-12 txt-content" eq-col>
 														<h3>' . $feature->post_title  . '</h3>
 														' . $feature->post_content  . '
-														<a href="' .  get_bloginfo("template_url") .  get_field('feature_button_url', $feature->ID)  . '" class="btn '.get_field('feature_button_color', $feature->ID).' hvr-icon-push" target="'.get_field('feature_button_target', $feature->ID).'">' . get_field('feature_button_text', $feature->ID)  . ' <i class="fa fa-angle-right" aria-hidden="true"></i></a>
+														<a href="' . get_field('feature_button_url', $feature->ID)  . '" class="btn '.get_field('feature_button_color', $feature->ID).' hvr-icon-push" target="'.get_field('feature_button_target', $feature->ID).'">' . get_field('feature_button_text', $feature->ID)  . ' <i class="fa fa-angle-right" aria-hidden="true"></i></a>
 												</div>
 										</div>
 								</div>';
@@ -914,9 +914,10 @@ function blpc_content_feature_right($post_id) {
 		
 		if($feature_image) {
 			$string .= '<div class="image-cta" style="background: url('.$feature_image['url'].'">
-							<a href="'. get_bloginfo("template_url") . get_field('feature_button_url', $feature->ID) .'">
+							<a href="' .  get_bloginfo("template_url") . get_field('feature_button_url', $feature->ID)  . '">
 								<div class="img-content">
-									<img alt="'.$feature_image['alt'].'"src="'.$feature_image['url'].'"/>
+									<img alt="'.$feature_image['alt'].'"
+									src="'.$feature_image['url'].'" />
 								</div>
 								<div class="txt-content">
 									<h4>' . $feature->post_title  . '</h4>
@@ -924,18 +925,18 @@ function blpc_content_feature_right($post_id) {
 								</div>
 								<div class="txt-subcontent">
 		                            <a href="#">
-		                                <span class="text-upcase">' . get_field('feature_button_text', $feature->ID) .'</span>
+		                                <span class="text-upcase">' . get_field('feature_button_text', $feature->ID) . '</span>
 		                            </a>
 		                        </div>
 		                    </a>
 						</div>';
 		} else {
 			$string .= '<div class="image-cta no-img '.get_field('feature_background_color', $feature->ID).'">
-							<a href="' .  get_bloginfo("template_url") . get_field('feature_button_url', $feature->ID)  .'">
+							<a href="' .get_field('feature_button_url', $feature->ID). '">
 									<div class="txt-content">
-											<h3>' . $feature->post_title  . '</h3>
-											<p>'. $feature->post_content  . '</p>
-											<span class="btn green">' . get_field('feature_button_text', $feature->ID)  .'</span>
+											<h3>' .$feature->post_title. '</h3>
+											<p>'.$feature->post_content. '</p>
+											<span class = "btn green">' .get_field('feature_button_text', $feature->ID).'
 									</div>
 							</a>
 						</div>';
@@ -954,7 +955,7 @@ function blpc_content_feature_bottom($post_id) {
 		
 		if($feature_image) {
 			$string .=  '<div class="feature-box brightRed with-img">
-							<a href="' . get_bloginfo("template_url") . get_field('feature_button_url', $feature->ID)  . '">
+							<a href="' . get_field('feature_button_url', $feature->ID)  . '">
                                 <div class="row compressed" eq-height>
                                     <div class="col-lg-6 col-md-12 img-content" eq-col data-img="http://placehold.it/430x215/d55441/ffffff" style="background: url(&quot;http://placehold.it/430x215/d55441/ffffff&quot;) center center / cover no-repeat; height: 246px;">
                                         <img alt="'.$feature_image['alt'].'"
@@ -970,7 +971,7 @@ function blpc_content_feature_bottom($post_id) {
 
 		} else {
 			$string .= '<div class="image-cta no-img '.get_field('feature_background_color', $feature->ID).'">
-							<a href="' . get_bloginfo("template_url") . get_field('feature_button_url', $feature->ID)  . '">
+							<a href="' . get_field('feature_button_url', $feature->ID)  . '">
 								<div class="txt-content">
 									<h3>' . $feature->post_title  . '</h3>
 									<p>'. $feature->post_content  . '</p>

@@ -112,8 +112,18 @@ get_header(); ?>
                             </div>
                             <div class="col-md-5 col-sm-5 col-xs-12" eq-col>
                                  
-                                <!--Latest News -->
-            					<?php echo blpc_home_news_list(); ?>
+                                <!-- Feature Bottom Right -->
+                                <?php 
+                                    $feature_id2 = get_field('any_feature_bottom_2'); 
+                                    
+                                    if($feature_id2) {
+                                        echo blpc_content_feature_right($feature_id2); 
+                                    }
+
+                                    else {
+                                        echo blpc_home_news_list();
+                                    }
+                                ?>
                   
                             </div>
                         </div>

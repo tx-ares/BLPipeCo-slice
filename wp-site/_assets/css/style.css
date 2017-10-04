@@ -2811,6 +2811,20 @@ footer {
     .gmnoprint.gm-bundled-control.gm-bundled-control-on-bottom .gm-svpc {
       left: 0px !important;
       top: 0px !important; } }
+.landing .main-content {
+  min-height: 185px;
+  min-height: 500px;
+  line-height: 150%; }
+  .landing .main-content .main {
+    min-height: 50vh;
+    margin-bottom: 20px; }
+    .landing .main-content .main > .container-fluid {
+      padding-right: 40px; }
+    .landing .main-content .main > .main-inner {
+      margin: 0; }
+      .landing .main-content .main > .main-inner > [class*="col-"] {
+        padding: 0; }
+
 .main-content {
   min-height: 185px;
   min-height: 500px;
@@ -3638,6 +3652,17 @@ footer {
     -o-transition: all 0.5s;
     -webkit-transition: all 0.5s;
     transition: all 0.5s; }
+  .image-cta a:first-child {
+    display: block;
+    height: 100%;
+    z-index: 99999;
+    position: relative;
+    -moz-transition: all 0.5s;
+    -o-transition: all 0.5s;
+    -webkit-transition: all 0.5s;
+    transition: all 0.5s; }
+    .image-cta a:first-child:hover + a[href="#"]:after {
+      background-color: #8a9ca5; }
   .image-cta:not(.no-img) a:hover {
     -moz-transition: all 0.3s;
     -o-transition: all 0.3s;
