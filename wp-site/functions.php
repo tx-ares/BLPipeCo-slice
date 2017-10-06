@@ -183,7 +183,9 @@ function page_body_class( $classes ) {
 	}
 	else if(is_page_template('page-upstreamproducts.php')) {
 		$classes[] = 'fullpage main-content-fullpage landing';
-
+	}
+	else if(is_page_template('page-privacy-policy.php')) {
+		$classes[] = 'fullpage main-content-fullpage landing';
 	}
 	else if(is_page_template('page-insight.php')) {
 		$classes[] = 'fullpage inner main-content-fullpage';

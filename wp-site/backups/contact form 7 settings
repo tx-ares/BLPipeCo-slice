@@ -1,0 +1,26 @@
+
+Original Contact Us
+
+<div class="row">
+<div class="label-row col-md-12 no-padding">
+<label for="first">[text* first-name placeholder "First Name"] </label><label for="last">[text* last-name placeholder "Last Name"] </label>
+</div>
+
+<div class="label-row">
+<label for="email">[email* email placeholder "Email Address"]</label>
+</div>
+
+<div class="label-row">
+<label for="message">[textarea message placeholder "Message"]</label>
+</div>
+
+<div class="label-row" id="submit-row">
+[submit "Send Message"]
+</div>
+</div>
+
+
+
+
+Social Media Menu - Contact Us
+
